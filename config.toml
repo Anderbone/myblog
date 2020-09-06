@@ -1,0 +1,192 @@
+baseurl = "https://yanjiyu.com"
+#baseurl = "https://heuristic-hoover-bc51cc.netlify.com"
+title = "Jiyu"
+
+theme = "hugo-coder"
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+enableEmoji = true
+googleAnalytics = "UA-165971391-1"
+
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+      lineos = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+
+    [markup.tableOfContents]
+      endLevel = 4
+      ordered = false
+      startLevel = 2
+
+#    [markup.highlight]
+#      codeFences = true
+#      guessSyntax = false
+#      hl_Lines = ""
+#      lineNoStart = 1
+#      lineNos = true
+#      lineNumbersInTable = true
+#      noClasses = true
+#      style = "monokai"
+#      tabWidth = 4
+# disqusShortname = "yourdiscussshortname"
+
+[params]
+    author = "不可思議"
+#    description = "Jiyu's personal website"
+    keywords = "blog,developer,personal"
+    info = "A Christian, developer and fencer"
+    avatarurl = "images/fencer.jpg"
+    #gravatar = "yanchiyu@outlook.com"
+#    footercontent = "From this world to that which is to come."
+
+    dateformat = "January 2, 2006"
+
+    hideCredits = false
+    hideCopyright = false
+    since = 2019
+
+    rtl = false
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Custom CSS
+    custom_css = ["css/custom.css"]
+
+    # Custom JS
+    custom_js = []
+
+
+[params.utteranc]
+enable = true
+repo = "Anderbone/hugo-blog-utterances"
+issueTerm = "pathname"
+theme = "github-light"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/Anderbone/"
+
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 2
+    url = "https://twitter.com/Anderesurrect/"
+
+#[[params.social]]
+#    name = "LinkedIn"
+#    icon = "fab fa-linkedin"
+#    weight = 4
+#    url = "https://www.linkedin.com/in/"
+
+#[[params.social]]
+#    name = "Medium"
+#    icon = "fab fa-medium"
+#    weight = 5
+
+#[[params.social]]
+#    name = "RSS"
+#    icon = "fas fa-rss"
+#    weight = 6
+#    url = "https://myhugosite.com/index.xml"
+#    rel = "alternate"
+#    type = "application/rss+xml"
+
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+#            [[languages.en.menu.main]]
+#            name = "About"
+#            weight = 1
+#            url = "about/"
+
+            [[languages.en.menu.main]]
+            name = "Blog"
+            weight = 1
+            url = "posts/"
+
+            [[languages.en.menu.main]]
+            name = "Dev"
+            weight = 2
+            url = "dev/"
+
+            [[languages.en.menu.main]]
+            name = "Leetcode"
+            weight = 3
+            url = "leetcode/"
+
+           # [[languages.en.menu.main]]
+           # name = "Contact me"
+           # weight = 5
+           # url = "contact/"
+
+
+    [languages.zh]
+        languagename = "中文"
+        title = "Jiyu"
+
+        [languages.zh.params]
+            author = "不可思議"
+            info = "A Christian, developer and fencer"
+            keywords = "blog,developer,personal"
+#            footercontent = "Coloque algum texto aqui."
+
+        [languages.zh.menu]
+
+#            [[languages.zh-cn.menu.main]]
+#            name = "关于"
+#            weight = 1
+#            url = "about/"
+
+            [[languages.zh.menu.main]]
+            name = "隨筆"
+            weight = 1
+            url = "/zh/posts/"
+
+            [[languages.zh.menu.main]]
+            name = "開發"
+            weight = 2
+            url = "/zh/dev/"
+
+#            [[languages.zh.menu.main]]
+#            name = "leetcode"
+#            weight = 3
+#            url = "/zh/leetcode/"

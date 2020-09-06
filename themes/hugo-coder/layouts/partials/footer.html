@@ -1,0 +1,43 @@
+<footer class="footer">
+<!--  <section class="container">-->
+<!--    {{ with .Site.Params.footercontent | safeHTML }}-->
+<!--      <p>{{.}}</p>-->
+<!--    {{ end }}-->
+<!--    {{ if not .Site.Params.hideCopyright }}-->
+<!--      {{ with .Site.Params.since }}-->
+<!--        © {{ if lt . now.Year }}{{ . }} - {{ end }}{{ now.Year }}-->
+<!--      {{ else }}-->
+<!--        © {{ now.Year }}-->
+<!--      {{ end }}-->
+<!--      {{ if .Site.Params.Author }} {{ .Site.Params.Author }} {{ end }}-->
+<!--    {{ end }}-->
+<!--    {{ if not .Site.Params.hideCredits }}-->
+<!--      {{ if not .Site.Params.hideCopyright }} · {{ end }}-->
+<!--      {{ i18n "powered_by" }} <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.-->
+<!--    {{ end }}-->
+<!--    {{ if .Site.Params.commit }}-->
+<!--      {{ if .GitInfo }}-->
+<!--        [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>]-->
+<!--      {{ end }}-->
+<!--    {{ end }}-->
+<!--  </section>-->
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            <!-- inlineMath: [['$','$'], ['\\(','\\)']], -->
+            inlineMath: [['$','$']],
+            <!-- displayMath: [['$$','$$'], ['\[','\]']], -->
+            displayMath: [['$$','$$']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: {
+                equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"]
+            }
+        }
+    });
+</script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</footer>
