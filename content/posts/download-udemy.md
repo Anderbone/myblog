@@ -7,7 +7,9 @@ tags = ["tools"]
 > This article will teach you how to download all videos or whatever resources on udemy you want, for e.g. all zip files in a specific course.
 
 The tool we use: https://github.com/r0oth3x49/udemy-dl
-
+0. If you can't login, you need to use cookies.
+[google](https://github.com/r0oth3x49/udemy-dl/issues/389#issuecomment-492569372)
+[firefox](https://github.com/r0oth3x49/udemy-dl/issues/389#issuecomment-491903900)
 Suppose we want to download all zip files in a course:
 1. run the following command:
 ```python
