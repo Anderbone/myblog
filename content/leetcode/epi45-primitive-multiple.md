@@ -3,6 +3,8 @@ date = "2020-05-15"
 title = "Primitive Multiple"
 tags = ["leetcode","primitive","bit"]
 +++
+
+## EPI python 4.5
 > Use bit manipulation to multiple.
 
 Iterate through the bits of x, adding the $2^ky$ to the result if the kth bit of x is 1.

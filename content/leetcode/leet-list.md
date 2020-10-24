@@ -1,26 +1,61 @@
 +++ 
 date = "2020-08-22"
-title = "Leetcode: Array-related commonly used functions in Python"
-tags = ["leetcode", "array"]
+title = "Python list/dict functions for leetcode"
+tags = ["leetcode", "list"]
 lastmod = "2020-10-23"
 +++
 
 ### Commonly used
+
+#### List
 - `len(array)` : length of array
-- `zip(alist,blist)` : return a zip object which is an iterator of tuples, paird together. Lengths depends on the shorter input list.
-	- usually use tuple(), list(), set() on result.
-	- `list(zip(['x','y','z'], [3,4,5])) = [('x', 3), ('y', 4), ('z', 5)];`
-	- `letter, number =  zip(*result_list)`  # unzip
+    - `list.indexof(obj)`
 - `enumerate(array)` : adds counter at the beginning.
-	- `for count, item in enumberate(['x','y','z'])` # 0x 1y 2z
-- `range(0,len(mylist)-1,2)`
-- `collections.defaultdict(int)` # default 0 
-  - `defaultdict(lambda: 'Vanilla')` 
-- `nums.append(val), nums.remove(val), nums.sort(), nums.reverse()`
-- `nums.extend(nums2)`
+    - `for count, item in enumberate(['x','y','z'])` # 0x 1y 2z
+- `range(0,len(mylist)1,2)`
+    - range(0,3), is 0,1,2
+    - `for i in reversed(range(len(A)))`
+- `nums.append(val), nums.remove(val), nums.reverse()`
+    - `nums.extend(nums2)`
+    - `list.insert(index, obj)`
+    - `list.pop()` default pop index is -1, remove the last one
 - `nums[:]`
+    - copy the value within function: b[:]=a
+        - .copy is equals to b[:]
+        - temp = self.original[:]
+        - copy.deepcopy could copy nested list
+        - import copy , copy.deepcopy(a)
 - `min(a,b)`
-- `dict(collections.Counter(nums1))`: key is item in num1, value is the count.
+- `nums.sort()`
+    - list.sort() change in place
+    - sorted() return a  new sorted list, leving original unaffected
+        - a.sort(key=lambda: x: str(x), reverse = False)
+- `zip(alist,blist)` : return a zip object which is an iterator of tuples, paird together. Lengths depends on the shorter input list.
+    - usually use tuple(), list(), set() on result.
+    - `list(zip(['x','y','z'], [3,4,5])) = [('x', 3), ('y', 4), ('z', 5)];`
+    - `letter, number =  zip(*result_list)`  # unzip
+- matrix
+    - test = [[0 for i in range(m)] for j in range(n)]
+        - watch out , 3*2, m*n,  then the corner is test[n-1][m-1] 
+        - lee62
+    - make one: dp = [[0] * n for _ in range(n)]
+    - transpose a two dimension list
+        - `Trans = [[row[i] for row in board] for i in range(len(board[0]))]`
+
+#### dict
+- for k, v in dic.items()
+    - dict = {'a': 1, 'b': 2, 'b': '3'}
+    - dic1 == dic2
+    - dic.values()
+- `d = dict(collections.Counter(s))` :   s 3 times, a 1 time
+    - c.most_common(3),  according to frequency, first 3 value,count 's list
+    - c.items() , a list with  value,count
+    - c.elements:  ['a', 'a', 'a', 'a', 'b', 'b']
+- `collections.defaultdict(int)` # default 0 
+    - `senti_dic = collections.defaultdict(lambda: 0)`
+    - `defaultdict(lambda: 'Vanilla')` 
+    - `dict(collections.Counter(nums1))`: key is item in num1, value is the count.
+
 
 ### e.g.1 with zip, enumerate
 

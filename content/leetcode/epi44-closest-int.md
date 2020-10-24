@@ -4,6 +4,7 @@ title = "Find a closest integer with the same weight"
 tags = ["leetcode","primitive","bit"]
 +++
 
+## EPI Python 4.4
 > The weight of x to be the number of bits that are set to 1 in its binary reprentations. E.g. 92 in bas-2 is $(1011100)_2$, the weight is 4. 
 > 
 > Take a nonnegative integer x, return a number y with the same weight of x, and their difference is as small as possible.

@@ -1,7 +1,8 @@
 +++ 
 date = "2020-08-31"
-title = "Leetcode: LinkedList-related commonly used functions in Python"
+title = "Leetcode: LinkedList-related functions in Python"
 tags = ["leetcode", "linkedlist"]
+lastmod = "2020-10-23"
 +++
 
 Commonly used:
