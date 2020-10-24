@@ -5,6 +5,7 @@ tags = ["leetcode", "array"]
 lastmod = 2020-10-23
 +++
 
+### Commonly used
 - `len(array)` : length of array
 - `zip(alist,blist)` : return a zip object which is an iterator of tuples, paird together. Lengths depends on the shorter input list.
 	- usually use tuple(), list(), set() on result.
