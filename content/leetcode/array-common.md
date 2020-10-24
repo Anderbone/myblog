@@ -4,8 +4,21 @@ title = "Leetcode: Array-related commonly used functions in Python"
 tags = ["leetcode", "array"]
 +++
 
-Commonly used: len(array), zip(alist,blist), enumerate(array), range(0,len(list)-1,2), collections.defaultdict(int), nums.append(val), nums.remove(val), nums.sort(), nums.reverse(), nums[:], nums.extend(nums2), min(a,b), dict(collections.Counter(nums1)), 
-
+- `len(array)` : length of array
+- `zip(alist,blist)` : return a zip object which is an iterator of tuples, paird together. Lengths depends on the shorter input list.
+	- usually use tuple(), list(), set() on result.
+	- `list(zip(['x','y','z'], [3,4,5])) = [('x', 3), ('y', 4), ('z', 5)];`
+	- `letter, number =  zip(*result_list)`  # unzip
+- `enumerate(array)` : adds counter at the beginning.
+	- `for count, item in enumberate(['x','y','z'])` # 0x 1y 2z
+- `range(0,len(mylist)-1,2)`
+- `collections.defaultdict(int)` # default 0 
+  - `defaultdict(lambda: 'Vanilla')` 
+- `nums.append(val), nums.remove(val), nums.sort(), nums.reverse()`
+- `nums.extend(nums2)`
+- `nums[:]`
+- `min(a,b)`
+- `dict(collections.Counter(nums1))`: key is item in num1, value is the count.
 
 ### e.g.1 with zip, enumerate
 

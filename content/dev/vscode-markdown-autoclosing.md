@@ -44,3 +44,5 @@ Add what you want auto close and save it.
         }
     ],
 ```
+
+BTW use `Ctrl+M Ctrl+C` you could generate a code block in markdown. 
