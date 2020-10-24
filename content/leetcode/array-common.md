@@ -2,6 +2,7 @@
 date = "2020-08-22"
 title = "Leetcode: Array-related commonly used functions in Python"
 tags = ["leetcode", "array"]
+lastmod = 2020-10-23
 +++
 
 - `len(array)` : length of array
