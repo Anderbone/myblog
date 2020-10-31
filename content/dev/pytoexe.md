@@ -1,5 +1,5 @@
 +++ 
-date = "2020-08-16"
+date = "2020-10-31"
 title = "Python to exe with win10 notification"
 tags = ["python", "tool"]
 +++
