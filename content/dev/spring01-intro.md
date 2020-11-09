@@ -5,6 +5,7 @@ tags = ["spring", "java", "spring-in-action" ]
 +++
 
 Follow the book: Spring in Action fifth version.
+Code repo: [github](https://github.com/Anderbone/spring-in-action-5-samples)
 
 ## 1.1 What is Spring?
 At its core, Spring offers a container, often referred to as the Spring application context, that creates and manages application components. These components, or beans, are wired together inside the Spring application context to make a complete application, much like bricks, mortar, timber, nails, plumbing, and wiring are bound together to make a house.
@@ -52,3 +53,6 @@ The @Configuration annotation indicates to Spring that this is a configuration c
 - Spring Boot builds on top of Spring to make Spring even easier with simplified dependency management, automatic configuration, and runtime insights.
 - Spring applications can be initialized using the Spring Initializr, which is webbased and supported natively in most Java development environments.
 - The components, commonly referred to as beans, in a Spring application context can be declared explicitly with Java or XML, discovered by component scanning, or automatically configured with Spring Boot autoconfiguration
+
+## Code
+If port 8080 is in used, add `server.port=8090` in your application.properties.

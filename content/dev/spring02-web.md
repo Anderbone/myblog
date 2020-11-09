@@ -13,7 +13,8 @@ This chapter focues on Spring web framework without database.
 ### 2.1.1 Establishing the domain
 
 ```java
-package tacos; import lombok.Data;
+package tacos; 
+import lombok.Data;
 import lombok.RequiredArgsConstructor; 
 @Data
 @RequiredArgsConstructor 
@@ -41,6 +42,15 @@ the @Data annotation at the class level is provided by Lombok and tells Lombok t
 
 ![](https://i.imgur.com/zE6wqiw.png)
 
+```java
+	Type[] types = Ingredient.Type.values();
+	for (Type type : types) {
+	  model.addAttribute(type.toString().toLowerCase(),
+	      filterByType(ingredients, type));
+	}
+```
+Data placed in model attributes is copied into the servlet response attributes, where view can find them.
+
 ### 2.1.3 Designing the view
 Spring offers several great options for defining views, including JavaServer Pages (JSP), Thymeleaf, FreeMarker, Mustache, and Groovy-based templates. For now, we’ll use Thymeleaf.
 
@@ -49,18 +59,34 @@ Spring offers several great options for defining views, including JavaServer Pag
 ```
 When the template is rendered into HTML, the body of the <p> element will be replaced with the value of the servlet request attribute whose key is "message". The th:text attribute is a Thymeleaf-namespaced attribute that performs the replacement. The ${} operator tells it to use the value of a request attribute ("message", in this case).
 
+
+```html
+    <h3>Designate your wrap:</h3>
+    <div th:each="ingredient : ${wrap}">
+    <input name="ingredients" type="checkbox" th:value="${ingredient.id}" />
+    <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+    </div>
+```
+Here you use th:each attribute on the <div> tag to repeat rendering of the <div> once for each item in the collection found in the **wrap** request attribute. On each iteration, the ingredient item is bound to a Thymeleaf variable named ingredient. Inside <div>, there's a checkbox <input> and a <span>.
 ## 2.2 Processing form submission
 
 Just like @GetMapping handles GET requests, you can use @PostMapping to handle POST requests. For handling taco design submissions, add the processDesign() method in the following listing to DesignTacoController.
 
 ```java
 @PostMapping
-public String processDesign(Design design) { // Save the taco design... 
+public String processDesign(Taco design) { // Save the taco design... 
 // We'll do this in chapter 3 
     log.info("Processing design: " + design);
     return "redirect:/orders/current"; 
 }
 ```
+
+When the form is submitted, the fields in the form are bound to properties of a Taco object (name and ingredients) that’s passed as a parameter into processDesign(). From there, the processDesign() method can do whatever it wants with the Taco object.
+```html
+   <input type="text" th:field="*{name}"/>
+```
+If you look back at the form in listing 2.3, you’ll see several checkbox elements, all with the name ingredients, and a text input element named name. Those fields in the form correspond directly to the ingredients and name properties of the Taco class. The Name field on the form only needs to capture a simple textual value. Thus
+the name property of Taco is of type String. The ingredients check boxes also have textual values, but because zero or many of them may be selected, the ingredients property that they’re bound to is a List<String> that will capture each of the chosen ingredients.
 
 ## 2.3 Validating form input
 
@@ -81,6 +107,7 @@ Thymeleaf offers convenient access to the Errors object via the fields property 
 - All but HomeController are annotated with @RequestMapping at the class level to define a baseline request pattern that the controller will handle.
 - They all have one or more methods that are annotated with @GetMapping or @PostMapping to provide specifics on which methods should handle which kinds of requests.
 
+```java
 @Configuration
 public class WebConfig implements WebMvcConfigurer { 
     @Override
@@ -88,7 +115,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("home");
     } 
 }
-
+```
 
 ## 2.5 Choosing a view template library
 ![](https://i.imgur.com/plK2L3n.png)
@@ -106,3 +133,6 @@ spring.thymeleaf.cache=false
 - Spring MVC supports validation through the Java Bean Validation API and implementations of the Validation API such as Hibernate Validator.
 - View controllers can be used to handle HTTP GET requests for which no model data or processing is required.
 - In addition to Thymeleaf, Spring supports a variety of view options, including FreeMarker, Groovy Templates, and Mustache.
+
+## Error Correction
+Listing 2.4, processDesign(Taco design), rather than (Design design).
