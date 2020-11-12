@@ -26,27 +26,21 @@ Spring JDBC support is rooted in the JdbcTemplate class. JdbcTemplate provides a
 
 ## Code
 When running the JPA example code:
+[This video](https://www.youtube.com/watch?v=8QBJMxyXIqc&ab_channel=DanVega) may be helpful when you want to use H2 with intellij in spring boot project.
 
-applicaton.yml
-```yml
-spring:
-  datasource:
-    username: sa
-    password: sa
-    url: jdbc:h2:mem:default
-    driver-class-name: org.h2.Driver
-    schema:
-      - classpath:data.sql
-    initialization-mode: always
+```log
+spring.h2.console.enabled=true
+# spring.datasource.url=jdbc:h2:file:./src/main/resources/mydb;AUTO_SERVER=true // if you want to use multiple connections
+spring.datasource.url=jdbc:h2:mem:default
 ```
-![](https://i.imgur.com/kpJEBfx.png)
+When connect to database using intellij database tool, use `sa` as name and you don't need to input any password.
 
-Then there's an error:
+If there's an error:
 ```log
 Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not get constructor for org.hibernate.persister.entity.SingleTableEntityPersister
 ```
 
-It's mainly because you copied schema.sql, you don't need to use it in JPA project. A quick fix is to add a new dependency.
+A quick fix is to add a new dependency.
 ```xml
         <dependency>
             <groupId>org.javassist</groupId>
@@ -55,9 +49,7 @@ It's mainly because you copied schema.sql, you don't need to use it in JPA proje
         </dependency>
 ```
 
-A better solution:
-
-Remove schema.sql and then there's another error,
+Another error:
 ```log
 "org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #6 of URL [file:/home/zhu/NetBeansProjects/Jpa-Taco-cloud-chapter3/target/classes/data.sql]: insert into Ingredient (id, name, type) values ('FLTO', 'Flour Tortilla', 'WRAP'); nested exception is org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'WRAP' (INGREDIENT: ""TYPE"" INTEGER)"; SQL statement:"
 ```
