@@ -55,3 +55,16 @@ def dutch_flag_partition(pivot_index, A):
             larger -= 1
             A[equal], A[larger] = A[larger], A[equal]
 ```
+
+My mistake:
+1. use another if condition to only determine when to i+=1, (equal+=1), but A[i] is already changed. Less and clean if, better
+2. end = len(A)-1 or end = len(A) ? either above, notice __i<=end__, or
+i< end rather than <=, in the if, at first -1, then swap
+```
+end = len(A)
+while i < end:
+	elif A[i] > pivot_num:
+		end -= 1
+		swap
+```
+Think in this way: the 'end' index at first is checked or not, not checked, then as the orignal code, it should be checked later. If it's checked(swapped), only i < end here.
