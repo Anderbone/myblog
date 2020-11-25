@@ -34,27 +34,23 @@ The time complexity is O(n), the space complexity is O(1).
 Another better solution is to do it in one round with two index.
 
 ```python
-def dutch_flag_partition(pivot_index, A):
+def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
+    # A.sort()
+    pivot_num = A[pivot_index]
+    begin, end = 0, len(A)-1
+    i = 0
+    while i <= end:
+        if A[i] < pivot_num:
+            A[begin], A[i] = A[i], A[begin]
+            begin += 1
+            i += 1
+        elif A[i] > pivot_num:
+            A[end], A[i] = A[i], A[end]
+            end -= 1
+        elif A[i] == pivot_num:
+            i += 1
+    return
 
-    pivot = A[pivot_index]
-    # Keep the following invariants during partitioning:
-    # bottom group: A[:smaller].
-    # middle group: A[smaller:equal].
-    # unclassified group: A[equal:larger].
-    # top group: A[larger:].
-    smaller, equal, larger = 0, 0, len(A)
-    # Keep iterating as long as there is an unclassified element.
-    while equal < larger:
-        # A[equal] is the incoming unclassified element.
-        if A[equal] < pivot:
-            A[smaller], A[equal] = A[equal], A[smaller]
-            smaller, equal = smaller + 1, equal + 1
-        elif A[equal] == pivot:
-            equal += 1
-        else:  # A[equal] > pivot.
-            larger -= 1
-            A[equal], A[larger] = A[larger], A[equal]
-```
 
 My mistake:
 1. use another if condition to only determine when to i+=1, (equal+=1), but A[i] is already changed. Less and clean if, better
