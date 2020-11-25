@@ -50,7 +50,7 @@ def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
         elif A[i] == pivot_num:
             i += 1
     return
-
+```
 
 My mistake:
 1. use another if condition to only determine when to i+=1, (equal+=1), but A[i] is already changed. Less and clean if, better
