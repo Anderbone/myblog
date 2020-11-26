@@ -64,3 +64,4 @@ while i < end:
 		swap
 ```
 Think in this way: the 'end' index at first is checked or not, not checked, then as the orignal code, it should be checked later. If it's checked(swapped), only i < end here.
+3. When swap two elements, use index instead of any values.

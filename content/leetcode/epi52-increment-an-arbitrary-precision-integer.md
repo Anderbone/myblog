@@ -29,6 +29,27 @@ def plus_one(A):
 
 ```
 
+C1, Finished by my own, a bit slower than c0. combine list is slower than twist A itself, reversed is quicker than A[::-1].
+code
+```python
+def plus_one(A: List[int]) -> List[int]:
+    # 1,2,9  -> 1,3,0
+    # if last is 9, change to 0, add 1 to the next.
+    # if first is 9, change to 0, add 1 in the first.
+    count0_right = 0
+    # for i, v in enumerate(A[::-1]):
+    for i, v in enumerate(reversed(A)):
+        index = len(A) - 1 - i
+        if v != 9:
+            v += 1
+            res = A[:index] + [v] + [0] * count0_right
+            break
+        count0_right += 1
+    if count0_right == len(A):
+        return [1] + [0] * len(A)
+    return res
+```
+
 ```java
   public static List<Integer> plusOne(List<Integer> A) {
     A.set(A.size()-1, A.get(A.size()-1) + 1);
