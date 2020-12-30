@@ -14,8 +14,8 @@ tags = ["material", "tips"]
 ![](https://i.imgur.com/WQiWgAA.png)
 
 参考链接如下：
-https://www.chelwest.nhs.uk/your-visit/patient-leaflets/hand-therapy/desk-health-typing-tips
-https://www.muirortho.com/orthopedic-blog/2013/december/preventing-wrist-injuries-from-computer-work/
-https://www.verywellhealth.com/preventing-carpal-tunnel-syndrome-2224091
-https://www.rsiguard.com/help/ErgoAnswers/elbow.html
-http://ergonomictrends.com/proper-ergonomic-typing-posture-at-computer/#:~:text=The%20Ideal%20Typing%20Posture%20According%20to%20Experts,-According%20to%20Cornwell&text=Elbows%20should%20be%20in%20an,from%20you%20(negative%20tilt).
+- https://www.chelwest.nhs.uk/your-visit/patient-leaflets/hand-therapy/desk-health-typing-tips
+- https://www.muirortho.com/orthopedic-blog/2013/december/preventing-wrist-injuries-from-computer-work/
+- https://www.verywellhealth.com/preventing-carpal-tunnel-syndrome-2224091
+- https://www.rsiguard.com/help/ErgoAnswers/elbow.html
+- http://ergonomictrends.com/proper-ergonomic-typing-posture-at-computer/#:~:text=The%20Ideal%20Typing%20Posture%20According%20to%20Experts,-According%20to%20Cornwell&text=Elbows%20should%20be%20in%20an,from%20you%20(negative%20tilt).
