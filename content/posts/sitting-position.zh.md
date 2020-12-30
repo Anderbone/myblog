@@ -8,10 +8,10 @@ tags = ["material", "tips"]
 
 一般来说，绝大部分人包括我之前，都是将胳膊放在桌子上的，手腕也是放在手托上，这样一开始感觉确实不太累，但稍微坐久了很容易脖子疼。经过我的仔细研究，原来正确的姿势如下，重中之重就是正确的高度然后浮腕，只有敲击键盘的手指与键盘接触，其他任何位置不要接触任何扶手或者桌子。
 使用站立办公桌时同理，肩膀脖子很舒适。
-[](https://i.imgur.com/Y5JHqmP.png)
-[](https://i.imgur.com/gaSwzHe.png)
-[](https://i.imgur.com/UyZkgWc.png)
-[](https://i.imgur.com/WQiWgAA.png)
+![](https://i.imgur.com/Y5JHqmP.png)
+![](https://i.imgur.com/gaSwzHe.png)
+![](https://i.imgur.com/UyZkgWc.png)
+![](https://i.imgur.com/WQiWgAA.png)
 
 参考链接如下：
 https://www.chelwest.nhs.uk/your-visit/patient-leaflets/hand-therapy/desk-health-typing-tips

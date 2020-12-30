@@ -4,7 +4,7 @@ title = "hhkb键盘很好，非常好"
 tags = ["material", "tips"]
 +++
 
-[my hhkb config](https://i.imgur.com/nU20xDf.png)
+![my hhkb config](https://i.imgur.com/nU20xDf.png)
 
 今年后半年入了这个hhkb hybrid type-s keyboard black no-print，300磅大洋确实不便宜，但一句话就是真的后悔买晚了，以下是我的一些感受和tips。
 
