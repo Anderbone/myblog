@@ -11,11 +11,11 @@ Output: false
 return True if contains duplicate
 
 - c0, it's O(n) to make a set from a list. Set result is out of order!
-```
+```python
 return True if len(nums) != len(set(nums)) else False
 ```
 - c1
-```
+```python
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         if not len(nums):
