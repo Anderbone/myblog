@@ -20,7 +20,7 @@ class Solution:
                 profit += diff
         return profit
 ```
--c1
+- c1
 ```python
                 
 class Solution:
