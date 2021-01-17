@@ -1,6 +1,6 @@
 +++ 
 date = "2020-12-17"
-title = "Compute a random subset"
+title = "Compute a random permutation"
 tags = ["epi","array"]
 +++
 compute_random_permutation  

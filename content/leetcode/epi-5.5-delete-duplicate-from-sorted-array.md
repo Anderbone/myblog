@@ -13,7 +13,7 @@ make a write index, to move when you write a different number
 ### code
 - c2, same to c0, easier to understand
 code
-```
+```python
 def delete_duplicates(A: List[int]) -> int:
     if not A:
         return 0
@@ -26,7 +26,7 @@ def delete_duplicates(A: List[int]) -> int:
 ```
 - c1 maybe it's cheat
 code, maybe it's cheat
-```
+```python
 def delete_duplicates(A: List[int]) -> int:
     dic = collections.Counter(A)
     for i,v in enumerate(dic.keys()):
@@ -34,7 +34,7 @@ def delete_duplicates(A: List[int]) -> int:
     return len(dic)
 ```
 - c0 old
-```
+```python
 # Returns the number of valid entries after deletion.
 def delete_duplicates(A):
     # TODO - you fill in here.
