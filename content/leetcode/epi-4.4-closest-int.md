@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-15"
 title = "Find a closest integer with the same weight"
-tags = ["leetcode","primitive","bit"]
+tags = ["epi","primitive","bit"]
 +++
 
 ## EPI Python 4.4

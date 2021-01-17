@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-15"
 title = "Reverse bits"
-tags = ["leetcode","primitive","bit"]
+tags = ["epi","primitive","bit"]
 +++
 
 
