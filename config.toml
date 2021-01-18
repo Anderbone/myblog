@@ -101,11 +101,11 @@ theme = "github-light"
     weight = 1
     url = "https://github.com/Anderbone/"
 
-[[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter"
-    weight = 2
-    url = "https://twitter.com/Anderesurrect/"
+# [[params.social]]
+#     name = "Twitter"
+#     icon = "fab fa-twitter"
+#     weight = 2
+#     url = "https://twitter.com/Anderesurrect/"
 
 #[[params.social]]
 #    name = "LinkedIn"
@@ -165,7 +165,7 @@ theme = "github-light"
 
         [languages.zh.params]
             author = "不可思議"
-            info = "A Christian, developer and fencer"
+#             info = "A Christian, developer and fencer"
             keywords = "blog,developer,personal"
 #            footercontent = "Coloque algum texto aqui."
 
