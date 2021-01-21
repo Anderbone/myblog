@@ -3,8 +3,9 @@ date = "2021-01-21"
 title = "Floating typing- the proper ergonomic typing posture"
 tags = ["material", "tips"]
 +++
-Regarding the height of the seat and the height of the screen, I won’t talk about it. Many articles say that everyone understands it and it’s easy to adjust it.
-I will focus on a very critical point here, and the most majority don't know how to do it, which is the height position of the arm and wrist when using the keyboard and mouse.
+Regarding the height of the seat and the height of the screen, I won’t talk about it. Everyone understands it and it’s easy to adjust it.
+
+I will focus on a very critical point here, and the most majority don't know how to do it properly, which is the height position of the arm and wrist when using the keyboard and mouse.
 
 Generally speaking, most people, including me, put their arms on the table and their wrists on the table or hand rest. This is really not too bad at first, but it is easy to get neck pain or wrist pain after sitting for a long time.
 
