@@ -2,6 +2,7 @@
 date = "2019-10-12"
 title = "再见，Rowan"
 tags = ["letter"]
+draft = true
 +++
 
 花花，

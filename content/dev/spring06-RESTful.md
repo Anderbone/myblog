@@ -2,6 +2,7 @@
 date = "2020-11-14"
 title = "Spring In Action 06 - RESTful API"
 tags = ["spring", "java", "spring-in-action" ]
+draft = true
 +++
 Set [project](https://github.com/habuma/spring-in-action-5-samples/tree/master/ch06) to java 8. In ch06 folder, run `mvnw clean package`.
 

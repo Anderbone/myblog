@@ -2,6 +2,7 @@
 date = "2019-01-02"
 title = "胖子们如何与自己和解"
 tags = ["essay"]
+draft = true
 +++
 
 今天听了一期电台，讨论胖子们的生活和他们的内心，This American Life #589 Tell me I'm fat. 身为一个从小到大的瘦子，这期节目让我思考了一些我从未设身处地考虑过的问题。

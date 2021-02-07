@@ -33,3 +33,5 @@ Valentina, Valentina.
 I throw my self in your way.
 If I am going to die tomorrow,
 why not, once and for all, today?
+
+Update: 感谢上帝，祂为我们击败了死亡。我的灵堂原来是我的受洗。Here I repent myself my sins and die to myself, and I will trust him, and live for him.

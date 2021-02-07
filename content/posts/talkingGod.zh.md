@@ -3,6 +3,7 @@
 date = "2017-06-27"
 title = "与神对话"
 tags = ["essay", "review"]
+draft = true
 +++
 ####1.关于“我即是神”的理解 
 

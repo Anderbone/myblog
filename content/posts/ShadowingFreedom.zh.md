@@ -2,6 +2,7 @@
 date = "2019-01-02"
 title = "自由的幻影"
 tags = ["essay", "tips"]
+draft = true
 +++
 
 每一天
