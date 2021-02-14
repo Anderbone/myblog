@@ -2,6 +2,7 @@
 date = "2021-2-14"
 title = "基督教常见话题-护教角度"
 tags = ["christian"]
+toc = true
 +++
 
 仅代表本基督徒个人看法。  
