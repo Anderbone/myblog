@@ -1,6 +1,6 @@
 +++
 date = "2021-01-19"
-title = "Remove Nth node from end of list"
+title = "19. Remove Nth node from end of list"
 tags = ["leetcode","linkedlist"]
 +++
 

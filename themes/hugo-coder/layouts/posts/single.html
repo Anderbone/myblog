@@ -33,7 +33,7 @@
                     </time>
                   </span>
 
-                  {{ if ne .Lastmod .Date }}
+                  {{ if ne .Date.YearDay .Lastmod.YearDay }}
                   <span class="post-on">
                     <i class="fas fa-calendar"></i>
                     <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
@@ -42,13 +42,6 @@
                     </time>
                   </span>
                   {{ end }}
-
-                  <!--                <span class="reading-time">-->
-                  <!--                              <i class="fas fa-clock"></i>-->
-                  <!--                              {{ i18n "reading_time" .ReadingTime }}-->
-                  <!--                              {{ i18n "reading_time"  .Lastmod }}-->
-                  <!--                              Last modified: {{ .Lastmod }}-->
-                  <!--                            </span>-->
 
                 </div>
                 {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}

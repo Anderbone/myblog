@@ -5,66 +5,66 @@
 
 
 <body data-spy="scroll" data-target="#toc">
-<div class="container-fluid">
-  <div class="row">
+  <div class="container-fluid">
+    <div class="row">
 
-    <div class="col-sm-2">
+      <div class="col-sm-2">
 
-      {{ if or (gt .WordCount 400 ) (.Params.toc) }}
-      <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
-      {{ end }}
-    </div>
+        {{ if or (gt .WordCount 400 ) (.Params.toc) }}
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        {{ end }}
+      </div>
 
-    <div class="col-sm-8">
-      <section class="container post">
+      <div class="col-sm-8">
+        <section class="container post">
 
-        <article>
+          <article>
 
-          <header>
-            <div class="post-title">
-              <h1 class="title">{{ .Title }}</h1>
-            </div>
-            <div class="post-meta">
-              <div class="date">
-            <span class="posted-on">
-              <i class="fas fa-calendar"></i>
-              <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-                {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
-              </time>
-            </span>
-            <span class="post-on">
-              <i class="fas fa-calendar"></i>
-              <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-                Last updated:
-                {{ dateFormat ( or $.Site.Params.dateFormat "2006, Jan 02" ) $.Page.Params.LastMod }}
-              </time>
-            </span>
-                <!--            <span class="reading-time">-->
-                <!--              <i class="fas fa-clock"></i>-->
-                <!--              {{ i18n "reading_time" .ReadingTime }}-->
-                <!--            </span>-->
+            <header>
+              <div class="post-title">
+                <h1 class="title">{{ .Title }}</h1>
               </div>
-              {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
-              {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
-            </div>
-          </header>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fas fa-calendar"></i>
+                    <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+                      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+                    </time>
+                  </span>
 
-          {{ .Content }}
+                  {{ if ne .Date.YearDay .Lastmod.YearDay }}
+                  <span class="post-on">
+                    <i class="fas fa-calendar"></i>
+                    <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+                      Last updated:
+                      {{ dateFormat ( or $.Site.Params.dateFormat "2006, Jan 02" ) $.Page.Params.LastMod }}
+                    </time>
+                  </span>
+                  {{ end }}
 
-          <footer>
-            {{ partial "posts/series.html" . }}
-            {{ partial "posts/disqus.html" . }}
-            {{ partial "posts/commento.html" . }}
-            {{ partial "posts/utteranc.html" . }}
-          </footer>
-        </article>
+                </div>
+                {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+                {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+              </div>
+            </header>
 
-        {{ partial "posts/math.html" . }}
+            {{ .Content }}
 
-      </section>
+            <footer>
+              {{ partial "posts/series.html" . }}
+              {{ partial "posts/disqus.html" . }}
+              {{ partial "posts/commento.html" . }}
+              {{ partial "posts/utteranc.html" . }}
+            </footer>
+          </article>
+
+          {{ partial "posts/math.html" . }}
+
+        </section>
+      </div>
     </div>
   </div>
-</div>
 </body>
 
 
