@@ -11,6 +11,7 @@ paginate = 20
 canonifyurls = true
 enableEmoji = true
 googleAnalytics = "UA-165971391-1"
+enableGitInfo = true
 
 
 [markup]
