@@ -95,11 +95,11 @@ theme = "github-light"
   series = "series"
   tag = "tags"
 
-[[params.social]]
-    name = "Github"
-    icon = "fab fa-github"
-    weight = 1
-    url = "https://github.com/Anderbone/"
+#[[params.social]]
+#    name = "Github"
+#    icon = "fab fa-github"
+#    weight = 1
+#    url = "https://github.com/Anderbone/"
 
 # [[params.social]]
 #     name = "Twitter"
@@ -177,12 +177,12 @@ theme = "github-light"
 #            url = "about/"
 
             [[languages.zh.menu.main]]
-            name = "隨筆"
+            name = "随笔"
             weight = 1
             url = "/zh/posts/"
 
             [[languages.zh.menu.main]]
-            name = "開發"
+            name = "开发"
             weight = 2
             url = "/zh/dev/"
 

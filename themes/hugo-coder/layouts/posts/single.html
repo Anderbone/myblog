@@ -32,6 +32,8 @@
                       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
                     </time>
                   </span>
+
+                  {{ if gt (sub now.YearDay .Lastmod.YearDay) 3 }}
                   <span class="post-on">
                     <i class="fas fa-calendar"></i>
                     <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
@@ -39,6 +41,7 @@
                       {{ dateFormat ( or $.Site.Params.dateFormat "2006, Jan 02" ) $.Page.Params.LastMod }}
                     </time>
                   </span>
+                  {{ end }}
 
                   <!--                <span class="reading-time">-->
                   <!--                              <i class="fas fa-clock"></i>-->
