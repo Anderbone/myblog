@@ -33,7 +33,7 @@
                     </time>
                   </span>
 
-                  {{ if gt (sub now.YearDay .Lastmod.YearDay) 3 }}
+                  {{ if not (eq .Lastmod .Date) }}
                   <span class="post-on">
                     <i class="fas fa-calendar"></i>
                     <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
