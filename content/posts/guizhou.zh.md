@@ -13,13 +13,12 @@ tags = ["christian"]
 
 你们少数民族的语言文化放在博物馆或教科书里骗骗外国友人，证明我们的政策开放包容没问题；但当地人如果还有自发社区，还能通过宗教、文化、语言团结在一起，让我们党代表怎么开展工作，怎么推行新时代主体思想教育。说什么上帝的归上帝，凯撒的归凯撒都是虚的，村民们遇到事情去找牧师还是找村支书是很现实的。先把你们的精英们杀死或政协，剩下的一群散沙才好听话，20年后对着遗体平反是没问题的，但再过20年当然可能还是有必要再杀一批，后面再来个改革开放加平反的。
 
-当然，基督徒往往是越杀越多的，不管你多不信邪。张春桥说基督教在上海一百多年才建立起来，我三天就把她消灭；江青说我要把基督教送进历史博物馆，让耶稣见鬼去。书中记载1974年,共党在威宁兴隆，集体屠杀正在敬拜的A-Hmao和Gha-Mu基督徒。按附录表格的2018年的统计，A-Hmao，大花苗族，44万人中8成是基督徒，大概35万。
+当然，基督徒往往是越杀越多的，不管你多不信邪。张春桥说基督教在上海一百多年才建立起来，我三天就把她消灭；江青说我要把基督教送进历史博物馆，让耶稣见鬼去。书中记载1974年，共党在威宁兴隆，集体屠杀正在敬拜的A-Hmao和Gha-Mu基督徒。
 
 > The more you forbid Christianity, the more we will cling to the Church. If you confiscate our buildings, we will worship in caves. If you announce the termination of our services, we will develop even more secret meetings. If you attack ordained pastors, we will use even more independent house church preachers instead. If you take action against us on Sundays, we will meet every day of the week and into the night. 
 > -- Tony Lamber, China's Christian Millions: The Costly Revival(London:Monarch, 1999), p.100
 
-
-
+按附录表格的2018年的统计，A-Hmao，大花苗族，44万人中8成是基督徒，大概35万。
 
 
 
