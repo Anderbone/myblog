@@ -1,5 +1,5 @@
 +++ 
-date = "2020-02-28"
+date = "2021-02-28"
 title = "读《Guizhou: The precious province》小记"
 tags = ["christian"]
 +++
