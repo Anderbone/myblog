@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-30"
 title = "hhkb键盘很好，非常好"
-tags = ["material", "tips"]
+tags = ["material","tips"]
 +++
 
 ![my hhkb config](https://i.imgur.com/nU20xDf.png)
