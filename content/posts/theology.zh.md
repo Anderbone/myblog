@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-23"
 title = "读《基督教神学导论》小记"
-tags = ["christian"]
+tags = ["christian","review"]
 toc = true
 +++
 

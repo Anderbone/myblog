@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-22"
 title = "读《诸神的面具》小记"
-tags = ["christian"]
+tags = ["christian","review"]
 toc = true
 +++
 

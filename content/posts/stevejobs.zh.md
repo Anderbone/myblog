@@ -2,6 +2,7 @@
 date = "2017-06-30"
 title = "乔布斯传"
 tags = ["essay", "review"]
+draft = true
 +++
 
 花了一周的路上时间听完了乔布斯传，感触颇多。

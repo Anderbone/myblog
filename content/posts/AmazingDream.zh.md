@@ -2,6 +2,7 @@
 date = "2018-01-18"
 title = "梦境与神奇"
 tags = ["essay"]
+draft = true
 +++
 
 前天晚上我第一次体验到出体（out-of-body）。 

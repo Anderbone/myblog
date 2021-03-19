@@ -2,6 +2,7 @@
 date = "2018-01-16"
 title = "实验：告别社交网络一周"
 tags = ["essay", "tips" ]
+draft = true
 +++
 
 

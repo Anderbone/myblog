@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-28"
 title = "读《Guizhou: The precious province》小记"
-tags = ["christian"]
+tags = ["christian","review"]
 +++
 书是教堂里的老奶奶Eunice借给我的，她从朋友那里得到推荐并借到书，看完又转借给亲戚Ruth，疫情期间，Ruth看完直接从门口塞到了我住的地方。
 
