@@ -1,6 +1,6 @@
 +++ 
 date = "2021-02-23"
-title = "读《基督教神学导论》小记"
+title = "基督教常见话题入门——读《基督教神学导论》"
 tags = ["christian","review"]
 toc = true
 +++
