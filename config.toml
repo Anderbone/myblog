@@ -53,13 +53,13 @@ defaultMarkdownHandler = "goldmark"
 # disqusShortname = "yourdiscussshortname"
 
 [params]
-    author = "不可思議"
-#    description = "Jiyu's personal website"
+    # author = "不可思議"
+    #description = "Jiyu's personal website"
     keywords = "blog,developer,personal"
-#     info = "A Christian, developer and fencer"
+    info = "The harvest is past, the summer is ended, and we are not saved.  --Jeremiah 8:20"
     avatarurl = "images/fencer.jpg"
-    #gravatar = "yanchiyu@outlook.com"
-#    footercontent = "From this world to that which is to come."
+    # gravatar = "yanchiyu@outlook.com"
+    # footercontent = "From this world to that which is to come."
 
     dateformat = "January 2, 2006"
 
@@ -165,8 +165,8 @@ theme = "github-light"
         title = "Jiyu"
 
         [languages.zh.params]
-            author = "不可思議"
-#             info = "A Christian, developer and fencer"
+            # author = "不可思議"
+            info = "秋收已过，夏季已完，我们还未得救！-- 耶利米书 8:20"
             keywords = "blog,developer,personal"
 #            footercontent = "Coloque algum texto aqui."
 
