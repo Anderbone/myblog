@@ -111,9 +111,3 @@ Most of the world are corrupted by China, and the minority of the populaltion be
 
 Where the last man sees nothingness, the plain people see the miracle. The Gospel has never essentially entered this land for the majority. People laugh at Song Xianggong until today, give up waiting for justice and don't believe it exist. The history of the world is the court of the world, whether or not it is going to be a story of people rediscovering themselves, finding the justice of their inner voice, and being redeemed again by the God they abandoned, is unpredicable, but everyone has chosen their destiny by choosing their God.
  
- 
- Reference:
- [LiuZhongjing](https://medium.com/@LiuZhongjing)  
- [Joanna Recus](https://medium.com/@basujoanna)
- 
- 
