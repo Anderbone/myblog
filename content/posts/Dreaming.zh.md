@@ -25,13 +25,13 @@ tags = ["essay"]
 “一个最重要的事实就是，我们所爱、所恨、所盼望的一切，都已被留在后头了。但是人的感觉不会死去，也不会改变。巫师踏上归途时，知道他永远不会抵达，知道世上没有任何力量能带他回到过去他所爱的地方，所爱的事物，所爱的人那儿，甚至连死亡的力量都不能。”
 我已离去，而鸟儿留下，唱着歌。
 
-Because of my passion,
-they say that ill fortune is on my way.
-It doesn’t matter that it might be the devil himself.
-I do know how to die
-Valentina, Valentina.
-I throw my self in your way.
-If I am going to die tomorrow,
-why not, once and for all, today?
+Because of my passion,  
+they say that ill fortune is on my way.  
+It doesn’t matter that it might be the devil himself.  
+I do know how to die.  
+Valentina, Valentina.  
+I throw my self in your way.  
+If I am going to die tomorrow,  
+why not, once and for all, today?  
 
-Update: 感谢上帝，祂为我们击败了死亡。我的灵堂原来是我的受洗。Here I repent myself my sins and die to myself, and I will trust him, and live for him.
+Update: 感谢耶稣，祂为我们击败了死亡。我的灵堂原来是我的受洗。Here I repent my sins and die to myself, and I will trust him, and live for him.

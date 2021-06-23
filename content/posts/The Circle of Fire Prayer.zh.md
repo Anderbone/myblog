@@ -2,6 +2,7 @@
 date = "2017-12-20"
 title = "The Circle of Fire Prayer"
 tags = ["poetry"]
+draft = true
 +++
 
 Today,the day of the Lord,  
