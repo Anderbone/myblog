@@ -8,6 +8,11 @@ toc = true
 ## Recommended, with English subtitle
 --- 
 
+**废城 Ghost Town** 
+- [IMDB](https://www.imdb.com/title/tt1613084/)
+- [豆瓣](https://movie.douban.com/subject/3016788/)
+- [Youtube](https://www.youtube.com/watch?v=qxLdpOL8WoM)
+
 **矿民、马夫、尘肺病 Miners, Groom, Pneumoconiosis** 8.7  
 Published in 2019, 10 years with illegal miners in China
 - [豆瓣](https://movie.douban.com/subject/33434927/)  
