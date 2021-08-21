@@ -5,11 +5,9 @@ tags = ["christian","history"]
 toc = false
 +++
 
+Wiki: https://en.m.wikipedia.org/wiki/Shadian_incident
 
-https://en.m.wikipedia.org/wiki/Shadian_incident
-
-
-A few days ago I heard a Chinese podcast talking details of this incident.
+A few days ago I heard a witness in party talking about this incident that few knows, link on youtube: https://www.youtube.com/watch?v=lVz73p2eVSY
 
 The communist army put pigs head in muslim community's well. The tension kept growing, muslim elite from Shadian went to Beijing to talk the situation with communist leaders, when they came back they knew the situation was going to be worse. Obviously they felt what's going to happen, one of the elites begged their Muslim people to send women and children out, but people were so angry and refused and thought he already betrayed to communists. He said if they have to fight he would fight to death and he did.
 
