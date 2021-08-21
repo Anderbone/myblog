@@ -1,6 +1,6 @@
 +++ 
 date = "2021-06-21"
-title = "Love yourself is nonsense"
+title = "What do you mean by saying Love yourself"
 tags = ["psychology","christian"]
 +++
 
@@ -33,4 +33,4 @@ Where's it comes from, what's the potential motivation to invent these words? Se
 
 The context is the key, the world and environment and relationship among people is the key. There's no such thing like inner world, we tend to imagine like it like biceps and there's a clear connection to our behavior but it's just purely a few characters we created very recently!
 
-Jesus loves us and how much love it is? We hate and curse him and he died for us. Can we say how much I love myself and I die for myself, what's that?
+Jesus loves us and how much love it is? We hate and curse him and he died for us. We can't say how much I love myself and I die for myself.

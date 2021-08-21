@@ -1,8 +1,10 @@
 +++ 
 date = "2021-05-10"
-title = "5 love languages and extrovert/introvert are nonsense"
+title = "5 love languages and extrovert/introvert only existed in our language"
 tags = ["psychology","language"]
 +++
+
+It's from an email I sent to my girl friend, she recommended the book 5 love languages and I explained why I don't buy these kinds of ideas.
 
 Actually you noticed the key issue yourself. When saying gift, you immediately added the word "thoughtful", and that little word(context) you added changes everything, which tells much more than the dry word gift. Suppose a billionaire sends a new phone to different girls every day,(he can even be thoughtful on choosing which phone to send), but you know the difference and what means thoughtful to you. Suppose I buy random books I don't read  for you, it's still gift by definition, but you may be unhappy! I received some books as gift in my life, and "reasons for my hope" is the top 1 in my heart, not only because the book itself is practical and useful, it's also because the book is from you Nikita who becomes my girlfriend the same day! See how important the actual relationship is and how less important the gift itself is. (The thoughtful feeling behind gift is key)
 
