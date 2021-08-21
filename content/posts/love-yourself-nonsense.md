@@ -2,6 +2,7 @@
 date = "2021-06-21"
 title = "What do you mean by saying Love yourself"
 tags = ["psychology","christian"]
+toc = false
 +++
 
 >  Mental states do not come before language nor accompany a sequence of words, but are lived and experienced in the context of linguistic expression.
