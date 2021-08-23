@@ -10,16 +10,17 @@ Input: nums = [1,2,3] Output: [ [3],   [1],   [2],   [1,2,3],   [1,3],   [2,3], 
 
 - code
 ```py
-class Solution(object):
+class Solution:
     def subsets(self, nums):
-        ret = []
-        self.dfs(nums, [], ret)
-        return ret
-    
-    def dfs(self, nums, path, ret):
-        ret.append(path)
-        for i in range(len(nums)):
-            self.dfs(nums[i+1:], path+[nums[i]], ret)
+        res = []
+        def dfs(nums, path, res):
+            res.append(path)
+            for i,v in enumerate(nums):
+                # dfs(nums[:i]+nums[i+1:], res, path+[v]) no duplicate
+                dfs(nums[i+1:], path+[v], res)
+        dfs(nums, [], res)
+        return res
+
 ```
 - code
 ```py
