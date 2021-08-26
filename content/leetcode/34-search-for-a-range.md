@@ -13,6 +13,59 @@ Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]
 Notice, `bisect.bisect_left(a, x, lo=0, hi = len(a))` find the first element that is __greater than or equal to__ the targeted value.  
 Return the index which will keep the list sorted, if all elements in list are less than x, return index=len(A).
 
+c
+- code
+```py
+class Solution:
+    def searchRange(self, nums, target):
+        def binarySearchLeft(A, x):
+            left, right = 0, len(A) - 1
+            while left <= right:
+                mid = (left + right) // 2
+                if x > A[mid]: left = mid + 1
+                else: right = mid - 1
+            return left
+
+        def binarySearchRight(A, x):
+            left, right = 0, len(A) - 1
+            while left <= right:
+                mid = (left + right) // 2
+                if x >= A[mid]: left = mid + 1
+                else: right = mid - 1
+            return right
+            
+        left, right = binarySearchLeft(nums, target), binarySearchRight(nums, target)
+        return (left, right) if left <= right else [-1, -1]
+        
+
+```
+- code
+```py
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        left, right = 0, len(nums)-1
+        found = -1
+
+        while left <= right:
+            mid = left + (right - left) // 2
+            if nums[mid] > target:
+                right = mid - 1
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                found = mid
+                break
+
+        if found == -1:
+            return [-1, -1]
+        found_right = found
+        while found-1 >= 0 and nums[found-1] == target:
+            found -= 1
+        while found_right+1 < len(nums) and nums[found_right+1] == target:
+            found_right += 1
+        return [found, found_right]
+
+```
 - code
 ```py
 class Solution:
