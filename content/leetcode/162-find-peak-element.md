@@ -13,11 +13,11 @@ Example 1:
 Input: nums = [1,2,3,1]Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.
 
 - code  [My clean and readable python solution - LeetCode Discuss](https://leetcode.com/problems/find-peak-element/discuss/50259)
+
 ```py
 class Solution:
     def findPeakElement(self, nums):
-        left = 0
-        right = len(nums)-1
+        left, right = 0, len(nums)-1
 
         while left < right:
             mid = (left+right)//2
@@ -29,24 +29,11 @@ class Solution:
             else:
                 right = mid-1
                
-        return left
-
-
+        return left # or right
 
 ```
-- code
-```py
-class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
-        if len(nums) == 1:
-            return 0
-        if nums[0] > nums[1]:
-            return 0
-        if nums[-1] > nums[-2]:
-            return len(nums) - 1
+Don't compare nums[mid] and nums[mid-1], as mid - 1  can becomes wired. but mid+1 will always be valid, it's right when they two pointers meet each other.
 
-        for i in range(1, len(nums)-1):
-            if nums[i-1] < nums[i] > nums[i+1]:
-                return i
+Based on template 1, need to make sure left < right instead of <=, for the one element situation. otherwise mid+1 is invalid
 
-```
+when left == right, jump out of while loop. so can return any of them
