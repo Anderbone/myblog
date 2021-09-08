@@ -9,7 +9,18 @@ Examples:
 s = "leetcode" return 0. s = "loveleetcode", return 2.
 
 - code
+```py
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        char_count = dict(collections.Counter(s))
+        for i in range(len(s)):
+            if char_count[s[i]] == 1:
+                return i
+        return -1
+
 ```
+- code
+```py
 def firstUniqChar(self, s: str) -> int:
         char_count = dict(collections.Counter(s))
         for char in char_count:
@@ -18,7 +29,7 @@ def firstUniqChar(self, s: str) -> int:
         return -1
 ```
 - c1
-```
+```py
 import string
 
 class Solution:
