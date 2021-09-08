@@ -15,7 +15,8 @@ Input: [2,2,1] Output: 1
     def singleNumber(self, nums: List[int]) -> int:
         for i in range(1, len(nums)):
             nums[0] = nums[0] ^ nums[i]
-        return nums[0]```
+        return nums[0]
+```
 - code
 ```
 def singleNumber3(self, nums):
