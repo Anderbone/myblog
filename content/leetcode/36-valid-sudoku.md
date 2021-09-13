@@ -9,6 +9,42 @@ Each row must contain the digits 1-9 without repetition.
 	Each column must contain the digits 1-9 without repetition.
 	Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
 
+
+In a Sudoku, you can combine the row index and the column index to identify which block this element belongs to.
+![](https://i.imgur.com/C2UTNT0.png)
+-code 
+```py
+class Solution:
+    def isValidSudoku(self, board):
+        return all([
+            self.isRowValid(board),
+            self.isColValid(board),
+            self.isSubBoxValid(board)
+        ])
+
+    def isNineNoDuplicate(self, nums):
+        cleanNum = list(filter(lambda x: x!='.', nums))
+        return len(set(cleanNum)) == len(cleanNum)
+
+    def isRowValid(self, board):
+        return all([self.isNineNoDuplicate(row) for row in board])
+
+    def isColValid(self, board):
+        return all([self.isNineNoDuplicate(col) for col in zip(*board)])
+
+    def isSubBoxValid(self, board):
+        subBoxDict = collections.defaultdict(list)
+        for row in range(9):
+            for col in range(9):
+                if board[row][col] != '.':
+                    key = (row // 3) * 3 + col // 3
+                    if board[row][col] in subBoxDict[key]:
+                        return False
+                    subBoxDict[key].append(board[row][col])
+        return True
+
+```
+
 - code  twist the ans from EPI
 ```python    
 def isValidSudoku(self, board: List[List[str]]) -> bool:
