@@ -31,17 +31,19 @@ class Solution:
 c1
 ```py
 class Solution:
+    # @return an integer
     def lengthOfLongestSubstring(self, s):
-        dicts = {}
-        maxlength = start = 0
-        for i,value in enumerate(s):
-            if value in dicts:
-                sums = dicts[value] + 1
-                if sums > start:
-                    start = sums
-            num = i - start + 1
-            if num > maxlength:
-                maxlength = num
-            dicts[value] = i
-        return maxlength
+        start = maxLength = 0
+        usedChar = {}
+        
+        for i in range(len(s)):
+            if s[i] in usedChar and start <= usedChar[s[i]]:
+                start = usedChar[s[i]] + 1
+            else:
+                maxLength = max(maxLength, i - start + 1)
+
+            usedChar[s[i]] = i
+
+        return maxLength
+
 ```
