@@ -23,13 +23,28 @@ Explanation: There are three ways to climb to the top.
 
 The key is to realize that the solution of current number is equal to the sum of previous two solutions. The reason is that we either add one or add two each time, step[i-2] + 2 and step[i-1] + 1 are all possible solutions for step[i].
 - code
+
+- code
 ```py
 class Solution:
     def climbStairs(self, n: int) -> int:
-        step = {0:0, 1:1, 2:2}
+        cache = {1:1, 2:2}
         for i in range(3, n+1):
-            step[i] = step[i-1] + step[i-2]
-        return step[n]
+            cache[i] = cache[i-1] + cache[i-2]
+        return cache[n]
+
+```
+- code
+```py
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        dp = [0]*(n+1)
+        dp[0] = 1
+        for i in range(1, n+1):
+            for j in [1, 2]:
+                if j <= n:
+                    dp[i] += dp[i-j]
+        return dp[-1]
 
 ```
 c2
