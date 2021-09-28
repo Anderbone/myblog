@@ -21,6 +21,32 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 ```py
 class Solution:
     def uniquePaths(self, m, n):
+        cur = [1] * n
+        for _ in range(1, m):
+            for j in range(1, n):
+                cur[j] += cur[j-1]
+        return cur[-1]
+
+```
+- code
+```py
+class Solution:
+    def uniquePaths(self, m, n):
+        dp = {(0,1):1, (1,0):1}
+        for row in range(m):
+            for col in range(n):
+                if row == 0 or col == 0:
+                    dp[(row, col)] = 1
+                else:
+                    dp[(row, col)] = dp[(row-1, col)] + dp[(row, col-1)]
+        return dp[(m-1, n-1)]
+
+```
+
+- code
+```py
+class Solution:
+    def uniquePaths(self, m, n):
         return math.factorial(m+n-2)//(math.factorial(n-1) * math.factorial(m-1))
 ```
 - code  time limit exceeded

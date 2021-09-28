@@ -48,16 +48,15 @@ c0, similar to dic
 ```py
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
-        if len(nums) < 3:
-            return max(nums)
-# first day, only first, second room: the bigger one between first and second room. initial the first two value 
-        dp = [nums[0]] + [max(nums[0], nums[1])] + [0]*(len(nums)-2)
+        if len(nums) == 1:
+            return nums[0]
+        dp = len(nums) * [0]
+        dp[0] = nums[0]
+        dp[1] = max(nums[1], nums[0])
         for i in range(2, len(nums)):
-# rob this one or not
             dp[i] = max(dp[i-2] + nums[i], dp[i-1])
-        return max(dp[-1], dp[-2])
+        return dp[-1]
+
 ```
 c1
 ```py
