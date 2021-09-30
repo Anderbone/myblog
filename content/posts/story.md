@@ -1,6 +1,6 @@
 +++ 
 date = "2021-09-30"
-title = "My story"
+title = "My story with God"
 tags = ["Christian"]
 toc = false
 +++
