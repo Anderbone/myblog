@@ -1,7 +1,7 @@
 +++ 
 date = "2021-06-08"
 title = "上帝之城——纪录片《废城Ghost town》"
-tags = ["christian","review"]
+tags = ["Christian","review"]
 +++
 
 [Youtube 链接](https://www.youtube.com/watch?v=qxLdpOL8WoM)

@@ -1,7 +1,7 @@
 +++ 
 date = "2021-05-23"
 title = "The unfairness of the world and the fairness of God"
-tags = ["christian"]
+tags = ["Christian"]
 +++
 
 The main purpose of this article is to refute the following statement.

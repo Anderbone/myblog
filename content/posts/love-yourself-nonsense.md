@@ -1,7 +1,7 @@
 +++ 
 date = "2021-06-21"
 title = "What do you mean by saying Love yourself"
-tags = ["psychology","christian"]
+tags = ["psychology","Christian"]
 toc = false
 +++
 
