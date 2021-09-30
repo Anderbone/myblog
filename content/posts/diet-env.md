@@ -17,8 +17,10 @@ This is a wise thing to do. Too often we want to stand on what little things we 
 “To care for the earth” is not the excuse for us to not take care of our little earth, let alone we humans usually don’t have the knowledge to really calculate the results as a whole of specific actions, especially a big topic like environment.
 
 For example, from a page about environmental effects, cheese, chocolate, and coffee are in a higher position than poultry meat. But bear in mind, these charts and numbers which look so clear, are just results based on specific models on computers, reality is much more complex.
+![](https://i.imgur.com/WdNvmDO.png)
 
 From some articles, sugar and refined carbs are also one of the biggest targets to blame for the environment. Plus, they don’t provide essential nutrition compared to healthier carb sources, unlike moderate meat consumption(still the best protein source), but are consumed so widely and even bad for our little earth(body) and NHS.
+
 
 Some articles talk about diet and environment together, they put “refined grains”, “added sugar” together with “red meat” and “processed foods” as “low amounts or no”.
 
