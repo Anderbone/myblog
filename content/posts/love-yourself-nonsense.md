@@ -5,7 +5,8 @@ tags = ["psychology","Christian"]
 toc = false
 +++
 
-[Do I need to love myself more? Ask Pastor John](https://www.desiringgod.org/interviews/do-i-need-to-love-myself-more)
+[Do I need to love myself more? Ask Pastor John](https://www.desiringgod.org/interviews/do-i-need-to-love-myself-more)  
+
 [why-your-self-esteem-is-fake-and-what-to-do-about-it](https://www.talkspace.com/blog/why-your-self-esteem-is-fake-and-what-to-do-about-it/)
 
 >  Mental states do not come before language nor accompany a sequence of words but are lived and experienced in the context of linguistic expression. -Wittgenstein
