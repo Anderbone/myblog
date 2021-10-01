@@ -1,13 +1,16 @@
 +++ 
 date = "2021-06-21"
-title = "What do you mean by saying Love yourself"
+title = "Self-esteem, self-love, self-help, self-respect, self, self, self"
 tags = ["psychology","Christian"]
 toc = false
 +++
 
->  Mental states do not come before language nor accompany a sequence of words but are lived and experienced in the context of linguistic expression.
+[Do I need to love myself more? Ask Pastor John](https://www.desiringgod.org/interviews/do-i-need-to-love-myself-more)
+[why-your-self-esteem-is-fake-and-what-to-do-about-it](https://www.talkspace.com/blog/why-your-self-esteem-is-fake-and-what-to-do-about-it/)
 
-It's wrong from a syntax perspective at first. Help, love, respect, care, when we use these words before the 18th century, they are usually correctly used to describe the relationship between people. Adding a self before these words is simply wrong in syntax, as saying I eat water or drink food or I borrow money from myself. Bear in mind all these words nowadays everywhere, are extremely new and people for generations live without the need of creating such words.
+>  Mental states do not come before language nor accompany a sequence of words but are lived and experienced in the context of linguistic expression. -Wittgenstein
+
+It's wrong from a syntax perspective at first. Help, love, respect, care, when we use these words, they are usually correctly used to describe the relationship between people. Adding a self before these words is simply wrong in syntax, as saying I eat water or drink food or I borrow money from myself. Bear in mind all these words nowadays everywhere like self-esteem, are extremely new and people for generations live without the need to creating such words.
 
 Before trying to define its meaning, it's better to check how we use it.
 
@@ -15,7 +18,7 @@ Before trying to define its meaning, it's better to check how we use it.
 Here doesn't love himself=drink too much alcohol, love himself=less alcohol. It's basically a simple complaint and doesn't help much. People tend to feel by saying he doesn't love himself, we find something deeper or the root cause why he drinks, but actually, apart from getting the cheap pleasure to "explain" with such self or inner focused language, we are just at the exact same position. We don't say he's talkative because he's talkative, looks silly, and meaningless, but we say he's talkative because he's an extrovert (a concept we created purely in our mind). But why we mark him as an extrovert is simply by observing he's talkative.
 
 2. You can't love others properly without loving yourself at first.  
-No context. Or it simply means one needs to live a good life, and then can love others. Why I don’t like this type of sentence so much, is that it usually only serves the pleasure of fake explanation and hinders the true potential help from happening.
+It maybe means one needs to live a good life, and then can love others. Why I don’t like this type of sentence so much, is that it usually only serves the pleasure of fake explanation and hinders the true potential help from happening.
 
 3. commercial ad: Xx chocolate, love yourself by treating yourself!  
 Here love yourself=treat yourself, or please yourself. They just want you to spend money to treat yourself, nothing more.
@@ -28,7 +31,7 @@ Ask the child to not be guilty. Actually, it's better for us to confirm children
 
 Why there are so many different use cases and we still believe it has a consistent meaning. What do we actually mean in each of these situations and which one is better? Our old clear daily language or new shining concepts.
 
-Then what are the effects of using it? It doesn't have any power. Suicide prevention in train station says: remember there's someone else love you. Why do we emphasize someone else loves you, not just love yourself and don't suicide. 'Self-love' hides or preempts better and meaningful suggestions.
+Then what are the effects of using it? It doesn't have any power. Suicide prevention in train station says: *remember there's someone else loves you.* Why do we emphasize someone else loves you, not just love yourself and don't suicide. 'Self-love' hides or preempts better and meaningful suggestions.
 
 Where's it comes from, what's the potential motivation to invent these words? Self-centered century. Psychology tries to replace the church, some people want to replace all words related to Christian or religion. They don't know God and they want to say something about love. Moreover, it's a century to try to dig into our inside. Humans have the tendency to know why, to get the pleasure of creating and using words to explain things, give us a feeling like we already found something deeper, or know the root of a problem. It's empty, doesn't have any effects. It's wet with loads of new words but has nothing meaningful and can't actually make any changes.
 
