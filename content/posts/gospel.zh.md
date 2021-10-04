@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-31"
 title = "传福音：信仰可以真实满足你心中最深刻的渴望"
-tags = ["christian"]
+tags = ["Christian"]
 +++
 知识分子们可以读下阿姨早年真诚的[信仰问答](https://liuzhongjing.medium.com/%E9%97%9C%E6%96%BC%E4%BF%A1%E4%BB%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%AD%94%E5%95%8F-e64ab8c645d)。
 

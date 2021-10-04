@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-14"
 title = "基督教常见话题-护教角度"
-tags = ["christian"]
+tags = ["Christian"]
 toc = true
 +++
 

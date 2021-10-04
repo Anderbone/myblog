@@ -1,7 +1,7 @@
 +++ 
 date = "2021-08-21"
 title = "Shadian incident, a war between communists and Muslims in China 1975"
-tags = ["christian","history"]
+tags = ["Christian","history"]
 toc = false
 +++
 
