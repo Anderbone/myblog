@@ -21,6 +21,28 @@ Input: coins = [2], amount = 3Output: -1
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0: return 0
+        visited = set()
+        potential = collections.deque(coins)
+        visited.update(coins)
+        step = 0
+        
+        while potential:
+            step += 1
+            for _ in range(len(potential)):
+                if potential[0] == amount:
+                    return step
+                for c in coins:
+                    if c + potential[0] not in visited and c + potential[0] <= amount:
+                        potential.append(c + potential[0])
+                        visited.add(c + potential[0])
+                potential.popleft()
+        
+        return -1
+```
+```py
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        if amount == 0: return 0
         queue = [[0, 0]]
         visited = {0}
         step = 0
