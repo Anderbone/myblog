@@ -2,6 +2,7 @@
 date = "2020-07-01"
 title = "How to download all videos (resources) on Udemy at once"
 tags = ["tools"]
+draft = true
 +++
 
 > This article will teach you how to download all videos or whatever resources on udemy you want, for e.g. all zip files in a specific course.
