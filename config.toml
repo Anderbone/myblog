@@ -98,25 +98,25 @@ theme = "github-light"
 
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github"
+    icon = "fa fa-github"
     weight = 1
     url = "https://github.com/Anderbone/"
 
 # [[params.social]]
 #     name = "Twitter"
-#     icon = "fab fa-twitter"
+#     icon = "fa fa-twitter"
 #     weight = 2
 #     url = "https://twitter.com/Anderesurrect/"
 
 #[[params.social]]
 #    name = "LinkedIn"
-#    icon = "fab fa-linkedin"
+#    icon = "fa fa-linkedin"
 #    weight = 4
 #    url = "https://www.linkedin.com/in/"
 
 [[params.social]]
     name = "Email"
-    icon = "fab fa-google"
+    icon = "fa fa-google"
     weight = 5
     url = "mailto:forbyyourwords@gmail.com"
 
