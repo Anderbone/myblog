@@ -13,6 +13,10 @@ enableEmoji = true
 googleAnalytics = "UA-165971391-1"
 enableGitInfo = true
 
+# pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
 
 [markup]
 defaultMarkdownHandler = "goldmark"
@@ -50,6 +54,7 @@ defaultMarkdownHandler = "goldmark"
 #      noClasses = true
 #      style = "monokai"
 #      tabWidth = 4
+
 # disqusShortname = "yourdiscussshortname"
 
 [params]
