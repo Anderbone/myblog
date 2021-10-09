@@ -87,7 +87,7 @@ defaultMarkdownHandler = "goldmark"
     custom_js = ["js/copy-code-button.js"]
 
 
-[params.utteranc]
+[params.utterances]
 enable = true
 repo = "Anderbone/hugo-blog-utterances"
 issueTerm = "pathname"
