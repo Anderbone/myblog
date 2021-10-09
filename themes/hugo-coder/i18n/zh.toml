@@ -7,10 +7,6 @@ other = "标签"
 [series]
 other = "系列"
 
-[reading_time]
-one = "1分钟阅读时间"
-other = "{{ .Count }} 分钟阅读时间"
-
 [page_not_found]
 other = "找不到页面"
 

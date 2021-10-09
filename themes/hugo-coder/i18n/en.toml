@@ -7,9 +7,6 @@ other = "tag"
 [series]
 other = "series"
 
-[reading_time]
-other = "{{ .Count }}-minute read"
-
 [page_not_found]
 other = "Page Not Found"
 
