@@ -81,10 +81,10 @@ defaultMarkdownHandler = "goldmark"
     maxSeeAlsoItems = 5
 
     # Custom CSS
-    custom_css = ["css/custom.css"]
+    customCSS = ["css/custom.css"]
 
     # Custom JS
-    custom_js = ["js/copy-code-button.js"]
+    customJS = ["js/copy-code-button.js"]
 
 
 [params.utterances]
