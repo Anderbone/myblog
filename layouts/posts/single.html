@@ -9,7 +9,7 @@
 
       <div class="col-sm-2">
 
-        {{ if or (gt .WordCount 400 ) (.Params.toc) }}
+        {{ if and (gt .WordCount 800 ) (.Params.toc) }}
         <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
         {{ end }}
       </div>
