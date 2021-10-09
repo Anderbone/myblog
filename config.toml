@@ -63,8 +63,8 @@ defaultMarkdownHandler = "goldmark"
 
     dateformat = "January 2, 2006"
 
-    hideCredits = false
-    hideCopyright = false
+    hideCredits = true
+    hideCopyright = true
     since = 2019
 
     rtl = false
@@ -73,7 +73,9 @@ defaultMarkdownHandler = "goldmark"
     # "auto" (use preference set by browser)
     # "dark" (dark background, light foreground)
     # "light" (light background, dark foreground) (default)
-    colorscheme = "light"
+    # colorscheme = "light"
+      colorScheme = "auto"
+    hidecolorschemetoggle = false
 
     # Series see also post count
     maxSeeAlsoItems = 5
@@ -82,7 +84,7 @@ defaultMarkdownHandler = "goldmark"
     custom_css = ["css/custom.css"]
 
     # Custom JS
-    custom_js = []
+    custom_js = ["js/copy-code-button.js"]
 
 
 [params.utteranc]
