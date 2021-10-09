@@ -4,6 +4,7 @@ title = "Migrate to Hugo from Jekyll"
 description = "The post explains how to migrate from from Jekyll to Hugo."
 tags = ["Hugo"]
 toc = true
+draft = true
 +++
 
 

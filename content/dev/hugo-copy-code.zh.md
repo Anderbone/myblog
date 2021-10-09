@@ -67,6 +67,8 @@ hugo-coder主題的這個默認的代碼高亮太難看了。
 
 ```
 ### 數學公式
+不需要改什么了。Update: 现在可以直接在文章页面用katex = true即可。
+
 Put this script in layout/footer.html.
 ```javascript
   <script type="text/x-mathjax-config">

@@ -59,6 +59,8 @@ I just changed the css to make the button within the code.
 
 ```
 ### Math formula
+Update: use `katex = true` directly.
+
 Put this script in layout/footer.html.
 ```javascript
   <script type="text/x-mathjax-config">
