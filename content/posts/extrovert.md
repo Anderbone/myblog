@@ -1,6 +1,6 @@
 +++ 
 date = "2021-05-10"
-title = "5 love languages and extrovert/introvert only existed in our language"
+title = "5 love languages and extrovert/introvert only exist in our language"
 tags = ["psychology","language"]
 +++
 

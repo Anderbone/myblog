@@ -123,9 +123,9 @@ theme = "github-light"
 
 [[params.social]]
     name = "Email"
-    icon = "fa fa-google"
+    icon = "fa fa-envelope"
     weight = 5
-    url = "mailto:forbyyourwords@gmail.com"
+    url = "mailto:yanchiyu@outlook.com"
 
 #[[params.social]]
 #    name = "RSS"
