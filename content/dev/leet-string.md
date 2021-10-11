@@ -1,7 +1,7 @@
 +++ 
 date = "2020-08-22"
 title = "Python String functions for leetcode"
-tags = ["leetcode", "String"]
+tags = ["leetcode", "String","leetcode summary"]
 lastmod = "2020-10-23"
 +++
 

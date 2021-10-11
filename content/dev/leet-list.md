@@ -1,7 +1,7 @@
 +++ 
 date = "2020-08-22"
 title = "Python list/dict functions for leetcode"
-tags = ["leetcode", "list"]
+tags = ["leetcode", "list","leetcode summary"]
 lastmod = "2020-10-23"
 +++
 
