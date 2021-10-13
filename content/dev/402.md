@@ -1,10 +1,11 @@
 +++ 
 date = "2019-03-10"
 title = "High-performance computing module outline"
-tags = ["hpc"]
+tags = ["hpc", "warwick"]
 katex = true
+toc = true
 +++
-
+For Warwick University module 402, high performance computation.
 ### 1.Fundamentals
 
 #### 1.1 the technologies needed to support HPC

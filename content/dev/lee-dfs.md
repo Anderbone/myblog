@@ -2,6 +2,7 @@
 date = "2021-10-11"
 title = "leetcode questions: DFS"
 tags = ["leetcode","dfs","leetcode summary"]
+toc = true
 +++
 
 ### DFS Templates

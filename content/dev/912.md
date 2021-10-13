@@ -1,9 +1,10 @@
 +++ 
 date = "2018-12-19"
 title = "Sensor network module outline"
-tags = ["hpc"]
+tags = ["sensor network","warwick"]
+toc = true
 +++
-
+For Warwick University module 912, sensor network.
 ### Link quality estimation 2
 
 - link monitor

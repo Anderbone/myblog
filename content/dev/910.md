@@ -1,11 +1,11 @@
 +++ 
 date = "2019-03-29"
 title = "Data analysis module outline"
-tags = ["data"]
+tags = ["data analysis", "warwick"]
 toc = true
 katex = true
 +++
-
+For Warwick University module 910, Data analysis. 
 ### 2. math back ground
 - why frequency/rank for heavy tailed?
 > The frequency/rank plot because the CCDF is a monotonous function. Moreover, unlike the PDF function, the CCDF displays a significantly lower variability in the tail.
