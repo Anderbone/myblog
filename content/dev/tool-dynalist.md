@@ -2,7 +2,6 @@
 date = "2020-05-04"
 title = "Amazing ultimate note tool: Dynalist"
 tags = ["tool", "dynalist"]
-
 +++
 
 [Dynalist](https://dynalist.io/invite/oJtu7A) is one of the most helpful tools for me nowadays, no matter code, work notes, daily notes such as training records, prayer list etc. All stuff can be handled within it.
@@ -20,4 +19,4 @@ It doesn't have any limit on item. We can put pictures in there with markdown sy
 The only two things I need from Pro plan is 'attachment image' and 'custom shortcuts'. Both can be fixed with other tools. 
 
 - For images:On windows I use [Lightscreen](https://lightscreen.com.ar/), On Linux is [Flameshot](https://flameshot.js.org/#/), both can take screenshots, upload pictures and give the link back to your clipboard smoothly, all you need is a shortcut to put it in Dynalist. 
-- [Autohotkey](https://www.autohotkey.com/) on windows or  [Autokey](https://github.com/autokey/autokey) on Linux can handle shortcut, I will write [another post](https://yanjiyu.com/dev/autohotkey) to show the scripts.
+- [Autohotkey](https://www.autohotkey.com/) on windows or  [Autokey](https://github.com/autokey/autokey) on Linux can handle shortcut, here's [another post](https://yanjiyu.com/dev/autohotkey) to show the scripts.

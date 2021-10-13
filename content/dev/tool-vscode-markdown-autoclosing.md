@@ -1,7 +1,7 @@
 +++ 
 date = "2020-10-24"
 title = "Auto close quotes for markdown in VsCode"
-tags = ["vscode"]
+tags = ["vscode","tool"]
 +++
 
 Sometimes I want to auto-close double quotes and '`' in markdown mode.

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-06"
 title = "How to leetcode as a beginner"
-tags = ["leetcode"]
+tags = ["leetcode","leetcode summary"]
 +++
 
 I have a bit experiences on how to use leetcode, especially how to start it.
@@ -17,7 +17,7 @@ I recommend EPI elements of programming interviews in Java/C++/Python etc. Use t
     2. Then write by your own, 15mins no clue? then check the answer again.
     3. Few days later, try it in 15 mins directly.
     4. Do at least 100 questions, then you will find your own way.
-    5. Few months ago, repeat those quesitons you finished.
+    5. Few months later, repeat those quesitons you finished.
 
 I use [Dynalist](https://yanjiyu.com/dev/dynalist/) to sort out all answers. It's important to stop and review time to time. If you are preparing for interview, it's also essential to find some partners together so you can talk and mock with each other.
 ![](https://i.imgur.com/D3CUYj1.png)

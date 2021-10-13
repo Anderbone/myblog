@@ -1,7 +1,7 @@
 +++ 
 date = "2020-08-16"
 title = "Using latex with Vscode"
-tags = ["latex"]
+tags = ["latex","tool","vscode"]
 +++
 
 [Refer](https://medium.com/@guillaumeblanchet/using-latex-in-visual-studio-code-on-windows-121032043dad)
