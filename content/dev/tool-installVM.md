@@ -22,11 +22,11 @@ After installing, either reboot, or load the required modules
 ```
 
 There are three services that can be optionally be enabled:
-
-    vmware-networks.service: Provides network access inside VMs, most people will want this enabled
-    vmware-usbarbitrator.service: Allows USB devices to be connected inside VMs
-    vmware-hostd.service: Enables sharing of VMs on the network
-
+```
+vmware-networks.service: Provides network access inside VMs, most people will want this enabled
+vmware-usbarbitrator.service: Allows USB devices to be connected inside VMs
+vmware-hostd.service: Enables sharing of VMs on the network
+```
 To start and enable these services use:
 ```
  sudo systemctl enable --now vmware-networks.service

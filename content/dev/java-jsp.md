@@ -2,10 +2,11 @@
 date = "2020-10-03"
 title = "JSP and Servlets"
 tags = ["servlets", "jsp", "database" ]
+toc = true
 +++
 
 
-Based on udemy course: 
+Based on [udemy course](https://www.udemy.com/course/jsp-tutorial/)
 # JSP
 ## Basic concept
 
@@ -134,17 +135,17 @@ public class HelloWorldServlet extends HttpServlet {
 - ```PrintWriter out = response.getWriter.getWriter()```
 - ```out.println("<html><body>")```
 
-### Get/Post difference
+## Get/Post difference
 - GET: url?field=1?... good for debug, bookmark/email. limitation on data length.
 - Post: won't see in url. No limitations on data length. can send binary data.
 
-### Servlet with JSP
-#### Servlet can call JSP using a request dispatcher
+## Servlet with JSP
+### Servlet can call JSP using a request dispatcher
 - ```RequestDispatcher dispatcher = request.getRequestDispatcher("/view_student.jsp");```
 - Forward to JSP
 - ```dispatcher.forward(request, response);```
 
-#### Sending data to JSP
+### Sending data to JSP
 ![](https://i.imgur.com/K6ieDeE.png)
 
 # Database

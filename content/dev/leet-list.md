@@ -3,11 +3,11 @@ date = "2020-08-22"
 title = "Python list/dict functions for leetcode"
 tags = ["leetcode", "list","leetcode summary"]
 lastmod = "2020-10-23"
+toc = true
 +++
 
-### Commonly used
 
-#### List
+### List
 - `len(array)` : length of array
     - `list.indexof(obj)`
 - `enumerate(array)` : adds counter at the beginning.
@@ -42,7 +42,7 @@ lastmod = "2020-10-23"
     - transpose a two dimension list
         - `Trans = [[row[i] for row in board] for i in range(len(board[0]))]`
 
-#### dict
+### dict
 - for k, v in dic.items()
     - dict = {'a': 1, 'b': 2, 'b': '3'}
     - dic1 == dic2
