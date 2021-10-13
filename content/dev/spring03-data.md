@@ -2,6 +2,7 @@
 date = "2020-02-19"
 title = "Spring In Action 03 - Data"
 tags = ["spring", "java", "spring-in-action" ]
+toc = true
 +++
 
 JDBC at first and JPA later.
