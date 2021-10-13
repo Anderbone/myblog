@@ -1,6 +1,6 @@
 +++ 
 date = "2020-05-08"
-title = "Hugo website optimization: Copy-code button, Math Latex, Google analytics"
+title = "Hugo: Copy-code button, Math Katex, Google analytics"
 slug = "" 
 tags = ["hugo", "javascript", "css"]
 categories = []

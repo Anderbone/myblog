@@ -1,6 +1,6 @@
 +++ 
 date = "2021-02-22"
-title = "Hugo: How to add last update and hide it on the same day we publish"
+title = "Hugo: How to add last update"
 tags = ["tool", "dynalist", "hugo"]
 +++
 Under layouts/posts/single.html, check if the day publish is the same day we update, don't show the last udpated.
