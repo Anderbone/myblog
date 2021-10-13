@@ -95,6 +95,7 @@ class Solution:
         return -1
 
 ```
+---
 ```py
 class Solution:
     def openLock(self, deadends: List[str], target: str) -> int:
@@ -211,6 +212,7 @@ class Solution:
                 break
         return -1
 ```
+---
 ```py
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:

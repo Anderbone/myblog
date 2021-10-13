@@ -74,6 +74,7 @@ class Solution:
         return dp[-1]
 
 ```
+---
 ```py
 class Solution:
 
@@ -107,6 +108,7 @@ class Solution:
 
         return maxProfit
 ```
+---
 ```py
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -167,7 +169,7 @@ class Solution:
         return max(max_2_house_before, adjacent)
 
 ```
-
+---
 ```py
 class Solution:
     def rob(self, nums: List[int]) -> int:
