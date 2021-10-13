@@ -3573,13 +3573,14 @@ img.emoji {
     display: inline;
     text-align: center;
     font-weight: 700;
-    margin: 0 10px; }
+    margin: 0 15px; }
     .pagination li span {
       margin: 0;
       text-align: center;
       width: 3.2rem; }
     .pagination li a {
-      font-weight: 300; }
+      font-weight: 300;
+      margin: 0 5px; }
       .pagination li a span {
         margin: 0;
         text-align: center;
