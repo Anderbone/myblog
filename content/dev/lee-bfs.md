@@ -225,3 +225,32 @@ class Solution:
                     visited.add(node + coin)
         return -1
 ```
+### 542. 01-matrix
+> Given an m x n binary matrix mat, return __the distance of the nearest __0__ for each cell__.
+The distance between two adjacent cells is 1.   
+**Example 1:**  
+![](https://assets.leetcode.com/uploads/2021/04/24/01-1-grid.jpg)  
+Input: mat = [[0,0,0],[0,1,0],[0,0,0]] Output: [[0,0,0],[0,1,0],[0,0,0]]
+```py
+class Solution:
+    def updateMatrix(self, matrix):
+        rows_len, cols_len = len(matrix), len(matrix[0])
+        start_0 = [(x,y) for x in range(rows_len) for y in range(cols_len) if matrix[x][y] == 0]
+
+        visited = set()
+        q = deque(start_0)
+        visited.update(start_0)
+        # result = [[-1 for _ in range(cols_len)] for y in range(rows_len)]
+
+        while q:
+            for _ in range(len(q)):
+                x, y = q.popleft()
+                for d in [[0,1],[0,-1],[1,0],[-1,0]]:
+                    m, n = x + d[0], y + d[1]
+                    if 0 <= m < rows_len and 0 <= n < cols_len and (m,n) not in visited:
+                        matrix[m][n] = matrix[x][y] + 1 # update matrix directly
+                        q.append((m, n))
+                        visited.add((m, n))
+        
+        return matrix
+```
