@@ -257,3 +257,41 @@ class Solution:
         
         return matrix
 ```
+### [127. Word ladder](https://yanjiyu.com/leetcode/127/)
+> A **transformation sequence** from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:  
+Every adjacent pair of words differs by a single letter.
+Every si for 1 <= i <= k is in wordList. Note that beginWord does not need to be in wordList.
+sk == endWordGiven two words, beginWord and endWord, and a dictionary wordList, return __the **number of words** in the **shortest transformation sequence** from__ beginWord __to__ endWord__, or __0__ if no such sequence exists.__  
+**Example 1:**  
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"] Output: 5 Explanation: One shortest transformation sequence is "hit" -> "hot" -> "dot" -> "dog" -> cog", which is 5 words long.
+```py
+class Solution(object):
+    def ladderLength(self, beginWord, endWord, wordList):
+        
+        def construct_dict(word_list):
+            d = {}
+            for word in word_list:
+                for i in range(len(word)):
+                    s = word[:i] + "_" + word[i+1:]
+                    d[s] = d.get(s, []) + [word]
+            return d
+            
+        def bfs_words(begin, end, dict_words):
+            queue, visited = deque([(begin, 1)]), set()
+            while queue:
+                word, steps = queue.popleft()
+                if word not in visited:
+                    visited.add(word)
+                    if word == end:
+                        return steps
+                    for i in range(len(word)):
+                        s = word[:i] + "_" + word[i+1:]
+                        neigh_words = dict_words.get(s, [])
+                        for neigh in neigh_words:
+                            if neigh not in visited:
+                                queue.append((neigh, steps + 1))
+            return 0
+        
+        d = construct_dict(set(wordList))
+        return bfs_words(beginWord, endWord, d)
+```
