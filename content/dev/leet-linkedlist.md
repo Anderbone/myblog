@@ -1,14 +1,13 @@
 +++ 
 date = "2020-08-31"
-title = "Leetcode: LinkedList-related functions in Python"
+title = "Leetcode: LinkedList in Python"
 tags = ["leetcode", "linkedlist","leetcode summary"]
 lastmod = "2020-10-23"
+toc = true
 +++
 
-Commonly used:
-
-- create a dummy node
-
+### create a dummy node
+> Merge two linked lists.
 ```python
 # Definition for singly-linked list.
 # class ListNode:
@@ -31,8 +30,8 @@ class Solution:
                 pre = pre.next
         return ans.next
 ```
-- delete a node
-
+### delete a node
+> delete a node
 ```python
 # Definition for singly-linked list.
 # class ListNode:
@@ -50,10 +49,10 @@ class Solution:
         node.next = node.next.next
 ```
 
-- quick and slow node.
+### quick and slow node.
 
-> Example 1:
-> Input: 1->2 Output: false
+> Check if it is palindrome.  
+> Example 1: Input: 1->2 Output: false  
 > Example 2:
 > Input: 1->2->2->1 Output: true
 
@@ -77,7 +76,8 @@ class Solution:
         return True
 ```
 
-> q 
+> Detect cycle.  
+> Example1:
 > Input: head = [3,2,0,-4], pos = 1
 > Output: tail connects to node index 1
 > Explanation: There is a cycle in the linked list, where tail connects to the second node.

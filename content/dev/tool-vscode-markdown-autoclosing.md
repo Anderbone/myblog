@@ -1,12 +1,12 @@
 +++ 
 date = "2020-10-24"
 title = "Auto close quotes for markdown in VsCode"
-tags = ["vscode"]
+tags = ["vscode","tool"]
 +++
 
-Sometimes I want to auto-close double quotes and '`' in markdown mode.
+Sometimes I want to auto-close double quotes and **`** in markdown mode.
 
-In settings we have such settings but they are not working in plain text files like makrdown.
+In settings we have such settings but they are not working in plain text files like makrdown.  
 ![](https://i.imgur.com/mo59ZXA.png)
 
 Find "language-configuration.json" under markdown-basic folder.

@@ -1,12 +1,12 @@
 +++ 
 date = "2020-08-16"
-title = "Using latex with Vscode"
-tags = ["latex"]
+title = "Using latex with VsCode"
+tags = ["latex","tool","vscode"]
 +++
 
 [Refer](https://medium.com/@guillaumeblanchet/using-latex-in-visual-studio-code-on-windows-121032043dad)
 
-On win
+On windows:
 1. Install [texLive](https://www.tug.org/texlive/acquire-netinstall.html).
 2. Add the path to environment variable.
 ![](https://i.imgur.com/mZL9jlZ.png)

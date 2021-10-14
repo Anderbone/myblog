@@ -1,9 +1,11 @@
 +++ 
 date = "2019-04-10"
 title = "Data mining module outline"
-tags = ["data"]
+tags = ["data analysis", "warwick"]
 katex = true
+toc = true
 +++
+For Warwick University module 909, data mining.
 
 ## 1. intro
 ![20190525120154.png](https://i.loli.net/2019/05/25/5ce920a57065f24877.png)

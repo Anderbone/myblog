@@ -4,9 +4,9 @@ title = "Python to exe with win10 notification"
 tags = ["python", "tool"]
 +++
 
-With this [auto-py-to-txe](https://pypi.org/project/auto-py-to-exe/), it's easily to convert your py to a self-contained exe.
+With this [auto-py-to-txe](https://pypi.org/project/auto-py-to-exe/), it's easy to convert your py to a self-contained exe.
 
-I want to add a win10 notification, at first I tried win10toast.ToastNotifier(), it works fine in py but when I convert it to exe, it's no longer work anymore.
+I want to add a win10 notification, at first I tried win10toast.ToastNotifier(), it works fine in py but when I convert it to exe, it's no longer working anymore.
 
 Then I tried plyer.notification, which works fine. 
 Notince if you want to build a single exe file without folder, and you have resouce like pictures, you need to write a resouce_path function.

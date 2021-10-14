@@ -1,11 +1,11 @@
 +++
 date = "2021-06-10"
-title = "Modern Java in Action code in intellij"
+title = "Modern Java in Action code configuration in intellij"
 tags = ["intellij","java"]
 +++
 There's source code in [this page](https://www.manning.com/books/modern-java-in-action).
 
-Set up the language level to 9 and then compile works for me.
+Set up the language level to 9 and then compile works for me.  
 ![](https://i.imgur.com/MBPlnsZ.png)
 
 

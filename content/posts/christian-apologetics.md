@@ -1,6 +1,6 @@
 +++ 
 date = "2021-08-21"
-title = "Why do you believe there's nothing after death without any proof"
+title = "Why do you believe there's nothing after life without proof"
 tags = ["Christian"]
 toc = true
 +++

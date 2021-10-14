@@ -2,6 +2,7 @@
 date = "2020-02-19"
 title = "Spring In Action 02 - Developing web app"
 tags = ["spring", "java", "spring-in-action" ]
+toc = true
 +++
 
 This chapter focues on Spring web framework without database.
@@ -249,5 +250,4 @@ public void addIngredientsToModel(Model model) {
 // tag::foot[]
 }
 // end::foot[]
-
 ```
