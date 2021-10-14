@@ -228,7 +228,7 @@ class Solution:
                     visited.add(node + coin)
         return -1
 ```
-### 542. 01-matrix
+### [542. 01-matrix](https://yanjiyu.com/leetcode/542/)
 > Given an m x n binary matrix mat, return __the distance of the nearest __0__ for each cell__.
 The distance between two adjacent cells is 1.   
 **Example 1:**  
