@@ -6,14 +6,23 @@ toc = true
 +++
 
 ### Intro
+
+Good video: [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges - YouTube](https://www.youtube.com/watch?v=oBt53YbR9Kk)
+
 DP is a style of coding where you store the results of your algorithm in a data structure while it runs. 
 
 The same subproblem may reoccur compared to divide-and-conquer, a key to solve is to break the problem into **subproblems** such that
 1. the original problem can be solved relatively easily once solutions to the subproblems are available
 2. these subproblem solutions are **cached**,  caching the results of intermediate computations  
 
+![](https://i.imgur.com/1KOpqAN.png)
+
 e.g. fibonacci  
-code0  O(n) time and O(n) space
+Naive solution complexity analysis:
+![](https://i.imgur.com/EalsjfY.png)
+
+code0  O(n) time and O(n) space  
+![](https://i.imgur.com/1viwWs1.png)  
 ```py
 def fibonacci(n, cache={}):
 	if n <= 1:
@@ -231,6 +240,16 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 > 1. Right -> Right -> Down
 > 2. Right -> Down -> Right
 > 3. Down -> Right -> Right
+
+Naive solution, TLE
+![](https://i.imgur.com/Osq7ysF.png)
+```py 
+class Solution:
+    def uniquePaths(self, m, n):
+        if m == 1 or n == 1: return 1
+        return self.uniquePaths(m-1, n) + self.uniquePaths(m, n-1)
+```
+
 - code
 ```py
 class Solution:
