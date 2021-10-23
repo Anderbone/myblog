@@ -7,7 +7,6 @@
 </p>
 
 My personal website.
-Reviews of books, leetcode practice etc.
 
 ![](https://i.imgur.com/tcVjrzk.png)
 
