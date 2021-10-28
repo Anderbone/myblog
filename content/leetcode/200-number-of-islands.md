@@ -16,28 +16,21 @@ Output: 1
 ```py
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        island = 0
-        self.grid = grid
-        self.m = len(grid[0])
-        self.n = len(grid)
+        self.m = len(grid)
+        self.n = len(grid[0])
+        count = 0
 
-        for row in range(self.n):
-            for col in range(self.m):
-                cur = self.grid[row][col]
-                if cur == "1":
-                    island += 1
-                    self.removeConnected(row, col)
-        return island
-    
-    def removeConnected(self, row, col):
-        self.grid[row][col] = "0"
-        if col - 1 > -1 and self.grid[row][col-1] == "1":
-            self.removeConnected(row, col-1)
-        if col + 1 < self.m and self.grid[row][col+1] == "1":
-            self.removeConnected(row, col+1)
-        if row - 1 > -1 and self.grid[row-1][col] == "1":
-            self.removeConnected(row-1, col)
-        if row + 1 < self.n and self.grid[row+1][col] == "1":
-            self.removeConnected(row+1, col)
+        for row in range(self.m):
+            for col in range(self.n):
+                if grid[row][col] == "1":
+                    count += 1
+                    self.dfs(grid, row, col)
+        return count
 
+    def dfs(self, grid, x, y):
+        grid[x][y] = "0"
+        directions = [[1,0],[-1,0],[0,1],[0,-1]]
+        for dx, dy in directions:
+            if 0 <= x + dx < self.m and 0 <= y + dy < self.n and grid[x+dx][y+dy] == "1":
+                self.dfs(grid, x + dx, y + dy)
 ```
