@@ -1,7 +1,7 @@
 +++ 
 date = "2021-04-05"
 title = "勇气源于信仰——读《God's smuggler》"
-tags = ["Christian","review"]
+tags = ["Christian","book"]
 +++
 本书作者Andrew是著名基督教组织[Open doors](https://www.opendoorsuk.org/)创始人，这本书在Evangelical圈子里很有名，主要围绕他早年经历。我在网上搜到时，以为免费订购是发pdf版本到邮箱，没想到直接寄到了住处。
 

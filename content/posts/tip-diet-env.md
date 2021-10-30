@@ -1,7 +1,7 @@
 +++ 
 date = "2021-09-30"
 title = "Diet and environment"
-tags = ["essay","diet","environment"]
+tags = ["diet","environment"]
 toc = true
 +++
 God asks us to take care of our body, as the body is the temple of the holy spirit. There is such a metaphor, the body is the little earth, and earth is like an extension of our body and we absolutely need to take care of it as well.

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-03-30"
 title = "The world is far from God, close to China"
-tags = ["essay","china"]
+tags = ["China"]
 toc = true
 +++
 

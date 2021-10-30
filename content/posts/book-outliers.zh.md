@@ -1,7 +1,7 @@
 +++ 
 date = "2019-01-02"
 title = "异类"
-tags = ["essay", "review", "tips"]
+tags = ["essay", "book", "tips"]
 draft = true
 +++
 

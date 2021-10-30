@@ -1,7 +1,7 @@
 +++ 
 date = "2021-09-30"
 title = "Your private feeling is a public thing"
-tags = ["essay"]
+tags = ["Wittgenstein"]
 toc = false
 +++
 

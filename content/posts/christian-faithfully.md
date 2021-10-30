@@ -1,7 +1,7 @@
 +++ 
 date = "2021-09-30"
 title = "Do things faithfully, what does it mean"
-tags = ["essay"]
+tags = ["Chrisitan"]
 toc = false
 +++
 

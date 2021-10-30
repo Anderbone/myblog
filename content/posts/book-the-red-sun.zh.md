@@ -1,7 +1,7 @@
 +++ 
 date = "2017-09-02"
 title = "为什么太阳这么红，却还是这么冷"
-tags = ["essay","review"]
+tags = ["essay","book"]
 draft = true
 +++
 

@@ -1,7 +1,7 @@
 +++ 
 date = "2010-07-05"
 title = "在剧痛中死在沙漠，也比迷失在白银世界里好得多"
-tags = ["review"]
+tags = ["book"]
 draft = true
 +++
 

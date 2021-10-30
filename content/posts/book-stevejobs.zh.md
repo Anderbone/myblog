@@ -1,7 +1,7 @@
 +++ 
 date = "2017-06-30"
 title = "乔布斯传"
-tags = ["essay", "review"]
+tags = ["essay", "book"]
 draft = true
 +++
 
