@@ -39,10 +39,10 @@ class Solution(object):
         return None
 ```
                 
-H = head - ans,  D = meet - ans, L = cycle
+H = head -> cycle_start,  D = cycle_start -> meet, L = cycle
 If fast and slow both start at head, when fast catches slow, slow has traveled H+D and fast 2(H+D).  Fast traveled more nL than slow.
 Assume fast has traveled n loops in the cycle, we have:
-2H + 2D = H + D + nL  -->  H + D = nL  --> H = nL - D
+2H + 2D = H + D + nL  -->  H + D = nL  --> H = L(n-1) + (L-D)
 - code
 ```py
 class Solution:
