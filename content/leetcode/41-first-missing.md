@@ -21,19 +21,16 @@ Output: 2
 - code
 ```py
 class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
-        if not nums:
-            return 1
-        length = len(nums)
-        potential_result_list = list(range(1, length+1))
-        for v in nums:
-            if 0 < v <= length:
-                potential_result_list = list(filter(lambda a: a != v, potential_result_list))
-                # potential_result_list.remove(v) 
-        
-        if not potential_result_list:
-            return length+1
-        return potential_result_list[0]
+    def firstMissingPositive(self, nums):
+        minMiss = 1
+        num_set = set(nums)
+        while True:
+            if minMiss in num_set:
+                minMiss += 1
+            else:
+                break
+
+        return minMiss
 
 ```
 - code, O(n), move each num to correct position
@@ -51,14 +48,4 @@ class Solution:
 
 
 
-```
-c0
-```py
-class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
-            i = 1
-            while True:
-                if i not in nums:
-                    return i
-                i += 1
 ```
