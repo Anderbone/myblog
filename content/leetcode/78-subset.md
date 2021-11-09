@@ -12,11 +12,26 @@ Input: nums = [1,2,3] Output: [ [3],   [1],   [2],   [1,2,3],   [1,3],   [2,3], 
 ```py
 class Solution:
     def subsets(self, nums):
+        res = [[]]
+        for num in nums:
+            last = copy.deepcopy(res)
+            for sublist in res:
+                sublist.append(num)
+            res += last
+
+        return res
+
+```
+
+- code
+```py
+class Solution:
+    def subsets(self, nums):
         res = []
         def dfs(nums, path, res):
             res.append(path)
             for i,v in enumerate(nums):
-                # dfs(nums[:i]+nums[i+1:], res, path+[v]) no duplicate
+                # dfs(nums[:i]+nums[i+1:], res, path+[v]) has duplicate
                 dfs(nums[i+1:], path+[v], res)
         dfs(nums, [], res)
         return res
