@@ -10,19 +10,30 @@ You may assume no duplicates in the array.
 Example 1:
 Input: [1,3,5,6], 5 Output: 2
 
-- c
+- code
 ```py
-class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        for i,v in enumerate(nums):
-            if target <= v:
-                return i
-        return i +1
+class Solution(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        l = 0
+        r = len(nums) - 1
+        while l <= r:
+            mid = l + (r - l) // 2
+            if nums[mid] < target:
+                l = mid + 1
+            elif nums[mid] > target:
+                r = mid - 1
+            else:
+                return mid
+        return r + 1
 ```
 - code
 ```py
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         return bisect.bisect_left(nums, target)
-
 ```
