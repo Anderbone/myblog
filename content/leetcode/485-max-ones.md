@@ -23,7 +23,26 @@ class Solution:
             else:
                 temp1 = 0
         return max1
-
-
-
 ```
+- code better
+```py
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        max1 = 0
+        temp1 = 0
+        for v in nums:
+            if v == 1:
+                temp1 += 1
+            else:
+                max1 = max(max1, temp1)
+                temp1 = 0
+        return max(max1, temp1)
+```
+- code
+```py
+class Solution:
+    def findMaxConsecutiveOnes(self, nums):
+        return max(map(len, ''.join(map(str, nums)).split('0')))
+```
+
+
