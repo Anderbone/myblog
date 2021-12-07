@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-06"
 title = "Computing the parity of a word"
-tags = ["epi","primitive","bit"]
+tags = ["epi","bit"]
 +++
 
 ### 5.1 in EPI java, 4.1 in EPI python.

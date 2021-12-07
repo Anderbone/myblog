@@ -1,7 +1,7 @@
 +++
 date = "2021-04-02"
 title = "371. Sum of two integers"
-tags = ["leetcode","primitive"]
+tags = ["leetcode","bit"]
 +++
 
 

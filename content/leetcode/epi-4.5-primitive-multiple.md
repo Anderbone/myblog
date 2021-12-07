@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-15"
 title = "Primitive Multiple"
-tags = ["epi","primitive","bit"]
+tags = ["epi","bit"]
 +++
 
 ## EPI python 4.5

@@ -1,7 +1,7 @@
 +++
 date = "2021-03-03"
 title = "118. Pascal triangle"
-tags = ["leetcode","primitive"]
+tags = ["leetcode","bit"]
 +++
 
 Input: 5 
