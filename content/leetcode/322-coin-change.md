@@ -3,8 +3,7 @@ date = "2021-03-26"
 title = "322. Coin change"
 tags = ["leetcode","dp","bfs"]
 +++
-
-
+[Coin Change - LeetCode](https://leetcode.com/problems/coin-change/)
 You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 You may assume that you have an infinite number of each kind of coin.
 
@@ -32,13 +31,17 @@ class Solution:
                 if potential[0] == amount:
                     return step
                 for c in coins:
-                    if c + potential[0] not in visited and c + potential[0] <= amount:
+                    if c + potential[0] not in visited:
                         potential.append(c + potential[0])
                         visited.add(c + potential[0])
                 potential.popleft()
+            if all(p > amount for p in potential):
+                break
         
         return -1
+
 ```
+- code  BFS
 ```py
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -65,6 +68,27 @@ class Solution:
                 dp[i] = min(dp[i], dp[i-coin]+1)
         return dp[amount] if dp[amount] <= amount else -1
 
+```
+[1,2,5], 11  
+1 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  
+2 [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]  
+5 [0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]  
+
+5 [0, inf, inf, inf, inf, 1, inf, inf, inf, inf, 2, inf]  
+2 [0, inf, 1, inf, 2, 1, 3, 2, 4, 3, 2, 4]  
+1 [0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]
+
+- code
+```py
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        dp = [float('inf')] * (amount + 1)
+        dp[0] = 0
+        
+        for coin in coins:
+            for x in range(coin, amount + 1):
+                dp[x] = min(dp[x], dp[x - coin] + 1)
+        return dp[amount] if dp[amount] != float('inf') else -1 
 ```
  [https://leetcode.com/problems/coin-change/solution/](https://leetcode.com/problems/coin-change/solution/)
 ![top down](https://i.imgur.com/Sl4yAkG.png)
