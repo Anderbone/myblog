@@ -1,6 +1,6 @@
 +++ 
 date = "2021-10-24"
-title = "《The Karamazov Brothers》is the best novel I have ever read"
+title = "The Karamazov Brothers is the best novel I have ever read"
 tags = ["Dostoevsky"]
 toc = false
 +++
