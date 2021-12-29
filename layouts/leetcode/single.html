@@ -34,7 +34,6 @@
         {{ .Content }}
       </div>
 
-
       <footer>
         {{ partial "posts/series.html" . }}
         {{ partial "posts/disqus.html" . }}
@@ -43,6 +42,32 @@
       </footer>
     </article>
 
+    <div class="next-post">
+      {{ if .NextPage }}
+      <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">« {{ .NextPage.Title | truncate 50 "..." }}</a>
+      {{ end }}
+    </div>
+    
+    <div class="previous-post">
+      {{ if .PrevPage }}
+      <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">{{ .PrevPage.Title | truncate 50 "..."}} »</a>
+      {{ end }}
+    </div>
+
+
+
     {{ partial "posts/math.html" . }}
+  </section>
+  <section>
+    <ul>
+      {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+      {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <div class="tagbutton">
+      <a href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>
+      <sup>{{$cnt}}</sup>
+            </div>
+      {{end}}
+    {{end}}
+    </ul>
   </section>
 {{ end }}
