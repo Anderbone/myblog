@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-17"
 title = "Sample offline data"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 random_sampling
 takes an array of distinct elements and a size, and returns a subset of the given size. All subsets should be equally likely. Return the result in input array itself

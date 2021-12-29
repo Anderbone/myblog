@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-04"
 title = "Autohotkey/Autokey scripts for Dynalist"
-tags = ["tool", "dynalist","autohotkey"]
+tags = ["tool", "dynalist"]
 
 +++
 #### Autohotkey 

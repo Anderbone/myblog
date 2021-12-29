@@ -1,7 +1,7 @@
 +++ 
 date = "2018-12-19"
 title = "Sensor network module outline"
-tags = ["sensor network","warwick"]
+tags = ["warwick"]
 toc = true
 +++
 For Warwick University module 912, sensor network.

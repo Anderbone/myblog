@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-17"
 title = "Compute a random subset"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 random_subset  
 input a positive integer n and a size k<=n, return a size k subset of {0,1,2...n-1}

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-18"
 title = "Generate nonuniform random numbers"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 nonuniform_rando_number_generation (values, probabilities)  
 given n numbers as well as probabilities p0,p1..p(n-1), which sum up to 1. given a random number generator that produces values in [0,1) uniformly, how to generate one of the n numbers according to the specified probabilities?  

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-04-01"
 title = "Documentaries about China"
-tags = ["movie"]
+tags = ["documentary","China"]
 toc = true
 +++
 

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-06-30"
 title = "The Dutch National Flag Program"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 
 ### 6.1 in EPI java, 5.1 in EPI python.

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-22"
 title = "Compute the spiral ordering of a 2D array"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 matrix_in_spiral_order
 write a program which takes an n*n 2D array and returns the spiral ordering of the array

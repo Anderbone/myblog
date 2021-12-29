@@ -1,7 +1,7 @@
 +++ 
 date = "2019-03-10"
 title = "High-performance computing module outline"
-tags = ["hpc", "warwick"]
+tags = ["warwick"]
 katex = true
 toc = true
 +++

@@ -1,7 +1,7 @@
 +++ 
 date = "2019-03-29"
 title = "Data analysis module outline"
-tags = ["data analysis", "warwick"]
+tags = ["warwick"]
 toc = true
 katex = true
 +++

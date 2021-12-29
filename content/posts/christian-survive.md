@@ -1,7 +1,7 @@
 +++ 
 date = "2020-08-11"
 title = "Oral history of two Christian in Chinese labor camp in 1960s"
-tags = ["documentary","Christian"]
+tags = ["documentary","Christian","China"]
 +++
 
 The Great Chinese famine from 1959 to 1961 in China killed  15 to 55 million people. 

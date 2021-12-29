@@ -1,7 +1,7 @@
 +++ 
 date = "2021-10-24"
 title = "《The Karamazov Brothers》is the best novel I have ever read"
-tags = ["book"]
+tags = ["Dostoevsky"]
 toc = false
 +++
 It's simply the best novel I have ever read. I agree with almost every place in the book where you can feel Dostoevsky’s strong point of view, and laughed with joy.

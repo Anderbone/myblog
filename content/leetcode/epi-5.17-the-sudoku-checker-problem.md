@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-19"
 title = "The sudoku checker problem"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 is_valid_sudoku
 check nine row constraints, nine column constraints and nine sub-grid constraints. ensure no number in [1,9] appears more than once  

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-28"
 title = "Test for cyclicity"
-tags = ["epi","linkedlist"]
+tags = ["linkedlist"]
 +++
 takes the head of a singly linked list and returns null if there's no cycle.  
 return the node at the start of the cycle if present

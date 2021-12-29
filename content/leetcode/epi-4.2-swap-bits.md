@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-10"
 title = "Swap bits"
-tags = ["epi","bit"]
+tags = ["bit"]
 +++
 
 ### 5.2 in EPI java, 4.2 in EPI python.

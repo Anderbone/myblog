@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-17"
 title = "Compute a random permutation"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 compute_random_permutation  
 n = 4,  output 1230  

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-10-03"
 title = "JSP and Servlets"
-tags = ["servlets", "jsp", "database" ]
+tags = ["java"]
 toc = true
 +++
 

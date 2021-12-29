@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-16"
 title = "Computing an alternation"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 rearrange
 1<=2>=3<=4>=5...

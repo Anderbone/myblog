@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-25"
 title = "Compute rows in Pascal's triangle"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 generate_pascal_triangle  
 takes a nonnegative integer n and returns the first n rows of Pascal's triangle

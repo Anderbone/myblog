@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-26"
 title = "Compute the spreadsheet column encoding"
-tags = ["epi","string"]
+tags = ["string"]
 +++
 converts a spreadsheet column id to the corresponding integer  
 return 4 for D, 27 for AA,(26 *1 + 1) 702 for ZZ(26 *26 + 26)

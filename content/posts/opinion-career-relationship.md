@@ -1,7 +1,7 @@
 +++ 
 date = "2021-09-30"
 title = "Career serves relationship"
-tags = ["essay"]
+tags = ["Christian"]
 toc = false
 +++
 

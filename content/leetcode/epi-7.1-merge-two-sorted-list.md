@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-28"
 title = "Merge two sorted list"
-tags = ["epi","linkedlist"]
+tags = ["linkedlist"]
 +++
 c
 ```

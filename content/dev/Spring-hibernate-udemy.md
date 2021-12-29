@@ -1,7 +1,7 @@
 +++ 
 date = "2020-09-21"
 title = "Spring & Hibernate project on udemy: intellij setting up"
-tags = ["spring","udemy","intellij" ]
+tags = ["spring","intellij" ]
 +++
 
 Udemy course [link](https://www.udemy.com/course/spring-hibernate-tutorial/)

@@ -1,7 +1,7 @@
 +++ 
 date = "2021-10-01"
 title = "Lead us not into temptation, block apps recommended"
-tags = ["tips"]
+tags = ["health","tool"]
 toc = false
 +++
 

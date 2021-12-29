@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-15"
 title = "delete duplicate from sorted array"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 delete_duplicates  
 

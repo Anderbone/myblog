@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-16"
 title = "Buy and sell stock once"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 buy_and_sell_stock_once
 notice only once  

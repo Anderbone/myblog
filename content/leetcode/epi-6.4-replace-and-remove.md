@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-26"
 title = "replace and remove"
-tags = ["epi","string"]
+tags = ["string"]
 +++
 Apply to an array of characters, replace 'a' by 'dd', delete each entry containing a 'b'  
 E.g. (a,c,d,b,b,c,a) results in the array (d,d,c,d,c,d,d).

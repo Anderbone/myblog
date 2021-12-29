@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-28"
 title = "Test for overlapping lists"
-tags = ["epi","linkedlist"]
+tags = ["linkedlist"]
 +++
 takes two cycle-free single linked list, determines if there exists a node that is common to both lists  
 ![Pasted image](https://i.imgur.com/r1u1amI.png)

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-25"
 title = "Rotate a 2D array"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 rotate_matrix
 rotate 90 degrees clockwise  

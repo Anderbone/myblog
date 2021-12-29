@@ -1,7 +1,7 @@
 +++
 date = "2021-01-21"
 title = "Floating typing- the proper ergonomic typing posture"
-tags = ["material", "tips"]
+tags = ["health"]
 +++
 Regarding the height of the seat and the height of the screen, I won’t talk about it. Everyone understands it and it’s easy to adjust it.
 

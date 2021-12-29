@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-17"
 title = "Install VMware Workstation on Manjaro"
-tags = ["tool", "manjaro", "vmware" ]
+tags = ["tool"]
 +++
 
 ## vmmon error

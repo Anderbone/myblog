@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-15"
 title = "Advancing through an array"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 can_reach_end
 

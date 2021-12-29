@@ -1,7 +1,7 @@
 +++
 date = "2021-02-16"
 title = "278. First bad version"
-tags = ["sort"]
+tags = ["sorting"]
 +++
 
 Given n = 5, find the first bad version. (version = 4 is the first bad version.)

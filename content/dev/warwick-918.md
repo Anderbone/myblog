@@ -1,7 +1,7 @@
 +++ 
 date = "2019-03-10"
 title = "Natural language processing module outline"
-tags = ["nlp","warwick"]
+tags = ["warwick"]
 toc = true
 +++
 For Warwick University module 918, natural language processing.

@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-16"
 title = "Permute the elements of an array"
-tags = ["epi","array"]
+tags = ["array"]
 +++
 apply_permutation
 given an array A of elements and a premutation P, apply P to A

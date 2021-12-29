@@ -1,7 +1,7 @@
 +++ 
 date = "2020-12-25"
 title = "Compute rows in Pascal's triangle"
-tags = ["epi","string"]
+tags = ["string"]
 +++
 
 take a string representing an integer and return the corresponding integer, and vice versa, should handle negative integers.  

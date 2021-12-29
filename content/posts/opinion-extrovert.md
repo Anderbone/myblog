@@ -1,7 +1,7 @@
 +++ 
 date = "2021-05-10"
 title = "5 love languages and Extrovert only exist in our language"
-tags = ["psychology","language"]
+tags = ["psychology","Wittgenstein"]
 +++
 
 Someone recommended the book 5 love languages and here let me show why I don't buy these kinds of ideas.
