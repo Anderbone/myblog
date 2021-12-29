@@ -3206,6 +3206,8 @@ table tr th:last-child {
   border-right: 0; }
 
 img {
+  display: block;
+  margin: 0.7rem auto;
   max-width: 100%; }
 
 figure {
