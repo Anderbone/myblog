@@ -1,6 +1,6 @@
 +++
 date = "2021-12-29"
-title = "leetcode: minimum spanning tree, single src shortest path, topological sorting"
+title = "leetcode: mini spanning tree, single src shortest path, topological"
 tags = ["graph","leetcode summary"]
 toc = true
 +++
