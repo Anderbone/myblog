@@ -1,7 +1,7 @@
 +++
 date = "2021-03-22"
 title = "347. Top K frequent elements"
-tags = ["leetcode","searching"]
+tags = ["searching"]
 +++
 
 Given a non-empty array of integers, return the k most frequent elements.

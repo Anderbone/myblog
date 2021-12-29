@@ -1,7 +1,7 @@
 +++
 date = "2021-03-10"
 title = "2. Add two numbers"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 

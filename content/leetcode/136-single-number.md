@@ -1,7 +1,7 @@
 +++
 date = "2021-01-05"
 title = "136. Single Number"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.

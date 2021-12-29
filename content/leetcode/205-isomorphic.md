@@ -1,7 +1,7 @@
 +++ 
 date = "2021-04-19"
 title = "205. Isomorphic strings"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 

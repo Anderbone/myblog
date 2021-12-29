@@ -1,7 +1,7 @@
 +++ 
 date = "2021-03-09"
 title = "5. Longest palindromic substring"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 [Longest Palindromic Substring - LeetCode](https://leetcode.com/problems/longest-palindromic-substring/)

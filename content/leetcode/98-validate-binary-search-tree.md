@@ -1,7 +1,7 @@
 +++
 date = "2021-02-01"
 title = "98. Validate binary search tree"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 left < node < right is a valid binary search tree

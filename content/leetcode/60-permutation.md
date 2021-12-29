@@ -1,7 +1,7 @@
 +++
 date = "2021-04-07"
 title = "60. Permutation sequence"
-tags = ["leetcode","backtracking"]
+tags = ["backtracking"]
 +++
 
 The set [1,2,3,...,n] contains a total of n! unique permutations.

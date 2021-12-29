@@ -1,7 +1,7 @@
 +++ 
 date = "2021-04-23"
 title = "977. Squares of a sorted array"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given an integer array nums sorted in **non-decreasing** order, return __an array of **the squares of each number** sorted in non-decreasing order__.

@@ -1,7 +1,7 @@
 +++
 date = "2021-04-01"
 title = "166. Fraction to recurring decimal"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.

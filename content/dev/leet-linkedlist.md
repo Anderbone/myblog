@@ -1,7 +1,7 @@
 +++ 
 date = "2020-08-31"
 title = "Leetcode: LinkedList in Python"
-tags = ["leetcode", "linkedlist","leetcode summary"]
+tags = [ "linkedlist","leetcode summary"]
 lastmod = "2020-10-23"
 toc = true
 +++

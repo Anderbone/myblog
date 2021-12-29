@@ -1,7 +1,7 @@
 +++ 
 date = "2021-03-08"
 title = "334. Increasing triplet subsequence"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.

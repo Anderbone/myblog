@@ -1,7 +1,7 @@
 +++
 date = "2021-03-07"
 title = "73. Set matrix zeroes"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

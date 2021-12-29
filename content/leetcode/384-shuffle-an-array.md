@@ -1,7 +1,7 @@
 +++
 date = "2021-02-21"
 title = "384. Shuffle an array"
-tags = ["leetcode","design"]
+tags = ["design"]
 +++
 
 Shuffle a set of numbers without duplicates.

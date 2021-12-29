@@ -1,7 +1,7 @@
 +++
 date = "2021-03-11"
 title = "160. Intersection of two linked lists"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 Write a program to find the node at which the intersection of two singly linked lists begins.

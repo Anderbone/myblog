@@ -1,7 +1,7 @@
 +++
 date = "2021-03-21"
 title = "75. Sort colors"
-tags = ["leetcode","sorting"]
+tags = ["sorting"]
 +++
 
 

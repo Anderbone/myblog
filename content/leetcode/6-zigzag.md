@@ -1,7 +1,7 @@
 +++
 date = "2021-04-16"
 title = "6. Zigzag"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 

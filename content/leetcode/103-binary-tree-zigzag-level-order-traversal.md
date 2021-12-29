@@ -1,7 +1,7 @@
 +++
 date = "2021-03-12"
 title = "103. Binary tree zigzag level order traversal"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).

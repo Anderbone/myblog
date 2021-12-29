@@ -1,7 +1,7 @@
 +++
 date = "2021-03-12"
 title = "105. Construct Binary Tree from Preorder and Inorder Traversal"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 Given preorder and inorder traversal of a tree, construct the binary tree.

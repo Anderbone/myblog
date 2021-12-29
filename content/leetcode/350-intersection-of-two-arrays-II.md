@@ -1,7 +1,7 @@
 +++
 date = "2021-01-06"
 title = "350. Intersection of two arrays II"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

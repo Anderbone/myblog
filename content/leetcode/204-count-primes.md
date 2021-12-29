@@ -1,7 +1,7 @@
 +++
 date = "2021-02-26"
 title = "204. Count primes"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

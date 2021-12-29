@@ -1,7 +1,7 @@
 +++
 date = "2021-01-05"
 title = "217. Contains duplicate"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Input: [1,2,3,1]

@@ -1,7 +1,7 @@
 +++
 date = "2021-03-22"
 title = "56. Merge internals"
-tags = ["leetcode","sorting"]
+tags = ["sorting"]
 +++
 [Merge Intervals - LeetCode](https://leetcode.com/problems/merge-intervals/)
 

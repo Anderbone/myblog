@@ -1,7 +1,7 @@
 +++
 date = "2021-04-14"
 title = "35. Search insert position"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

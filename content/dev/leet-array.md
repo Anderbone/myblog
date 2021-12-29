@@ -1,7 +1,7 @@
 +++ 
 date = "2017-08-09"
 title = "Leetcode: Array questions with Python"
-tags = ["leetcode", "python","array","leetcode summary"]
+tags = [ "python","array","leetcode summary"]
 toc = true
 +++
 

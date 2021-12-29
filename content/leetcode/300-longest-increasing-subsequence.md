@@ -1,7 +1,7 @@
 +++
 date = "2021-03-27"
 title = "300. Longest increasing subsequence"
-tags = ["leetcode","dp"]
+tags = ["dp"]
 +++
 
 Given an unsorted array of integers, find the length of longest increasing subsequence. A **subsequence** is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].

@@ -1,7 +1,7 @@
 +++ 
 date = "2021-03-08"
 title = "49. Group anagrams"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Input: ["eat", "tea", "tan", "ate", "nat", "bat"],

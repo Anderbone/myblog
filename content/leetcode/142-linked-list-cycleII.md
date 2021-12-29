@@ -1,7 +1,7 @@
 +++ 
 date = "2021-04-20"
 title = "142. Linked list cycle II"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 

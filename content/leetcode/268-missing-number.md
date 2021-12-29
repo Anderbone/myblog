@@ -1,7 +1,7 @@
 +++
 date = "2021-03-03"
 title = "268. Missing number"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.

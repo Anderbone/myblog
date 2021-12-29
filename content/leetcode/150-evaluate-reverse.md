@@ -1,7 +1,7 @@
 +++
 date = "2021-04-06"
 title = "150. Evaluate reverse polish notation"
-tags = ["leetcode","stack"]
+tags = ["stack"]
 +++
 
 

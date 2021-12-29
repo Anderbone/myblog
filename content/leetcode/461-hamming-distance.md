@@ -1,7 +1,7 @@
 +++
 date = "2021-03-01"
 title = "461. Hamming distance"
-tags = ["leetcode","bit"]
+tags = ["bit"]
 +++
 
 The [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance) between two integers is the number of positions at which the corresponding bits are different.

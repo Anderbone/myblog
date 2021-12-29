@@ -1,7 +1,7 @@
 +++ 
 date = "2021-04-21"
 title = "485. Max consecutive ones"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

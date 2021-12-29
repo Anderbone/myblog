@@ -1,7 +1,7 @@
 +++
 date = "2021-10-11"
 title = "leetcode questions: dynamic programming"
-tags = ["leetcode","dp","leetcode summary"]
+tags = ["dp","leetcode summary"]
 toc = true
 +++
 

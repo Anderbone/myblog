@@ -1,7 +1,7 @@
 +++
 date = "2021-04-01"
 title = "69. Sqrt(x)"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

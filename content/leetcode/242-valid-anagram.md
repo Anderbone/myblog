@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-11"
 title = "242. Valid anagram"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 Given two strings s and t , write a function to determine if t is an anagram of s.

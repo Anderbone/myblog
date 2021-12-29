@@ -2,7 +2,7 @@
 +++ 
 date = "2021-04-10"
 title = "41. First missing positive"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

@@ -1,7 +1,7 @@
 +++
 date = "2021-01-07"
 title = "283. Move zeros"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

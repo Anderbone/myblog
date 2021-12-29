@@ -1,7 +1,7 @@
 +++
 date = "2021-10-11"
 title = "leetcode questions: BFS"
-tags = ["leetcode","bfs","leetcode summary"]
+tags = ["bfs","leetcode summary"]
 toc = true
 +++
 

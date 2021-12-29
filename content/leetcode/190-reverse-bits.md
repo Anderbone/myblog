@@ -1,7 +1,7 @@
 +++
 date = "2021-03-01"
 title = "190. Reverse bits"
-tags = ["leetcode","bit"]
+tags = ["bit"]
 +++
 Reverse bits of a given 32 bits unsigned integer.
  

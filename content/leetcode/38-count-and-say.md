@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-14"
 title = "38. count and say"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 Input: n = 4
 Output: "1211"

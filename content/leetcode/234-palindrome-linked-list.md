@@ -1,7 +1,7 @@
 +++
 date = "2021-01-25"
 title = "234. Palindrome linked list"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 Example 1:

@@ -2,7 +2,7 @@
 +++
 date = "2021-03-29"
 title = "380. Insert delete getRandom"
-tags = ["leetcode","design"]
+tags = ["design"]
 +++
 
 Design a data structure that supports all following operations in average O(1) time.

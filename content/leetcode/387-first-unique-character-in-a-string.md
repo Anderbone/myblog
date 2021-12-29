@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-10"
 title = "387. first unique character in a string"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.

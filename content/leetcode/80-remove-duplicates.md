@@ -1,7 +1,7 @@
 +++
 date = "2021-04-13"
 title = "80. Remove duplicates from sorted array II"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.

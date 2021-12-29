@@ -1,7 +1,7 @@
 +++
 date = "2021-03-11"
 title = "94. Binary tree inorder traversal"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 Given a binary tree, return the inorder traversal of its nodes' values.

@@ -1,7 +1,7 @@
 +++
 date = "2021-03-30"
 title = "172. Factorial Trailing Zeroes"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

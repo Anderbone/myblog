@@ -1,7 +1,7 @@
 +++
 date = "2021-02-20"
 title = "121. Best time to buy and sell stock"
-tags = ["leetcode","dp"]
+tags = ["dp"]
 +++
 
 You are given an array prices where prices[i] is the price of a given stock on the ith day.

@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-27"
 title = "326. Power of Three"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 Given an integer, write a function to determine if it is a power of three.
 Example 1:

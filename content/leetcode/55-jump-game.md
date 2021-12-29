@@ -1,7 +1,7 @@
 +++
 date = "2021-03-25"
 title = "55. Jump game"
-tags = ["leetcode","dp"]
+tags = ["dp"]
 +++
 
 Given an array of non-negative integers, you are initially positioned at the first index of the array.

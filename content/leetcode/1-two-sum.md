@@ -1,7 +1,7 @@
 +++
 date = "2021-01-08"
 title = "01. Two sum"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.

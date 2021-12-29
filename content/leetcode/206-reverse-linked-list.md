@@ -1,7 +1,7 @@
 +++
 date = "2021-01-21"
 title = "206. Rotate array"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 Input: 1->2->3->4->5->NULL

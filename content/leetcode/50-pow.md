@@ -1,7 +1,7 @@
 +++
 date = "2021-03-31"
 title = "50. Pow(x, n)"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

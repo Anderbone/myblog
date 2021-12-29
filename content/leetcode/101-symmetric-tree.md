@@ -1,7 +1,7 @@
 +++
 date = "2021-02-03"
 title = "101. Symmetric tree"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 

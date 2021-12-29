@@ -1,7 +1,7 @@
 +++
 date = "2021-01-19"
 title = "237. Delete a node in a linked list"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 Input: head = [4,5,1,9], node = 5

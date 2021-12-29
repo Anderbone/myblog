@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-11"
 title = "125. Valid Palindrome"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 Example 1:
 Input: "A man, a plan, a canal: Panama" Output: true  

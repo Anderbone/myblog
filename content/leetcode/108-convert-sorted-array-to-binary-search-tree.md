@@ -1,7 +1,7 @@
 +++
 date = "2021-02-13"
 title = "108. Convert sorted array to binary search tree"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.

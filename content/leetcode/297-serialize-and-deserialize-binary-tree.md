@@ -2,7 +2,7 @@
 +++
 date = "2021-03-29"
 title = "297. Serialize and Deserialize Binary Tree"
-tags = ["leetcode","design"]
+tags = ["design"]
 +++
 
 

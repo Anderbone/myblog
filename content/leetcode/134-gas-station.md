@@ -1,7 +1,7 @@
 +++
 date = "2020-11-27"
 title = "134. Gas station"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 There are N gas stations along a circular route, where the amount of gas at station i is gas[i].

@@ -1,7 +1,7 @@
 +++
 date = "2021-04-01"
 title = "29. Divide two integers"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.

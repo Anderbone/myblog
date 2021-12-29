@@ -1,7 +1,7 @@
 +++
 date = "2021-03-22"
 title = "215. Kth largest element in an array"
-tags = ["leetcode","searching","binarysearch"]
+tags = ["searching","binarysearch"]
 +++
 [Kth Largest Element in an Array - LeetCode](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 Given an integer array nums and an integer k, return __the__ kth __largest element in the array__.

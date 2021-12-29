@@ -1,7 +1,7 @@
 +++
 date = "2021-03-13"
 title = "230. Kth smallest element in a BST"
-tags = ["leetcode","tree","bst"]
+tags = ["tree","bst"]
 +++
 
 Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.

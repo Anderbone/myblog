@@ -1,7 +1,7 @@
 +++
 date = "2021-01-04"
 title = "122. Best time to buy and sell stock II"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Input: [7,1,5,3,6,4]  

@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-11"
 title = "8. String to integer"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 Input: "42"

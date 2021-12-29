@@ -1,7 +1,7 @@
 +++ 
 date = "2021-01-14"
 title = "14. Longest common prefix"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 Write a function to find the longest common prefix string amongst an array of strings.

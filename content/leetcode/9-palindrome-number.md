@@ -2,7 +2,7 @@
 +++ 
 date = "2021-04-08"
 title = "9. Palindrome number"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

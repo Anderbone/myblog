@@ -1,7 +1,7 @@
 +++
 date = "2021-01-28"
 title = "104. Maximum depth of binary tree"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 3  

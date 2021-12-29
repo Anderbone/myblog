@@ -1,7 +1,7 @@
 +++
 date = "2021-04-12"
 title = "27. Remove elements"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
  
 Given an array nums and a value val, remove all instances of that value in-place and return the new length.

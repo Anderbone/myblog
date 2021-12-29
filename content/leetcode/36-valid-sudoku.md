@@ -1,7 +1,7 @@
 +++
 date = "2021-01-08"
 title = "36. Valid Sudoku"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

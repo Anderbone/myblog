@@ -1,7 +1,7 @@
 +++
 date = "2021-04-07"
 title = "7. Reverse integer"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

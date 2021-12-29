@@ -1,7 +1,7 @@
 +++
 date = "2021-01-26"
 title = "141. Linked list cycle(T or F)"
-tags = ["leetcode","linkedlist"]
+tags = ["linkedlist"]
 +++
 
 Input: head = [3,2,0,-4], pos = 1

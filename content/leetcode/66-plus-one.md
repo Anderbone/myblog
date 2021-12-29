@@ -1,7 +1,7 @@
 +++
 date = "2021-01-06"
 title = "66. Plus One"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given a non-empty array of digits representing a non-negative integer, plus one to the integer.

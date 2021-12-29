@@ -1,7 +1,7 @@
 +++
 date = "2021-02-22"
 title = "155. Min Stack"
-tags = ["leetcode","design"]
+tags = ["design"]
 +++
 
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.

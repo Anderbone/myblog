@@ -1,7 +1,7 @@
 +++
 date = "2021-01-04"
 title = "189. Rotate array"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.

@@ -1,7 +1,7 @@
 +++
 date = "2021-02-18"
 title = "70. Climbing stairs"
-tags = ["leetcode","dp"]
+tags = ["dp"]
 +++
 
 

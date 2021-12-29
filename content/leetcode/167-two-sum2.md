@@ -2,7 +2,7 @@
 +++ 
 date = "2021-04-08"
 title = "167. Two sum II"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Given an array of integers numbers that is already **__sorted in ascending order__**, find two numbers such that they add up to a specific target number.

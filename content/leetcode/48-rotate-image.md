@@ -1,7 +1,7 @@
 +++
 date = "2021-01-09"
 title = "48. Rotate image"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 Example 1:

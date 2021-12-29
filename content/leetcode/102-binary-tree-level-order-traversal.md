@@ -1,7 +1,7 @@
 +++
 date = "2021-02-06"
 title = "102. Binary tree level order traversal"
-tags = ["leetcode","tree"]
+tags = ["tree"]
 +++
 
 

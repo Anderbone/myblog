@@ -1,7 +1,7 @@
 +++ 
 date = "2021-04-17"
 title = "345. Reverse vowels of a string"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 

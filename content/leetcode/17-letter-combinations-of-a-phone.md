@@ -1,7 +1,7 @@
 +++
 date = "2021-03-14"
 title = "17. Letter combinations of a phone number"
-tags = ["leetcode","backtracking"]
+tags = ["backtracking"]
 +++
 
 Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in **any order**.  

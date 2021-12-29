@@ -2,7 +2,7 @@
 +++ 
 date = "2021-04-09"
 title = "299. Bulls and cows"
-tags = ["leetcode","array"]
+tags = ["array"]
 +++
 
 

@@ -1,7 +1,7 @@
 +++
 date = "2021-03-19"
 title = "78. Subset"
-tags = ["leetcode","backtracking"]
+tags = ["backtracking"]
 +++
 Given a set of distinct integers, nums, return all possible subsets (the power set).
 Note: The solution set must not contain duplicate subsets.

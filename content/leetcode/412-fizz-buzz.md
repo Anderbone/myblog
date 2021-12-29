@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-23"
 title = "412. Fizz buzz"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 Write a program that outputs the string representation of numbers from 1 to n.

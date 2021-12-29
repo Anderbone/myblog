@@ -1,7 +1,7 @@
 +++
 date = "2021-03-21"
 title = "79. Word search"
-tags = ["leetcode","backtracking"]
+tags = ["backtracking"]
 +++
 
 Given a 2D board and a word, find if the word exists in the grid.

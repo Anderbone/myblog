@@ -1,7 +1,7 @@
 +++
 date = "2021-04-15"
 title = "58. Length of last word"
-tags = ["leetcode","string"]
+tags = ["string"]
 +++
 
 

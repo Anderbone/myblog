@@ -1,7 +1,7 @@
 +++
 date = "2021-03-03"
 title = "20. Valid parentheses"
-tags = ["leetcode","stack"]
+tags = ["stack"]
 +++
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.

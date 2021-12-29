@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-27"
 title = "13. Roman to integer"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

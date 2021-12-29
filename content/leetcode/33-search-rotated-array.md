@@ -1,7 +1,7 @@
 +++
 date = "2021-03-23"
 title = "33. Search in rotated sorted array"
-tags = ["leetcode","searching"]
+tags = ["searching"]
 +++
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.

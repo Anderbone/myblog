@@ -2,7 +2,7 @@
 +++
 date = "2021-03-24"
 title = "240. Search a 2D Matrix II"
-tags = ["leetcode","searching"]
+tags = ["searching"]
 +++
 
 

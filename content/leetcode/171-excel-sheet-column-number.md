@@ -1,7 +1,7 @@
 +++
 date = "2021-03-31"
 title = "171. Excel sheet column number"
-tags = ["leetcode","math"]
+tags = ["math"]
 +++
 
 

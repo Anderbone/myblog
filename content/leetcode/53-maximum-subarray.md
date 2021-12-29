@@ -1,7 +1,7 @@
 +++
 date = "2021-02-16"
 title = "53. Maximum subarray"
-tags = ["leetcode","dp"]
+tags = ["dp"]
 +++
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
