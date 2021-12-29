@@ -23,6 +23,8 @@ body {
   }
 }
 
+
+
 a {
   font-weight: 500;
   color: $link-color;
@@ -33,6 +35,12 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+.previous-post a {
+  float: left;
+}
+.next-post a {
+  float: right;
 }
 
 p {

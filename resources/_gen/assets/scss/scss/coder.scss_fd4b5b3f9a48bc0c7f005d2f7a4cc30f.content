@@ -3058,6 +3058,12 @@ a {
   a:focus, a:hover {
     text-decoration: underline; }
 
+.previous-post a {
+  float: left; }
+
+.next-post a {
+  float: right; }
+
 p {
   margin: 2rem 0 2rem 0; }
 
