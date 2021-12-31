@@ -124,7 +124,7 @@ We take the starting point u as the center and gradually expand outward while up
 
 “Dijkstra's Algorithm” uses a “greedy approach”. Each step selects the “minimum weight” from the currently reached vertices to find the “shortest path” to other vertices.
 
-[Network Delay Time - LeetCode](https://leetcode.com/problems/network-delay-time/)
+#### [Network Delay Time - LeetCode](https://leetcode.com/problems/network-delay-time/)
 
 You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.
 We will send a signal from a given node k. Return the time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.
@@ -243,7 +243,7 @@ class Solution {
 
 ```
 
-[Path With Minimum Effort - LeetCode](https://leetcode.com/problems/path-with-minimum-effort/)
+#### [Path With Minimum Effort - LeetCode](https://leetcode.com/problems/path-with-minimum-effort/)
 
 You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
 A route's effort is the maximum absolute difference in heights between two consecutive cells of the route.
@@ -290,7 +290,84 @@ class Solution:
                                   
         return diff[-1][-1]
 ```
+#### [Cheapest Flights Within K Stops - LeetCode](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
+There are n cities connected by some number of flights. You are given an array flights where flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city toi with cost pricei.
+You are also given three integers src, dst, and k, return __the cheapest price from __src__ to __dst__ with at most __k__ stops. __If there is no such route, return__ __-1.
+ 
+Example 1:
+
+![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png)
+
+Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 1 Output: 200 Explanation: The graph is shown. The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marked red in the picture. 
+Example 2:
+
+![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png)
+
+Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 0 Output: 500 Explanation: The graph is shown. The cheapest price from city 0 to city 2 with at most 0 stop costs 500, as marked blue in the picture. 
+ 
+Constraints:
+
+	1 <= n <= 100
+	0 <= flights.length <= (n * (n - 1) / 2)
+	flights[i].length == 3
+	0 <= fromi, toi < n
+	fromi != toi
+	1 <= pricei <= 104
+	There will not be any multiple flights between two cities.
+	0 <= src, dst, k < n
+	src != dst
+
+- code
+```py
+import heapq
+
+class Solution:
+    
+    def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, K: int) -> int:
+        
+        # Build the adjacency matrix
+        adj_matrix = [[0 for _ in range(n)] for _ in range(n)]
+        for s, d, w in flights:
+            adj_matrix[s][d] = w
+            
+        # Shortest distances array
+        distances = [float("inf") for _ in range(n)]
+        current_stops = [float("inf") for _ in range(n)]
+        distances[src], current_stops[src] = 0, 0
+        
+        # Data is (cost, stops, node)
+        minHeap = [(0, 0, src)]     
+        
+        while minHeap:
+            
+            cost, stops, node = heapq.heappop(minHeap)
+            
+            # If destination is reached, return the cost to get here
+            if node == dst:
+                return cost
+            
+            # If there are no more steps left, continue 
+            if stops == K + 1:
+                continue
+             
+            # Examine and relax all neighboring edges if possible 
+            for nei in range(n):
+                if adj_matrix[node][nei] > 0:
+                    dU, dV, wUV = cost, distances[nei], adj_matrix[node][nei]
+                    
+                    # Better cost?
+                    if dU + wUV < dV:
+                        distances[nei] = dU + wUV
+                        heapq.heappush(minHeap, (dU + wUV, stops + 1, nei))
+                    elif stops < current_stops[nei]:
+                        #  Better steps?
+                        heapq.heappush(minHeap, (dU + wUV, stops + 1, nei))
+                        
+                    current_stops[nei] = stops
+            
+        return -1 if distances[dst] == float("inf") else distances[dst]
+```
 ### Bellman-Ford (SPFA)
 “Bellman-Ford algorithm” is only applicable to “graphs” with no “negative weight cycles”.
 
