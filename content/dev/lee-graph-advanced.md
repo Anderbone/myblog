@@ -410,7 +410,7 @@ class Solution:
         for _ in range(k + 1):
             for begin, end, cost in flights:
                 cur[end] = min(cur[end],  pre[begin] + cost)
-            if sorted(pre) == sorted(cur): break
+            if pre == cur: break
             pre = cur[:]
         return cur[dst] if cur[dst] != inf else -1
 ```
