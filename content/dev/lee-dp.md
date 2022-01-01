@@ -11,6 +11,27 @@ Good video: [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding 
 
 DP is a style of coding where you store the results of your algorithm in a data structure while it runs. 
 
+- code
+```py
+function dp(dp_state, memo_dict) {
+    // check if we have seen this dp_state
+    if dp_state in memo_dict
+        return memo_dict[dp_state]
+
+    // base case (a case that we know the answer for already) such as dp_state is empty
+    if dp_state is the base cases
+        return things like 0 or null
+    
+    calculate dp(dp_state) from dp(other_state)
+    
+    save dp_state and the result into memo_dict
+}
+function answerToProblem(input) {
+    return dp(start_state, empty_memo_dict)
+}
+```
+
+
 The same subproblem may reoccur compared to divide-and-conquer, a key to solve is to break the problem into **subproblems** such that
 1. the original problem can be solved relatively easily once solutions to the subproblems are available
 2. these subproblem solutions are **cached**,  caching the results of intermediate computations  
