@@ -11,6 +11,9 @@ Good video: [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding 
 
 DP is a style of coding where you store the results of your algorithm in a data structure while it runs. 
 
+[dynamic programming - What is the difference between bottom-up and top-down? - Stack Overflow](https://stackoverflow.com/questions/6164629/what-is-the-difference-between-bottom-up-and-top-down)
+
+
 - code
 ```py
 function dp(dp_state, memo_dict) {
