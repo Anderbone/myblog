@@ -1,16 +1,53 @@
-+++
-date = "2021-03-22"
-title = "215. Kth largest element in an array"
-tags = ["searching","binarysearch"]
++++ 
+date = "2021-01-03"
+title = "215. Kth Largest Element in an Array"
+tags = ["heap","sorting"]
 +++
 [Kth Largest Element in an Array - LeetCode](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
 Given an integer array nums and an integer k, return __the__ kth __largest element in the array__.
 Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
 Input: [3,2,1,5,6,4] and k = 2
 Output: 5
 
+Constraints:
+
+	1 <= k <= nums.length <= 104
+	-104 <= nums[i] <= 104
+
+---
 - code
+```py
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        hp = [] # min heap, size k
+        for v in nums:
+            if len(hp) < k:
+                heapq.heappush(hp, v)
+            else:
+                if v > hp[0]:
+                    heapq.heappushpop(hp, v)
+        return hp[0]
+```
+- code 
+```py
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        hp = [] # min heap, size k
+        for v in nums:
+            heapq.heappush(hp, v)
+            if len(hp) > k:
+                heapq.heappop(hp)
+        return hp[0]
+```
+- code
+```py
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return heapq.nlargest(k, nums)[-1]
+```
+- code #quickSelection 
 ```py
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
@@ -35,17 +72,3 @@ class Solution:
             else:
                 return nums[p]
 ```
-- code
-```py
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        return heapq.nlargest(k, nums)[-1]
-```
-- c
-```py
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        nums.sort()
-        return nums[-k]
-```
-        

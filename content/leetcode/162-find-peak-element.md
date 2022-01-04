@@ -1,7 +1,7 @@
 +++
 date = "2021-03-22"
 title = "162. Find peak element"
-tags = ["searching"]
+tags = ["binarysearch"]
 +++
 
 
