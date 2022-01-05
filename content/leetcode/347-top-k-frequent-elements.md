@@ -1,7 +1,7 @@
 +++ 
 date = "2022-01-03"
 title = "347. Top K Frequent Elements"
-tags = ["hashtable"]
+tags = ["heap"]
 +++
 [Top K Frequent Elements - LeetCode](https://leetcode.com/problems/top-k-frequent-elements/)
 
@@ -46,14 +46,11 @@ class Solution:
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         counter = Counter(nums) # num, freq
-        uniq = [k for k in counter.keys()]
+        uniq = list(counter.keys())
         
         def partition(left, right):
-            index = randint(left, right)
-            freq_p = counter[uniq[index]] # not counter[index] !!
-            uniq[index], uniq[right] = uniq[right], uniq[index] # move pivot to the end
-            for i in range(left, right):
-                if counter[uniq[i]] > freq_p: # move bigger to the left
+            for i in range(left, right): # right as pivot
+                if counter[uniq[i]] > counter[uniq[right]]: # move bigger to the left
                     uniq[i], uniq[left] = uniq[left], uniq[i]
                     left += 1
             uniq[left], uniq[right] = uniq[right], uniq[left] # move pivot back to correct position
@@ -68,6 +65,35 @@ class Solution:
                 right = p - 1
             elif p < k: # go right
                 left = p + 1
+
+```
+- code   check k and length at first, so no need for left == right
+```py
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        counter = Counter(nums) # num, freq
+        uniq = list(counter.keys())
+        if k == len(uniq): return uniq
+        
+        def partition(left, right):
+            for i in range(left, right): # right as pivot
+                if counter[uniq[i]] > counter[uniq[right]]: # move bigger to the left
+                    uniq[i], uniq[left] = uniq[left], uniq[i]
+                    left += 1
+            uniq[left], uniq[right] = uniq[right], uniq[left] # move pivot back to correct position
+            return left
+                    
+        left, right = 0, len(uniq) - 1
+        while left <= right:
+            p = partition(left, right)
+            if p == k:
+                return uniq[:k]
+            elif p > k: # go left
+                right = p - 1
+            elif p < k: # go right
+                left = p + 1
+
+
 ```
 - code
 ```py
@@ -87,7 +113,7 @@ class Solution:
         return heapq.nlargest(k, count.keys(), key=count.get) 
 ```
 - code
-```
+```py
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count = collections.Counter(nums)
