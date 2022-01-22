@@ -1,7 +1,7 @@
 +++ 
 date = "2021-10-01"
 title = "把自己的成就看作自己的好运，把自己的遭遇看作自己的过错"
-tags = ["tips"]
+tags = ["book"]
 toc = false
 +++
 
