@@ -3,6 +3,7 @@ date = "2020-05-06"
 title = "新手如何開始leetcode?一點經驗"
 tags = ["leetcode"]
 toc = true
+draft = true
 +++
 
 I have a bit experiences on how to use leetcode, especially how to start it.
