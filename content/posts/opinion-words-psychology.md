@@ -1,7 +1,7 @@
 
 +++ 
 date = "2022-01-22"
-title = "The words are powerful, the words are dangerous, why psychology is impossible"
+title = "Dangerous words, why psychology is impossible"
 tags = ["Wittgenstein","psychology"]
 +++
 
