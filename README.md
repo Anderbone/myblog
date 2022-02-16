@@ -1,11 +1,3 @@
-<p align="center">
-  <p align="center">
-    <a href="https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.txt">
-      <img src="https://img.shields.io/github/license/luizdepra/hugo-coder.svg" alt="MIT License Badge">
-    </a>
-  </p>
-</p>
-
 My personal website.
 
 ![](https://i.imgur.com/tcVjrzk.png)
