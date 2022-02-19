@@ -1,5 +1,5 @@
 +++ 
-date = "2021-02-19"
+date = "2022-02-19"
 title = "感谢你的血——读《Appointment in Jerusalem》"
 tags = ["基督信仰","读书"]
 +++
