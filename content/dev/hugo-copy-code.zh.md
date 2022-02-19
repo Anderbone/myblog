@@ -2,7 +2,7 @@
 date = "2020-05-08"
 title = "Hugo優化：代碼高亮，添加Copy按鈕，數學公式"
 slug = "" 
-tags = ["hugo", "javascript", "css"]
+tags = ["hugo"]
 categories = []
 externalLink = ""
 series = []

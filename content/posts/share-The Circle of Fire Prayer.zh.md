@@ -1,7 +1,7 @@
 +++ 
 date = "2017-12-20"
 title = "The Circle of Fire Prayer"
-tags = ["poetry"]
+tags = ["诗歌"]
 draft = true
 +++
 

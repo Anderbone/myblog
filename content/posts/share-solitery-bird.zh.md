@@ -1,7 +1,7 @@
 +++ 
 date = "2018-01-02"
 title = "Solitary Bird"
-tags = ["poetry"]
+tags = ["诗歌"]
 +++
 
 Las condiciones del pájaro solitario son cinco:  

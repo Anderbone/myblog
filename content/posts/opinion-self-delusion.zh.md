@@ -1,7 +1,7 @@
 +++ 
 date = "2021-10-01"
 title = "不对自己说谎"
-tags = ["Christian"]
+tags = ["基督信仰","陀思妥耶夫斯基"]
 toc = false
 +++
 

@@ -2,7 +2,7 @@
 date = "2020-05-08"
 title = "Hugo: Copy-code button, Math Katex, Google analytics"
 slug = "" 
-tags = ["hugo", "javascript", "css"]
+tags = ["hugo"]
 categories = []
 externalLink = ""
 series = ["hugo"]

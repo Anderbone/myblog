@@ -1,7 +1,7 @@
 +++ 
 date = "2021-11-21"
 title = "用信仰克服我们时代的科学崇拜，摘《维特根斯坦传》"
-tags = ["Christian","book","Wittgenstein"]
+tags = ["基督信仰","读书","维特根斯坦"]
 +++
 摘自[维特根斯坦传](https://book.douban.com/subject/6152040)：
 

@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-22"
 title = "你在不自知地寻求上帝——读《诸神的面具》"
-tags = ["Christian","book"]
+tags = ["基督信仰","读书"]
 toc = true
 +++
 

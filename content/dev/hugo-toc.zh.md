@@ -1,7 +1,7 @@
 +++ 
 date = "2021-10-09"
 title = "Hugo 添加目錄"
-tags = ["hugo", "css"]
+tags = ["hugo"]
 toc = true
 +++
 

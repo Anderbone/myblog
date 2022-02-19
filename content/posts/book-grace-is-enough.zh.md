@@ -1,7 +1,7 @@
 +++ 
 date = "2021-02-26"
 title = "读《蒙恩历程》，附作者受访及下载"
-tags = ["Christian","book"]
+tags = ["基督信仰","读书"]
 toc = true
 +++
 ## 下载

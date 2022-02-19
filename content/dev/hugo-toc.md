@@ -1,7 +1,7 @@
 +++ 
 date = "2020-05-22"
 title = "Hugo website optimization: Table of Contents"
-tags = ["hugo", "css"]
+tags = ["hugo"]
 +++
 
 This [TOC plugin](https://afeld.github.io/bootstrap-toc/) using bootstrap is very easy to use in Hugo.

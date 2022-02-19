@@ -1,7 +1,7 @@
 +++ 
 date = "2022-01-15"
 title = "心理学之不可能-翻转电台笔记"
-tags = ["Wittgenstein","psychology"]
+tags = ["维特根斯坦","心理学","分享推荐"]
 +++
 
 笔记来自[翻转电台FlipRadio](https://open.spotify.com/show/6O2YwvuGpP2y17SpC8MM5s)Chapter2语言何以可能，EP11 第一次心理研究的讲义。
