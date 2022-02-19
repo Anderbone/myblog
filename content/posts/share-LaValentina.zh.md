@@ -1,7 +1,7 @@
 +++ 
 date = "2019-01-02"
 title = "La Valentina"
-tags = ["poetry"]
+tags = ["诗歌"]
 +++
 
 Because of my passion,   
