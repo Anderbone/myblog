@@ -1,6 +1,6 @@
 +++ 
 date = "2021-02-19"
-title = "你燃烧着的血——读《Appointment in Jerusalem》"
+title = "感谢你的血——读《Appointment in Jerusalem》"
 tags = ["基督信仰","读书"]
 +++
 
