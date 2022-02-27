@@ -1,7 +1,7 @@
 +++ 
 date = "2022-01-03"
 title = "347. Top K Frequent Elements"
-tags = ["heap"]
+tags = ["heap","sorting"]
 +++
 [Top K Frequent Elements - LeetCode](https://leetcode.com/problems/top-k-frequent-elements/)
 
@@ -41,33 +41,7 @@ class Solution:
                 left = p + 1
 
 ```
-- code #quickSelection  move bigger to left
-```py
-class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        counter = Counter(nums) # num, freq
-        uniq = list(counter.keys())
-        
-        def partition(left, right):
-            for i in range(left, right): # right as pivot
-                if counter[uniq[i]] > counter[uniq[right]]: # move bigger to the left
-                    uniq[i], uniq[left] = uniq[left], uniq[i]
-                    left += 1
-            uniq[left], uniq[right] = uniq[right], uniq[left] # move pivot back to correct position
-            return left
-                    
-        left, right = 0, len(uniq) - 1
-        while left <= right:
-            p = partition(left, right)
-            if p == k or left == right:
-                return uniq[:k]
-            elif p > k: # go left
-                right = p - 1
-            elif p < k: # go right
-                left = p + 1
-
-```
-- code   check k and length at first, so no need for left == right
+- code   move bigger to left. check k and length at first see if equals, so no need for left == right, but only check if p = = k. #quickSelection #quickSelectionTemplate  
 ```py
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
@@ -119,4 +93,41 @@ class Solution:
         count = collections.Counter(nums)
         return [i[0] for i in count.most_common(k)]
 
+```
+- code
+```java
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        // O(1) time
+        if (k == nums.length) {
+            return nums;
+        }
+        
+        // 1. build hash map : character and how often it appears
+        // O(N) time
+        Map<Integer, Integer> count = new HashMap();
+        for (int n: nums) {
+          count.put(n, count.getOrDefault(n, 0) + 1);
+        }
+
+        // init heap 'the less frequent element first'
+        Queue<Integer> heap = new PriorityQueue<>(
+            (n1, n2) -> count.get(n1) - count.get(n2));
+
+        // 2. keep k top frequent elements in the heap
+        // O(N log k) < O(N log N) time
+        for (int n: count.keySet()) {
+          heap.add(n);
+          if (heap.size() > k) heap.poll();    
+        }
+
+        // 3. build an output array
+        // O(k log k) time
+        int[] top = new int[k];
+        for(int i = k - 1; i >= 0; --i) {
+            top[i] = heap.poll();
+        }
+        return top;
+    }
+}
 ```
