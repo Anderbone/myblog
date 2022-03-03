@@ -3,6 +3,7 @@ date = "2021-04-07"
 title = "60. Permutation sequence"
 tags = ["backtracking"]
 +++
+[Permutation Sequence - LeetCode](https://leetcode.com/problems/permutation-sequence/)
 
 The set [1,2,3,...,n] contains a total of n! unique permutations.
 By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
