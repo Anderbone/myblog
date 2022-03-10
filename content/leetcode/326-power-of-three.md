@@ -3,6 +3,8 @@ date = "2021-02-27"
 title = "326. Power of Three"
 tags = ["math"]
 +++
+[Power of Three - LeetCode](https://leetcode.com/problems/power-of-three/)
+
 Given an integer, write a function to determine if it is a power of three.
 Example 1:
 Input: 27 Output: true 

@@ -3,7 +3,7 @@ date = "2021-03-31"
 title = "50. Pow(x, n)"
 tags = ["math"]
 +++
-
+[Pow(x, n) - LeetCode](https://leetcode.com/problems/powx-n/)
 
 
 Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which calculates x raised to the power n (xn).

@@ -3,7 +3,7 @@ date = "2021-03-30"
 title = "172. Factorial Trailing Zeroes"
 tags = ["math"]
 +++
-
+[Factorial Trailing Zeroes - LeetCode](https://leetcode.com/problems/factorial-trailing-zeroes/)
 
 Given an integer n, return the number of trailing zeroes in n!.
 Example 1:

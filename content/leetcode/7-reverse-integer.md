@@ -3,6 +3,7 @@ date = "2021-04-07"
 title = "7. Reverse integer"
 tags = ["math"]
 +++
+[Reverse Integer - LeetCode](https://leetcode.com/problems/reverse-integer/)
 
 
 Given a 32-bit signed integer, reverse digits of an integer.
