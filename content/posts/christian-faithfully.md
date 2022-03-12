@@ -3,6 +3,7 @@ date = "2021-09-30"
 title = "Do things faithfully, what does it mean"
 tags = ["christian"]
 toc = false
+draft = true
 +++
 
 The faith in action, in our daily life, as Christian is not to believe something we want must be achieved, but to do it faithfully so *we won't blame ourselves nor cheat ourselves*. The key point is to ask ourselves honestly, how can I do things so I won't blame myself, no matter the results. It's not the thing itself or the result that is terrifying, it's not even others' blame that matters, it's our self-blame and fear that cause trouble. Anything in the world won't necessarily cause us to blame ourselves and we have control of it. Whenever I have shame, there's something I can do better or I need to realize. Whenever I do my best honestly within my limit, even though it may not be very good in other's eyes, I know my limit and I'm progressing and I did try my best and there shouldn't be any shame or fear in me either.
