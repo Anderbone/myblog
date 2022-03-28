@@ -1,8 +1,9 @@
-+++
-date = "2021-04-01"
-title = "29. Divide two integers"
++++ 
+date = "2022-03-22"
+title = "29. Divide Two Integers"
 tags = ["math"]
 +++
+[Divide Two Integers - LeetCode](https://leetcode.com/problems/divide-two-integers/)
 
 Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.
 Return the quotient after dividing dividend by divisor.
@@ -10,6 +11,7 @@ The integer division should truncate toward zero.
 Example 1:
 Input: dividend = 10, divisor = 3 Output: 3
 
+---
 - c0  same idea with c1
 ```py
 class Solution:

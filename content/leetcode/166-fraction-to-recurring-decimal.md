@@ -3,6 +3,7 @@ date = "2021-04-01"
 title = "166. Fraction to recurring decimal"
 tags = ["math"]
 +++
+[Fraction to Recurring Decimal - LeetCode](https://leetcode.com/problems/fraction-to-recurring-decimal/)
 
 Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.
 If the fractional part is repeating, enclose the repeating part in parentheses.
@@ -13,6 +14,7 @@ Input: numerator = 2, denominator = 1 Output: "2"
 Example 3:
 Input: numerator = 2, denominator = 3 Output: "0.(6)"
 
+---
 - code
 ```py
 class Solution:

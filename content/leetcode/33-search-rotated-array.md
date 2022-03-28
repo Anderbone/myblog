@@ -1,8 +1,10 @@
-+++
-date = "2021-03-23"
-title = "33. Search in rotated sorted array"
++++ 
+date = "2022-03-23"
+title = "33. Search in Rotated Sorted Array"
 tags = ["binarysearch"]
 +++
+
+[Search in Rotated Sorted Array - LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
@@ -12,30 +14,24 @@ Your algorithm's runtime complexity must be in the order of O(log n).
 Example 1:
 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4
 
+---
 - code
 ```py
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            mid = (left + right) // 2
-            
-            if nums[mid] == target:
-                return mid
-            #left side is sorted
-            if nums[left] <= nums[mid]:
-                if nums[left] <= target <= nums[mid]:
-                    right = mid - 1
+        l, r = 0, len(nums) - 1
+        while l <= r:
+            mid = l + (r - l) // 2
+            if target == nums[mid]: return mid
+            elif nums[l] <= nums[mid]: # left part sorted   [1,3]
+                if nums[l] <= target < nums[mid]:
+                    r = mid - 1
                 else:
-                    left = mid + 1
-            #right half is sorted
-            else:
-                if nums[mid] <= target <= nums[right]:
-                    left = mid + 1
+                    l = mid + 1
+            else: # right part sorted
+                if nums[mid] < target <= nums[r]:
+                    l = mid + 1
                 else:
-                    right = mid - 1
+                    r = mid - 1
         return -1
-
-
-
 ```
