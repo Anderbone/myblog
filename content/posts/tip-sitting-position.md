@@ -19,8 +19,6 @@ The same is true when using a standing desk, the shoulders and necks are comfort
 ![](https://i.imgur.com/gaSwzHe.png)
 ![](https://i.imgur.com/WQiWgAA.png)
 
-For the mouse, I currently use a trackball and hold it fully upright against a glasses case to have a better position.
-![](https://i.imgur.com/zdMDqs5.png)
 
 Reference：
 - https://www.chelwest.nhs.uk/your-visit/patient-leaflets/hand-therapy/desk-health-typing-tips

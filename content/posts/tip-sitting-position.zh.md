@@ -13,8 +13,6 @@ tags = ["健康"]
 ![](https://i.imgur.com/UyZkgWc.png)
 ![](https://i.imgur.com/WQiWgAA.png)
 
-鼠标，我目前使用轨迹球，并且靠着眼镜盒让它完全竖起来。
-![](https://i.imgur.com/zdMDqs5.png)
 
 
 参考链接如下：
