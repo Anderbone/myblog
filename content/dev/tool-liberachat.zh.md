@@ -6,12 +6,17 @@ tags = ["分享推荐"]
 
 官网：[Libera Chat | A next-generation IRC network for FOSS projects collaboration!](https://libera.chat/)
 
-我们先需要一个客户端，直接用这个在线的即可：https://web.libera.chat/
+IRC一大特点，坏处也是好处，大部分IRC服务器不会记录任何聊天记录。所以想和小伙伴聊天时，两个人必须同时在线。每次登陆后聊天记录都是空白的。
+
+我们先需要一个客户端，第一次尝试直接用这个在线的即可：[Libera Chat](https://web.libera.chat/)
 
 第一次登录，Nick随便给自己起个英文名字，password和channel不用填，点击Start。
 ![](https://i.imgur.com/VRU3Bil.png)
 
 你已经进入Libera世界了。
+
+如果你知道小伙伴在哪个Channel，也不在意一定要保留一个自己的用户名，那根本无需注册，随便输入个用户名，Channel里输入频道名字(一般以#或者##开头)，就可以畅快使用了，后面都不用看了。
+![](https://i.imgur.com/shzsEdO.png)
 
 ## 注册一个可以保留的用户名
 无需密码登录的话，用户名也不会为你保留，重复名字会自动在后面加数字。先找个可以注册的名字，使用/nick + 你想要的用户名，看看能否注册。  
