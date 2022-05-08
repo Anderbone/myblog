@@ -2,6 +2,7 @@
 date = "2022-05-08"
 title = "快速入门Liber chat"
 tags = ["分享推荐"]
+toc = true
 +++
 
 官网：[Libera Chat | A next-generation IRC network for FOSS projects collaboration!](https://libera.chat/)
