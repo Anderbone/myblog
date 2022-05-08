@@ -10,6 +10,8 @@ IRC一大特点，坏处也是好处，大部分IRC服务器不会记录任何�
 
 我们先需要一个客户端，第一次尝试直接用这个在线的即可：[Libera Chat](https://web.libera.chat/)
 
+其他客户端参考：[Choosing an IRC client | Libera Chat](https://libera.chat/guides/clients)
+
 第一次登录，Nick随便给自己起个英文名字，password和channel不用填，点击Start。
 ![](https://i.imgur.com/VRU3Bil.png)
 
@@ -46,7 +48,9 @@ YourPassword是你的密码，后面是邮箱。
 `/msg ChanServ REGISTER ##yourChannelName`会注册`##yourChannelName`这个名字的频道。
 
 ## Android客户端
-推荐下载Revolution IRC。点击加号添加Server，信息如下，Username, Password以及Nicknames请填自己的用户名和密码，Auto-join channels可以添些自己常去的频道，勾选上Rejoin opened channels，这样每次打开会自动进入上次打开了的频道。
+推荐下载Revolution IRC。点击加号添加Server，信息如下，Server password留空，Username, Password以及Nicknames请填自己的用户名和密码，Auto-join channels可以添些自己常去的频道，勾选上Rejoin opened channels，这样每次打开会自动进入上次打开了的频道。
 ![](https://i.imgur.com/nNU3Z47.png)
+
+当然如果你不想注册的话，只需要第一行的Name，Server address和Port，Authetication mode选None，随便输入个Nicknames，Auto-join channels里输入想去的频道，就可以开始玩耍了。
 
 
