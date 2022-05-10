@@ -3,6 +3,9 @@ date = "2022-05-10"
 title = "How to configure deft pro track ball on Linux"
 tags = ["tool"]
 +++
+
+I use manjaro here.
+
  Create a conf file, put it in
  `/usr/share/X11/xorg.conf.d/99-trackball.conf`
 
