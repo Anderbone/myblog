@@ -35,3 +35,31 @@ Section "InputClass"
         Option		"MiddleEmulation" "on"
         Option "ButtonMapping" "1 2 3 4 5 6 7 8 9 1 2 12"
 EndSection
+```
+
+I also found a way to use button lock, so forward button gonna trigger whether we use the ball as a scroll button.
+```conf
+Section "InputClass"
+# DEFT PRO Buttons:
+# 1: Left button
+# 2: Middle button (wheel click)
+# 3: Right button
+# 4: Wheel scroll up
+# 5: Wheel scroll down
+# 6: Wheel tilt left
+# 7: Wheel tilt right
+# 8: Back button
+# 9: Forward button
+# 10: Fn1 (button on the left of the ball)
+# 11: Fn2 (button on right most)
+# 12: Fn3 (button on the above of the slide switch)
+Identifier "Elecom DEFT Pro Trackball"
+MatchProduct "DEFT Pro TrackBall"
+Driver "libinput"
+Option "ScrollMethod" "button"
+Option "ScrollButton" "9"
+Option "ScrollButtonLock" "true"
+Option "MiddleEmulation" "on"
+Option "ButtonMapping" "1 2 3 4 5 6 7 8 12 1 2 9"
+EndSection
+```
