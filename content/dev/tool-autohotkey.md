@@ -51,7 +51,6 @@ It's similar as above, just on Linux.
 keyboard.send_keys("![]()")
 keyboard.send_key("<left>")
 ```
-
 ##### Code
 ```python
 # Enter script code
