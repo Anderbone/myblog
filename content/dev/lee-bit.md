@@ -10,7 +10,7 @@ toc = true
 
 ###  `x & (-x) to isolate/get the rightmost 1-bit`
 
-n summary, -x−x is the same as \lnot x + 1¬x+1. This operation reverts all bits of x except the rightmost 1-bit.![fig](https://leetcode.com/problems/power-of-two/Figures/231/twos.png)
+This operation reverts all bits of x except the rightmost 1-bit.![fig](https://leetcode.com/problems/power-of-two/Figures/231/twos.png)
 
 Hence, x and -x have just one bit in common - the rightmost 1-bit. That means that x & (-x) would keep that rightmost 1-bit and set all the other bits to 0.
 ![fig](https://leetcode.com/problems/power-of-two/Figures/231/rightmost.png)
