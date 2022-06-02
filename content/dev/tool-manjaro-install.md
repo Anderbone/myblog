@@ -14,7 +14,7 @@ sudo pacman -S yay go texlive-most konversation docker docker-compose gvim
 sudo systemctl enable --now fstrim.timer
 ```
 
-personal software
+personal
 ```
 yay -S visual-studio-code-bin
 yay -S dynalist
