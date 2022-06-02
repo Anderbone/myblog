@@ -9,7 +9,9 @@ Configure trackball: https://yanjiyu.com/dev/tool-deftpro/
 system
 ```
 sudo pacman-mirrors -f && sudo pacman -Syyu
-sudo pacman -S yay vim
+sudo pacman -Syu base-devel --needed
+sudo pacman -S yay vim go texlive-most konversation docker docker-compose
+sudo systemctl enable --now fstrim.timer
 ```
 
 personal software
@@ -17,14 +19,29 @@ personal software
 yay -S visual-studio-code-bin
 yay -S microsoft-edge-stable
 yay -S dynalist
+yay -S stretchly
+yay -S todoist-appimage
 yay -S jetbrains-toolbox 
+yay -S autokey-git
+yay -S flameshot
+yay -S eudic
+yay -S freedownloadmanager
+yay -S git-review
 python3 -m pip install --upgrade 'maestral[gui]'
+pip install --user tldr
 ```
 
 git
 ```
 git config --global user.email "yanchiyu@outlook.com" 
 git config --global user.name "Anderbone"
+```
+oh my zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 mount drive, check UUID, then edit /etc/fstab and insert one line.

@@ -16,3 +16,8 @@ On windows:
 Open your tex file, View Latex PDF File, you are ready to go.
 
 ![](https://i.imgur.com/jKA7KxD.png)
+
+On manjaro:
+```
+sudo pacman -S textlive-most
+```
