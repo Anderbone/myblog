@@ -10,14 +10,13 @@ system
 ```
 sudo pacman-mirrors -f && sudo pacman -Syyu
 sudo pacman -Syu base-devel --needed
-sudo pacman -S yay vim go texlive-most konversation docker docker-compose
+sudo pacman -S yay go texlive-most konversation docker docker-compose gvim
 sudo systemctl enable --now fstrim.timer
 ```
 
 personal software
 ```
 yay -S visual-studio-code-bin
-yay -S microsoft-edge-stable
 yay -S dynalist
 yay -S stretchly
 yay -S todoist-appimage
