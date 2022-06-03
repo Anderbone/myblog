@@ -18,6 +18,7 @@ personal
 ```
 yay -S visual-studio-code-bin
 yay -S dynalist
+yay -S dropbox
 yay -S stretchly
 yay -S todoist-appimage
 yay -S jetbrains-toolbox 
@@ -26,7 +27,6 @@ yay -S flameshot
 yay -S eudic
 yay -S freedownloadmanager
 yay -S git-review
-python3 -m pip install --upgrade 'maestral[gui]'
 pip install --user tldr
 ```
 
