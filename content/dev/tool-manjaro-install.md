@@ -10,7 +10,7 @@ system
 ```
 sudo pacman-mirrors -f && sudo pacman -Syyu
 sudo pacman -Syu base-devel --needed
-sudo pacman -S yay go texlive-most konversation docker docker-compose gvim
+sudo pacman -S yay go texlive-most konversation docker docker-compose gvim nodejs npm nvm
 sudo systemctl enable --now fstrim.timer
 ```
 
