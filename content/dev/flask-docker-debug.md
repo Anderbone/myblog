@@ -8,6 +8,16 @@ Reference: https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-fla
 
 Project to use in this page : https://github.com/wikimedia/analytics-quarry-web
 
+Clone it https://gerrit.wikimedia.org/r/admin/repos/analytics/quarry/web
+```
+git clone "ssh://jiyu@gerrit.wikimedia.org:29418/analytics/quarry/web" && scp -p -P 29418 jiyu@gerrit.wikimedia.org:hooks/commit-msg "web/.git/hooks/"
+```
+Set up git-review
+```
+git review -s --verbose
+```
+
+
 I use intellij but PyCharm should be more or less the same.
 
 Make sure your docker is configured correctly:
