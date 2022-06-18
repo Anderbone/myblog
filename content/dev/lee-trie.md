@@ -6,7 +6,7 @@ tags = ["trie","leetcode summary"]
 toc = true
 +++
 
-## Basic
+### Basic
 A Trie is a special form of a Nary tree. Typically, a trie is used to store strings. Each Trie node represents a string (a prefix). Each node might have several children nodes while the paths to different children nodes represent different characters. And the strings the child nodes represent will be the origin string represented by the node itself plus the character on the path.
 
 Here is an example of a trie:
@@ -22,7 +22,7 @@ Let's look at the example again. For example, the strings represented by nodes i
 
 Trie is widely used in various applications, such as autocomplete, spell checker, etc.
 
-## Representation
+### Representation
 ```java
 class TrieNode {
     public Map<Character, TrieNode> children = new HashMap<>();
