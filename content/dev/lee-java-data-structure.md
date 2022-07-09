@@ -97,6 +97,7 @@ toc = true
     - String.valueOf(num)
     - String s1.toLowerCase()
     - String s1.toUpperCase()
+    - for (char c: str.toCharArray())
     - Character.isLowerCase(word.charAt(i))
       isUpperCase
     - s.trim()  	removes the beginning and ending spaces of this string.
@@ -105,6 +106,8 @@ toc = true
         - sb.append(c);
         - String s = sb.toString();
         - sb.reverse();
+        - sb.deleteCharAt(path.length() - 1);
+
 		- sb.setCharAt(0, '$'); // replace
 		- sb.insert(sb.length(), '$'); // append
 		- StringBuffer() thread-safe
@@ -325,6 +328,7 @@ EnumMap               | O(1)     |   O(1)      | O(1)     | Array
 TreeMap               | O(log n) |   O(log n)  | O(log n) | Red-black tree
 
 #### Frequent map methods
+- `Map<Integer, String> m = Map.of(2, "a", 3, "b");`
 - `getOrDefault(key, default)`
     - - code
       ```java
