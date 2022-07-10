@@ -30,6 +30,7 @@ toc = true
 - default 0, false, null
 - Arrays.toString(myArr);
 - Arrays.stream(myArr).sum()
+- int maxx = Arrays.stream(myArr).min().getAsInt();
 - Arrays.asList("apple","hello")
   return a fixed length list
     - - code
