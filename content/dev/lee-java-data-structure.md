@@ -54,6 +54,7 @@ toc = true
 - Arrays.fill(myarr, -1)
 - `Arrays.sort(intervals, (a,b)-> a[0]-b[0]); `
   not Collections.sort()
+    - Arrays.parallelSort(myArray)
     - sort by end value, from small to big
         - `(a, b) -> (a[1] - b[1])`
         - - code
@@ -112,6 +113,18 @@ toc = true
 		- sb.insert(sb.length(), '$'); // append
 		- StringBuffer() thread-safe
 
+- DecimalFormat
+    - 0.00
+      ```DecimalFormat df = new DecimalFormat("0.00");
+      System.out.println(df.format(num));```
+    -  #.##
+      0.2  0.01,  no 0 in the end
+- String.format("%.2f",num);
+    - 56.63, rounded
+    - if %.4f, then 123.4123
+    - String.format("%02d", seatNum)
+      01, 02... 12
+- `String a= String.format("ha %s what %s the number %d, %.2f", str1, str2, int1, double1);`  %.2f will get 2.40
 
 
 ### Collections
