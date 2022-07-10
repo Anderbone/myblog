@@ -66,7 +66,7 @@ def fibonacci(n):
 		fmin2, fmin1 = fmin1, f
 	return fmin1
 ```
-### [53 Maximum subarray](https://yanjiyu.com/leetcode/53-maximum-subarray/)
+### [53 Maximum subarray](https://yanjiyu.com/leetcode/53/)
 > Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 Example:
 Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6
@@ -80,6 +80,27 @@ class Solution:
         return res
 
 ```
+- code
+```java
+class Solution {
+    public int maxSubArray(int[] nums) {
+        // Initialize our variables using the first element.
+        int currentSubarray = nums[0];
+        int maxSubarray = nums[0];
+        
+        // Start with the 2nd element since we already used the first one.
+        for (int i = 1; i < nums.length; i++) {
+            int num = nums[i];
+            // If current_subarray is negative, throw it away. Otherwise, keep adding to it.
+            currentSubarray = Math.max(num, currentSubarray + num);
+            maxSubarray = Math.max(maxSubarray, currentSubarray);
+        }
+        
+        return maxSubarray;
+    }
+}
+```
+
 ### [70 climbing stairs](https://yanjiyu.com/leetcode/733/)
 > You are climbing a staircase. It takes n steps to reach the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  
@@ -122,6 +143,24 @@ class Solution:
             pre = temp
         return cur
 ```
+- code
+```java
+public class Solution {
+    public int climbStairs(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+    }
+}
+```
+
 ### [121 Best Time to Buy and Sell Stock](https://yanjiyu.com/leetcode/121-best-time-to-buy-and-sell-stock/)
 > You are given an array prices where prices[i] is the price of a given stock on the ith day.
 You want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock.
@@ -155,7 +194,24 @@ class Solution:
 
         return maxprofit
 ```
-### [198 House Robber](https://yanjiyu.com/leetcode/198-house-robber/)
+- code
+```java
+public class Solution {
+    public int maxProfit(int prices[]) {
+        int minprice = Integer.MAX_VALUE;
+        int maxprofit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < minprice)
+                minprice = prices[i];
+            else if (prices[i] - minprice > maxprofit)
+                maxprofit = prices[i] - minprice;
+        }
+        return maxprofit;
+    }
+}
+```
+
+### [198 House Robber](https://yanjiyu.com/leetcode/198/)
 > You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
 Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.  
 Example 1:
@@ -221,7 +277,35 @@ class Solution:
             pre = temp
         return cur
 ```
-### [55. Jump Game](https://yanjiyu.com/leetcode/55-jump-game/)
+- code
+```java
+class Solution {
+    
+    public int rob(int[] nums) {
+        
+        int N = nums.length;
+        // Special handling for empty array case.
+        if (N == 0) {
+            return 0;
+        }
+        
+        int[] maxRobbedAmount = new int[nums.length + 1];
+        // Base case initializations.
+        maxRobbedAmount[N] = 0;
+        maxRobbedAmount[N - 1] = nums[N - 1];
+        
+        // DP table calculations.
+        for (int i = N - 2; i >= 0; --i) {
+            // Same as the recursive solution.
+            maxRobbedAmount[i] = Math.max(maxRobbedAmount[i + 1], maxRobbedAmount[i + 2] + nums[i]);
+        }
+        
+        return maxRobbedAmount[0];
+    }
+}
+```
+
+### [55. Jump Game](https://yanjiyu.com/leetcode/55/)
 > Given an array of non-negative integers, you are initially positioned at the first index of the array.
 Each element in the array represents your maximum jump length at that position.
 Determine if you are able to reach the last index.  
@@ -253,7 +337,22 @@ class Solution:
         return need == 1
 
 ```
-### [62 Unique Paths](https://yanjiyu.com/leetcode/62-unique-paths/)
+- code
+```java
+public class Solution {
+    public boolean canJump(int[] nums) {
+        int lastPos = nums.length - 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (i + nums[i] >= lastPos) {
+                lastPos = i;
+            }
+        }
+        return lastPos == 0;
+    }
+}
+```
+
+### [62 Unique Paths](https://yanjiyu.com/leetcode/62/)
 > A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
 How many possible unique paths are there?  
@@ -311,7 +410,26 @@ class Solution:
         return grid[-1][-1]
 
 ```
-### [322. Coin Change](https://yanjiyu.com/leetcode/322-coin-change/)
+- code
+```java
+class Solution {
+  public int uniquePaths(int m, int n) {
+    int[][] d = new int[m][n];
+
+    for(int[] arr : d) {
+      Arrays.fill(arr, 1);
+    }
+    for(int col = 1; col < m; ++col) {
+      for(int row = 1; row < n; ++row) {
+        d[col][row] = d[col - 1][row] + d[col][row - 1];
+      }
+    }
+    return d[m - 1][n - 1];
+  }
+}
+```
+
+### [322. Coin Change](https://yanjiyu.com/leetcode/322/)
 > You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 You may assume that you have an infinite number of each kind of coin.  
 Example 1:
@@ -331,28 +449,26 @@ class Solution:
         return dp[amount] if dp[amount] <= amount else -1
 
 ```
-[300 Longest Increasing Subsequence](https://yanjiyu.com/leetcode/300-longest-increasing-subsequence/)
-
-> Given an unsorted array of integers, find the length of longest increasing subsequence. A **subsequence** is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].  
-Example:  
-Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. 
-```py
-class Solution: 
-    def lengthOfLIS(self, nums: List[int]) -> int:
-        
-        L = [nums[0]]
-        
-        for i in range(1, len(nums)):
-            if nums[i] > L[-1]:
-                L.append(nums[i])
-            else:
-                # binary search to find the smallest number which is bigger than nums[i]                  
-                left = bisect.bisect_left(L, nums[i])
- 
-                L[left] = nums[i]
-      # actuaclly 2,3,7,18
-        return len(L)
+- code
+```java
+public class Solution {
+  public int coinChange(int[] coins, int amount) {
+    int max = amount + 1;
+    int[] dp = new int[amount + 1];
+    Arrays.fill(dp, max);
+    dp[0] = 0;
+    for (int i = 1; i <= amount; i++) {
+      for (int j = 0; j < coins.length; j++) {
+        if (coins[j] <= i) {
+          dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+        }
+      }
+    }
+    return dp[amount] > amount ? -1 : dp[amount];
+  }
+}
 ```
+
 ### [279. Perfect squares](https://yanjiyu.com/leetcode/279/)
 > Given an integer n, return __the least number of perfect square numbers that sum to__ n.
 A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.   
