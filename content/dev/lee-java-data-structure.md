@@ -515,6 +515,8 @@ Refer to [Queue](#Deque-arrayDeque-LinkedList)
             - returns a double value with a positive sign, greater than or equal to 0.0 and less than 1.0.
             - Random r = new Random();
             - r.nextInt(n) // // Will generate values b/w 0 to n-1
+            - r.nextInt((max-min)+1) + min
+              -Between min and max, inclusive 
         - Math.log(2.7) // 2.7 is close to e, which is 1
         - Math.log10(x)
         - Math.sin/cos/tan/asin/acos/atan(double a)
