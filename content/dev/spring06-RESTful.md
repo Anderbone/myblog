@@ -6,7 +6,7 @@ toc = true
 +++
 Set [project](https://github.com/habuma/spring-in-action-5-samples/tree/master/ch06) to java 8. 
 
-1. In ch06 folder, run `mvnw clean package`.
+1. In ch06 folder, run `./mvnw clean package`.
 
 Error:
 ```log
@@ -16,6 +16,25 @@ itProject\spring-in-action-5-samples\ch06\tacocloud-ui\node\tmp\node-v6.9.1-win-
 ```
 This is what [found](https://stackoverflow.com/questions/19489720/maven-failed-to-clean-project-failed-to-delete-org-ow2-util-asm-asm-tree) about this error.
 I exited my apps that possibly scan my system, like listary, and it works.
+
+Error:
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project taco-cloud: There are test failures.
+
+Add this dependency to in ch06/pom.xml then run `./mvnw clean package`.
+```
+    <dependencies>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.25.0-GA</version>
+        </dependency>
+    </dependencies>
+```
 
 2. Run `java -jar tacos/target/taco-cloud-0.0.6-SNAPSHOT.jar`
 3. Open 'http://localhost:8080/'  
