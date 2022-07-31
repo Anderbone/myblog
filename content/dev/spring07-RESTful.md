@@ -1,9 +1,11 @@
 +++ 
-date = "2021-05-04"
+date = "2022-07-31"
 title = "Spring In Action 07 - RESTful API"
 tags = ["spring", "java", "spring-in-action" ]
 toc = true
 +++
+
+Based on [Spring in action 6th version github repo](https://github.com/habuma/spring-in-action-6-samples). 
 
 ## RESTful controllers
 
@@ -96,7 +98,7 @@ only retrieve meta data. check resource exists or newer version
 
 
 
-### Archived for Spring in Action 5th version
+## Archived for Spring in Action 5th version bug fix
 
 Set [project](https://github.com/habuma/spring-in-action-5-samples/tree/master/ch06) to java 8. 
 
