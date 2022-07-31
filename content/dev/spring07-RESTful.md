@@ -1,43 +1,24 @@
 +++ 
 date = "2021-05-04"
-title = "Spring In Action 06 - RESTful API"
+title = "Spring In Action 07 - RESTful API"
 tags = ["spring", "java", "spring-in-action" ]
 toc = true
 +++
-Set [project](https://github.com/habuma/spring-in-action-5-samples/tree/master/ch06) to java 8. 
 
-1. In ch06 folder, run `./mvnw clean package`.
+## RESTful controllers
 
-Error:
-```log
-[ERROR] Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.4:install-node-and-npm (install node and npm) on project tacocloud-ui: Could not install Node: Unable to delete file: C:\Users\yanch\g
-itProject\spring-in-action-5-samples\ch06\tacocloud-ui\node\tmp\node-v6.9.1-win-x64\node_modules\npm\node_modules\columnify\node_modules\wcwidth\node_modules\defaults\node_modules\clone\LICENSE -> [Help 1]
-[ERROR]
-```
-This is what [found](https://stackoverflow.com/questions/19489720/maven-failed-to-clean-project-failed-to-delete-org-ow2-util-asm-asm-tree) about this error.
-I exited my apps that possibly scan my system, like listary, and it works.
+### return a 404 status
+Here we can return `Optional<Taco>` directly, but it will return `null` if id doesn't exist with status code 200.
+If we want to return a 404 status code appropriately, as shown here:
+```java
+	@GetMapping("/{id}")
+	public ResponseEntity<Taco> tacoById(@PathVariable("id") Long id) {
+		return tacoRepo.findById(id).map(taco -> new ResponseEntity<>(taco, HttpStatus.OK))
+				.orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
+	}
 
-Error:
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project taco-cloud: There are test failures.
-
-Add this dependency to in ch06/pom.xml then run `./mvnw clean package`.
-```
-    <dependencies>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.javassist</groupId>
-            <artifactId>javassist</artifactId>
-            <version>3.25.0-GA</version>
-        </dependency>
-    </dependencies>
 ```
 
-2. Run `java -jar tacos/target/taco-cloud-0.0.6-SNAPSHOT.jar`
-3. Open 'http://localhost:8080/'  
 
 ## HATEOAS: links embedded
 Hypermedia as the Engine of Application State
@@ -112,3 +93,42 @@ update
 - delete
 - head
 only retrieve meta data. check resource exists or newer version
+
+
+
+### Archived for Spring in Action 5th version
+
+Set [project](https://github.com/habuma/spring-in-action-5-samples/tree/master/ch06) to java 8. 
+
+1. In ch06 folder, run `./mvnw clean package`.
+
+Error:
+```log
+[ERROR] Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.4:install-node-and-npm (install node and npm) on project tacocloud-ui: Could not install Node: Unable to delete file: C:\Users\yanch\g
+itProject\spring-in-action-5-samples\ch06\tacocloud-ui\node\tmp\node-v6.9.1-win-x64\node_modules\npm\node_modules\columnify\node_modules\wcwidth\node_modules\defaults\node_modules\clone\LICENSE -> [Help 1]
+[ERROR]
+```
+This is what [found](https://stackoverflow.com/questions/19489720/maven-failed-to-clean-project-failed-to-delete-org-ow2-util-asm-asm-tree) about this error.
+I exited my apps that possibly scan my system, like listary, and it works.
+
+Error:
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project taco-cloud: There are test failures.
+
+Add this dependency to in ch06/pom.xml then run `./mvnw clean package`.
+```
+    <dependencies>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.25.0-GA</version>
+        </dependency>
+    </dependencies>
+```
+
+2. Run `java -jar tacos/target/taco-cloud-0.0.6-SNAPSHOT.jar`
+3. Open 'http://localhost:8080/'  
