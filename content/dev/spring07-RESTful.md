@@ -21,6 +21,159 @@ If we want to return a 404 status code appropriately, as shown here:
 
 ```
 
+### IngredientController and rest client
+
+I added `IngredientById` here, it's in the rest client test but not in the codebase.
+```java
+package tacos.web.api;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import tacos.Ingredient;
+import tacos.Taco;
+import tacos.data.IngredientRepository;
+
+@RestController
+@RequestMapping(path="/api/ingredients", produces="application/json")
+@CrossOrigin(origins="http://localhost:8080")
+public class IngredientController {
+
+	private IngredientRepository repo;
+
+	@Autowired
+	public IngredientController(IngredientRepository repo) {
+		this.repo = repo;
+	}
+
+	@GetMapping
+	public Iterable<Ingredient> allIngredients() {
+		return repo.findAll();
+	}
+
+	@GetMapping("/{id}")
+	public ResponseEntity<Ingredient> IngredientById(@PathVariable("id") String id) {
+		return repo.findById(id).map(ingredient -> new ResponseEntity<>(ingredient, HttpStatus.OK))
+				.orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
+	}
+
+}
+
+```
+Code of rest client
+
+```java
+package tacos.restclient;
+
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.client.Traverson;
+import org.springframework.http.HttpMethod;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import lombok.extern.slf4j.Slf4j;
+import tacos.Ingredient;
+import tacos.Taco;
+
+@Service
+@Slf4j
+public class TacoCloudClient {
+
+  private RestTemplate rest;
+  private Traverson traverson;
+
+  public TacoCloudClient(RestTemplate rest, Traverson traverson) {
+    this.rest = rest;
+    this.traverson = traverson;
+  }
+
+  //
+  // GET examples
+  //
+
+  /*
+   * Specify parameter as varargs argument
+   */
+  public Ingredient getIngredientById(String ingredientId) {
+    return rest.getForObject("http://localhost:8080/api/ingredients/{id}",
+                             Ingredient.class, ingredientId);
+  }
+  public List<Ingredient> getAllIngredients() {
+    return rest.exchange("http://localhost:8080/api/ingredients",
+            HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {})
+        .getBody();
+  }
+}
+```
+
+Rest examples
+```java
+
+import java.net.URI;
+import java.util.List;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.hateoas.MediaTypes;
+import org.springframework.hateoas.client.Traverson;
+import org.springframework.web.client.RestTemplate;
+
+import lombok.extern.slf4j.Slf4j;
+import tacos.Ingredient;
+import tacos.Taco;
+
+@SpringBootConfiguration
+@ComponentScan
+@Slf4j
+public class RestExamples {
+
+  public static void main(String[] args) {
+    SpringApplication.run(RestExamples.class, args);
+  }
+
+  @Bean
+  public RestTemplate restTemplate() {
+    return new RestTemplate();
+  }
+
+  @Bean
+  public CommandLineRunner fetchIngredients(TacoCloudClient tacoCloudClient) {
+    return args -> {
+      log.info("----------------------- GET -------------------------");
+      log.info("GETTING INGREDIENT BY IDE");
+      log.info("Ingredient:  " + tacoCloudClient.getIngredientById("CHED"));
+      log.info("GETTING ALL INGREDIENTS");
+      List<Ingredient> ingredients = tacoCloudClient.getAllIngredients();
+      log.info("All ingredients:");
+      for (Ingredient ingredient : ingredients) {
+        log.info("   - " + ingredient);
+      }
+    };
+  }
+
+  @Bean
+  public CommandLineRunner putAnIngredient(TacoCloudClient tacoCloudClient) {
+    return args -> {
+      log.info("----------------------- PUT -------------------------");
+      Ingredient before = tacoCloudClient.getIngredientById("LETC");
+      log.info("BEFORE:  " + before);
+//      tacoCloudClient.updateIngredient(new Ingredient("LETC", "Shredded Lettuce", Ingredient.Type.VEGGIES));
+      Ingredient after = tacoCloudClient.getIngredientById("LETC");
+      log.info("AFTER:  " + after);
+    };
+  }
+}
+```
+
 
 ## HATEOAS: links embedded
 Hypermedia as the Engine of Application State
