@@ -5,11 +5,11 @@ tags = ["china"]
 toc = true
 +++
 
-> It's from a Chinese podcast [故事FM, eposide 664](https://podcasts.apple.com/gb/podcast/e664-%E6%89%93%E5%B7%A5%E5%BC%82%E9%97%BB%E5%BD%95-%E6%B7%B1%E5%9C%B3-2000/id1256399960?i=1000575363625), they invite people to tell their own stories. 
+> It's from a Chinese podcast Story FM [故事FM, eposide 664](https://storyfm.cn/episodes/e664/), they invite people to tell their own real life stories. 
 
 > Shenzhen is one of the largest cities in China, most made-in-China electronics come from Shenzhen.
 
-> [Original page (wechat)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) contains many pictures at that time.
+> [Original page (wechat alert)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) contains many pictures at that time, this is a translated version by myself.
 
 In 1998, I graduated from junior high school and wanted to go out to work, but my mother wouldn't let me.
 
