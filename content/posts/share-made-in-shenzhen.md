@@ -15,13 +15,13 @@ In 1998, I graduated from junior high school and wanted to go out to work, but m
 
 Because something happened in our place - the leech feeding incident - the two daughters of my cousin's family went out to work and were sold to leech factories by their own uncle.
 
-At that time, there were underground leech black factories on this side of Shenzhen, and the leeches raised were used as medicinal herbs and ingredients.
+At that time, there were underground leech black factories on this side of Shenzhen, and the raised leeches were used as medicinal herbs and ingredients.
 
-One day my cousin was not feeling well, had no appetite, and secretly poured out the food. She said, "Strangely, everyone who ate the meal all lay down. She also pretended to lie down and wanted to see what the end was going to do.
+One day my cousin was not feeling well, had no appetite, and secretly poured out the food. She said, "Strangely, everyone who ate the meal all lay down." She also pretended to lie down and wanted to see what was going on.
 
-She closed her eyes and felt someone undress her and put her in the sink. When she opened her eyes, her body was black and tingly and crawling with leeches. She was scared to death and ran out naked.
+She closed her eyes and felt someone undress her and put her in the sink. When she opened her eyes, her body was black and crawled with leeches tingly. She was scared to death and ran out naked.
 
-I remember very clearly that the police drove a police car to bring her back that day. Many people in the village went to see it, my mother also went, she said, so tragic, part-time jobs have lost their lives.
+I remember very clearly that the police drove a police car to bring her back that day. Many people in the village went to see it, my mother also went, she said, so tragic, some got a job and lost their lives.
 
 That was when the first generation went out to work.
 
@@ -45,7 +45,7 @@ Can you seize the opportunity to turn your fate around?
 Will you be better off than you are now?
 
 
-What has changed and what hasn't changed in 20 years regarding the fate of the working man?
+What has changed and what hasn't changed in 20 years regarding the fate of the working people?
 
 ### Part 1 A decision as big as the sky
 
@@ -54,7 +54,7 @@ My name is Xiaoping, from Henan Nanyang, this year 40 years old. I came to work 
 We are very poor there, and there is not much work to earn money steadily except for farming.
 
 
-Even in this case, working(leaving home and working in big cities) was not very common at that time, and it was not an easy thing to go out.
+Even in this case, working (leaving home to work in big cities) was not very common at that time, and it was not an easy thing to go out.
 
 
 Listening to those stories of "human blood fed leech", I was so scared that I felt like there were worms on my body, but at that time, my dream life was to earn more money with my own hands, and it was a very happy thing to let my parents spend the money I earned. So no matter how hard it is out there, I want to grit my teeth and try.
@@ -63,25 +63,25 @@ Listening to those stories of "human blood fed leech", I was so scared that I fe
 Every time I wanted anything, I went on a hunger strike, and as soon as I didn't eat my mother compromised. So to be able to go out to work, I also went on a hunger strike.
 
 
-One night, through the wall I heard my mother say, daughter so stubborn, or let her go out, this daily hunger, not to starve to death?
+One night, through the wall I heard my mother say, our daughter is so stubborn, maybe we should let her go out, we can't let her starve to death, can't we?
 
 
-That night I was so excited I didn't sleep.
+That night I was so excited, I couldn't sleep.
 
 
-The next day it was announced, let me go out. You know, at that time going out to work, is a thing as big as the sky!
+The next day they announced, let me go out. You know, at that time going out to work, is a thing as big as the sky!
 
 Overcoming the fear of leaving home was only the first hurdle.
 
-At that time, there was no telephone, and the only way to contact him was by letter.
+At that time, there was no telephone, and the only way to contact family was by letter.
 
 Ping found a way to contact his cousin who was working in Shenzhen, and she sent a letter with only one address, Dechang Electric Factory in Shajing Town, Baoan District, Shenzhen, Guangdong Province.
 
 This is like a game in which the main task is finally triggered, but the unfamiliar world outside and the distant journey are hidden maps across the middle, which need to be unlocked step by step.
 
-For this reason, the family decided to let his brother send Xiao Ping to Shenzhen, not because his brother had been out, but just because young people are more resourceful.
+The family decided to let her brother send Xiao Ping to Shenzhen, not because her brother had been out, but just because young people are more resourceful.
 
-Before leaving, mother and brother explained a lot: the road is full of bad guys, you siblings always go together, do not be abducted; Things from strangers can not be eaten, there is ecstasy; you must bring a pen, if you do not understand what they say you write ......
+Before leaving, mother and brother explained a lot: the road is full of bad guys, you siblings always go together, do not be abducted; Things from strangers can not be eaten, there is ecstasy inside; you must bring a pen, if you do not understand what they say you write ......
 
 With these instructions, Xiao Ping set out, and unexpected and endless difficulties also began from this moment.
 
@@ -120,10 +120,10 @@ But I was still scared, and I didn't dare to drink any more water on the way.
 
 ### Part 3 A little bit of love
 
-We are at 11 o'clock in the middle of the night to Guangzhou station, then there is no direct car to Shenzhen, you have to go to Guangzhou first.
+We were at 11 o'clock in the middle of the night to Guangzhou station, there was no direct car to Shenzhen, you had to go to Guangzhou first.
 
 
-Almost to the Guangzhou station, the carriage suddenly appeared to have a group of people with small red flags, wearing red hats: Hello, friends of passengers, now this bus to the Guangzhou station is already midnight, there is a long way from the bus station. We want to do a little love, for everyone to prepare a direct luxury bus to Shenzhen, with closed-circuit television, air conditioning ...... a ticket, 45 yuan.
+Almost to the Guangzhou station, the carriage suddenly appeared to have a group of people with small red flags, wearing red hats: Hello, friends of passengers, now this bus to the Guangzhou station is already midnight, there is a long way from the bus station. We want to show a little love, for everyone to prepare a direct luxury bus to Shenzhen, with closed-circuit television, air conditioning ...... a ticket, 45 yuan.
 
 
 At that time, many people stood up to buy tickets, my brother was afraid of not being able to buy them, rushed to also buy two.
@@ -146,11 +146,11 @@ The man said, start getting on!
 I froze, that car is almost scrapped, very broken. But my brother did not let me talk much, push the luggage to that car and rushed in. We were even more shocked after getting in, the small broken bus has been full of people, the corridor has a wooden board with a squeeze of two people each row.
 
 
-No way, who dares to argue? It's midnight, the luggage is loaded up, and you can only endure.
+No way, who dares to argue? It's midnight, the luggage was loaded up, and you could only endure.
 
 ### Part 4 Get off the bus
 
-I don't know how long I drove, the car jolted to a halt in the middle of nowhere.
+I didn't know how long it drove, the car jolted to a halt in the middle of nowhere.
 
 
 They said, everyone needs to buy tickets.
@@ -174,15 +174,15 @@ Before we left, my dad went to buy a long box of cigarette, saying that in case 
 The driver took the cigarette, smiling and nodding.
 
 
-As a result, he did not call us! We got off the bus in a place where there is no village in front and no store at the back. I don't know how long I waited for a cab on the way. The driver charged 50 yuan per person and took us to Xinqiao.
+As a result, he did not call us! We got off the bus in a place where there is no village in front and no store at the back. I didn't know how long I waited for a cab on the way. The driver charged 50 yuan per person and took us to Xinqiao.
 
 > Reasoning and smiling are useless, money is the most real passport. This is the first lesson that Ping learned when she came out.
 
-> After took off the bus at nowhere, they took a taxi and spent 100 yuan to get from Guangzhou to the factory in Shenzhen.
+> Buying a bus ticket on the train cost 90. In the car, the ticket was charged again, and it cost 90. After being left nowhere, it cost 100 to take a taxi. In order to travel from Guangzhou to the Shenzhen factory, Xiaoping and his brother spent 280 yuan.
 
 > In that year, the average monthly income of a farmer in Henan province was 165 yuan.
 
-> To get from Guangzhou to Shenzhen, Ping spent nearly 2 months of his income.
+> To get from Guangzhou to Shenzhen, Ping spent nearly 2 months of her income.
 
 > However, money still did not solve all the problems.
 
@@ -199,7 +199,7 @@ There was a phone booth in front of Textron Electric and we hid inside.
 It was a bumpy ride and we hadn't eaten anything and in a daze, we fell asleep.
 
 
-We were woken up by whoever knocked me on the head. I opened my eyes and a police car pulled up next to me and took me by surprise!
+We were woken up by someone knocked me on the head. I opened my eyes and a police car pulled up next to me and took me by surprise!
 
 
 He said he wanted to see my temporary residence permit.
@@ -215,7 +215,7 @@ The security guard at the entrance of the factory said, this child has so much l
 
 I was pulled up by them and then kicked down again, but eventually, we were not pulled away by police.
 
-> The difference in information is reflected in the geographical transportation, the people, and also in the policy system.
+> The difference in information is reflected in the geographical transportation, the way to handle people, and also in the policy system.
 
 > You can think of a temporary residence permit as a green covid code in those days. You needed a temporary residence permit if you wanted to work and live in the area for a long time without a local hukou. Without a temporary residence permit, one could be fined or even deported.
 
@@ -238,7 +238,7 @@ On my first day at work, I got lost in the factory. I asked around, but I could 
 I had no choice, so I went back to the dormitory. My sister happened to be in the dormitory and she said, "Why did you come back on your first day at work?
 
 
-I said I couldn't find the workshop. Oh my God, she lauged me and sent me to the workshop door in a very angry manner.
+I said I couldn't find the workshop. Oh my God, she lauged at me and sent me to the workshop door in a very angry manner.
 
 
 The line manager then asked me why I was late on my first day. I said I couldn't find the workshop.
@@ -250,16 +250,16 @@ Wow, workers at the whole line started laughing and I felt like an idiot at that
 There was no air conditioning in the workshop, only a broken fan, and I was working standing up for 10 hours a day, which was very tiring and hard.
 
 
-The process I was working on was stamping, adding high temperature, and then picking up the material products.
+The process I was working on was high temperature stamping, and then picking up the material products.
 
 
 At that time I had just started my job and the material did not flow smoothly through the inductor. I then followed the example of the older employees and reached in with my left index finger to pick it up. As a result, all of a sudden, my hand was tightly clamped in the mold with the material.
 
 
-The material had been heated several times and was so hot that the slightest touch was a bubble. But my fingers were completely fused to the material. The pain was heart-rending. I started to scream furiously.
+The material had been heated several times and was so hot that the slightest touch would cause a bubble. But my fingers were completely fused to the material. The pain was heart-rending. I started to scream furiously.
 
 
-That's when the emergency switch was supposed to be turned off. But I couldn't reach it with my right hand and my left hand was caught in the machine, so I couldn't move the button. The other people on the line just shook their heads and laughed when they saw me, then twisted to the side and didn't do anything.
+That's when the emergency switch was supposed to be turned off. But I couldn't reach it with my right hand and my left hand was caught in the machine, so I couldn't touch the button. The other people on the line just shook their heads and laughed when they saw me, then twisted to the side and didn't do anything.
 
 
 I cried so loudly that I alerted the line manager. He came over and turned the emergency button off.
@@ -277,10 +277,10 @@ After that, I changed jobs and worked the same way, still dealing with chips. Th
 Later the line manager was doing his rounds and said, "Who's bleeding so much underground here?
 
 
-I didn't squeal for fear of being scolded.
+I didn't tell a thing for fear of being scolded.
 
 
-Within a month of entering the site, I experienced workplace injuries, chip allergies, and even goosebumps in my ears, which were unbearably painful.
+Within a month of entering the site, I experienced workplace injuries, chip allergies caused me to have goosebumps in my ears, which were unbearably painful.
 
 
 At that time, I was very homesick for my mother and felt that this life on my own was not as good as I thought it would be.
@@ -300,7 +300,7 @@ I was holding that money and my whole hand was trembling, so this was my hard-ea
 In this working survival battle, getting paid doesn't mean a pass, but the beginning of the game with increased difficulty.
 
 
-Xiaoping's factory is located in Shajing, where many factories and migrant workers congregate. Sniffing for money, the forces of various gangs, triads, and local snakes also gather here. Unless you never leave the factory, there is always a way for them to cheat or rob you of your hard-earned money.
+Xiaoping's factory is located in Shajing, where many factories and migrant workers congregate. Sniffing for money, the forces of various gangs and triads also gather here. Unless you never leave the factory, there is always a way for them to cheat or rob you of your hard-earned money.
 
 ### Part 7 Shajing street
 
@@ -322,7 +322,7 @@ When I went out for fast food, I thought the meat was expensive, so I ordered sh
 Shit, I asked for a few hundred yuans after eating, and I got screwed again! It turns out that 2 yuan is for one slice of potato, not a plate.
 
 
-There was a girl in our dormitory who got up early in the morning, a motorbike rider snatched her earrings and her ear was torn and bleeding. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be one, and bring fake ones to cheat us.
+There was a girl in our dormitory who got up early in the morning, a motorbike rider snatched her earrings and her ear was torn and bleeding. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be one and bring fake ones to cheat us.
 
 
 There was another woman in our factory who had her eye on a pair of trousers to buy. When she tried them on, the seam opened up and she wasn't going to take them.
@@ -331,13 +331,12 @@ There was another woman in our factory who had her eye on a pair of trousers to 
 At that time the boss was so angry that he rode straight on her and beat her, tearing all her clothes in the street. The girl was so humiliated that she ran back to her dormitory and jumped off the building, where she died that night.
 
 
-In those days, Shenzhen was full of such incidents and the law and order were very bad. Workers were always being cheated and robbed outside the factory. Many people were afraid to go out.
+In those days, Shenzhen was full of such incidents and the law and order were very thin. Workers were always being cheated and robbed outside the factory. Many people were afraid to go out.
 
 
-Because they had never seen any bad people since they were young, they suddenly experienced it themselves and felt that the society was really dark. And people are so cold that no one will pity you or help you. Sometimes when you tell your fellow workers what you've been through and what's on your mind, they just take it as a joke and make fun of you for being stupid.
+Because they had never seen any bad people since they were young back in hometown, they suddenly experienced it themselves and felt that the society was really dark. And people are so cold that no one will pity you or help you. Sometimes when you tell your fellow workers what you've been through and what's on your mind, they just take it as a joke and make fun of you for being stupid.
 
-
-You can only keep all this to yourself.
+You can only keep all things to yourself.
 
 What would you choose at this time, to continue working or to go home?
 
@@ -371,7 +370,7 @@ She was very pretty, with curved eyebrows, big eyes, white skin and long eyelash
 She had been cheated to a job, and they locked her up and wouldn't let her eat or drink unless she agreed to sell her body. Having no choice, she finally gave in and took on clients for a month and escaped to look for work again.
 
 
-She had been through a lot. I was about to leave Shenzhen at that time, and I hadn't gone roller-skating or seen a movie in a video hall, so I felt sorry for myself.
+She had been through a lot. I was about to leave Shenzhen at that time, and I hadn't gone roller-skating or seen a movie in a video hall yet, so I felt sorry for myself.
 
 
 The girl said, "Easy, I'll take you there.
@@ -386,7 +385,7 @@ She was the star of the rink and all the boys went to take her hand.
 Two of the boys were holding her, one left hand and one right hand. They both had tattoos on their bodies and didn't look like nice guys.
 
 
-Later, the two guys got into a fight over this girl and got their knives and cut up.
+Later, the two guys got into a fight over this girl with their knives.
 
 
 I rushed to pull her and ran all the way back to the rental house.
@@ -398,10 +397,10 @@ Later, we both went to a video store to watch a movie. It was a night market vid
 The next day, after we came out to buy breakfast, we saw that there were a lot of people gathered in front of the video hall and a white cloth was covering something. We asked curiously what was going on here.
 
 
-They said that a woman's body had been found in the video room, naked, raped by someone, also a working girl, and was hiding under the stool in the first row.
+They said that a girl's body had been found in the video room, naked, raped by someone, also a working girl, and was hiding under the stool in the first row.
 
 
-We were sitting in that row! There were dead bodies under the stools and we didn't even know it!
+We were sitting in that row! There were a dead body under the stools and we didn't even know it!
 
 
 I wanted to get out of Shenzhen at the first opportunity. It was really too scary. After that, I didn't even dare to go out again, and when I got paid, I left.
@@ -449,11 +448,11 @@ My husband told me to hurry and hide in the kitchen while he went over and held 
 My son cried outside and I cried in the kitchen. When I had cried enough, I sneaked away.
 
 
-To continue working, or to go home? Perhaps this choice did not exist in the first place. Because of the huge difference in development between coastal cities and rural areas in the interior, Xiaoping could no longer go back.
+To continue working, or to go home? Perhaps this choice did not exist in the first place. Because of the huge difference in development between coastal cities and rural areas, Xiaoping could no longer go back.
 
-In his hometown, Xiao Ping had a business and a farming business, but he worked hard for years without making any money.
+In his hometown, Xiao Ping had a business and a farming business, she worked hard for years without making any money.
 
-Even though he couldn't let his children go, he had to leave. It's like a game that has been programmed for a long time, no matter which way you choose, you will eventually have to work.
+Even though she couldn't leave her children, she had to leave. It's like a game that has been programmed for a long time, no matter which way you choose, you will eventually go out to work.
 
 In 2009, Xiaoping came to Shenzhen once again.
 
@@ -467,10 +466,10 @@ This time, I joined Foxconn, hoping to earn money while keeping myself healthy.
 When we joined, we were paid a base salary of 920, with no breaks for a month and 1800 for full-time work, and we felt that we were earning a lot of money. Then there were 13 consecutive jumps in the factory, and the fear came back again.
 
 
-At that time, workers jumped from buildings very frequently, one a day, and one a day died. Every time I walked from there, when I saw someone upstairs, I was afraid that he would jump down and hit me.
+At that time, workers jumped from buildings very frequently, one a day died. Every time I walked and saw someone upstairs, I was afraid that he would jump down and hit me.
 
 
-I always felt that there was someone on top of the building, so I always walked around the building.
+I always felt that there was someone on top of the building, so I always walked far way from the building.
 
 
 One time when we were leaving work in the morning, we walked next to the G15 building and found a large crowd of people. At that time, the man had also jumped to his death.
