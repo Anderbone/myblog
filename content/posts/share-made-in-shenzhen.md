@@ -1,13 +1,13 @@
 +++ 
 date = "2022-09-04"
-title = "Behind made in China: the story of a Shenzhen worker in 2000"
+title = "The story of a Shenzhen worker in 2000"
 tags = ["china"]
 toc = true
 +++
 
 > It's from a Chinese podcast [故事FM, eposide 664](https://podcasts.apple.com/gb/podcast/e664-%E6%89%93%E5%B7%A5%E5%BC%82%E9%97%BB%E5%BD%95-%E6%B7%B1%E5%9C%B3-2000/id1256399960?i=1000575363625), they invite people to tell their own stories. 
 
-> Shenzhen is one of the largest cities in China, most made-in-China product come from Shenzhen.
+> Shenzhen is one of the largest cities in China, most made-in-China electronics come from Shenzhen.
 
 > [Original page (wechat)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) contains many pictures at that time.
 
@@ -51,7 +51,7 @@ What has changed and what hasn't changed in 20 years regarding the fate of the w
 
 My name is Xiaoping, from Henan Nanyang, this year 40 years old. I came to work in Shenzhen in 2000 and have been working there since then.
 
-We are very poor there, and there is not much work to earn money steadily except for farming.
+We were very poor there, and there was not much work to earn money steadily except for farming.
 
 
 Even in this case, working (leaving home to work in big cities) was not very common at that time, and it was not an easy thing to go out.
@@ -60,16 +60,14 @@ Even in this case, working (leaving home to work in big cities) was not very com
 Listening to those stories of "human blood fed leech", I was so scared that I felt like there were worms on my body, but at that time, my dream life was to earn more money with my own hands, and it was a very happy thing to let my parents spend the money I earned. So no matter how hard it is out there, I want to grit my teeth and try.
 
 
-Every time I wanted anything, I went on a hunger strike, and as soon as I didn't eat my mother compromised. So to be able to go out to work, I also went on a hunger strike.
+Every time when I wanted anything, I went on a hunger strike, and as soon as I didn't eat, my mother compromised. So to be able to go out to work, I also went on a hunger strike.
 
 
 One night, through the wall I heard my mother say, our daughter is so stubborn, maybe we should let her go out, we can't let her starve to death, can't we?
 
-
 That night I was so excited, I couldn't sleep.
 
-
-The next day they announced, let me go out. You know, at that time going out to work, is a thing as big as the sky!
+The next day they announced, let me go out. You know, at that time going out to work is a thing as big as the sky!
 
 Overcoming the fear of leaving home was only the first hurdle.
 
@@ -94,24 +92,18 @@ The luggage bag was too big for my brother to carry alone, so I carried it behin
 
 My brother had money in his shirt pocket, and he kept staring at it, afraid to sleep.
 
-
 I sat face to face with my brother and I stared at his pockets.
-
 
 After so many stops, I wanted to go to the bathroom. My brother said this moment the train is moving wobbly, wait for it to stop and then we go.
 
 
 Finally, the train stopped, and my brother accompanied me to go together. Because one of our previous neighbor were once locked in the toilet all the way on a train, my mother specifically told us that we need to go to the toilet together.
 
-
 My brother said, Ping, you go in and do not close the door, leave a small gap for me to hold, you knock the door once done in case you are being locked in. I said okay.
-
 
 When I went in, just finished taking off pants, I heard the steward yelling outside, take your ID card out, did you not see the word above? The toilet is prohibited when the train stops!
 
-
 My brother said he didn't see it, this is the first time we came out and we didn't understand. As soon as I heard my brother's voice, I ran out with my pants. I said, brother, what is it? He said the ID card was taken away.
-
 
 The only document on my body was taken away, I felt very scared. My brother said it was okay, he would give it back to us when we got to the station.
 
@@ -123,7 +115,7 @@ But I was still scared, and I didn't dare to drink any more water on the way.
 We were at 11 o'clock in the middle of the night to Guangzhou station, there was no direct car to Shenzhen, you had to go to Guangzhou first.
 
 
-Almost to the Guangzhou station, the carriage suddenly appeared to have a group of people with small red flags, wearing red hats: Hello, friends of passengers, now this bus to the Guangzhou station is already midnight, there is a long way from the bus station. We want to show a little love, for everyone to prepare a direct luxury bus to Shenzhen, with closed-circuit television, air conditioning ...... a ticket, 45 yuan.
+Almost to the Guangzhou station, the carriage suddenly appeared to have a group of people with small red flags, wearing red hats: Hello, friends of passengers, now this bus to the Guangzhou station is already midnight, there is a long way from the bus station. We want to show a little bit of love, for everyone to prepare a direct luxury bus to Shenzhen, with closed-circuit television, air conditioning ...... a ticket, 45 yuan.
 
 
 At that time, many people stood up to buy tickets, my brother was afraid of not being able to buy them, rushed to also buy two.
@@ -144,7 +136,6 @@ Not a luxury bus at all, why we stop here?
 The man said, start getting on!
 
 I froze, that car is almost scrapped, very broken. But my brother did not let me talk much, push the luggage to that car and rushed in. We were even more shocked after getting in, the small broken bus has been full of people, the corridor has a wooden board with a squeeze of two people each row.
-
 
 No way, who dares to argue? It's midnight, the luggage was loaded up, and you could only endure.
 
@@ -168,13 +159,13 @@ So many people wanted to stand up and resist, but there was nothing they could d
 The car continued to drive, but everyone was uneasy in their hearts. He did not announce the station, and we did not know where we were going.
 
 
-Before we left, my dad went to buy a long box of cigarette, saying that in case there was something on the way, it was good to hand a cigarette to talk. My brother then slowly moved next to the driver, and gave the whole box of cigarette to the driver. He said, "Master, call us at the new bridge station, okay?
+Before we left, my dad went to buy a whole box of cigarette, saying that in case there was something on the way, it was good to hand a cigarette to talk. My brother then slowly moved next to the driver, and gave the whole box of cigarette to the driver. He said, "Master, call us at the new bridge station, okay?
 
 
 The driver took the cigarette, smiling and nodding.
 
 
-As a result, he did not call us! We got off the bus in a place where there is no village in front and no store at the back. I didn't know how long I waited for a cab on the way. The driver charged 50 yuan per person and took us to Xinqiao.
+As a result, he did not call us! We got off the bus in a place where there was no village in front and no store at the back. I didn't know how long I waited for a cab on the way. The driver charged 50 yuan per person and took us to Xinqiao.
 
 > Reasoning and smiling are useless, money is the most real passport. This is the first lesson that Ping learned when she came out.
 
@@ -196,7 +187,7 @@ As soon as we got off the bus, it started raining so hard.
 There was a phone booth in front of Textron Electric and we hid inside.
 
 
-It was a bumpy ride and we hadn't eaten anything and in a daze, we fell asleep.
+It was a bumpy ride, we hadn't eaten anything and in a daze, we fell asleep.
 
 
 We were woken up by someone knocked me on the head. I opened my eyes and a police car pulled up next to me and took me by surprise!
@@ -211,13 +202,13 @@ I didn't understand what a temporary residence permit was. I said we had just go
 The policeman dragged us to the police car and I didn't know what to do.
 
 
-The security guard at the entrance of the factory said, this child has so much luggage, clearly she is just out of the countryside, she just asked me her sister's address, she is over to find relatives, quite difficult, do not pull her up. This old man also handed each policeman a cigarette while talking.
+The security guard at the entrance of the factory said, this child has so much luggage, clearly she is just out of the countryside, she just asked me her sister's address, she is over here to find relatives, quite difficult, do not pull her up. This old man also handed each policeman a cigarette while talking.
 
 I was pulled up by them and then kicked down again, but eventually, we were not pulled away by police.
 
 > The difference in information is reflected in the geographical transportation, the way to handle people, and also in the policy system.
 
-> You can think of a temporary residence permit as a green covid code in those days. You needed a temporary residence permit if you wanted to work and live in the area for a long time without a local hukou. Without a temporary residence permit, one could be fined or even deported.
+> You can think of a temporary residence permit as a green covid code in China in those days. You needed a temporary residence permit if you wanted to work and live in the area for a long time without a local [hukou](https://en.wikipedia.org/wiki/Hukou). Without a temporary residence permit, one could be fined or even deported.
 
 > Just three years after Xiao Ping went out to work, another migrant worker, Sun Zhigang, was beaten to death by staff at the shelter during his detention because he did not have a temporary residence permit.
 
@@ -235,7 +226,7 @@ The factory was all so tall and identical.
 On my first day at work, I got lost in the factory. I asked around, but I could only speak my native language at the time, and many people ignored me, so I was helpless.
 
 
-I had no choice, so I went back to the dormitory. My sister happened to be in the dormitory and she said, "Why did you come back on your first day at work?
+I had no choice, so I went back to the dormitory. My sister happened to be in the dormitory and she said, "Why did you come back on your first day at work ?"
 
 
 I said I couldn't find the workshop. Oh my God, she lauged at me and sent me to the workshop door in a very angry manner.
@@ -304,7 +295,7 @@ Xiaoping's factory is located in Shajing, where many factories and migrant worke
 
 ### Part 7 Shajing street
 
-After I got paid, I went shopping outside the factory and there was a stall with a red cloth with a gold chain on it, saying that for 10 yuan, you could buy 2 and get 1 free. You can have whatever length you want.
+After I got paid, I went shopping outside the factory and there was a stall with a red cloth and a gold chain on it, saying that for 10 yuan, you could buy 2 and get 1 free. You can have whatever length you want.
 
 
 The owner asked, "Can it be this long? I said, "No, I want it longer,"anyway it's 10 yuan, buy 2 and get 1 free.
@@ -319,22 +310,22 @@ By the centimetre, 700 yuan!
 When I went out for fast food, I thought the meat was expensive, so I ordered shredded potatoes for 2 yuan.
 
 
-Shit, I asked for a few hundred yuans after eating, and I got screwed again! It turns out that 2 yuan is for one slice of potato, not a plate.
+But I asked for a few hundred yuans after eating, and I got screwed again! It turned out that 2 yuan is for one slice of potato, not a plate.
 
 
-There was a girl in our dormitory who got up early in the morning, a motorbike rider snatched her earrings and her ear was torn and bleeding. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be one and bring fake ones to cheat us.
+There was a girl in our dormitory who got up early in the morning, a motorbike rider snatched her earrings and her ear was torn and bleeding. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be one and bring fake ones to cheat us."
 
 
-There was another woman in our factory who had her eye on a pair of trousers to buy. When she tried them on, the seam opened up and she wasn't going to take them.
+There was another girl in our factory who wanted to buy a pair of pants. When she tried them on, the seam opened up and she wasn't going to take them.
 
 
 At that time the boss was so angry that he rode straight on her and beat her, tearing all her clothes in the street. The girl was so humiliated that she ran back to her dormitory and jumped off the building, where she died that night.
 
 
-In those days, Shenzhen was full of such incidents and the law and order were very thin. Workers were always being cheated and robbed outside the factory. Many people were afraid to go out.
+In those days, Shenzhen was full of such incidents， the law and order were very thin. Workers were always being cheated and robbed outside the factory. Many people were afraid to go out.
 
 
-Because they had never seen any bad people since they were young back in hometown, they suddenly experienced it themselves and felt that the society was really dark. And people are so cold that no one will pity you or help you. Sometimes when you tell your fellow workers what you've been through and what's on your mind, they just take it as a joke and make fun of you for being stupid.
+Because they had never seen any bad people since they were young back in hometown, they suddenly experienced it themselves and felt that the society was really dark. People are so cold that no one will pity you or help you. Sometimes when you tell your fellow workers what you've been through and what's on your mind, they just take it as a joke and make fun of you for being stupid.
 
 You can only keep all things to yourself.
 
@@ -350,10 +341,10 @@ Because of this friend, Ping had the courage to leave the factory again, and had
 
 ### Part 8 A friend
 
-At that time I wanted to quit my job, and he said that I could approve your resignation, but you would not be paid until the end of the month.
+At that time I wanted to quit my job, and manager said that I could approve your resignation, but you would not be paid until the end of the month.
 
 
-I then rented a bed in front of the factory, it was a single room, but many people were living there. I waited here for my salary.
+I then rented a bed in front of the factory, it was a single room, but many people were living there. I waited there for my salary.
 
 Because I was using the factory sheets, the girl in the bunk above me recognised them and she said, "Are you from Textron Electric?
 
@@ -373,7 +364,7 @@ She had been cheated to a job, and they locked her up and wouldn't let her eat o
 She had been through a lot. I was about to leave Shenzhen at that time, and I hadn't gone roller-skating or seen a movie in a video hall yet, so I felt sorry for myself.
 
 
-The girl said, "Easy, I'll take you there.
+The girl said, "Easy, I'll take you there."
 
 
 It was the first time I had ever been to an ice skating rink, and it was huge, with lots of beautiful people skating there.
@@ -427,10 +418,10 @@ I asked my husband to call a taxi and go into town to see the hospital. He said 
 We didn't have enough money for that, but we had just got married and didn't have much money.
 
 
-Then we scraped together some money and took the baby to the hospital in the middle of the night. The child was pushed straight into the resuscitation room, and the doctor turned around and asked me, "What kind of parent are you? If you had come any later, your child would have been dead!
+Then we scraped together some money and took the baby to the hospital in the middle of the night. The child was pushed straight into the resuscitation room, and the doctor turned around and asked me, "What kind of parent are you? If you had come any later, your child would have been dead!"
 
 
-His words touched me deeply. I realised that this was not the way my life was supposed to be. I could put up with not having money for food and clothing. But how can we put up with a sick child who has no money for medical treatment? If there was any turmoil in the family, we would not be able to afford it.
+His words touched me deeply. I realised that this was not the way my life was supposed to be. I could put up with not having money for food and clothing. But how can we put up with a sick child who has no money for medical treatment? If there was any illness in the family, we would not be able to afford it.
 
 
 From that moment on, I made up my mind to go out to work again.
@@ -439,7 +430,7 @@ From that moment on, I made up my mind to go out to work again.
 After my son was discharged from the hospital, I bought a train ticket and put the child in his grandmother's home.
 
 
-On the day of my departure, it was still early in the morning, and my husband and I tried to sneak in to see the child before we left. Just as we walked to the door, my son saw me. He was sitting on top of the threshold of the hall, and as soon as he saw me, the bun in his hand fell to the floor and the bun in his mouth slipped down as he cried, his nose, sound water, and tears all mixed together and he cried very hard.
+On the day of my departure, it was still early in the morning, and my husband and I tried to sneak in to see the child before we left. Just as we walked to the door, my son saw me. He was sitting on top of the threshold of the hall, and as soon as he saw me, the bun in his hand fell to the floor and the bun in his mouth slipped down as he cried, his nose, saliva, and tears all mixed together and he cried very hard.
 
 
 My husband told me to hurry and hide in the kitchen while he went over and held my son to coax him.
@@ -450,23 +441,23 @@ My son cried outside and I cried in the kitchen. When I had cried enough, I snea
 
 To continue working, or to go home? Perhaps this choice did not exist in the first place. Because of the huge difference in development between coastal cities and rural areas, Xiaoping could no longer go back.
 
-In his hometown, Xiao Ping had a business and a farming business, she worked hard for years without making any money.
+In his hometown, Xiao Ping had a farming business and also tried other things, she worked hard for years without making any money.
 
-Even though she couldn't leave her children, she had to leave. It's like a game that has been programmed for a long time, no matter which way you choose, you will eventually go out to work.
+Even though she didn't want to leave her children, she had to. It's like a game that has been programmed for a long time, no matter which way you choose, you will eventually go out to work.
 
 In 2009, Xiaoping came to Shenzhen once again.
 
-But China's social transformation and global capital had entered a new phase. The problems of backward information, isolated traffic, and poor social security were now a thing of the past, and Xiaoping and the world's factory workers were facing a whole new hurdle.
+But China's social transformation and global capital had entered a new phase. The problems of blocked information, isolated traffic, and poor social security were now a thing of the past, and Xiaoping and the world's factory workers were facing a whole new hurdle.
 
 ### Part 10 Foxconn
 
 This time, I joined Foxconn, hoping to earn money while keeping myself healthy.
 
 
-When we joined, we were paid a base salary of 920, with no breaks for a month and 1800 for full-time work, and we felt that we were earning a lot of money. Then there were 13 consecutive jumps in the factory, and the fear came back again.
+When we joined, we were paid a base salary of 920, with no breaks at all for a month you would get 1800 yuan for full-time work, and we felt that we were earning a lot of money. Then there were 13 consecutive jumps in the factory, and the fear came back again.
 
 
-At that time, workers jumped from buildings very frequently, one a day died. Every time I walked and saw someone upstairs, I was afraid that he would jump down and hit me.
+At that time, workers jumped from buildings to commit suicide very frequently, felt like everyday there's person died. Every time I walked and saw someone upstairs, I was afraid that he would jump down and hit me.
 
 
 I always felt that there was someone on top of the building, so I always walked far way from the building.
@@ -475,7 +466,7 @@ I always felt that there was someone on top of the building, so I always walked 
 One time when we were leaving work in the morning, we walked next to the G15 building and found a large crowd of people. At that time, the man had also jumped to his death.
 
 
-I wanted to look closer, but my roommate pulled me away. She said you would have nightmares after watching and then dragged me away.
+I wanted to look closer, but my roommate pulled me away. She said you would have nightmares after watching.
 
 
 Why do workers at Foxconn jump from buildings one after another, and what secrets lie behind this giant production system? That's a different story.
@@ -488,12 +479,11 @@ Now, at Foxconn, she works 10 hours a day, with no rest except for official holi
 
 If you have been to Shen Nan Road in Shenzhen, you may have seen many migrant workers taking pictures in front of Deng Xiaoping's portrait, and you can see in their eyes the anticipation for Shenzhen, and for their future life.
 
-But Xiao Ping has never been there once. Now that law and order is better, Xiaoping dares to go shopping and skating, but she has never once entered Shenzhen.
-
-
+But Xiao Ping has never been there once. Now that law and order is better, Xiaoping dares to go shopping and skating, but she has never once entered urban area of Shenzhen.
 
 ### Part 11 A happy ending
-I've been working for over 20 years and I've never been to Shenzhen until now.
+
+I've been working for over 20 years and I've never been to urban area of Shenzhen.
 
 
 On my roommate's birthday, we went to a photo studio to take pictures together. The photo studio's set had "Window of the World" and "Future Times" written on it. When I said where was this, they said it was in Shenzhen.
@@ -508,7 +498,7 @@ I didn't know what the Window of the World was like, and I didn't want to go and
 My main thing is to earn money to support my family, that's all.
 
 
-Now the children are not close to me at home. As left-behind children, they are also pitiful. Sometimes my son plays games, and when you dicipline him, he says, "You gave birth to me and didn't raise me, so why should I listen to you?
+Now the children are not close to me at home. As left-behind children, they are also pitiful. Sometimes my son plays games, and when you dicipline him, he says, "You gave birth to me but didn't raise me, why should I listen to you?
 
 
 I don't regret coming out to work, whether it's right or wrong, it can't be undone, but at least now if my children are sick, I have money on my own card and it doesn't matter if I spend it all, as long as they're healthy and well.
