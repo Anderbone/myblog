@@ -1,14 +1,15 @@
 +++ 
 date = "2022-09-04"
-title = "The story of a Shenzhen worker in 2000"
+title = "Behind made in China: the story of a Shenzhen worker in 2000"
 tags = ["china"]
+toc = true
 +++
 
 > It's from a Chinese podcast [故事FM, eposide 664](https://podcasts.apple.com/gb/podcast/e664-%E6%89%93%E5%B7%A5%E5%BC%82%E9%97%BB%E5%BD%95-%E6%B7%B1%E5%9C%B3-2000/id1256399960?i=1000575363625), they invite people to tell their own stories. 
 
 > Shenzhen is one of the largest cities in China, most made-in-China product come from Shenzhen.
 
-> [Original page (wechat)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) (contains many original pictures)
+> [Original page (wechat)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) contains many pictures at that time.
 
 In 1998, I graduated from junior high school and wanted to go out to work, but my mother wouldn't let me.
 
@@ -68,9 +69,9 @@ One night, through the wall I heard my mother say, daughter so stubborn, or let 
 That night I was so excited I didn't sleep.
 
 
-The next day it was announced, let me go out. You know, at that time going out to work, is a big thing!
+The next day it was announced, let me go out. You know, at that time going out to work, is a thing as big as the sky!
 
-Overcoming the fear of mobility was only the first hurdle.
+Overcoming the fear of leaving home was only the first hurdle.
 
 At that time, there was no telephone, and the only way to contact him was by letter.
 
@@ -89,7 +90,7 @@ With these instructions, Xiao Ping set out, and unexpected and endless difficult
 I left home on February 23, 2000.
 
 
-The luggage bag was too big for my brother to carry alone, so I carried it behind me and got on the train with such a whimper.
+The luggage bag was too big for my brother to carry alone, so I carried it behind me and got on the train.
 
 My brother had money in his shirt pocket, and he kept staring at it, afraid to sleep.
 
@@ -97,19 +98,19 @@ My brother had money in his shirt pocket, and he kept staring at it, afraid to s
 I sat face to face with my brother and I stared at his pockets.
 
 
-After so many stops, I wanted to go to the bathroom. My brother said this moment the car is walking, wobbly, wait for the car to stop we go again.
+After so many stops, I wanted to go to the bathroom. My brother said this moment the train is moving wobbly, wait for it to stop and then we go.
 
 
-Finally, the car stopped, and my brother accompanied me to go together. Because of the previous neighbors on the train all the way to be locked in the toilet, my mother specifically explained that the toilet to two people together.
+Finally, the train stopped, and my brother accompanied me to go together. Because one of our previous neighbor were once locked in the toilet all the way on a train, my mother specifically told us that we need to go to the toilet together.
 
 
-My brother said, Ping, you go in and do not close the door, leave a small gap I hold, on the finish you knock on the door, we come out, do not let you being locked in. I said okay.
+My brother said, Ping, you go in and do not close the door, leave a small gap for me to hold, you knock the door once done in case you are being locked in. I said okay.
 
 
-When I went in, pants just finished taking off, I heard the steward yelling outside, take your ID card out, did you not see the word above? The toilet is prohibited when the train stops!
+When I went in, just finished taking off pants, I heard the steward yelling outside, take your ID card out, did you not see the word above? The toilet is prohibited when the train stops!
 
 
-My brother said he didn't see it, this is the first time we went out and we didn't understand. As soon as I heard my brother's voice, I ran out with my pants. I said, brother, what is it? He said the ID card was taken away.
+My brother said he didn't see it, this is the first time we came out and we didn't understand. As soon as I heard my brother's voice, I ran out with my pants. I said, brother, what is it? He said the ID card was taken away.
 
 
 The only document on my body was taken away, I felt very scared. My brother said it was okay, he would give it back to us when we got to the station.
@@ -128,13 +129,13 @@ Almost to the Guangzhou station, the carriage suddenly appeared to have a group 
 At that time, many people stood up to buy tickets, my brother was afraid of not being able to buy them, rushed to also buy two.
 
 
-When we arrived at the station, there was indeed a person wearing red clothes and holding a small red flag. People riding a motorcycle, and we are scrambling to follow behind. Many people lost, and those people do not care who's lost.
+When we arrived at the station, there was indeed a person wearing red clothes and holding a small red flag. People riding a motorcycle, and we are scrambling to follow behind. Many people lost their way and those people do not care who's lost.
 
 
 My brother and I carried a large bag, chasing very hard, but the good thing is that in the end we did not lose.
 
 
-The man stopped in front of a yellow Chinese bus.
+The man stopped in front of a yellow bus.
 
 
 Not a luxury bus at all, why we stop here?
@@ -142,20 +143,20 @@ Not a luxury bus at all, why we stop here?
 
 The man said, start getting on!
 
-I froze, that car is almost scrapped, very broken. But my brother did not let me talk much, push the luggage to that car and rushed in. We were even more shocked after getting in, the small broken bus has been full of people, the corridor has a wooden board with a squeeze of two people on each row.
+I froze, that car is almost scrapped, very broken. But my brother did not let me talk much, push the luggage to that car and rushed in. We were even more shocked after getting in, the small broken bus has been full of people, the corridor has a wooden board with a squeeze of two people each row.
 
 
 No way, who dares to argue? It's midnight, the luggage is loaded up, and you can only endure.
 
-### Part 4 get off the bus
+### Part 4 Get off the bus
 
 I don't know how long I drove, the car jolted to a halt in the middle of nowhere.
 
 
-They said, all up to buy tickets.
+They said, everyone needs to buy tickets.
 
 
-I was still confused, I just remember a woman in the front row said, we bought tickets on that train. She just pulled out the tickets, the ticket seller directly yanked her collar, threw her off, drove the car, and left.
+I was still confused, I just remember a woman in the front row said, we already bought tickets on that train. She just pulled out the tickets, the ticket seller directly yanked her collar, threw her off and drove the car.
 
 
 I watched the woman through the window, crying, chasing, shouting "my bag", "my bag", and then slowly only a rolled-up figure remained. I think she was squatting on the ground crying.
@@ -237,7 +238,7 @@ On my first day at work, I got lost in the factory. I asked around, but I could 
 I had no choice, so I went back to the dormitory. My sister happened to be in the dormitory and she said, "Why did you come back on your first day at work?
 
 
-I said I couldn't find the workshop. Oh my God, she just lauged me and sent me to the workshop door in a very angry manner.
+I said I couldn't find the workshop. Oh my God, she lauged me and sent me to the workshop door in a very angry manner.
 
 
 The line manager then asked me why I was late on my first day. I said I couldn't find the workshop.
@@ -296,17 +297,17 @@ They gave me 100 yuan and told me to find 30, but I didn't even have the money t
 
 I was holding that money and my whole hand was trembling, so this was my hard-earned money.
 
-In this working survival battle, getting paid doesn't mean a pass, but the beginning of the game's increased difficulty.
+In this working survival battle, getting paid doesn't mean a pass, but the beginning of the game with increased difficulty.
 
 
 Xiaoping's factory is located in Shajing, where many factories and migrant workers congregate. Sniffing for money, the forces of various gangs, triads, and local snakes also gather here. Unless you never leave the factory, there is always a way for them to cheat or rob you of your hard-earned money.
 
 ### Part 7 Shajing street
 
-After I got paid, I went shopping outside the factory and there was a stall with a red cloth with a gold chain on it, saying that for 10 yuan, you could buy 2 and get 1 free. You can have however long you want.
+After I got paid, I went shopping outside the factory and there was a stall with a red cloth with a gold chain on it, saying that for 10 yuan, you could buy 2 and get 1 free. You can have whatever length you want.
 
 
-The owner asked, "Can it be this long? I said, "No, I can do it longer,"anyway it's 10 yuan, buy 2 and get 1 free.
+The owner asked, "Can it be this long? I said, "No, I want it longer,"anyway it's 10 yuan, buy 2 and get 1 free.
 
 
 When he cut off the necklace and raised the sign, there was a small line on the top saying "per centimetre".
@@ -315,13 +316,13 @@ When he cut off the necklace and raised the sign, there was a small line on the 
 By the centimetre, 700 yuan!
 
 
-When I went out for fast food, I thought the meat was expensive, so I ordered shredded potatoes for 2.
+When I went out for fast food, I thought the meat was expensive, so I ordered shredded potatoes for 2 yuan.
 
 
 Shit, I asked for a few hundred yuans after eating, and I got screwed again! It turns out that 2 yuan is for one slice of potato, not a plate.
 
 
-There was a girl in our dormitory who got up early in the morning and ended up running into a motorbike rider who snatched her earrings and her ear was torn and bleeding. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be one, and bring fake ones to cheat us.
+There was a girl in our dormitory who got up early in the morning, a motorbike rider snatched her earrings and her ear was torn and bleeding. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be one, and bring fake ones to cheat us.
 
 
 There was another woman in our factory who had her eye on a pair of trousers to buy. When she tried them on, the seam opened up and she wasn't going to take them.
@@ -348,7 +349,7 @@ But it was at this point that Ping made her first friend in her working life.
 
 Because of this friend, Ping had the courage to leave the factory again, and had a more intuitive and harsher understanding of what Shenzhen was like outside the factory.
 
-### Part 8 friends
+### Part 8 A friend
 
 At that time I wanted to quit my job, and he said that I could approve your resignation, but you would not be paid until the end of the month.
 
@@ -367,7 +368,7 @@ In fact, there were many people there, but we were the only ones who got to talk
 She was very pretty, with curved eyebrows, big eyes, white skin and long eyelashes.
 
 
-She had been cheated to a job, and they locked her up and wouldn't let her eat or drink unless she agreed to take clients. Having no choice, she finally gave in and took on clients for a month and escaped to look for work again.
+She had been cheated to a job, and they locked her up and wouldn't let her eat or drink unless she agreed to sell her body. Having no choice, she finally gave in and took on clients for a month and escaped to look for work again.
 
 
 She had been through a lot. I was about to leave Shenzhen at that time, and I hadn't gone roller-skating or seen a movie in a video hall, so I felt sorry for myself.
@@ -403,7 +404,7 @@ They said that a woman's body had been found in the video room, naked, raped by 
 We were sitting in that row! There were dead bodies under the stools and we didn't even know it!
 
 
-I looked at it all and wanted to get out of Shenzhen at the first opportunity. It was really too scary. After that, I didn't even dare to go out again, and when I got paid, I left.
+I wanted to get out of Shenzhen at the first opportunity. It was really too scary. After that, I didn't even dare to go out again, and when I got paid, I left.
 
 
 I don't know where this girl went, and we never had any contact again.
@@ -416,7 +417,7 @@ Xiaoping returned to rural Henan and started a family, giving birth to a son and
 
 Xiaoping had no answers either.
 
-### Part 9 can't go back
+### Part 9 No way to go back
 
 Until one time, my son was sick. He had a persistent cold and cough for a long time. That night, he had fallen asleep with a whimpering sound in his throat and it felt like every breath he took was unbearable.
 
@@ -458,7 +459,7 @@ In 2009, Xiaoping came to Shenzhen once again.
 
 But China's social transformation and global capital had entered a new phase. The problems of backward information, isolated traffic, and poor social security were now a thing of the past, and Xiaoping and the world's factory workers were facing a whole new hurdle.
 
-### Part 10 fushikang
+### Part 10 Foxconn
 
 This time, I joined Foxconn, hoping to earn money while keeping myself healthy.
 
@@ -492,7 +493,7 @@ But Xiao Ping has never been there once. Now that law and order is better, Xiaop
 
 
 
-### Part 11 a happy ending
+### Part 11 A happy ending
 I've been working for over 20 years and I've never been to Shenzhen until now.
 
 
