@@ -1,0 +1,521 @@
++++ 
+date = "2022-09-04"
+title = "Made in China: A worker in shenzhen, 2000"
+tags = ["china"]
++++
+
+> It's from a Chinese podcast [故事FM, eposide 664](https://podcasts.apple.com/gb/podcast/e664-%E6%89%93%E5%B7%A5%E5%BC%82%E9%97%BB%E5%BD%95-%E6%B7%B1%E5%9C%B3-2000/id1256399960?i=1000575363625), they invite people to tell their own stories.
+
+In 1998, I graduated from junior high school and wanted to go out to work, but my mother wouldn't let me.
+
+Because something happened in our place - the leech feeding incident - the two daughters of my cousin's family went out to work and were sold to leech factories by their own uncle.
+
+At that time, there were underground leech black factories on this side of Shenzhen, and the leeches raised were used as medicinal herbs and ingredients.
+
+One day my cousin was not feeling well, had no appetite, and secretly poured out the food. She said, "Strangely, everyone who ate the meal all lay down. She also pretended to lie down and wanted to see what the end was going to do.
+
+She closed her eyes and felt someone undress her and put her in the sink. When she opened her eyes, her body was black and tingly and crawling with leeches. She was scared to death and ran out naked.
+
+I remember very clearly that the police drove a police car to bring her back that day. Many people in the village went to see it, my mother also went, she said, so tragic, part-time jobs have lost their lives.
+
+That was when the first generation went out to work.
+
+This is the earliest memory of today's narrator, Xiao Ping, about working part-time. Because of its age, we have no way to verify it.
+
+
+But whether human blood leeches existed or not, we can still hear some amazing metaphors from it - black factories, bloodthirsty oppression, and workers fleeing for their lives must have been prevalent in the stories of millions of people at the time.
+
+
+You can think of today's show as a role-playing game. If you were to turn back the clock 20 years, what kind of life would you lead as one or two of the earliest generations of hit-and-run workers who came to Shenzhen, where the buzz was so strong?
+
+
+What would you encounter along the way from your hometown to a first-tier metropolis?
+
+
+Can you seize the opportunity to turn your fate around?
+
+
+Will you be better off than you are now?
+
+
+What has changed and what hasn't changed in 20 years regarding the fate of the working man?
+
+### part 1 A thing huge like a sky
+
+My name is Xiaoping, from Henan Nanyang, this year 40 years old. I came to work in Shenzhen in 2000 and have been working there since then.
+
+
+We are very poor there, and there is not much work to earn money steadily except for farming.
+
+
+Even in this case, working was not very common at that time, and it was not an easy thing to go out.
+
+
+Listening to those stories of "human blood leech", I was so scared that I felt like there were worms on my body, but at that time, my dream life was to earn more money with my own hands, and it was a very happy thing to let my parents spend the money I earned. So no matter how hard it is out there, I want to grit my teeth and try.
+
+
+Every time I wanted anything, I went on a hunger strike, and as soon as I didn't eat my mother compromised. So to be able to go out to work, I also went on a hunger strike.
+
+
+One night, through the wall I heard my mother say, daughter so stubborn, or let her go out, this daily hunger, not to starve to death?
+
+
+That night I was so excited I didn't sleep.
+
+
+The next day it was announced, let me go out. You know, at that time going out to work, is a big thing!
+
+Overcoming the fear of mobility was only the first hurdle.
+
+At that time, there was no telephone, and the only way to contact him was by letter.
+
+Ping found a way to contact his cousin who was working in Shenzhen, and she sent a letter with only one address, Dechang Electric Factory in Shajing Town, Baoan District, Shenzhen, Guangdong Province.
+
+This is like a game in which the main task is finally triggered, but the unfamiliar world outside and the distant journey are hidden maps across the middle, which need to be unlocked step by step.
+
+For this reason, the family decided to let his brother send Xiao Ping to Shenzhen, not because his brother had been out, but just because young people are more resourceful.
+
+Before leaving, mother and brother explained a lot: the road bad guys, you siblings to pull tight, do not be abducted; road things can not be eaten, there is an ecstasy; must bring a pen, meet foreigners do not understand what they say you write ......
+
+With these instructions, Xiao Ping set out, and unexpected and endless difficulties also began from this moment.
+
+### part 2 No access to the toilet
+
+I left home on February 23, 2000.
+
+
+The luggage bag was too big for my brother to carry alone, so I carried it behind me and got on the train with such a whimper.
+
+My brother had money in his shirt pocket, and he kept staring at it, afraid to sleep.
+
+
+I sat face to face with my brother and I stared at his pockets.
+
+
+After so many stops, I wanted to go to the bathroom. My brother said this moment the car is walking, wobbly, wait for the car to stop we go again.
+
+
+Finally, the car stopped, and my brother accompanied me to go together. Because of the previous neighbors on the train all the way to be locked in the toilet, my mother specifically explained that the toilet to two people together.
+
+
+My brother said, Nell, you go in and do not close the door, leave a small gap I hold, on the finish you knock on the door, we come out, do not let the lock in. I said okay.
+
+
+When I went in, pants just finished taking off, I heard the steward yelling outside, take your ID card out, did you not see the word above? The train stops when the toilet is prohibited!
+
+
+My brother said he didn't see it, the first time he went out and didn't understand. As soon as I heard my brother's voice, I ran out with my pants. I said, brother, what is it? He said the ID card was taken away.
+
+
+The only document on my body was taken away, I felt very scared. My brother said it was okay, he would give it back to us when we got to the station.
+
+
+But I was still scared, and I didn't dare to drink any more water on the way.
+
+### part 3 a little love
+
+We are at 11 o'clock in the middle of the night to Guangzhou station, then there is no direct car to Shenzhen, you have to go to Guangzhou first.
+
+
+Almost to the Guangzhou station, the carriage suddenly appeared to have a group of people with small red flags, wearing red hats: Hello, friends of passengers, now this bus to the Guangzhou station is already midnight, there is a long way from the bus station. We want to do a little love, for everyone to prepare a direct luxury bus to Shenzhen, with closed-circuit television, air conditioning ...... a ticket, 45 yuan.
+
+
+At that time, many people stood up to buy tickets, my brother was afraid of not being able to buy them, rushed to also buy two.
+
+
+When we arrived at the station, there was indeed a person wearing red clothes and holding a small red flag. People riding a motorcycle, and we are scrambling to follow behind. Many people lost, lost, lost, people do not care.
+
+
+My brother and I carried a large bag, chasing very hard, but the good thing is that in the end did not lose.
+
+
+The man stopped in front of a yellow Chinese bus.
+
+
+Not a luxury bus, how to run here to stop?
+
+
+The man said, start getting on!
+
+I froze, that car is almost scrapped, very broken. But my brother did not let me talk much, the luggage to that a stuff, and rushed to the car. Up more stupid, the small broken bus has been full of people, only the corridor with a wooden board, a squeeze of two people.
+
+
+No way, who dares to rip off? It's midnight, the luggage is loaded up, and you can only endure.
+
+### part 4 get off the bus
+
+I don't know how long I drove, the car jolted to a halt in the middle of nowhere.
+
+
+They said, all up to buy tickets.
+
+
+I was still confused, I just remember a woman in the front row said, we bought tickets on that train. She just pulled out the tickets, the ticket seller directly yanked her collar, threw her off, drove the car, and left.
+
+
+I watched the woman through the window, crying, chasing, shouting "my bag", "my bag", and then slowly only a rolled-up figure remained. I think she was squatting on the ground crying.
+
+
+So many people wanted to stand up and resist, but there was nothing they could do. I didn't even dare to make a face, afraid that people would throw me down too. Everyone took out their RMB and bought a second ticket.
+
+
+The car continued to drive, but everyone was uneasy in their hearts. He did not announce the station, and we did not know where we were going.
+
+
+Before we left, my dad went to buy a cigarette, saying that in case there was something on the way, it was good to hand a cigarette to talk. My brother then slowly moved to the driver next to the driver, and gave a cigarette all to the driver. He said, "Master, call us at the new bridge, okay?
+
+
+The driver took the cigarette, smiling and nodding.
+
+
+As a result, he did not call us! We got off the bus in a place where there is no village in front and no store at the back. I don't know how long I waited for a cab on the way. The driver charged 50 yuan per person and took us to Xinqiao.
+
+    Reasoning and smiling are useless, money is the most real passport. This is the first lesson that Ping learned when he came out.
+
+    After being left behind anywhere, he took a taxi and spent 100 yuan to get from Guangzhou to the factory in Shenzhen.
+
+    In that year, the average monthly income of a farmer in Henan province was 165 yuan.
+
+    To get from Guangzhou to Shenzhen, Ping spent nearly 2 months of his income.
+
+    However, money still did not solve all the problems.
+
+    Little did Ping know that next, they would need a vital prop for the workers of that year, a temporary residence permit.
+
+### part 5 residence permit
+
+As soon as we got off the bus, it started raining so hard.
+
+
+There was a phone booth in front of Textron Electric and we hid inside.
+
+
+It was a bumpy ride and we hadn't eaten anything and in a daze, we fell asleep.
+
+
+We were woken up by whoever knocked me on the head. I opened my eyes and a police car pulled up next to me and took me by surprise!
+
+
+He said he wanted to see a temporary residence permit.
+
+
+I didn't understand what a temporary residence permit was. I said we had just got off the train. He said what about the train tickets? I said I had thrown them away when we got off the train, who would have thought that train tickets could be used for such a purpose.
+
+
+The policeman dragged us to the police car and I didn't know what to do.
+
+
+The company's main business is to provide a wide range of products and services to the public. The moncler jackets outlet online store is a great way to find out what you are looking for.
+
+
+I was pulled up by them and then kicked down again, but eventually, we were not pulled away.
+
+    The difference in information is reflected in the geographical transportation, the people, and also in the policy system.
+
+    You can think of a temporary residence permit as a code green in those days when you needed a temporary residence permit if you wanted to work and live in the area for a long time without a local hukou. Without a temporary residence permit, one could be fined or even deported.
+
+    Just three years after Xiao Ping went out to work, another migrant worker, Sun Zhigang, was beaten to death by staff at the shelter during his detention because he did not have a temporary residence permit.
+
+    From the female passenger who was left in the middle of nowhere and lost her luggage to the beaten worker who was taken in and deported to her death, Ping unlocks the hidden hurdles on her way to her part-time job one by one.
+
+
+    If the experience handed down by her parents and the company of her elder brother help Ping get through the novice protection period, the next hurdle is hers alone.
+
+    With the help of her cousin, Ping becomes a worker at the Dechang Electrical Factory. How should she next face a cold and huge steel jungle on her own?
+
+### part 6 broken fingers
+
+The factory was all so tall and identical.
+
+
+On my first day at work, I got lost in the factory. I asked around, but I could only speak my native language at the time, and many people ignored me, so I was helpless.
+
+
+I had no choice, so I went back to the dormitory. My sister happened to be in the dormitory and she said, "Why did you come back on your first day at work?
+
+
+I said I couldn't find the workshop. Oh my God, she just dickered me and sent me to the workshop door in a very angry manner.
+
+
+The line manager then asked me why I was late on my first day. I said I couldn't find the workshop.
+
+
+Wow, the whole line started laughing and I felt like an idiot at that moment.
+
+
+There was no air conditioning in the workshop, only a broken fan, and I was working standing up for 10 hours a day, which was very tiring and hard.
+
+
+The process I was working on was stamping, adding high temperature, and then picking up the material products.
+
+
+At that time I had just started my job and the material did not flow smoothly through the inductor. I then followed the example of the older employees and reached in with my left index finger to pick it up. As a result, all of a sudden, my hand was tightly clamped in the mold with the material.
+
+
+The material had been heated several times and was so hot that the slightest touch was a bubble. But my fingers were completely fused to the material. The pain was heart-rending. I started to scream furiously.
+
+
+That's when the emergency switch was supposed to be turned off. But I couldn't reach it with my right hand and my left hand was caught in the machine, so I couldn't move the button. The other people on the line just shook their heads and laughed when they saw me, then twisted to the side and didn't do anything.
+
+
+I cried so loudly that I alerted the line manager. He came over and turned the emergency button off.
+
+
+When I took my finger out, the piece of flesh was black and there was no point in feeling it.
+
+
+Over here in Shenzhen, because you're a new employee, you don't know people well and they won't even lift a finger. On the contrary, when you have an injury, once the products are piled up and the machines are stopped, he can play for a while and still get paid. He wouldn't mind playing for a while.
+
+
+After that, I changed jobs and worked the same way, still dealing with chips. The chip was very sharp and it stuck in my finger. I was afraid that the line manager would see me and fuck me again, so I squeezed the cut and carried on.
+
+
+Later the line manager was doing his rounds and said, "Who's bleeding so much underground here?
+
+
+I didn't squeal for fear of being scolded.
+
+
+Within a month of entering the site, I experienced workplace injuries, chip allergies, and even goosebumps in my ears, which were unbearably painful.
+
+
+At that time, I was very homesick for my mother and felt that this life on my own was not as good as I thought it would be.
+
+
+I joined the factory on February 25, 2000, and my job number was 453216.
+
+
+On the 29th, I got my first paycheck, and I remember very clearly that I was paid 70 yuan.
+
+
+They gave me 100 yuan and told me to find 30, but I didn't even have the money to do so.
+
+
+I was holding that money and my whole hand was trembling, so this was my hard-earned money.
+
+    In this part-time job survival battle, getting paid doesn't mean a pass, but the beginning of the game's increased difficulty.
+
+
+    Xiaoping's factory is located in Shajing, where many factories and migrant workers congregate. Sniffing for money, the forces of various tangos, triads, and local snakes also gather here. Unless you never leave the factory, there is always a way for them to cheat or rob you of your hard-earned money.
+
+### part 7 shajing street
+
+After I got paid, I went shopping outside the factory and there was a stall with a red cloth with a gold chain on it, saying that for 10 yuan, you could buy 2 and get 1 free.
+
+
+The owner said, "Can it be this long? I said, "No, I can't do it any longer, anyway, for 10 yuan, buy 2 and get 1 free.
+
+
+When he cut off the necklace and raised the sign, there was a small line on the top saying "per centimetre".
+
+
+By the centimetre, 700 yuan!
+
+
+When I went out for fast food, I thought the meat was expensive, so I ordered shredded potatoes for $2.
+
+
+Shit, I asked for a few hundred dollars after eating, and I got screwed again! It turns out that 2 yuan is for one potato, not a plate.
+
+
+There was a girl in our dormitory who got up early in the morning and ended up running into a motorbike rider who snatched her earrings and ripped her ear off. Other girls went shopping in broad daylight and were robbed of all the things they had with them. When the robber saw that they were fake, he beat them up and said, "If you don't have money, don't pretend to be a fool, and bring fake ones to cheat us.
+
+
+There was another woman in our factory who had her eye on a pair of trousers to buy. When she tried them on, the seam opened up and she wasn't going to take them.
+
+
+At that time the boss was so angry that he rode straight on her and beat her, tearing all her clothes in the street. The girl was so humiliated that she ran back to her dormitory and jumped off the building, where she died that night.
+
+
+In those days, Shenzhen was full of such incidents and the law and order were very bad. Workers were always being cheated and robbed outside the factory. Many people were afraid to go out.
+
+
+Because they had never seen any bad people since they were young, they suddenly experienced it themselves and felt that the society was really dark. And people are so cold that no one will pity you or help you. Sometimes when you tell your fellow workers what you've been through and what's on your mind, they just take it as a joke and make fun of you for being stupid.
+
+
+You can only keep all this to yourself.
+
+What would you choose at this time, to continue working or to go home?
+
+Ping chose to stick to her guns and was careful not to step outside the factory easily.
+
+Finally, after two years, Ping reached her limit and decided to go home.
+
+But it was at this point that Ping made her first friend in her working life.
+
+Because of this friend, Ping had the courage to leave the factory again, and had a more intuitive and harsher understanding of what Shenzhen was like outside the factory.
+
+### part 8 friends
+
+At that time I wanted to quit my job, and he said that the resignation was granted to you, but I would not be paid until the end of the month.
+
+
+I then rented a bed in front of the factory, it was a single room, but many people were living there. I waited here for my salary.
+
+Because I was using the factory sheets, the girl in the bunk above me recognised them and she said, "Are you from Textron Electric?
+
+
+I said yes.
+
+
+In fact, there were many people there, but we were the only ones who got to talk because of this opportunity. As we talked, I began to sympathise with her.
+
+
+She was very pretty, with curved eyebrows, big eyes, white skin and long eyelashes.
+
+
+She had been cheated out of a job, and they locked her up and wouldn't let her eat or drink unless she agreed to take clients. Having no choice, she finally gave in and took on clients for a month and escaped to look for work again.
+
+
+She had been through a lot. I was about to leave Shenzhen at that time, and I hadn't gone roller-skating or seen a movie in a video hall, so I felt sorry for myself.
+
+
+The girl said, "Easy, I'll take you there.
+
+
+It was the first time I had ever been to an ice skating rink, and it was huge, with lots of beautiful people skating there.
+
+
+She was the talk of the rink and all the boys went to take her hand.
+
+
+Two of the boys were holding her left hand and one was holding her right hand. They both had tattoos on their bodies and didn't look like nice guys.
+
+
+Later, the two guys got into a fight over this girl and got their knives and cut up.
+
+
+I rushed to pull her and ran all the way back to the rental house.
+
+
+Later, we both went to a video store to watch a movie. It was a night market video hall that showed horror movies, and we went at night and watched them all night.
+
+
+The next day, after we came out to buy breakfast, we saw that there were a lot of people gathered in front of the video hall and a white cloth was covering something. We asked curiously what was going on here.
+
+
+They said that a woman's body had been found in the video room, naked, raped by someone, also a working girl, and was hiding under the stool in the first row.
+
+
+We were sitting in that row! There were dead bodies under the stools and we didn't even know it!
+
+
+I looked at it all and wanted to get out of Shenzhen at the first opportunity. It was really too scary. After that, I didn't even dare to go out again, and when I got paid, I left.
+
+
+I don't know where this girl went, and we never had any contact again.
+
+Xiaoping has finally made friends and has finally kindled a little interest in Shenzhen, but in return, there is a deeper sense of unease and fear.
+
+The rapidly changing life, the atomised social relations, the repressive labour process, and the law of the jungle where the weak are preyed upon, this was common trauma for the first generation of workers.
+
+Xiaoping returned to rural Henan and started a family, giving birth to a son and a daughter, but was this better than working? Would this be better than working? Would this make for a stable, secure life?
+
+Xiaoping had no answers either.
+
+### part 9 can't go back
+
+Until one time, my son was sick. He had a persistent cold and cough for a long time. That night, he had fallen asleep with a whimpering sound in his throat and it felt like every breath he took was unbearable.
+
+
+I asked my husband to call a taxi and go into town to see the hospital. He said it would have to wait, he had to go out and borrow money. We couldn't even get the money to call a cab. You know what? He woke up the next-door neighbour, who threw 200 yuan down from the first-floor window without opening the door.
+
+
+We didn't have enough money for that, but we had just got married and didn't have much money.
+
+
+Then we scraped together some money and took the baby to the hospital in the middle of the night. The child was pushed straight into the resuscitation room, and the doctor turned around and asked me, "What kind of parent are you? If you had come any later, your child would have been dead!
+
+
+His words touched me deeply. I realised that this was not the way my life was supposed to be. I could put up with not having money for food and clothing. But how can we put up with a sick child who has no money for medical treatment? If there was any turmoil in the family, we would not be able to afford it.
+
+
+From that moment on, I made up my mind to go out to work.
+
+
+After my son was discharged from the hospital, I bought a train ticket and put the child in his grandmother's home.
+
+
+On the day of my departure, it was still early in the morning, and my husband and I tried to sneak in to see the child before we left. Just as we walked to the door, my son saw me. He was sitting on top of the threshold of the hall, and as soon as he saw me, the bun in his hand fell to the floor and the bun in his mouth slipped down as he cried, his nose, sound water, and tears all mixed together and he cried very hard.
+
+
+My husband told me to hurry and hide in the kitchen while he went over and held my son to coax him.
+
+
+My son cried outside and I cried in the kitchen. When I had cried enough, I sneaked away.
+
+
+    To continue working, or to go home? Perhaps this choice did not exist in the first place. Because of the huge difference in development between coastal cities and rural areas in the interior, Xiaoping could no longer go back.
+
+    In his hometown, Xiao Ping had a business and a farming business, but he worked hard for years without making any money.
+
+    Even though he couldn't let his children go, he had to leave. It's like a game that has been programmed for a long time, no matter which way you choose, you will eventually have to work.
+
+    In 2009, Xiaoping came to Shenzhen once again.
+
+    But China's social transformation and global capital had entered a new phase. The problems of backward information, isolated traffic, and poor social security were now a thing of the past, and Xiaoping and the world's factory workers were facing a whole new hurdle.
+
+### part 10 fushikang
+
+This time, I joined Foxconn, hoping to earn money while keeping myself healthy.
+
+
+When we joined, we were paid a base salary of 920, with no breaks for a month and 1800 for full-time work, and we felt that we were earning a lot of money. Then there were 13 consecutive jumps in the factory, and the fear came back again.
+
+
+At that time, workers jumped from buildings very frequently, one a day, and one a day died. Every time I walked from there, when I saw someone upstairs, I was afraid that he would jump down and hit me.
+
+
+I always felt that there was someone on top of the building, so I always walked around the building.
+
+
+One time when we were leaving work in the morning, we walked next to the G15 building and found a large crowd of people. At that time, the man had also jumped to his death.
+
+
+I wanted to look closer, but my roommate pulled me away. She said you would have nightmares after watching and then dragged me away.
+
+
+    Why do workers at Foxconn jump from buildings one after another, and what secrets lie behind this giant production system? That's a different story.
+
+    Back to the story of Xiaoping, the times and the life trajectory of the workers have changed, and so has Xiaoping. Once she worked because she still had the expectations of young people in her heart, but this time she came out as a mother who wanted to earn money for her family and children.
+
+    When she joined the motor factory in 2000, she was paid 600 yuan a month.
+
+    Now, at Foxconn, she works 10 hours a day, with no rest except for official holidays.
+
+    If you have been to Shen Nan Road in Shenzhen, you may have seen many migrant workers taking pictures in front of Deng Xiaoping's portrait, and you can see in their eyes the anticipation for Shenzhen, and for their future life.
+
+    But Xiao Ping has never been there once. Now that law and order is better, Xiaoping dares to go shopping and skating, but she has never once entered Shenzhen.
+
+
+
+### part 11 a happy ending
+I've been working for over 20 years and I've never been to Shenzhen until now.
+
+
+On my roommate's birthday, we went to a photo studio to take pictures together. The photo studio's set had "Window of the World" and "Future Times" written on it. When I said where was this, they said it was in Shenzhen.
+
+
+Later, I learned that there was a "Window of the World" and a "Future Times" in Shenzhen.
+
+
+I didn't know what the Window of the World was like, and I didn't want to go and see it. I didn't think I could afford to set up roots in Shenzhen, I never thought about it, I didn't dare to think about it.
+
+
+My main thing is to earn money to support my family, that's all.
+
+
+Now the children are not close to me at home. As left-behind children, they are also pitiful. Sometimes my son plays games, and when you control him, he says, "You gave birth to me and didn't raise me, so why should you control me?
+
+
+I don't regret coming out to work, whether it's right or wrong, it can't be undone, but at least now my children are sick, I have money on my own card and it doesn't matter if I spend it all, as long as they're healthy and well.
+
+
+
+Now I have been paying social security for 11 years and my biggest dream is to work in the factory for another 3 years and keep paying for 15 years so that I can receive my pension.
+
+
+Then I can say goodbye to my working life and leave here.
+
+
+That would be my happy ending.
