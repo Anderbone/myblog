@@ -3,13 +3,14 @@ date = "2022-09-04"
 title = "The story of a Shenzhen worker in 2000"
 tags = ["china"]
 toc = true
+draft = true
 +++
 
 > It's from a Chinese podcast Story FM [故事FM, eposide 664](https://storyfm.cn/episodes/e664/), they invite people to tell their own real life stories. 
 
 > Shenzhen is one of the largest cities in China, most made-in-China electronics come from Shenzhen.
 
-> [Original page (wechat alert)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) contains many pictures at that time, this is a translated version by myself.
+> [Original page (wechat)](https://mp.weixin.qq.com/s/WrCJxqycUF7rW-q2RrAf_A) contains many pictures at that time, this is a translated version.
 
 In 1998, I graduated from junior high school and wanted to go out to work, but my mother wouldn't let me.
 
