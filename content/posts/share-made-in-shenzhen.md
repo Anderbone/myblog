@@ -3,7 +3,6 @@ date = "2022-09-04"
 title = "The story of a Shenzhen worker in 2000"
 tags = ["china"]
 toc = true
-draft = true
 +++
 
 > It's from a Chinese podcast Story FM [故事FM, eposide 664](https://storyfm.cn/episodes/e664/), they invite people to tell their own real life stories. 
