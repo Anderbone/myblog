@@ -8,6 +8,11 @@ toc = true
 ## Recommended, with English subtitle
 --- 
 
+**棒！少年 Tough out**
+- [豆瓣](https://movie.douban.com/subject/34930862/)
+- [IMDB](https://www.imdb.com/title/tt12630622/)
+- [Youtube](https://www.youtube.com/watch?v=cmtR8XhJluM)
+
 **废城 Ghost Town** 
 - [IMDB](https://www.imdb.com/title/tt1613084/)
 - [豆瓣](https://movie.douban.com/subject/3016788/)

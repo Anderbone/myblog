@@ -1,5 +1,5 @@
 
-+++ 
++++
 date = "2022-01-22"
 title = "Dangerous words, why psychology is impossible"
 tags = ["Wittgenstein","psychology"]
@@ -7,7 +7,7 @@ tags = ["Wittgenstein","psychology"]
 
 
 > “But profound as psychology is, it's a knife that cuts both ways (...). I have purposely resorted to this method, gentlemen of the jury, to show that you can prove anything by it. It all depends on who makes use of it. Psychology lures even most serious people into romancing, and quite unconsciously.”
-― Fyodor Dostoyevsky, The Brothers Karamazov 
+― Fyodor Dostoyevsky, The Brothers Karamazov
 
 > “The confusion and barrenness of psychology is not to be explained by calling it a “young science”; its state is not comparable with that of physics, for instance, in its beginnings... For in psychology there are experimental methods and conceptual confusion... The existence of the experimental method makes us think we have the means of solving the problems which trouble us; though problem and method pass one another by” (Ludwig Wittgenstein, Philosophical Investigations, 1968, II xiv, 232e).
 
@@ -29,16 +29,18 @@ I did a look at many scientific methods to treat what they called depression, wh
 
 A person without any psychological knowledge may know as well people need friends and exercise. People stop going to church or asking questions from pastors, and think they can live a happy life with scientific methods, while in the same century we have probably much more depressed people than in history.
 
-Psychology, in a nutshell, is an inward-looking approach to the interpretation of life.  The discipline of describing, interpreting, predicting, and controlling sensations or behaviors by describing and establishing an internal "mechanism" that explains the generation of feelings or behaviors, thereby establishing a state of well-being, based on the belief that happy life comes from the understanding of internal mechanisms, and the manipulation of this kind of technology.
+Psychology, in a nutshell, is an inward-looking approach to the interpretation of life.  The discipline of describing, interpreting, predicting, and controlling sensations or behaviours by describing and establishing an internal "mechanism" that explains the generation of feelings or behaviours, thereby establishing a state of well-being, based on the belief that happy life comes from the understanding of internal mechanisms, and the manipulation of this kind of technology.
 
 Old picture: an abnormal feeling that the existing language game cannot handle -> this is because the person has a unique inner abnormality -> insight into the inner abnormality and solve the problem.
 
 A person becomes abnormal for various reasons, and this abnormality causes him problems.
 
-New picture: an abnormal feeling that the existing language game can't handle -> find a new perspective, still interpret this feeling as an external problem, and it becomes a normal problem. 
+New picture: an abnormal feeling that the existing language game can't handle -> find a new perspective, still interpret this feeling as an external problem, and it becomes a normal problem.
 -> Solve this external problem.
 
 A man is a man, and in normal circumstances and understanding, he becomes normal.
 
-Ludwig used as the epigraph for this second book a line from the Austrian playwright Johann Nestroy: 
+Ludwig used as the epigraph for this second book a line from the Austrian playwright Johann Nestroy:
 > “The trouble about progress is that it always looks much greater than it really is.”
+
+Related: [5-love-languages and Extrovert only exist in our language](https://yanjiyu.com/posts/opinion-extrovert/) 

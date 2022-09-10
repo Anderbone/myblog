@@ -3,6 +3,7 @@ date = "2021-09-30"
 title = "Your private feeling is a public thing"
 tags = ["Wittgenstein"]
 toc = false
+draft = true
 +++
 
 > Why does Wittgenstein reject the possibility of private language?
