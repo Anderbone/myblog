@@ -1,6 +1,6 @@
 +++
 date = "2021-06-21"
-title = "We love because He first loved us, self-love is meaningless”
+title = "We love because He first loved us, not meaningless self love”
 tags = ["psychology","Christian"]
 toc = false
 +++
