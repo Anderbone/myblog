@@ -1,17 +1,16 @@
 +++
 date = "2021-06-21"
-title = "We love because He first loved us, not meaningless self love”
+title = "We love because He first loved us, not meaningless self love"
 tags = ["psychology","Christian"]
 toc = false
 +++
+Self-esteem, self-love, self-help, self-respect, self, self, self.
 
 > You can't love others properly without loving yourself at first.  - popular idea
 
 > We love because He first loved us. 1 John 4: 19
 
->  Mental states do not come before language nor accompany a sequence of words but are lived and experienced in the context of linguistic expression. -Wittgenstein
-
-Self-esteem, self-love, self-help, self-respect, self, self, self.
+> Mental states do not come before language nor accompany a sequence of words but are lived and experienced in the context of linguistic expression. -Wittgenstein
 
 It's wrong from a syntax perspective at first. Help, love, respect, and care, when we use these words, they are usually correctly used to describe the relationship between people. Adding a self before these words is simply wrong in syntax, as saying I eat water or drink food or I borrow money from myself. Bear in mind all these words nowadays everywhere like self-esteem, are extremely new and people for generations live without the need to create such words.
 

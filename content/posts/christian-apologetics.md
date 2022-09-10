@@ -1,6 +1,6 @@
 +++
 date = "2021-08-21"
-title = "All religions are for something good ? and action with love needs faith"
+title = "All religions are for good? and action with love needs faith"
 tags = ["Christian"]
 toc = true
 +++
