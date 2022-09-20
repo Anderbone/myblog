@@ -3065,7 +3065,8 @@ a {
   float: right; }
 
 p {
-  margin: 2rem 0 2rem 0; }
+  margin: 2rem 0 2rem 0;
+  line-height: 1.5em; }
 
 h1,
 h2,
