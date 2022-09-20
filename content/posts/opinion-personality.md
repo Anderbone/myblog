@@ -1,6 +1,6 @@
 +++
 date = "2022-09-20"
-title = "Personality types don't exist,  life is not a match game"
+title = "Personality types don't exist, life is not a match game"
 tags = ["psychology"]
 +++
 
