@@ -90,7 +90,12 @@ From one of my favourite missionary books, Mountain Rain:
 
 > It is interesting that James did not feel his gift was in preaching, either at home or abroad. … The plain truth is that the Scriptures never teach us to wait for opportunities of service, but to serve in just the things that lie next to our hands.
 
+---
+
 > But Moses said to God, “Who am I that I should go to Pharaoh and bring the Israelites out of Egypt?” Exodus 3:11 NIV
+
+> But Moses said to the Lord, “Oh, my Lord, I am not eloquent, either in the past or since you have spoken to your servant, but I am slow of speech and of tongue.” Then the Lord said to him, “Who has made man’s mouth? Who makes him mute, or deaf, or seeing, or blind? Is it not I, the Lord? Now therefore go, and I will be with your mouth and teach you what you shall speak.”
+Exodus 4:10-12 ESV
 
 > Then Jesus said to his disciples, “Whoever wants to be my disciple must deny themselves and take up their cross and follow me. For whoever wants to save their life will lose it, but whoever loses their life for me will find it.  Matthew 16:24-25 NIV
 

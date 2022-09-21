@@ -92,9 +92,13 @@ Better call Saul的最后一集，主人公通过一段如同宗教悔罪一般�
 
 一个基督徒不应该去想，我是否有传教天赋呢，我该怎样才能找到并发挥天赋特长，做出一番事情呢？一个好的服务员，永远把眼睛放在当下哪里的人需要他，哪里的桌子脏了，当下他可以在哪里服务。戴德生是想着万千未被拯救的灵魂而痛苦到夜不能寐，才选择毕生在中国传教。如果他有所谓的传教天赋，也是在那日日夜夜艰辛的在中国的传教生活中显现。
 
-我最爱的一本传教士书，山雨中，James从没有感受到自己有过传教的天赋，但他却知道我们永远可以从当下开始行动。
+我最爱的一本传教士书，山雨中，James从没有感受到自己有过传教的天赋，但他却知道圣经从没有让我等待服务的机会，我们永远可以从当下，从手边的事开始服务。
 > It is interesting that James did not feel his gift was in preaching, either at home or abroad. … The plain truth is that the Scriptures never teach us to wait for opportunities of service, but to serve in just the things that lie next to our hands.
 
-> But Moses said to God, “Who am I that I should go to Pharaoh and bring the Israelites out of Egypt?” Exodus 3:11 NIV
+摩西也是一样，深知自己从来是一个不善言辞的人，对于带领以色列人出埃及这样的使命，没有丝毫信心。但上帝是有能力的，我们能倚靠的上帝。我们做属于祂的事，祂给一切我们需要的能力。
 
-> Then Jesus said to his disciples, “Whoever wants to be my disciple must deny themselves and take up their cross and follow me. For whoever wants to save their life will lose it, but whoever loses their life for me will find it.  Matthew 16:24-25 NIV
+> 但摩西对上帝说：“我是谁啊？怎么能去见法老，把以色列人从埃及领出来呢？” 出埃及记 3:11 CCB
+
+> 摩西对耶和华说：“主啊！我向来不善言辞，即使你对仆人说话以后，我还是不善言辞，因为我是个拙口笨舌的人。” 耶和华对他说：“是谁造人的口舌？是谁使人变成哑巴或聋子？是谁使人目明或眼瞎？不都是我耶和华吗？ 去吧！我必赐给你口才，指示你说什么话。” 出埃及记 4:10-12 CCB
+
+> 于是耶稣对门徒说：“如果有人要跟从我，就应当舍己，背起他的十字架跟从我。 因为想救自己生命的，必失去生命；但为了我而失去生命的，必得到生命。马太福音 16:24-25 CCB
