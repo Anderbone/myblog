@@ -19,7 +19,7 @@ But now, in an age profoundly influenced by psychology in the past few short dec
 
 The science of helping our work and marriage, reducing anxiety and leading to happiness, nothing sounds better than this. Psychology tests, concepts and articles are everywhere and young people are no longer obsessed with horoscopes. People make appointments with psychologists when they have problems and no longer go to church to seek help from pastors - that's not scientific.
 
-Science is indeed too helpful and too powerful. Scientific experiments, classifications, controlled variables, data analysis, this set of approaches are like a ruler. A ruler can measure our distance from the sun, and you can hardly resist the urge to use a ruler to measure how much your partner loves you.
+Science is indeed too helpful and too powerful. Scientific experiments, classifications, controlled variables, data analysis, this set of approaches are like a ruler. A ruler can measure our distance from the sun, and we can hardly resist the urge to use a ruler to measure how much our partner loves us.
 
 
 > His target was not merely, as he had put it in the Blue Book, the damage that is done when philosophers ‘see the method of science before their eyes and are irresistibly tempted to ask and answer questions in the way that science does’; it was, more generally, the wretched effect that the worship of science and the scientific method has had upon our whole culture. Aesthetics and religious belief are two examples – for Wittgenstein, of course, crucially important examples – of areas of thought and life in which the scientific method is not appropriate, and in which efforts to make it so lead to distortion, superficiality and confusion.  - The Duty of Genius by Ray Monk
@@ -38,9 +38,9 @@ Weber was alerted a hundred years ago to the cult of “personality” and “pe
 
 > Now, whether we have scientific inspiration depends upon destinies that are hidden from us, and besides upon 'gifts.' Last but not least, because of this indubitable truth, a very understandable attitude has become popular, especially among youth, and has put them in the service of idols whose cult today occupies a broad place on all street corners and in all periodicals. These idols are 'personality' and 'personal experience.' Both are intimately connected, the notion prevails that the latter constitutes the former and belongs to it.
 
-But when you think about it, isn't it a bit ironic that a tedious work life already makes people feel like machines, and you want to understand yourself, but then you fit yourself under some category of packaged words through another set of ready-made technical frameworks, just like classifying machine parts according to a standard.
+But isn't it a bit ironic that a tedious work life already makes us feel like machines, and we want to understand ourselves, but then we fit ourselves under some category of packaged words through another set of ready-made technical frameworks, just like classifying machine parts according to a standard.
 
-We use numbers to quantify physical pain, but now we also come to quantify joy. We divide people into introverts and extroverts, and now there are 16 or more ABCD categories.
+We use numbers to quantify physical pain, now we come to quantify joy. We divide people into introverts and extroverts, and now there are 16 or more ABCD categories.
 
 Too much of modern life is spent through screens and media, where we learn about the world through concepts while being too easily compelled and isolated from actual life and others. The desire to categorise through technology is too strong in a highly compartmentalised society, taking us further and further away from both reality and self.
 
@@ -52,7 +52,7 @@ Personality traits and ideal types give you a false sense of pleasure as if you 
 
 Concepts create feelings and suppress real feelings.
 
-People certainly have innate differences, like a love of sweet or salty. But the differences in each of our understanding-based behavioural choices, why she loves to talk and he doesn't, are not based on our innate intrinsic differences or endowments, but on our different understandings, we each have of the real world, based on the different situations each life is in. The choices you make concerning your understanding are ones that you can choose, decide and change on your own.
+People certainly have innate differences, like a love of sweet or salty. But the differences in each of our understanding-based behavioural choices, why she loves to talk and he doesn't, are not based on our innate intrinsic differences or endowments which is just a non-existing bicep we tend to imagine and believe, but on our different understandings, we each have of the real world, based on the different situations each life is in. The choices you make concerning your understanding are ones that you can decide and change on your own.
 
 I refuse to score moments of happiness, to believe in a classification of character that exists beyond language, to think that one can categorise love, no matter how many different types it is abstracted into, and how romantic the descriptions used for each one are. Love can only be celebrated in poetry and painting, and the possibilities inherent in human beings lie outside the realm of what science can explore.
 
