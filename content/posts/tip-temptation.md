@@ -3,6 +3,7 @@ date = "2021-10-01"
 title = "Lead us not into temptation, block apps recommended"
 tags = ["health","tool"]
 toc = false
+draft = true
 +++
 
 We all tend to do the easy and familiar things, I can't do lots of difficult things myself. Our goal is to make things that matter effortless. How can we do a valuable and difficult thing(at least we believe it's difficult now) more easily and effortlessly, and how can we keep away from temptation not by our so-called self-control, but by an environment that makes us far away from temptation?

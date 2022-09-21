@@ -3,6 +3,7 @@ date = "2021-10-01"
 title = "Wise about what is good, innocent about what is evil"
 tags = ["Christian"]
 toc = false
+draft = true
 +++
 Romans 16:19, NIV: "Everyone has heard about your obedience, so I rejoice because of you; but I want you to be wise about what is good, and innocent about what is evil." "innocent about what is evil." The Greek word here is akeraios, which can also mean "unmixed, pure, or *simple*.
 

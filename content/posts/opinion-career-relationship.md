@@ -19,12 +19,11 @@ How many of our anxieties are we running ahead of God's supply? I have nothing t
 
 I still believe that if I have a permanent residency in the UK, I will be a free man some time. It looks so true, but it's also a lie as I'm already free in faith and I need to take it more deeply. In the worst situation, I need to go back to China and get stuck there, or what if there are some extreme political movements or a war? But I need to accept all these possibilities faithfully to feel the peace of God. As it may also be a great opportunity to share gospels.
 
-Last year one of my beloved ladies had a stroke, she lost lots of her abilities, especially her language skills. After the stroke, she initially could only speak very simple English, and some memories are gone as well. She used to speak Spanish, a tribal language, and spent quite a long time learning Mandarin diligently. Some of her memories are gone as well. 
+Last year one of my beloved ladies had a stroke, she lost lots of her abilities, especially her language skills. After the stroke, she initially could only speak very simple English, and some memories are gone as well. She used to speak Spanish, a tribal language, and spent quite a long time learning Mandarin diligently.
 
 What is left with her, is a stronger faith, and those precious memories when she’s translating the Bible and doing the missions. It gave me such a good lesson, what will I leave if there’s such a day for me? Skills and careers are important, but only when they do serve others, in the way Gods want me. There are lots of people who want to learn how to code and earn more money, but only a few want to spread the gospel that sincerely.
 
-God is with us.
-
+I pray God can protect me.
 
 
 
