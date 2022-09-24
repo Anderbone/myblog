@@ -3,6 +3,7 @@ date = "2021-08-21"
 title = "All religions are for good? and action with love needs faith"
 tags = ["Christian"]
 toc = true
+draft = true
 +++
 
 From a casual chat with a friend, here are my responses to some common topics about faith.

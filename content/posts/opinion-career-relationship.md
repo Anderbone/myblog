@@ -3,6 +3,7 @@ date = "2021-09-30"
 title = "Career serves relationship"
 tags = ["Christian"]
 toc = false
+draft = true
 +++
 
 > In the Bible I learn that God values us not for our strength or our brains but simply because He has made us. Who knows, in His eyes, a half-wit may be worth more than a watchmaker. Or - a lieutenant.  The Hiding place
