@@ -1,7 +1,7 @@
 +++
 date = "2023-01-02"
 title = "About Vegan, pain, guilt and life"
-tags = ["Christian"]
+tags = ["Wittgenstein"]
 toc = true
 +++
 
