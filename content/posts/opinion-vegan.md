@@ -2,9 +2,10 @@
 date = "2023-01-02"
 title = "About Vegan, pain, guilt and life"
 tags = ["Christian"]
+toc = true
 +++
 
-The whole modern conception of the world is founded on the illusion that the so-called laws of nature are the explanations of natural phenomena. Thus people today stop at the laws of nature, treating them as something inviolable, just as God and Fate were treated in past ages. And in fact both were right and both wrong; though the view of the ancients is clearer insofar as they have an acknowledged terminus, while the modern system tries to make it look as if everything were explained.
+> The whole modern conception of the world is founded on the illusion that the so-called laws of nature are the explanations of natural phenomena. Thus people today stop at the laws of nature, treating them as something inviolable, just as God and Fate were treated in past ages. And in fact both were right and both wrong; though the view of the ancients is clearer insofar as they have an acknowledged terminus, while the modern system tries to make it look as if everything were explained.
 — Wittgenstein, Tractatus, 6.371-2
 
 I support scientific research, but for many realistic and complex problems, if a very clear answer is based on so-called scientific logic, the certainty of that answer may not be as solid as people usually think. It is not that I know more about scientific experiments or that I can present another, more reliable proof; I think absolute confidence in science rests on a misunderstanding of the relationship between language and the world. Nor do I have any interest in conspiracy theories; I simply seek to see a different face of a problem, as if believing in the infinite possibilities within God.

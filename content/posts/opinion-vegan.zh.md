@@ -2,9 +2,10 @@
 date = "2023-01-02"
 title = "关于素食，疼痛，负罪感与生活"
 tags = ["基督信仰"]
+toc = true
 +++
 
-The whole modern conception of the world is founded on the illusion that the so-called laws of nature are the explanations of natural phenomena. Thus people today stop at the laws of nature, treating them as something inviolable, just as God and Fate were treated in past ages. And in fact both were right and both wrong; though the view of the ancients is clearer insofar as they have an acknowledged terminus, while the modern system tries to make it look as if everything were explained.
+> The whole modern conception of the world is founded on the illusion that the so-called laws of nature are the explanations of natural phenomena. Thus people today stop at the laws of nature, treating them as something inviolable, just as God and Fate were treated in past ages. And in fact both were right and both wrong; though the view of the ancients is clearer insofar as they have an acknowledged terminus, while the modern system tries to make it look as if everything were explained.
 — Wittgenstein, Tractatus, 6.371-2
 
 
