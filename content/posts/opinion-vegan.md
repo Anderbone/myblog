@@ -8,6 +8,8 @@ toc = true
 > The whole modern conception of the world is founded on the illusion that the so-called laws of nature are the explanations of natural phenomena. Thus people today stop at the laws of nature, treating them as something inviolable, just as God and Fate were treated in past ages. And in fact both were right and both wrong; though the view of the ancients is clearer insofar as they have an acknowledged terminus, while the modern system tries to make it look as if everything were explained.
 — Wittgenstein, Tractatus, 6.371-2
 
+This article is not intended to distinguish between vegan and vegetarian; I have great admiration for the vegan option and have no intention of convincing anyone to go back to eating meat, I would like to eat less meat myself and I would like to eat vegan food if I were with vegan people; but I would like to respond to some of the common assertions about vegetarianism.
+
 I support scientific research, but for many realistic and complex problems, if a very clear answer is based on so-called scientific logic, the certainty of that answer may not be as solid as people usually think. It is not that I know more about scientific experiments or that I can present another, more reliable proof; I think absolute confidence in science rests on a misunderstanding of the relationship between language and the world. Nor do I have any interest in conspiracy theories; I simply seek to see a different face of a problem, as if believing in the infinite possibilities within God.
 
 Veganism and health: I am assuming here that veganism could theoretically be as healthy or even healthier than an omnivorous diet. Although both sides can find evidence in their favour.
@@ -23,21 +25,28 @@ The last time you went to your Polish aunt's house you were a little girl, she h
 
 Countless festivals, countless cities, are represented by food, and much of it contains meat. Food is closely linked to the whole of human tradition, history and civilisation, and for the vast majority of thousands of years, the vast majority of people have had meat in tradition. People generally say that there is no need to push vegetarianism towards the Eskimos, but it is just as precious and important to us living in modern civilisation in terms of carrying historical customs and human feelings.
 
+This choice may seem very personal, but in reality, depending on the country you are in and the social environment, you may inevitably need to isolate yourself from others at meals at times; from this point on you can hardly say that it will not affect the feelings of others. Vegetarians will be convinced that it is the right thing to do and that it is a price that has to be paid. I certainly respect that choice, but would also like to point out that the cost and impact of this may be greater than some people think. Although I almost never drink, for someone and for a moment, I might as well drink together.
 ### Eating meat is unnecessary for humans
 
-I see other animals eating each other, and if I humbly acknowledge that I am part of nature, I see no reason why I cannot do so. There are many omnivores in the world who could do without meat but are also eating it, and the fact that only humans have the possibility of self-selection and setting limits is a testament to just how different humans are from other animals. Vegetarians can argue that meat is unnecessary for humans, but life is not about necessity in the first place. Smoking and countless other drinks, including alcohol, are also unnecessary, damaging to health and polluting the environment; I don't smoke, but I absolutely defend the right to do so. They can be the source of inspiration for the greatest works of mankind, the most beautiful memories of an old man who keeps going back to the age of 19.
+I see other animals eating each other, and if I humbly acknowledge that I am part of nature, I see no reason why I cannot do so. There are many omnivores in the world who potentially could do without meat but are also eating it, and the fact that only humans have the possibility of self-selection and setting limits is a testament to just how different humans are from other animals. Vegetarians can argue that meat is unnecessary for humans, but life is not about necessity in the first place. Smoking and countless other drinks, including alcohol, are also unnecessary, damaging to health and polluting the environment; I don't smoke, but I absolutely defend the right to do so. They can be the source of inspiration for the greatest works of mankind, the most beautiful memories of an old man who keeps going back to the age of 19.
 
 
 ### Pain
 
-The issue of animal pain is a reason for many people to be vegetarian and it is one of the most difficult issues to respond to. Pain is a word that describes the human experience and when describing pain humans can only use human language. Humans cannot directly experience what it feels like to be an animal or a plant, and even if they wish to put themselves in the position of an animal or plant, humans can still only think and imagine through human language.
+> The Austrian philosopher Ludwig Wittgenstein famously said, “If a lion could speak, we could not understand him.”
+> Shared human behaviour is the system of reference by means of which we interpret an unknown language. What humans perceive the World as being and what the World actually is, are two extremely different things. The difference in how humans perceive the World and how Lions perceive the World is equally as extreme. (From the Internet)
 
-The Austrian philosopher Ludwig Wittgenstein famously said, “If a lion could speak, we could not understand him.”
-Shared human behaviour is the system of reference by means of which we interpret an unknown language. What humans perceive the World as being and what the World actually is, are two extremely different things. The difference in how humans perceive the World and how Lions perceive the World is equally as extreme. (From the Internet)
+The issue of animal pain is a reason for many people to be vegetarian, and it is one of the most difficult to respond to. Animals have pain just like people, plants do not, so it is not right to eat animals. Radicalism is not about the use of words or radical behaviour, it is about pursuing a very clear and logical understanding of the world and putting that understanding beyond question.
 
-There is no such thing as pure pain in-naked in the scientific sense; the meaning of a word is always woven into the human linguistic establishment and comes from its actual discourse. You can rigorously define pain in a physiological sense for the sake of scientific research and attach the concept to nerves or spines or any other physical organ to prove that animals suffer and plants do not, but that pain is no longer pain in the discourse of human experience, and the experimental method and purpose misses each other because of a misunderstanding of the source of the linguistic meaning.
+Pain is a word that describes the human experience, and when describing pain humans can only use human language. Humans cannot directly experience what it feels like to be an animal or a plant, and even if they wish to put themselves in the position of an animal or a plant, they can only think and imagine through human language.
 
-Even putting aside this misunderstanding of pain, that line of distinction between animal pain and plant non-pain is effectively non-existent. Whatever we already know, we need to remember that there must be more that we do not know. Just as science can never prove that there is nothing after death, the most we can say is that we have not yet discovered that pain-related mechanisms such as nerve conduction exist in plants; the most we can say is that we have not yet discovered whether plants can actually 'feel' anything.
+There is no pure pain in the scientific sense; the meaning of a word is always woven into the human linguistic establishment and comes from its actual discourse. You can try to rigorously define and classify pain in a physiological sense for the sake of scientific research and attach the concept to neurons or spines or any other physical structure to prove that animals suffer but plants do not; but that pain is no longer pain in the discourse of human experience, and the experimental method and purpose are missed each other by a misunderstanding of the source of linguistic meaning. Many animals, such as fish, shrimps and crabs, have a very different neural structure to mammals, and scientists have often demonstrated the existence of pain by applying stimuli to observe their responses. But many plants also respond to external stimuli and they are secreting chemicals similar to those found in animals when they are injured, and there are studies that point to many sorts of similarities between plant cells and animal neurons. Whatever we already know, we need to remember that there must be more that we don't know. Just as science can never prove that there is nothing after death, the most we can say is that we have yet to discover a pain-related mechanism such as nerve conduction in plants.
+
+Pain is a usage in language, not a sensation or a scientific logic. We cannot feel pain in others, but this is not a problem at all because we humans have a common linguistic usage of pain among ourselves.
+
+Suppose there is a plant that responds to stimuli, and suppose it has two organs that look like eyes and change when stimulated, we might immediately imagine that it is in pain. Pain has never had anything to do with scientific concepts in human language. Pain to us is not a nerve saying, nor a reaction saying, but a resemblance to the outward appearance of pain. Seeing a small dog or cat hurt is probably more difficult than seeing a fly writhing on the ground, because dogs and cats are more similar to us in their outward expressions of pain. We certainly care about animals in pain, and the way a kitten or puppy is injured can make us cry. Visiting a chicken farm can also be very upsetting for us. But when looking at a serving of fried chicken, the pain is not so visceral. We feel the pain of animals not because of logic or chemicals or understanding neural mechanisms, but because dogs and cats are our companion animals and have an emotional connection to humans, because of the sight of a chicken farm and because the outward appearance of pain in certain animals is closer to that of humans.
+
+I can't accept eating dog meat and can kill a mosquito, and based on my understanding of pain, these two choices are not contradictory.
 
 ### Humans are equal to other species
 
@@ -54,8 +63,6 @@ What is the solution to the unavoidable animal experimentation in medical experi
 Humans derive pleasure from animal companions like dogs and cats, and dogs and cats in stray centres often seem to expect to be adopted.
 
 Some animals have not been domesticated by humans, others have been domesticated by humans, and this long process of evolution over thousands of years is not determined solely by human will.
-
-
 
 > The Omnivore's Dilemma:
 > Most domesticated animals can’t survive in the wild; in fact, without us eating them they wouldn’t exist at all! Or as one nineteenth-century political philosopher put it, “The pig has a stronger interest than anyone in the demand for bacon. If all the world were Jewish, there would be no pigs at all.” Which as it turns out would be just fine by the animal rightist: If chickens no longer exist, they can no longer be wronged.
@@ -81,9 +88,3 @@ The planting, harvesting and storage of crops involve the death of thousands of 
 Even when I enjoy my food without feeling guilty, when I have a full meal, I am occasionally reminded that there are many people in the world who are starving. No matter what you decide to do with the many issues in your life, guilt is inevitable. The scriptures say that there is no one righteous, not a single one. But believing in the blood of Jesus Christ cleanses us from all sin and redeems us from guilt to eat, love and live as God intends, burning with life.
 
 Sky burial is the most common funeral practice in Tibet, where the body of the deceased is placed on a pyre and vultures come in flocks to eat it. Although most of us will not be buried in the sky when we die, all of creation is in God's plan.
-
-
-
-
-
-
