@@ -26,7 +26,7 @@ The last time you went to your Polish aunt's house you were a little girl, she h
 Countless festivals, countless cities, are represented by food, and much of it contains meat. Food is closely linked to the whole of human tradition, history and civilisation, and for the vast majority of thousands of years, the vast majority of people have had meat in tradition. People generally say that there is no need to push vegetarianism towards the Eskimos, but it is just as precious and important to us living in modern civilisation in terms of carrying historical customs and human feelings.
 
 This choice may seem very personal, but in reality, depending on the country you are in and the social environment, you may inevitably need to isolate yourself from others at meals at times; from this point on you can hardly say that it will not affect the feelings of others. Vegetarians will be convinced that it is the right thing to do and that it is a price that has to be paid. I certainly respect that choice, but would also like to point out that the cost and impact of this may be greater than some people think. Although I almost never drink, for someone and for a moment, I might as well drink together.
-### Eating meat is unnecessary for humans
+### Eating meat is unnecessary? Life is not about necessity
 
 I see other animals eating each other, and if I humbly acknowledge that I am part of nature, I see no reason why I cannot do so. There are many omnivores in the world who potentially could do without meat but are also eating it, and the fact that only humans have the possibility of self-selection and setting limits is a testament to just how different humans are from other animals. Vegetarians can argue that meat is unnecessary for humans, but life is not about necessity in the first place. Smoking and countless other drinks, including alcohol, are also unnecessary, damaging to health and polluting the environment; I don't smoke, but I absolutely defend the right to do so. They can be the source of inspiration for the greatest works of mankind, the most beautiful memories of an old man who keeps going back to the age of 19.
 
@@ -48,7 +48,7 @@ Suppose there is a plant that responds to stimuli, and suppose it has two organs
 
 I can't accept eating dog meat and can kill a mosquito, and based on my understanding of pain, these two choices are not contradictory.
 
-### Humans are equal to other species
+### Humans are equal to other species? Even if we wish
 
 Objectively humans are the inevitable masters of the planet. Subjectively humans can only think in human terms, even if they wish to be in the shoes of an animal, a plant or a stone. No other animal or plant 'language', however romantic the expectations and imagination, comes close to the complexity of human language.
 
