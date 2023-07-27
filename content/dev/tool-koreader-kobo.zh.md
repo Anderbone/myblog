@@ -1,7 +1,7 @@
 +++ 
 date = "2022-05-02"
 title = "Kobo升级版本后如何更新Koreader"
-tags = ["分享推荐"]
+tags = ["软件"]
 +++
 Koreader比Kobo本身的阅读器好用太多，翻页速度，各种快捷键，pdf裁边等等。我入了Kobo sage后没多久就装了Koreader。
 

@@ -1,7 +1,7 @@
 +++ 
 date = "2022-05-08"
 title = "快速入门Liber chat"
-tags = ["分享推荐"]
+tags = ["软件"]
 toc = true
 +++
 
