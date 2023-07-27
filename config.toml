@@ -124,17 +124,17 @@ theme = "github-light"
     weight = 6
     url = "https://www.instagram.com/yan.jiyu/"
 
-[[params.social]]
-   name = "LinkedIn"
-   icon = "fa fa-linkedin"
-   weight = 4
-   url = "https://www.linkedin.com/in/jiyu-yan/"
+# [[params.social]]
+#    name = "LinkedIn"
+#    icon = "fa fa-linkedin"
+#    weight = 4
+#    url = "https://www.linkedin.com/in/jiyu-yan/"
 
 [[params.social]]
     name = "Email"
     icon = "fa fa-envelope"
     weight = 5
-    url = "mailto:yanchiyu@outlook.com"
+    url = "mailto:yn.jiyu@gmail.com"
 
 #[[params.social]]
 #    name = "RSS"
