@@ -21,27 +21,32 @@ class Solution:
         return False
 ```
 - c java
-```python
+```java
 /**
  * Definition for singly-linked list.
- * struct ListNode {
+ * class ListNode {
  *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
  */
-class Solution {
-public:
-	bool hasCycle(ListNode *head) {
-        if(head==NULL) return false;
-        if(head->next == head) return true;
-		while (head!=NULL&&head->val!=INT_MAX)
-		{
-			head->val = INT_MAX;
-			head = head->next;
-		}
-        if(head) return true;
-        else return false;
-	}
-};
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode slow = head, quick = head;
+        while (quick != null && quick.next != null){
+            slow = slow.next;
+            quick = quick.next.next;
+            if (slow == quick){
+                return true;
+            }
+        }
+        return false;
+    }
+}
 ```
+
+
+
