@@ -184,7 +184,7 @@ theme = "github-light"
         [languages.zh.params]
             # author = "不可思議"
             info = "秋收已过，夏季已完，我们还未得救！-- 耶利米书 8:20"
-            keywords = "blog,developer,personal"
+#            keywords = "blog,developer,personal"
 #            footercontent = "Coloque algum texto aqui."
 
         [languages.zh.menu]
