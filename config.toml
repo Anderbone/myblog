@@ -118,17 +118,17 @@ theme = "github-light"
 #     weight = 2
 #     url = "https://twitter.com/Anderesurrect/"
 
-[[params.social]]
-    name = "Instagram"
-    icon = "fa fa-instagram"
-    weight = 6
-    url = "https://www.instagram.com/yan.jiyu/"
+#[[params.social]]
+#    name = "Instagram"
+#    icon = "fa fa-instagram"
+#    weight = 6
+#    url = "https://www.instagram.com/yan.jiyu/"
 
-# [[params.social]]
-#    name = "LinkedIn"
-#    icon = "fa fa-linkedin"
-#    weight = 4
-#    url = "https://www.linkedin.com/in/jiyu-yan/"
+ [[params.social]]
+     name = "LinkedIn"
+     icon = "fa fa-linkedin"
+     weight = 4
+     url = "https://www.linkedin.com/in/jiyu-yan/"
 
 [[params.social]]
     name = "Email"
