@@ -5,7 +5,7 @@ tags = ["软件"]
 +++
 Koreader比Kobo本身的阅读器好用太多，翻页速度，各种快捷键，pdf裁边等等。我入了Kobo sage后没多久就装了Koreader。
 
-安装参考链接：https://www.mobileread.com/forums/showthread.php?t=314220
+安装参考链接： [https://www.mobileread.com/forums/showthread.php?t=314220](https://www.mobileread.com/forums/showthread.php?t=314220)
 
 最近想试试Kobo自带的Pocket，Koreader上的read it later插件wallabag还要自己找服务器配置实在麻烦，就退出了Koreader连上Wifi更新Pocket的list，没想到Kobo自动更新了。自动更新后，右下角NickelMenu点开没有了KOReader，显示Error。
 
