@@ -58,3 +58,58 @@ Examples:
 
 ![](https://i.imgur.com/01YGHIb.png)
 Note: render() in Dialog could better be named as renderDialog() or renderWindow(), as it has nothing to do with the render() in Button class.
+
+[A very helpful youtube video](https://www.youtube.com/watch?v=EcFVTgRHJLM)
+
+![](https://i.imgur.com/mu5iAGD.png)
+
+## [Singleton](https://refactoring.guru/design-patterns/singleton/java/example#lang-features)
+
+Singleton is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.
+
+The most common reason for this is to control access to some shared resource—for example, a database or a file.
+
+![](https://i.imgur.com/OtZrpy4.png)
+
+```java
+
+package refactoring_guru.singleton.example.thread_safe;
+
+public final class Singleton {
+    // The field must be declared volatile so that double check lock would work
+    // correctly.
+    private static volatile Singleton instance;
+
+    public String value;
+
+    private Singleton(String value) {
+        this.value = value;
+    }
+
+    public static Singleton getInstance(String value) {
+        // The approach taken here is called double-checked locking (DCL). It
+        // exists to prevent race condition between multiple threads that may
+        // attempt to get singleton instance at the same time, creating separate
+        // instances as a result.
+        //
+        // It may seem that having the `result` variable here is completely
+        // pointless. There is, however, a very important caveat when
+        // implementing double-checked locking in Java, which is solved by
+        // introducing this local variable.
+        //
+        // You can read more info DCL issues in Java here:
+        // https://refactoring.guru/java-dcl-issue
+        Singleton result = instance;
+        if (result != null) {
+            return result;
+        }
+        synchronized(Singleton.class) {
+            if (instance == null) {
+                instance = new Singleton(value);
+            }
+            return instance;
+        }
+    }
+}
+
+```
