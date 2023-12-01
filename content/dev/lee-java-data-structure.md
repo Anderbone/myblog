@@ -216,6 +216,7 @@ In Java, Stack is a class that falls under the Collection framework that extends
 
 
 ### Deque: ArrayDeque, LinkedList
+could not traverse it's values or get a value by it's position
 
 - `peek()` the head of the list. read it
     - peekFirst
@@ -486,7 +487,7 @@ Refer to [Queue](#Deque-arrayDeque-LinkedList)
     - Arrays.asList(factors) returns a List<int[]> where factors is an int array
     - PriorityQueue<int[]> queue = new PriorityQueue<>((a, b)->b[1] - a[1]);
         queue.addAll(Arrays.asList(boxTypes));
-        - https://dynalist.io/d/MpU_i9aOQTQsEWc_dDKqqBz2#z=UOdAYWzrejTrM-B8f5nZhUoq
+        - https://yanjiyu.com/leetcode/1710/
     - error
       int[] nums; pq<Integer>; pq.addAll(Arrays.asList(nums));  
         - Arrays.asList is expecting a variable number of Object. int is not an Object, but int[] is, thus Arrays.asList(A) will create a List<int[]> with just one element.
