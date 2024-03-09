@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sorting on Jiyu</title>
+    <link>http://localhost:1313/tags/sorting/</link>
+    <description>Recent content in Sorting on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Jul 2022 09:06:10 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>315. Count of Smaller Numbers After Self</title>
+      <link>http://localhost:1313/leetcode/315/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/315/</guid>
+      <description>https://leetcode.com/problems/count-of-smaller-numbers-after-self/&#xA;You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].&#xA;Example 1: Input: nums = [5,2,6,1] Output: [2,1,1,0] Explanation: To the right of 5 there are 2 smaller elements (2 and 1). To the right of 2 there is only 1 smaller element (1). To the right of 6 there is 1 smaller element (1).</description>
+    </item>
+    <item>
+      <title>215. Kth Largest Element in an Array</title>
+      <link>http://localhost:1313/leetcode/215/</link>
+      <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/215/</guid>
+      <description>Kth Largest Element in an Array - LeetCode&#xA;Given an integer array nums and an integer k, return the kth largest element in the array. Note that it is the kth largest element in the sorted order, not the kth distinct element.&#xA;Input: [3,2,1,5,6,4] and k = 2 Output: 5&#xA;Constraints:&#xA;1 &amp;lt;= k &amp;lt;= nums.length &amp;lt;= 104 -104 &amp;lt;= nums[i] &amp;lt;= 104 code class Solution { public int findKthLargest(int[] nums, int k) { PriorityQueue&amp;lt;Integer&amp;gt; hp = new PriorityQueue&amp;lt;&amp;gt;(); for (int v: nums){ if (hp.</description>
+    </item>
+    <item>
+      <title>452. Minimum Number of Arrows to Burst Balloons</title>
+      <link>http://localhost:1313/leetcode/452/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/452/</guid>
+      <description>Minimum Number of Arrows to Burst Balloons - LeetCode&#xA;There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons. Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis.</description>
+    </item>
+    <item>
+      <title>347. Top K Frequent Elements</title>
+      <link>http://localhost:1313/leetcode/347-top-k-frequent-elements/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/347-top-k-frequent-elements/</guid>
+      <description>Top K Frequent Elements - LeetCode&#xA;Given a non-empty array of integers, return the k most frequent elements. Example 1: Input: nums = [1,1,1,2,2,3], k = 2 Output: [1,2]&#xA;code #quickSelection move smaller to left class Solution: def topKFrequent(self, nums: List[int], k: int) -&amp;gt; List[int]: counter = Counter(nums) # num, freq uniq = [k for k in counter.keys()] def partition(left, right): index = randint(left, right) freq_p = counter[uniq[index]] uniq[index], uniq[right] = uniq[right], uniq[index] # move pivot to the end for i in range(left, right): if counter[uniq[i]] &amp;lt; freq_p: uniq[i], uniq[left] = uniq[left], uniq[i] left += 1 uniq[left], uniq[right] = uniq[right], uniq[left] return left left, right = 0, len(uniq) - 1 while left &amp;lt;= right: p = partition(left, right) if p == len(uniq) - k or left == right: return uniq[len(uniq) - k:] elif p &amp;gt; len(uniq) - k: # go left right = p - 1 elif p &amp;lt; len(uniq) - k: # go right left = p + 1 code move bigger to left.</description>
+    </item>
+    <item>
+      <title>973. K Closest Points to Origin </title>
+      <link>http://localhost:1313/leetcode/973/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/973/</guid>
+      <description>K Closest Points to Origin - LeetCode&#xA;Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0). The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2). You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).</description>
+    </item>
+    <item>
+      <title>1200. Minimum Absolute Difference</title>
+      <link>http://localhost:1313/leetcode/1200/</link>
+      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1200/</guid>
+      <description>Minimum Absolute Difference - LeetCode Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements. Return a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows&#xA;a, b are from arr a &amp;lt; b b - a equals to the minimum absolute difference of any two elements in arr Example 1: Input: arr = [4,2,1,3] Output: [[1,2],[2,3],[3,4]] Explanation: The minimum absolute difference is 1.</description>
+    </item>
+    <item>
+      <title>451. Sort Characters By Frequency</title>
+      <link>http://localhost:1313/leetcode/451/</link>
+      <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/451/</guid>
+      <description>Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string. Return the sorted string. If there are multiple answers, return any of them.&#xA;Example 1: Input: s = &amp;ldquo;tree&amp;rdquo; Output: &amp;ldquo;eert&amp;rdquo; Explanation: &amp;rsquo;e&amp;rsquo; appears twice while &amp;lsquo;r&amp;rsquo; and &amp;rsquo;t&amp;rsquo; both appear once. So &amp;rsquo;e&amp;rsquo; must appear before both &amp;lsquo;r&amp;rsquo; and &amp;rsquo;t&amp;rsquo;.</description>
+    </item>
+    <item>
+      <title>912. sort an array</title>
+      <link>http://localhost:1313/leetcode/912/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/912/</guid>
+      <description>Given an array of integers nums, sort the array in ascending order. quick sort py&#xA;code class Solution: def sortArray(self, nums: List[int]) -&amp;gt; List[int]: self.quickSort(nums, 0, len(nums)-1) return nums def quickSort(self, arr, left, right): mid = (left + right) // 2 arr[mid], arr[right] = arr[right], arr[mid] # pick the mid as pivot every time if left &amp;lt; right: pivot = self.partition(arr, left, right) self.quickSort(arr, left, pivot-1) self.quickSort(arr, pivot+1, right) def partition(self, arr, left, right): i = left pivot = arr[right] for n in range(left, right): if arr[n] &amp;lt; pivot: arr[i], arr[n] = arr[n], arr[i] i += 1 arr[right], arr[i] = arr[i], arr[right] return i code class Solution(object): def sortArray(self, nums): self.</description>
+    </item>
+    <item>
+      <title>56. Merge internals</title>
+      <link>http://localhost:1313/leetcode/56-merge-intervals/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/56-merge-intervals/</guid>
+      <description>Merge Intervals - LeetCode&#xA;Given a collection of intervals, merge all overlapping intervals. Example 1: Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].&#xA;code class Solution { public int[][] merge(int[][] intervals) { Arrays.sort(intervals, (a,b)-&amp;gt; a[0]-b[0]); LinkedList&amp;lt;int []&amp;gt; merged = new LinkedList(); merged.offer(intervals[0]); for (int i = 1; i &amp;lt; intervals.length; ++i){ if (intervals[i][0] &amp;gt; merged.peekLast()[1]){ merged.offer(intervals[i]); }else{ merged.peekLast()[1] = Math.max(merged.peekLast()[1], intervals[i][1]); } } return merged.</description>
+    </item>
+    <item>
+      <title>75. Sort colors</title>
+      <link>http://localhost:1313/leetcode/75-sort-colors/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/75-sort-colors/</guid>
+      <description>Given an array nums with n objects colored red, white, or blue, sort them **in-place **so that objects of the same color are adjacent, with the colors in the order red, white, and blue. We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.&#xA;Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]&#xA;code, when right-=1 later, need to use i &amp;lt;= right in the while condition class Solution: def sortColors(self, nums: List[int]) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify nums in-place instead.</description>
+    </item>
+    <item>
+      <title>278. First bad version</title>
+      <link>http://localhost:1313/leetcode/278-first-bad-version/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/278-first-bad-version/</guid>
+      <description>Given n = 5, find the first bad version. (version = 4 is the first bad version.)&#xA;call isBadVersion(3) -&amp;gt; false&#xA;call isBadVersion(5) -&amp;gt; true&#xA;call isBadVersion(4) -&amp;gt; true&#xA;Then 4 is the first bad version.&#xA;code class Solution: def firstBadVersion(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; begin, end = 1, n while begin &amp;lt; end: mid = (begin + end) // 2 if isBadVersion(mid): end = mid else: begin = mid + 1 return end c2 class Solution: def firstBadVersion(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; lo, hi = 1, n while lo &amp;lt;= hi: mid = (lo + hi) // 2 if isBadVersion(mid): hi = mid-1 else: lo = mid+1 # why return lo here, since lo&amp;gt;hi now, lo&amp;#39;s left is always right, hi&amp;#39;s right is alwasy wrong return lo </description>
+    </item>
+  </channel>
+</rss>

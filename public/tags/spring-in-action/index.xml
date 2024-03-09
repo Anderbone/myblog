@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring-in-Action on Jiyu</title>
+    <link>http://localhost:1313/tags/spring-in-action/</link>
+    <description>Recent content in Spring-in-Action on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 03 Aug 2022 12:51:12 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/spring-in-action/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring In Action 07 - RESTful API</title>
+      <link>http://localhost:1313/dev/spring07-restful/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring07-restful/</guid>
+      <description>Based on Spring in action 6th version github repo.&#xA;RESTful controllers return a 404 status Here we can return Optional&amp;lt;Taco&amp;gt; directly, but it will return null if id doesn&amp;rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:&#xA;@GetMapping(&amp;#34;/{id}&amp;#34;) public ResponseEntity&amp;lt;Taco&amp;gt; tacoById(@PathVariable(&amp;#34;id&amp;#34;) Long id) { return tacoRepo.findById(id).map(taco -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(taco, HttpStatus.OK)) .orElseGet(() -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&amp;rsquo;s in the rest client test but not in the codebase.</description>
+    </item>
+    <item>
+      <title>Spring In Action 02 - Developing web app</title>
+      <link>http://localhost:1313/dev/spring02-web/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring02-web/</guid>
+      <description>This chapter focues on Spring web framework without database.&#xA;2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful).</description>
+    </item>
+    <item>
+      <title>Spring In Action 03 - Data</title>
+      <link>http://localhost:1313/dev/spring03-data/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring03-data/</guid>
+      <description>JDBC at first and JPA later.&#xA;3.1 Reading and writing data with JDBC Spring JDBC support is rooted in the JdbcTemplate class. JdbcTemplate provides a means by which developers can perform SQL operations against a relational database without all the ceremony and boilerplate typically required when working with JDBC.&#xA;3.2 Persisting data with Spring Data JPA Summary Spring’s JdbcTemplate greatly simplifies working with JDBC. PreparedStatementCreator and KeyHolder can be used together when you need to know the value of a database-generated ID.</description>
+    </item>
+    <item>
+      <title>Spring In Action 01 - Intro</title>
+      <link>http://localhost:1313/dev/spring01-intro/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring01-intro/</guid>
+      <description>Follow the book: Spring in Action fifth version. Code repo: github&#xA;1.1 What is Spring? At its core, Spring offers a container, often referred to as the Spring application context, that creates and manages application components. These components, or beans, are wired together inside the Spring application context to make a complete application, much like bricks, mortar, timber, nails, plumbing, and wiring are bound together to make a house.&#xA;The act of wiring beans together is based on a pattern known as dependency injection (DI).</description>
+    </item>
+  </channel>
+</rss>

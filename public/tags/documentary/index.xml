@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentary on Jiyu</title>
+    <link>http://localhost:1313/tags/documentary/</link>
+    <description>Recent content in Documentary on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Sep 2022 22:57:54 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/documentary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oral history of two Christians in a Chinese labour camp in the 1960s</title>
+      <link>http://localhost:1313/posts/christian-1960-camps/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/christian-1960-camps/</guid>
+      <description>The Great Chinese famine from 1959 to 1961 in China killed 15 to 55 million people.&#xA;In those years, many intellectuals were sent to a re-education labour camp in Jiabiangou, Gansu province. People ate everything they could and couldn&amp;rsquo;t eat, some couldn&amp;rsquo;t even go outside to defecate, and could only pull it on their frozen bed. Tree bark was eaten up and some people ate human corpses. Some people were deliberately buried very shallow, so they were easily dug out to be eaten at night.</description>
+    </item>
+    <item>
+      <title>Documentaries about China</title>
+      <link>http://localhost:1313/posts/tip-documentary/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/tip-documentary/</guid>
+      <description>Recommended, with English subtitle 棒！少年 Tough out&#xA;豆瓣 IMDB Youtube 废城 Ghost Town&#xA;IMDB 豆瓣 Youtube 矿民、马夫、尘肺病 Miners, Groom, Pneumoconiosis 8.7&#xA;Published in 2019, 10 years with illegal miners in China&#xA;豆瓣 IMDB Youtube 算命 Fortune Teller 9.0&#xA;Ture village life through a fortune teller&#xA;豆瓣 IMDB Youtube 高三 Senior year 8.4&#xA;The most important exam in China that can determine a lifetime&#xA;豆瓣 IMDB Youtube 书记 The Transition Period 8.</description>
+    </item>
+  </channel>
+</rss>

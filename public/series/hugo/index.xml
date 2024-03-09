@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Jiyu</title>
+    <link>http://localhost:1313/series/hugo/</link>
+    <description>Recent content in Hugo on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Feb 2022 22:29:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: Copy-code button, Math Katex, Google analytics</title>
+      <link>http://localhost:1313/dev/hugo-copy-code/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-copy-code/</guid>
+      <description>Recently I did several changes on hugo.&#xA;Code highlight There are many ways to make the syntax highlight better, for this hugo-coder theme, all we need to do is delete those pygments related config in config.toml. See the hugo doc to find more options.&#xA;Copy code button Reference I just changed the css to make the button within the code.&#xA;.copy-code-button { color: #c4c5c6; background-color: #444444; /*border: 2px solid;*/ border-width: 0 0 0 0; /*border-left-color: rgba(32, 226, 226, 0.</description>
+    </item>
+  </channel>
+</rss>

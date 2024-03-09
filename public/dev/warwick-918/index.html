@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="For Warwick University module 918, natural language processing.
+Question 1: Regular expressions, linguistic preprocessing, minimum edit distance algorithm. 1 regular expression remember use \.
+false positive type1: have output, shouldn&rsquo;t. precision = tp/(tp&#43;fp)
+false negatives(type 2): haven&rsquo;t output, but should minimise, increase recall recall = tp/(tp&#43;fn)
+F1= 2 precision* recall/(precision&#43;recall)
+2 text preprocessing vocabulary size: the number of different types of tokens in the text.
+All need 3 steps tokenizing/segmentting words in running text normalizing word formats segmenting sentences in running text Issues of tokenisation What counts as a word is usually application specific.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Natural language processing module outline"/>
+<meta name="twitter:description" content="For Warwick University module 918, natural language processing.
+Question 1: Regular expressions, linguistic preprocessing, minimum edit distance algorithm. 1 regular expression remember use \.
+false positive type1: have output, shouldn&rsquo;t. precision = tp/(tp&#43;fp)
+false negatives(type 2): haven&rsquo;t output, but should minimise, increase recall recall = tp/(tp&#43;fn)
+F1= 2 precision* recall/(precision&#43;recall)
+2 text preprocessing vocabulary size: the number of different types of tokens in the text.
+All need 3 steps tokenizing/segmentting words in running text normalizing word formats segmenting sentences in running text Issues of tokenisation What counts as a word is usually application specific."/>
+
+    <meta property="og:title" content="Natural language processing module outline" />
+<meta property="og:description" content="For Warwick University module 918, natural language processing.
+Question 1: Regular expressions, linguistic preprocessing, minimum edit distance algorithm. 1 regular expression remember use \.
+false positive type1: have output, shouldn&rsquo;t. precision = tp/(tp&#43;fp)
+false negatives(type 2): haven&rsquo;t output, but should minimise, increase recall recall = tp/(tp&#43;fn)
+F1= 2 precision* recall/(precision&#43;recall)
+2 text preprocessing vocabulary size: the number of different types of tokens in the text.
+All need 3 steps tokenizing/segmentting words in running text normalizing word formats segmenting sentences in running text Issues of tokenisation What counts as a word is usually application specific." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/warwick-918/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2019-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-29T17:11:05+00:00" />
+
+
+
+
+    <title>
+Natural language processing module outline · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/warwick-918/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/warwick-918/">
+                    Natural language processing module outline
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2019-03-10T00:00:00Z'>
+                      March 10, 2019
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/warwick/">warwick</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p>For Warwick University module 918, natural language processing.</p>
+<h2 id="question-1-regular-expressions-linguistic-preprocessing-minimum-edit-distance-algorithm">
+  Question 1: Regular expressions, linguistic preprocessing, minimum edit distance algorithm.
+  <a class="heading-link" href="#question-1-regular-expressions-linguistic-preprocessing-minimum-edit-distance-algorithm">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="1-regular-expression">
+  1 regular expression
+  <a class="heading-link" href="#1-regular-expression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>remember use \.</p>
+<p>false positive type1: have output, shouldn&rsquo;t.
+<strong>precision</strong> = tp/(tp+fp)</p>
+<p>false negatives(type 2): haven&rsquo;t output, but should
+minimise, increase recall
+<strong>recall</strong> = tp/(tp+fn)</p>
+<p>F1= 2 precision* recall/(precision+recall)</p>
+<h3 id="2-text-preprocessing">
+  2 text preprocessing
+  <a class="heading-link" href="#2-text-preprocessing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>vocabulary size: the number of different types of tokens in the text.</p>
+<h4 id="all-need-3-steps">
+  All need 3 steps
+  <a class="heading-link" href="#all-need-3-steps">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>tokenizing/segmentting words in running text</li>
+<li>normalizing word formats</li>
+<li>segmenting sentences in running text</li>
+</ul>
+<h4 id="issues-of-tokenisation">
+  Issues of tokenisation
+  <a class="heading-link" href="#issues-of-tokenisation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>What counts as a word is usually application specific. keep special characters (hashtags, URLs, email addresses) as words, in others we don&rsquo;t.</li>
+<li>Commas and points in numbers can be confusing</li>
+<li>How to tokenise clitic contractions (i.e. I’m -&gt; I am)</li>
+<li>How to deal with multi-word expressions (e.g. New York, San Francisco)</li>
+</ul>
+<h4 id="basic-concept">
+  basic concept
+  <a class="heading-link" href="#basic-concept">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>tokenisation</th>
+<th>segmenting running text into words</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normalisation</td>
+<td>putting words/tokens in a standard format</td>
+</tr>
+<tr>
+<td>Lemmatisation</td>
+<td>reducing inflections or variants forms of words to their base form. Need to find dictionary headword form.</td>
+</tr>
+<tr>
+<td>Stemming</td>
+<td>finding the stem by stripping off suffixes, usually using regular expressions.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="maximum-matching-also-called-greedy-for-chinese">
+  Maximum Matching (also called Greedy) for Chinese:
+  <a class="heading-link" href="#maximum-matching-also-called-greedy-for-chinese">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<ol>
+<li>Start a pointer at the beginning of the string.</li>
+<li>Find the longest word in dictionary that matches the string starting at pointer.</li>
+<li>Move the pointer over the word in string.</li>
+<li>Go to 2</li>
+</ol>
+</blockquote>
+<h4 id="minimum-edit-distance">
+  minimum edit distance
+  <a class="heading-link" href="#minimum-edit-distance">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>minimum number of editing operations (operations like insertion, deletion, substitution) needed to transform one string into another.</li>
+<li>To find potential spelling correction</li>
+<li>to compute minimum cost alignment between two strings etc.</li>
+</ul>
+<h2 id="question-2-n-grams-language-models-smoothing">
+  Question 2: N-grams, Language models, smoothing.
+  <a class="heading-link" href="#question-2-n-grams-language-models-smoothing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="3-language-models">
+  3 language models
+  <a class="heading-link" href="#3-language-models">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="ngrams">
+  ngrams
+  <a class="heading-link" href="#ngrams">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>A language model where we approximate each component in the product from the N-1 previous words</li>
+<li>N-gram can denote the above language model or the sequence of N words.</li>
+<li>unigrams, bigrams, trigrams and so on. may more detailed and  sparse for longer n-grams.</li>
+</ul>
+<h4 id="markov">
+  Markov
+  <a class="heading-link" href="#markov">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>we can approximate the computation of such probability by only looking at the preceding item (or k preceding items) in the sequence, instead of looking at the whole sequence</li>
+<li>the longer the length, the more details, the more sparse</li>
+<li>P (wj |w1 &hellip;wj-1 ) =  P (wj |wj - 1 )</li>
+<li>P(you, found) = P(found | you) = count(you found) / count(you) = 2/3</li>
+</ul>
+<h4 id="extrinsic-and-intrinsic">
+  extrinsic and intrinsic
+  <a class="heading-link" href="#extrinsic-and-intrinsic">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Extrinsic</th>
+<th>test externally on another task, accuracy using LM1 and 2, ideal but take very long to run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intrinsic</td>
+<td>evaluate the models directly. Consists in computing perplexity.</td>
+</tr>
+</tbody>
+</table>
+<p>perplexity:</p>
+<ul>
+<li>inverse to probability, lower is better.</li>
+<li>how difficult is it to predict the next word?</li>
+<li>the one that gives higher probability to the actual next word.</li>
+<li>Only valid if tested in similarly looking data.</li>
+</ul>
+<h3 id="4-advanced-lm--smooth">
+  4 advanced LM : smooth
+  <a class="heading-link" href="#4-advanced-lm--smooth">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Smooth</th>
+<th>Smoothing is the process of transferring a small amount of probability mass from observed n-grams to n-grams with 0 frequency. By using smoothing we allow our n-gram language models to generalise to unseen n-grams.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laplace smoothing.</td>
+<td>In order to fix the zero problem when training models, Pretend we have seen each word one more  time than we actually did.    In domains where the number of zeros isn’t so huge, not for N grams</td>
+</tr>
+<tr>
+<td>Interpolation and backoff.</td>
+<td>Different words may need different context size captured</td>
+</tr>
+<tr>
+<td>Good Turing Smoothing.</td>
+<td>se the count of things we’ve seen once to estimate counts of unseen things</td>
+</tr>
+<tr>
+<td>Kneser-Ney Smoothing.</td>
+<td>How likely is w to appear as a novel continuation.P(continuation) is the word types before w, divided by the number of differnet words that precede any word. lamda, there&rsquo;s the word type after w(i-1).</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="kneser ney" src="https://i.loli.net/2019/05/08/5cd2a9e0cfb13.png"></p>
+<h2 id="question-3-textsequential-classification-sentiment-analysis-evaluation">
+  Question 3: Text/sequential classification, sentiment analysis, evaluation.
+  <a class="heading-link" href="#question-3-textsequential-classification-sentiment-analysis-evaluation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="7-text-classification-evaluation-and-error-analysis">
+  7 Text Classification, Evaluation and Error Analysis
+  <a class="heading-link" href="#7-text-classification-evaluation-and-error-analysis">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>overfit : Overly adjusting our classifier and features to a specific training set and thus a particular test set similar to training data, and it will not generalise to new, unseen test sets.</li>
+<li>corss-validation:</li>
+<li>semi-supervised different :  Semi-supervised classification also makes use of unlabelled data for training. A supervised classifier relies only on labelled data.</li>
+</ul>
+<h4 id="how-to-assess-which-features-are-good">
+  how to assess which features are good
+  <a class="heading-link" href="#how-to-assess-which-features-are-good">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ol>
+<li>Incremental testing:
+keep adding features, see if adding improves performance</li>
+<li>Leave-one-out testing:
+test all features, and combinations of all features except one.
+when leaving feature i out performs better than all features, remove feature I</li>
+<li>Error analysis:
+look at classifier’s errors, what features can we use to improve?Look at confusion matrix, common features of errors, and potential imbalance in predictions</li>
+</ol>
+<h4 id="two-different-settings-to-develop-multiclass-classifiers">
+  two different settings to develop multiclass classifiers?
+  <a class="heading-link" href="#two-different-settings-to-develop-multiclass-classifiers">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Multinomial:
+<ul>
+<li>is generally faster, a single classifier.</li>
+<li>classes are mutually exclusive, no overlap.</li>
+</ul>
+</li>
+<li>one vs all ( multi-label)
+<ul>
+<li>Multilabel classification, K classes into K binary tasks, document can fall in 1+ categories</li>
+</ul>
+</li>
+</ul>
+<h4 id="macro-and-micro-average">
+  Macro and Micro-average
+  <a class="heading-link" href="#macro-and-micro-average">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Macroaveraging
+<ul>
+<li>Compute performance for each class, then average them.</li>
+<li>All classes contribute the same</li>
+</ul>
+</li>
+<li>Microaveraging:
+<ul>
+<li>overall performance without computing per-class performances.</li>
+<li>Large classes contribute more</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-ways-of-dealing-with-imbalanced-data-in-text-classification-error-analysis">
+  3 ways of dealing with imbalanced data in text classification, error analysis
+  <a class="heading-link" href="#3-ways-of-dealing-with-imbalanced-data-in-text-classification-error-analysis">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ol>
+<li>Undersample popular class by removing instances to balance it with the rest.</li>
+<li>Oversample the other classes to balance them.</li>
+<li>Create synthetic data for the classes with few training instances.</li>
+<li>Cost sensitive learning by assigning prediction probabilities to each class.</li>
+</ol>
+<h3 id="8-sequence-classification-and-pos">
+  8 Sequence classification and POS
+  <a class="heading-link" href="#8-sequence-classification-and-pos">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="hmm-hidden-markov-models">
+  HMM Hidden Markov Models
+  <a class="heading-link" href="#hmm-hidden-markov-models">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>markov chain
+<ul>
+<li>Set of nodes connected with probabilities, where weights on all edges leaving a node sum to 1.</li>
+<li>states, transition probability matrix, start and end state
+<ul>
+<li>transition probability: tag followed tag</li>
+</ul>
+</li>
+<li>HMM: + observations, observation likelihoods(emission probabilities)
+<ul>
+<li>emission: tag to a particular word</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>assumption
+<ul>
+<li>dependence only on the previous state</li>
+<li>must be a dependency between sequence items</li>
+</ul>
+</li>
+<li>Limitations of HMM:
+<ul>
+<li>Models dependencies between each state and only its corresponding observation.</li>
+<li>Learns joint distribution of states and observations P(Y, X), but not the conditional probability P(Y|X).</li>
+</ul>
+</li>
+</ul>
+<h4 id="memm-maximum-entropy-markov-models">
+  MEMM Maximum Entropy Markov Models
+  <a class="heading-link" href="#memm-maximum-entropy-markov-models">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Models dependencies between each state and the full observation sequence.
+Learning objective function consistent with predictive function: P(Y|X).</p>
+<h4 id="crf-conditional-random-fields">
+  CRF Conditional Random Fields
+  <a class="heading-link" href="#crf-conditional-random-fields">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Global normaliser Z(x) overcomes label bias issue of MEMM.
+Models the dependency between each state and the entire observation sequence (like MEMM).</p>
+<h5 id="comparision-overcome-label-bias">
+  comparision, overcome label bias
+  <a class="heading-link" href="#comparision-overcome-label-bias">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<p>HMM have the limitation imposed by the Markov assumption, i.e. they only rely on the previous element in a sequence. MEMM suffer from a label bias, as it relies on global sequence probabilities as opposed to local probabilities. CRF overcomes these two limitations by relies on the entire sequence and by using a normaliser Z(x) to avoid the label bias.</p>
+<h2 id="question-4-parsing-information-extraction-pos-tagging-ner">
+  Question 4: Parsing, information extraction, POS tagging, NER.
+  <a class="heading-link" href="#question-4-parsing-information-extraction-pos-tagging-ner">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="9-grammars-and-parsing">
+  9 grammars and parsing
+  <a class="heading-link" href="#9-grammars-and-parsing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="parsing">
+  Parsing
+  <a class="heading-link" href="#parsing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Parsing: process of recognising a sentence and assigning syntactic structure to it.</li>
+<li>Syntactic structure includes:
+<ul>
+<li>Constituents: how words group together to behave as single units.
+<ul>
+<li>NP PP VP</li>
+</ul>
+</li>
+<li>Grammatical relations, dependencies, subcategorisation: how words and constituents relate to each other.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cfg-context-free-grammers">
+  CFG context free grammers
+  <a class="heading-link" href="#cfg-context-free-grammers">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>widely used mathematical system for model constituent structure</li>
+<li>three compontents
+<ul>
+<li>terminals</li>
+<li>non-terminals</li>
+<li>rules: To produce grammatical sentence, consist of a single non-terminal on the left and any number of terminals or non-terminals on the right.</li>
+</ul>
+</li>
+</ul>
+<h4 id="lexicalised-pcfg">
+  lexicalised PCFG
+  <a class="heading-link" href="#lexicalised-pcfg">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>considering the probabilities of words occurring in different constituents</li>
+<li>can deal with disambiguation better</li>
+</ul>
+<h4 id="cfg-pcfg-and-lexicalised-pcfg">
+  CFG, PCFG and lexicalised PCFG
+  <a class="heading-link" href="#cfg-pcfg-and-lexicalised-pcfg">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>CFGs don’t have probabilities. <strong>PCFG</strong> s are more sophisticated than CFGs as they do <strong>include the probabilities associated with each rule and terminal</strong>. Lexicalised PCFGs are an improved alternative of PCFGs, to mitigate the lack of consideration of context. Besides probabilities of rules and terminals, lexicalised PCFGs also incorporate words within those rules. For instance, in the case of the sentence: “ I had pizza with friends”, the PCFG may find it equally likely to choose the rule NP -&gt; NP PP and VP -&gt; V PP but if words are added to the rules (i.e. NP/pizza -&gt; NP/ pizza PP/with friends vs VP/ate -&gt; V/ate PP/with friends) the VP rule would be much more likely.</p>
+<h4 id="cky-bottom-up-from-sentence-to-tree">
+  CKY: bottom up, from sentence to tree
+  <a class="heading-link" href="#cky-bottom-up-from-sentence-to-tree">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p><img alt="cky" src="https://i.loli.net/2019/05/08/5cd2ad7445fde.png"></p>
+<p>It is a dynamic programming algorithm used for parsing constituent trees. It starts by creating an empty tree with no labels. This tree contains all possible branches. It starts from the bottom elements, iteratively deciding the labels for the elements in the upper levels of the tree, by finding all possible combinations of terminal and non-terminal nodes encountered that match the right hand side of rules.</p>
+<h4 id="maltparser-algorithm-for-4-types-opersations">
+  MaltParser algorithm for? 4 types opersations?
+  <a class="heading-link" href="#maltparser-algorithm-for-4-types-opersations">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>for dependency tree parsing. The four possible operations are left-arc, right-arc, reduce and shift.</p>
+<h4 id="dependency-grammars">
+  dependency grammars
+  <a class="heading-link" href="#dependency-grammars">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Dependency syntax postulates that syntactic structure consists of lexical items linked by binary asymmetric relations (“arrows”) called dependencies.
+<ul>
+<li>Graph Algorithms:
+<ul>
+<li>Consider all word pairs.</li>
+<li>Create a Maximum Spanning Tree for a sentence.</li>
+</ul>
+</li>
+<li>Transition-based Approaches:
+<ul>
+<li>Shift-Reduce Parser: MaltParser.</li>
+<li>Similar to how we parse a program</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-word-senses-and-similarity">
+  10 word senses and similarity
+  <a class="heading-link" href="#10-word-senses-and-similarity">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="sense">
+  sense
+  <a class="heading-link" href="#sense">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Homonymy: same word can have different, unrelated meanings bank
+Polysemy: same word, related meanings: often systematic
+Synonyms: words with same meaning in some or all contexts
+Antonyms: Senses that are opposites with respect to one feature of meaning
+Hyponymy:One sense is a hyponym of another if the first sense is more specific, denoting a subclass of the other: apple of fruit
+hypernym: fruit is hypernym of apple</p>
+<h4 id="what-are-hyponyms-and-hypernyms-and-what-is-the-best-resource-we-can-use-to-identify-them">
+  What are hyponyms and hypernyms, and what is the best resource we can use to identify them?
+  <a class="heading-link" href="#what-are-hyponyms-and-hypernyms-and-what-is-the-best-resource-we-can-use-to-identify-them">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>One sense is a hyponym of another if the first sense is more specific, denoting a subclass of the other: (1) car is a hyponym of vehicle, (2) apple is a hyponym of fruit. Conversely hypernym: (1) vehicle is a hypernym of car, (2) fruit is a hypernym of apple. The best resource for dealing with hyponyms and hypernyms are thesauri. They can be found in taxonomies and lexical databases such as WordNet.</p>
+<h4 id="thesaurus-methods">
+  thesaurus methods
+  <a class="heading-link" href="#thesaurus-methods">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Thesaurus (plural thesauri) is a reference work that lists words
+grouped together according to similarity of meaning.</li>
+<li>path-based similarity: Two senses are similar if there is a short path between them in the thesaurus hierarchy</li>
+<li>Thesaurus-based similarity algorithms:</li>
+<li>Dekang lin similarity function</li>
+</ul>
+<h4 id="pmi">
+  PMI
+  <a class="heading-link" href="#pmi">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>log P(x,y)/(pxpy)</p>
+<h3 id="11-information-extraction-and-named-entity-recoginition">
+  11 information extraction and named entity recoginition
+  <a class="heading-link" href="#11-information-extraction-and-named-entity-recoginition">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="ner">
+  NER
+  <a class="heading-link" href="#ner">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Find each mention of a named entity in the text and label its type. What constitutes a named entity type is application specific; these commonly include people, places, and organizations but also more specific entities such as namesof genes and proteins. Statistical sequence models are the norm in academic research. Commercial NER are hybrids of rules &amp; machine learning.</p>
+<h2 id="question-5-information-retrieval-qa-text-summarisation">
+  Question 5: Information retrieval, QA, text summarisation.
+  <a class="heading-link" href="#question-5-information-retrieval-qa-text-summarisation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="12-introduction-to-ir">
+  12 introduction to IR
+  <a class="heading-link" href="#12-introduction-to-ir">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="query-processing">
+  query processing
+  <a class="heading-link" href="#query-processing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>use skip pointers:skip all values smaller than 35 in p1., since p2 started with 35</li>
+<li>Longer n-gram indices are not feasible</li>
+<li>Bigrams could be used when we don’t need longer search queries, but it’s generally not enough.</li>
+<li>Use of bigrams to look for longer n-grams can lead to false positives (as with the “University of AND of Warwick” example)</li>
+</ul>
+<h4 id="positional-indices">
+  positional indices
+  <a class="heading-link" href="#positional-indices">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>In the postings, store for each term the position(s) in which tokens of it appear:</li>
+<li>Get inverted index entries for each distinct term: to, be, or, not.</li>
+<li>Look for occurrences where the positions match the sequence of our query</li>
+<li>main dis:use more space than binary index</li>
+<li>main adv:flexibility for searching</li>
+</ul>
+<p><img alt="proximity queries" src="https://i.loli.net/2019/05/08/5cd2c745b415a.png"></p>
+<h3 id="13-ranking-in-ir">
+  13 ranking in IR
+  <a class="heading-link" href="#13-ranking-in-ir">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="jaccard-coefficient-tfidf">
+  jaccard coefficient, TFIDF
+  <a class="heading-link" href="#jaccard-coefficient-tfidf">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>jaccard A^B/AUB</li>
+<li>TFIDF
+<ul>
+<li>rare and frequent in a document</li>
+<li>weight of a term is the product of its tf and idf weights</li>
+<li>(1+logtf(t,d))*log(N/dft)</li>
+<li>term frequency:sum(1+logtf)</li>
+<li>inverse document frequency:log(N/df)
+<ul>
+<li>dft is the number of documents that contain t.</li>
+<li>N = number of documents in collection.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="smart">
+  SMART
+  <a class="heading-link" href="#smart">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Many search engines use different weightings for queries vs documents. The SMART notation denotes the combination in use in an engine, with the notation ddd.qqq for document (d) and query (q). There is a notation with different options for each of the 3 characters on each side. A very standard weighting scheme is: lnc.ltc:</p>
+<ul>
+<li>Doc: logarithmic tf (l), no idf (n) and cosine normalisation (c).</li>
+<li>Query: logarithmic tf (l), idf (t), cosine normalisation (c).</li>
+</ul>
+<h3 id="14-efficiency-and-evaluation-of-ir">
+  14 efficiency and evaluation of IR
+  <a class="heading-link" href="#14-efficiency-and-evaluation-of-ir">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="pagerank">
+  PageRank
+  <a class="heading-link" href="#pagerank">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h4 id="precision-at-k-map-ndcg-idcg">
+  precision at K, MAP, NDCG, IDCG
+  <a class="heading-link" href="#precision-at-k-map-ndcg-idcg">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p><img alt="dcg" src="https://i.loli.net/2019/05/08/5cd2c9aa6d08f.png"></p>
+<h3 id="15-elevance-feedback-and-query-expansion">
+  15 elevance feedback and query expansion
+  <a class="heading-link" href="#15-elevance-feedback-and-query-expansion">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h3 id="17-text-summarisation">
+  17 text summarisation
+  <a class="heading-link" href="#17-text-summarisation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h3 id="18-question-answering">
+  18 question answering
+  <a class="heading-link" href="#18-question-answering">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h2 id="question-6-vector-space-models-word-embeddings">
+  Question 6: Vector space models, Word embeddings.
+  <a class="heading-link" href="#question-6-vector-space-models-word-embeddings">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="6-word-embeddings">
+  6 word embeddings
+  <a class="heading-link" href="#6-word-embeddings">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Word embeddings are word vectors that represent a word in terms of its context as projections of an original one-hot word vector into a lower dimensional space.</p>
+<ul>
+<li>why useful?
+<ul>
+<li>allow representing words as dense vectors, where the dimensions reflect some notion of meaning. This facilitates the computation of semantic similarity between words.</li>
+<li>allows a relatively corpus independent representation of word meaning that is based on word distribution rather than pre-existing knowledge.</li>
+<li>rather than one-hot vectors allows meaningful dimensionality reduction in the feature space of text classifiers</li>
+</ul>
+</li>
+</ul>
+<h4 id="onehot-word-vector">
+  onehot word vector
+  <a class="heading-link" href="#onehot-word-vector">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>It is a vector representation of word, where the vector is the size of the vocabulary and the only value that is a one, is that corresponding to the index of the word. All other values in the vector are zero.</p>
+<ul>
+<li>results in sparse and high dimensional matrices.</li>
+<li>does not take into account word order or linguistic structure</li>
+</ul>
+<h4 id="vector-space-modelssvd">
+  vector space models,SVD
+  <a class="heading-link" href="#vector-space-modelssvd">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>
+<p>SVD: Frequent occurrence in similar contexts will indicate similarity.</p>
+<ul>
+<li>We build co-occurrence matrix (|V|x|V|) with offset ∆.</li>
+<li>We use SVD to decompose X as X=USV^T where:
+<ul>
+<li>U(|V| x r) and V(|V| x r) are unitary matrices, and</li>
+<li>S(r x r) is a diagonal matrix.</li>
+</ul>
+</li>
+<li>The columns of U (the left singular vectors) are then the word embeddings of the vocabulary.</li>
+<li>The word embeddings represent the projection of X into a lower dimensional space(also as higher demensional space)</li>
+</ul>
+</li>
+<li>
+<p>Pros and Cons</p>
+<ul>
+<li>pros: perform well in a number of tasks</li>
+<li>pros:Uses global co-occurrence statistics efficiently as they operate on the entire corpus.</li>
+<li>cons
+<ul>
+<li>Con: dimensions need to change as new words are added to the corpus, costly.</li>
+<li>Con: resulting vectors can still be high dimensional and sparse. only good at similarity, dimensions do not reflect meaning.</li>
+<li>Con: Quadratic cost to perform SVD.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="iteration-based-models">
+  Iteration based models
+  <a class="heading-link" href="#iteration-based-models">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<h5 id="word2vec">
+  Word2vec
+  <a class="heading-link" href="#word2vec">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>Main intuition: Instead of computing co-occurrences from entire corpus, <strong>predict surrounding words</strong> in a window of length c of every word.</li>
+<li>Allows easier updates, faster to incorporate new words in model.</li>
+<li>Leads to low dimensional, dense vectors.</li>
+</ul>
+<h5 id="input-and-output-of-word2vec">
+  input and output of word2vec
+  <a class="heading-link" href="#input-and-output-of-word2vec">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>
+<p>input:</p>
+<ul>
+<li>a c x V matrix where each row is a one-hot vector representation of a word in a corpus, where the size of the vocabulary is assumed to be V. c is the size of the context window.</li>
+<li>the dimension N of the embeddings.</li>
+</ul>
+</li>
+<li>
+<p>output</p>
+<ul>
+<li>the N x V embedding matrix projecting the one-hot vectors of the words to the embeddings space.</li>
+</ul>
+</li>
+<li>
+<p>CBOW and skip-gram models</p>
+<ul>
+<li>Continuous bag of words model (CBOW):  a language model where we have the context within a window sized c, predict a word.</li>
+<li>Skip gram model: having the word, predict its context.</li>
+</ul>
+</li>
+<li>
+<p>PROS AND CONS: ITERATION BASED METHODS</p>
+<ul>
+<li>Pro: Do not need to operate on entire corpus which involves very sparse matrices.</li>
+<li>Pro: Can capture semantic properties of words as linear relationships between word vectors.</li>
+<li>Pro: Fast and can be easily updated with new sentences.</li>
+<li>Con: Can’t take into account the vast amount of repetition in the data.</li>
+</ul>
+</li>
+</ul>
+<h4 id="glove">
+  Glove
+  <a class="heading-link" href="#glove">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>similar to word2vec:
+<ul>
+<li>Count-based method instead of prediction-based.</li>
+<li>Does matrix factorisation for dimensionality reduction.</li>
+</ul>
+</li>
+<li>Can leverage repetitions in the corpus as using the entire word co- occurrence matrix.
+<ul>
+<li>train only on non-zero entries of co-occurrence matrix</li>
+</ul>
+</li>
+<li>Computationally expensive for building matrix, then much faster as non-zero entries are not so many.</li>
+<li>Intuition: relationships between words should be explored in terms of their co- occurrence probabilities with some selected words k.</li>
+<li>evaluation
+<ul>
+<li>extrinsic: test your model in a text classification, sentiment analysis..task
+does it outperform other methods? compare two models</li>
+<li>intrinsic: use datasets labelled with word similarities</li>
+</ul>
+</li>
+</ul>
+<h3 id="16-recommender-systems">
+  16 recommender systems
+  <a class="heading-link" href="#16-recommender-systems">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="collaborative-filtering-based-on-users-past-behaviour-memory-based">
+  collaborative filtering: based on users past behaviour, memory based
+  <a class="heading-link" href="#collaborative-filtering-based-on-users-past-behaviour-memory-based">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>user based: find similar users and recommend what they liked</li>
+<li>item based: find similar items to those I have previously liked</li>
+<li>PROS
+<ul>
+<li>easy to implement, users and items can be treeated as IDs, no content need to be processed.</li>
+<li>preforms reasonably well when have a history of likes.</li>
+</ul>
+</li>
+<li>cons
+<ul>
+<li>cold start and pupularity bias
+<ul>
+<li>cold start: There needs to be enough other users already in the system to find a match. New items need to get enough ratings.</li>
+<li>popularity bias: Hard to recommend items to someone with unique tastes. Tends to recommend popular items (items from the tail do not get so much data)</li>
+</ul>
+</li>
+<li>can&rsquo;t perform well when lack history</li>
+<li>context is ignored(restaurant in new city)</li>
+</ul>
+</li>
+</ul>
+<h4 id="content-based">
+  content-based
+  <a class="heading-link" href="#content-based">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>features extracted from item contents</li>
+<li>ignore users preference</li>
+<li>PROS
+<ul>
+<li>No need for data on other users. No cold-start problem.</li>
+<li>Able to recommend to users with unique tastes.</li>
+<li>Able to recommend new and unpopular items. No first-rater problem.</li>
+<li>We can provide better explanations of the reasons behind a recommendation, i.e. the features that the recommended item has in common with what they’ve viewed before.</li>
+</ul>
+</li>
+<li>CONS
+<ul>
+<li>Need to extract features from content, more difficult for e.g. video.</li>
+<li>Difficult to implement serendipity.</li>
+<li>Easy to overfit (e.g. for a user with few data points we may “pigeonhole” them).</li>
+</ul>
+</li>
+</ul>
+<h2 id="new">
+  new
+  <a class="heading-link" href="#new">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="5-spelling-correction">
+  5 spelling correction
+  <a class="heading-link" href="#5-spelling-correction">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Another dictionary word (real-word error).
+A non-dictionary word (non-word error).</p>
+
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

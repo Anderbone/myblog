@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="https://leetcode.com/problems/spiral-matrix/
+Given an m x n matrix, return all elements of the matrix in spiral order.
+Example 1: Input: matrix = [[1,2,3],[4,5,6],[7,8,9]] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]] Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+Constraints:
+m == matrix.length n == matrix[i].length 1 &lt;= m, n &lt;= 10 -100 &lt;= matrix[i][j] &lt;= 100 code //[[1,2,3],[4,5,6],[7,8,9]] // 0,1 -&gt; 1,0 -&gt; 0,-1 -&gt; -1,0 // right (x, y&#43;1) down (x&#43;1, y) left (x, y-1) up(x-1, y) class Solution { public List&lt;Integer&gt; spiralOrder(int[][] matrix) { List&lt;Integer&gt; res = new ArrayList&lt;&gt;(); int x = 0, y = 0; int width = matrix[0].">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="54. Spiral matrix"/>
+<meta name="twitter:description" content="https://leetcode.com/problems/spiral-matrix/
+Given an m x n matrix, return all elements of the matrix in spiral order.
+Example 1: Input: matrix = [[1,2,3],[4,5,6],[7,8,9]] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]] Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+Constraints:
+m == matrix.length n == matrix[i].length 1 &lt;= m, n &lt;= 10 -100 &lt;= matrix[i][j] &lt;= 100 code //[[1,2,3],[4,5,6],[7,8,9]] // 0,1 -&gt; 1,0 -&gt; 0,-1 -&gt; -1,0 // right (x, y&#43;1) down (x&#43;1, y) left (x, y-1) up(x-1, y) class Solution { public List&lt;Integer&gt; spiralOrder(int[][] matrix) { List&lt;Integer&gt; res = new ArrayList&lt;&gt;(); int x = 0, y = 0; int width = matrix[0]."/>
+
+    <meta property="og:title" content="54. Spiral matrix" />
+<meta property="og:description" content="https://leetcode.com/problems/spiral-matrix/
+Given an m x n matrix, return all elements of the matrix in spiral order.
+Example 1: Input: matrix = [[1,2,3],[4,5,6],[7,8,9]] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]] Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+Constraints:
+m == matrix.length n == matrix[i].length 1 &lt;= m, n &lt;= 10 -100 &lt;= matrix[i][j] &lt;= 100 code //[[1,2,3],[4,5,6],[7,8,9]] // 0,1 -&gt; 1,0 -&gt; 0,-1 -&gt; -1,0 // right (x, y&#43;1) down (x&#43;1, y) left (x, y-1) up(x-1, y) class Solution { public List&lt;Integer&gt; spiralOrder(int[][] matrix) { List&lt;Integer&gt; res = new ArrayList&lt;&gt;(); int x = 0, y = 0; int width = matrix[0]." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/leetcode/54/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2024-02-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-29T19:42:03+00:00" />
+
+
+
+
+    <title>
+  54. Spiral matrix · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/leetcode/54/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/leetcode/54/">
+              54. Spiral matrix
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2024-02-27T00:00:00Z'>
+                February 27, 2024
+              </time>
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/array/">array</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><a href="https://leetcode.com/problems/spiral-matrix/">https://leetcode.com/problems/spiral-matrix/</a></p>
+<p>Given an m x n matrix, return <strong>all elements of the</strong> matrix <strong>in spiral order</strong>.</p>
+<p><strong>Example 1:</strong>
+<img src="https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg"><strong>Input:</strong> matrix = [[1,2,3],[4,5,6],[7,8,9]] <strong>Output:</strong> [1,2,3,6,9,8,7,4,5]
+<strong>Example 2:</strong>
+<img src="https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg"><strong>Input:</strong> matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]] <strong>Output:</strong> [1,2,3,4,8,12,11,10,9,5,6,7]</p>
+<p><strong>Constraints:</strong></p>
+<pre><code>m == matrix.length 	
+n == matrix[i].length 	
+1 &lt;= m, n &lt;= 10 	
+-100 &lt;= matrix[i][j] &lt;= 100
+</code></pre>
+<hr>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">//[[1,2,3],[4,5,6],[7,8,9]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 0,1 -&gt; 1,0 -&gt; 0,-1 -&gt; -1,0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// right (x, y+1)  down (x+1, y) left (x, y-1) up(x-1, y)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">spiralOrder</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> matrix) {
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> 0, y <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> width <span style="color:#f92672">=</span> matrix<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> height <span style="color:#f92672">=</span> matrix.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> dx <span style="color:#f92672">=</span> 0, dy <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (res.<span style="color:#a6e22e">size</span>() <span style="color:#f92672">&lt;</span> height <span style="color:#f92672">*</span> width){
+</span></span><span style="display:flex;"><span>            res.<span style="color:#a6e22e">add</span>(matrix<span style="color:#f92672">[</span>x<span style="color:#f92672">][</span>y<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>            matrix<span style="color:#f92672">[</span>x<span style="color:#f92672">][</span>y<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">MAX_VALUE</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (x <span style="color:#f92672">+</span> dx <span style="color:#f92672">==</span> height <span style="color:#f92672">||</span> x <span style="color:#f92672">+</span> dx <span style="color:#f92672">&lt;</span> 0
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">||</span> y <span style="color:#f92672">+</span> dy <span style="color:#f92672">==</span> width <span style="color:#f92672">||</span> y <span style="color:#f92672">+</span> dy <span style="color:#f92672">&lt;</span> 0
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">||</span> matrix<span style="color:#f92672">[</span>x<span style="color:#f92672">+</span>dx<span style="color:#f92672">][</span>y<span style="color:#f92672">+</span>dy<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> Integer.<span style="color:#a6e22e">MAX_VALUE</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> dx;
+</span></span><span style="display:flex;"><span>                dx <span style="color:#f92672">=</span> dy;
+</span></span><span style="display:flex;"><span>                dy <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>temp;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            x <span style="color:#f92672">+=</span> dx;
+</span></span><span style="display:flex;"><span>            y <span style="color:#f92672">+=</span> dy;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spiralOrder</span>(self, matrix: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        rows <span style="color:#f92672">=</span> len(matrix)
+</span></span><span style="display:flex;"><span>        cols <span style="color:#f92672">=</span> len(matrix[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        x,y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e">#starting position</span>
+</span></span><span style="display:flex;"><span>        dx,dy <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span> <span style="color:#75715e">#starting direction </span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(ans) <span style="color:#f92672">&lt;</span> rows<span style="color:#f92672">*</span> cols:
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            x, y <span style="color:#f92672">=</span> x<span style="color:#f92672">+</span>dx, y<span style="color:#f92672">+</span>dy <span style="color:#75715e">#take a step in current direction</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            ans<span style="color:#f92672">.</span>append(matrix[x][y])
+</span></span><span style="display:flex;"><span>            matrix[x][y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span> <span style="color:#75715e">#Mark visited cells as None, so you don&#39;t visit them again, Alternatively you can maintain a seperate set to record visited coordinates. </span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x<span style="color:#f92672">+</span>dx <span style="color:#f92672">&gt;=</span> rows <span style="color:#f92672">or</span> y<span style="color:#f92672">+</span>dy <span style="color:#f92672">&gt;=</span> cols <span style="color:#f92672">or</span> matrix[x<span style="color:#f92672">+</span>dx][y<span style="color:#f92672">+</span>dy] <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>: <span style="color:#75715e">#Don&#39;t visit visited cells again</span>
+</span></span><span style="display:flex;"><span>                dx, dy <span style="color:#f92672">=</span> dy, <span style="color:#f92672">-</span>dx  <span style="color:#75715e">#Turn 90 degree clock wise</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spiralOrder</span>(self, matrix: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        row_max, col_max <span style="color:#f92672">=</span> len(matrix), len(matrix[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        col_min <span style="color:#f92672">=</span> row_min <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        direction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;right&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(res) <span style="color:#f92672">&lt;</span> len(matrix) <span style="color:#f92672">*</span> len(matrix[<span style="color:#ae81ff">0</span>]):
+</span></span><span style="display:flex;"><span>            res<span style="color:#f92672">.</span>append(matrix[x][y])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> direction <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;right&#34;</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> y <span style="color:#f92672">&lt;</span> col_max <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>: y <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>: 
+</span></span><span style="display:flex;"><span>                    direction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;down&#34;</span>
+</span></span><span style="display:flex;"><span>                    row_min <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> direction <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;down&#34;</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;</span> row_max <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>: x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    direction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;left&#34;</span>
+</span></span><span style="display:flex;"><span>                    col_max <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    y <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> direction <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;left&#34;</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> y <span style="color:#f92672">&gt;</span> col_min: y <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    direction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;up&#34;</span>
+</span></span><span style="display:flex;"><span>                    row_max <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    x <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> direction <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;up&#34;</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> row_min: x <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    direction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;right&#34;</span>
+</span></span><span style="display:flex;"><span>                    col_min <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    y <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res
+</span></span></code></pre></div>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+      </footer>
+    </article>
+
+    <div class="next-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/48/?ref=footer">« 48. Rotate image</a>
+      
+    </div>
+    
+    <div class="previous-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/36/?ref=footer">36. Valid Sudoku »</a>
+      
+    </div>
+
+    
+  </section>
+
+    
+<section>
+  <ul>
+     
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+    <sup>96</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+    <sup>20</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+    <sup>24</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+    <sup>27</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+    <sup>14</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+    <sup>25</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+    <sup>17</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+    <sup>30</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+    <sup>41</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+    <sup>16</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+    <sup>19</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+    <sup>15</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+    <sup>13</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+    <sup>7</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+    <sup>23</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+    <sup>36</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+    <sup>9</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+    <sup>3</sup>
+          </div>
+    
+  
+  </ul>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

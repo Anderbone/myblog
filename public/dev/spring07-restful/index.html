@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="Based on Spring in action 6th version github repo.
+RESTful controllers return a 404 status Here we can return Optional&lt;Taco&gt; directly, but it will return null if id doesn&rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:
+@GetMapping(&#34;/{id}&#34;) public ResponseEntity&lt;Taco&gt; tacoById(@PathVariable(&#34;id&#34;) Long id) { return tacoRepo.findById(id).map(taco -&gt; new ResponseEntity&lt;&gt;(taco, HttpStatus.OK)) .orElseGet(() -&gt; new ResponseEntity&lt;&gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&rsquo;s in the rest client test but not in the codebase.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Spring In Action 07 - RESTful API"/>
+<meta name="twitter:description" content="Based on Spring in action 6th version github repo.
+RESTful controllers return a 404 status Here we can return Optional&lt;Taco&gt; directly, but it will return null if id doesn&rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:
+@GetMapping(&#34;/{id}&#34;) public ResponseEntity&lt;Taco&gt; tacoById(@PathVariable(&#34;id&#34;) Long id) { return tacoRepo.findById(id).map(taco -&gt; new ResponseEntity&lt;&gt;(taco, HttpStatus.OK)) .orElseGet(() -&gt; new ResponseEntity&lt;&gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&rsquo;s in the rest client test but not in the codebase."/>
+
+    <meta property="og:title" content="Spring In Action 07 - RESTful API" />
+<meta property="og:description" content="Based on Spring in action 6th version github repo.
+RESTful controllers return a 404 status Here we can return Optional&lt;Taco&gt; directly, but it will return null if id doesn&rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:
+@GetMapping(&#34;/{id}&#34;) public ResponseEntity&lt;Taco&gt; tacoById(@PathVariable(&#34;id&#34;) Long id) { return tacoRepo.findById(id).map(taco -&gt; new ResponseEntity&lt;&gt;(taco, HttpStatus.OK)) .orElseGet(() -&gt; new ResponseEntity&lt;&gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&rsquo;s in the rest client test but not in the codebase." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/spring07-restful/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2022-07-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-03T12:51:12+01:00" />
+
+
+
+
+    <title>
+Spring In Action 07 - RESTful API · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/spring07-restful/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/spring07-restful/">
+                    Spring In Action 07 - RESTful API
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2022-07-31T00:00:00Z'>
+                      July 31, 2022
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/spring/">spring</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/java/">java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/spring-in-action/">spring-in-action</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p>Based on <a href="https://github.com/habuma/spring-in-action-6-samples">Spring in action 6th version github repo</a>.</p>
+<h2 id="restful-controllers">
+  RESTful controllers
+  <a class="heading-link" href="#restful-controllers">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="return-a-404-status">
+  return a 404 status
+  <a class="heading-link" href="#return-a-404-status">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Here we can return <code>Optional&lt;Taco&gt;</code> directly, but it will return <code>null</code> if id doesn&rsquo;t exist with status code 200.
+If we want to return a 404 status code appropriately, as shown here:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>	<span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;/{id}&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>Taco<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">tacoById</span>(<span style="color:#a6e22e">@PathVariable</span>(<span style="color:#e6db74">&#34;id&#34;</span>) Long id) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> tacoRepo.<span style="color:#a6e22e">findById</span>(id).<span style="color:#a6e22e">map</span>(taco <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;</span>(taco, HttpStatus.<span style="color:#a6e22e">OK</span>))
+</span></span><span style="display:flex;"><span>				.<span style="color:#a6e22e">orElseGet</span>(() <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;</span>(<span style="color:#66d9ef">null</span>, HttpStatus.<span style="color:#a6e22e">NOT_FOUND</span>));
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h3 id="ingredientcontroller-and-rest-client">
+  IngredientController and rest client
+  <a class="heading-link" href="#ingredientcontroller-and-rest-client">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>I added <code>IngredientById</code> here, it&rsquo;s in the rest client test but not in the codebase.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> tacos.web.api;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Autowired;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.http.HttpStatus;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.http.ResponseEntity;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Ingredient;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Taco;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.data.IngredientRepository;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span>(path<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/api/ingredients&#34;</span>, produces<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/json&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@CrossOrigin</span>(origins<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:8080&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IngredientController</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span> IngredientRepository repo;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">IngredientController</span>(IngredientRepository repo) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">repo</span> <span style="color:#f92672">=</span> repo;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@GetMapping</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> Iterable<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">allIngredients</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> repo.<span style="color:#a6e22e">findAll</span>();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;/{id}&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">IngredientById</span>(<span style="color:#a6e22e">@PathVariable</span>(<span style="color:#e6db74">&#34;id&#34;</span>) String id) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> repo.<span style="color:#a6e22e">findById</span>(id).<span style="color:#a6e22e">map</span>(ingredient <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;</span>(ingredient, HttpStatus.<span style="color:#a6e22e">OK</span>))
+</span></span><span style="display:flex;"><span>				.<span style="color:#a6e22e">orElseGet</span>(() <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;</span>(<span style="color:#66d9ef">null</span>, HttpStatus.<span style="color:#a6e22e">NOT_FOUND</span>));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Code of rest client</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> tacos.restclient;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Collection;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.core.ParameterizedTypeReference;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.hateoas.CollectionModel;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.hateoas.client.Traverson;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.http.HttpMethod;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.stereotype.Service;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.client.RestTemplate;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> lombok.extern.slf4j.Slf4j;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Ingredient;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Taco;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TacoCloudClient</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> RestTemplate rest;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> Traverson traverson;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TacoCloudClient</span>(RestTemplate rest, Traverson traverson) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">rest</span> <span style="color:#f92672">=</span> rest;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">traverson</span> <span style="color:#f92672">=</span> traverson;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// GET examples</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   * Specify parameter as varargs argument
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> Ingredient <span style="color:#a6e22e">getIngredientById</span>(String ingredientId) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> rest.<span style="color:#a6e22e">getForObject</span>(<span style="color:#e6db74">&#34;http://localhost:8080/api/ingredients/{id}&#34;</span>,
+</span></span><span style="display:flex;"><span>                             Ingredient.<span style="color:#a6e22e">class</span>, ingredientId);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAllIngredients</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> rest.<span style="color:#a6e22e">exchange</span>(<span style="color:#e6db74">&#34;http://localhost:8080/api/ingredients&#34;</span>,
+</span></span><span style="display:flex;"><span>            HttpMethod.<span style="color:#a6e22e">GET</span>, <span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">new</span> ParameterizedTypeReference<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;&gt;</span>() {})
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">getBody</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Rest examples</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.URI;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.boot.CommandLineRunner;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.boot.SpringApplication;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.boot.SpringBootConfiguration;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.context.annotation.Bean;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.context.annotation.ComponentScan;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.hateoas.MediaTypes;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.hateoas.client.Traverson;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.client.RestTemplate;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> lombok.extern.slf4j.Slf4j;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Ingredient;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Taco;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootConfiguration</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ComponentScan</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RestExamples</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    SpringApplication.<span style="color:#a6e22e">run</span>(RestExamples.<span style="color:#a6e22e">class</span>, args);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> RestTemplate <span style="color:#a6e22e">restTemplate</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> RestTemplate();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> CommandLineRunner <span style="color:#a6e22e">fetchIngredients</span>(TacoCloudClient tacoCloudClient) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> args <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;----------------------- GET -------------------------&#34;</span>);
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;GETTING INGREDIENT BY IDE&#34;</span>);
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Ingredient:  &#34;</span> <span style="color:#f92672">+</span> tacoCloudClient.<span style="color:#a6e22e">getIngredientById</span>(<span style="color:#e6db74">&#34;CHED&#34;</span>));
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;GETTING ALL INGREDIENTS&#34;</span>);
+</span></span><span style="display:flex;"><span>      List<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> ingredients <span style="color:#f92672">=</span> tacoCloudClient.<span style="color:#a6e22e">getAllIngredients</span>();
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;All ingredients:&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (Ingredient ingredient : ingredients) {
+</span></span><span style="display:flex;"><span>        log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;   - &#34;</span> <span style="color:#f92672">+</span> ingredient);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> CommandLineRunner <span style="color:#a6e22e">putAnIngredient</span>(TacoCloudClient tacoCloudClient) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> args <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;----------------------- PUT -------------------------&#34;</span>);
+</span></span><span style="display:flex;"><span>      Ingredient before <span style="color:#f92672">=</span> tacoCloudClient.<span style="color:#a6e22e">getIngredientById</span>(<span style="color:#e6db74">&#34;LETC&#34;</span>);
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;BEFORE:  &#34;</span> <span style="color:#f92672">+</span> before);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//      tacoCloudClient.updateIngredient(new Ingredient(&#34;LETC&#34;, &#34;Shredded Lettuce&#34;, Ingredient.Type.VEGGIES));</span>
+</span></span><span style="display:flex;"><span>      Ingredient after <span style="color:#f92672">=</span> tacoCloudClient.<span style="color:#a6e22e">getIngredientById</span>(<span style="color:#e6db74">&#34;LETC&#34;</span>);
+</span></span><span style="display:flex;"><span>      log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;AFTER:  &#34;</span> <span style="color:#f92672">+</span> after);
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="hateoas-links-embedded">
+  HATEOAS: links embedded
+  <a class="heading-link" href="#hateoas-links-embedded">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Hypermedia as the Engine of Application State</p>
+<h3 id="overview">
+  overview
+  <a class="heading-link" href="#overview">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>creating self-describing APIs wherein resources returned from an API contain links to related resources. This enables clients to navigate an API with minimal understanding of the API’s URLs. Instead, it understands relationships between the resources served by the API and uses its understanding of those relationships to discover the API’s URLs as it traverses those relationships.</p>
+<h3 id="linkto-methodon">
+  linkTo, methodOn
+  <a class="heading-link" href="#linkto-methodon">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>call linkTo() by giving it a method on the controller to have ControllerLinkBuilder derive the base URL from both the controller’s base path and the method’s mapped path.</p>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Resources<span style="color:#f92672">&lt;</span>Resource<span style="color:#f92672">&lt;</span>Taco<span style="color:#f92672">&gt;&gt;</span> recentResources <span style="color:#f92672">=</span> Resources.<span style="color:#a6e22e">wrap</span>(tacos); recentResources.<span style="color:#a6e22e">add</span>(
+</span></span><span style="display:flex;"><span>linkTo(methodOn(DesignTacoController.<span style="color:#a6e22e">class</span>).<span style="color:#a6e22e">recentTacos</span>()) .<span style="color:#a6e22e">withRel</span>(<span style="color:#e6db74">&#34;recents&#34;</span>));
+</span></span></code></pre></div><p>statically include the linkTo() and methodOn() methods (both from ControllerLinkBuilder) to keep the code easier to read. The methodOn() method takes the controller class and lets you make a call to the recentTacos() method, which is intercepted by ControllerLinkBuilder and used to determine not only the controller’s base path, but also the path mapped to recentTacos(). Now the entire URL is derived from the controller’s mappings, and absolutely no portion is hardcoded. Sweet!</p>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">getFailedLabJobOperationQualityLink</span>(Integer jobOperationLabQualityId) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> ControllerLinkBuilder.<span style="color:#a6e22e">linkTo</span>(ControllerLinkBuilder.<span style="color:#a6e22e">methodOn</span>(JobOperationQualityController.<span style="color:#a6e22e">class</span>)
+</span></span><span style="display:flex;"><span>   .<span style="color:#a6e22e">getFailedLabJobOperationQuality</span>(jobOperationLabQualityId)).<span style="color:#a6e22e">withSelfRel</span>().<span style="color:#a6e22e">getHref</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="resourceprocessor">
+  ResourceProcessor
+  <a class="heading-link" href="#resourceprocessor">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>The ResourceProcessor shown in listing 6.8 is defined as an anonymous inner class and declared as a bean to be created in the Spring application context. Spring HATEOAS will discover this bean (as well as any other beans of type ResourceProcessor) automatically and will apply them to the appropriate resources. In this case, if a PagedResources&lt;Resource<!-- raw HTML omitted -->&gt; is returned from a controller, it will receive a link for the most recently created tacos. This includes the response for requests for /api/tacos.</p>
+<h4 id="springdatarestconfiguration">
+  SpringDataRestConfiguration
+  <a class="heading-link" href="#springdatarestconfiguration">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringDataRestConfiguration</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> ResourceProcessor<span style="color:#f92672">&lt;</span>PagedResources<span style="color:#f92672">&lt;</span>Resource<span style="color:#f92672">&lt;</span>Taco<span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tacoProcessor</span>(EntityLinks links) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResourceProcessor<span style="color:#f92672">&lt;</span>PagedResources<span style="color:#f92672">&lt;</span>Resource<span style="color:#f92672">&lt;</span>Taco<span style="color:#f92672">&gt;&gt;&gt;</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> PagedResources<span style="color:#f92672">&lt;</span>Resource<span style="color:#f92672">&lt;</span>Taco<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">process</span>(
+</span></span><span style="display:flex;"><span>                          PagedResources<span style="color:#f92672">&lt;</span>Resource<span style="color:#f92672">&lt;</span>Taco<span style="color:#f92672">&gt;&gt;</span> resource) {
+</span></span><span style="display:flex;"><span>        resource.<span style="color:#a6e22e">add</span>(
+</span></span><span style="display:flex;"><span>            links.<span style="color:#a6e22e">linkFor</span>(Taco.<span style="color:#a6e22e">class</span>)
+</span></span><span style="display:flex;"><span>                 .<span style="color:#a6e22e">slash</span>(<span style="color:#e6db74">&#34;recent&#34;</span>)
+</span></span><span style="display:flex;"><span>                 .<span style="color:#a6e22e">withRel</span>(<span style="color:#e6db74">&#34;recents&#34;</span>));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> resource;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="http-methods">
+  Http methods
+  <a class="heading-link" href="#http-methods">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>uniform interface, verbs</p>
+<h3 id="requestresponse">
+  request/response
+  <a class="heading-link" href="#requestresponse">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="request">
+  request
+  <a class="heading-link" href="#request">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>HEAD /psts/1 HTTP/1.1
+Accept: text/html, ..
+Connection: keep-alive
+Host: blog.eg.com</p>
+<h4 id="response">
+  response
+  <a class="heading-link" href="#response">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Content-Type: text/html; charset=UTF-8
+Date: ..GMT
+Server: Apache</p>
+<!-- raw HTML omitted -->
+<h3 id="methods">
+  methods
+  <a class="heading-link" href="#methods">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>get</li>
+<li>read</li>
+<li>post (create)
+unlike put, doesn&rsquo;t need to knokw the URL of the resource
+put
+update</li>
+<li>delete</li>
+<li>head
+only retrieve meta data. check resource exists or newer version</li>
+</ul>
+<h2 id="archived-for-spring-in-action-5th-version-bug-fix">
+  Archived for Spring in Action 5th version bug fix
+  <a class="heading-link" href="#archived-for-spring-in-action-5th-version-bug-fix">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Set <a href="https://github.com/habuma/spring-in-action-5-samples/tree/master/ch06">project</a> to java 8.</p>
+<ol>
+<li>In ch06 folder, run <code>./mvnw clean package</code>.</li>
+</ol>
+<p>Error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[ERROR] Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.4:install-node-and-npm (install node and npm) on project tacocloud-ui: Could not install Node: Unable to delete file: C:\Users\yanch\g
+</span></span><span style="display:flex;"><span>itProject\spring-in-action-5-samples\ch06\tacocloud-ui\node\tmp\node-v6.9.1-win-x64\node_modules\npm\node_modules\columnify\node_modules\wcwidth\node_modules\defaults\node_modules\clone\LICENSE -&gt; [Help 1]
+</span></span><span style="display:flex;"><span>[ERROR]
+</span></span></code></pre></div><p>This is what <a href="https://stackoverflow.com/questions/19489720/maven-failed-to-clean-project-failed-to-delete-org-ow2-util-asm-asm-tree">found</a> about this error.
+I exited my apps that possibly scan my system, like listary, and it works.</p>
+<p>Error:
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project taco-cloud: There are test failures.</p>
+<p>Add this dependency to in ch06/pom.xml then run <code>./mvnw clean package</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    &lt;dependencies&gt;
+</span></span><span style="display:flex;"><span>        &lt;dependency&gt;
+</span></span><span style="display:flex;"><span>            &lt;groupId&gt;javax.xml.bind&lt;/groupId&gt;
+</span></span><span style="display:flex;"><span>            &lt;artifactId&gt;jaxb-api&lt;/artifactId&gt;
+</span></span><span style="display:flex;"><span>            &lt;version&gt;2.3.0&lt;/version&gt;
+</span></span><span style="display:flex;"><span>        &lt;/dependency&gt;
+</span></span><span style="display:flex;"><span>        &lt;dependency&gt;
+</span></span><span style="display:flex;"><span>            &lt;groupId&gt;org.javassist&lt;/groupId&gt;
+</span></span><span style="display:flex;"><span>            &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+</span></span><span style="display:flex;"><span>            &lt;version&gt;3.25.0-GA&lt;/version&gt;
+</span></span><span style="display:flex;"><span>        &lt;/dependency&gt;
+</span></span><span style="display:flex;"><span>    &lt;/dependencies&gt;
+</span></span></code></pre></div><ol start="2">
+<li>Run <code>java -jar tacos/target/taco-cloud-0.0.6-SNAPSHOT.jar</code></li>
+<li>Open &lsquo;http://localhost:8080/&rsquo;</li>
+</ol>
+
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

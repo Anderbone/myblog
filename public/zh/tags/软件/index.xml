@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 on Jiyu</title>
+    <link>http://localhost:1313/zh/tags/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 01 Nov 2023 08:16:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>教会礼拜的免费开源软件 - OpenLP</title>
+      <link>http://localhost:1313/zh/posts/share-openlp/</link>
+      <pubDate>Sat, 27 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/posts/share-openlp/</guid>
+      <description>官网&#xA;几个操作系统都支持哦，我就是在Linux上用的。&#xA;整个界面大概这个样子： 预先下载好几个常用版本的圣经，曲库，可以很快准备好每周需要的礼拜。曲库没有的歌曲，添加保存起来也比较方便。&#xA;圣经下载：&#xA;https://github.com/gratis-bible/bible&#xA;https://sourceforge.net/projects/zefania-sharp/files/Bibles/&#xA;http://www.opensong.org/home/download#bibles&#xA;曲库下载：&#xA;https://worshipleaderapp.com/en/download-song-database-opensong-openlp-and-quelea http://www.opensong.org/home/download&#xA;有任何问题欢迎留言。</description>
+    </item>
+    <item>
+      <title>快速入门Liber chat</title>
+      <link>http://localhost:1313/zh/dev/tool-liberachat/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/tool-liberachat/</guid>
+      <description>官网：Libera Chat | A next-generation IRC network for FOSS projects collaboration!&#xA;IRC一大特点，坏处也是好处，大部分IRC服务器不会记录任何聊天记录。所以想和小伙伴聊天时，两个人必须同时在线。每次登陆后聊天记录都是空白的。&#xA;我们先需要一个客户端，第一次尝试直接用这个在线的即可：Libera Chat&#xA;其他客户端参考：Choosing an IRC client | Libera Chat&#xA;第一次登录，Nick随便给自己起个英文名字，password和channel不用填，点击Start。 你已经进入Libera世界了。&#xA;如果你知道小伙伴在哪个Channel，也不在意一定要保留一个自己的用户名，那根本无需注册，随便输入个用户名，Channel里输入频道名字(一般以#或者##开头)，就可以畅快使用了，后面都不用看了。 注册一个可以保留的用户名 无需密码登录的话，用户名也不会为你保留，重复名字会自动在后面加数字。先找个可以注册的名字，使用/nick + 你想要的用户名，看看能否注册。&#xA;/nick Yournick /nick到自己满意的名字后，注册使用&#xA;/msg NickServ REGISTER YourPassword youremail@example.com&#xA;YourPassword是你的密码，后面是邮箱。&#xA;不出意外你会收到一封邮件，包含指令 /msg NickServ VERIFY REGISTER youname xxxxx&#xA;复制这条指令，回到网页上运行，这时候你就有了自己的用户名和密码了。&#xA;进入频道 网页左边的CHANNELS右边，点击加号，可以输入你想去的频道。 查找包含linux关键字的频道使用 ： /msg alis LIST *linux*&#xA;查找500人以上的频道： /msg alis LIST * -min 500&#xA;创建自己的频道 输入/msg ChanServ INFO ##yourChannelName，如果显示not registerd未注册，可以 /join ##yourChannelName加入了。&#xA;/msg ChanServ REGISTER ##yourChannelName会注册##yourChannelName这个名字的频道。</description>
+    </item>
+    <item>
+      <title>Kobo升级版本后如何更新Koreader</title>
+      <link>http://localhost:1313/zh/dev/tool-koreader-kobo/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/tool-koreader-kobo/</guid>
+      <description>Koreader比Kobo本身的阅读器好用太多，翻页速度，各种快捷键，pdf裁边等等。我入了Kobo sage后没多久就装了Koreader。&#xA;安装参考链接： https://www.mobileread.com/forums/showthread.php?t=314220&#xA;最近想试试Kobo自带的Pocket，Koreader上的read it later插件wallabag还要自己找服务器配置实在麻烦，就退出了Koreader连上Wifi更新Pocket的list，没想到Kobo自动更新了。自动更新后，右下角NickelMenu点开没有了KOReader，显示Error。&#xA;这可怎么办，搜了一圈4.32 + Koreader没找到什么结果，还以为是不支持新版本，后来才发现是每次官方固件升级后的必备操作：&#xA;NOTE: Something that bears repeating from KFMon&amp;rsquo;s FAQ: a FW update will disable it, so you&amp;rsquo;ll have to reinstall it after a FW update in order to be able to launch stuff again, which is why there&amp;rsquo;s a package dedicated to that listed at the bottom of this post.&#xA;要做的也很简单，下载KFMon这个zip后，直接解压缩到Kobo的根目录比如E盘下，点击替换文件夹，然后弹出即可。 Kobo会自动安装和重启，如果有弹窗，点击确定升级即可，熟悉的KOReader又回到右下角的NickelMenu里啦！</description>
+    </item>
+  </channel>
+</rss>

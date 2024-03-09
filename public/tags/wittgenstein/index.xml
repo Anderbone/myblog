@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wittgenstein on Jiyu</title>
+    <link>http://localhost:1313/tags/wittgenstein/</link>
+    <description>Recent content in Wittgenstein on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Jan 2023 18:00:07 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/wittgenstein/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Vegan, pain, guilt and life</title>
+      <link>http://localhost:1313/posts/opinion-vegan/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/opinion-vegan/</guid>
+      <description>The whole modern conception of the world is founded on the illusion that the so-called laws of nature are the explanations of natural phenomena. Thus people today stop at the laws of nature, treating them as something inviolable, just as God and Fate were treated in past ages. And in fact both were right and both wrong; though the view of the ancients is clearer insofar as they have an acknowledged terminus, while the modern system tries to make it look as if everything were explained.</description>
+    </item>
+    <item>
+      <title>Dangerous words, why psychology is impossible</title>
+      <link>http://localhost:1313/posts/opinion-words-psychology/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/opinion-words-psychology/</guid>
+      <description>“But profound as psychology is, it&amp;rsquo;s a knife that cuts both ways (&amp;hellip;). I have purposely resorted to this method, gentlemen of the jury, to show that you can prove anything by it. It all depends on who makes use of it. Psychology lures even most serious people into romancing, and quite unconsciously.” ― Fyodor Dostoyevsky, The Brothers Karamazov&#xA;“The confusion and barrenness of psychology is not to be explained by calling it a “young science”; its state is not comparable with that of physics, for instance, in its beginnings&amp;hellip; For in psychology there are experimental methods and conceptual confusion&amp;hellip; The existence of the experimental method makes us think we have the means of solving the problems which trouble us; though problem and method pass one another by” (Ludwig Wittgenstein, Philosophical Investigations, 1968, II xiv, 232e).</description>
+    </item>
+    <item>
+      <title>5-love-languages and Extrovert only exist in our language</title>
+      <link>http://localhost:1313/posts/opinion-extrovert/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/opinion-extrovert/</guid>
+      <description>The craving for generality is a philosophical sin.&#xA;Everyone is born with some difference. Features like hair colour, and sports/music gifts, likes salt/sweet, exist and don&amp;rsquo;t change much according to context, they are self-determined.&#xA;Obviously, there are people who are generally more talkative, and friendly to strangers and people who probably don&amp;rsquo;t talk much. Nobody denies that. By observing these things in real life, we created the concept of introvert and extrovert.</description>
+    </item>
+  </channel>
+</rss>

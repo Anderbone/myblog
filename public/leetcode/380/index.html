@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="https://leetcode.com/problems/insert-delete-getrandom-o1/description/
+Implement the RandomizedSet class:
+RandomizedSet() Initializes the RandomizedSet object. bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise. bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise. int getRandom() Returns a random element from the current set of elements (it&#39;s guaranteed that at least one element exists when this method is called).">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="380. Insert delete getRandom"/>
+<meta name="twitter:description" content="https://leetcode.com/problems/insert-delete-getrandom-o1/description/
+Implement the RandomizedSet class:
+RandomizedSet() Initializes the RandomizedSet object. bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise. bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise. int getRandom() Returns a random element from the current set of elements (it&#39;s guaranteed that at least one element exists when this method is called)."/>
+
+    <meta property="og:title" content="380. Insert delete getRandom" />
+<meta property="og:description" content="https://leetcode.com/problems/insert-delete-getrandom-o1/description/
+Implement the RandomizedSet class:
+RandomizedSet() Initializes the RandomizedSet object. bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise. bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise. int getRandom() Returns a random element from the current set of elements (it&#39;s guaranteed that at least one element exists when this method is called)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/leetcode/380/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2023-11-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-30T20:37:11+00:00" />
+
+
+
+
+    <title>
+  380. Insert delete getRandom · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/leetcode/380/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/leetcode/380/">
+              380. Insert delete getRandom
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2023-11-30T00:00:00Z'>
+                November 30, 2023
+              </time>
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/design/">design</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><a href="https://leetcode.com/problems/insert-delete-getrandom-o1/description/">https://leetcode.com/problems/insert-delete-getrandom-o1/description/</a></p>
+<p>Implement the RandomizedSet class:</p>
+<pre><code>RandomizedSet() Initializes the RandomizedSet object. 	
+bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise. 	
+bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise. 	
+int getRandom() Returns a random element from the current set of elements (it's guaranteed that at least one element exists when this method is called). Each element must have the **same probability** of being returned.You must implement the functions of the class such that each function works in **average** O(1) time complexity.
+</code></pre>
+<p><strong>Example 1:</strong>
+<strong>Input</strong> [&ldquo;RandomizedSet&rdquo;, &ldquo;insert&rdquo;, &ldquo;remove&rdquo;, &ldquo;insert&rdquo;, &ldquo;getRandom&rdquo;, &ldquo;remove&rdquo;, &ldquo;insert&rdquo;, &ldquo;getRandom&rdquo;] [[], [1], [2], [2], [], [1], [2], []] <strong>Output</strong> [null, true, false, true, 2, true, false, 2] <strong>Explanation</strong> RandomizedSet randomizedSet = new RandomizedSet(); randomizedSet.insert(1); // Inserts 1 to the set. Returns true as 1 was inserted successfully. randomizedSet.remove(2); // Returns false as 2 does not exist in the set. randomizedSet.insert(2); // Inserts 2 to the set, returns true. Set now contains [1,2]. randomizedSet.getRandom(); // getRandom() should return either 1 or 2 randomly. randomizedSet.remove(1); // Removes 1 from the set, returns true. Set now contains [2]. randomizedSet.insert(2); // 2 was already in the set, so return false. randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2.</p>
+<p><strong>Constraints:</strong></p>
+<pre><code>-231 &lt;= val &lt;= 231 - 1 	
+At most 2 * 105 calls will be made to insert, remove, and getRandom. 	
+There will be **at least one** element in the data structure when getRandom is called.
+</code></pre>
+<hr>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RandomizedSet</span> {
+</span></span><span style="display:flex;"><span>    Map<span style="color:#f92672">&lt;</span>Integer, Integer<span style="color:#f92672">&gt;</span> dic;
+</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list;
+</span></span><span style="display:flex;"><span>    Random r;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">RandomizedSet</span>() {
+</span></span><span style="display:flex;"><span>        dic <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        r <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> val) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (dic.<span style="color:#a6e22e">containsKey</span>(val)) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        dic.<span style="color:#a6e22e">put</span>(val, list.<span style="color:#a6e22e">size</span>());
+</span></span><span style="display:flex;"><span>        list.<span style="color:#a6e22e">add</span>(val);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">remove</span>(<span style="color:#66d9ef">int</span> val) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>dic.<span style="color:#a6e22e">containsKey</span>(val)) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> index <span style="color:#f92672">=</span> dic.<span style="color:#a6e22e">get</span>(val);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> lastEle <span style="color:#f92672">=</span> list.<span style="color:#a6e22e">get</span>(list.<span style="color:#a6e22e">size</span>() <span style="color:#f92672">-</span> 1);
+</span></span><span style="display:flex;"><span>        list.<span style="color:#a6e22e">set</span>(index, lastEle);
+</span></span><span style="display:flex;"><span>        dic.<span style="color:#a6e22e">put</span>(lastEle, index);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        list.<span style="color:#a6e22e">remove</span>(list.<span style="color:#a6e22e">size</span>() <span style="color:#f92672">-</span> 1);
+</span></span><span style="display:flex;"><span>        dic.<span style="color:#a6e22e">remove</span>(val);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getRandom</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> list.<span style="color:#a6e22e">get</span>(r.<span style="color:#a6e22e">nextInt</span>(list.<span style="color:#a6e22e">size</span>()));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code, same as below</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RandomizedSet</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>map <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, val: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> val <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>map:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>append(val)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>map[val] <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>data) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">remove</span>(self, val: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> val <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>map:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        index_to_rm <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>map[val]
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>map[self<span style="color:#f92672">.</span>data[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]] <span style="color:#f92672">=</span> index_to_rm
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data[index_to_rm], self<span style="color:#f92672">.</span>data[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], self<span style="color:#f92672">.</span>data[index_to_rm]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>map<span style="color:#f92672">.</span>pop(val)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getRandom</span>(self) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> random<span style="color:#f92672">.</span>choice(self<span style="color:#f92672">.</span>data)
+</span></span><span style="display:flex;"><span>        
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RandomizedSet</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data_map <span style="color:#f92672">=</span> {} <span style="color:#75715e"># dictionary, aka map, aka hashtable, aka hashmap</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data <span style="color:#f92672">=</span> [] <span style="color:#75715e"># list aka array</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, val: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># the problem indicates we need to return False if the item </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># is already in the RandomizedSet---checking if it&#39;s in the</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># dictionary is on average O(1) where as</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># checking the array is on average O(n)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> val <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>data_map:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># add the element to the dictionary. Setting the value as the </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># length of the list will accurately point to the index of the </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># new element. (len(some_list) is equal to the index of the last item +1)</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data_map[val] <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># add to the list</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>append(val)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">remove</span>(self, val: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># again, if the item is not in the data_map, return False. </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># we check the dictionary instead of the list due to lookup complexity</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> val <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>data_map:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># essentially, we&#39;re going to move the last element in the list </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># into the location of the element we want to remove. </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># this is a significantly more efficient operation than the obvious </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># solution of removing the item and shifting the values of every item </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># in the dicitionary to match their new position in the list</span>
+</span></span><span style="display:flex;"><span>        last_elem_in_list <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>        index_of_elem_to_remove <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data_map[val]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data_map[last_elem_in_list] <span style="color:#f92672">=</span> index_of_elem_to_remove
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data[index_of_elem_to_remove] <span style="color:#f92672">=</span> last_elem_in_list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># change the last element in the list to now be the value of the element </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># we want to remove</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> val
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># remove the last element in the list</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># remove the element to be removed from the dictionary</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>data_map<span style="color:#f92672">.</span>pop(val)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getRandom</span>(self) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># if running outside of leetcode, you need to `import random`.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># random.choice will randomly select an element from the list of data.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> random<span style="color:#f92672">.</span>choice(self<span style="color:#f92672">.</span>data)
+</span></span></code></pre></div><ul>
+<li>c, the last step, from set to list to use random, will bring a lot overhead</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RandomizedSet</span>: 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Initialize your data structure here.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>s <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, val: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Inserts a value to the set. Returns true if the set did not already contain the specified element.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> val <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>s:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>s<span style="color:#f92672">.</span>add(val)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">remove</span>(self, val: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Removes a value from the set. Returns true if the set contained the specified element.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> val <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>s:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>s<span style="color:#f92672">.</span>remove(val)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getRandom</span>(self) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Get a random element from the set.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> randint
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># return random.choice(list(self.s))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> list(self<span style="color:#f92672">.</span>s)[randint(<span style="color:#ae81ff">0</span>, len(self<span style="color:#f92672">.</span>s) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)]
+</span></span></code></pre></div>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+      </footer>
+    </article>
+
+    <div class="next-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/238/?ref=footer">« 238. Product of array except self</a>
+      
+    </div>
+    
+    <div class="previous-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/274/?ref=footer">274. H-Index »</a>
+      
+    </div>
+
+    
+  </section>
+
+    
+<section>
+  <ul>
+     
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+    <sup>96</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+    <sup>20</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+    <sup>24</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+    <sup>27</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+    <sup>14</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+    <sup>25</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+    <sup>17</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+    <sup>30</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+    <sup>41</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+    <sup>16</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+    <sup>19</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+    <sup>15</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+    <sup>13</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+    <sup>7</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+    <sup>23</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+    <sup>36</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+    <sup>9</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+    <sup>3</sup>
+          </div>
+    
+  
+  </ul>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devs on Jiyu</title>
+    <link>http://localhost:1313/dev/</link>
+    <description>Recent content in Devs on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Jan 2024 17:31:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Start here 11 - DB connection</title>
+      <link>http://localhost:1313/dev/spring-jdbc/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-jdbc/</guid>
+      <description>Here we show the 3 ways mentioned in chapter 11 of the book Spring Start Here. H2 in memory database, mysql database and mysql database with self defined data source.&#xA;H2 in memory connection pom.xml&#xA;&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.h2database&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;h2&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; Controller PurchaseController.java&#xA;package com.example.controllers; import com.example.model.Purchase; import com.example.repositories.PurchaseRepository; import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import java.util.List; @RestController @RequestMapping(&amp;#34;/purchase&amp;#34;) public class PurchaseController { private final PurchaseRepository purchaseRepository; public PurchaseController(PurchaseRepository purchaseRepository) { this.</description>
+    </item>
+    <item>
+      <title>Use Pocket(read it later) on Koreader</title>
+      <link>http://localhost:1313/dev/tool-koreader-pocket/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-koreader-pocket/</guid>
+      <description>Recently I found a brilliant tool that can help people to use Pocket on Koreader.&#xA;forum page link&#xA;github link&#xA;I run it on my Synology NAS.&#xA;Then add link https://pingu:443/odps as the ODPS catalog URL on your koreader, change the link accordingly to follow your web portals, enjoy!</description>
+    </item>
+    <item>
+      <title>Spring Start here 11 - 3 ways to consume RestAPI</title>
+      <link>http://localhost:1313/dev/spring-consume-rest/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-consume-rest/</guid>
+      <description>We use 3 differnt ways to consume the payments service.&#xA;Payments service to be consumed by 3 different clients PaymentsController.java&#xA;package com.example.controllers; import com.example.model.Payment; import org.springframework.http.HttpStatus; import org.springframework.http.ResponseEntity; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestHeader; import org.springframework.web.bind.annotation.RestController; import java.util.UUID; import java.util.logging.Logger; @RestController public class PaymentsController { private static Logger logger = Logger.getLogger(PaymentsController.class.getName()); @PostMapping(&amp;#34;/payment&amp;#34;) public ResponseEntity&amp;lt;Payment&amp;gt; createPayment( @RequestHeader String requestId, @RequestBody Payment payment ) { logger.info(&amp;#34;Received request with ID &amp;#34; + requestId + &amp;#34; ;Payment Amount: &amp;#34; + payment.</description>
+    </item>
+    <item>
+      <title>Most common design patterns in Java</title>
+      <link>http://localhost:1313/dev/java-design-pattern/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-design-pattern/</guid>
+      <description>Stragety The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.&#xA;Strategy is a behavioral design pattern that turns a set of behaviors into objects and makes them interchangeable inside original context object.&#xA;Has-A can be better than Is-A.&#xA;Java 8 brought the support of lambda functions, which can serve as simpler alternatives to the Strategy pattern.</description>
+    </item>
+    <item>
+      <title>Microservices with Spring Boot and Spring Cloud chap04 Docker</title>
+      <link>http://localhost:1313/dev/spring-microservices-docker/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-microservices-docker/</guid>
+      <description>Page 105 when running docker build, there&amp;rsquo;s an error: Docker: failed to export image: failed to create image: failed to get layer.&#xA;cd microservices/product-service docker build -t product-service . After adding &amp;lsquo;RUN true&amp;rsquo; between each COPY, problem solved.&#xA;FROM adoptopenjdk:16_36-jre-hotspot as builder WORKDIR extracted ADD ./build/libs/*.jar app.jar RUN java -Djarmode=layertools -jar app.jar extract FROM adoptopenjdk:16_36-jre-hotspot WORKDIR application COPY --from=builder extracted/dependencies/ ./ RUN true COPY --from=builder extracted/spring-boot-loader/ ./ RUN true COPY --from=builder extracted/snapshot-dependencies/ .</description>
+    </item>
+    <item>
+      <title>Spring In Action 07 - RESTful API</title>
+      <link>http://localhost:1313/dev/spring07-restful/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring07-restful/</guid>
+      <description>Based on Spring in action 6th version github repo.&#xA;RESTful controllers return a 404 status Here we can return Optional&amp;lt;Taco&amp;gt; directly, but it will return null if id doesn&amp;rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:&#xA;@GetMapping(&amp;#34;/{id}&amp;#34;) public ResponseEntity&amp;lt;Taco&amp;gt; tacoById(@PathVariable(&amp;#34;id&amp;#34;) Long id) { return tacoRepo.findById(id).map(taco -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(taco, HttpStatus.OK)) .orElseGet(() -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&amp;rsquo;s in the rest client test but not in the codebase.</description>
+    </item>
+    <item>
+      <title>leetcode questions: Binary Search</title>
+      <link>http://localhost:1313/dev/lee-binary-search/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-binary-search/</guid>
+      <description>bisect.bisect_left(a, x) https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS O(logn) greater than or equal to the targeted value. If all elements are less than x, return len(a) l&amp;lt;=r or l &amp;lt; r ans1 if you discard mid for the next iteration (i.e. l = mid+1 or r = mid-1) then use while (l &amp;lt;= r). if you keep mid for the next iteration (i.e. l = mid or r = mid) then use while (l &amp;lt; r) ans2 if you are returning from inside the loop, use left &amp;lt;= right if you are reducing the search space, use left &amp;lt; right and finally return a[left] template 1 can be determined by accessing a single index in the array.</description>
+    </item>
+    <item>
+      <title>Java frequently used data structures and methods for leetcode</title>
+      <link>http://localhost:1313/dev/lee-java-data-structure/</link>
+      <pubDate>Sat, 09 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-java-data-structure/</guid>
+      <description>Array declare int[] a = new int[100]; int[] b = {4,1,5}; array = new int[]{1,2,3}; two-dimensional code int a[][] = {{1,2}, {3,4}}; code int array[][] = new int[3][]; array[0] = new int[3]; array[1] = new int[2]; array[2] = new int[5]; arr.length, a field on any array, the capacity, not the number of elements no () in the end, a final variable length, length(), size() .length is a field, containing the capacity (NOT the number of elements the array contains at the moment) of arrays.</description>
+    </item>
+    <item>
+      <title>leetcode: Trie</title>
+      <link>http://localhost:1313/dev/lee-trie/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-trie/</guid>
+      <description>Basic A Trie is a special form of a Nary tree. Typically, a trie is used to store strings. Each Trie node represents a string (a prefix). Each node might have several children nodes while the paths to different children nodes represent different characters. And the strings the child nodes represent will be the origin string represented by the node itself plus the character on the path.&#xA;Here is an example of a trie: In the example, the value we mark in each node is the string the node represents.</description>
+    </item>
+    <item>
+      <title>How to debug flask in docker with intellij on Linux</title>
+      <link>http://localhost:1313/dev/flask-docker-debug/</link>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/flask-docker-debug/</guid>
+      <description>Reference: https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-flask-up-and-running/&#xA;Project to use in this page : https://github.com/wikimedia/analytics-quarry-web&#xA;Clone it https://gerrit.wikimedia.org/r/admin/repos/analytics/quarry/web&#xA;git clone &amp;#34;ssh://jiyu@gerrit.wikimedia.org:29418/analytics/quarry/web&amp;#34; &amp;amp;&amp;amp; scp -p -P 29418 jiyu@gerrit.wikimedia.org:hooks/commit-msg &amp;#34;web/.git/hooks/&amp;#34; Set up git-review&#xA;git review -s --verbose I use intellij but PyCharm should be more or less the same.&#xA;Make sure your docker is configured correctly: https://docs.docker.com/engine/install/linux-postinstall/&#xA;Add remote interpreter First let&amp;rsquo;s run by default to make sure it&amp;rsquo;s working. docker-compose build &amp;amp;&amp;amp; docker-compose up&#xA;Notice I changed the file name from quarry.</description>
+    </item>
+    <item>
+      <title>How to set up a shortcut to open/track/minimise an app on Linux</title>
+      <link>http://localhost:1313/dev/tool-global-shortcut/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-global-shortcut/</guid>
+      <description>For e.g. with yakuake, by default the shortcut is F12, you can open it or track it anywhere, just the same window. If it&amp;rsquo;s focused, press F12 again gonna minimize it.&#xA;Now let&amp;rsquo;s learn how to set up such a shortcut for our own whatever apps on Linux.&#xA;You need to have xorg-xprop, xdotool, wmctrl, procps-ng installed.&#xA;You&amp;rsquo;d want to set the terminal variable to your app&amp;rsquo;s launch command, and set the wm_class variable based on what you see when you run xprop WM_CLASS and click on your app window.</description>
+    </item>
+    <item>
+      <title>Manjaro new installation personal config</title>
+      <link>http://localhost:1313/dev/tool-manjaro-install/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-manjaro-install/</guid>
+      <description>Configure trackball: https://yanjiyu.com/dev/tool-deftpro/&#xA;system&#xA;sudo pacman-mirrors -f &amp;amp;&amp;amp; sudo pacman -Syyu sudo pacman -Syu base-devel --needed sudo pacman -S yay go texlive-most konversation docker docker-compose gvim nodejs npm nvm sudo systemctl enable --now fstrim.timer personal&#xA;yay -S visual-studio-code-bin yay -S dynalist yay -S dropbox yay -S stretchly yay -S todoist-appimage yay -S jetbrains-toolbox yay -S autokey-git yay -S flameshot yay -S eudic yay -S freedownloadmanager yay -S git-review pip install --user tldr git</description>
+    </item>
+    <item>
+      <title>How to configure deft pro track ball on Linux</title>
+      <link>http://localhost:1313/dev/tool-deftpro/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-deftpro/</guid>
+      <description>I use manjaro here.&#xA;Create a conf file, put it in /usr/share/X11/xorg.conf.d/99-trackball.conf&#xA;Notice the button mapping, instead of number 10, it&amp;rsquo;s 1, which means I use Fn1 button as Left button; then 2, means at 11 Fn2 button will be used as Middle button.&#xA;Section &amp;#34;InputClass&amp;#34; # DEFT PRO Buttons: # 1: Left button # 2: Middle button (wheel click) # 3: Right button # 4: Wheel scroll up # 5: Wheel scroll down # 6: Wheel tilt left # 7: Wheel tilt right # 8: Back button # 9: Forward button # 10: Fn1 (button on the left of the ball) # 11: Fn2 (button on right most) # 12: Fn3 (button on the above of the slide switch) Identifier &amp;#34;Elecom DEFT Pro Trackball&amp;#34; MatchProduct &amp;#34;DEFT Pro TrackBall&amp;#34; Driver &amp;#34;libinput&amp;#34; Option &amp;#34;ScrollMethod&amp;#34; &amp;#34;button&amp;#34; Option &amp;#34;ScrollButton&amp;#34; &amp;#34;9&amp;#34; Option&#x9;&amp;#34;MiddleEmulation&amp;#34; &amp;#34;on&amp;#34; Option &amp;#34;ButtonMapping&amp;#34; &amp;#34;1 2 3 4 5 6 7 8 9 1 2 12&amp;#34; EndSection I also found a way to use button lock, so forward button gonna trigger whether we use the ball as a scroll button.</description>
+    </item>
+    <item>
+      <title>leetcode questions: Bit</title>
+      <link>http://localhost:1313/dev/lee-bit/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-bit/</guid>
+      <description>common tricks x &amp;amp; (-x) to isolate/get the rightmost 1-bit This operation reverts all bits of x except the rightmost 1-bit.&#xA;Hence, x and -x have just one bit in common - the rightmost 1-bit. That means that x &amp;amp; (-x) would keep that rightmost 1-bit and set all the other bits to 0. x &amp;amp; (x - 1) is a way to set the rightmost 1-bit to zero. To subtract 1 means to change the rightmost 1-bit to 0 and to set all the lower bits to 1.</description>
+    </item>
+    <item>
+      <title>leetcode: mini spanning tree, single src shortest path, topological</title>
+      <link>http://localhost:1313/dev/lee-graph-advanced/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-graph-advanced/</guid>
+      <description>Minimum spanning tree A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”. Min Cost to Connect All Points - LeetCode&#xA;You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.</description>
+    </item>
+    <item>
+      <title>leetcode questions: Backtracking</title>
+      <link>http://localhost:1313/dev/lee-backtracking/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-backtracking/</guid>
+      <description>Template def backtrack(candidate): if find_solution(candidate): output(candidate) return # iterate all possible candidates. for next_candidate in list_of_candidates: if is_valid(next_candidate): # try this partial candidate solution place(next_candidate) # given the candidate, explore further. backtrack(next_candidate) # backtrack remove(next_candidate) 17. Letter Combinations of a Phone Number Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.&#xA;A mapping of digit to letters (just like on the telephone buttons) is given below.</description>
+    </item>
+    <item>
+      <title>leetcode questions: BFS</title>
+      <link>http://localhost:1313/dev/lee-bfs/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-bfs/</guid>
+      <description>BFS Template /** * Return the length of the shortest path between root and target node. */ int BFS(Node root, Node target) { Queue&amp;lt;Node&amp;gt; queue; // store all nodes which are waiting to be processed Set&amp;lt;Node&amp;gt; visited; // store all the nodes that we&amp;#39;ve visited int step = 0; // number of steps neeeded from root to current node // initialize add root to queue; add root to visited; // BFS while (queue is not empty) { step = step + 1; // iterate the nodes which are already in the queue int size = queue.</description>
+    </item>
+    <item>
+      <title>leetcode questions: DFS</title>
+      <link>http://localhost:1313/dev/lee-dfs/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-dfs/</guid>
+      <description>DFS Templates Template 1:&#xA;/* * Return true if there is a path from cur to target. */ boolean DFS(Node cur, Node target, Set&amp;lt;Node&amp;gt; visited) { return true if cur is target; for (next : each neighbor of cur) { if (next is not in visited) { add next to visted; return true if DFS(next, target, visited) == true; } } return false; } Template 2 using an explicit stack to avoid stack overflow:</description>
+    </item>
+    <item>
+      <title>leetcode questions: dynamic programming</title>
+      <link>http://localhost:1313/dev/lee-dp/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-dp/</guid>
+      <description>Intro Good video: Dynamic Programming - Learn to Solve Algorithmic Problems &amp;amp; Coding Challenges - YouTube&#xA;DP is a style of coding where you store the results of your algorithm in a data structure while it runs.&#xA;dynamic programming - What is the difference between bottom-up and top-down? - Stack Overflow&#xA;code function dp(dp_state, memo_dict) { // check if we have seen this dp_state if dp_state in memo_dict return memo_dict[dp_state] // base case (a case that we know the answer for already) such as dp_state is empty if dp_state is the base cases return things like 0 or null calculate dp(dp_state) from dp(other_state) save dp_state and the result into memo_dict } function answerToProblem(input) { return dp(start_state, empty_memo_dict) } The same subproblem may reoccur compared to divide-and-conquer, a key to solve is to break the problem into subproblems such that</description>
+    </item>
+    <item>
+      <title>Modern Java in Action code configuration in intellij</title>
+      <link>http://localhost:1313/dev/java-modern-java-intellij/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-modern-java-intellij/</guid>
+      <description>There&amp;rsquo;s source code in this page.&#xA;Set up the language level to 9 and then compile works for me.&#xA;This is the pom works for me.&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;manning&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;modernjavainaction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0&amp;lt;/version&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.openjdk.jmh&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmh-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.21&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.openjdk.jmh&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmh-generator-annprocess&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.21&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.reactivex.rxjava2&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;rxjava&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.typesafe.akka&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;akka-actor_2.12&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.typesafe.akka&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;akka-stream_2.12&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.</description>
+    </item>
+    <item>
+      <title>Hugo: How to add last update</title>
+      <link>http://localhost:1313/dev/hugo-last-update/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-last-update/</guid>
+      <description>Under layouts/posts/single.html, check if the day publish is the same day we update, don&amp;rsquo;t show the last udpated.&#xA;&amp;lt;div class=&amp;#34;date&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;posted-on&amp;#34;&amp;gt; &amp;lt;i class=&amp;#34;fas fa-calendar&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;time datetime=&amp;#39;{{ .Date.Format &amp;#34;2006-01-02T15:04:05Z07:00&amp;#34; }}&amp;#39;&amp;gt; {{ .Date.Format (.Site.Params.dateFormat | default &amp;#34;January 2, 2006&amp;#34; ) }} &amp;lt;/time&amp;gt; &amp;lt;/span&amp;gt; {{ if ne .Date.YearDay .Lastmod.YearDay }} &amp;lt;span class=&amp;#34;post-on&amp;#34;&amp;gt; &amp;lt;i class=&amp;#34;fas fa-calendar&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;time datetime=&amp;#39;{{ .Date.Format &amp;#34;2006-01-02T15:04:05Z07:00&amp;#34; }}&amp;#39;&amp;gt; Last updated: {{ dateFormat ( or $.Site.Params.dateFormat &amp;#34;2006, Jan 02&amp;#34; ) $.Page.Params.LastMod }} &amp;lt;/time&amp;gt; &amp;lt;/span&amp;gt; {{ end }} &amp;lt;/div&amp;gt; </description>
+    </item>
+    <item>
+      <title>Python to exe with win10 notification</title>
+      <link>http://localhost:1313/dev/tool-pytoexe/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-pytoexe/</guid>
+      <description>With this auto-py-to-txe, it&amp;rsquo;s easy to convert your py to a self-contained exe.&#xA;I want to add a win10 notification, at first I tried win10toast.ToastNotifier(), it works fine in py but when I convert it to exe, it&amp;rsquo;s no longer working anymore.&#xA;Then I tried plyer.notification, which works fine. Notince if you want to build a single exe file without folder, and you have resouce like pictures, you need to write a resouce_path function.</description>
+    </item>
+    <item>
+      <title>Auto close quotes for markdown in VsCode</title>
+      <link>http://localhost:1313/dev/tool-vscode-markdown-autoclosing/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-vscode-markdown-autoclosing/</guid>
+      <description>Sometimes I want to auto-close double quotes and ` in markdown mode.&#xA;In settings we have such settings but they are not working in plain text files like makrdown.&#xA;Find &amp;ldquo;language-configuration.json&amp;rdquo; under markdown-basic folder. My path: C:\Program Files\Microsoft VS Code\resources\app\extensions\markdown-basics\language-configuration.json&#xA;Add what you want auto close and save it.&#xA;&amp;#34;autoClosingPairs&amp;#34;: [ { &amp;#34;open&amp;#34;: &amp;#34;{&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;}&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;`&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;`&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;\&amp;#34;&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;\&amp;#34;&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;[&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;]&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;(&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;)&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;&amp;lt;&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;&amp;gt;&amp;#34;, &amp;#34;notIn&amp;#34;: [ &amp;#34;string&amp;#34; ] } ], BTW use Ctrl+M Ctrl+C you could generate a code block in markdown.</description>
+    </item>
+    <item>
+      <title>JSP and Servlets</title>
+      <link>http://localhost:1313/dev/java-jsp/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-jsp/</guid>
+      <description>Based on udemy course&#xA;JSP Basic concept JSP: similar to html page, with some Java code. It&amp;rsquo;s processed on the server, results of Java code included in HTML returned to browser&#xA;jsp expression&amp;lt;%= new java.util.Date() %&amp;gt; Obj, &amp;lt;%= new String(&amp;ldquo;hello&amp;rdquo;).toUpperCase() %&amp;gt; number, &amp;lt;%= 25*4 %&amp;gt; boolean, &amp;lt;%= 5&amp;gt;6 %&amp;gt; jsp scriptlet &amp;lt;% some Java %&amp;gt; out.println() to print. Minimisze the use here. jsp declaration &amp;lt;%! variable or method declaration%&amp;gt; &amp;lt;% String lower(String data){ return data.</description>
+    </item>
+    <item>
+      <title>Spring &amp; Hibernate project on udemy: intellij setting up</title>
+      <link>http://localhost:1313/dev/spring-hibernate-udemy/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-hibernate-udemy/</guid>
+      <description>Udemy course link&#xA;In section 28, we start to build a real database web app. Here we use intellij with maven to set it up.&#xA;Download maven config, link Unzip and use intellij to open the inner folder, import as Maven project. Suppose you set up the database correctly, update code in TestDbServlet.java if you use version 8+: String jdbcUrl = &amp;#34;jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;amp;serverTimezone=UTC&amp;#34;; String driver = &amp;#34;com.mysql.cj.jdbc.Driver&amp;#34;; Project settings as below:</description>
+    </item>
+    <item>
+      <title>Leetcode: LinkedList in Python</title>
+      <link>http://localhost:1313/dev/lee-linkedlist/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-linkedlist/</guid>
+      <description>create a dummy node Merge two linked lists.&#xA;# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&amp;gt; ListNode: pre = ListNode(0) ans = pre while(l1 != None or l2 != None): if l1 == None or (l2 != None and l2.val &amp;lt;= l1.val): pre.next = l2 l2 = l2.next pre = pre.</description>
+    </item>
+    <item>
+      <title>Python list/dict functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-list-dict/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-list-dict/</guid>
+      <description>List len(array) : length of array list.indexof(obj) enumerate(array) : adds counter at the beginning. for count, item in enumberate([&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]) # 0x 1y 2z range(0,len(mylist)1,2) range(0,3), is 0,1,2 for i in reversed(range(len(A))) nums.append(val), nums.remove(val), nums.reverse() nums.extend(nums2) list.insert(index, obj) list.pop() default pop index is -1, remove the last one nums[:] copy the value within function: b[:]=a .copy is equals to b[:] temp = self.original[:] copy.deepcopy could copy nested list import copy , copy.</description>
+    </item>
+    <item>
+      <title>Python String functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-string/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-string/</guid>
+      <description> print(f&#39;best RF score: {grid.best_score_:.3f}&#39;) str.index(sub[,start[,end]]) str.strip() remove spaces at the beginning and the end strip(str-not-want) lower() print(str.upper()) print(str.lower()) print(str.capitalize()) # Only first letter big print(str.title()) # This Is A Title s.find(c), s.rfind(c) &amp;ldquo;hello&amp;rdquo;.find(&amp;ldquo;l&amp;rdquo;) -&amp;gt; 2 &amp;ldquo;hello&amp;rdquo;.rfind(&amp;ldquo;l&amp;rdquo;) -&amp;gt; 3 s.split(&#39;&#39;) a = &#39;&#39;.join(a.split()) remove blank replace(old, new[, max]) &#39;&#39;.join(str(e) for e in list) list to str s.isdigit(), s.isalpha s.isalnum() # is num or alpha if i.lstrip(&amp;rsquo;-&amp;rsquo;).isdigit(): check number&amp;lt;0 ord , chr ord(&#39;A&#39;) get 65 chr(65) get A a = (chr(ord(&#39;0&#39;) + x % 10)) x:123 get: str type &amp;lsquo;3&amp;rsquo; </description>
+    </item>
+    <item>
+      <title>Using latex with VsCode</title>
+      <link>http://localhost:1313/dev/tool-latex-vscode/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-latex-vscode/</guid>
+      <description>Refer&#xA;On windows:&#xA;Install texLive.&#xA;Add the path to environment variable. Install &amp;ldquo;Latex workship&amp;rdquo; on vscode.&#xA;Open your tex file, View Latex PDF File, you are ready to go.&#xA;On manjaro:&#xA;sudo pacman -S textlive-most </description>
+    </item>
+    <item>
+      <title>Automated Mongodb github Backups</title>
+      <link>http://localhost:1313/dev/tool-autobackup/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-autobackup/</guid>
+      <description>refer: https://github.com/VeliovGroup/ostrio/blob/master/tutorials/linux/security/automated-backups.md&#xA;A script to automatically backup your mongodb database and related logs etc., then commit to your github daily. It also deletes your old backup that older than 7 days.&#xA;#!/bin/bash # Change Directory to repository cd /root/backup/ DATE=$(date +%Y%m%d) DATEOLD=`date -d &amp;#34;${DATE} -7 day&amp;#34; +%Y%m%d` mongodump \ -d datadb \ -u xx \ -p xx \ --gzip \ --archive=&amp;#34;/root/backup/mongodb.$DATE.gz&amp;#34; tar -zcf &amp;#34;/root/backup/syslog.$DATE.tar.gz&amp;#34; -C / var/log/syslog tar -zcf &amp;#34;/root/backup/auth.$DATE.tar.gz&amp;#34; -C / var/log/auth.</description>
+    </item>
+    <item>
+      <title>Hugo website optimization: Table of Contents</title>
+      <link>http://localhost:1313/dev/hugo-toc/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-toc/</guid>
+      <description>This TOC plugin using bootstrap is very easy to use in Hugo.&#xA;Usage Set up Bootstrap v4. For Bootstrap v3, see the older instructions. Include the Bootstrap Table of Contents stylesheet and JavaScript file. &amp;lt;!-- add after bootstrap.min.css --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css&amp;#34; /&amp;gt; &amp;lt;!-- add after bootstrap.min.js --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Put it simple, just edit layouts/_default/baseof.html. Add some scripts before the end of body, and add 2 links in the beginning.</description>
+    </item>
+    <item>
+      <title>Install VMware Workstation on Manjaro</title>
+      <link>http://localhost:1313/dev/tool-installvm/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-installvm/</guid>
+      <description>vmmon error After installation, you can&amp;rsquo;t open VMware directly. It will show an error:&#xA;VMWare could not find module ‘vmmon’, Please Make Sure That The Kernel Module &amp;lsquo;vmmon&amp;rsquo; Is Loaded.&#xA;manjaro wiki&#xA;The AUR package vmware-workstation will install VMWare Workstation and the dkms modules needed to run it.&#xA;It can be installed with:&#xA;pamac build vmware-workstation After installing, either reboot, or load the required modules&#xA;sudo modprobe -a vmw_vmci vmmon There are three services that can be optionally be enabled:</description>
+    </item>
+    <item>
+      <title>Hugo: Copy-code button, Math Katex, Google analytics</title>
+      <link>http://localhost:1313/dev/hugo-copy-code/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-copy-code/</guid>
+      <description>Recently I did several changes on hugo.&#xA;Code highlight There are many ways to make the syntax highlight better, for this hugo-coder theme, all we need to do is delete those pygments related config in config.toml. See the hugo doc to find more options.&#xA;Copy code button Reference I just changed the css to make the button within the code.&#xA;.copy-code-button { color: #c4c5c6; background-color: #444444; /*border: 2px solid;*/ border-width: 0 0 0 0; /*border-left-color: rgba(32, 226, 226, 0.</description>
+    </item>
+    <item>
+      <title>Amazing ultimate note tool: Dynalist</title>
+      <link>http://localhost:1313/dev/tool-dynalist/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-dynalist/</guid>
+      <description>Dynalist is one of the most helpful tools for me nowadays, no matter code, work notes, daily notes such as training records, prayer list etc. All stuff can be handled within it.&#xA;I used to use OneNote when I was in University, everyone knows how powerful it is. The downside is obvious, it&amp;rsquo;s too heavy. I need a better tool to write everything down quickly and jump to everywhere with a keyboard.</description>
+    </item>
+    <item>
+      <title>Autohotkey/Autokey scripts for Dynalist</title>
+      <link>http://localhost:1313/dev/tool-autohotkey/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-autohotkey/</guid>
+      <description>Autohotkey Picture Suppose the picture link is in your clipboard, to put a picture in Dynalist(or any markdown editor) In your clipboard you have a picture link like https://i.imgur.com/XH472FR.png&#xA;Click Alt+P, you got&#xA;![](https://i.imgur.com/XH472FR.png) !p:: Send, {!}[]() Sleep, 50 Send, {Left 1} Sleep, 50 Send ^v return Code In your clipboard, you have print(&amp;lsquo;Hello&amp;rsquo;). Click win+` in dynalist next to test, you got this nice result.&#xA;#`:: Send {Enter} Send {Tab} Send, code Send +{Enter} Send, ```````````` Sleep, 50 Send, {Left 3} Send ^v return Autokey It&amp;rsquo;s similar as above, just on Linux.</description>
+    </item>
+    <item>
+      <title>Spring In Action 02 - Developing web app</title>
+      <link>http://localhost:1313/dev/spring02-web/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring02-web/</guid>
+      <description>This chapter focues on Spring web framework without database.&#xA;2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful).</description>
+    </item>
+    <item>
+      <title>Spring In Action 03 - Data</title>
+      <link>http://localhost:1313/dev/spring03-data/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring03-data/</guid>
+      <description>JDBC at first and JPA later.&#xA;3.1 Reading and writing data with JDBC Spring JDBC support is rooted in the JdbcTemplate class. JdbcTemplate provides a means by which developers can perform SQL operations against a relational database without all the ceremony and boilerplate typically required when working with JDBC.&#xA;3.2 Persisting data with Spring Data JPA Summary Spring’s JdbcTemplate greatly simplifies working with JDBC. PreparedStatementCreator and KeyHolder can be used together when you need to know the value of a database-generated ID.</description>
+    </item>
+    <item>
+      <title>Spring In Action 01 - Intro</title>
+      <link>http://localhost:1313/dev/spring01-intro/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring01-intro/</guid>
+      <description>Follow the book: Spring in Action fifth version. Code repo: github&#xA;1.1 What is Spring? At its core, Spring offers a container, often referred to as the Spring application context, that creates and manages application components. These components, or beans, are wired together inside the Spring application context to make a complete application, much like bricks, mortar, timber, nails, plumbing, and wiring are bound together to make a house.&#xA;The act of wiring beans together is based on a pattern known as dependency injection (DI).</description>
+    </item>
+    <item>
+      <title>Data mining module outline</title>
+      <link>http://localhost:1313/dev/warwick-909/</link>
+      <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-909/</guid>
+      <description>For Warwick University module 909, data mining.&#xA;1. intro machine learning framework define a set of functions define a fitting criteria pick the best function machine learning learn a function of: $f:x \to{y}$ y is discrete: classification y is continuous: regression roadmap supervised learning regression classification logistic regression, SVM, neural networks unsupervised learning clustering kmeans, AHC dimension reduction, PCA ensemble learning transfer learning 2. data defination collection of data objects and their attributes attribute is a property or characteristic of an object discrete/continuous nominal: values are distinct symbols ID, eye color, zip codes ordinal: impose order on values but no distance between values defined military rank, exam grade, rating interval: has a fixed size of interval between data points year, temperature ratio: same as interval,0 means does not exist weight, age data quality noise outliers missing values duplicate 3.</description>
+    </item>
+    <item>
+      <title>Data analysis module outline</title>
+      <link>http://localhost:1313/dev/warwick-910/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-910/</guid>
+      <description>For Warwick University module 910, Data analysis.&#xA;2. math back ground why frequency/rank for heavy tailed? The frequency/rank plot because the CCDF is a monotonous function. Moreover, unlike the PDF function, the CCDF displays a significantly lower variability in the tail.&#xA;independence: event and random variables HH and TT not independent because the mere occurrence of one would tell us for sure that the other can’t happen. Conditional Probability Heavy-Tailed Distributions roughly non-negligible probabilities at large values far to the right.</description>
+    </item>
+    <item>
+      <title>High-performance computing module outline</title>
+      <link>http://localhost:1313/dev/warwick-402/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-402/</guid>
+      <description>For Warwick University module 402, high performance computation.&#xA;1.Fundamentals 1.1 the technologies needed to support HPC computer architecture CPU, memory VLSI, transistors multicore, to ease the density(temperature etc.) GPU networking bandwidth, latency communication protocols network topology compilers identify inefficient implementations make use of the characteristics of the computer arcitecture choose a suitable compiler for a certain architecture algorithms design parallel paradigm of parallel programming workload and resource manager task scheduling and resource allocation metrcs 1.</description>
+    </item>
+    <item>
+      <title>Natural language processing module outline</title>
+      <link>http://localhost:1313/dev/warwick-918/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-918/</guid>
+      <description>For Warwick University module 918, natural language processing.&#xA;Question 1: Regular expressions, linguistic preprocessing, minimum edit distance algorithm. 1 regular expression remember use \.&#xA;false positive type1: have output, shouldn&amp;rsquo;t. precision = tp/(tp+fp)&#xA;false negatives(type 2): haven&amp;rsquo;t output, but should minimise, increase recall recall = tp/(tp+fn)&#xA;F1= 2 precision* recall/(precision+recall)&#xA;2 text preprocessing vocabulary size: the number of different types of tokens in the text.&#xA;All need 3 steps tokenizing/segmentting words in running text normalizing word formats segmenting sentences in running text Issues of tokenisation What counts as a word is usually application specific.</description>
+    </item>
+    <item>
+      <title>Sensor network module outline</title>
+      <link>http://localhost:1313/dev/warwick-912/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-912/</guid>
+      <description>For Warwick University module 912, sensor network.&#xA;Link quality estimation 2 link monitor active A node monitors the links to its neighbours by sending probe packets. passive Passive link monitoring exploits existing traffic without incurring additional communication overhead. A node listens to transmitted packets (even if these packets are not addressed to it). Process called (over-hearing). can also listen to ack sent by neighbours. lack up-to-date. Data link layer 3 hidden, exposed CSMA/CA MACAW IEEE802.</description>
+    </item>
+    <item>
+      <title>Leetcode: Array questions with Python</title>
+      <link>http://localhost:1313/dev/lee-array/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-array/</guid>
+      <description>134.Gas Station There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</description>
+    </item>
+  </channel>
+</rss>

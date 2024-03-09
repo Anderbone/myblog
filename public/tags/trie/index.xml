@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trie on Jiyu</title>
+    <link>http://localhost:1313/tags/trie/</link>
+    <description>Recent content in Trie on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jun 2022 16:47:31 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/trie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>820. Short Encoding of Words</title>
+      <link>http://localhost:1313/leetcode/820/</link>
+      <pubDate>Mon, 20 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/820/</guid>
+      <description>https://leetcode.com/problems/short-encoding-of-words/&#xA;A valid encoding of an array of words is any reference string s and array of indices indices such that:&#xA;words.length == indices.length The reference string s ends with the &#39;#&#39; character. For each index indices[i], the **substring** of s starting from indices[i] and up to (but not including) the next &#39;#&#39; character is equal to words[i].Given an array of words, return __the **length of the shortest reference string** __s__ possible of any **valid encoding** of __words__.</description>
+    </item>
+    <item>
+      <title>1268. Search Suggestions System</title>
+      <link>http://localhost:1313/leetcode/1268/</link>
+      <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1268/</guid>
+      <description>https://leetcode.com/problems/search-suggestions-system/&#xA;You are given an array of strings products and a string searchWord. Design a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products. Return a list of lists of the suggested products after each character of searchWord is typed.</description>
+    </item>
+    <item>
+      <title>208. Implement Trie (Prefix Tree)</title>
+      <link>http://localhost:1313/leetcode/208/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/208/</guid>
+      <description>https://leetcode.com/problems/implement-trie-prefix-tree/&#xA;A trie (pronounced as &amp;ldquo;try&amp;rdquo;) or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker. Implement the Trie class:&#xA;Trie() Initializes the trie object. void insert(String word) Inserts the string word into the trie. boolean search(String word) Returns true if the string word is in the trie (i.</description>
+    </item>
+    <item>
+      <title>745. Prefix and Suffix Search</title>
+      <link>http://localhost:1313/leetcode/745/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/745/</guid>
+      <description>https://leetcode.com/problems/prefix-and-suffix-search/&#xA;Design a special dictionary with some words that searchs the words in it by a prefix and a suffix. Implement the WordFilter class:&#xA;WordFilter(string[] words) Initializes the object with the words in the dictionary. f(string prefix, string suffix) Returns __the index of the word in the dictionary,__ which has the prefix prefix and the suffix suffix. If there is more than one valid index, return **the largest** of them. If there is no such word in the dictionary, return -1.</description>
+    </item>
+    <item>
+      <title>leetcode: Trie</title>
+      <link>http://localhost:1313/dev/lee-trie/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-trie/</guid>
+      <description>Basic A Trie is a special form of a Nary tree. Typically, a trie is used to store strings. Each Trie node represents a string (a prefix). Each node might have several children nodes while the paths to different children nodes represent different characters. And the strings the child nodes represent will be the origin string represented by the node itself plus the character on the path.&#xA;Here is an example of a trie: In the example, the value we mark in each node is the string the node represents.</description>
+    </item>
+    <item>
+      <title>1166. Design File System</title>
+      <link>http://localhost:1313/leetcode/1166/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1166/</guid>
+      <description>Design File System - LeetCode&#xA;You are asked to design a file system that allows you to create new paths and associate them with different values. The format of a path is one or more concatenated strings of the form: / followed by one or more lowercase English letters. For example, &amp;ldquo;/leetcode&amp;rdquo; and &amp;ldquo;/leetcode/problems&amp;rdquo; are valid paths while an empty string &amp;quot;&amp;quot; and &amp;ldquo;/&amp;rdquo; are not. Implement the FileSystem class:</description>
+    </item>
+    <item>
+      <title>211. Design Add and Search Words Data Structure </title>
+      <link>http://localhost:1313/leetcode/211/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/211/</guid>
+      <description>Design Add and Search Words Data Structure - LeetCode&#xA;Design a data structure that supports adding new words and finding if a string matches any previously added string. Implement the WordDictionary class:&#xA;WordDictionary() Initializes the object. void addWord(word) Adds word to the data structure, it can be matched later. bool search(word) Returns true if there is any string in the data structure that matches word or false&#xA;otherwise. word may contain dots &amp;lsquo;.</description>
+    </item>
+    <item>
+      <title>421. Maximum XOR of Two Numbers in an Array </title>
+      <link>http://localhost:1313/leetcode/421/</link>
+      <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/421/</guid>
+      <description>Maximum XOR of Two Numbers in an Array - LeetCode&#xA;Given an integer array nums, return __the maximum result of __nums[i] XOR nums[j], where 0 &amp;lt;= i &amp;lt;= j &amp;lt; n.&#xA;Example 1: Input: nums = [3,10,5,25,2,8] Output: 28 Explanation: The maximum result is 5 XOR 25 = 28.&#xA;Example 2: Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70] Output: 127&#xA;Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 105 0 &amp;lt;= nums[i] &amp;lt;= 231 - 1</description>
+    </item>
+    <item>
+      <title>588. Design In-Memory File System </title>
+      <link>http://localhost:1313/leetcode/588/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/588/</guid>
+      <description>Design In-Memory File System - LeetCode&#xA;Design a data structure that simulates an in-memory file system. Implement the FileSystem class:&#xA;FileSystem() Initializes the object of the system. List ls(String path) If path is a file path, returns a list that only contains this file&amp;rsquo;s name. If path is a directory path, returns the list of file and directory names in this directory.The answer should in lexicographic order. void mkdir(String path) Makes a new directory according to the given path.</description>
+    </item>
+    <item>
+      <title>1032. Stream of Characters</title>
+      <link>http://localhost:1313/leetcode/1032/</link>
+      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1032/</guid>
+      <description>Design an algorithm that accepts a stream of characters and checks if a suffix of these characters is a string of a given array of strings words. For example, if words = [&amp;ldquo;abc&amp;rdquo;, &amp;ldquo;xyz&amp;rdquo;] and the stream added the four characters (one by one) &amp;lsquo;a&amp;rsquo;, &amp;lsquo;x&amp;rsquo;, &amp;lsquo;y&amp;rsquo;, and &amp;lsquo;z&amp;rsquo;, your algorithm should detect that the suffix &amp;ldquo;xyz&amp;rdquo; of the characters &amp;ldquo;axyz&amp;rdquo; matches &amp;ldquo;xyz&amp;rdquo; from words. Implement the StreamChecker class:&#xA;StreamChecker(String[] words) Initializes the object with the strings array words.</description>
+    </item>
+  </channel>
+</rss>

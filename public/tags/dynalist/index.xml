@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynalist on Jiyu</title>
+    <link>http://localhost:1313/tags/dynalist/</link>
+    <description>Recent content in Dynalist on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 May 2022 20:03:21 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dynalist/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: How to add last update</title>
+      <link>http://localhost:1313/dev/hugo-last-update/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-last-update/</guid>
+      <description>Under layouts/posts/single.html, check if the day publish is the same day we update, don&amp;rsquo;t show the last udpated.&#xA;&amp;lt;div class=&amp;#34;date&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;posted-on&amp;#34;&amp;gt; &amp;lt;i class=&amp;#34;fas fa-calendar&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;time datetime=&amp;#39;{{ .Date.Format &amp;#34;2006-01-02T15:04:05Z07:00&amp;#34; }}&amp;#39;&amp;gt; {{ .Date.Format (.Site.Params.dateFormat | default &amp;#34;January 2, 2006&amp;#34; ) }} &amp;lt;/time&amp;gt; &amp;lt;/span&amp;gt; {{ if ne .Date.YearDay .Lastmod.YearDay }} &amp;lt;span class=&amp;#34;post-on&amp;#34;&amp;gt; &amp;lt;i class=&amp;#34;fas fa-calendar&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;time datetime=&amp;#39;{{ .Date.Format &amp;#34;2006-01-02T15:04:05Z07:00&amp;#34; }}&amp;#39;&amp;gt; Last updated: {{ dateFormat ( or $.Site.Params.dateFormat &amp;#34;2006, Jan 02&amp;#34; ) $.Page.Params.LastMod }} &amp;lt;/time&amp;gt; &amp;lt;/span&amp;gt; {{ end }} &amp;lt;/div&amp;gt; </description>
+    </item>
+    <item>
+      <title>Amazing ultimate note tool: Dynalist</title>
+      <link>http://localhost:1313/dev/tool-dynalist/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-dynalist/</guid>
+      <description>Dynalist is one of the most helpful tools for me nowadays, no matter code, work notes, daily notes such as training records, prayer list etc. All stuff can be handled within it.&#xA;I used to use OneNote when I was in University, everyone knows how powerful it is. The downside is obvious, it&amp;rsquo;s too heavy. I need a better tool to write everything down quickly and jump to everywhere with a keyboard.</description>
+    </item>
+    <item>
+      <title>Autohotkey/Autokey scripts for Dynalist</title>
+      <link>http://localhost:1313/dev/tool-autohotkey/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-autohotkey/</guid>
+      <description>Autohotkey Picture Suppose the picture link is in your clipboard, to put a picture in Dynalist(or any markdown editor) In your clipboard you have a picture link like https://i.imgur.com/XH472FR.png&#xA;Click Alt+P, you got&#xA;![](https://i.imgur.com/XH472FR.png) !p:: Send, {!}[]() Sleep, 50 Send, {Left 1} Sleep, 50 Send ^v return Code In your clipboard, you have print(&amp;lsquo;Hello&amp;rsquo;). Click win+` in dynalist next to test, you got this nice result.&#xA;#`:: Send {Enter} Send {Tab} Send, code Send +{Enter} Send, ```````````` Sleep, 50 Send, {Left 3} Send ^v return Autokey It&amp;rsquo;s similar as above, just on Linux.</description>
+    </item>
+  </channel>
+</rss>

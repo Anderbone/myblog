@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Jiyu</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Feb 2022 22:29:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: How to add last update</title>
+      <link>http://localhost:1313/dev/hugo-last-update/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-last-update/</guid>
+      <description>Under layouts/posts/single.html, check if the day publish is the same day we update, don&amp;rsquo;t show the last udpated.&#xA;&amp;lt;div class=&amp;#34;date&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;posted-on&amp;#34;&amp;gt; &amp;lt;i class=&amp;#34;fas fa-calendar&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;time datetime=&amp;#39;{{ .Date.Format &amp;#34;2006-01-02T15:04:05Z07:00&amp;#34; }}&amp;#39;&amp;gt; {{ .Date.Format (.Site.Params.dateFormat | default &amp;#34;January 2, 2006&amp;#34; ) }} &amp;lt;/time&amp;gt; &amp;lt;/span&amp;gt; {{ if ne .Date.YearDay .Lastmod.YearDay }} &amp;lt;span class=&amp;#34;post-on&amp;#34;&amp;gt; &amp;lt;i class=&amp;#34;fas fa-calendar&amp;#34;&amp;gt;&amp;lt;/i&amp;gt; &amp;lt;time datetime=&amp;#39;{{ .Date.Format &amp;#34;2006-01-02T15:04:05Z07:00&amp;#34; }}&amp;#39;&amp;gt; Last updated: {{ dateFormat ( or $.Site.Params.dateFormat &amp;#34;2006, Jan 02&amp;#34; ) $.Page.Params.LastMod }} &amp;lt;/time&amp;gt; &amp;lt;/span&amp;gt; {{ end }} &amp;lt;/div&amp;gt; </description>
+    </item>
+    <item>
+      <title>Hugo website optimization: Table of Contents</title>
+      <link>http://localhost:1313/dev/hugo-toc/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-toc/</guid>
+      <description>This TOC plugin using bootstrap is very easy to use in Hugo.&#xA;Usage Set up Bootstrap v4. For Bootstrap v3, see the older instructions. Include the Bootstrap Table of Contents stylesheet and JavaScript file. &amp;lt;!-- add after bootstrap.min.css --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css&amp;#34; /&amp;gt; &amp;lt;!-- add after bootstrap.min.js --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Put it simple, just edit layouts/_default/baseof.html. Add some scripts before the end of body, and add 2 links in the beginning.</description>
+    </item>
+    <item>
+      <title>Hugo: Copy-code button, Math Katex, Google analytics</title>
+      <link>http://localhost:1313/dev/hugo-copy-code/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/hugo-copy-code/</guid>
+      <description>Recently I did several changes on hugo.&#xA;Code highlight There are many ways to make the syntax highlight better, for this hugo-coder theme, all we need to do is delete those pygments related config in config.toml. See the hugo doc to find more options.&#xA;Copy code button Reference I just changed the css to make the button within the code.&#xA;.copy-code-button { color: #c4c5c6; background-color: #444444; /*border: 2px solid;*/ border-width: 0 0 0 0; /*border-left-color: rgba(32, 226, 226, 0.</description>
+    </item>
+  </channel>
+</rss>

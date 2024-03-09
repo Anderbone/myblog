@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Jiyu</title>
+    <link>http://localhost:1313/tags/spring/</link>
+    <description>Recent content in Spring on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Jan 2024 17:20:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Start here 11 - DB connection</title>
+      <link>http://localhost:1313/dev/spring-jdbc/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-jdbc/</guid>
+      <description>Here we show the 3 ways mentioned in chapter 11 of the book Spring Start Here. H2 in memory database, mysql database and mysql database with self defined data source.&#xA;H2 in memory connection pom.xml&#xA;&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.h2database&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;h2&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; Controller PurchaseController.java&#xA;package com.example.controllers; import com.example.model.Purchase; import com.example.repositories.PurchaseRepository; import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import java.util.List; @RestController @RequestMapping(&amp;#34;/purchase&amp;#34;) public class PurchaseController { private final PurchaseRepository purchaseRepository; public PurchaseController(PurchaseRepository purchaseRepository) { this.</description>
+    </item>
+    <item>
+      <title>Spring Start here 11 - 3 ways to consume RestAPI</title>
+      <link>http://localhost:1313/dev/spring-consume-rest/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-consume-rest/</guid>
+      <description>We use 3 differnt ways to consume the payments service.&#xA;Payments service to be consumed by 3 different clients PaymentsController.java&#xA;package com.example.controllers; import com.example.model.Payment; import org.springframework.http.HttpStatus; import org.springframework.http.ResponseEntity; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestHeader; import org.springframework.web.bind.annotation.RestController; import java.util.UUID; import java.util.logging.Logger; @RestController public class PaymentsController { private static Logger logger = Logger.getLogger(PaymentsController.class.getName()); @PostMapping(&amp;#34;/payment&amp;#34;) public ResponseEntity&amp;lt;Payment&amp;gt; createPayment( @RequestHeader String requestId, @RequestBody Payment payment ) { logger.info(&amp;#34;Received request with ID &amp;#34; + requestId + &amp;#34; ;Payment Amount: &amp;#34; + payment.</description>
+    </item>
+    <item>
+      <title>Microservices with Spring Boot and Spring Cloud chap04 Docker</title>
+      <link>http://localhost:1313/dev/spring-microservices-docker/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-microservices-docker/</guid>
+      <description>Page 105 when running docker build, there&amp;rsquo;s an error: Docker: failed to export image: failed to create image: failed to get layer.&#xA;cd microservices/product-service docker build -t product-service . After adding &amp;lsquo;RUN true&amp;rsquo; between each COPY, problem solved.&#xA;FROM adoptopenjdk:16_36-jre-hotspot as builder WORKDIR extracted ADD ./build/libs/*.jar app.jar RUN java -Djarmode=layertools -jar app.jar extract FROM adoptopenjdk:16_36-jre-hotspot WORKDIR application COPY --from=builder extracted/dependencies/ ./ RUN true COPY --from=builder extracted/spring-boot-loader/ ./ RUN true COPY --from=builder extracted/snapshot-dependencies/ .</description>
+    </item>
+    <item>
+      <title>Spring In Action 07 - RESTful API</title>
+      <link>http://localhost:1313/dev/spring07-restful/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring07-restful/</guid>
+      <description>Based on Spring in action 6th version github repo.&#xA;RESTful controllers return a 404 status Here we can return Optional&amp;lt;Taco&amp;gt; directly, but it will return null if id doesn&amp;rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:&#xA;@GetMapping(&amp;#34;/{id}&amp;#34;) public ResponseEntity&amp;lt;Taco&amp;gt; tacoById(@PathVariable(&amp;#34;id&amp;#34;) Long id) { return tacoRepo.findById(id).map(taco -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(taco, HttpStatus.OK)) .orElseGet(() -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&amp;rsquo;s in the rest client test but not in the codebase.</description>
+    </item>
+    <item>
+      <title>Spring &amp; Hibernate project on udemy: intellij setting up</title>
+      <link>http://localhost:1313/dev/spring-hibernate-udemy/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-hibernate-udemy/</guid>
+      <description>Udemy course link&#xA;In section 28, we start to build a real database web app. Here we use intellij with maven to set it up.&#xA;Download maven config, link Unzip and use intellij to open the inner folder, import as Maven project. Suppose you set up the database correctly, update code in TestDbServlet.java if you use version 8+: String jdbcUrl = &amp;#34;jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;amp;serverTimezone=UTC&amp;#34;; String driver = &amp;#34;com.mysql.cj.jdbc.Driver&amp;#34;; Project settings as below:</description>
+    </item>
+    <item>
+      <title>Spring In Action 02 - Developing web app</title>
+      <link>http://localhost:1313/dev/spring02-web/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring02-web/</guid>
+      <description>This chapter focues on Spring web framework without database.&#xA;2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful).</description>
+    </item>
+    <item>
+      <title>Spring In Action 03 - Data</title>
+      <link>http://localhost:1313/dev/spring03-data/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring03-data/</guid>
+      <description>JDBC at first and JPA later.&#xA;3.1 Reading and writing data with JDBC Spring JDBC support is rooted in the JdbcTemplate class. JdbcTemplate provides a means by which developers can perform SQL operations against a relational database without all the ceremony and boilerplate typically required when working with JDBC.&#xA;3.2 Persisting data with Spring Data JPA Summary Spring’s JdbcTemplate greatly simplifies working with JDBC. PreparedStatementCreator and KeyHolder can be used together when you need to know the value of a database-generated ID.</description>
+    </item>
+    <item>
+      <title>Spring In Action 01 - Intro</title>
+      <link>http://localhost:1313/dev/spring01-intro/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring01-intro/</guid>
+      <description>Follow the book: Spring in Action fifth version. Code repo: github&#xA;1.1 What is Spring? At its core, Spring offers a container, often referred to as the Spring application context, that creates and manages application components. These components, or beans, are wired together inside the Spring application context to make a complete application, much like bricks, mortar, timber, nails, plumbing, and wiring are bound together to make a house.&#xA;The act of wiring beans together is based on a pattern known as dependency injection (DI).</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Binarysearchtree on Jiyu</title>
+    <link>http://localhost:1313/tags/binarysearchtree/</link>
+    <description>Recent content in Binarysearchtree on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Aug 2022 15:58:39 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/binarysearchtree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>235. Lowest common ancestor of a binary search tree</title>
+      <link>http://localhost:1313/leetcode/235/</link>
+      <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/235/</guid>
+      <description>https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/&#xA;Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST. According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”&#xA;Example 1: Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8 Output: 6 Explanation: The LCA of nodes 2 and 8 is 6.</description>
+    </item>
+    <item>
+      <title>98. Validate Binary Search Tree</title>
+      <link>http://localhost:1313/leetcode/98/</link>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/98/</guid>
+      <description>Validate Binary Search Tree - LeetCode&#xA;left &amp;lt; node &amp;lt; right is a valid binary search tree Input: [2,1,3] Output: true 2 / 1 3&#xA;code class Solution { public boolean isValidBST(TreeNode root) { return check(root, null, null); } private boolean check(TreeNode node, Integer low, Integer high){ if (node == null) return true; if ((low != null &amp;amp;&amp;amp; node.val &amp;lt;= low) || (high != null &amp;amp;&amp;amp; node.val &amp;gt;= high)) return false; return check(node.</description>
+    </item>
+    <item>
+      <title>173. Binary search tree iterator</title>
+      <link>http://localhost:1313/leetcode/99/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/99/</guid>
+      <description>Binary Search Tree Iterator - LeetCode&#xA;Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):&#xA;BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST. boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false.</description>
+    </item>
+    <item>
+      <title>897. Increasing Order Search Tree</title>
+      <link>http://localhost:1313/leetcode/897/</link>
+      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/897/</guid>
+      <description>Increasing Order Search Tree - LeetCode&#xA;Given the root of a binary search tree, rearrange the tree in in-order so that the leftmost node in the tree is now the root of the tree, and every node has no left child and only one right child.&#xA;Example 1: Input: root = [5,3,6,2,4,null,8,1,null,null,null,7,9] Output: [1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9] Example 2: Input: root = [5,1,7] Output: [1,null,5,null,7]&#xA;Constraints:&#xA;The number of nodes in the given tree will be in the range [1, 100].</description>
+    </item>
+    <item>
+      <title>538. Convert BST to Greater Tree</title>
+      <link>http://localhost:1313/leetcode/538/</link>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/538/</guid>
+      <description>Convert BST to Greater Tree - LeetCode&#xA;Given the root of a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST. As a reminder, a binary search tree is a tree that satisfies these constraints:&#xA;The left subtree of a node contains only nodes with keys less than the node&#39;s key.</description>
+    </item>
+    <item>
+      <title>1586. Binary Search Tree Iterator II</title>
+      <link>http://localhost:1313/leetcode/1586/</link>
+      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1586/</guid>
+      <description>Binary Search Tree Iterator II - LeetCode&#xA;Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):&#xA;BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST. boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false.</description>
+    </item>
+    <item>
+      <title>669. Trim a Binary Search Tree</title>
+      <link>http://localhost:1313/leetcode/669/</link>
+      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/669/</guid>
+      <description>Trim a Binary Search Tree - LeetCode&#xA;Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node&amp;rsquo;s descendant should remain a descendant). It can be proven that there is a unique answer.</description>
+    </item>
+    <item>
+      <title>1305. All Elements in Two Binary Search Trees</title>
+      <link>http://localhost:1313/leetcode/1305/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1305/</guid>
+      <description>All Elements in Two Binary Search Trees - LeetCode&#xA;Given two binary search trees root1 and root2, return a list containing all the integers from both trees sorted in ascending order.&#xA;Example 1: Input: root1 = [2,1,4], root2 = [1,0,3] Output: [0,1,1,2,3,4] Example 2: Input: root1 = [1,null,8], root2 = [8,1] Output: [1,1,8,8]&#xA;Constraints:&#xA;The number of nodes in each tree is in the range [0, 5000]. -105 &amp;lt;= Node.val &amp;lt;= 105 code recursion + sort class Solution: def getAllElements(self, root1: TreeNode, root2: TreeNode) -&amp;gt; List[int]: def getIntegers(root): res = [] def helper(root): if not root: return helper(root.</description>
+    </item>
+    <item>
+      <title>701. Insert into a binary search tree</title>
+      <link>http://localhost:1313/leetcode/701/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/701/</guid>
+      <description>Insert into a Binary Search Tree - LeetCode&#xA;You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Notice that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion.</description>
+    </item>
+    <item>
+      <title>938. Range Sum of BST</title>
+      <link>http://localhost:1313/leetcode/938/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/938/</guid>
+      <description>Range Sum of BST - LeetCode&#xA;Given the root node of a binary search tree and two integers low and high, return __the sum of values of all nodes with a value in the inclusive range __[low, high].&#xA;Example 1:&#xA;Input: root = [10,5,15,3,7,null,18], low = 7, high = 15 Output: 32 Explanation: Nodes 7, 10, and 15 are in the range [7, 15]. 7 + 10 + 15 = 32.</description>
+    </item>
+    <item>
+      <title>270. Closest Binary Search Tree Value</title>
+      <link>http://localhost:1313/leetcode/270/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/270/</guid>
+      <description>Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.&#xA;Example 1:&#xA;Input: root = [4,2,5,1,3], target = 3.714286 Output: 4&#xA;code class Solution: def closestValue(self, root: Optional[TreeNode], target: float) -&amp;gt; int: mindif = inf res = root.val while root: curdif = abs(root.val - target) if curdif &amp;lt; mindif: mindif = curdif res = root.val if root.</description>
+    </item>
+    <item>
+      <title>450. delete node in a bst</title>
+      <link>http://localhost:1313/leetcode/450/</link>
+      <pubDate>Fri, 17 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/450/</guid>
+      <description>Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST. Basically, the deletion can be divided into two stages:&#xA;Search for a node to remove. If the node is found, delete the node.&#xA;Follow up: Can you solve it with time complexity O(height of tree)?&#xA;code class Solution(object): def deleteNode(self, root, key): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :type key: int :rtype: TreeNode &amp;#34;&amp;#34;&amp;#34; if not root: return None if root.</description>
+    </item>
+    <item>
+      <title>173. Binary search tree iterator</title>
+      <link>http://localhost:1313/leetcode/173/</link>
+      <pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/173/</guid>
+      <description>Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):&#xA;BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST. boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false.</description>
+    </item>
+    <item>
+      <title>230. Kth smallest element in a BST</title>
+      <link>http://localhost:1313/leetcode/230-kth-smallest-element-in-a-bst/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/230-kth-smallest-element-in-a-bst/</guid>
+      <description>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it. Note: You may assume k is always valid, 1 ≤ k ≤ BST&amp;rsquo;s total elements. Example 1: Input: root = [3,1,4,null,2], k = 1&#xA;3&#xA;/ \&#xA;1 4&#xA;\&#xA;2&#xA;Output: 1&#xA;code Iterative class Solution: def kthSmallest(self, root, k): stack = [] while root or stack: while root: stack.append(root) root = root.</description>
+    </item>
+  </channel>
+</rss>

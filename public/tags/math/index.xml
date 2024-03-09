@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Jiyu</title>
+    <link>http://localhost:1313/tags/math/</link>
+    <description>Recent content in Math on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Jan 2024 17:20:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12. Integer to Roman</title>
+      <link>http://localhost:1313/leetcode/12/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/12/</guid>
+      <description>https://leetcode.com/problems/integer-to-roman/&#xA;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, 2 is written as II in Roman numeral, just two one&amp;rsquo;s added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.</description>
+    </item>
+    <item>
+      <title>13. Roman to integer</title>
+      <link>http://localhost:1313/leetcode/13/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/13/</guid>
+      <description>Roman to Integer - LeetCode&#xA;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</description>
+    </item>
+    <item>
+      <title>1903. Largest Odd Number in String</title>
+      <link>http://localhost:1313/leetcode/1903/</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1903/</guid>
+      <description>https://leetcode.com/problems/largest-odd-number-in-string/description/&#xA;You are given a string num, representing a large integer. Return the largest-valued odd integer (as a string) that is a non-empty substring of num, or an empty string &amp;quot;&amp;quot; if no odd integer exists. A substring is a contiguous sequence of characters within a string.&#xA;Example 1: Input: num = &amp;ldquo;52&amp;rdquo; Output: &amp;ldquo;5&amp;rdquo; Explanation: The only non-empty substrings are &amp;ldquo;5&amp;rdquo;, &amp;ldquo;2&amp;rdquo;, and &amp;ldquo;52&amp;rdquo;. &amp;ldquo;5&amp;rdquo; is the only odd number.</description>
+    </item>
+    <item>
+      <title>1716. Calculate Money in Leetcode Bank</title>
+      <link>http://localhost:1313/leetcode/1716/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1716/</guid>
+      <description>https://leetcode.com/problems/calculate-money-in-leetcode-bank/description/&#xA;Hercy wants to save money for his first car. He puts money in the Leetcode bank every day. He starts by putting in $1 on Monday, the first day. Every day from Tuesday to Sunday, he will put in $1 more than the day before. On every subsequent Monday, he will put in $1 more than the previous Monday. Given n, return the total amount of money he will have in the Leetcode bank at the end of the nth day.</description>
+    </item>
+    <item>
+      <title>869. Reordered Power of 2</title>
+      <link>http://localhost:1313/leetcode/869/</link>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/869/</guid>
+      <description>https://leetcode.com/problems/reordered-power-of-2/&#xA;You are given an integer n. We reorder the digits in any order (including the original order) such that the leading digit is not zero. Return true if and only if we can do this so that the resulting number is a power of two.&#xA;Example 1: Input: n = 1 Output: true Example 2: Input: n = 10 Output: false&#xA;Constraints:&#xA;1 &amp;lt;= n &amp;lt;= 109 code class Solution: def reorderedPowerOf2(self, n: int) -&amp;gt; bool: for i in itertools.</description>
+    </item>
+    <item>
+      <title>462. Minimum Moves to Equal Array Elements II</title>
+      <link>http://localhost:1313/leetcode/462/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/462/</guid>
+      <description>https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/&#xA;Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal. In one move, you can increment or decrement an element of the array by 1. Test cases are designed so that the answer will fit in a 32-bit integer.&#xA;Example 1: Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember each move increments or decrements one element): [1,2,3] =&amp;gt; [2,2,3] =&amp;gt; [2,2,2] Example 2: Input: nums = [1,10,2,9] Output: 16</description>
+    </item>
+    <item>
+      <title>1689. Partitioning Into Minimum Number Of Deci-Binary Numbers</title>
+      <link>http://localhost:1313/leetcode/1689/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1689/</guid>
+      <description>https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/&#xA;A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros. For example, 101 and 1100 are deci-binary, while 112 and 3001 are not. Given a string n that represents a positive decimal integer, return the minimum number of positive deci-binary numbers needed so that they sum up to n.&#xA;Example 1: Input: n = &amp;ldquo;32&amp;rdquo; Output: 3 Explanation: 10 + 11 + 11 = 32 Example 2: Input: n = &amp;ldquo;82734&amp;rdquo; Output: 8 Example 3: Input: n = &amp;ldquo;27346209830709182346&amp;rdquo; Output: 9</description>
+    </item>
+    <item>
+      <title>1342. Number of Steps to Reduce a Number to Zero</title>
+      <link>http://localhost:1313/leetcode/1342/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1342/</guid>
+      <description>https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/&#xA;Given an integer num, return the number of steps to reduce it to zero. In one step, if the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.&#xA;Example 1: Input: num = 14 Output: 6 Explanation: Step 1) 14 is even; divide by 2 and obtain 7. Step 2) 7 is odd; subtract 1 and obtain 6. Step 3) 6 is even; divide by 2 and obtain 3.</description>
+    </item>
+    <item>
+      <title>1641. Count Sorted Vowel Strings</title>
+      <link>http://localhost:1313/leetcode/1641/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1641/</guid>
+      <description>https://leetcode.com/problems/count-sorted-vowel-strings/&#xA;Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted. A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.&#xA;Example 1: Input: n = 1 Output: 5 Explanation: The 5 sorted strings that consist of vowels only are [&amp;ldquo;a&amp;rdquo;,&amp;ldquo;e&amp;rdquo;,&amp;ldquo;i&amp;rdquo;,&amp;ldquo;o&amp;rdquo;,&amp;ldquo;u&amp;rdquo;]. Example 2: Input: n = 2 Output: 15 Explanation: The 15 sorted strings that consist of vowels only are [&amp;ldquo;aa&amp;rdquo;,&amp;ldquo;ae&amp;rdquo;,&amp;ldquo;ai&amp;rdquo;,&amp;ldquo;ao&amp;rdquo;,&amp;ldquo;au&amp;rdquo;,&amp;ldquo;ee&amp;rdquo;,&amp;ldquo;ei&amp;rdquo;,&amp;ldquo;eo&amp;rdquo;,&amp;ldquo;eu&amp;rdquo;,&amp;ldquo;ii&amp;rdquo;,&amp;ldquo;io&amp;rdquo;,&amp;ldquo;iu&amp;rdquo;,&amp;ldquo;oo&amp;rdquo;,&amp;ldquo;ou&amp;rdquo;,&amp;ldquo;uu&amp;rdquo;].</description>
+    </item>
+    <item>
+      <title>991. Broken Calculator</title>
+      <link>http://localhost:1313/leetcode/991/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/991/</guid>
+      <description>Broken Calculator - LeetCode&#xA;There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:&#xA;multiply the number on display by 2, or subtract 1 from the number on display.Given two integers startValue and target, return __the minimum number of operations needed to display __target__ on the calculator__. Example 1: Input: startValue = 2, target = 3 Output: 2 Explanation: Use double operation and then decrement operation {2 -&amp;gt; 4 -&amp;gt; 3}.</description>
+    </item>
+    <item>
+      <title>29. Divide Two Integers</title>
+      <link>http://localhost:1313/leetcode/29-divide-two-integers/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/29-divide-two-integers/</guid>
+      <description>Divide Two Integers - LeetCode&#xA;Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator. Return the quotient after dividing dividend by divisor. The integer division should truncate toward zero. Example 1: Input: dividend = 10, divisor = 3 Output: 3&#xA;c0 same idea with c1 class Solution: def divide(self, dividend: int, divisor: int) -&amp;gt; int: a , b = dividend, divisor sig = (a &amp;lt; 0) == (b &amp;lt; 0) a, b, res = abs(a), abs(b), 0 while a &amp;gt;= b: x = 0 while a &amp;gt;= b &amp;lt;&amp;lt; (x + 1): x += 1 res += 1 &amp;lt;&amp;lt; x # res+=2**x a -= b &amp;lt;&amp;lt; x # a -= b*(2**x) return min(res if sig else -res, 2**31-1) c1 class Solution: def divide(self, dividend: int, divisor: int) -&amp;gt; int: x , y = dividend, divisor sig = (x &amp;lt; 0) == (y &amp;lt; 0) x,y = abs(x), abs(y) result, power = 0, 32 y_power = y &amp;lt;&amp;lt; power while x &amp;gt;= y: while y_power &amp;gt; x: y_power &amp;gt;&amp;gt;= 1 power -= 1 result += 1 &amp;lt;&amp;lt; power # result += y_power/y x -= y_power # return result return min(result if sig else -result, 2**31-1) </description>
+    </item>
+    <item>
+      <title>1359. Count All Valid Pickup and Delivery Options</title>
+      <link>http://localhost:1313/leetcode/1359/</link>
+      <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1359/</guid>
+      <description>Count All Valid Pickup and Delivery Options - LeetCode&#xA;Given n orders, each order consist in pickup and delivery services. Count all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i). Since the answer may be too large, return it modulo 10^9 + 7.&#xA;Example 1: Input: n = 1 Output: 1 Explanation: Unique order (P1, D1), Delivery 1 always is after of Pickup 1. Example 2: Input: n = 2 Output: 6 Explanation: All possible orders: (P1,P2,D1,D2), (P1,P2,D2,D1), (P1,D1,P2,D2), (P2,P1,D1,D2), (P2,P1,D2,D1) and (P2,D2,P1,D1).</description>
+    </item>
+    <item>
+      <title>171. Excel Sheet Column Number</title>
+      <link>http://localhost:1313/leetcode/171-excel-sheet-column-number/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/171-excel-sheet-column-number/</guid>
+      <description>Excel Sheet Column Number - LeetCode&#xA;Given a string columnTitle that represents the column title as appear in an Excel sheet, return its corresponding column number. For example: A -&amp;gt; 1 B -&amp;gt; 2 C -&amp;gt; 3 &amp;hellip; Z -&amp;gt; 26 AA -&amp;gt; 27 AB -&amp;gt; 28 &amp;hellip;&#xA;Example 1: Input: columnTitle = &amp;ldquo;A&amp;rdquo; Output: 1 Example 2: Input: columnTitle = &amp;ldquo;AB&amp;rdquo; Output: 28 Example 3: Input: columnTitle = &amp;ldquo;ZY&amp;rdquo; Output: 701</description>
+    </item>
+    <item>
+      <title>650. 2 Keys Keyboard </title>
+      <link>http://localhost:1313/leetcode/650/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/650/</guid>
+      <description>2 Keys Keyboard - LeetCode&#xA;There is only one character &amp;lsquo;A&amp;rsquo; on the screen of a notepad. You can perform two operations on this notepad for each step:&#xA;Copy All: You can copy all the characters present on the screen (a partial copy is not allowed). Paste: You can paste the characters which are copied last time.Given an integer n, return __the minimum number of operations to get the character__ &#39;A&#39; __exactly__ n __times on the screen__.</description>
+    </item>
+    <item>
+      <title>258. Add Digits</title>
+      <link>http://localhost:1313/leetcode/258/</link>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/258/</guid>
+      <description>Add Digits - LeetCode&#xA;Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.&#xA;Example 1: Input: num = 38 Output: 2 Explanation: The process is 38 &amp;ndash;&amp;gt; 3 + 8 &amp;ndash;&amp;gt; 11 11 &amp;ndash;&amp;gt; 1 + 1 &amp;ndash;&amp;gt; 2 Since 2 has only one digit, return it. Example 2: Input: num = 0 Output: 0&#xA;Constraints:&#xA;0 &amp;lt;= num &amp;lt;= 231 - 1 code class Solution: def addDigits(self, num: int) -&amp;gt; int: res = str(num) while int(res) &amp;gt;= 10: nres = 0 for v in str(res): nres += int(v) res = nres return res code class Solution: def addDigits(self, num: int) -&amp;gt; int: res = 0 while num &amp;gt; 0: res += num % 10 num //= 10 if num == 0 and res &amp;gt; 9: num, res = res, 0 return res code class Solution: def addDigits(self, num: int) -&amp;gt; int: if num == 0: return 0 if num % 9 == 0: return 9 return num % 9 </description>
+    </item>
+    <item>
+      <title>1291. Sequential Digits</title>
+      <link>http://localhost:1313/leetcode/1291/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1291/</guid>
+      <description>Sequential Digits - LeetCode&#xA;An integer has sequential digits if and only if each digit in the number is one more than the previous digit. Return a sorted list of all the integers in the range [low, high] inclusive that have sequential digits.&#xA;Example 1: Input: low = 100, high = 300 Output: [123,234] Example 2: Input: low = 1000, high = 13000 Output: [1234,2345,3456,4567,5678,6789,12345]&#xA;code #slidingwindow class Solution: def sequentialDigits(self, low: int, high: int) -&amp;gt; List[int]: sample = &amp;#34;123456789&amp;#34; n = 10 nums = [] for length in range(len(str(low)), len(str(high)) + 1): for start in range(n - length): num = int(sample[start: start + length]) if low &amp;lt;= num &amp;lt;= high: nums.</description>
+    </item>
+    <item>
+      <title>1041. Robot Bounded In Circle</title>
+      <link>http://localhost:1313/leetcode/1041/</link>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1041/</guid>
+      <description>Robot Bounded In Circle - LeetCode&#xA;On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions:&#xA;&amp;ldquo;G&amp;rdquo;: go straight 1 unit; &amp;ldquo;L&amp;rdquo;: turn 90 degrees to the left; &amp;ldquo;R&amp;rdquo;: turn 90 degrees to the right.The robot performs the instructions given in order, and repeats them forever. Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.</description>
+    </item>
+    <item>
+      <title>1015. Smallest Integer Divisible by K </title>
+      <link>http://localhost:1313/leetcode/1015/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1015/</guid>
+      <description>Smallest Integer Divisible by K - LeetCode&#xA;Given a positive integer k, you need to find the length of the smallest positive integer n such that n is divisible by k, and n only contains the digit 1. Return __the length of __n. If there is no such n, return -1. Note: n may not fit in a 64-bit signed integer.&#xA;Example 1: Input: k = 1 Output: 1 Explanation: The smallest answer is n = 1, which has length 1.</description>
+    </item>
+    <item>
+      <title>231. Power of Two</title>
+      <link>http://localhost:1313/leetcode/231/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/231/</guid>
+      <description>Power of Two - LeetCode&#xA;Given an integer n, return true if it is a power of two. Otherwise, return false. An integer n is a power of two, if there exists an integer x such that n == 2x.&#xA;Example 1: Input: n = 1 Output: true Explanation: 20 = 1 Example 2: Input: n = 16 Output: true Explanation: 24 = 16 Example 3: Input: n = 3 Output: false</description>
+    </item>
+    <item>
+      <title>902. Numbers At Most N Given Digit Set</title>
+      <link>http://localhost:1313/leetcode/902/</link>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/902/</guid>
+      <description>Numbers At Most N Given Digit Set - LeetCode&#xA;Given an array of digits which is sorted in non-decreasing order. You can write numbers using each digits[i] as many times as we want. For example, if digits = [&amp;lsquo;1&amp;rsquo;,&amp;lsquo;3&amp;rsquo;,&amp;lsquo;5&amp;rsquo;], we may write numbers such as &amp;lsquo;13&amp;rsquo;, &amp;lsquo;551&amp;rsquo;, and &amp;lsquo;1351315&amp;rsquo;. Return __the number of positive integers that can be generated __that are less than or equal to a given integer n.</description>
+    </item>
+    <item>
+      <title>878. Nth Magical Number</title>
+      <link>http://localhost:1313/leetcode/878/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/878/</guid>
+      <description>Nth Magical Number - LeetCode&#xA;A positive integer is magical if it is divisible by either a or b. Given the three integers n, a, and b, return the nth magical number. Since the answer may be very large, return it modulo 109 + 7.&#xA;Example 1: Input: n = 1, a = 2, b = 3 Output: 2 Example 2: Input: n = 4, a = 2, b = 3 Output: 6 Example 3: Input: n = 5, a = 2, b = 4 Output: 10 code class Solution: def nthMagicalNumber(self, n: int, a: int, b: int) -&amp;gt; int: L = a * b // gcd(a, b) # how many mag nums &amp;lt; x def magnums_belowx(x): return x // a + x // b - x // L l, r = 1, n * min(a, b) while l &amp;lt; r: mid = l + (r - l) // 2 if magnums_belowx(mid) &amp;lt; n: l = mid + 1 else: r = mid return l % (10 ** 9 + 7) code TLE class Solution: def nthMagicalNumber(self, n: int, a: int, b: int) -&amp;gt; int: if a &amp;gt; b: # let a be the small one a, b = b, a # 2, 3, 2+2, 2+2+2(3+3), 2+2+2+2, 3+3+3 # 1, 2, 3, 4, 5, 6 c = 10 ** 9 + 7 ans = lasta = a lasta = lasta + a lastb = b if a == b: lastb = lastb + b for i in range(2, n+1): if lasta &amp;lt; lastb: ans = lasta lasta = (lasta + a) % c elif lasta &amp;gt; lastb: ans = lastb lastb = (lastb + b) % c else: ans = lasta lasta = (lasta + a) % c lastb = (lastb + b) % c return ans </description>
+    </item>
+    <item>
+      <title>1217. Minimum Cost to Move Chips to The Same Position</title>
+      <link>http://localhost:1313/leetcode/1217/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1217/</guid>
+      <description>Minimum Cost to Move Chips to The Same Position - LeetCode&#xA;We have n chips, where the position of the ith chip is position[i]. We need to move all the chips to the same position. In one step, we can change the position of the ith chip from position[i] to:&#xA;position[i] + 2 or position[i] - 2 with cost = 0. position[i] + 1 or position[i] - 1 with cost = 1.</description>
+    </item>
+    <item>
+      <title>9. Palindrome number</title>
+      <link>http://localhost:1313/leetcode/9-palindrome-number/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/9-palindrome-number/</guid>
+      <description>Palindrome Number - LeetCode&#xA;Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: true&#xA;code class Solution: def isPalindrome(self, x: int) -&amp;gt; bool: ans = 0 num = x if x &amp;lt; 0: return False while num: ans *= 10 ans += num % 10 num = num//10 return ans == x code class Solution: def isPalindrome(self, x: int) -&amp;gt; bool: strx = str(x) return strx == strx[::-1] </description>
+    </item>
+    <item>
+      <title>7. Reverse integer</title>
+      <link>http://localhost:1313/leetcode/7-reverse-integer/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/7-reverse-integer/</guid>
+      <description>Reverse Integer - LeetCode&#xA;Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321&#xA;code class Solution(object): def reverse(self, x): s = (x &amp;gt; 0) - (x &amp;lt; 0) r = int(str(x*s)[::-1]) return s*r * (r &amp;lt; 2**31) code class Solution: def reverse(self, x: int) -&amp;gt; int: if x &amp;gt;= 2**31-1 or x&amp;lt;=-2**31: return 0 ans = 0 flag = False num = x if x &amp;lt; 0: flag = True num = abs(x) while num: ans *= 10 ans += num % 10 num = num//10 if flag: if ans*(-1)&amp;lt;=-2**31: return 0 return ans*(-1) else: if ans &amp;gt;=2**31-1: return 0 return ans </description>
+    </item>
+    <item>
+      <title>166. Fraction to recurring decimal</title>
+      <link>http://localhost:1313/leetcode/166-fraction-to-recurring-decimal/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/166-fraction-to-recurring-decimal/</guid>
+      <description>Fraction to Recurring Decimal - LeetCode&#xA;Given two integers representing the numerator and denominator of a fraction, return the fraction in string format. If the fractional part is repeating, enclose the repeating part in parentheses. Example 1: Input: numerator = 1, denominator = 2 Output: &amp;ldquo;0.5&amp;rdquo; Example 2: Input: numerator = 2, denominator = 1 Output: &amp;ldquo;2&amp;rdquo; Example 3: Input: numerator = 2, denominator = 3 Output: &amp;ldquo;0.(6)&amp;rdquo;&#xA;code class Solution: # @return a string def fractionToDecimal(self, numerator, denominator): n, remainder = divmod(abs(numerator), abs(denominator)) sign = &amp;#39;-&amp;#39; if numerator*denominator &amp;lt; 0 else &amp;#39;&amp;#39; result = [sign+str(n), &amp;#39;.</description>
+    </item>
+    <item>
+      <title>69. Sqrt(x)</title>
+      <link>http://localhost:1313/leetcode/69-sqrt/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/69-sqrt/</guid>
+      <description>Sqrt(x) - LeetCode&#xA;Given a non-negative integer x, compute and return the square root of x. Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.&#xA;code class Solution { public int mySqrt(int x) { if (x &amp;lt; 2) return x; long num; int pivot, left = 2, right = x / 2; while (left &amp;lt;= right) { pivot = left + (right - left) / 2; num = (long)pivot * pivot; if (num &amp;gt; x) right = pivot - 1; else if (num &amp;lt; x) left = pivot + 1; else return pivot; } return right; } } code class Solution: def mySqrt(self, x: int) -&amp;gt; int: left, right = 0, x while True: mid = left + (right-left)//2 if mid*mid &amp;gt; x: right = mid - 1 else: if (mid+1)*(mid+1) &amp;gt; x: return mid left = mid + 1 </description>
+    </item>
+    <item>
+      <title>50. Pow(x, n)</title>
+      <link>http://localhost:1313/leetcode/50-pow/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/50-pow/</guid>
+      <description>Pow(x, n) - LeetCode&#xA;Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: Input: 2.00000, 10 Output: 1024.00000 Example 2: Input: 2.10000, 3 Output: 9.26100 Example 3: Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25&#xA;code class Solution: def myPow(self, x: float, n: int) -&amp;gt; float: result = 1 if n &amp;lt; 0: n = -n x = 1/x while n: if n % 2 == 1: result *= x x, n = x * x, n // 2 return result code class Solution: def myPow(self, x, n): if n &amp;lt; 0: x = 1 / x n = -n pow = 1 while n: if n &amp;amp; 1: pow *= x x *= x n &amp;gt;&amp;gt;= 1 return pow code class Solution: def myPow(self, x, n): if not n: return 1 if n &amp;lt; 0: return 1 / self.</description>
+    </item>
+    <item>
+      <title>172. Factorial Trailing Zeroes</title>
+      <link>http://localhost:1313/leetcode/172-factorial-trailing-zeros/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/172-factorial-trailing-zeros/</guid>
+      <description>Factorial Trailing Zeroes - LeetCode&#xA;Given an integer n, return the number of trailing zeroes in n!. Example 1: Input: 3 Output: 0 Explanation: 3! = 6, no trailing zero. Example 2: Input: 5 Output: 1 Explanation: 5! = 120, one trailing zero.&#xA;code class Solution: def trailingZeroes(self, n: int) -&amp;gt; int: res = 0 while n &amp;gt;= 5: res += n // 5 n //= 5 return res Zeros come from 10 which is 25, and 5&amp;gt;2, so we just need to count how many 5 this factorial has.</description>
+    </item>
+    <item>
+      <title>202. Happy number</title>
+      <link>http://localhost:1313/leetcode/202-happy-number/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/202-happy-number/</guid>
+      <description>Happy Number - LeetCode&#xA;A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers. Example: Input: 19 Output: true Explanation: 12 + 92 = 82 82 + 22 = 68 62 + 82 = 100 12 + 02 + 02 = 1</description>
+    </item>
+    <item>
+      <title>268. Missing number</title>
+      <link>http://localhost:1313/leetcode/268-missing-number/</link>
+      <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/268-missing-number/</guid>
+      <description>Missing Number - LeetCode&#xA;Given an array containing n distinct numbers taken from 0, 1, 2, &amp;hellip;, n, find the one that is missing from the array. Example 1: Input: [3,0,1] Output: 2&#xA;code class Solution: def missingNumber(self, nums: List[int]) -&amp;gt; int: leng = len(nums) return leng * (leng+1) // 2 - sum(nums) </description>
+    </item>
+    <item>
+      <title>326. Power of Three</title>
+      <link>http://localhost:1313/leetcode/326-power-of-three/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/326-power-of-three/</guid>
+      <description>Power of Three - LeetCode&#xA;Given an integer, write a function to determine if it is a power of three. Example 1: Input: 27 Output: true Example 2: Input: 0 Output: false&#xA;code class Solution: def isPowerOfThree(self, n: int) -&amp;gt; bool: if n == 0: return False while n % 3 == 0: n = n / 3 if n == 1: return True return False code, 3^20 is out of the range of Integer.</description>
+    </item>
+    <item>
+      <title>204. Count primes</title>
+      <link>http://localhost:1313/leetcode/204-count-primes/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/204-count-primes/</guid>
+      <description>Count Primes - LeetCode&#xA;Count the number of prime numbers less than a non-negative number, n. Example: Input: 10 Output: 4 Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.&#xA;code, time limit exceeded class Solution: def countPrimes(self, n: int) -&amp;gt; int: if n &amp;lt; 2: return 0 all_nums = list(range(2,n)) # print(all_nums) index = 0 while index &amp;lt; len(all_nums): cur = all_nums[index] # print(&amp;#39;cur&amp;#39;) # print(cur) # for i in range(2, n//cur + 1): for i in range(cur*cur, n, cur): # print(&amp;#39;remove&amp;#39;+str(i)) try: # all_nums.</description>
+    </item>
+    <item>
+      <title>412. Fizz buzz</title>
+      <link>http://localhost:1313/leetcode/412-fizz-buzz/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/412-fizz-buzz/</guid>
+      <description>https://leetcode.com/problems/fizz-buzz/&#xA;Write a program that outputs the string representation of numbers from 1 to n. But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.&#xA;code class Solution: def fizzBuzz(self, n: int) -&amp;gt; List[str]: # list comprehension with string rule of FizzBuzz list_of_output = [ &amp;#39;Fizz&amp;#39; * (not i % 3) + &amp;#39;Buzz&amp;#39; * (not i % 5 ) or str(i) for i in range(1, n+1) ] return list_of_output code class Solution: def fizzBuzz(self, n: int) -&amp;gt; List[str]: res = [] for i in range(1, n+1): if i % 15 == 0: res.</description>
+    </item>
+  </channel>
+</rss>

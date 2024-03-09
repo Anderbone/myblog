@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bit on Jiyu</title>
+    <link>http://localhost:1313/tags/bit/</link>
+    <description>Recent content in Bit on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 May 2022 20:46:26 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>191. Number of 1 Bits</title>
+      <link>http://localhost:1313/leetcode/191-number-of-1-bits/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/191-number-of-1-bits/</guid>
+      <description>Number of 1 Bits - LeetCode&#xA;Write a function that takes an unsigned integer and return the number of &amp;lsquo;1&amp;rsquo; bits it has (also known as the Hamming weight).&#xA;Example 1: Input: 00000000000000000000000000001011 Output: 3 Explanation: The input binary string 00000000000000000000000000001011 has a total of three &amp;lsquo;1&amp;rsquo; bits.&#xA;code class Solution: def hammingWeight(self, n: int) -&amp;gt; int: return str(bin(n)).count(&amp;#34;1&amp;#34;) code class Solution: def hammingWeight(self, n: int) -&amp;gt; int: count = 0 while n: count += n &amp;amp; 1 n = n &amp;gt;&amp;gt; 1 return count code class Solution: def hammingWeight(self, n: int) -&amp;gt; int: res = 0 while n !</description>
+    </item>
+    <item>
+      <title>leetcode questions: Bit</title>
+      <link>http://localhost:1313/dev/lee-bit/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-bit/</guid>
+      <description>common tricks x &amp;amp; (-x) to isolate/get the rightmost 1-bit This operation reverts all bits of x except the rightmost 1-bit.&#xA;Hence, x and -x have just one bit in common - the rightmost 1-bit. That means that x &amp;amp; (-x) would keep that rightmost 1-bit and set all the other bits to 0. x &amp;amp; (x - 1) is a way to set the rightmost 1-bit to zero. To subtract 1 means to change the rightmost 1-bit to 0 and to set all the lower bits to 1.</description>
+    </item>
+    <item>
+      <title>338. Counting Bits</title>
+      <link>http://localhost:1313/leetcode/338/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/338/</guid>
+      <description>Counting Bits - LeetCode&#xA;Given an integer n, return __an array ans of length n + 1 such that for each i (0 &amp;lt;= i &amp;lt;= n), ans[i] is the number of 1&amp;rsquo;s in the binary representation of __i.&#xA;Example 1: Input: n = 2 Output: [0,1,1] Explanation: 0 &amp;ndash;&amp;gt; 0 1 &amp;ndash;&amp;gt; 1 2 &amp;ndash;&amp;gt; 10 Example 2: Input: n = 5 Output: [0,1,1,2,1,2] Explanation: 0 &amp;ndash;&amp;gt; 0 1 &amp;ndash;&amp;gt; 1 2 &amp;ndash;&amp;gt; 10 3 &amp;ndash;&amp;gt; 11 4 &amp;ndash;&amp;gt; 100 5 &amp;ndash;&amp;gt; 101</description>
+    </item>
+    <item>
+      <title>421. Maximum XOR of Two Numbers in an Array </title>
+      <link>http://localhost:1313/leetcode/421/</link>
+      <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/421/</guid>
+      <description>Maximum XOR of Two Numbers in an Array - LeetCode&#xA;Given an integer array nums, return __the maximum result of __nums[i] XOR nums[j], where 0 &amp;lt;= i &amp;lt;= j &amp;lt; n.&#xA;Example 1: Input: nums = [3,10,5,25,2,8] Output: 28 Explanation: The maximum result is 5 XOR 25 = 28.&#xA;Example 2: Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70] Output: 127&#xA;Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 105 0 &amp;lt;= nums[i] &amp;lt;= 231 - 1</description>
+    </item>
+    <item>
+      <title>67. Add Binary</title>
+      <link>http://localhost:1313/leetcode/67/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/67/</guid>
+      <description>Add Binary - LeetCode&#xA;Given two binary strings a and b, return their sum as a binary string.&#xA;Example 1: Input: a = &amp;ldquo;11&amp;rdquo;, b = &amp;ldquo;1&amp;rdquo; Output: &amp;ldquo;100&amp;rdquo;&#xA;Example 2: Input: a = &amp;ldquo;1010&amp;rdquo;, b = &amp;ldquo;1011&amp;rdquo; Output: &amp;ldquo;10101&amp;rdquo;&#xA;Constraints:&#xA;1 &amp;lt;= a.length, b.length &amp;lt;= 104 a and b consist only of &#39;0&#39; or &#39;1&#39; characters. Each string does not contain leading zeros except for the zero itself. code class Solution: def addBinary(self, a, b) -&amp;gt; str: return bin((int(a, 2) + int(b, 2)))[2:] code wrong ans, class Solution { public String addBinary(String a, String b) { return Integer.</description>
+    </item>
+    <item>
+      <title>1009. Complement of Base 10 Integer</title>
+      <link>http://localhost:1313/leetcode/1009/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1009/</guid>
+      <description>Complement of Base 10 Integer - LeetCode&#xA;The complement of an integer is the integer you get when you flip all the 0&amp;rsquo;s to 1&amp;rsquo;s and all the 1&amp;rsquo;s to 0&amp;rsquo;s in its binary representation.&#xA;For example, The integer 5 is &amp;ldquo;101&amp;rdquo; in binary and its complement is &amp;ldquo;010&amp;rdquo; which is the integer 2.Given an integer n, return its complement.&#xA;Example 1: Input: n = 5 Output: 2 Explanation: 5 is &amp;ldquo;101&amp;rdquo; in binary, with complement &amp;ldquo;010&amp;rdquo; in binary, which is 2 in base-10.</description>
+    </item>
+    <item>
+      <title>476. Number Complement</title>
+      <link>http://localhost:1313/leetcode/476/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/476/</guid>
+      <description>Number Complement - LeetCode&#xA;The complement of an integer is the integer you get when you flip all the 0&amp;rsquo;s to 1&amp;rsquo;s and all the 1&amp;rsquo;s to 0&amp;rsquo;s in its binary representation.&#xA;For example, The integer 5 is &amp;ldquo;101&amp;rdquo; in binary and its complement is &amp;ldquo;010&amp;rdquo; which is the integer 2.Given an integer num, return its complement.&#xA;Example 1: Input: num = 5 Output: 2 Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010.</description>
+    </item>
+    <item>
+      <title>231. Power of Two</title>
+      <link>http://localhost:1313/leetcode/231/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/231/</guid>
+      <description>Power of Two - LeetCode&#xA;Given an integer n, return true if it is a power of two. Otherwise, return false. An integer n is a power of two, if there exists an integer x such that n == 2x.&#xA;Example 1: Input: n = 1 Output: true Explanation: 20 = 1 Example 2: Input: n = 16 Output: true Explanation: 24 = 16 Example 3: Input: n = 3 Output: false</description>
+    </item>
+    <item>
+      <title>1290. Convert Binary Number in a Linked List to Integer</title>
+      <link>http://localhost:1313/leetcode/1290/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1290/</guid>
+      <description>Convert Binary Number in a Linked List to Integer - LeetCode&#xA;Given head which is a reference node to a singly-linked list. The value of each node in the linked list is either 0 or 1. The linked list holds the binary representation of a number. Return the decimal value of the number in the linked list.&#xA;Example 1:&#xA;Input: head = [1,0,1] Output: 5 Explanation: (101) in base 2 = (5) in base 10 Example 2:</description>
+    </item>
+    <item>
+      <title>371. Sum of two integers</title>
+      <link>http://localhost:1313/leetcode/371/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/371/</guid>
+      <description>Sum of Two Integers - LeetCode&#xA;Given two integers a and b, return the sum of the two integers without using the operators + and -.&#xA;Example 1: Input: a = 1, b = 2 Output: 3 Example 2: Input: a = 2, b = 3 Output: 5&#xA;Constraints:&#xA;-1000 &amp;lt;= a, b &amp;lt;= 1000 code class Solution { public int getSum(int a, int b) { while (b != 0) { int answer = a ^ b; int carry = (a &amp;amp; b) &amp;lt;&amp;lt; 1; a = answer; b = carry; } return a; } } code class Solution: def getSum(self, a: int, b: int) -&amp;gt; int: mask = 0xffffffff while b &amp;amp; mask: _carry = a &amp;amp; b a = a ^ b b = _carry &amp;lt;&amp;lt; 1 # for overflow condition like # -1 # 1 return (a &amp;amp; mask) if b &amp;gt; mask else a </description>
+    </item>
+    <item>
+      <title>190. Reverse bits</title>
+      <link>http://localhost:1313/leetcode/190-reverse-bits/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/190-reverse-bits/</guid>
+      <description>Reverse Bits - LeetCode2w3q1&#xA;Reverse bits of a given 32 bits unsigned integer.&#xA;Example 1: Input: 00000010100101000001111010011100 Output: 00111001011110000010100101000000 Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.&#xA;code class Solution: def reverseBits(self, n: int) -&amp;gt; int: ret, power = 0, 31 while n: ret += (n &amp;amp; 1) &amp;lt;&amp;lt; power n = n &amp;gt;&amp;gt; 1 power -= 1 return ret code class Solution: def reverseBits(self, n: int) -&amp;gt; int: a = format(n,&amp;#34;032b&amp;#34;) return int(a[::-1],2) </description>
+    </item>
+    <item>
+      <title>461. Hamming distance</title>
+      <link>http://localhost:1313/leetcode/461-hamming-distance/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/461-hamming-distance/</guid>
+      <description>The Hamming distance between two integers is the number of positions at which the corresponding bits are different. Given two integers x and y, calculate the Hamming distance. Note: 0 ≤ x, y &amp;lt; 231. Example: Input: x = 1, y = 4 Output: 2 Explanation: 1 (0 0 0 1) 4 (0 1 0 0)&#xA;code class Solution: def hammingDistance(self, x: int, y: int) -&amp;gt; int: dis = 0 while x or y: dis += (x&amp;amp;1) ^ (y&amp;amp;1) x &amp;gt;&amp;gt;= 1 y &amp;gt;&amp;gt;= 1 return dis </description>
+    </item>
+    <item>
+      <title>Find a closest integer with the same weight</title>
+      <link>http://localhost:1313/leetcode/epi-4.4-closest-int/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-4.4-closest-int/</guid>
+      <description>EPI Python 4.4 The weight of x to be the number of bits that are set to 1 in its binary reprentations. E.g. 92 in bas-2 is $(1011100)_2$, the weight is 4.&#xA;Take a nonnegative integer x, return a number y with the same weight of x, and their difference is as small as possible.&#xA;The main idea is to swap the two rightmost consecutive bits that differ. The time complexity is O(n), where n is the width.</description>
+    </item>
+    <item>
+      <title>Primitive Multiple</title>
+      <link>http://localhost:1313/leetcode/epi-4.5-primitive-multiple/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-4.5-primitive-multiple/</guid>
+      <description>EPI python 4.5 Use bit manipulation to multiple.&#xA;Iterate through the bits of x, adding the $2^ky$ to the result if the kth bit of x is 1.&#xA;java public static long multiply(long x, long y) { long res = 0; while (x != 0) { if ((x&amp;amp;1) != 0) { res = add(res, y); } x &amp;gt;&amp;gt;= 1; y &amp;lt;&amp;lt;= 1; } return res; } private static long add(long x, long y) { long carry; while (y !</description>
+    </item>
+    <item>
+      <title>Reverse bits</title>
+      <link>http://localhost:1313/leetcode/epi-4.3-reverse-bits/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-4.3-reverse-bits/</guid>
+      <description>Leetcode 190 Similar question. Reverse bits of a given 32 bits unsigned integer.&#xA;Example 1: Input: 00000010100101000001111010011100&#xA;Output: 00111001011110000010100101000000&#xA;Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.&#xA;With python, we just get all bits in an array and reverse it, then turn it back to a number.&#xA;class Solution: # @param n, an integer # @return an integer def reverseBits(self, n): s = str(bin(n)).</description>
+    </item>
+    <item>
+      <title>Swap bits</title>
+      <link>http://localhost:1313/leetcode/epi-4.2-swap-bits/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-4.2-swap-bits/</guid>
+      <description>5.2 in EPI java, 4.2 in EPI python. Swap the ith and jth bit in a long number.&#xA;The 2^i in java means the parity(XOR) of 2 and i, we need to use Math.pow to calculate the power of number.&#xA;public static long swapBits(long x, int i, int j) { // Extract the ith and jth bit short xi = (short) ((short) (x &amp;gt;&amp;gt; i) &amp;amp; 1); short xj = (short) ((short) (x &amp;gt;&amp;gt; j) &amp;amp; 1); if (xi == xj) { return x; } // long swap = 2^i + 2^j; // long swap0 = (long) (Math.</description>
+    </item>
+    <item>
+      <title>Computing the parity of a word</title>
+      <link>http://localhost:1313/leetcode/epi-4.1-parity/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-4.1-parity/</guid>
+      <description>5.1 in EPI java, 4.1 in EPI python. The parity of a binary word is 1 if the number of 1s is odd; otherwise it&amp;rsquo;s 0. How to check the parity of a very large number of 64-bit words?&#xA;A straight forward(brute-force) solution is to go through the bitwised number, get the last bit every time and check weather it&amp;rsquo;s 1. The time complexity is O(n) where n is the word size.</description>
+    </item>
+  </channel>
+</rss>

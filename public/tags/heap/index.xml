@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heap on Jiyu</title>
+    <link>http://localhost:1313/tags/heap/</link>
+    <description>Recent content in Heap on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Jun 2022 19:14:07 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/heap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>630. Course Schedule III</title>
+      <link>http://localhost:1313/leetcode/630/</link>
+      <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/630/</guid>
+      <description>https://leetcode.com/problems/course-schedule-iii/&#xA;There are n different online courses numbered from 1 to n. You are given an array courses where courses[i] = [durationi, lastDayi] indicate that the ith course should be taken continuously for durationi days and must be finished before or on lastDayi. You will start on the 1st day and you cannot take two or more courses simultaneously. Return the maximum number of courses that you can take.&#xA;Example 1: Input: courses = [[100,200],[200,1300],[1000,1250],[2000,3200]] Output: 3 Explanation: There are totally 4 courses, but you can take 3 courses at most: First, take the 1st course, it costs 100 days so you will finish it on the 100th day, and ready to take the next course on the 101st day.</description>
+    </item>
+    <item>
+      <title>1642. Furthest Building You Can Reach</title>
+      <link>http://localhost:1313/leetcode/1642/</link>
+      <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1642/</guid>
+      <description>https://leetcode.com/problems/furthest-building-you-can-reach/&#xA;You are given an integer array heights representing the heights of buildings, some bricks, and some ladders. You start your journey from building 0 and move to the next building by possibly using bricks or ladders. While moving from building i to building i+1 (0-indexed),&#xA;If the current building&#39;s height is **greater than or equal** to the next building&#39;s height, you do **not** need a ladder or bricks. If the current building&#39;s height is **less than** the next building&#39;s height, you can either use **one ladder** or (h[i+1] - h[i]) **bricks**.</description>
+    </item>
+    <item>
+      <title>215. Kth Largest Element in an Array</title>
+      <link>http://localhost:1313/leetcode/215/</link>
+      <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/215/</guid>
+      <description>Kth Largest Element in an Array - LeetCode&#xA;Given an integer array nums and an integer k, return the kth largest element in the array. Note that it is the kth largest element in the sorted order, not the kth distinct element.&#xA;Input: [3,2,1,5,6,4] and k = 2 Output: 5&#xA;Constraints:&#xA;1 &amp;lt;= k &amp;lt;= nums.length &amp;lt;= 104 -104 &amp;lt;= nums[i] &amp;lt;= 104 code class Solution { public int findKthLargest(int[] nums, int k) { PriorityQueue&amp;lt;Integer&amp;gt; hp = new PriorityQueue&amp;lt;&amp;gt;(); for (int v: nums){ if (hp.</description>
+    </item>
+    <item>
+      <title>378. Kth Smallest Element in a Sorted Matrix</title>
+      <link>http://localhost:1313/leetcode/378/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/378/</guid>
+      <description>Kth Smallest Element in a Sorted Matrix - LeetCode&#xA;Given an n x n matrix where each of the rows and columns is sorted in ascending order, return the kth smallest element in the matrix. Note that it is the kth smallest element in the sorted order, not the kth distinct element. You must find a solution with a memory complexity better than O(n2).&#xA;Example 1: Input: matrix = [[1,5,9],[10,11,13],[12,13,15]], k = 8 Output: 13 Explanation: The elements in the matrix are [1,5,9,10,11,12,13,13,15], and the 8th smallest number is 13 Example 2: Input: matrix = [[-5]], k = 1 Output: -5</description>
+    </item>
+    <item>
+      <title>1057. Campus Bikes</title>
+      <link>http://localhost:1313/leetcode/1057/</link>
+      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1057/</guid>
+      <description>Campus Bikes - LeetCode&#xA;On a campus represented on the X-Y plane, there are n workers and m bikes, with n &amp;lt;= m. You are given an array workers of length n where workers[i] = [xi, yi] is the position of the ith worker. You are also given an array bikes of length m where bikes[j] = [xj, yj] is the position of the jth bike. All the given positions are unique.</description>
+    </item>
+    <item>
+      <title>692. Top K Frequent Words</title>
+      <link>http://localhost:1313/leetcode/692/</link>
+      <pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/692/</guid>
+      <description>Top K Frequent Words - LeetCode&#xA;Given an array of strings words and an integer k, return the k most frequent strings. Return the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order.&#xA;Example 1: Input: words = [&amp;ldquo;i&amp;rdquo;,&amp;ldquo;love&amp;rdquo;,&amp;ldquo;leetcode&amp;rdquo;,&amp;ldquo;i&amp;rdquo;,&amp;ldquo;love&amp;rdquo;,&amp;ldquo;coding&amp;rdquo;], k = 2 Output: [&amp;ldquo;i&amp;rdquo;,&amp;ldquo;love&amp;rdquo;] Explanation: &amp;ldquo;i&amp;rdquo; and &amp;ldquo;love&amp;rdquo; are the two most frequent words. Note that &amp;ldquo;i&amp;rdquo; comes before &amp;ldquo;love&amp;rdquo; due to a lower alphabetical order.</description>
+    </item>
+    <item>
+      <title>1094. Car Pooling</title>
+      <link>http://localhost:1313/leetcode/1094/</link>
+      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1094/</guid>
+      <description>Car Pooling - LeetCode&#xA;There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west). You are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car&amp;rsquo;s initial location.</description>
+    </item>
+    <item>
+      <title>1167. Minimum Cost to Connect Sticks</title>
+      <link>http://localhost:1313/leetcode/1167/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1167/</guid>
+      <description>Minimum Cost to Connect Sticks - LeetCode&#xA;You have some number of sticks with positive integer lengths. These lengths are given as an array sticks, where sticks[i] is the length of the ith stick. You can connect any two sticks of lengths x and y into one stick by paying a cost of x + y. You must connect all the sticks until there is only one stick remaining. Return the minimum cost of connecting all the given sticks into one stick in this way.</description>
+    </item>
+    <item>
+      <title>1046. Last Stone Weight</title>
+      <link>http://localhost:1313/leetcode/1046/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1046/</guid>
+      <description>Last Stone Weight - LeetCode&#xA;You are given an array of integers stones where stones[i] is the weight of the ith stone. We are playing a game with the stones. On each turn, we choose the heaviest two stones and smash them together. Suppose the heaviest two stones have weights x and y with x &amp;lt;= y. The result of this smash is:&#xA;If x == y, both stones are destroyed, and If x !</description>
+    </item>
+    <item>
+      <title>347. Top K Frequent Elements</title>
+      <link>http://localhost:1313/leetcode/347-top-k-frequent-elements/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/347-top-k-frequent-elements/</guid>
+      <description>Top K Frequent Elements - LeetCode&#xA;Given a non-empty array of integers, return the k most frequent elements. Example 1: Input: nums = [1,1,1,2,2,3], k = 2 Output: [1,2]&#xA;code #quickSelection move smaller to left class Solution: def topKFrequent(self, nums: List[int], k: int) -&amp;gt; List[int]: counter = Counter(nums) # num, freq uniq = [k for k in counter.keys()] def partition(left, right): index = randint(left, right) freq_p = counter[uniq[index]] uniq[index], uniq[right] = uniq[right], uniq[index] # move pivot to the end for i in range(left, right): if counter[uniq[i]] &amp;lt; freq_p: uniq[i], uniq[left] = uniq[left], uniq[i] left += 1 uniq[left], uniq[right] = uniq[right], uniq[left] return left left, right = 0, len(uniq) - 1 while left &amp;lt;= right: p = partition(left, right) if p == len(uniq) - k or left == right: return uniq[len(uniq) - k:] elif p &amp;gt; len(uniq) - k: # go left right = p - 1 elif p &amp;lt; len(uniq) - k: # go right left = p + 1 code move bigger to left.</description>
+    </item>
+    <item>
+      <title>703. Kth largest element in a stream</title>
+      <link>http://localhost:1313/leetcode/703/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/703/</guid>
+      <description>Kth Largest Element in a Stream - LeetCode&#xA;Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element. Implement KthLargest class:&#xA;KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of integers nums. int add(int val) Appends the integer val to the stream and returns the element representing the kth largest element in the stream.</description>
+    </item>
+    <item>
+      <title>1244. Design A Leaderboard</title>
+      <link>http://localhost:1313/leetcode/1244/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1244/</guid>
+      <description>Design A Leaderboard - LeetCode&#xA;Design a Leaderboard class, which has 3 functions:&#xA;addScore(playerId, score): Update the leaderboard by adding score to the given player&amp;rsquo;s score. If there is no player with such id in the leaderboard, add him to the leaderboard with the given score. top(K): Return the score sum of the top K players. reset(playerId): Reset the score of the player with the given id to 0 (in other words erase it from the leaderboard).</description>
+    </item>
+    <item>
+      <title>253. Meeting Rooms II</title>
+      <link>http://localhost:1313/leetcode/253/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/253/</guid>
+      <description>Meeting Rooms II - LeetCode&#xA;Given an array of meeting time intervals intervals where intervals[i] = [starti, endi], return the minimum number of conference rooms required.&#xA;Example 1: Input: intervals = [[0,30],[5,10],[15,20]] Output: 2&#xA;Example 2: Input: intervals = [[7,10],[2,4]] Output: 1&#xA;Constraints:&#xA;1 &amp;lt;= intervals.length &amp;lt;= 104 0 &amp;lt;= starti &amp;lt; endi &amp;lt;= 106&#xA;code class Solution: def minMeetingRooms(self, intervals: List[List[int]]) -&amp;gt; int: intervals.sort() rooms = [intervals[0][1]] # end time for i in range(1, len(intervals)): cur_start, cur_end = intervals[i] for r_index in range(len(rooms)): if cur_start &amp;gt;= rooms[r_index]: rooms[r_index] = cur_end break else: rooms.</description>
+    </item>
+    <item>
+      <title>973. K Closest Points to Origin </title>
+      <link>http://localhost:1313/leetcode/973/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/973/</guid>
+      <description>K Closest Points to Origin - LeetCode&#xA;Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0). The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2). You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).</description>
+    </item>
+    <item>
+      <title>628. Maximum product of three numbers</title>
+      <link>http://localhost:1313/leetcode/628/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/628/</guid>
+      <description>Given an integer array nums, find three numbers whose product is maximum and return the maximum product.&#xA;Example 1: Input: nums = [1,2,3] Output: 6&#xA;Example 2: Input: nums = [1,2,3,4] Output: 24&#xA;code class Solution: def maximumProduct(self, nums: List[int]) -&amp;gt; int: nums.sort() return max(nums[-1] * nums[-2] * nums[-3], nums[0] * nums[1] * nums [-1]) code class Solution: def maximumProduct(self, nums: List[int]) -&amp;gt; int: smallestTwo = [float(&amp;#39;inf&amp;#39;)]*2 largestThree = [float(&amp;#39;-inf&amp;#39;)]*3 for num in nums: if num &amp;lt;= smallestTwo[0]: smallestTwo[0] = num smallestTwo.</description>
+    </item>
+  </channel>
+</rss>

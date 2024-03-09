@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Jiyu</title>
+    <link>http://localhost:1313/zh/tags/hugo/</link>
+    <description>Recent content in Hugo on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 19 Feb 2022 22:29:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 添加目錄</title>
+      <link>http://localhost:1313/zh/dev/hugo-toc/</link>
+      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/hugo-toc/</guid>
+      <description>我在用這個Bootstarp的插件TOC plugin。添加如下的幾個css/js，最關鍵的是最後html的layout，我自己調了個能看的，大家可以參考。&#xA;Usage Set up Bootstrap v4. For Bootstrap v3, see the older instructions. Include the Bootstrap Table of Contents stylesheet and JavaScript file. &amp;lt;!-- add after bootstrap.min.css --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css&amp;#34; /&amp;gt; &amp;lt;!-- add after bootstrap.min.js --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 上面的兩項，就是修改了layouts/_default/baseof.html，在末尾的body標簽前加一下脚本鏈接。&#xA;&amp;lt;script src=&amp;#34;https://code.jquery.com/jquery-3.2.1.slim.min.js&amp;#34; integrity=&amp;#34;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&amp;#34; integrity=&amp;#34;sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&amp;#34; integrity=&amp;#34;sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 最上面的Link処，awesome-webfont下面加以下兩個link。&#xA;&amp;lt;link rel=&amp;#34;preload&amp;#34; href=&amp;#34;/fonts/forkawesome-webfont.woff2?v=1.2.0&amp;#34; as=&amp;#34;font&amp;#34; type=&amp;#34;font/woff2&amp;#34; crossorigin&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&amp;#34; integrity=&amp;#34;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css&amp;#34; /&amp;gt; Add this css to your customer.</description>
+    </item>
+    <item>
+      <title>Hugo優化：代碼高亮，添加Copy按鈕，數學公式</title>
+      <link>http://localhost:1313/zh/dev/hugo-copy-code/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/hugo-copy-code/</guid>
+      <description>最近在Hugo上建立了個個人網站，就不從零開始講了。 參考鏈接：零成本搭建现代博客之搭建篇。 將網站基於這位同學的建起來后，還有幾點想要修改的：&#xA;代碼高亮 代碼Copy按鈕 數學公式 Google analytics 代碼高亮 hugo-coder主題的這個默認的代碼高亮太難看了。 其實有很多辦法，對這個主題，其實把config.toml裏面的pygments相關參數刪掉就能看了。 更多可以參考官方文檔hugo doc。&#xA;代碼Copy按鈕 Reference 基於參考鏈接，更改了按鈕的顔色和位置，放到了代碼塊裏面。&#xA;.copy-code-button { color: #c4c5c6; background-color: #444444; /*border: 2px solid;*/ border-width: 0 0 0 0; /*border-left-color: rgba(32, 226, 226, 0.45);*/ /*border-bottom-color: #20e2e2;*/ border-radius: 4px 4px 4px 4px; position:relative; /* right-align */ display: block; margin: 0 2px -32px auto; padding: 0 7px; font-size: 0.8em; font-family: Monoco, serif; } .copy-code-button:hover { cursor: pointer; background-color: #636262; } .copy-code-button:focus { /* Avoid an ugly focus outline on click in Chrome, but darken the button for accessibility.</description>
+    </item>
+  </channel>
+</rss>

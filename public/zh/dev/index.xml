@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devs on Jiyu</title>
+    <link>http://localhost:1313/zh/dev/</link>
+    <description>Recent content in Devs on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 01 Nov 2023 08:16:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>快速入门Liber chat</title>
+      <link>http://localhost:1313/zh/dev/tool-liberachat/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/tool-liberachat/</guid>
+      <description>官网：Libera Chat | A next-generation IRC network for FOSS projects collaboration!&#xA;IRC一大特点，坏处也是好处，大部分IRC服务器不会记录任何聊天记录。所以想和小伙伴聊天时，两个人必须同时在线。每次登陆后聊天记录都是空白的。&#xA;我们先需要一个客户端，第一次尝试直接用这个在线的即可：Libera Chat&#xA;其他客户端参考：Choosing an IRC client | Libera Chat&#xA;第一次登录，Nick随便给自己起个英文名字，password和channel不用填，点击Start。 你已经进入Libera世界了。&#xA;如果你知道小伙伴在哪个Channel，也不在意一定要保留一个自己的用户名，那根本无需注册，随便输入个用户名，Channel里输入频道名字(一般以#或者##开头)，就可以畅快使用了，后面都不用看了。 注册一个可以保留的用户名 无需密码登录的话，用户名也不会为你保留，重复名字会自动在后面加数字。先找个可以注册的名字，使用/nick + 你想要的用户名，看看能否注册。&#xA;/nick Yournick /nick到自己满意的名字后，注册使用&#xA;/msg NickServ REGISTER YourPassword youremail@example.com&#xA;YourPassword是你的密码，后面是邮箱。&#xA;不出意外你会收到一封邮件，包含指令 /msg NickServ VERIFY REGISTER youname xxxxx&#xA;复制这条指令，回到网页上运行，这时候你就有了自己的用户名和密码了。&#xA;进入频道 网页左边的CHANNELS右边，点击加号，可以输入你想去的频道。 查找包含linux关键字的频道使用 ： /msg alis LIST *linux*&#xA;查找500人以上的频道： /msg alis LIST * -min 500&#xA;创建自己的频道 输入/msg ChanServ INFO ##yourChannelName，如果显示not registerd未注册，可以 /join ##yourChannelName加入了。&#xA;/msg ChanServ REGISTER ##yourChannelName会注册##yourChannelName这个名字的频道。</description>
+    </item>
+    <item>
+      <title>Kobo升级版本后如何更新Koreader</title>
+      <link>http://localhost:1313/zh/dev/tool-koreader-kobo/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/tool-koreader-kobo/</guid>
+      <description>Koreader比Kobo本身的阅读器好用太多，翻页速度，各种快捷键，pdf裁边等等。我入了Kobo sage后没多久就装了Koreader。&#xA;安装参考链接： https://www.mobileread.com/forums/showthread.php?t=314220&#xA;最近想试试Kobo自带的Pocket，Koreader上的read it later插件wallabag还要自己找服务器配置实在麻烦，就退出了Koreader连上Wifi更新Pocket的list，没想到Kobo自动更新了。自动更新后，右下角NickelMenu点开没有了KOReader，显示Error。&#xA;这可怎么办，搜了一圈4.32 + Koreader没找到什么结果，还以为是不支持新版本，后来才发现是每次官方固件升级后的必备操作：&#xA;NOTE: Something that bears repeating from KFMon&amp;rsquo;s FAQ: a FW update will disable it, so you&amp;rsquo;ll have to reinstall it after a FW update in order to be able to launch stuff again, which is why there&amp;rsquo;s a package dedicated to that listed at the bottom of this post.&#xA;要做的也很简单，下载KFMon这个zip后，直接解压缩到Kobo的根目录比如E盘下，点击替换文件夹，然后弹出即可。 Kobo会自动安装和重启，如果有弹窗，点击确定升级即可，熟悉的KOReader又回到右下角的NickelMenu里啦！</description>
+    </item>
+    <item>
+      <title>Hugo 添加目錄</title>
+      <link>http://localhost:1313/zh/dev/hugo-toc/</link>
+      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/hugo-toc/</guid>
+      <description>我在用這個Bootstarp的插件TOC plugin。添加如下的幾個css/js，最關鍵的是最後html的layout，我自己調了個能看的，大家可以參考。&#xA;Usage Set up Bootstrap v4. For Bootstrap v3, see the older instructions. Include the Bootstrap Table of Contents stylesheet and JavaScript file. &amp;lt;!-- add after bootstrap.min.css --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css&amp;#34; /&amp;gt; &amp;lt;!-- add after bootstrap.min.js --&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 上面的兩項，就是修改了layouts/_default/baseof.html，在末尾的body標簽前加一下脚本鏈接。&#xA;&amp;lt;script src=&amp;#34;https://code.jquery.com/jquery-3.2.1.slim.min.js&amp;#34; integrity=&amp;#34;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&amp;#34; integrity=&amp;#34;sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&amp;#34; integrity=&amp;#34;sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 最上面的Link処，awesome-webfont下面加以下兩個link。&#xA;&amp;lt;link rel=&amp;#34;preload&amp;#34; href=&amp;#34;/fonts/forkawesome-webfont.woff2?v=1.2.0&amp;#34; as=&amp;#34;font&amp;#34; type=&amp;#34;font/woff2&amp;#34; crossorigin&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&amp;#34; integrity=&amp;#34;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css&amp;#34; /&amp;gt; Add this css to your customer.</description>
+    </item>
+    <item>
+      <title>Hugo優化：代碼高亮，添加Copy按鈕，數學公式</title>
+      <link>http://localhost:1313/zh/dev/hugo-copy-code/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/dev/hugo-copy-code/</guid>
+      <description>最近在Hugo上建立了個個人網站，就不從零開始講了。 參考鏈接：零成本搭建现代博客之搭建篇。 將網站基於這位同學的建起來后，還有幾點想要修改的：&#xA;代碼高亮 代碼Copy按鈕 數學公式 Google analytics 代碼高亮 hugo-coder主題的這個默認的代碼高亮太難看了。 其實有很多辦法，對這個主題，其實把config.toml裏面的pygments相關參數刪掉就能看了。 更多可以參考官方文檔hugo doc。&#xA;代碼Copy按鈕 Reference 基於參考鏈接，更改了按鈕的顔色和位置，放到了代碼塊裏面。&#xA;.copy-code-button { color: #c4c5c6; background-color: #444444; /*border: 2px solid;*/ border-width: 0 0 0 0; /*border-left-color: rgba(32, 226, 226, 0.45);*/ /*border-bottom-color: #20e2e2;*/ border-radius: 4px 4px 4px 4px; position:relative; /* right-align */ display: block; margin: 0 2px -32px auto; padding: 0 7px; font-size: 0.8em; font-family: Monoco, serif; } .copy-code-button:hover { cursor: pointer; background-color: #636262; } .copy-code-button:focus { /* Avoid an ugly focus outline on click in Chrome, but darken the button for accessibility.</description>
+    </item>
+  </channel>
+</rss>

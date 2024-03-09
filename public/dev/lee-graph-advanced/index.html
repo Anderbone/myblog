@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="Minimum spanning tree A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”. Min Cost to Connect All Points - LeetCode
+You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| &#43; |yi - yj|, where |val| denotes the absolute value of val.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="leetcode: mini spanning tree, single src shortest path, topological"/>
+<meta name="twitter:description" content="Minimum spanning tree A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”. Min Cost to Connect All Points - LeetCode
+You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| &#43; |yi - yj|, where |val| denotes the absolute value of val."/>
+
+    <meta property="og:title" content="leetcode: mini spanning tree, single src shortest path, topological" />
+<meta property="og:description" content="Minimum spanning tree A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”. Min Cost to Connect All Points - LeetCode
+You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| &#43; |yi - yj|, where |val| denotes the absolute value of val." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/lee-graph-advanced/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-12-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-01T10:53:35+00:00" />
+
+
+
+
+    <title>
+leetcode: mini spanning tree, single src shortest path, topological · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/lee-graph-advanced/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/lee-graph-advanced/">
+                    leetcode: mini spanning tree, single src shortest path, topological
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2021-12-29T00:00:00Z'>
+                      December 29, 2021
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/graph/">graph</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/leetcode-summary/">leetcode summary</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <h2 id="minimum-spanning-tree">
+  Minimum spanning tree
+  <a class="heading-link" href="#minimum-spanning-tree">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”.
+<img src="https://leetcode.com/explore/learn/card/Figures/Graph_Explore/Minimum_Spanning_Tree.png"></p>
+<p><a href="https://leetcode.com/problems/min-cost-to-connect-all-points/">Min Cost to Connect All Points - LeetCode</a></p>
+<p>You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi].
+The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.
+Return <strong>the minimum cost to make all points connected.</strong> All points are connected if there is exactly one simple path between any two points.</p>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2020/08/26/d.png"></p>
+<p>Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]] Output: 20 Explanation:</p>
+<p><img src="https://assets.leetcode.com/uploads/2020/08/26/c.png"></p>
+<p>We can connect the points as shown above to get the minimum cost of 20. Notice that there is a unique path between every pair of points.</p>
+<p>Example 2:
+Input: points = [[3,12],[-2,5],[-4,1]] Output: 18</p>
+<p>Constraints:</p>
+<p>1 &lt;= points.length &lt;= 1000
+-106 &lt;= xi, yi &lt;= 106
+All pairs (xi, yi) are distinct.</p>
+<h3 id="kruskal">
+  Kruskal
+  <a class="heading-link" href="#kruskal">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>We try adding each edge, one at a time, from the lowest weight edge up to the highest weight edge. If either of the edges&rsquo; vertices is not already part of the MST, then the edge is added to the MST.
+<img src="https://leetcode.com/explore/learn/card/Figures/Graph_Explore/KruskalDemo.gif"></p>
+<ul>
+<li>code  #Kruskal  #unionfind</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minCostConnectPoints</span>(self, points: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">=</span> len(points)
+</span></span><span style="display:flex;"><span>        root <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        rank <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(x):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x <span style="color:#f92672">!=</span> root[x]:    
+</span></span><span style="display:flex;"><span>                root[x] <span style="color:#f92672">=</span> find(root[x])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> root[x]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">union</span>(x, y):
+</span></span><span style="display:flex;"><span>            rtx <span style="color:#f92672">=</span> find(x)
+</span></span><span style="display:flex;"><span>            rty <span style="color:#f92672">=</span> find(y)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> rtx <span style="color:#f92672">==</span> rty: <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            rkx <span style="color:#f92672">=</span> rank[rtx]
+</span></span><span style="display:flex;"><span>            rky <span style="color:#f92672">=</span> rank[rty]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> rkx <span style="color:#f92672">&gt;</span> rky:
+</span></span><span style="display:flex;"><span>                root[rty] <span style="color:#f92672">=</span> rtx
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> rkx <span style="color:#f92672">&lt;</span> rky:
+</span></span><span style="display:flex;"><span>                root[rtx] <span style="color:#f92672">=</span> rty
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                root[rty] <span style="color:#f92672">=</span> rtx
+</span></span><span style="display:flex;"><span>                rank[rtx] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dis</span>(px, py):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> abs(px[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">-</span> py[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">+</span> abs(px[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> py[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        dis_pq <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, n):
+</span></span><span style="display:flex;"><span>                dis_pq<span style="color:#f92672">.</span>append((dis(points[i], points[j]), i, j)) <span style="color:#75715e"># put all edges</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heapify(dis_pq)
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            cur_dis, i, j <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(dis_pq)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> union(i, j): <span style="color:#75715e"># if can connect, means not already connected, not a cycle</span>
+</span></span><span style="display:flex;"><span>                res <span style="color:#f92672">+=</span> cur_dis
+</span></span><span style="display:flex;"><span>                n <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res
+</span></span></code></pre></div><h3 id="prim">
+  Prim
+  <a class="heading-link" href="#prim">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Starting from an arbitrary vertex, Prim&rsquo;s algorithm grows the minimum spanning tree by adding one vertex at a time to the tree. The choice of a vertex is based on the greedy strategy, i.e., the addition of the new vertex incurs the minimum cost.
+<img src="https://leetcode.com/explore/learn/card/Figures/Graph_Explore/PrimAlgDemo.gif"></p>
+<ul>
+<li>code #Prim shorter, optimized</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minCostConnectPoints</span>(self, points: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dis</span>(pi, pj):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> abs(pi[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">-</span> pj[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">+</span> abs(pi[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> pj[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        cost <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">=</span> len(points)
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        pq <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]] <span style="color:#75715e"># (distance, current point)</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(visited) <span style="color:#f92672">&lt;</span> n:
+</span></span><span style="display:flex;"><span>            shortest, cur <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(pq)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cur <span style="color:#f92672">in</span> visited: <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            visited<span style="color:#f92672">.</span>add(cur)
+</span></span><span style="display:flex;"><span>            cost <span style="color:#f92672">+=</span> shortest
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> point <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> point <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited: <span style="color:#75715e"># from current, to every unvisited point</span>
+</span></span><span style="display:flex;"><span>                    heapq<span style="color:#f92672">.</span>heappush(pq, (dis(points[cur], points[point]), point))
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> cost
+</span></span></code></pre></div><h2 id="single-source-shortest-path">
+  Single source shortest path
+  <a class="heading-link" href="#single-source-shortest-path">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>We often need to find the “shortest path” in a “weighted graph”.</p>
+<h3 id="dijkstra">
+  Dijkstra
+  <a class="heading-link" href="#dijkstra">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>We take the starting point u as the center and gradually expand outward while updating the “shortest path” to reach other vertices.</p>
+<p>“Dijkstra&rsquo;s Algorithm” uses a “greedy approach”. Each step selects the “minimum weight” from the currently reached vertices to find the “shortest path” to other vertices.</p>
+<h4 id="network-delay-time---leetcodehttpsleetcodecomproblemsnetwork-delay-time">
+  <a href="https://leetcode.com/problems/network-delay-time/">Network Delay Time - LeetCode</a>
+  <a class="heading-link" href="#network-delay-time---leetcodehttpsleetcodecomproblemsnetwork-delay-time">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.
+We will send a signal from a given node k. Return the time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.</p>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2019/05/23/931_example_1.png"></p>
+<p>Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2 Output: 2</p>
+<p>Example 2:
+Input: times = [[1,2,1]], n = 2, k = 1 Output: 1
+Example 3:
+Input: times = [[1,2,1]], n = 2, k = 2 Output: -1</p>
+<p>Constraints:</p>
+<p>1 &lt;= k &lt;= n &lt;= 100
+1 &lt;= times.length &lt;= 6000
+times[i].length == 3
+1 &lt;= ui, vi &lt;= n
+ui != vi
+0 &lt;= wi &lt;= 100
+All the pairs (ui, vi) are unique. (i.e., no multiple edges.)</p>
+<hr>
+<ul>
+<li>code wrong</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">networkDelayTime</span>(self, times: List[List[int]], n: int, k: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        distance <span style="color:#f92672">=</span> [inf] <span style="color:#f92672">*</span> (n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        distance[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        distance[k] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        graph <span style="color:#f92672">=</span> defaultdict(list) <span style="color:#75715e"># nei, distance</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, j, w <span style="color:#f92672">in</span> times:
+</span></span><span style="display:flex;"><span>            graph[i]<span style="color:#f92672">.</span>append((j, w)) 
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> deque([k])
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            cur <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>            visited<span style="color:#f92672">.</span>add(cur)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> nei, w <span style="color:#f92672">in</span> graph[cur]:
+</span></span><span style="display:flex;"><span>                distance[nei] <span style="color:#f92672">=</span> min(distance[nei], distance[cur] <span style="color:#f92672">+</span> w)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> nei <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                    q<span style="color:#f92672">.</span>append(nei)
+</span></span><span style="display:flex;"><span>        print(distance)
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> max(distance) 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans <span style="color:#66d9ef">if</span> ans <span style="color:#f92672">!=</span> inf <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p><img src="https://i.imgur.com/vyUYAGk.png">
+After starting point A, for neighbour B,C,D, can only choose B or C in the next round as they are the shortest, can&rsquo;t choose D.</p>
+<ul>
+<li>code  #dijkstra</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">networkDelayTime</span>(self, times: List[List[int]], n: int, k: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        distance <span style="color:#f92672">=</span> [inf] <span style="color:#f92672">*</span> (n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        distance[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># reduntant </span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        graph <span style="color:#f92672">=</span> defaultdict(list) <span style="color:#75715e"># nei, distance</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, j, w <span style="color:#f92672">in</span> times:
+</span></span><span style="display:flex;"><span>            graph[i]<span style="color:#f92672">.</span>append((j, w)) 
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>, k]] <span style="color:#75715e"># distance, point</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            cur_dis, cur <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(q)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> distance[cur] <span style="color:#f92672">!=</span> inf: <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            distance[cur] <span style="color:#f92672">=</span> cur_dis
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> nei, w <span style="color:#f92672">in</span> graph[cur]:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> distance[nei] <span style="color:#f92672">==</span> inf:
+</span></span><span style="display:flex;"><span>                    heapq<span style="color:#f92672">.</span>heappush(q, (cur_dis <span style="color:#f92672">+</span> w, nei))
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> max(distance)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans <span style="color:#66d9ef">if</span> ans <span style="color:#f92672">!=</span> inf <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">networkDelayTime</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> times, <span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>Integer, List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;&gt;</span> graph <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> time: times){
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// List&lt;int[]&gt; nei_wei = graph.getOrDefault(time[0], new ArrayList&lt;int[]&gt;());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// nei_wei.add(new int[] {time[1], time[2]});</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// graph.put(time[0], nei_wei);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>graph.<span style="color:#a6e22e">containsKey</span>(time<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>))
+</span></span><span style="display:flex;"><span>                graph.<span style="color:#a6e22e">put</span>(time<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>, <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span>());
+</span></span><span style="display:flex;"><span>            graph.<span style="color:#a6e22e">get</span>(time<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>).<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{time<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>, time<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>});
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>Integer, Integer<span style="color:#f92672">&gt;</span> dist <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        PriorityQueue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> pq <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PriorityQueue<span style="color:#f92672">&lt;&gt;</span>((a,b) <span style="color:#f92672">-&gt;</span> a<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> b<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        pq.<span style="color:#a6e22e">offer</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> {0, k});
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>pq.<span style="color:#a6e22e">isEmpty</span>()){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> cur_dis_node <span style="color:#f92672">=</span> pq.<span style="color:#a6e22e">poll</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> curDis <span style="color:#f92672">=</span> cur_dis_node<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> cur <span style="color:#f92672">=</span> cur_dis_node<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (dist.<span style="color:#a6e22e">containsKey</span>(cur)) <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>            dist.<span style="color:#a6e22e">put</span>(cur, curDis);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (graph.<span style="color:#a6e22e">containsKey</span>(cur)){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nei_w: graph.<span style="color:#a6e22e">get</span>(cur)){
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">int</span> nei <span style="color:#f92672">=</span> nei_w<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>, w <span style="color:#f92672">=</span> nei_w<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>dist.<span style="color:#a6e22e">containsKey</span>(nei)){
+</span></span><span style="display:flex;"><span>                        pq.<span style="color:#a6e22e">offer</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{curDis <span style="color:#f92672">+</span> w, nei});
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }    
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(dist.<span style="color:#a6e22e">size</span>() <span style="color:#f92672">!=</span> n) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dist.<span style="color:#a6e22e">values</span>().<span style="color:#a6e22e">stream</span>().<span style="color:#a6e22e">max</span>(Comparator.<span style="color:#a6e22e">naturalOrder</span>()).<span style="color:#a6e22e">get</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// int res = 0;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// for (int v: dist.values()){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//     res = Math.max(v, res);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// }</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// return res;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="path-with-minimum-effort---leetcodehttpsleetcodecomproblemspath-with-minimum-effort">
+  <a href="https://leetcode.com/problems/path-with-minimum-effort/">Path With Minimum Effort - LeetCode</a>
+  <a class="heading-link" href="#path-with-minimum-effort---leetcodehttpsleetcodecomproblemspath-with-minimum-effort">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
+A route&rsquo;s effort is the maximum absolute difference in heights between two consecutive cells of the route.
+Return <strong>the minimum effort required to travel from the top-left cell to the bottom-right cell.</strong></p>
+<p>Example 1:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex1.png">
+Input: heights = [[1,2,2],[3,8,2],[5,3,5]] Output: 2 Explanation: The route of [1,3,5,3,5] has a maximum absolute difference of 2 in consecutive cells. This is better than the route of [1,2,2,2,5], where the maximum absolute difference is 3.
+Example 2:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex2.png">
+Input: heights = [[1,2,3],[3,8,4],[5,3,5]] Output: 1 Explanation: The route of [1,2,3,4,5] has a maximum absolute difference of 1 in consecutive cells, which is better than route [1,3,5,3,5].
+Example 3:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex3.png">Input: heights = [[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]] Output: 0 Explanation: This route does not require any effort.</p>
+<p>Constraints:</p>
+<pre><code>rows == heights.length
+columns == heights[i].length
+1 &lt;= rows, columns &lt;= 100
+1 &lt;= heights[i][j] &lt;= 106
+</code></pre>
+<ul>
+<li>code  #Dijkstra  as long as a new edge won&rsquo;t decrease the path, i.e. diff won&rsquo;t decrease, we can potentially use Dijkstra(no negative edges)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        m, n <span style="color:#f92672">=</span> len(heights), len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        diff <span style="color:#f92672">=</span> [[inf] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>        diff[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]] <span style="color:#75715e"># max diff, (x, y)</span>
+</span></span><span style="display:flex;"><span>        direction <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            cur_diff, x, y <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(q)
+</span></span><span style="display:flex;"><span>            visited[x][y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> direction:
+</span></span><span style="display:flex;"><span>                nx, ny <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx, y <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nx <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ny <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[nx][ny]:
+</span></span><span style="display:flex;"><span>                    newdiff <span style="color:#f92672">=</span> min(diff[nx][ny], max(abs(heights[nx][ny] <span style="color:#f92672">-</span> heights[x][y]), cur_diff))
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> newdiff <span style="color:#f92672">&lt;</span> diff[nx][ny]:
+</span></span><span style="display:flex;"><span>                        diff[nx][ny] <span style="color:#f92672">=</span> newdiff
+</span></span><span style="display:flex;"><span>                        heapq<span style="color:#f92672">.</span>heappush(q, [diff[nx][ny], nx, ny])
+</span></span><span style="display:flex;"><span>                                  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> diff[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><h4 id="cheapest-flights-within-k-stops---leetcodehttpsleetcodecomproblemscheapest-flights-within-k-stops">
+  <a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/">Cheapest Flights Within K Stops - LeetCode</a>
+  <a class="heading-link" href="#cheapest-flights-within-k-stops---leetcodehttpsleetcodecomproblemscheapest-flights-within-k-stops">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>There are n cities connected by some number of flights. You are given an array flights where flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city toi with cost pricei.
+You are also given three integers src, dst, and k, return __the cheapest price from <strong>src</strong> to <strong>dst</strong> with at most <strong>k</strong> stops. <strong>If there is no such route, return</strong> __-1.</p>
+<p>Example 1:</p>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png"></p>
+<p>Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 1 Output: 200 Explanation: The graph is shown. The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marked red in the picture.
+Example 2:</p>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png"></p>
+<p>Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 0 Output: 500 Explanation: The graph is shown. The cheapest price from city 0 to city 2 with at most 0 stop costs 500, as marked blue in the picture.</p>
+<p>Constraints:</p>
+<pre><code>1 &lt;= n &lt;= 100
+0 &lt;= flights.length &lt;= (n * (n - 1) / 2)
+flights[i].length == 3
+0 &lt;= fromi, toi &lt; n
+fromi != toi
+1 &lt;= pricei &lt;= 104
+There will not be any multiple flights between two cities.
+0 &lt;= src, dst, k &lt; n
+src != dst
+</code></pre>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findCheapestPrice</span>(self, n: int, flights: List[List[int]], src: int, dst: int, K: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Build the adjacency matrix</span>
+</span></span><span style="display:flex;"><span>        adj_matrix <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> s, d, w <span style="color:#f92672">in</span> flights:
+</span></span><span style="display:flex;"><span>            adj_matrix[s][d] <span style="color:#f92672">=</span> w
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Shortest distances array</span>
+</span></span><span style="display:flex;"><span>        distances <span style="color:#f92672">=</span> [float(<span style="color:#e6db74">&#34;inf&#34;</span>) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        current_stops <span style="color:#f92672">=</span> [float(<span style="color:#e6db74">&#34;inf&#34;</span>) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        distances[src], current_stops[src] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Data is (cost, stops, node)</span>
+</span></span><span style="display:flex;"><span>        minHeap <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, src)]     
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> minHeap:
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            cost, stops, node <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(minHeap)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># If destination is reached, return the cost to get here</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> node <span style="color:#f92672">==</span> dst:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> cost
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># If there are no more steps left, continue </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> stops <span style="color:#f92672">==</span> K <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>             
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Examine and relax all neighboring edges if possible </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> nei <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> adj_matrix[node][nei] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    dU, dV, wUV <span style="color:#f92672">=</span> cost, distances[nei], adj_matrix[node][nei]
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># Better cost?</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> dU <span style="color:#f92672">+</span> wUV <span style="color:#f92672">&lt;</span> dV:
+</span></span><span style="display:flex;"><span>                        distances[nei] <span style="color:#f92672">=</span> dU <span style="color:#f92672">+</span> wUV
+</span></span><span style="display:flex;"><span>                        heapq<span style="color:#f92672">.</span>heappush(minHeap, (dU <span style="color:#f92672">+</span> wUV, stops <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, nei))
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">elif</span> stops <span style="color:#f92672">&lt;</span> current_stops[nei]:
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e">#  Better steps?</span>
+</span></span><span style="display:flex;"><span>                        heapq<span style="color:#f92672">.</span>heappush(minHeap, (dU <span style="color:#f92672">+</span> wUV, stops <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, nei))
+</span></span><span style="display:flex;"><span>                        
+</span></span><span style="display:flex;"><span>                    current_stops[nei] <span style="color:#f92672">=</span> stops
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> distances[dst] <span style="color:#f92672">==</span> float(<span style="color:#e6db74">&#34;inf&#34;</span>) <span style="color:#66d9ef">else</span> distances[dst]
+</span></span></code></pre></div><h3 id="bellman-ford-spfa">
+  Bellman-Ford (SPFA)
+  <a class="heading-link" href="#bellman-ford-spfa">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>“Bellman-Ford algorithm” is only applicable to “graphs” with no “negative weight cycles”.</p>
+<p>Instead of choosing among any untraversed edges, as one does by using the “Bellman-Ford” algorithm, the “SPFA” Algorithm uses a “queue” to maintain the next starting vertex of the edge to be traversed. Only when the shortest distance of a vertex is relaxed(updated) and that the vertex is not in the “queue”, we add the vertex to the queue. We iterate the process until the queue is empty. At this point, we have calculated the minimum distance from the given vertex to any vertices.</p>
+<p>Notice a node can be added to the queue many times, just like in Bellman-Ford algorithm we need to run many rounds until the pre matrix equals to the current matrix.</p>
+<p><a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/">Cheapest Flights Within K Stops - LeetCode</a></p>
+<p>There are n cities connected by some number of flights. You are given an array flights where flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city toi with cost pricei.
+You are also given three integers src, dst, and k, return __the cheapest price from <strong>src</strong> to <strong>dst</strong> with at most <strong>k</strong> stops. <strong>If there is no such route, return</strong> __-1.</p>
+<p>Example 1:</p>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png"></p>
+<p>Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 1 Output: 200 Explanation: The graph is shown. The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marked red in the picture.
+Example 2:</p>
+<p>Constraints:</p>
+<pre><code>1 &lt;= n &lt;= 100
+0 &lt;= flights.length &lt;= (n * (n - 1) / 2)
+flights[i].length == 3
+0 &lt;= fromi, toi &lt; n
+fromi != toi
+1 &lt;= pricei &lt;= 104
+There will not be any multiple flights between two cities.
+0 &lt;= src, dst, k &lt; n
+src != dst
+</code></pre>
+<hr>
+<ul>
+<li>code  #bellmanford</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findCheapestPrice</span>(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        pre <span style="color:#f92672">=</span> [inf] <span style="color:#f92672">*</span> n
+</span></span><span style="display:flex;"><span>        pre[src] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        cur <span style="color:#f92672">=</span> pre[:]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(k <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> begin, end, cost <span style="color:#f92672">in</span> flights:
+</span></span><span style="display:flex;"><span>                cur[end] <span style="color:#f92672">=</span> min(cur[end],  pre[begin] <span style="color:#f92672">+</span> cost)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> pre <span style="color:#f92672">==</span> cur: <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            pre <span style="color:#f92672">=</span> cur[:]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> cur[dst] <span style="color:#66d9ef">if</span> cur[dst] <span style="color:#f92672">!=</span> inf <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h2 id="topological-sorting-kahn">
+  Topological sorting (Kahn)
+  <a class="heading-link" href="#topological-sorting-kahn">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://en.wikipedia.org/wiki/Topological_sorting">Topological sorting - Wikipedia</a></p>
+<p>How can we arrange the order of the courses adequately while considering  prerequisite relationships between them?</p>
+<p><img src="https://leetcode.com/explore/learn/card/Figures/Graph_Explore/Course_Relationships.png"></p>
+<p>“Topological sorting” provides a linear sorting based on the required ordering between vertices in directed acyclic graphs.</p>
+<p>“Topological sorting” only works with graphs that are directed and acyclic.
+There must be at least one vertex in the “graph” with an “in-degree” of 0.</p>
+<h4 id="course-schedule-ii---leetcodehttpsleetcodecomproblemscourse-schedule-ii">
+  <a href="https://leetcode.com/problems/course-schedule-ii/">Course Schedule II - LeetCode</a>
+  <a class="heading-link" href="#course-schedule-ii---leetcodehttpsleetcodecomproblemscourse-schedule-ii">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.</p>
+<p>For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.Return <strong>the ordering of courses you should take to finish all courses</strong>. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array.</p>
+<p>Example 1:
+Input: numCourses = 2, prerequisites = [[1,0]] Output: [0,1] Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So the correct course order is [0,1].
+Example 2:
+Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]] Output: [0,2,1,3] Explanation: There are a total of 4 courses to take. To take course 3 you should have finished both courses 1 and 2. Both courses 1 and 2 should be taken after you finished course 0. So one correct course order is [0,1,2,3]. Another correct ordering is [0,2,1,3].
+Example 3:
+Input: numCourses = 1, prerequisites = [] Output: [0]</p>
+<hr>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">findOrder</span>(<span style="color:#66d9ef">int</span> numCourses, <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> prerequisites) {
+</span></span><span style="display:flex;"><span>        HashMap<span style="color:#f92672">&lt;</span>Integer, List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> adja <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> indegree <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>numCourses<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> edge: prerequisites){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> edge<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> end <span style="color:#f92672">=</span> edge<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            indegree<span style="color:#f92672">[</span>end<span style="color:#f92672">]</span> <span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> nei <span style="color:#f92672">=</span> adja.<span style="color:#a6e22e">getOrDefault</span>(start, <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>());
+</span></span><span style="display:flex;"><span>            nei.<span style="color:#a6e22e">add</span>(end);
+</span></span><span style="display:flex;"><span>            adja.<span style="color:#a6e22e">put</span>(start, nei);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        LinkedList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> q <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0; i <span style="color:#f92672">&lt;</span> numCourses; <span style="color:#f92672">++</span>i){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (indegree<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 0){
+</span></span><span style="display:flex;"><span>                q.<span style="color:#a6e22e">offer</span>(i); <span style="color:#75715e">// add to last</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>numCourses<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> added <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q.<span style="color:#a6e22e">isEmpty</span>()){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> cur <span style="color:#f92672">=</span> q.<span style="color:#a6e22e">poll</span>(); <span style="color:#75715e">// pop first</span>
+</span></span><span style="display:flex;"><span>            res<span style="color:#f92672">[</span>added<span style="color:#f92672">++]</span> <span style="color:#f92672">=</span> cur;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (added <span style="color:#f92672">==</span> numCourses){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (adja.<span style="color:#a6e22e">containsKey</span>(cur)){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> nei: adja.<span style="color:#a6e22e">get</span>(cur)){
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">--</span>indegree<span style="color:#f92672">[</span>nei<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 0){
+</span></span><span style="display:flex;"><span>                        q.<span style="color:#a6e22e">offer</span>(nei);
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findOrder</span>(self, numCourses: int, prerequisites: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># if not prerequisites: return list(range(numCourses))</span>
+</span></span><span style="display:flex;"><span>        adja <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span>        indegree <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> course, pre <span style="color:#f92672">in</span> prerequisites:
+</span></span><span style="display:flex;"><span>            adja[pre]<span style="color:#f92672">.</span>append(course)
+</span></span><span style="display:flex;"><span>            indegree[course] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        s <span style="color:#f92672">=</span> [k <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(numCourses) <span style="color:#66d9ef">if</span> indegree[k] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> s:
+</span></span><span style="display:flex;"><span>            cur <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>            res<span style="color:#f92672">.</span>append(cur)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> nei <span style="color:#f92672">in</span> adja[cur]:
+</span></span><span style="display:flex;"><span>                indegree[nei] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> indegree[nei] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    s<span style="color:#f92672">.</span>append(nei)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res <span style="color:#66d9ef">if</span> len(res) <span style="color:#f92672">==</span> numCourses <span style="color:#66d9ef">else</span> []
+</span></span></code></pre></div><h4 id="alien-dictionary---leetcodehttpsleetcodecomproblemsalien-dictionary">
+  <a href="https://leetcode.com/problems/alien-dictionary/">Alien Dictionary - LeetCode</a>
+  <a class="heading-link" href="#alien-dictionary---leetcodehttpsleetcodecomproblemsalien-dictionary">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>There is a new alien language that uses the English alphabet. However, the order among the letters is unknown to you.
+You are given a list of strings words from the alien language&rsquo;s dictionary, where the strings in words are sorted lexicographically by the rules of this new language.
+Return <strong>a string of the unique letters in the new alien language sorted in lexicographically increasing order by the new language&rsquo;s rules. If there is no solution, return <strong>&quot;&quot;</strong>. If there are multiple solutions, return any of them</strong>.
+A string s is lexicographically smaller than a string t if at the first letter where they differ, the letter in s comes before the letter in t in the alien language. If the first min(s.length, t.length) letters are the same, then s is smaller if and only if s.length &lt; t.length.</p>
+<p>Example 1:
+Input: words = [&ldquo;wrt&rdquo;,&ldquo;wrf&rdquo;,&ldquo;er&rdquo;,&ldquo;ett&rdquo;,&ldquo;rftt&rdquo;] Output: &ldquo;wertf&rdquo;
+Example 2:
+Input: words = [&ldquo;z&rdquo;,&ldquo;x&rdquo;] Output: &ldquo;zx&rdquo;
+Example 3:
+Input: words = [&ldquo;z&rdquo;,&ldquo;x&rdquo;,&ldquo;z&rdquo;] Output: &quot;&quot; Explanation: The order is invalid, so return &ldquo;&rdquo;.</p>
+<p>Constraints:</p>
+<pre><code>1 &lt;= words.length &lt;= 100
+1 &lt;= words[i].length &lt;= 100
+words[i] consists of only lowercase English letters.
+</code></pre>
+<hr>
+<ul>
+<li>code post order dfs, java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> StringBuilder res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>Character, ArrayList<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;&gt;</span> preDic <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>Character, Boolean<span style="color:#f92672">&gt;</span> seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">alienOrder</span>(String<span style="color:#f92672">[]</span> words) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// initailse predic</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (String word: words){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (Character c: word.<span style="color:#a6e22e">toCharArray</span>()){
+</span></span><span style="display:flex;"><span>                preDic.<span style="color:#a6e22e">putIfAbsent</span>(c, <span style="color:#66d9ef">new</span> ArrayList());
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// build pre dic, dfs</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;</span> words.<span style="color:#a6e22e">length</span>; <span style="color:#f92672">++</span>i){
+</span></span><span style="display:flex;"><span>            String first <span style="color:#f92672">=</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            String second <span style="color:#f92672">=</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// abc ab</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (first.<span style="color:#a6e22e">startsWith</span>(second) <span style="color:#f92672">&amp;&amp;</span> first.<span style="color:#a6e22e">length</span>() <span style="color:#f92672">&gt;</span> second.<span style="color:#a6e22e">length</span>()){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> (j <span style="color:#f92672">&lt;</span> Math.<span style="color:#a6e22e">min</span>(first.<span style="color:#a6e22e">length</span>(), second.<span style="color:#a6e22e">length</span>())){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (first.<span style="color:#a6e22e">charAt</span>(j) <span style="color:#f92672">!=</span> second.<span style="color:#a6e22e">charAt</span>(j)){
+</span></span><span style="display:flex;"><span>                    preDic.<span style="color:#a6e22e">get</span>(second.<span style="color:#a6e22e">charAt</span>(j)).<span style="color:#a6e22e">add</span>(first.<span style="color:#a6e22e">charAt</span>(j));
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (Character c: preDic.<span style="color:#a6e22e">keySet</span>()){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>dfs(c)) <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">dfs</span>(Character c){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (seen.<span style="color:#a6e22e">containsKey</span>(c)){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> seen.<span style="color:#a6e22e">get</span>(c);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        seen.<span style="color:#a6e22e">put</span>(c, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (Character pre: preDic.<span style="color:#a6e22e">get</span>(c)){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">boolean</span> noCycle <span style="color:#f92672">=</span> dfs(pre);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>noCycle){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        seen.<span style="color:#a6e22e">put</span>(c, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        res.<span style="color:#a6e22e">append</span>(c);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code  post order dfs pythonM</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">alienOrder</span>(self, words: List[str]) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 0: Put all unique letters into the adj list.</span>
+</span></span><span style="display:flex;"><span>        reverse_adj_list <span style="color:#f92672">=</span> {c : [] <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> word}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 1: Find all edges and put them in reverse_adj_list.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> first_word, second_word <span style="color:#f92672">in</span> zip(words, words[<span style="color:#ae81ff">1</span>:]):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> c, d <span style="color:#f92672">in</span> zip(first_word, second_word):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> c <span style="color:#f92672">!=</span> d: 
+</span></span><span style="display:flex;"><span>                    reverse_adj_list[d]<span style="color:#f92672">.</span>append(c)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>: <span style="color:#75715e"># Check that second word isn&#39;t a prefix of first word.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> len(second_word) <span style="color:#f92672">&lt;</span> len(first_word): 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Step 2: Depth-first search.</span>
+</span></span><span style="display:flex;"><span>        seen <span style="color:#f92672">=</span> {} <span style="color:#75715e"># False = grey, True = black.</span>
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">visit</span>(node):  <span style="color:#75715e"># Return True iff there are no cycles.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> node <span style="color:#f92672">in</span> seen:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> seen[node] <span style="color:#75715e"># If this node was grey (False), a cycle was detected.</span>
+</span></span><span style="display:flex;"><span>            seen[node] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span> <span style="color:#75715e"># Mark node as grey.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> next_node <span style="color:#f92672">in</span> reverse_adj_list[node]:
+</span></span><span style="display:flex;"><span>                result <span style="color:#f92672">=</span> visit(next_node)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> result: 
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span> <span style="color:#75715e"># Cycle was detected lower down.</span>
+</span></span><span style="display:flex;"><span>            seen[node] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#75715e"># Mark node as black.</span>
+</span></span><span style="display:flex;"><span>            output<span style="color:#f92672">.</span>append(node)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> all(visit(node) <span style="color:#66d9ef">for</span> node <span style="color:#f92672">in</span> reverse_adj_list):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(output)
+</span></span></code></pre></div><p>-code  with indegree, topological sorting</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">alienOrder</span>(self, words: List[str]) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        order_dic <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span>        indegree <span style="color:#f92672">=</span> {c:<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> word}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(words)):
+</span></span><span style="display:flex;"><span>            pre, nex <span style="color:#f92672">=</span> words[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], words[i] <span style="color:#75715e"># compare only two, not with all rest, becuase a&gt;b and b&gt;c, sure a&gt;c</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(min(len(pre), len(nex))):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> pre[j] <span style="color:#f92672">!=</span> nex[j]:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> nex[j] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> order_dic[pre[j]]:
+</span></span><span style="display:flex;"><span>                        order_dic[pre[j]]<span style="color:#f92672">.</span>append(nex[j])
+</span></span><span style="display:flex;"><span>                        indegree[nex[j]] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>: <span style="color:#75715e"># only execute when not break</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> len(pre) <span style="color:#f92672">&gt;</span> len(nex): <span style="color:#75715e"># abc &gt; ab</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        s <span style="color:#f92672">=</span> [c <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> indegree <span style="color:#66d9ef">if</span> indegree[c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> s:
+</span></span><span style="display:flex;"><span>            cur <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>            res<span style="color:#f92672">.</span>append(cur)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> nex <span style="color:#f92672">in</span> order_dic[cur]:
+</span></span><span style="display:flex;"><span>                indegree[nex] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> indegree[nex] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    s<span style="color:#f92672">.</span>append(nex)
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(res) <span style="color:#66d9ef">if</span> len(res) <span style="color:#f92672">==</span> len(indegree) <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            
+</span></span></code></pre></div><h4 id="parallel-courses---leetcodehttpsleetcodecomproblemsparallel-courses">
+  <a href="https://leetcode.com/problems/parallel-courses/">Parallel Courses - LeetCode</a>
+  <a class="heading-link" href="#parallel-courses---leetcodehttpsleetcodecomproblemsparallel-courses">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>You are given an integer n, which indicates that there are n courses labeled from 1 to n. You are also given an array relations where relations[i] = [prevCoursei, nextCoursei], representing a prerequisite relationship between course prevCoursei and course nextCoursei: course prevCoursei has to be taken before course nextCoursei.
+In one semester, you can take any number of courses as long as you have taken all the prerequisites in the previous semester for the courses you are taking.
+Return <strong>the minimum number of semesters needed to take all courses</strong>. If there is no way to take all the courses, return -1.</p>
+<p>Example 1:
+<img src="https://assets.leetcode.com/uploads/2021/02/24/course1graph.jpg">Input: n = 3, relations = [[1,3],[2,3]] Output: 2 Explanation: The figure above represents the given graph. In the first semester, you can take courses 1 and 2. In the second semester, you can take course 3.
+Example 2:
+<img src="https://assets.leetcode.com/uploads/2021/02/24/course2graph.jpg">Input: n = 3, relations = [[1,2],[2,3],[3,1]] Output: -1 Explanation: No course can be studied because they are prerequisites of each other.</p>
+<p>Constraints:</p>
+<pre><code>1 &lt;= n &lt;= 5000
+1 &lt;= relations.length &lt;= 5000
+relations[i].length == 2
+1 &lt;= prevCoursei, nextCoursei &lt;= n
+prevCoursei != nextCoursei
+All the pairs [prevCoursei, nextCoursei] are unique.
+</code></pre>
+<hr>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumSemesters</span>(self, n: int, relations: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        indegree <span style="color:#f92672">=</span> {i:<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)}
+</span></span><span style="display:flex;"><span>        graph <span style="color:#f92672">=</span> defaultdict(list)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> pre, nex <span style="color:#f92672">in</span> relations:
+</span></span><span style="display:flex;"><span>            indegree[nex] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            graph[pre]<span style="color:#f92672">.</span>append(nex)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> deque([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> indegree <span style="color:#66d9ef">if</span> indegree[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> n
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            step <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(q)):
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> nex <span style="color:#f92672">in</span> graph[cur]:
+</span></span><span style="display:flex;"><span>                    indegree[nex] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> indegree[nex] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                        q<span style="color:#f92672">.</span>append(nex)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> step <span style="color:#66d9ef">if</span> left <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h4 id="minimum-height-trees---leetcodehttpsleetcodecomproblemsminimum-height-trees">
+  <a href="https://leetcode.com/problems/minimum-height-trees/">Minimum Height Trees - LeetCode</a>
+  <a class="heading-link" href="#minimum-height-trees---leetcodehttpsleetcodecomproblemsminimum-height-trees">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>A tree is an undirected graph in which any two vertices are connected by <strong>exactly</strong> one path. In other words, any connected graph without simple cycles is a tree.
+Given a tree of n nodes labelled from 0 to n - 1, and an array of n - 1 edges where edges[i] = [ai, bi] indicates that there is an undirected edge between the two nodes ai and bi in the tree, you can choose any node of the tree as the root. When you select a node x as the root, the result tree has height h. Among all possible rooted trees, those with minimum height (i.e. min(h))  are called minimum height trees (MHTs).
+Return <strong>a list of all MHTs&rsquo; root labels</strong>. You can return the answer in any order.
+The height of a rooted tree is the number of edges on the longest downward path between the root and a leaf.</p>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2020/09/01/e1.jpg"></p>
+<p>Input: n = 4, edges = [[1,0],[1,2],[1,3]] Output: [1] Explanation: As shown, the height of the tree is 1 when the root is the node with label 1 which is the only MHT.
+Example 2:</p>
+<p><img src="https://assets.leetcode.com/uploads/2020/09/01/e2.jpg"></p>
+<p>Input: n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]] Output: [3,4]
+Example 3:
+Input: n = 1, edges = [] Output: [0]
+Example 4:
+Input: n = 2, edges = [[0,1]] Output: [0,1]</p>
+<p>Constraints:</p>
+<p>1 &lt;= n &lt;= 2 * 104
+edges.length == n - 1
+0 &lt;= ai, bi &lt; n
+ai != bi
+All the pairs (ai, bi) are distinct.
+The given input is guaranteed to be a tree and there will be no repeated edges.
+C</p>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findMinHeightTrees</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> edges) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// base cases</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&lt;=</span> 2) {
+</span></span><span style="display:flex;"><span>            ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> centroids <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>                centroids.<span style="color:#a6e22e">add</span>(i);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> centroids;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Build the graph with the adjacency list</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> neighbors <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            neighbors.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> edge : edges) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> edge<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>, end <span style="color:#f92672">=</span> edge<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            neighbors.<span style="color:#a6e22e">get</span>(start).<span style="color:#a6e22e">add</span>(end);
+</span></span><span style="display:flex;"><span>            neighbors.<span style="color:#a6e22e">get</span>(end).<span style="color:#a6e22e">add</span>(start);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Initialize the first layer of leaves</span>
+</span></span><span style="display:flex;"><span>        ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> leaves <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (neighbors.<span style="color:#a6e22e">get</span>(i).<span style="color:#a6e22e">size</span>() <span style="color:#f92672">==</span> 1)
+</span></span><span style="display:flex;"><span>                leaves.<span style="color:#a6e22e">add</span>(i);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Trim the leaves until reaching the centroids</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> remainingNodes <span style="color:#f92672">=</span> n;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (remainingNodes <span style="color:#f92672">&gt;</span> 2) {
+</span></span><span style="display:flex;"><span>            remainingNodes <span style="color:#f92672">-=</span> leaves.<span style="color:#a6e22e">size</span>();
+</span></span><span style="display:flex;"><span>            ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> newLeaves <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// remove the current leaves along with the edges</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (Integer leaf : leaves) {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// the only neighbor left for the leaf node</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Integer neighbor = neighbors.get(leaf).iterator().next();</span>
+</span></span><span style="display:flex;"><span>                Integer neighbor <span style="color:#f92672">=</span> neighbors.<span style="color:#a6e22e">get</span>(leaf).<span style="color:#a6e22e">get</span>(0);
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// remove the edge along with the leaf node</span>
+</span></span><span style="display:flex;"><span>                neighbors.<span style="color:#a6e22e">get</span>(neighbor).<span style="color:#a6e22e">remove</span>(leaf);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (neighbors.<span style="color:#a6e22e">get</span>(neighbor).<span style="color:#a6e22e">size</span>() <span style="color:#f92672">==</span> 1)
+</span></span><span style="display:flex;"><span>                    newLeaves.<span style="color:#a6e22e">add</span>(neighbor);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// prepare for the next round</span>
+</span></span><span style="display:flex;"><span>            leaves <span style="color:#f92672">=</span> newLeaves;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// The remaining nodes are the centroids of the graph</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> leaves;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findMinHeightTrees</span>(self, n: int, edges: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>: <span style="color:#66d9ef">return</span> list(range(n))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        adja <span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, j <span style="color:#f92672">in</span> edges:
+</span></span><span style="display:flex;"><span>            adja[i]<span style="color:#f92672">.</span>append(j)
+</span></span><span style="display:flex;"><span>            adja[j]<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        leaves <span style="color:#f92672">=</span> [] <span style="color:#75715e"># outmost    </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> node, nei <span style="color:#f92672">in</span> enumerate(adja):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> len(nei) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                leaves<span style="color:#f92672">.</span>append(node)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        nodeleft <span style="color:#f92672">=</span> n
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> nodeleft <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># remove leaves</span>
+</span></span><span style="display:flex;"><span>            nodeleft <span style="color:#f92672">-=</span> len(leaves)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            newleaves <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> leaves:
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> leaves<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>                only_nei <span style="color:#f92672">=</span> adja[cur]<span style="color:#f92672">.</span>pop() <span style="color:#75715e"># cur leaf&#39;s only nei</span>
+</span></span><span style="display:flex;"><span>                adja[only_nei]<span style="color:#f92672">.</span>remove(cur)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> len(adja[only_nei]) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                    newleaves<span style="color:#f92672">.</span>append(only_nei)
+</span></span><span style="display:flex;"><span>                        
+</span></span><span style="display:flex;"><span>            leaves <span style="color:#f92672">=</span> newleaves
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> leaves
+</span></span></code></pre></div>
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

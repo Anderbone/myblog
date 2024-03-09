@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Array on Jiyu</title>
+    <link>http://localhost:1313/tags/array/</link>
+    <description>Recent content in Array on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Mar 2024 07:08:33 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>289. Game of Life</title>
+      <link>http://localhost:1313/leetcode/289/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/289/</guid>
+      <description>Game of Life - LeetCode&#xA;According to Wikipedia&amp;rsquo;s article: &amp;ldquo;The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.&amp;rdquo; The board is made up of an m x n grid of cells, where each cell has an initial state: live (represented by a 1) or dead (represented by a 0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):</description>
+    </item>
+    <item>
+      <title>73. Set matrix zeroes</title>
+      <link>http://localhost:1313/leetcode/73/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/73/</guid>
+      <description>https://leetcode.com/problems/set-matrix-zeroes/&#xA;Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0&amp;rsquo;s. You must do it in place.&#xA;Example 1: Input: matrix = [[1,1,1],[1,0,1],[1,1,1]] Output: [[1,0,1],[0,0,0],[1,0,1]] Example 2: Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]&#xA;Constraints:&#xA;m == matrix.length n == matrix[0].length 1 &amp;lt;= m, n &amp;lt;= 200 -231 &amp;lt;= matrix[i][j] &amp;lt;= 231 - 1 Follow up:&#xA;A straightforward solution using O(mn) space is probably a bad idea.</description>
+    </item>
+    <item>
+      <title>48. Rotate image</title>
+      <link>http://localhost:1313/leetcode/48/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/48/</guid>
+      <description>https://leetcode.com/problems/rotate-image/&#xA;You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise). You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.&#xA;Example 1: Input: matrix = [[1,2,3],[4,5,6],[7,8,9]] Output: [[7,4,1],[8,5,2],[9,6,3]] Example 2: Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]] Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]&#xA;Constraints:&#xA;n == matrix.length == matrix[i].length 1 &amp;lt;= n &amp;lt;= 20 -1000 &amp;lt;= matrix[i][j] &amp;lt;= 1000 code class Solution { public void rotate(int[][] matrix) { int n = matrix.</description>
+    </item>
+    <item>
+      <title>54. Spiral matrix</title>
+      <link>http://localhost:1313/leetcode/54/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/54/</guid>
+      <description>https://leetcode.com/problems/spiral-matrix/&#xA;Given an m x n matrix, return all elements of the matrix in spiral order.&#xA;Example 1: Input: matrix = [[1,2,3],[4,5,6],[7,8,9]] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]] Output: [1,2,3,4,8,12,11,10,9,5,6,7]&#xA;Constraints:&#xA;m == matrix.length n == matrix[i].length 1 &amp;lt;= m, n &amp;lt;= 10 -100 &amp;lt;= matrix[i][j] &amp;lt;= 100 code //[[1,2,3],[4,5,6],[7,8,9]] // 0,1 -&amp;gt; 1,0 -&amp;gt; 0,-1 -&amp;gt; -1,0 // right (x, y+1) down (x+1, y) left (x, y-1) up(x-1, y) class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { List&amp;lt;Integer&amp;gt; res = new ArrayList&amp;lt;&amp;gt;(); int x = 0, y = 0; int width = matrix[0].</description>
+    </item>
+    <item>
+      <title>36. Valid Sudoku</title>
+      <link>http://localhost:1313/leetcode/36/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/36/</guid>
+      <description>Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:&#xA;Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.**Note:** A Sudoku board (partially filled) could be valid but is not necessarily solvable.</description>
+    </item>
+    <item>
+      <title>167. Two sum II</title>
+      <link>http://localhost:1313/leetcode/167/</link>
+      <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/167/</guid>
+      <description>Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 &amp;lt;= index1 &amp;lt; index2 &amp;lt;= numbers.length. Return__ the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.__ The tests are generated such that there is exactly one solution.</description>
+    </item>
+    <item>
+      <title>392. Is Subsequence</title>
+      <link>http://localhost:1313/leetcode/392/</link>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/392/</guid>
+      <description>Is Subsequence - LeetCode&#xA;Given two strings s and t, return true__ if s is a subsequence of t, or false otherwise__. A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., &amp;ldquo;ace&amp;rdquo; is a subsequence of &amp;ldquo;abcde&amp;rdquo; while &amp;ldquo;aec&amp;rdquo; is not).&#xA;Example 1: Input: s = &amp;ldquo;abc&amp;rdquo;, t = &amp;ldquo;ahbgdc&amp;rdquo; Output: true Example 2: Input: s = &amp;ldquo;axc&amp;rdquo;, t = &amp;ldquo;ahbgdc&amp;rdquo; Output: false</description>
+    </item>
+    <item>
+      <title>12. Integer to Roman</title>
+      <link>http://localhost:1313/leetcode/12/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/12/</guid>
+      <description>https://leetcode.com/problems/integer-to-roman/&#xA;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, 2 is written as II in Roman numeral, just two one&amp;rsquo;s added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.</description>
+    </item>
+    <item>
+      <title>13. Roman to integer</title>
+      <link>http://localhost:1313/leetcode/13/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/13/</guid>
+      <description>Roman to Integer - LeetCode&#xA;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</description>
+    </item>
+    <item>
+      <title>42. Trapping Rain Water</title>
+      <link>http://localhost:1313/leetcode/42/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/42/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.&#xA;Example 1: Input: height = [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Example 2: Input: height = [4,2,0,3,2,5] Output: 9&#xA;Constraints:&#xA;n == height.length 1 &amp;lt;= n &amp;lt;= 2 * 104 0 &amp;lt;= height[i] &amp;lt;= 105 code class Solution { public int trap(int[] height) { int left = 0, right = height.</description>
+    </item>
+    <item>
+      <title>135. Candy</title>
+      <link>http://localhost:1313/leetcode/135/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/135/</guid>
+      <description>https://leetcode.com/problems/candy/&#xA;There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings. You are giving candies to these children subjected to the following requirements:&#xA;Each child must have at least one candy. Children with a higher rating get more candies than their neighbors.Return __the minimum number of candies you need to have to distribute the candies to the children__. Example 1: Input: ratings = [1,0,2] Output: 5 Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.</description>
+    </item>
+    <item>
+      <title>134. Gas station</title>
+      <link>http://localhost:1313/leetcode/134/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/134/</guid>
+      <description>Gas Station - LeetCode&#xA;There are n gas stations along a circular route, where the amount of gas at the ith station is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from the ith station to its next (i + 1)th station. You begin the journey with an empty tank at one of the gas stations. Given two integer arrays gas and cost, return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</description>
+    </item>
+    <item>
+      <title>1903. Largest Odd Number in String</title>
+      <link>http://localhost:1313/leetcode/1903/</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1903/</guid>
+      <description>https://leetcode.com/problems/largest-odd-number-in-string/description/&#xA;You are given a string num, representing a large integer. Return the largest-valued odd integer (as a string) that is a non-empty substring of num, or an empty string &amp;quot;&amp;quot; if no odd integer exists. A substring is a contiguous sequence of characters within a string.&#xA;Example 1: Input: num = &amp;ldquo;52&amp;rdquo; Output: &amp;ldquo;5&amp;rdquo; Explanation: The only non-empty substrings are &amp;ldquo;5&amp;rdquo;, &amp;ldquo;2&amp;rdquo;, and &amp;ldquo;52&amp;rdquo;. &amp;ldquo;5&amp;rdquo; is the only odd number.</description>
+    </item>
+    <item>
+      <title>1716. Calculate Money in Leetcode Bank</title>
+      <link>http://localhost:1313/leetcode/1716/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1716/</guid>
+      <description>https://leetcode.com/problems/calculate-money-in-leetcode-bank/description/&#xA;Hercy wants to save money for his first car. He puts money in the Leetcode bank every day. He starts by putting in $1 on Monday, the first day. Every day from Tuesday to Sunday, he will put in $1 more than the day before. On every subsequent Monday, he will put in $1 more than the previous Monday. Given n, return the total amount of money he will have in the Leetcode bank at the end of the nth day.</description>
+    </item>
+    <item>
+      <title>238. Product of array except self</title>
+      <link>http://localhost:1313/leetcode/238/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/238/</guid>
+      <description>https://leetcode.com/problems/product-of-array-except-self&#xA;Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]. The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer. You must write an algorithm that runs in O(n) time and without using the division operation.&#xA;Example 1: Input: nums = [1,2,3,4] Output: [24,12,8,6] Example 2: Input: nums = [-1,1,0,-3,3] Output: [0,0,9,0,0]</description>
+    </item>
+    <item>
+      <title>274. H-Index</title>
+      <link>http://localhost:1313/leetcode/274/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/274/</guid>
+      <description>https://leetcode.com/problems/h-index/description/&#xA;Given an array of integers citations where citations[i] is the number of citations a researcher received for their ith paper, return the researcher&amp;rsquo;s h-index. According to the definition of h-index on Wikipedia: The h-index is defined as the maximum value of h such that the given researcher has published at least h papers that have each been cited at least h times.&#xA;Example 1: Input: citations = [3,0,6,1,5] Output: 3 Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</description>
+    </item>
+    <item>
+      <title>122. Best time to buy and sell stock II</title>
+      <link>http://localhost:1313/leetcode/122/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/122/</guid>
+      <description>https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/&#xA;You are given an integer array prices where prices[i] is the price of a given stock on the ith day. On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day. Find and return the maximum profit you can achieve.&#xA;Example 1: Input: prices = [7,1,5,3,6,4] Output: 7 Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.</description>
+    </item>
+    <item>
+      <title>189. Rotate Array</title>
+      <link>http://localhost:1313/leetcode/189/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/189/</guid>
+      <description>Given an array, rotate the array to the right by k steps, where k is non-negative.&#xA;Example 1:&#xA;Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]&#xA;code class Solution { public void rotate(int[] nums, int k) { k %= nums.length; reverse(nums, 0, nums.length - 1); reverse(nums, 0, k - 1); reverse(nums, k, nums.</description>
+    </item>
+    <item>
+      <title>169 Majority Element</title>
+      <link>http://localhost:1313/leetcode/169/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/169/</guid>
+      <description>Majority Element - LeetCode&#xA;Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. You may assume that the array is non-empty and the majority element always exist in the array. Example 1: Input: [3,2,3] Output: 3 code class Solution { public int majorityElement(int[] nums) { Map&amp;lt;Integer, Integer&amp;gt; m = new HashMap&amp;lt;&amp;gt;(); for (int n: nums){ m.</description>
+    </item>
+    <item>
+      <title>80. Remove Duplicates from Sorted Array II</title>
+      <link>http://localhost:1313/leetcode/80/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/80/</guid>
+      <description>Remove Duplicates from Sorted Array II - LeetCode&#xA;Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.&#xA;Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.&#xA;Example 1: Given nums = [1,1,1,2,2,3],&#xA;Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
+    </item>
+    <item>
+      <title>26. Remove duplicate from sorted array</title>
+      <link>http://localhost:1313/leetcode/26/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/26/</guid>
+      <description>https://leetcode.com/problems/remove-duplicates-from-sorted-array/&#xA;Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length. Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.&#xA;Example 1: Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&amp;rsquo;t matter what you leave beyond the returned length.</description>
+    </item>
+    <item>
+      <title>27. Remove elements</title>
+      <link>http://localhost:1313/leetcode/27/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/27/</guid>
+      <description>Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return __the number of elements in nums which are not equal to __val. Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:&#xA;Change the array nums such that the first k elements of nums contain the elements which are not equal to val.</description>
+    </item>
+    <item>
+      <title>643. Maximum Average Subarray I</title>
+      <link>http://localhost:1313/leetcode/643/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/643/</guid>
+      <description>You are given an integer array nums consisting of n elements, and an integer k.&#xA;Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.&#xA;Example 1:&#xA;Input: nums = [1,12,-5,-6,50,3], k = 4 Output: 12.75000 Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.</description>
+    </item>
+    <item>
+      <title>729. My Calendar I</title>
+      <link>http://localhost:1313/leetcode/729/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/729/</guid>
+      <description>https://leetcode.com/problems/my-calendar-i/&#xA;You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a double booking. A double booking happens when two events have some non-empty intersection (i.e., some moment is common to both events.). The event can be represented as a pair of integers start and end that represents a booking on the half-open interval [start, end), the range of real numbers x such that start &amp;lt;= x &amp;lt; end.</description>
+    </item>
+    <item>
+      <title>118. Pascal triangle</title>
+      <link>http://localhost:1313/leetcode/118/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/118/</guid>
+      <description>https://leetcode.com/problems/pascals-triangle/&#xA;Given an integer numRows, return the first numRows of Pascal&amp;rsquo;s triangle. In Pascal&amp;rsquo;s triangle, each number is the sum of the two numbers directly above it as shown: Example 1: Input: numRows = 5 Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]] Example 2: Input: numRows = 1 Output: [[1]]&#xA;Constraints:&#xA;1 &amp;lt;= numRows &amp;lt;= 30 code class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; generate(int numRows) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; res = new ArrayList&amp;lt;&amp;gt;(); res.add(Arrays.asList(1)); while (numRows &amp;gt; 1){ numRows--; List&amp;lt;Integer&amp;gt; last = res.</description>
+    </item>
+    <item>
+      <title>128. Longest consecutive sequence</title>
+      <link>http://localhost:1313/leetcode/128/</link>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/128/</guid>
+      <description>https://leetcode.com/problems/longest-consecutive-sequence/&#xA;Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence. You must write an algorithm that runs in O(n) time.&#xA;Example 1: Input: nums = [100,4,200,1,3,2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.&#xA;code class Solution { public int longestConsecutive(int[] nums) { HashSet&amp;lt;Integer&amp;gt; s = new HashSet&amp;lt;&amp;gt;(Arrays.stream(nums).boxed().collect(Collectors.toList())); int longest = 0; for (int v: nums){ if (!</description>
+    </item>
+    <item>
+      <title>1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts</title>
+      <link>http://localhost:1313/leetcode/1465/</link>
+      <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1465/</guid>
+      <description>https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/&#xA;You are given a rectangular cake of size h x w and two arrays of integers horizontalCuts and verticalCuts where:&#xA;horizontalCuts[i] is the distance from the top of the rectangular cake to the ith horizontal cut and similarly, and verticalCuts[j] is the distance from the left of the rectangular cake to the jth vertical cut.Return __the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays__ horizontalCuts __and__ verticalCuts.</description>
+    </item>
+    <item>
+      <title>1423. Maximum Points You Can Obtain from Cards</title>
+      <link>http://localhost:1313/leetcode/1423/</link>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1423/</guid>
+      <description>https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/&#xA;There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array cardPoints. In one step, you can take one card from the beginning or from the end of the row. You have to take exactly k cards. Your score is the sum of the points of the cards you have taken. Given the integer array cardPoints and the integer k, return the maximum score you can obtain.</description>
+    </item>
+    <item>
+      <title>665. Non-decreasing Array</title>
+      <link>http://localhost:1313/leetcode/665/</link>
+      <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/665/</guid>
+      <description>https://leetcode.com/problems/non-decreasing-array/&#xA;Given an array nums with n integers, your task is to check if it could become non-decreasing by modifying at most one element. We define an array is non-decreasing if nums[i] &amp;lt;= nums[i + 1] holds for every i (0-based) such that (0 &amp;lt;= i &amp;lt;= n - 2).&#xA;Example 1: Input: nums = [4,2,3] Output: true Explanation: You could modify the first 4 to 1 to get a non-decreasing array.</description>
+    </item>
+    <item>
+      <title>1658. Minimum Operations to Reduce X to Zero</title>
+      <link>http://localhost:1313/leetcode/1658/</link>
+      <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1658/</guid>
+      <description>https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/&#xA;You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations. Return __the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return __-1.&#xA;Example 1: Input: nums = [1,1,4,2,3], x = 5 Output: 2 Explanation: The optimal solution is to remove the last two elements to reduce x to zero.</description>
+    </item>
+    <item>
+      <title>1480. Running Sum of 1d Array</title>
+      <link>http://localhost:1313/leetcode/1480/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1480/</guid>
+      <description>https://leetcode.com/problems/running-sum-of-1d-array/&#xA;Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.&#xA;Example 1: Input: nums = [1,2,3,4] Output: [1,3,6,10] Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4]. Example 2: Input: nums = [1,1,1,1,1] Output: [1,2,3,4,5] Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1]. Example 3: Input: nums = [3,1,2,10,1] Output: [3,4,6,16,17]</description>
+    </item>
+    <item>
+      <title>304. Range Sum Query 2D - Immutable</title>
+      <link>http://localhost:1313/leetcode/304/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/304/</guid>
+      <description>https://leetcode.com/problems/range-sum-query-2d-immutable/&#xA;Given a 2D matrix matrix, handle multiple queries of the following type:&#xA;Calculate the **sum** of the elements of matrix inside the rectangle defined by its **upper left corner** (row1, col1) and **lower right corner** (row2, col2).Implement the NumMatrix class: NumMatrix(int[][] matrix) Initializes the object with the integer matrix matrix. int sumRegion(int row1, int col1, int row2, int col2) Returns the **sum** of the elements of matrix inside the rectangle defined by its **upper left corner** (row1, col1) and **lower right corner** (row2, col2).</description>
+    </item>
+    <item>
+      <title>406. Queue Reconstruction by Height</title>
+      <link>http://localhost:1313/leetcode/406/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/406/</guid>
+      <description>https://leetcode.com/problems/queue-reconstruction-by-height/&#xA;You are given an array of people, people, which are the attributes of some people in a queue (not necessarily in order). Each people[i] = [hi, ki] represents the ith person of height hi with exactly ki other people in front who have a height greater than or equal to hi. Reconstruct and return __the queue that is represented by the input array __people. The returned queue should be formatted as an array queue, where queue[j] = [hj, kj] is the attributes of the jth person in the queue (queue[0] is the person at the front of the queue).</description>
+    </item>
+    <item>
+      <title>867. Transpose Matrix</title>
+      <link>http://localhost:1313/leetcode/867/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/867/</guid>
+      <description>https://leetcode.com/problems/transpose-matrix/&#xA;Given a 2D integer array matrix, return the transpose of matrix. The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix&amp;rsquo;s row and column indices. Example 1: Input: matrix = [[1,2,3],[4,5,6],[7,8,9]] Output: [[1,4,7],[2,5,8],[3,6,9]] Example 2: Input: matrix = [[1,2,3],[4,5,6]] Output: [[1,4],[2,5],[3,6]]&#xA;Constraints:&#xA;m == matrix.length n == matrix[i].length 1 &amp;lt;= m, n &amp;lt;= 1000 1 &amp;lt;= m * n &amp;lt;= 105 -109 &amp;lt;= matrix[i][j] &amp;lt;= 109 code class Solution: def transpose(self, matrix: List[List[int]]) -&amp;gt; List[List[int]]: return [[row[i] for row in matrix] for i in range(len(matrix[0]))] </description>
+    </item>
+    <item>
+      <title>318. Maximum Product of Word Lengths</title>
+      <link>http://localhost:1313/leetcode/318/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/318/</guid>
+      <description>https://leetcode.com/problems/maximum-product-of-word-lengths/&#xA;Given a string array words, return the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. If no such two words exist, return 0.&#xA;Example 1: Input: words = [&amp;ldquo;abcw&amp;rdquo;,&amp;ldquo;baz&amp;rdquo;,&amp;ldquo;foo&amp;rdquo;,&amp;ldquo;bar&amp;rdquo;,&amp;ldquo;xtfn&amp;rdquo;,&amp;ldquo;abcdef&amp;rdquo;] Output: 16 Explanation: The two words can be &amp;ldquo;abcw&amp;rdquo;, &amp;ldquo;xtfn&amp;rdquo;. Example 2: Input: words = [&amp;ldquo;a&amp;rdquo;,&amp;ldquo;ab&amp;rdquo;,&amp;ldquo;abc&amp;rdquo;,&amp;ldquo;d&amp;rdquo;,&amp;ldquo;cd&amp;rdquo;,&amp;ldquo;bcd&amp;rdquo;,&amp;ldquo;abcd&amp;rdquo;] Output: 4 Explanation: The two words can be &amp;ldquo;ab&amp;rdquo;, &amp;ldquo;cd&amp;rdquo;. Example 3: Input: words = [&amp;ldquo;a&amp;rdquo;,&amp;ldquo;aa&amp;rdquo;,&amp;ldquo;aaa&amp;rdquo;,&amp;ldquo;aaaa&amp;rdquo;] Output: 0 Explanation: No such pair of words.</description>
+    </item>
+    <item>
+      <title>341. Flatten Nested List Iterator</title>
+      <link>http://localhost:1313/leetcode/341/</link>
+      <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/341/</guid>
+      <description>Flatten Nested List Iterator - LeetCode&#xA;You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it. Implement the NestedIterator class:&#xA;NestedIterator(List&amp;lt;NestedInteger&amp;gt; nestedList) Initializes the iterator with the nested list nestedList. int next() Returns the next integer in the nested list. boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.</description>
+    </item>
+    <item>
+      <title>581. Shortest Unsorted Continuous Subarray</title>
+      <link>http://localhost:1313/leetcode/581/</link>
+      <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/581/</guid>
+      <description>Shortest Unsorted Continuous Subarray - LeetCode&#xA;Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order. Return the shortest such subarray and output its length.&#xA;Example 1: Input: nums = [2,6,4,8,10,9,15] Output: 5 Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.</description>
+    </item>
+    <item>
+      <title>59. Spiral Matrix II</title>
+      <link>http://localhost:1313/leetcode/59/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/59/</guid>
+      <description>Spiral Matrix II - LeetCode&#xA;Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.&#xA;Example 1: Input: n = 3 Output: [[1,2,3],[8,9,4],[7,6,5]] Example 2: Input: n = 1 Output: [[1]]&#xA;Constraints:&#xA;1 &amp;lt;= n &amp;lt;= 20 code class Solution: def generateMatrix(self, n: int) -&amp;gt; List[List[int]]: if n == 1: return [[1]] res = [[0] * n for _ in range(n)] direction = {&amp;#39;right&amp;#39;:(0, 1), &amp;#39;left&amp;#39;:(0, -1), &amp;#39;up&amp;#39;: (-1, 0), &amp;#39;down&amp;#39;: (1, 0)} def walk(x, y, d, value): if res[x][y] !</description>
+    </item>
+    <item>
+      <title>1260. Shift 2D Grid</title>
+      <link>http://localhost:1313/leetcode/1260/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1260/</guid>
+      <description>Shift 2D Grid - LeetCode&#xA;Given a 2D grid of size m x n and an integer k. You need to shift the grid k times. In one shift operation:&#xA;Element at grid[i][j] moves to grid[i][j + 1]. Element at grid[i][n - 1] moves to grid[i + 1][0]. Element at grid[m - 1][n - 1] moves to grid[0][0].Return the __2D grid__ after applying shift operation k times. Example 1: Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1 Output: [[9,1,2],[3,4,5],[6,7,8]] Example 2: Input: grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4 Output: [[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]] Example 3: Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 9 Output: [[1,2,3],[4,5,6],[7,8,9]]</description>
+    </item>
+    <item>
+      <title>923. 3Sum With Multiplicity</title>
+      <link>http://localhost:1313/leetcode/923/</link>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/923/</guid>
+      <description>Given an integer array arr, and an integer target, return the number of tuples i, j, k such that i &amp;lt; j &amp;lt; k and arr[i] + arr[j] + arr[k] == target. As the answer can be very large, return it modulo 109 + 7.&#xA;Example 1: Input: arr = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (arr[i], arr[j], arr[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
+    </item>
+    <item>
+      <title>724. Find Pivot Index</title>
+      <link>http://localhost:1313/leetcode/724/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/724/</guid>
+      <description>Find Pivot Index - LeetCode&#xA;Given an array of integers nums, calculate the pivot index of this array. The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index&amp;rsquo;s right. If the index is on the left edge of the array, then the left sum is 0 because there are no elements to the left.</description>
+    </item>
+    <item>
+      <title>747. Largest Number At Least Twice of Others</title>
+      <link>http://localhost:1313/leetcode/747/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/747/</guid>
+      <description>Largest Number At Least Twice of Others - LeetCode&#xA;You are given an integer array nums where the largest integer is unique. Determine whether the largest element in the array is at least twice as much as every other number in the array. If it is, return the index of the largest element, or return -1 otherwise.&#xA;Example 1: Input: nums = [3,6,1,0] Output: 1 Explanation: 6 is the largest integer.</description>
+    </item>
+    <item>
+      <title>311. Sparse Matrix Multiplication</title>
+      <link>http://localhost:1313/leetcode/311/</link>
+      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/311/</guid>
+      <description>Sparse Matrix Multiplication - LeetCode&#xA;Given two sparse matrices mat1 of size m x k and mat2 of size k x n, return the result of mat1 x mat2. You may assume that multiplication is always possible.&#xA;Example 1: Input: mat1 = [[1,0,0],[-1,0,3]], mat2 = [[7,0,0],[0,0,0],[0,0,1]] Output: [[7,0,0],[-7,0,3]] Example 2: Input: mat1 = [[0]], mat2 = [[0]] Output: [[0]]&#xA;Constraints:&#xA;m == mat1.length k == mat1[i].length == mat2.length n == mat2[i].</description>
+    </item>
+    <item>
+      <title>283. Move Zeroes</title>
+      <link>http://localhost:1313/leetcode/283-move-zeros/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/283-move-zeros/</guid>
+      <description>Move Zeroes - LeetCode&#xA;Given an array nums, write a function to move all 0&amp;rsquo;s to the end of it while maintaining the relative order of the non-zero elements. Example: Input: [0,1,0,3,12]Output: [1,3,12,0,0]&#xA;code class Solution: def moveZeroes(self, nums: List[int]) -&amp;gt; None: start = 0 for v in nums: if v != 0: nums[start] = v start += 1 while start &amp;lt; len(nums): nums[start] = 0 start += 1 code class Solution: def moveZeroes(self, nums: List[int]) -&amp;gt; None: start = 0 for i, v in enumerate(nums): if v !</description>
+    </item>
+    <item>
+      <title>413. Arithmetic Slices</title>
+      <link>http://localhost:1313/leetcode/413/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/413/</guid>
+      <description>Arithmetic Slices - LeetCode&#xA;An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.&#xA;For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.Given an integer array nums, return __the number of arithmetic subarrays of__ nums. A subarray is a contiguous subsequence of the array.&#xA;Example 1: Input: nums = [1,2,3,4] Output: 3 Explanation: We have 3 arithmetic slices in nums: [1, 2, 3], [2, 3, 4] and [1,2,3,4] itself.</description>
+    </item>
+    <item>
+      <title>228. Summary Ranges</title>
+      <link>http://localhost:1313/leetcode/228/</link>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/228/</guid>
+      <description>Summary Ranges - LeetCode&#xA;You are given a sorted unique integer array nums. Return the smallest sorted list of ranges that cover all the numbers in the array exactly. That is, each element of nums is covered by exactly one of the ranges, and there is no integer x such that x is in one of the ranges but not in nums. Each range [a,b] in the list should be output as:</description>
+    </item>
+    <item>
+      <title>136. Single Number</title>
+      <link>http://localhost:1313/leetcode/136-single-number/</link>
+      <pubDate>Tue, 15 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/136-single-number/</guid>
+      <description>Single Number - LeetCode&#xA;Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.&#xA;Example 1: Input: nums = [2,2,1] Output: 1 Example 2: Input: nums = [4,1,2,1,2] Output: 4 Example 3: Input: nums = [1] Output: 1&#xA;Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 3 * 104 -3 * 104 &amp;lt;= nums[i] &amp;lt;= 3 * 104 Each element in the array appears twice except for one element which appears only once.</description>
+    </item>
+    <item>
+      <title>1274. Number of Ships in a Rectangle</title>
+      <link>http://localhost:1313/leetcode/1274/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1274/</guid>
+      <description>Number of Ships in a Rectangle - LeetCode&#xA;(This problem is an interactive problem.) Each ship is located at an integer point on the sea represented by a cartesian plane, and each integer point may contain at most 1 ship. You have a function Sea.hasShips(topRight, bottomLeft) which takes two points as arguments and returns true If there is at least one ship in the rectangle represented by the two points, including on the boundary.</description>
+    </item>
+    <item>
+      <title>532. K-diff Pairs in an Array</title>
+      <link>http://localhost:1313/leetcode/532/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/532/</guid>
+      <description>K-diff Pairs in an Array - LeetCode&#xA;Given an array of integers nums and an integer k, return the number of unique k-diff pairs in the array. A k-diff pair is an integer pair (nums[i], nums[j]), where the following are true:&#xA;0 &amp;lt;= i &amp;lt; j &amp;lt; nums.length |nums[i] - nums[j]| == kNotice that |val| denotes the absolute value of val. Example 1: Input: nums = [3,1,4,1,5], k = 2 Output: 2 Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).</description>
+    </item>
+    <item>
+      <title>941. Valid Mountain Array</title>
+      <link>http://localhost:1313/leetcode/941/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/941/</guid>
+      <description>Valid Mountain Array - LeetCode&#xA;Given an array of integers arr, return true if and only if it is a valid mountain array. Recall that arr is a mountain array if and only if:&#xA;arr.length &amp;gt;= 3 There exists some i with 0 &amp;lt; i &amp;lt; arr.length - 1 such that: arr[0] &amp;lt; arr[1] &amp;lt; &amp;hellip; &amp;lt; arr[i - 1] &amp;lt; arr[i] arr[i] &amp;gt; arr[i + 1] &amp;gt; &amp;hellip; &amp;gt; arr[arr.</description>
+    </item>
+    <item>
+      <title>849. Maximize Distance to Closest Person </title>
+      <link>http://localhost:1313/leetcode/849/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/849/</guid>
+      <description>Maximize Distance to Closest Person - LeetCode&#xA;You are given an array representing a row of seats where seats[i] = 1 represents a person sitting in the ith seat, and seats[i] = 0 represents that the ith seat is empty (0-indexed). There is at least one empty seat, and at least one person sitting. Alex wants to sit in the seat such that the distance between him and the closest person to him is maximized.</description>
+    </item>
+    <item>
+      <title>1010. Pairs of Songs With Total Durations Divisible by 60</title>
+      <link>http://localhost:1313/leetcode/1010/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1010/</guid>
+      <description>Pairs of Songs With Total Durations Divisible by 60 - LeetCode&#xA;You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &amp;lt; j with (time[i] + time[j]) % 60 == 0.&#xA;Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60.</description>
+    </item>
+    <item>
+      <title>364. Nested List Weight Sum II</title>
+      <link>http://localhost:1313/leetcode/364/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/364/</guid>
+      <description>Nested List Weight Sum II - LeetCode You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. The depth of an integer is the number of lists that it is inside of. For example, the nested list [1,[2,2],[[3],2],1] has each integer&amp;rsquo;s value set to its depth. Let maxDepth be the maximum depth of any integer.</description>
+    </item>
+    <item>
+      <title>435. Non-overlapping intervals</title>
+      <link>http://localhost:1313/leetcode/435/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/435/</guid>
+      <description>Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.&#xA;Example 1: Input: intervals = [[1,2],[2,3],[3,4],[1,3]] Output: 1 Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.&#xA;Example 2: Input: intervals = [[1,2],[1,2],[1,2]] Output: 2 Explanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.</description>
+    </item>
+    <item>
+      <title>487. Max Consecutive Ones II</title>
+      <link>http://localhost:1313/leetcode/487/</link>
+      <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/487/</guid>
+      <description>Given a binary array nums, return the maximum number of consecutive 1&amp;rsquo;s in the array if you can flip at most one 0.&#xA;Example 1: Input: nums = [1,0,1,1,0] Output: 4 Explanation: Flip the first zero will get the maximum number of consecutive 1s. After flipping, the maximum number of consecutive 1s is 4.&#xA;Example 2: Input: nums = [1,0,1,1,0,1] Output: 4&#xA;code class Solution: def findMaxConsecutiveOnes(self, nums: List[int]) -&amp;gt; int: l = r = 0 res = 0 count0 = 0 while r &amp;lt; len(nums): if nums[r] == 0: count0 += 1 while count0 == 2: if nums[l] == 0: count0 -= 1 l += 1 res = max(res, r - l + 1) r += 1 return res code class Solution: def findMaxConsecutiveOnes(self, nums: List[int]) -&amp;gt; int: count_last = count = res = 0 if len(nums) == 1: return 1 for i in range(len(nums)): if nums[i] == 1: count += 1 else: if i &amp;gt;= count + 2 and nums[i-count-2] == 1: res = max(count_last + count + 1, res) count_last = count count = 0 if i &amp;gt;= count + 1 and nums[i-count-1] == 1: res = max(count_last + count + 1, res) if count == 0: return max(res, count_last + 1) return min(max(res, count + 1), len(nums)) </description>
+    </item>
+    <item>
+      <title>442. Find All Duplicates in an Array</title>
+      <link>http://localhost:1313/leetcode/442/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/442/</guid>
+      <description>Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice. You must write an algorithm that runs in O(n) time and uses only constant extra space.&#xA;Example 1: Input: nums = [4,3,2,7,8,2,3,1] Output: [2,3]&#xA;code flip the coin, if already flipped, then it&amp;rsquo;s twice class Solution: def findDuplicates(self, nums: List[int]) -&amp;gt; List[int]: rs = [] for num in nums: num = abs(num) if nums[num-1] &amp;lt; 0: rs.</description>
+    </item>
+    <item>
+      <title>287. Find the duplicate number</title>
+      <link>http://localhost:1313/leetcode/287/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/287/</guid>
+      <description>Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive. There is only one repeated number in nums, return this repeated number. You must solve the problem without modifying the array nums and uses only constant extra space.&#xA;Example 1: Input: nums = [1,3,4,2,2] Output: 2&#xA;code class Solution: def findDuplicate(self, nums: List[int]) -&amp;gt; int: slow = fast = finder = 0 while True: slow = nums[slow] fast = nums[nums[fast]] if slow == fast: while finder !</description>
+    </item>
+    <item>
+      <title>303. Range sum query immutable</title>
+      <link>http://localhost:1313/leetcode/303/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/303/</guid>
+      <description>Given an integer array nums, handle multiple queries of the following type:&#xA;Calculate the sum of the elements of nums between indices left and right inclusive where left &amp;lt;= right.Implement the NumArray class:&#xA;NumArray(int[] nums) Initializes the object with the integer array nums. int sumRange(int left, int right) Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + &amp;hellip; + nums[right]).</description>
+    </item>
+    <item>
+      <title>349. Intersection of two arrays</title>
+      <link>http://localhost:1313/leetcode/349/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/349/</guid>
+      <description>Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.&#xA;Example 1: Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]&#xA;code class Solution: def intersection(self, nums1, nums2): return list(set(nums1) &amp;amp; set(nums2)) code class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: return set(nums1).intersection(set(nums2)) code class Solution(object): def intersection(self, nums1, nums2): res = [] nums1.</description>
+    </item>
+    <item>
+      <title>1051. Height checker</title>
+      <link>http://localhost:1313/leetcode/1051/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1051/</guid>
+      <description>A school is trying to take an annual photo of all the students. The students are asked to stand in a single file line in non-decreasing order by height. Let this ordering be represented by the integer array expected where expected[i] is the expected height of the ith student in line. You are given an integer array heights representing the current order that the students are standing in. Each heights[i] is the height of the ith student in line (0-indexed).</description>
+    </item>
+    <item>
+      <title>414. Third maximum number</title>
+      <link>http://localhost:1313/leetcode/414/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/414/</guid>
+      <description>Given integer array nums, return the third maximum number in this array. If the third maximum does not exist, return the maximum number.&#xA;Example 1: Input: nums = [3,2,1] Output: 1 Explanation: The third maximum is 1.&#xA;code class Solution: def thirdMax(self, nums: List[int]) -&amp;gt; int: nums = set(nums) if len(nums) &amp;lt; 3: return max(nums) return heapq.nlargest(3, nums)[-1] code class Solution: def thirdMax(self, nums: List[int]) -&amp;gt; int: n, T = list(set(nums)), [float(&amp;#39;-inf&amp;#39;)]*3 for i in n: if i &amp;gt; T[0]: T = [i,T[0],T[1]] continue if i &amp;gt; T[1]: T = [T[0],i,T[1]] continue if i &amp;gt; T[2]: T = [T[0],T[1],i] return T[2] if T[2] !</description>
+    </item>
+    <item>
+      <title>448. Find All Numbers Disappeared in an Array </title>
+      <link>http://localhost:1313/leetcode/448/</link>
+      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/448/</guid>
+      <description>Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.&#xA;Example 1: Input: nums = [4,3,2,7,8,2,3,1] Output: [5,6]&#xA;code class Solution: def findDisappearedNumbers(self, nums: List[int]) -&amp;gt; List[int]: return set([i for i in range(1, len(nums) + 1)]) - set(nums) code class Solution: def findDisappearedNumbers(self, nums: List[int]) -&amp;gt; List[int]: for n in nums: a = abs(n) - 1 if nums[a] &amp;gt; 0: nums[a] *= -1 return [i+1 for i in range(len(nums)) if nums[i] &amp;gt; 0] code class Solution: def findDisappearedNumbers(self, nums: List[int]) -&amp;gt; List[int]: allnums = list(range(1, len(nums)+1)) for v in set(nums): allnums[v-1] = 0 return [num for num in allnums if num !</description>
+    </item>
+    <item>
+      <title>1299. Replace Elements with Greatest Element on Right Side</title>
+      <link>http://localhost:1313/leetcode/1299/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1299/</guid>
+      <description>Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1. After doing so, return the array.&#xA;Example 1: Input: arr = [17,18,5,4,6,1] Output: [18,6,6,6,1,-1]&#xA;code class Solution: def replaceElements(self, arr: List[int]) -&amp;gt; List[int]: right = arr[-1] arr[-1] = -1 for i in range(len(arr)-2, -1, -1): cur = arr[i] arr[i] = right right = max(cur, right) return arr </description>
+    </item>
+    <item>
+      <title>1346. Check If N and Its Double Exist</title>
+      <link>http://localhost:1313/leetcode/1346/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1346/</guid>
+      <description>Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M). More formally check if there exists two indices i and j such that :&#xA;i != j 0 &amp;lt;= i, j &amp;lt; arr.length arr[i] == 2 * arr[j] Example 1: Input: arr = [10,2,5,3] Output: true Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.</description>
+    </item>
+    <item>
+      <title>1089. Duplicate zeros</title>
+      <link>http://localhost:1313/leetcode/1089/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1089/</guid>
+      <description>Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right. Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place, do not return anything from your function.&#xA;Example 1: Input: [1,0,2,3,0,4,5,0]Output: null Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4] c&#xA;code wrong answer.</description>
+    </item>
+    <item>
+      <title>977. Squares of a sorted array</title>
+      <link>http://localhost:1313/leetcode/977-squares-of-a-sorted-array/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/977-squares-of-a-sorted-array/</guid>
+      <description>Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.&#xA;Example 1: Input: nums = [-4,-1,0,3,10] Output: [0,1,9,16,100] Explanation: After squaring, the array becomes [16,1,0,9,100]. After sorting, it becomes [0,1,9,16,100].&#xA;code class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: for i in range(len(A)): A[i] *= A[i] A.sort() return A code class Solution: def sortedSquares(self, nums: List[int]) -&amp;gt; List[int]: l, r = 0, len(nums)-1 res = collections.</description>
+    </item>
+    <item>
+      <title>1295. Find Numbers with Even Number of Digits</title>
+      <link>http://localhost:1313/leetcode/1295-find/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1295-find/</guid>
+      <description>Given an array nums of integers, return how many of them contain an even number of digits. Example 1: Input: nums = [12,345,2,6,7896] Output: 2 Explanation: 12 contains 2 digits (even number of digits). 345 contains 3 digits (odd number of digits). 2 contains 1 digit (odd number of digits). 6 contains 1 digit (odd number of digits). 7896 contains 4 digits (even number of digits). Therefore only 12 and 7896 contain an even number of digits.</description>
+    </item>
+    <item>
+      <title>485. Max consecutive ones</title>
+      <link>http://localhost:1313/leetcode/485-max-ones/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/485-max-ones/</guid>
+      <description>Given a binary array nums, return the maximum number of consecutive 1&amp;rsquo;s in the array.&#xA;Example 1: Input: nums = [1,1,0,1,1,1] Output: 3 Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.&#xA;code class Solution: def findMaxConsecutiveOnes(self, nums: List[int]) -&amp;gt; int: max1 = 0 temp1 = 0 for v in nums: if v == 1: temp1 += 1 max1 = max(max1, temp1) else: temp1 = 0 return max1 code better class Solution: def findMaxConsecutiveOnes(self, nums: List[int]) -&amp;gt; int: max1 = 0 temp1 = 0 for v in nums: if v == 1: temp1 += 1 else: max1 = max(max1, temp1) temp1 = 0 return max(max1, temp1) code class Solution: def findMaxConsecutiveOnes(self, nums): return max(map(len, &amp;#39;&amp;#39;.</description>
+    </item>
+    <item>
+      <title>35. Search insert position</title>
+      <link>http://localhost:1313/leetcode/35-search-insert-position/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/35-search-insert-position/</guid>
+      <description>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You may assume no duplicates in the array. Example 1: Input: [1,3,5,6], 5 Output: 2&#xA;code class Solution(object): def searchInsert(self, nums, target): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :type target: int :rtype: int &amp;#34;&amp;#34;&amp;#34; l = 0 r = len(nums) - 1 while l &amp;lt;= r: mid = l + (r - l) // 2 if nums[mid] &amp;lt; target: l = mid + 1 elif nums[mid] &amp;gt; target: r = mid - 1 else: return mid return r + 1 code class Solution: def searchInsert(self, nums: List[int], target: int) -&amp;gt; int: return bisect.</description>
+    </item>
+    <item>
+      <title>561. Array Partition I</title>
+      <link>http://localhost:1313/leetcode/561-array-partition-1/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/561-array-partition-1/</guid>
+      <description>Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), &amp;hellip;, (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.&#xA;Example 1: Input: [1,4,3,2]&#xA;Output: 4 Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).&#xA;code class Solution: def arrayPairSum(self, nums: List[int]) -&amp;gt; int: nums.</description>
+    </item>
+    <item>
+      <title>41. First missing positive</title>
+      <link>http://localhost:1313/leetcode/41-first-missing/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/41-first-missing/</guid>
+      <description>Given an unsorted integer array, find the smallest missing positive integer.&#xA;Example 1:&#xA;Input: [1,2,0] Output: 3 Example 2:&#xA;Input: [3,4,-1,1] Output: 2&#xA;code class Solution: def firstMissingPositive(self, nums): minMiss = 1 num_set = set(nums) while True: if minMiss in num_set: minMiss += 1 else: break return minMiss code, O(n), move each num to correct position class Solution: def firstMissingPositive(self, nums): for i in range(len(nums)): while 0 &amp;lt;= nums[i]-1 &amp;lt; len(nums) and nums[nums[i]-1] !</description>
+    </item>
+    <item>
+      <title>299. Bulls and cows</title>
+      <link>http://localhost:1313/leetcode/299-bulls-cows/</link>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/299-bulls-cows/</guid>
+      <description>Input: secret = &amp;ldquo;1807&amp;rdquo;, guess = &amp;ldquo;7810&amp;rdquo;&#xA;Output: &amp;ldquo;1A3B&amp;rdquo;&#xA;Explanation: 1 bull and 3 cows. The bull is 8, the cows are 0, 1 and 7.&#xA;terate over the secret string, store all the bulls in an array and keep track of the count for each character that isn&amp;rsquo;t a bull in another array tput: &amp;ldquo;1A3B&amp;rdquo; x fasd Iterate over guess string, if the character isn&amp;rsquo;t a bull, then remove the count of that character and increment cows</description>
+    </item>
+    <item>
+      <title>621. Task scheduler</title>
+      <link>http://localhost:1313/leetcode/621-task-scheduler/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/621-task-scheduler/</guid>
+      <description>Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks. Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle. However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n intervals that CPU are doing different tasks or just be idle.</description>
+    </item>
+    <item>
+      <title>240. Search a 2D Matrix II</title>
+      <link>http://localhost:1313/leetcode/240-search-2d-matrix-ii/</link>
+      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/240-search-2d-matrix-ii/</guid>
+      <description>[ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ] Given target = 5, return true. Given target = 20, return false.&#xA;code class Solution: def searchMatrix(self, matrix, target): for row in matrix: for i in reversed(range(len(row))): if target == row[i]: return True if target &amp;gt; row[i]: break return False code, start from top right class Solution: def searchMatrix(self, matrix, target): row, col = 0, len(matrix[0]) - 1 while row &amp;lt; len(matrix) and col &amp;gt;= 0: if matrix[row][col] == target: return True elif matrix[row][col] &amp;lt; target: row += 1 else: col -= 1 return False code, start from left bottom class Solution: def searchMatrix(self, matrix: List[List[int]], target: int) -&amp;gt; bool: for i in reversed(range(len(matrix))): j = 0 if matrix[i][j] &amp;gt; target: continue else: while j &amp;lt; len(matrix[0]) and matrix[i][j] &amp;lt;= target: if matrix[i][j] == target: return True j += 1 return False </description>
+    </item>
+    <item>
+      <title>49. Group anagrams</title>
+      <link>http://localhost:1313/leetcode/49-group-anagrams/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/49-group-anagrams/</guid>
+      <description>Input: [&amp;ldquo;eat&amp;rdquo;, &amp;ldquo;tea&amp;rdquo;, &amp;ldquo;tan&amp;rdquo;, &amp;ldquo;ate&amp;rdquo;, &amp;ldquo;nat&amp;rdquo;, &amp;ldquo;bat&amp;rdquo;], Output: [ [&amp;ldquo;ate&amp;rdquo;,&amp;ldquo;eat&amp;rdquo;,&amp;ldquo;tea&amp;rdquo;], [&amp;ldquo;nat&amp;rdquo;,&amp;ldquo;tan&amp;rdquo;], [&amp;ldquo;bat&amp;rdquo;] ]&#xA;code notice after sorted &amp;ldquo;eat&amp;rdquo;, it becomes [&amp;lsquo;a&amp;rsquo;,&amp;rsquo;e&amp;rsquo;,&amp;rsquo;t&amp;rsquo;] class Solution: def groupAnagrams(self, strs: List[str]) -&amp;gt; List[List[str]]: dic_ana = {} for word in strs: sword = &amp;#34;&amp;#34;.join(sorted(word)) if sword not in dic_ana: dic_ana[sword] = [word] else: dic_ana[sword].append(word) return [v for v in dic_ana.values()] </description>
+    </item>
+    <item>
+      <title>01. Two sum</title>
+      <link>http://localhost:1313/leetcode/1-two-sum/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1-two-sum/</guid>
+      <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.&#xA;Example: Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].&#xA;code class Solution: def twoSum(self, nums: List[int], target: int) -&amp;gt; List[int]: need_values = {} for i, v in enumerate(nums): need_value = target - v if need_value in need_values: return [need_values[need_value], i] else: need_values[v] = i </description>
+    </item>
+    <item>
+      <title>350. Intersection of two arrays II</title>
+      <link>http://localhost:1313/leetcode/350-intersection-of-two-arrays-ii/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/350-intersection-of-two-arrays-ii/</guid>
+      <description>Given two arrays, write a function to compute their intersection.&#xA;Example 1: Input: nums1 = [1,2,2,1], nums2 = [2,2]Output: [2,2]&#xA;Example 2: Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]Output: [4,9]&#xA;c0 class Solution: def intersect(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: d1 = dict(collections.Counter(nums1)) d2 = dict(collections.Counter(nums2)) ans = [] for i in d1: if i in d2: count = min(d1[i],d2[i]) ans.extend(count*[i]) return ans code, hash table (similar to c0 without second dic), and sorted with pointer # Hash table class Solution: def intersect(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: # Traverse the shorter array and store the elements in the hash table # Ensure that the previous array is short if len(nums1) &amp;gt; len(nums2): self.</description>
+    </item>
+    <item>
+      <title>66. Plus One</title>
+      <link>http://localhost:1313/leetcode/66-plus-one/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/66-plus-one/</guid>
+      <description>Given a non-empty array of digits representing a non-negative integer, plus one to the integer. The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit. You may assume the integer does not contain any leading zero, except the number 0 itself.&#xA;Example 1: Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+    </item>
+    <item>
+      <title>217. Contains duplicate</title>
+      <link>http://localhost:1313/leetcode/217-contains-duplicate/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/217-contains-duplicate/</guid>
+      <description>Input: [1,2,3,1] Output: true&#xA;Input: [1,2,3,4] Output: false&#xA;return True if contains duplicate&#xA;c0, it&amp;rsquo;s O(n) to make a set from a list. Set result is out of order! return True if len(nums) != len(set(nums)) else False c1 class Solution: def containsDuplicate(self, nums: List[int]) -&amp;gt; bool: if not len(nums): return False nums.sort() left = nums[0] for i in nums[1:]: if i == left: return True left = i return False </description>
+    </item>
+    <item>
+      <title>Compute rows in Pascal&#39;s triangle</title>
+      <link>http://localhost:1313/leetcode/epi-5.20-compute-rows-in-pascals-triangle/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.20-compute-rows-in-pascals-triangle/</guid>
+      <description>generate_pascal_triangle&#xA;takes a nonnegative integer n and returns the first n rows of Pascal&amp;rsquo;s triangle code&#xA;own, recursive code def generate_pascal_triangle(n: int) -&amp;gt; List[List[int]]: if n == 0: return [] if n == 1: return [[1]] def getNextRow(lastRow): nextRow = [1] for i in range(len(lastRow) - 1): nextRow.append(lastRow[i] + lastRow[i+1]) nextRow.append(1) return nextRow last_tri = generate_pascal_triangle(n - 1) last_tri.append(getNextRow(last_tri[-1])) return last_tri c ans code def generate_pascal_triangle(n: int) -&amp;gt; List[List[int]]: result = [[1] * (i + 1) for i in range(n)] # print(result) all 1 in the triangle for i in range(n): for j in range(1, i): # Sets this entry to the sum of the two above adjacent entries.</description>
+    </item>
+    <item>
+      <title>Rotate a 2D array</title>
+      <link>http://localhost:1313/leetcode/epi-5.19-rotate-a-2d-array/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.19-rotate-a-2d-array/</guid>
+      <description>rotate_matrix rotate 90 degrees clockwise&#xA;c1 ans , O(1) space, for i in len(matrix)//2 is every circle level, for j in range(i, len(matrix)-1-i) e.g. n=4, outside round and inside round, so 2 rounds in total. for each round, first need 3, second need 1. change i and j, then add ~ to the first one. i j, ~j i, ~i ~j, j ~i (i,j) 1 (~j,i) 13 (~i,~j) 16 (j, ~i) 4 = (~j,i) 13 (~i,~j) 16 (j, ~i) 4 (i,j) 1 def rotate_matrix(square_matrix: List[List[int]]) -&amp;gt; None: matrix_size = len(square_matrix) - 1 for i in range(len(square_matrix) // 2): # print(i) for j in range(i, matrix_size - i): # Perform a 4-way exchange.</description>
+    </item>
+    <item>
+      <title>Compute the spiral ordering of a 2D array</title>
+      <link>http://localhost:1313/leetcode/epi-5.18-compute-the-spiral-ordering-of-a-2d-array/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.18-compute-the-spiral-ordering-of-a-2d-array/</guid>
+      <description>matrix_in_spiral_order write a program which takes an n*n 2D array and returns the spiral ordering of the array&#xA;code my, better code def matrix_in_spiral_order(square_matrix: List[List[int]]) -&amp;gt; List[int]: res = [] def right(square_in): if not square_in: return None nonlocal res res.extend(square_in.pop(0)) return square_in def down(square_in): if not square_in: return None nonlocal res for row in square_in: res.append(row.pop(-1)) return square_in def left(square_in): if not square_in: return None nonlocal res res.extend(list(reversed(square_in.pop(-1)))) return square_in def up(square_in): if not square_in: return None nonlocal res for row in reversed(square_in): res.</description>
+    </item>
+    <item>
+      <title>The sudoku checker problem</title>
+      <link>http://localhost:1313/leetcode/epi-5.17-the-sudoku-checker-problem/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.17-the-sudoku-checker-problem/</guid>
+      <description>is_valid_sudoku check nine row constraints, nine column constraints and nine sub-grid constraints. ensure no number in [1,9] appears more than once&#xA;A 0-value in the 2D array indicates that entry is blank, every other entry is in [1,9]&#xA;code c own w code def is_valid_sudoku(partial_assignment: List[List[int]]) -&amp;gt; bool: # TODO - you fill in here. def check_9num(list_9num): counter = collections.Counter(list_9num) for num in counter: if num != 0 and counter[num] &amp;gt; 1: return False return True for row in partial_assignment: if check_9num(row) is False: return False for i in range(9): col = list() for j in range(9): col.</description>
+    </item>
+    <item>
+      <title>Generate nonuniform random numbers</title>
+      <link>http://localhost:1313/leetcode/epi-5.16-generate-nonuniform-random-numbers/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.16-generate-nonuniform-random-numbers/</guid>
+      <description>nonuniform_rando_number_generation (values, probabilities)&#xA;given n numbers as well as probabilities p0,p1..p(n-1), which sum up to 1. given a random number generator that produces values in [0,1) uniformly, how to generate one of the n numbers according to the specified probabilities?&#xA;3,5,7,11 and p is 9/18, 6/18, 2/18, 1/18, then in 1000 calls to your program, 3 should appear 500 etc.&#xA;c myown code def nonuniform_random_number_generation(values: List[int], probabilities: List[float]) -&amp;gt; int: # TODO - you fill in here.</description>
+    </item>
+    <item>
+      <title>Compute a random permutation</title>
+      <link>http://localhost:1313/leetcode/epi-5.14-compute-a-random-subset/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.14-compute-a-random-subset/</guid>
+      <description>compute_random_permutation&#xA;n = 4, output 1230&#xA;create uniformly random permutations, you are given a random number generator 5.12 !(2019-07-12) sample offline data 1 , use as few calls to it as possible c, basically same question as 5.12 c&#xA;def random_sampling(k, A): for i in range(k): # Generate a random index in [i, len(A) - 1]. r = random.randint(i, len(A) - 1) A[i], A[r] = A[r], A[i] def compute_random_permutation(n): permutation = list(range(n)) random_sampling(n, permutation) return permutation </description>
+    </item>
+    <item>
+      <title>Compute a random subset</title>
+      <link>http://localhost:1313/leetcode/epi-5.15-compute-a-random-subset/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.15-compute-a-random-subset/</guid>
+      <description>random_subset&#xA;input a positive integer n and a size k&amp;lt;=n, return a size k subset of {0,1,2&amp;hellip;n-1} code difference between this one and 5.12, is that 5.12 give A, this A = list(range(n))&#xA;c0 451 439 def random_subset(n, k): # TODO - you fill in here. A = list(range(n)) A[:] = random.sample(A, k) return A c1 own 437 386 def random_subset(n, k): A = list(range(n)) for i in range(k): r = random.</description>
+    </item>
+    <item>
+      <title>Sample offline data</title>
+      <link>http://localhost:1313/leetcode/epi-5.12-sample-offline-data/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.12-sample-offline-data/</guid>
+      <description>random_sampling takes an array of distinct elements and a size, and returns a subset of the given size. All subsets should be equally likely. Return the result in input array itself A = 3,7,5,11 k =3, ans = 5,11,3 code&#xA;c0 def random_sampling(k, A): for i in range(k): # Generate a random index in [i, len(A) - 1]. r = random.randint(i, len(A) - 1) A[i], A[r] = A[r], A[i] c1 def random_sampling_pythonic(k, A): A[:] = random.</description>
+    </item>
+    <item>
+      <title>Buy and sell stock once</title>
+      <link>http://localhost:1313/leetcode/epi-5.6-buy-and-sell-stock-once/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.6-buy-and-sell-stock-once/</guid>
+      <description>buy_and_sell_stock_once notice only once&#xA;the following sequence of stock price: (310, 315, 275, 295, 260, 270, 290..) the maximum profit that can be made with one buy and one sell is 30. from 260 to 290&#xA;Write a program that takes an array denoting the daily stock price, return the maximum profit that could be made by buying and then selling one share of that stock code&#xA;c1, same as c0 code def buy_and_sell_stock_once(prices: List[float]) -&amp;gt; float: max_profit = 0 buy_min = prices[0] for i in range(1, len(prices)): if prices[i] &amp;lt; buy_min: buy_min = prices[i] elif prices[i] &amp;gt; buy_min: if prices[i] - buy_min &amp;gt; max_profit: max_profit = prices[i] - buy_min return max_profit c0 c0 def buy_and_sell_stock_once(prices): # TODO - you fill in here.</description>
+    </item>
+    <item>
+      <title>Computing an alternation</title>
+      <link>http://localhost:1313/leetcode/epi-5.8-computing-an-alternation/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.8-computing-an-alternation/</guid>
+      <description>rearrange 1&amp;lt;=2&amp;gt;=3&amp;lt;=4&amp;gt;=5&amp;hellip; takes an array A of n numbers, and rearranges A&amp;rsquo;s elements to get a new array B having the property that B[0] &amp;lt;= B[1] &amp;gt;= B[2] &amp;lt;= B[3] &amp;gt;= B[4] &amp;lt;= B[5] 19,2,45,44,23,1,9,19 2,45,19,44,1, 23, 9, 19 code&#xA;c2, best O(n) notice [2,3,2], when i =2, A[i:i+2] = 2, there&amp;rsquo;s no index out of array issue code def rearrange(A: List[int]) -&amp;gt; None: for i in range(len(A)): A[i:i+2] = sorted(A[i:i+2], reverse= i%2 == 1) c0, old, don&amp;rsquo;t need to sort, O(n) c def rearrange(A): # TODO - you fill in here.</description>
+    </item>
+    <item>
+      <title>Permute the elements of an array</title>
+      <link>http://localhost:1313/leetcode/epi-5.10-permute-the-elements-of-an-array/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.10-permute-the-elements-of-an-array/</guid>
+      <description>apply_permutation given an array A of elements and a premutation P, apply P to A A abcd, P 2013, yields bcad 2013 means move location 0 to 2, 1 to 0, 2 to 1, 3 to 3 code&#xA;c0 simple but need a lot space, not in place! c0 def apply_permutation(perm, A): # TODO - you fill in here. B = [0] * len(A) for i in zip(A, perm): B[i[1]] = i[0] return B still copy code</description>
+    </item>
+    <item>
+      <title>Advancing through an array</title>
+      <link>http://localhost:1313/leetcode/epi-5.4-advancing-through-an-array/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.4-advancing-through-an-array/</guid>
+      <description>can_reach_end&#xA;A=[3,3,1,0,2,0,1], represent the board game ans: take 1 step from A[0] to A[1], then 3 steps from A[1] to A[4], then 2 steps from A[4] to A[6]. Note that A[0]=3&amp;gt;=1, A[1]= 3 &amp;gt;=3, A[4]=2&amp;gt;=2. so valid.&#xA;Write a program which takes an array of n integers, where A[i] denotes the maximum you can advance from index i, and returns whether it&amp;rsquo;s possible to adavance to the last index starting from the beginning of the array.</description>
+    </item>
+    <item>
+      <title>delete duplicate from sorted array</title>
+      <link>http://localhost:1313/leetcode/epi-5.5-delete-duplicate-from-sorted-array/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.5-delete-duplicate-from-sorted-array/</guid>
+      <description>delete_duplicates&#xA;(2,3,5,5,11,11)-&amp;gt;(2,3,5,11,0,0) takes as input a sorted array, updates it so that all duplicates have been removed and the remaining elements have been shifted left. return the number of valid elements. can not use library functions thought make a write index, to move when you write a different number&#xA;code c2, same to c0, easier to understand code def delete_duplicates(A: List[int]) -&amp;gt; int: if not A: return 0 write_index = 1 for i in range(1, len(A)): if A[i] &amp;gt; A[write_index-1]: A[write_index] = A[i] write_index += 1 return write_index c1 maybe it&amp;rsquo;s cheat code, maybe it&amp;rsquo;s cheat def delete_duplicates(A: List[int]) -&amp;gt; int: dic = collections.</description>
+    </item>
+    <item>
+      <title>Python list/dict functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-list-dict/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-list-dict/</guid>
+      <description>List len(array) : length of array list.indexof(obj) enumerate(array) : adds counter at the beginning. for count, item in enumberate([&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]) # 0x 1y 2z range(0,len(mylist)1,2) range(0,3), is 0,1,2 for i in reversed(range(len(A))) nums.append(val), nums.remove(val), nums.reverse() nums.extend(nums2) list.insert(index, obj) list.pop() default pop index is -1, remove the last one nums[:] copy the value within function: b[:]=a .copy is equals to b[:] temp = self.original[:] copy.deepcopy could copy nested list import copy , copy.</description>
+    </item>
+    <item>
+      <title>Increament an arbitrary precision integer</title>
+      <link>http://localhost:1313/leetcode/epi-5.2-increment-an-arbitrary-precision-integer/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.2-increment-an-arbitrary-precision-integer/</guid>
+      <description>6.2 in EPI java, 5.2 in EPI python. Takes as input an array of digits encoding a decimal number D and updates the array to represetnt the number D+1. For eg. if the input is &amp;lt;1,2,9&amp;gt; then you should update the array to &amp;lt;1,3,0&amp;gt;.&#xA;A brute-force approach might be to convert the array to integer, add one and convert back. If integer had a limit of range this method will fail.</description>
+    </item>
+    <item>
+      <title>The Dutch National Flag Program</title>
+      <link>http://localhost:1313/leetcode/epi-5.1-dutch-flag/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-5.1-dutch-flag/</guid>
+      <description>6.1 in EPI java, 5.1 in EPI python. Takes an array A and an index i into A, and rearranges the elements such that all elements less than A[i] (the &amp;ldquo;pivot&amp;rdquo;) appear first, followed by elements equal to the pivot, followed by elements greater than the pivot.&#xA;e.g.: A={0,1,2,0,2,1,1}, index=3, A[3]=0, so a valid partitioning is {0,0,1,2,2,1,1}.&#xA;The first round, we move number smaller than pivot to the left side, the second turn we do the bigger side.</description>
+    </item>
+    <item>
+      <title>Leetcode: Array questions with Python</title>
+      <link>http://localhost:1313/dev/lee-array/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-array/</guid>
+      <description>134.Gas Station There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="bisect.bisect_left(a, x) https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS O(logn) greater than or equal to the targeted value. If all elements are less than x, return len(a) l&lt;=r or l &lt; r ans1 if you discard mid for the next iteration (i.e. l = mid&#43;1 or r = mid-1) then use while (l &lt;= r). if you keep mid for the next iteration (i.e. l = mid or r = mid) then use while (l &lt; r) ans2 if you are returning from inside the loop, use left &lt;= right if you are reducing the search space, use left &lt; right and finally return a[left] template 1 can be determined by accessing a single index in the array.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="leetcode questions: Binary Search"/>
+<meta name="twitter:description" content="bisect.bisect_left(a, x) https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS O(logn) greater than or equal to the targeted value. If all elements are less than x, return len(a) l&lt;=r or l &lt; r ans1 if you discard mid for the next iteration (i.e. l = mid&#43;1 or r = mid-1) then use while (l &lt;= r). if you keep mid for the next iteration (i.e. l = mid or r = mid) then use while (l &lt; r) ans2 if you are returning from inside the loop, use left &lt;= right if you are reducing the search space, use left &lt; right and finally return a[left] template 1 can be determined by accessing a single index in the array."/>
+
+    <meta property="og:title" content="leetcode questions: Binary Search" />
+<meta property="og:description" content="bisect.bisect_left(a, x) https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS O(logn) greater than or equal to the targeted value. If all elements are less than x, return len(a) l&lt;=r or l &lt; r ans1 if you discard mid for the next iteration (i.e. l = mid&#43;1 or r = mid-1) then use while (l &lt;= r). if you keep mid for the next iteration (i.e. l = mid or r = mid) then use while (l &lt; r) ans2 if you are returning from inside the loop, use left &lt;= right if you are reducing the search space, use left &lt; right and finally return a[left] template 1 can be determined by accessing a single index in the array." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/lee-binary-search/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2022-07-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-10T15:44:36+01:00" />
+
+
+
+
+    <title>
+leetcode questions: Binary Search · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/lee-binary-search/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/lee-binary-search/">
+                    leetcode questions: Binary Search
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2022-07-10T00:00:00Z'>
+                      July 10, 2022
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/binarysearch/">binarysearch</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/leetcode-summary/">leetcode summary</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <ul>
+<li><code>bisect.bisect_left(a, x)</code>  <a href="https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS">https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS</a>    O(logn)
+greater than or equal to the targeted value. If all elements are less than x, return <code>len(a)</code>
+<ul>
+<li>l&lt;=r or l &lt; r
+<ul>
+<li>ans1
+<ul>
+<li>if you discard mid for the next iteration (i.e. l = mid+1 or r = mid-1) then use while (l &lt;= r).</li>
+<li>if you keep mid for the next iteration (i.e. l = mid or r = mid) then use while (l &lt; r)</li>
+</ul>
+</li>
+<li>ans2
+<ul>
+<li>if you are returning from inside the loop, use left &lt;= right</li>
+<li>if you are reducing the search space, use left &lt; right and finally return a[left]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>template 1
+can be determined by <strong>accessing a single index</strong> in the array.
+<ul>
+<li>code, don&rsquo;t use <code>(low+high)//2</code> to avoid overflow.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bsearch</span>(t, mylist):
+</span></span><span style="display:flex;"><span>	low, high <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(mylist) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span> low <span style="color:#f92672">&lt;=</span> high:
+</span></span><span style="display:flex;"><span>		mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span> (high <span style="color:#f92672">-</span> low)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> mylist[mid] <span style="color:#f92672">&lt;</span> t:
+</span></span><span style="display:flex;"><span>			low <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">elif</span> mylist[mid] <span style="color:#f92672">&gt;</span> t:
+</span></span><span style="display:flex;"><span>			high <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> mid
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div>remember mid + 1, -1, not mid itself</li>
+</ul>
+</li>
+<li>template 2
+<strong>accessing the current index and its immediate right neighbor&rsquo;s index</strong> in the array.
+<ul>
+<li>must be this way, r = mid - 1 and left = mid is wrong. If left, right, the mid is always left and left doesn&rsquo;t change. Just remember to change left!
+<ul>
+<li><a href="https://dynalist.io/d/MpU_i9aOQTQsEWc_dDKqqBz2#z=_q2Gk3xT_Q7djdFrhzoxFCUX">https://dynalist.io/d/MpU_i9aOQTQsEWc_dDKqqBz2#z=_q2Gk3xT_Q7djdFrhzoxFCUX</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li>code  <a href="https://leetcode.com/explore/learn/card/binary-search/126/template-ii/937/">Explore - LeetCode</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binarySearch</span>(nums, target):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :type nums: List[int]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :type target: int
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :rtype: int
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>        mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">==</span> target:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> nums[mid] <span style="color:#f92672">&lt;</span> target:
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Post-processing:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># End Condition: left == right</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">!=</span> len(nums) <span style="color:#f92672">and</span> nums[left] <span style="color:#f92672">==</span> target:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> left
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>tempate 3
+<strong>accessing the current index and its immediate left and right neighbor&rsquo;s index</strong> in the array.
+<ul>
+<li>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binarySearch</span>(nums, target):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :type nums: List[int]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :type target: int
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :rtype: int
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>        mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">==</span> target:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> nums[mid] <span style="color:#f92672">&lt;</span> target:
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Post-processing:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># End Condition: left + 1 == right</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> nums[left] <span style="color:#f92672">==</span> target: <span style="color:#66d9ef">return</span> left
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> nums[right] <span style="color:#f92672">==</span> target: <span style="color:#66d9ef">return</span> right
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="300-longest-increasing-subsequencehttpsyanjiyucomleetcode300">
+  <a href="https://yanjiyu.com/leetcode/300/">300 Longest Increasing Subsequence</a>
+  <a class="heading-link" href="#300-longest-increasing-subsequencehttpsyanjiyucomleetcode300">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>Given an unsorted array of integers, find the length of longest increasing subsequence. A <strong>subsequence</strong> is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].<br>
+Example:<br>
+Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>: 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        L <span style="color:#f92672">=</span> [nums[<span style="color:#ae81ff">0</span>]]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(nums)):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> nums[i] <span style="color:#f92672">&gt;</span> L[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+</span></span><span style="display:flex;"><span>                L<span style="color:#f92672">.</span>append(nums[i])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># binary search to find the smallest number which is bigger than nums[i]                  </span>
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> bisect<span style="color:#f92672">.</span>bisect_left(L, nums[i])
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>                L[left] <span style="color:#f92672">=</span> nums[i]
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># actuaclly 2,3,7,18</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(L)
+</span></span></code></pre></div><ul>
+<li>code binary search</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLIS</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums) {
+</span></span><span style="display:flex;"><span>        ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> sub <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        sub.<span style="color:#a6e22e">add</span>(nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (num <span style="color:#f92672">&gt;</span> sub.<span style="color:#a6e22e">get</span>(sub.<span style="color:#a6e22e">size</span>() <span style="color:#f92672">-</span> 1)) {
+</span></span><span style="display:flex;"><span>                sub.<span style="color:#a6e22e">add</span>(num);
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> binarySearch(sub, num);
+</span></span><span style="display:flex;"><span>                sub.<span style="color:#a6e22e">set</span>(j, num);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> sub.<span style="color:#a6e22e">size</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch</span>(ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> sub, <span style="color:#66d9ef">int</span> num) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> sub.<span style="color:#a6e22e">size</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;</span> right) {
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (sub.<span style="color:#a6e22e">get</span>(mid) <span style="color:#f92672">==</span> num) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> mid;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (sub.<span style="color:#a6e22e">get</span>(mid) <span style="color:#f92672">&lt;</span> num) {
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> left;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="410-split-array-largest-sum">
+  410. Split Array Largest Sum
+  <a class="heading-link" href="#410-split-array-largest-sum">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p><a href="https://leetcode.com/problems/split-array-largest-sum/">Split Array Largest Sum - LeetCode</a></p>
+<p>Given an array nums which consists of non-negative integers and an integer m, you can split the array into m non-empty continuous subarrays.
+Write an algorithm to minimize the largest sum among these m subarrays.</p>
+<p>Example 1:
+Input: nums = [7,2,5,10,8], m = 2 Output: 18 Explanation: There are four ways to split nums into two subarrays. The best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.
+Example 2:
+Input: nums = [1,2,3,4,5], m = 2 Output: 9</p>
+<hr>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minimumSubarraysRequired</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> maxSumAllowed) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> currentSum <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> splitsRequired <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> element : nums) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Add element only if the sum doesn&#39;t exceed maxSumAllowed</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (currentSum <span style="color:#f92672">+</span> element <span style="color:#f92672">&lt;=</span> maxSumAllowed) {
+</span></span><span style="display:flex;"><span>                currentSum <span style="color:#f92672">+=</span> element;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// If the element addition makes sum more than maxSumAllowed</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Increment the splits required and reset sum</span>
+</span></span><span style="display:flex;"><span>                currentSum <span style="color:#f92672">=</span> element;
+</span></span><span style="display:flex;"><span>                splitsRequired<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return the number of subarrays, which is the number of splits + 1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> splitsRequired <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">splitArray</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> m) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Define the left and right boundary of binary search</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">stream</span>(nums).<span style="color:#a6e22e">max</span>().<span style="color:#a6e22e">getAsInt</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">stream</span>(nums).<span style="color:#a6e22e">sum</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> minimumLargestSplitSum <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Find the mid value</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> maxSumAllowed <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Find the minimum splits. If splitsRequired is less than</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// or equal to m move towards left i.e., smaller values</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (minimumSubarraysRequired(nums, maxSumAllowed) <span style="color:#f92672">&lt;=</span> m) {
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> maxSumAllowed <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>                minimumLargestSplitSum <span style="color:#f92672">=</span> maxSumAllowed;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Move towards right if splitsRequired is more than m</span>
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> maxSumAllowed <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> minimumLargestSplitSum;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code #binarySearchAdvanced</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">splitArray</span>(self, nums: List[int], m: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isTargetValid</span>(target):
+</span></span><span style="display:flex;"><span>            sub_ct <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            cur_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> nums:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> v <span style="color:#f92672">+</span> cur_sum <span style="color:#f92672">&lt;=</span> target:
+</span></span><span style="display:flex;"><span>                    cur_sum <span style="color:#f92672">+=</span> v
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    cur_sum <span style="color:#f92672">=</span> v
+</span></span><span style="display:flex;"><span>                    sub_ct <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> sub_ct <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        left, right <span style="color:#f92672">=</span> max(nums), sum(nums)
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> isTargetValid(mid) <span style="color:#f92672">&lt;=</span> m: <span style="color:#75715e"># need more sub groups, target value should be smaller</span>
+</span></span><span style="display:flex;"><span>                res <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">splitArray</span>(self, nums: List[int], m: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        l, r <span style="color:#f92672">=</span> max(nums), sum(nums)
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> r
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> l <span style="color:#f92672">&lt;=</span> r:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r<span style="color:#f92672">-</span>l) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            sub_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            ct <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># not 0</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> nums:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> sub_sum <span style="color:#f92672">+</span> v <span style="color:#f92672">&gt;</span> mid:
+</span></span><span style="display:flex;"><span>                    sub_sum <span style="color:#f92672">=</span> v <span style="color:#75715e"># not 0</span>
+</span></span><span style="display:flex;"><span>                    ct <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    sub_sum <span style="color:#f92672">+=</span> v
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> ct <span style="color:#f92672">&gt;</span> m:
+</span></span><span style="display:flex;"><span>                l <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">=</span> min(ans, mid)
+</span></span><span style="display:flex;"><span>                r <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span></code></pre></div><h3 id="1102-path-with-maximum-minimum-valuehttpsyanjiyucomleetcode1102">
+  <a href="https://yanjiyu.com/leetcode/1102/">1102. Path With Maximum Minimum Value</a>
+  <a class="heading-link" href="#1102-path-with-maximum-minimum-valuehttpsyanjiyucomleetcode1102">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Given an m x n integer matrix grid, return __the maximum score of a path starting at <strong>(0, 0)</strong> and ending at __(m - 1, n - 1) moving in the 4 cardinal directions.
+The score of a path is the minimum value in that path.</p>
+<pre><code>For example, the score of the path 8 → 4 → 5 → 9 is 4. 
+</code></pre>
+<p>Example 1:
+<img src="https://assets.leetcode.com/uploads/2021/08/05/maxgrid1.jpg">Input: grid = [[5,4,5],[1,2,6],[7,4,6]] Output: 4 Explanation: The path with the maximum score is highlighted in yellow.
+Example 2:
+<img src="https://assets.leetcode.com/uploads/2021/08/05/maxgrid2.jpg">Input: grid = [[2,2,1,2,2,2],[1,2,2,2,1,2]] Output: 2
+Example 3:
+<img src="https://assets.leetcode.com/uploads/2021/08/05/maxgrid3.jpg">Input: grid = [[3,4,6,3,4],[0,2,1,1,7],[8,8,3,2,7],[3,2,4,9,8],[4,1,2,0,0],[4,6,5,4,3]] Output: 3</p>
+<p>Constraints:</p>
+<pre><code>m == grid.length
+n == grid[i].length
+1 &lt;= m, n &lt;= 100
+0 &lt;= grid[i][j] &lt;= 109
+</code></pre>
+<ul>
+<li>code #binarySearchAdvanced</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumMinimumPath</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        m, n <span style="color:#f92672">=</span> len(grid), len(grid[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        directions <span style="color:#f92672">=</span> [(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(i, j, mini, visited):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> m <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">==</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            visited[i][j] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> directions:
+</span></span><span style="display:flex;"><span>                nx, ny <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> dx, j <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nx <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ny <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[nx][ny]:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> grid[nx][ny] <span style="color:#f92672">&gt;=</span> mini:
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> dfs(nx, ny, mini, visited): <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>                    
+</span></span><span style="display:flex;"><span>        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, min(grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>], grid[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># left open, right closed so plus one</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;</span> end:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> (start <span style="color:#f92672">+</span> end) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> dfs(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, mid, visited):
+</span></span><span style="display:flex;"><span>                start <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># current is working, move to one step right</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                end <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> end <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># or start - 1</span>
+</span></span></code></pre></div><ul>
+<li>code #unionfind  #unionFindTrickToFlat flat two dimensions to one list <code>curPosition = curRow * len(grid[0]) + curCol </code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumMinimumPath</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Find the root of x.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(x):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x <span style="color:#f92672">!=</span> root[x]:
+</span></span><span style="display:flex;"><span>                root[x] <span style="color:#f92672">=</span> find(root[x])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> root[x]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Union the roots of x and y.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">union</span>(x, y):
+</span></span><span style="display:flex;"><span>            root_x <span style="color:#f92672">=</span> find(x)
+</span></span><span style="display:flex;"><span>            root_y <span style="color:#f92672">=</span> find(y)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> root_x <span style="color:#f92672">!=</span> root_y:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> rank[root_x] <span style="color:#f92672">&gt;</span> rank[root_y]:
+</span></span><span style="display:flex;"><span>                    root[root_y] <span style="color:#f92672">=</span> root_x
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">elif</span> rank[root_x] <span style="color:#f92672">&lt;</span> rank[root_y]:
+</span></span><span style="display:flex;"><span>                    root[root_x] <span style="color:#f92672">=</span> root_y
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    root[root_y] <span style="color:#f92672">=</span> root_x
+</span></span><span style="display:flex;"><span>                    rank[root_x] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        R <span style="color:#f92672">=</span> len(grid)
+</span></span><span style="display:flex;"><span>        C <span style="color:#f92672">=</span> len(grid[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4 directions to a cell&#39;s possible neighbors.</span>
+</span></span><span style="display:flex;"><span>        dirs <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Intialize the rank of all the cells.</span>
+</span></span><span style="display:flex;"><span>        rank <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> (R <span style="color:#f92672">*</span> C)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Intialize the root of all the cells.</span>
+</span></span><span style="display:flex;"><span>        root <span style="color:#f92672">=</span> list(range(R <span style="color:#f92672">*</span> C))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Mark all the cells as false (unvisited).</span>
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> C <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(R)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Sort all the cells by values from large to small.</span>
+</span></span><span style="display:flex;"><span>        vals <span style="color:#f92672">=</span> [(row, col) <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> range(R) <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> range(C)]
+</span></span><span style="display:flex;"><span>        vals<span style="color:#f92672">.</span>sort(key <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: grid[x[<span style="color:#ae81ff">0</span>]][x[<span style="color:#ae81ff">1</span>]], reverse <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Iteration over the sorted cells.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> cur_row, cur_col <span style="color:#f92672">in</span> vals:
+</span></span><span style="display:flex;"><span>            cur_pos <span style="color:#f92672">=</span> cur_row <span style="color:#f92672">*</span> C <span style="color:#f92672">+</span> cur_col
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Mark the current cell as true (visited).</span>
+</span></span><span style="display:flex;"><span>            visited[cur_row][cur_col] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> d_row, d_col <span style="color:#f92672">in</span> dirs:
+</span></span><span style="display:flex;"><span>                new_row <span style="color:#f92672">=</span> cur_row <span style="color:#f92672">+</span> d_row
+</span></span><span style="display:flex;"><span>                new_col <span style="color:#f92672">=</span> cur_col <span style="color:#f92672">+</span> d_col
+</span></span><span style="display:flex;"><span>                new_pos <span style="color:#f92672">=</span> new_row <span style="color:#f92672">*</span> C <span style="color:#f92672">+</span> new_col
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Check if the current cell has any unvisited neighbors with value larger</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># than or equal to val.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_row <span style="color:#f92672">&lt;</span> R <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_col <span style="color:#f92672">&lt;</span> C <span style="color:#f92672">and</span> visited[new_row][new_col]:
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># If so, we connect the current cell with this neighbor.</span>
+</span></span><span style="display:flex;"><span>                    union(cur_pos, new_pos)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Check if the top-left cell is connected with the bottom-right cell.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> find(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">==</span> find(R <span style="color:#f92672">*</span> C <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># If so, return the value of the current cell.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> grid[cur_row][cur_col]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>code  #priorityQueue</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumMinimumPath</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        R <span style="color:#f92672">=</span> len(grid)
+</span></span><span style="display:flex;"><span>        C <span style="color:#f92672">=</span> len(grid[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4 directions to a cell&#39;s possible neighbors.</span>
+</span></span><span style="display:flex;"><span>        dirs <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        heap <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Initalize the status of all the cells as 0 (unvisited).</span>
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> C <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(R)]
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Put the top-left cell to the priority queue and mark it as True (visited).     </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Notice that we save the negative number of cell&#39;s value, thus we can always </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># pop out the cell with the maximum value using a min-heap data structure.</span>
+</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heappush(heap, (<span style="color:#f92672">-</span>grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>        visited[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># While the priority queue is not empty.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> heap:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Pop the cell with the largest value.</span>
+</span></span><span style="display:flex;"><span>            cur_val, cur_row, cur_col <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(heap) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Update the minimum value we have visited so far.</span>
+</span></span><span style="display:flex;"><span>            ans <span style="color:#f92672">=</span> min(ans, grid[cur_row][cur_col])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># If we reach the bottom-right cell, stop the iteration.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cur_row <span style="color:#f92672">==</span> R <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> cur_col <span style="color:#f92672">==</span> C <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> d_row, d_col <span style="color:#f92672">in</span> dirs:
+</span></span><span style="display:flex;"><span>                new_row <span style="color:#f92672">=</span> cur_row <span style="color:#f92672">+</span> d_row
+</span></span><span style="display:flex;"><span>                new_col <span style="color:#f92672">=</span> cur_col <span style="color:#f92672">+</span> d_col
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Check if the current cell has any unvisited neighbors.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_row <span style="color:#f92672">&lt;</span> R <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_col <span style="color:#f92672">&lt;</span> C <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[new_row][new_col]:   
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># If so, we put this neighbor to the priority queue </span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># and mark it as True (visited).                </span>
+</span></span><span style="display:flex;"><span>                    heapq<span style="color:#f92672">.</span>heappush(heap, (<span style="color:#f92672">-</span>grid[new_row][new_col], new_row, new_col))
+</span></span><span style="display:flex;"><span>                    visited[new_row][new_col] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Return the minimum value we have seen, which is the value of this path.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span></code></pre></div><ul>
+<li>code #binarySearchAdvanced</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumMinimumPath</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        m, n <span style="color:#f92672">=</span> len(grid), len(grid[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        directions <span style="color:#f92672">=</span> [(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(i, j, mini, visited):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> m <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">==</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            visited[i][j] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> directions:
+</span></span><span style="display:flex;"><span>                nx, ny <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> dx, j <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nx <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ny <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[nx][ny]:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> grid[nx][ny] <span style="color:#f92672">&gt;=</span> mini:
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> dfs(nx, ny, mini, visited): <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>                    
+</span></span><span style="display:flex;"><span>        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, min(grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>], grid[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># left open, right closed so plus one</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;</span> end:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> (start <span style="color:#f92672">+</span> end) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> dfs(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, mid, visited):
+</span></span><span style="display:flex;"><span>                start <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># current is working, move to one step right</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                end <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> end <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># or start - 1</span>
+</span></span></code></pre></div><ul>
+<li>code TLE with backtracking trying to check all paths</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumMinimumPath</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        m, n <span style="color:#f92672">=</span> len(grid), len(grid[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        directions <span style="color:#f92672">=</span> [(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">backtracking</span>(i, j, mini, visited):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># print(visited)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> m <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">==</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>res <span style="color:#f92672">=</span> max(self<span style="color:#f92672">.</span>res, mini)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> directions:
+</span></span><span style="display:flex;"><span>                nx, ny <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> dx, j <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nx <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ny <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> (nx, ny) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                    visited<span style="color:#f92672">.</span>add((nx, ny))
+</span></span><span style="display:flex;"><span>                    oldmini <span style="color:#f92672">=</span> mini
+</span></span><span style="display:flex;"><span>                    backtracking(nx, ny, min(mini, grid[nx][ny]), visited)
+</span></span><span style="display:flex;"><span>                    visited<span style="color:#f92672">.</span>remove((nx, ny))
+</span></span><span style="display:flex;"><span>                    mini <span style="color:#f92672">=</span> oldmini
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">.</span>add((<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>        backtracking(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>], visited)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>res
+</span></span></code></pre></div><ul>
+<li>code java bs</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> R, C;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 4 directions to a cell&#39;s possible neighbors.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> dirs <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span>{{1, 0}, {<span style="color:#f92672">-</span>1, 0}, {0, 1}, {0, <span style="color:#f92672">-</span>1}};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maximumMinimumPath</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> grid) {
+</span></span><span style="display:flex;"><span>        R <span style="color:#f92672">=</span> grid.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        C <span style="color:#f92672">=</span> grid<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0, right <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(grid<span style="color:#f92672">[</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>, grid<span style="color:#f92672">[</span>R <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>C <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;</span> right) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Get the middle value between left and right boundaries.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> middle <span style="color:#f92672">=</span> (right <span style="color:#f92672">+</span> left <span style="color:#f92672">+</span> 1) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[][]</span> visited <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[</span>R<span style="color:#f92672">][</span>C<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Check if we can find a path with value = middle, and cut </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// the search space by half.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (pathExists(grid, middle, visited, 0, 0)) {
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> middle;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> middle <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Once the left and right boundaries coincide, we find the target value,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// that is, the maximum value of a path.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> left;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Check if we can find a path of value = val.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">pathExists</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> grid, <span style="color:#66d9ef">int</span> val, <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[][]</span> visited, <span style="color:#66d9ef">int</span> curRow, <span style="color:#66d9ef">int</span> curCol) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// If we reach the bottom-right cell, return true.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (curRow <span style="color:#f92672">==</span> R <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&amp;&amp;</span> curCol <span style="color:#f92672">==</span> C <span style="color:#f92672">-</span> 1) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Mark the current cell as visited.</span>
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">[</span>curRow<span style="color:#f92672">][</span>curCol<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> dir : dirs) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> newRow <span style="color:#f92672">=</span> curRow <span style="color:#f92672">+</span> dir<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> newCol <span style="color:#f92672">=</span> curCol <span style="color:#f92672">+</span> dir<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Check if the current cell has any unvisited neighbors with value larger</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// than or equal to val. </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (newRow <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> newRow <span style="color:#f92672">&lt;</span> R <span style="color:#f92672">&amp;&amp;</span> newCol <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> newCol <span style="color:#f92672">&lt;</span> C
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>visited<span style="color:#f92672">[</span>newRow<span style="color:#f92672">][</span>newCol<span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> grid<span style="color:#f92672">[</span>newRow<span style="color:#f92672">][</span>newCol<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;=</span> val) {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// If so, we continue search on this neighbor.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (pathExists(grid, val, visited, newRow, newCol))
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;        
+</span></span><span style="display:flex;"><span>    }   
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="1631-path-with-minimum-efforthttpsyanjiyucomleetcode1631">
+  <a href="https://yanjiyu.com/leetcode/1631/">1631. Path With Minimum Effort</a>
+  <a class="heading-link" href="#1631-path-with-minimum-efforthttpsyanjiyucomleetcode1631">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
+A route&rsquo;s effort is the maximum absolute difference in heights between two consecutive cells of the route.
+Return <strong>the minimum effort required to travel from the top-left cell to the bottom-right cell.</strong></p>
+<p>Example 1:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex1.png">
+Input: heights = [[1,2,2],[3,8,2],[5,3,5]] Output: 2 Explanation: The route of [1,3,5,3,5] has a maximum absolute difference of 2 in consecutive cells. This is better than the route of [1,2,2,2,5], where the maximum absolute difference is 3.
+Example 2:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex2.png">
+Input: heights = [[1,2,3],[3,8,4],[5,3,5]] Output: 1 Explanation: The route of [1,2,3,4,5] has a maximum absolute difference of 1 in consecutive cells, which is better than route [1,3,5,3,5].
+Example 3:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex3.png">Input: heights = [[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]] Output: 0 Explanation: This route does not require any effort.</p>
+<p>Constraints:</p>
+<pre><code>rows == heights.length
+columns == heights[i].length
+1 &lt;= rows, columns &lt;= 100
+1 &lt;= heights[i][j] &lt;= 106
+</code></pre>
+<ul>
+<li>code BFS + #binarySearchAdvanced</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        dirs <span style="color:#f92672">=</span> [(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>),(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>),(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>),(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        rowL, colL <span style="color:#f92672">=</span> len(heights), len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPathValid</span>(maxDiff):
+</span></span><span style="display:flex;"><span>            q <span style="color:#f92672">=</span> deque([(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)])
+</span></span><span style="display:flex;"><span>            visited <span style="color:#f92672">=</span> set((<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>                curi, curj <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> curi <span style="color:#f92672">==</span> rowL <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> curj <span style="color:#f92672">==</span> colL <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>: <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> di, dj <span style="color:#f92672">in</span> dirs:
+</span></span><span style="display:flex;"><span>                    ni, nj <span style="color:#f92672">=</span> curi <span style="color:#f92672">+</span> di, curj <span style="color:#f92672">+</span> dj
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ni <span style="color:#f92672">&lt;</span> rowL <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nj <span style="color:#f92672">&lt;</span> colL <span style="color:#f92672">and</span> (ni, nj) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited <span style="color:#f92672">and</span> abs(heights[ni][nj] <span style="color:#f92672">-</span> heights[curi][curj]) <span style="color:#f92672">&lt;=</span> maxDiff:
+</span></span><span style="display:flex;"><span>                        q<span style="color:#f92672">.</span>append((ni, nj))
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add((ni, nj))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> isPathValid(mid):
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> right
+</span></span></code></pre></div><ul>
+<li>code java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minimumEffortPath</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> heights) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> 1000000;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> right;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (canReachDestinaton(heights, mid)) {
+</span></span><span style="display:flex;"><span>                result <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(result, mid);
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> directions <span style="color:#f92672">=</span> {{1, 0}, {<span style="color:#f92672">-</span>1, 0}, {0, 1}, {0, <span style="color:#f92672">-</span>1}};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// use bfs to check if we can reach destination with max absolute difference k</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">canReachDestinaton</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> heights, <span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> heights.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> heights<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        Deque<span style="color:#f92672">&lt;</span>Cell<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[][]</span> visited <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[</span>heights.<span style="color:#a6e22e">length</span><span style="color:#f92672">][</span>heights<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        queue.<span style="color:#a6e22e">addLast</span>(<span style="color:#66d9ef">new</span> Cell(0, 0));
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">[</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>queue.<span style="color:#a6e22e">isEmpty</span>()) {
+</span></span><span style="display:flex;"><span>            Cell curr <span style="color:#f92672">=</span> queue.<span style="color:#a6e22e">removeFirst</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(curr.<span style="color:#a6e22e">x</span> <span style="color:#f92672">==</span> row <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&amp;&amp;</span> curr.<span style="color:#a6e22e">y</span> <span style="color:#f92672">==</span> col <span style="color:#f92672">-</span> 1) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> direction : directions) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> adjacentX <span style="color:#f92672">=</span> curr.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> direction<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> adjacentY <span style="color:#f92672">=</span> curr.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+</span> direction<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (isValidCell(adjacentX, adjacentY, row, col) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>visited<span style="color:#f92672">[</span>adjacentX<span style="color:#f92672">][</span>adjacentY<span style="color:#f92672">]</span>) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">int</span> currentDifference <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">abs</span>(heights<span style="color:#f92672">[</span>adjacentX<span style="color:#f92672">][</span>adjacentY<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> heights<span style="color:#f92672">[</span>curr.<span style="color:#a6e22e">x</span><span style="color:#f92672">][</span>curr.<span style="color:#a6e22e">y</span><span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (currentDifference <span style="color:#f92672">&lt;=</span> k) {
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">[</span>adjacentX<span style="color:#f92672">][</span>adjacentY<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>                        queue.<span style="color:#a6e22e">addLast</span>(<span style="color:#66d9ef">new</span> Cell(adjacentX, adjacentY));
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isValidCell</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y, <span style="color:#66d9ef">int</span> row, <span style="color:#66d9ef">int</span> col) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> x <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> x <span style="color:#f92672">&lt;=</span> row <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;=</span> col <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cell</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> y;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Cell(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> x;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> y;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code DFS + binary search</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> len(heights)
+</span></span><span style="display:flex;"><span>        col <span style="color:#f92672">=</span> len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">canReachDestinaton</span>(x, y, mid):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> row<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> y <span style="color:#f92672">==</span> col<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            visited[x][y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]]:
+</span></span><span style="display:flex;"><span>                adjacent_x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx
+</span></span><span style="display:flex;"><span>                adjacent_y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> adjacent_x <span style="color:#f92672">&lt;</span> row <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> adjacent_y <span style="color:#f92672">&lt;</span> col <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[
+</span></span><span style="display:flex;"><span>                        adjacent_x][adjacent_y]:
+</span></span><span style="display:flex;"><span>                    current_difference <span style="color:#f92672">=</span> abs(
+</span></span><span style="display:flex;"><span>                        heights[adjacent_x][adjacent_y]<span style="color:#f92672">-</span>heights[x][y])
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> current_difference <span style="color:#f92672">&lt;=</span> mid:
+</span></span><span style="display:flex;"><span>                        visited[adjacent_x][adjacent_y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> canReachDestinaton(adjacent_x, adjacent_y, mid):
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000000</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>]<span style="color:#f92672">*</span>col <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(row)]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> canReachDestinaton(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, mid):
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> left
+</span></span></code></pre></div><p>The real reason why the binary search approach works with BFS or DFS is that by defining a diff limit, the search space dramatically decreased, because we don&rsquo;t need BFS/DFS to exhaust all the paths to the target anymore, we just need to find ONE path that satisfy the diff limit. Thus, if we find ourself at a Cell that satisfies a diff limit, we don&rsquo;t care about other paths that get to this Cell anymore, that&rsquo;s why we can use &ldquo;visited&rdquo; to eliminate paths exploration. Without a diff limit, we can no longer use this naive &ldquo;visited&rdquo; way of tracking and the search space becomes 3^(M*N) as we&rsquo;d have to exhaust all the paths to find the one with min diff. -billmaxwell on leetcode <a href="https://leetcode.com/problems/path-with-minimum-effort/solution/977158">https://leetcode.com/problems/path-with-minimum-effort/solution/977158</a></p>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minimumEffortPath</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> heights) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> 1000000;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> right;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (dfsUtil(heights, mid)) {
+</span></span><span style="display:flex;"><span>                result <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(result, mid);
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> directions <span style="color:#f92672">=</span> {{1, 0}, {<span style="color:#f92672">-</span>1, 0}, {0, 1}, {0, <span style="color:#f92672">-</span>1}};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">dfsUtil</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> heights, <span style="color:#66d9ef">int</span> mid) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> heights.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> heights<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">boolean</span> visited<span style="color:#f92672">[][]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[</span>row<span style="color:#f92672">][</span>col<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> canReachDestinaton(0, 0, heights, visited, row, col, mid);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">canReachDestinaton</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y, <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> heights,
+</span></span><span style="display:flex;"><span>                               <span style="color:#66d9ef">boolean</span><span style="color:#f92672">[][]</span> visited, <span style="color:#66d9ef">int</span> row, <span style="color:#66d9ef">int</span> col, <span style="color:#66d9ef">int</span> mid) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (x <span style="color:#f92672">==</span> row <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">==</span> col <span style="color:#f92672">-</span> 1) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">[</span>x<span style="color:#f92672">][</span>y<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> direction : directions) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> adjacentX <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> direction<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> adjacentY <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> direction<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (isValidCell(adjacentX, adjacentY, row, col) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>visited<span style="color:#f92672">[</span>adjacentX<span style="color:#f92672">][</span>adjacentY<span style="color:#f92672">]</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> currentDifference <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">abs</span>(heights<span style="color:#f92672">[</span>adjacentX<span style="color:#f92672">][</span>adjacentY<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> heights<span style="color:#f92672">[</span>x<span style="color:#f92672">][</span>y<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (currentDifference <span style="color:#f92672">&lt;=</span> mid) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (canReachDestinaton(adjacentX, adjacentY, heights, visited, row, col, mid))
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isValidCell</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y, <span style="color:#66d9ef">int</span> row, <span style="color:#66d9ef">int</span> col) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> x <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> x <span style="color:#f92672">&lt;=</span> row <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;=</span> col <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

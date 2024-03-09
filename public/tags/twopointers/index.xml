@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twopointers on Jiyu</title>
+    <link>http://localhost:1313/tags/twopointers/</link>
+    <description>Recent content in Twopointers on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 26 Jan 2024 18:20:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/twopointers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>15. 3Sum</title>
+      <link>http://localhost:1313/leetcode/15/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/15/</guid>
+      <description>https://leetcode.com/problems/3sum&#xA;Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set must not contain duplicate triplets.&#xA;Example 1: Input: nums = [-1,0,1,2,-1,-4] Output: [[-1,-1,2],[-1,0,1]] Explanation: nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0. nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.</description>
+    </item>
+    <item>
+      <title>11. Container With Most Water</title>
+      <link>http://localhost:1313/leetcode/11/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/11/</guid>
+      <description>Container With Most Water - LeetCode&#xA;You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container.</description>
+    </item>
+    <item>
+      <title>42. Trapping Rain Water</title>
+      <link>http://localhost:1313/leetcode/42/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/42/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.&#xA;Example 1: Input: height = [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Example 2: Input: height = [4,2,0,3,2,5] Output: 9&#xA;Constraints:&#xA;n == height.length 1 &amp;lt;= n &amp;lt;= 2 * 104 0 &amp;lt;= height[i] &amp;lt;= 105 code class Solution { public int trap(int[] height) { int left = 0, right = height.</description>
+    </item>
+    <item>
+      <title>88. Merge Sorted Array</title>
+      <link>http://localhost:1313/leetcode/88/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/88/</guid>
+      <description>https://leetcode.com/problems/merge-sorted-array/description/&#xA;You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order. The final sorted array should not be returned by the function, but instead be __stored inside the array __nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored.</description>
+    </item>
+    <item>
+      <title>1209. Remove All Adjacent Duplicates in String II</title>
+      <link>http://localhost:1313/leetcode/1209/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1209/</guid>
+      <description>Remove All Adjacent Duplicates in String II - LeetCode&#xA;You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together. We repeatedly make k duplicate removals on s until we no longer can. Return the final string after all such duplicate removals have been made.</description>
+    </item>
+    <item>
+      <title>905. Sort array by parity</title>
+      <link>http://localhost:1313/leetcode/905/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/905/</guid>
+      <description>Sort Array By Parity - LeetCode&#xA;Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers. Return any array that satisfies this condition.&#xA;Example 1: Input: nums = [3,1,2,4] Output: [2,4,3,1] Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted. Example 2: Input: nums = [0] Output: [0]&#xA;Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 5000 0 &amp;lt;= nums[i] &amp;lt;= 5000 code class Solution { public int[] sortArrayByParity(int[] nums) { int left = 0, right = nums.</description>
+    </item>
+    <item>
+      <title>484. Find Permutation</title>
+      <link>http://localhost:1313/leetcode/484/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/484/</guid>
+      <description>Find Permutation - LeetCode&#xA;A permutation perm of n integers of all the integers in the range [1, n] can be represented as a string s of length n - 1 where:&#xA;s[i] == &#39;I&#39; if perm[i] &amp;lt; perm[i + 1], and s[i] == &#39;D&#39; if perm[i] &amp;gt; perm[i + 1].Given a string s, reconstruct the lexicographically smallest permutation perm and return it. Example 1: Input: s = &amp;ldquo;I&amp;rdquo; Output: [1,2] Explanation: [1,2] is the only legal permutation that can represented by s, where the number 1 and 2 construct an increasing relationship.</description>
+    </item>
+    <item>
+      <title>31. Next Permutation</title>
+      <link>http://localhost:1313/leetcode/31/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/31/</guid>
+      <description>Next Permutation - LeetCode&#xA;A permutation of an array of integers is an arrangement of its members into a sequence or linear order.&#xA;For example, for arr = [1,2,3], the following are considered permutations of arr: [1,2,3], [1,3,2], [3,1,2], [2,3,1].The next permutation of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the array are sorted in one container according to their lexicographical order, then the next permutation of that array is the permutation that follows it in the sorted container.</description>
+    </item>
+    <item>
+      <title>633. Sum of square numbers</title>
+      <link>http://localhost:1313/leetcode/633/</link>
+      <pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/633/</guid>
+      <description>Sum of Square Numbers - LeetCode&#xA;Given a non-negative integer c, decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.&#xA;Example 1: Input: c = 5 Output: true Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: c = 3 Output: false&#xA;code class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: l, r = 0, int(c ** 0.5) while l &amp;lt;= r: res = l ** 2 + r ** 2 if res &amp;lt; c: l += 1 elif res &amp;gt; c: r -= 1 else: return True return False </description>
+    </item>
+    <item>
+      <title>680. Valid Palindrome II</title>
+      <link>http://localhost:1313/leetcode/680/</link>
+      <pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/680/</guid>
+      <description>Given a string s, return true if the s can be palindrome after deleting at most one character from it.&#xA;Example 1: Input: s = &amp;ldquo;aba&amp;rdquo; Output: true Example 2: Input: s = &amp;ldquo;abca&amp;rdquo; Output: true Explanation: You could delete the character &amp;lsquo;c&amp;rsquo;.&#xA;code class Solution: def validPalindrome(self, s: str) -&amp;gt; bool: def helper(s): return s == s[::-1] l, r = 0, len(s) - 1 while l &amp;lt; r: if s[l] == s[r]: l += 1 r -= 1 else: if s[l] == s[r-1]: r -= 1 if helper(s[l:r+1]): return True r += 1 if s[l+1] == s[r]: l += 1 if helper(s[l:r+1]): return True return False return True code class Solution: def validPalindrome(self, s: str) -&amp;gt; bool: l, r = 0, len(s) - 1 while l &amp;lt; r: if s[l] !</description>
+    </item>
+  </channel>
+</rss>

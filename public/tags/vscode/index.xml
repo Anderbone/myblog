@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vscode on Jiyu</title>
+    <link>http://localhost:1313/tags/vscode/</link>
+    <description>Recent content in Vscode on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Jun 2022 14:27:54 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auto close quotes for markdown in VsCode</title>
+      <link>http://localhost:1313/dev/tool-vscode-markdown-autoclosing/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-vscode-markdown-autoclosing/</guid>
+      <description>Sometimes I want to auto-close double quotes and ` in markdown mode.&#xA;In settings we have such settings but they are not working in plain text files like makrdown.&#xA;Find &amp;ldquo;language-configuration.json&amp;rdquo; under markdown-basic folder. My path: C:\Program Files\Microsoft VS Code\resources\app\extensions\markdown-basics\language-configuration.json&#xA;Add what you want auto close and save it.&#xA;&amp;#34;autoClosingPairs&amp;#34;: [ { &amp;#34;open&amp;#34;: &amp;#34;{&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;}&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;`&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;`&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;\&amp;#34;&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;\&amp;#34;&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;[&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;]&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;(&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;)&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;&amp;lt;&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;&amp;gt;&amp;#34;, &amp;#34;notIn&amp;#34;: [ &amp;#34;string&amp;#34; ] } ], BTW use Ctrl+M Ctrl+C you could generate a code block in markdown.</description>
+    </item>
+    <item>
+      <title>Using latex with VsCode</title>
+      <link>http://localhost:1313/dev/tool-latex-vscode/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-latex-vscode/</guid>
+      <description>Refer&#xA;On windows:&#xA;Install texLive.&#xA;Add the path to environment variable. Install &amp;ldquo;Latex workship&amp;rdquo; on vscode.&#xA;Open your tex file, View Latex PDF File, you are ready to go.&#xA;On manjaro:&#xA;sudo pacman -S textlive-most </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph on Jiyu</title>
+    <link>http://localhost:1313/tags/graph/</link>
+    <description>Recent content in Graph on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Apr 2022 17:18:23 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>785. Is Graph Bipartite?</title>
+      <link>http://localhost:1313/leetcode/785/</link>
+      <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/785/</guid>
+      <description>Is Graph Bipartite? - LeetCode&#xA;There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. More formally, for each v in graph[u], there is an undirected edge between node u and node v. The graph has the following properties:&#xA;There are no self-edges (graph[u] does not contain u).</description>
+    </item>
+    <item>
+      <title>1631. Path With Minimum Effort</title>
+      <link>http://localhost:1313/leetcode/1631/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1631/</guid>
+      <description>Path With Minimum Effort - LeetCode&#xA;You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.</description>
+    </item>
+    <item>
+      <title>787. Cheapest Flights Within K Stops </title>
+      <link>http://localhost:1313/leetcode/787/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/787/</guid>
+      <description>Cheapest Flights Within K Stops - LeetCode&#xA;There are n cities connected by some number of flights. You are given an array flights where flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city toi with cost pricei. You are also given three integers src, dst, and k, return __the cheapest price from src to dst with at most k stops. If there is no such route, return __-1.</description>
+    </item>
+    <item>
+      <title>leetcode: mini spanning tree, single src shortest path, topological</title>
+      <link>http://localhost:1313/dev/lee-graph-advanced/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-graph-advanced/</guid>
+      <description>Minimum spanning tree A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”. Min Cost to Connect All Points - LeetCode&#xA;You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.</description>
+    </item>
+    <item>
+      <title>743. Network Delay Time </title>
+      <link>http://localhost:1313/leetcode/743/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/743/</guid>
+      <description>Network Delay Time - LeetCode&#xA;You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target. We will send a signal from a given node k.</description>
+    </item>
+    <item>
+      <title>1136. Parallel Courses </title>
+      <link>http://localhost:1313/leetcode/1136/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1136/</guid>
+      <description>Parallel Courses - LeetCode&#xA;You are given an integer n, which indicates that there are n courses labeled from 1 to n. You are also given an array relations where relations[i] = [prevCoursei, nextCoursei], representing a prerequisite relationship between course prevCoursei and course nextCoursei: course prevCoursei has to be taken before course nextCoursei. In one semester, you can take any number of courses as long as you have taken all the prerequisites in the previous semester for the courses you are taking.</description>
+    </item>
+    <item>
+      <title>269. Alien Dictionary</title>
+      <link>http://localhost:1313/leetcode/269/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/269/</guid>
+      <description>Alien Dictionary - LeetCode&#xA;There is a new alien language that uses the English alphabet. However, the order among the letters is unknown to you. You are given a list of strings words from the alien language&amp;rsquo;s dictionary, where the strings in words are sorted lexicographically by the rules of this new language. Return a string of the unique letters in the new alien language sorted in lexicographically increasing order by the new language&amp;rsquo;s rules.</description>
+    </item>
+    <item>
+      <title>207. Course Schedule </title>
+      <link>http://localhost:1313/leetcode/207/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/207/</guid>
+      <description>Course Schedule - LeetCode&#xA;There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.&#xA;For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.Return true if you can finish all courses.</description>
+    </item>
+    <item>
+      <title>210. Course Schedule II </title>
+      <link>http://localhost:1313/leetcode/210/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/210/</guid>
+      <description>Course Schedule II - LeetCode&#xA;There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.&#xA;For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.Return the ordering of courses you should take to finish all courses.</description>
+    </item>
+    <item>
+      <title>1091. Shortest Path in Binary Matrix </title>
+      <link>http://localhost:1313/leetcode/1091/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1091/</guid>
+      <description>Shortest Path in Binary Matrix - LeetCode&#xA;Given an n x n binary matrix grid, return the length of the shortest clear path in the matrix. If there is no clear path, return -1. A clear path in a binary matrix is a path from the top-left cell (i.e., (0, 0)) to the bottom-right cell (i.e., (n - 1, n - 1)) such that:&#xA;All the visited cells of the path are 0.</description>
+    </item>
+    <item>
+      <title>323. Number of Connected Components in an Undirected Graph</title>
+      <link>http://localhost:1313/leetcode/323/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/323/</guid>
+      <description>Number of Connected Components in an Undirected Graph - LeetCode You have a graph of n nodes. You are given an integer n and an array edges where edges[i] = [ai, bi] indicates that there is an edge between ai and bi in the graph. Return the number of connected components in the graph.&#xA;Example 1: Input: n = 5, edges = [[0,1],[1,2],[3,4]] Output: 2&#xA;code class Solution: def countComponents(self, n: int, edges: List[List[int]]) -&amp;gt; int: root = [i for i in range(n)] rank = [1] * n self.</description>
+    </item>
+  </channel>
+</rss>

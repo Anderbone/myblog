@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Jiyu</title>
+    <link>http://localhost:1313/tags/docker/</link>
+    <description>Recent content in Docker on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 26 Aug 2022 23:01:40 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microservices with Spring Boot and Spring Cloud chap04 Docker</title>
+      <link>http://localhost:1313/dev/spring-microservices-docker/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-microservices-docker/</guid>
+      <description>Page 105 when running docker build, there&amp;rsquo;s an error: Docker: failed to export image: failed to create image: failed to get layer.&#xA;cd microservices/product-service docker build -t product-service . After adding &amp;lsquo;RUN true&amp;rsquo; between each COPY, problem solved.&#xA;FROM adoptopenjdk:16_36-jre-hotspot as builder WORKDIR extracted ADD ./build/libs/*.jar app.jar RUN java -Djarmode=layertools -jar app.jar extract FROM adoptopenjdk:16_36-jre-hotspot WORKDIR application COPY --from=builder extracted/dependencies/ ./ RUN true COPY --from=builder extracted/spring-boot-loader/ ./ RUN true COPY --from=builder extracted/snapshot-dependencies/ .</description>
+    </item>
+    <item>
+      <title>How to debug flask in docker with intellij on Linux</title>
+      <link>http://localhost:1313/dev/flask-docker-debug/</link>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/flask-docker-debug/</guid>
+      <description>Reference: https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-flask-up-and-running/&#xA;Project to use in this page : https://github.com/wikimedia/analytics-quarry-web&#xA;Clone it https://gerrit.wikimedia.org/r/admin/repos/analytics/quarry/web&#xA;git clone &amp;#34;ssh://jiyu@gerrit.wikimedia.org:29418/analytics/quarry/web&amp;#34; &amp;amp;&amp;amp; scp -p -P 29418 jiyu@gerrit.wikimedia.org:hooks/commit-msg &amp;#34;web/.git/hooks/&amp;#34; Set up git-review&#xA;git review -s --verbose I use intellij but PyCharm should be more or less the same.&#xA;Make sure your docker is configured correctly: https://docs.docker.com/engine/install/linux-postinstall/&#xA;Add remote interpreter First let&amp;rsquo;s run by default to make sure it&amp;rsquo;s working. docker-compose build &amp;amp;&amp;amp; docker-compose up&#xA;Notice I changed the file name from quarry.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Jiyu</title>
+    <link>http://localhost:1313/tags/design/</link>
+    <description>Recent content in Design on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Nov 2023 20:37:11 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>380. Insert delete getRandom</title>
+      <link>http://localhost:1313/leetcode/380/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/380/</guid>
+      <description>https://leetcode.com/problems/insert-delete-getrandom-o1/description/&#xA;Implement the RandomizedSet class:&#xA;RandomizedSet() Initializes the RandomizedSet object. bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise. bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise. int getRandom() Returns a random element from the current set of elements (it&#39;s guaranteed that at least one element exists when this method is called).</description>
+    </item>
+    <item>
+      <title>284. Peeking Iterator</title>
+      <link>http://localhost:1313/leetcode/284/</link>
+      <pubDate>Mon, 25 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/284/</guid>
+      <description>Peeking Iterator - LeetCode&#xA;Design an iterator that supports the peek operation on an existing iterator in addition to the hasNext and the next operations. Implement the PeekingIterator class:&#xA;PeekingIterator(Iterator&amp;lt;int&amp;gt; nums) Initializes the object with the given integer iterator iterator. int next() Returns the next element in the array and moves the pointer to the next element. boolean hasNext() Returns true if there are still elements in the array. int peek() Returns the next element in the array without moving the pointer.</description>
+    </item>
+    <item>
+      <title>1396. Design Underground System</title>
+      <link>http://localhost:1313/leetcode/1396/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1396/</guid>
+      <description>Design Underground System - LeetCode&#xA;An underground railway system is keeping track of customer travel times between different stations. They are using this data to calculate the average time it takes to travel from one station to another. Implement the UndergroundSystem class:&#xA;void checkIn(int id, string stationName, int t) A customer with a card ID equal to id, checks in at the station stationName at time t. A customer can only be checked into one place at a time.</description>
+    </item>
+    <item>
+      <title>535. Encode and Decode TinyURL</title>
+      <link>http://localhost:1313/leetcode/535/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/535/</guid>
+      <description>Encode and Decode TinyURL - LeetCode&#xA;TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk. Design a class to encode a URL and decode a tiny URL. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</description>
+    </item>
+    <item>
+      <title>588. Design In-Memory File System </title>
+      <link>http://localhost:1313/leetcode/588/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/588/</guid>
+      <description>Design In-Memory File System - LeetCode&#xA;Design a data structure that simulates an in-memory file system. Implement the FileSystem class:&#xA;FileSystem() Initializes the object of the system. List ls(String path) If path is a file path, returns a list that only contains this file&amp;rsquo;s name. If path is a directory path, returns the list of file and directory names in this directory.The answer should in lexicographic order. void mkdir(String path) Makes a new directory according to the given path.</description>
+    </item>
+    <item>
+      <title>297. Serialize and Deserialize Binary Tree</title>
+      <link>http://localhost:1313/leetcode/297-serialize-and-deserialize-binary-tree/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/297-serialize-and-deserialize-binary-tree/</guid>
+      <description>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</description>
+    </item>
+    <item>
+      <title>155. Min Stack</title>
+      <link>http://localhost:1313/leetcode/155-min-stack/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/155-min-stack/</guid>
+      <description>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.&#xA;push(x) -- Push element x onto stack. pop() -- Removes the element on top of the stack. top() -- Get the top element. getMin() -- Retrieve the minimum element in the stack. c&#xA;code, one stack, save the min at each time at the second place, for e.g. input (1,3,-2) will become (1,1),(3,1)(-2,-2) class MinStack: def __init__(self): &amp;#34;&amp;#34;&amp;#34; initialize your data structure here.</description>
+    </item>
+    <item>
+      <title>384. Shuffle an array</title>
+      <link>http://localhost:1313/leetcode/384-shuffle-an-array/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/384-shuffle-an-array/</guid>
+      <description>Shuffle a set of numbers without duplicates. Implement the Solution class:&#xA;Solution(int[] nums) Initializes the object with the integer array nums. int[] reset() Resets the array to its original configuration and returns it. int[] shuffle() Returns a random shuffling of the array. code0 class Solution: def __init__(self, nums: List[int]): self.origin = nums[:] def reset(self) -&amp;gt; List[int]: &amp;#34;&amp;#34;&amp;#34; Resets the array to its original configuration and return it. &amp;#34;&amp;#34;&amp;#34; return self.origin def shuffle(self) -&amp;gt; List[int]: &amp;#34;&amp;#34;&amp;#34; Returns a random shuffling of the array.</description>
+    </item>
+  </channel>
+</rss>

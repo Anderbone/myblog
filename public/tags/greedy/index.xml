@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greedy on Jiyu</title>
+    <link>http://localhost:1313/tags/greedy/</link>
+    <description>Recent content in Greedy on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Jan 2024 16:58:18 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>135. Candy</title>
+      <link>http://localhost:1313/leetcode/135/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/135/</guid>
+      <description>https://leetcode.com/problems/candy/&#xA;There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings. You are giving candies to these children subjected to the following requirements:&#xA;Each child must have at least one candy. Children with a higher rating get more candies than their neighbors.Return __the minimum number of candies you need to have to distribute the candies to the children__. Example 1: Input: ratings = [1,0,2] Output: 5 Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.</description>
+    </item>
+    <item>
+      <title>45 Jump Game II</title>
+      <link>http://localhost:1313/leetcode/45/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/45/</guid>
+      <description>https://leetcode.com/problems/jump-game-ii/description/&#xA;You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0]. Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:&#xA;0 &amp;lt;= j &amp;lt;= nums[i] and i + j &amp;lt; nReturn __the minimum number of jumps to reach __nums[n - 1].</description>
+    </item>
+    <item>
+      <title>1710. Maximum Units on a Truck</title>
+      <link>http://localhost:1313/leetcode/1710/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1710/</guid>
+      <description>Maximum Units on a Truck - LeetCode&#xA;You are assigned to put some amount of boxes onto one truck. You are given a 2D array boxTypes, where boxTypes[i] = [numberOfBoxesi, numberOfUnitsPerBoxi]:&#xA;numberOfBoxesi is the number of boxes of type i. numberOfUnitsPerBoxi is the number of units in each box of the type i.You are also given an integer truckSize, which is the maximum number of boxes that can be put on the truck.</description>
+    </item>
+    <item>
+      <title>1029. Two City Scheduling</title>
+      <link>http://localhost:1313/leetcode/1029/</link>
+      <pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1029/</guid>
+      <description>Two City Scheduling - LeetCode&#xA;A company is planning to interview 2n people. Given the array costs where costs[i] = [aCosti, bCosti], the cost of flying the ith person to city a is aCosti, and the cost of flying the ith person to city b is bCosti. Return the minimum cost to fly every person to a city such that exactly n people arrive in each city.&#xA;Example 1: Input: costs = [[10,20],[30,200],[400,50],[30,20]] Output: 110 Explanation: The first person goes to city A for a cost of 10.</description>
+    </item>
+    <item>
+      <title>881. Boats to Save People</title>
+      <link>http://localhost:1313/leetcode/881/</link>
+      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/881/</guid>
+      <description>Boats to Save People - LeetCode&#xA;You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit. Return the minimum number of boats to carry every given person.</description>
+    </item>
+    <item>
+      <title>991. Broken Calculator</title>
+      <link>http://localhost:1313/leetcode/991/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/991/</guid>
+      <description>Broken Calculator - LeetCode&#xA;There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:&#xA;multiply the number on display by 2, or subtract 1 from the number on display.Given two integers startValue and target, return __the minimum number of operations needed to display __target__ on the calculator__. Example 1: Input: startValue = 2, target = 3 Output: 2 Explanation: Use double operation and then decrement operation {2 -&amp;gt; 4 -&amp;gt; 3}.</description>
+    </item>
+    <item>
+      <title>1663. Smallest String With A Given Numeric Value</title>
+      <link>http://localhost:1313/leetcode/1663/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1663/</guid>
+      <description>Smallest String With A Given Numeric Value - LeetCode&#xA;The numeric value of a lowercase character is defined as its position (1-indexed) in the alphabet, so the numeric value of a is 1, the numeric value of b is 2, the numeric value of c is 3, and so on. The numeric value of a string consisting of lowercase characters is defined as the sum of its characters&amp;rsquo; numeric values. For example, the numeric value of the string &amp;ldquo;abe&amp;rdquo; is equal to 1 + 2 + 5 = 8.</description>
+    </item>
+    <item>
+      <title>1007. Minimum Domino Rotations For Equal Row</title>
+      <link>http://localhost:1313/leetcode/1007/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1007/</guid>
+      <description>Minimum Domino Rotations For Equal Row - LeetCode&#xA;In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.) We may rotate the ith domino, so that tops[i] and bottoms[i] swap values. Return the minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same.</description>
+    </item>
+    <item>
+      <title>763. Partition Labels</title>
+      <link>http://localhost:1313/leetcode/763/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/763/</guid>
+      <description>Partition Labels - LeetCode&#xA;You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part. Return a list of integers representing the size of these parts.&#xA;Example 1: Input: s = &amp;ldquo;ababcbacadefegdehijhklij&amp;rdquo; Output: [9,7,8] Explanation: The partition is &amp;ldquo;ababcbaca&amp;rdquo;, &amp;ldquo;defegde&amp;rdquo;, &amp;ldquo;hijhklij&amp;rdquo;. This is a partition so that each letter appears in at most one part.</description>
+    </item>
+    <item>
+      <title>1288. Remove Covered Intervals</title>
+      <link>http://localhost:1313/leetcode/1288/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1288/</guid>
+      <description>Remove Covered Intervals - LeetCode&#xA;Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list. The interval [a, b) is covered by the interval [c, d) if and only if c &amp;lt;= a and b &amp;lt;= d. Return the number of remaining intervals.&#xA;Example 1: Input: intervals = [[1,4],[3,6],[2,8]] Output: 2 Explanation: Interval [3,6] is covered by [2,8], therefore it is removed.</description>
+    </item>
+    <item>
+      <title>714. Best Time to Buy and Sell Stock with Transaction Fee</title>
+      <link>http://localhost:1313/leetcode/714/</link>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/714/</guid>
+      <description>Best Time to Buy and Sell Stock with Transaction Fee - LeetCode&#xA;You are given an array prices where prices[i] is the price of a given stock on the ith day, and an integer fee representing a transaction fee. Find the maximum profit you can achieve. You may complete as many transactions as you like, but you need to pay the transaction fee for each transaction. Note: You may not engage in multiple transactions simultaneously (i.</description>
+    </item>
+    <item>
+      <title>452. Minimum Number of Arrows to Burst Balloons</title>
+      <link>http://localhost:1313/leetcode/452/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/452/</guid>
+      <description>Minimum Number of Arrows to Burst Balloons - LeetCode&#xA;There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons. Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis.</description>
+    </item>
+    <item>
+      <title>624. Maximum Distance in Arrays</title>
+      <link>http://localhost:1313/leetcode/624/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/624/</guid>
+      <description>Maximum Distance in Arrays - LeetCode You are given m arrays, where each array is sorted in ascending order. You can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers a and b to be their absolute difference |a - b|. Return the maximum distance.&#xA;Example 1: Input: arrays = [[1,2,3],[4,5],[1,2,3]] Output: 4 Explanation: One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.</description>
+    </item>
+    <item>
+      <title>152. Maximum product subarray</title>
+      <link>http://localhost:1313/leetcode/152/</link>
+      <pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/152/</guid>
+      <description>Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product. It is guaranteed that the answer will fit in a 32-bit integer. A subarray is a contiguous subsequence of the array.&#xA;Example 1: Input: nums = [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.&#xA;code class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: self.res = nums[0] def cal(nums): # nums doesn&amp;#39;t have 0 if not nums: return l, r = 0, len(nums)-1 cur_res = prod(nums[l:r+1]) if cur_res &amp;gt; 0: self.</description>
+    </item>
+    <item>
+      <title>435. Non-overlapping intervals</title>
+      <link>http://localhost:1313/leetcode/435/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/435/</guid>
+      <description>Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.&#xA;Example 1: Input: intervals = [[1,2],[2,3],[3,4],[1,3]] Output: 1 Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.&#xA;Example 2: Input: intervals = [[1,2],[1,2],[1,2]] Output: 2 Explanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.</description>
+    </item>
+    <item>
+      <title>605. Can Place Flowers</title>
+      <link>http://localhost:1313/leetcode/605/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/605/</guid>
+      <description>Can Place Flowers - LeetCode&#xA;You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots. Given an integer array flowerbed containing 0&amp;rsquo;s and 1&amp;rsquo;s, where 0 means empty and 1 means not empty, and an integer n, return if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule.&#xA;Example 1: Input: flowerbed = [1,0,0,0,1], n = 1 Output: true Example 2: Input: flowerbed = [1,0,0,0,1], n = 2 Output: false code class Solution(object): def canPlaceFlowers(self, flowerbed, n): &amp;#34;&amp;#34;&amp;#34; :type flowerbed: List[int] :type n: int :rtype: bool &amp;#34;&amp;#34;&amp;#34; flowerbed = [0] + flowerbed + [0] i = 1 while i &amp;lt; len(flowerbed)-1 and n &amp;gt; 0: if flowerbed[i-1] == flowerbed[i] == flowerbed[i+1] == 0: n -= 1 i += 2 else: i += 1 return n == 0 code class Solution(object): def canPlaceFlowers(self, flowerbed, n): &amp;#34;&amp;#34;&amp;#34; :type flowerbed: List[int] :type n: int :rtype: bool &amp;#34;&amp;#34;&amp;#34; i = 0 while i &amp;lt; len(flowerbed) and n &amp;gt; 0: if (flowerbed[i] == 0 and (i == 0 or flowerbed[i-1] == 0) and (i == len(flowerbed)-1 or flowerbed[i+1] == 0)): n -= 1 i += 2 else: i += 1 return n == 0 </description>
+    </item>
+  </channel>
+</rss>

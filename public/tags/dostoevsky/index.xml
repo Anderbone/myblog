@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dostoevsky on Jiyu</title>
+    <link>http://localhost:1313/tags/dostoevsky/</link>
+    <description>Recent content in Dostoevsky on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Sep 2022 22:58:43 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dostoevsky/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Karamazov Brothers is the best novel I have ever read</title>
+      <link>http://localhost:1313/posts/book-brothers-karamazov/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/book-brothers-karamazov/</guid>
+      <description>It&amp;rsquo;s simply the best novel I have ever read. I agree with almost every place in the book where you can feel Dostoevsky’s strong point of view and laugh with joy.&#xA;I convinced my father, a few Christian and non-Christian friends to read it, and I&amp;rsquo;m pleased few people already have it in their hands. I definitely will reread it.&#xA;I read it in Chinese, and for different English versions, I compared some reviews and bought Ignat Avsey&amp;rsquo;s English translation.</description>
+    </item>
+  </channel>
+</rss>

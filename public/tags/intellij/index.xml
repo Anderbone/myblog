@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intellij on Jiyu</title>
+    <link>http://localhost:1313/tags/intellij/</link>
+    <description>Recent content in Intellij on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Dec 2021 17:11:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modern Java in Action code configuration in intellij</title>
+      <link>http://localhost:1313/dev/java-modern-java-intellij/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-modern-java-intellij/</guid>
+      <description>There&amp;rsquo;s source code in this page.&#xA;Set up the language level to 9 and then compile works for me.&#xA;This is the pom works for me.&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;manning&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;modernjavainaction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0&amp;lt;/version&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.openjdk.jmh&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmh-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.21&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.openjdk.jmh&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmh-generator-annprocess&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.21&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.reactivex.rxjava2&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;rxjava&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.typesafe.akka&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;akka-actor_2.12&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.typesafe.akka&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;akka-stream_2.12&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.</description>
+    </item>
+    <item>
+      <title>Spring &amp; Hibernate project on udemy: intellij setting up</title>
+      <link>http://localhost:1313/dev/spring-hibernate-udemy/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring-hibernate-udemy/</guid>
+      <description>Udemy course link&#xA;In section 28, we start to build a real database web app. Here we use intellij with maven to set it up.&#xA;Download maven config, link Unzip and use intellij to open the inner folder, import as Maven project. Suppose you set up the database correctly, update code in TestDbServlet.java if you use version 8+: String jdbcUrl = &amp;#34;jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;amp;serverTimezone=UTC&amp;#34;; String driver = &amp;#34;com.mysql.cj.jdbc.Driver&amp;#34;; Project settings as below:</description>
+    </item>
+  </channel>
+</rss>

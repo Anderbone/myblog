@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unionfind on Jiyu</title>
+    <link>http://localhost:1313/tags/unionfind/</link>
+    <description>Recent content in Unionfind on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Apr 2022 20:48:57 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/unionfind/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>547. Number of Provinces</title>
+      <link>http://localhost:1313/leetcode/547/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/547/</guid>
+      <description>Number of Provinces - LeetCode&#xA;There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c. A province is a group of directly or indirectly connected cities and no other cities outside of the group. You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and the jth city are directly connected, and isConnected[i][j] = 0 otherwise.</description>
+    </item>
+    <item>
+      <title>399. Evaluate Division</title>
+      <link>http://localhost:1313/leetcode/399/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/399/</guid>
+      <description>Evaluate Division - LeetCode&#xA;You are given an array of variable pairs equations and an array of real numbers values, where equations[i] = [Ai, Bi] and values[i] represent the equation Ai / Bi = values[i]. Each Ai or Bi is a string that represents a single variable. You are also given some queries, where queries[j] = [Cj, Dj] represents the jth query where you must find the answer for Cj / Dj = ?</description>
+    </item>
+    <item>
+      <title>1202. Smallest String With Swaps</title>
+      <link>http://localhost:1313/leetcode/1202/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1202/</guid>
+      <description>Smallest String With Swaps - LeetCode&#xA;You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string. You can swap the characters at any pair of indices in the given pairs any number of times. Return the lexicographically smallest string that s can be changed to after using the swaps.&#xA;Example 1: Input: s = &amp;ldquo;dcab&amp;rdquo;, pairs = [[0,3],[1,2]] Output: &amp;ldquo;bacd&amp;rdquo; Explaination: Swap s[0] and s[3], s = &amp;ldquo;bcad&amp;rdquo; Swap s[1] and s[2], s = &amp;ldquo;bacd&amp;rdquo; Example 2: Input: s = &amp;ldquo;dcab&amp;rdquo;, pairs = [[0,3],[1,2],[0,2]] Output: &amp;ldquo;abcd&amp;rdquo; Explaination: Swap s[0] and s[3], s = &amp;ldquo;bcad&amp;rdquo; Swap s[0] and s[2], s = &amp;ldquo;acbd&amp;rdquo; Swap s[1] and s[2], s = &amp;ldquo;abcd&amp;rdquo; Example 3: Input: s = &amp;ldquo;cba&amp;rdquo;, pairs = [[0,1],[1,2]] Output: &amp;ldquo;abc&amp;rdquo; Explaination: Swap s[0] and s[1], s = &amp;ldquo;bca&amp;rdquo; Swap s[1] and s[2], s = &amp;ldquo;bac&amp;rdquo; Swap s[0] and s[1], s = &amp;ldquo;abc&amp;rdquo;</description>
+    </item>
+    <item>
+      <title>1631. Path With Minimum Effort</title>
+      <link>http://localhost:1313/leetcode/1631/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1631/</guid>
+      <description>Path With Minimum Effort - LeetCode&#xA;You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.</description>
+    </item>
+    <item>
+      <title>1584. Min Cost to Connect All Points</title>
+      <link>http://localhost:1313/leetcode/1584/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1584/</guid>
+      <description>Min Cost to Connect All Points - LeetCode&#xA;You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val. Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.</description>
+    </item>
+    <item>
+      <title>1168. Optimize Water Distribution in a Village</title>
+      <link>http://localhost:1313/leetcode/1168/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1168/</guid>
+      <description>Optimize Water Distribution in a Village - LeetCode There are n houses in a village. We want to supply water for all the houses by building wells and laying pipes. For each house i, we can either build a well inside it directly with cost wells[i - 1] (note the -1 due to 0-indexing), or pipe in water from another well to it. The costs to lay pipes between houses are given by the array pipes, where each pipes[j] = [house1j, house2j, costj] represents the cost to connect house1j and house2j together using a pipe.</description>
+    </item>
+    <item>
+      <title>1101. The Earliest Moment When Everyone Become Friends</title>
+      <link>http://localhost:1313/leetcode/1101/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1101/</guid>
+      <description>The Earliest Moment When Everyone Become Friends - LeetCode There are n people in a social group labeled from 0 to n - 1. You are given an array logs where logs[i] = [timestampi, xi, yi] indicates that xi and yi will be friends at the time timestampi. Friendship is symmetric. That means if a is friends with b, then b is friends with a. Also, person a is acquainted with a person b if a is friends with b, or a is a friend of someone acquainted with b.</description>
+    </item>
+    <item>
+      <title>323. Number of Connected Components in an Undirected Graph</title>
+      <link>http://localhost:1313/leetcode/323/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/323/</guid>
+      <description>Number of Connected Components in an Undirected Graph - LeetCode You have a graph of n nodes. You are given an integer n and an array edges where edges[i] = [ai, bi] indicates that there is an edge between ai and bi in the graph. Return the number of connected components in the graph.&#xA;Example 1: Input: n = 5, edges = [[0,1],[1,2],[3,4]] Output: 2&#xA;code class Solution: def countComponents(self, n: int, edges: List[List[int]]) -&amp;gt; int: root = [i for i in range(n)] rank = [1] * n self.</description>
+    </item>
+    <item>
+      <title>261. Graph Valid Tree</title>
+      <link>http://localhost:1313/leetcode/261/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/261/</guid>
+      <description>Graph Valid Tree - LeetCode You have a graph of n nodes labeled from 0 to n - 1. You are given an integer n and a list of edges where edges[i] = [ai, bi] indicates that there is an undirected edge between nodes ai and bi in the graph. Return true if the edges of the given graph make up a valid tree, and false otherwise.&#xA;Example 1:&#xA;Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]] Output: true Example 2:</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dp on Jiyu</title>
+    <link>http://localhost:1313/tags/dp/</link>
+    <description>Recent content in Dp on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Nov 2023 15:41:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>55. Jump game</title>
+      <link>http://localhost:1313/leetcode/55/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/55/</guid>
+      <description>https://leetcode.com/problems/jump-game/&#xA;Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Determine if you are able to reach the last index. Example 1: Input: [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index. Example 2: Input: [3,2,1,0,4] Output: false Explanation: You will always arrive at index 3 no matter what.</description>
+    </item>
+    <item>
+      <title>121. Best time to buy and sell stock</title>
+      <link>http://localhost:1313/leetcode/121/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/121/</guid>
+      <description>https://leetcode.com/problems/best-time-to-buy-and-sell-stock/&#xA;You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.&#xA;Example 1: Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</description>
+    </item>
+    <item>
+      <title>139. word break</title>
+      <link>http://localhost:1313/leetcode/139/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/139/</guid>
+      <description>Word Break - LeetCode&#xA;Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words. Note that the same word in the dictionary may be reused multiple times in the segmentation.&#xA;Example 1: Input: s = &amp;ldquo;leetcode&amp;rdquo;, wordDict = [&amp;ldquo;leet&amp;rdquo;,&amp;ldquo;code&amp;rdquo;] Output: true Explanation: Return true because &amp;ldquo;leetcode&amp;rdquo; can be segmented as &amp;ldquo;leet code&amp;rdquo;.&#xA;code bfs with string class Solution: def wordBreak(self, s: str, wordDict: List[str]) -&amp;gt; bool: q = deque(wordDict) seen = set(wordDict) while q: cur = q.</description>
+    </item>
+    <item>
+      <title>823. Binary Trees With Factors</title>
+      <link>http://localhost:1313/leetcode/823/</link>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/823/</guid>
+      <description>https://leetcode.com/problems/binary-trees-with-factors/&#xA;Given an array of unique integers, arr, where each integer arr[i] is strictly greater than 1. We make a binary tree using these integers, and each number may be used for any number of times. Each non-leaf node&amp;rsquo;s value should be equal to the product of the values of its children. Return the number of binary trees we can make. The answer may be too large so return the answer modulo 109 + 7.</description>
+    </item>
+    <item>
+      <title>1220. Count Vowels Permutation</title>
+      <link>http://localhost:1313/leetcode/1220/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1220/</guid>
+      <description>https://leetcode.com/problems/count-vowels-permutation/&#xA;Given an integer n, your task is to count how many strings of length n can be formed under the following rules:&#xA;Each character is a lower case vowel (&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;) Each vowel &#39;a&#39; may only be followed by an &#39;e&#39;. Each vowel &#39;e&#39; may only be followed by an &#39;a&#39; or an &#39;i&#39;. Each vowel &#39;i&#39; **may not** be followed by another &#39;i&#39;. Each vowel &#39;o&#39; may only be followed by an &#39;i&#39; or a &#39;u&#39;.</description>
+    </item>
+    <item>
+      <title>1696. Jump Game VI</title>
+      <link>http://localhost:1313/leetcode/1696/</link>
+      <pubDate>Sat, 09 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1696/</guid>
+      <description>https://leetcode.com/problems/jump-game-vi/&#xA;You are given a 0-indexed integer array nums and an integer k. You are initially standing at index 0. In one move, you can jump at most k steps forward without going outside the boundaries of the array. That is, you can jump from index i to any index in the range [i + 1, min(n - 1, i + k)] inclusive. You want to reach the last index of the array (index n - 1).</description>
+    </item>
+    <item>
+      <title>97. Interleaving String</title>
+      <link>http://localhost:1313/leetcode/97/</link>
+      <pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/97/</guid>
+      <description>https://leetcode.com/problems/interleaving-string/&#xA;Given strings s1, s2, and s3, find whether s3 is formed by an interleaving of s1 and s2. An interleaving of two strings s and t is a configuration where they are divided into non-empty substrings such that:&#xA;s = s1 + s2 + ... + sn t = t1 + t2 + ... + tm |n - m| &amp;lt;= 1 The **interleaving** is s1 + t1 + s2 + t2 + s3 + t3 + .</description>
+    </item>
+    <item>
+      <title>583. Delete Operation for Two Strings</title>
+      <link>http://localhost:1313/leetcode/583/</link>
+      <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/583/</guid>
+      <description>https://leetcode.com/problems/delete-operation-for-two-strings/&#xA;Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same. In one step, you can delete exactly one character in either string.&#xA;Example 1: Input: word1 = &amp;ldquo;sea&amp;rdquo;, word2 = &amp;ldquo;eat&amp;rdquo; Output: 2 Explanation: You need one step to make &amp;ldquo;sea&amp;rdquo; to &amp;ldquo;ea&amp;rdquo; and another step to make &amp;ldquo;eat&amp;rdquo; to &amp;ldquo;ea&amp;rdquo;. Example 2: Input: word1 = &amp;ldquo;leetcode&amp;rdquo;, word2 = &amp;ldquo;etco&amp;rdquo; Output: 4</description>
+    </item>
+    <item>
+      <title>120. Triangle</title>
+      <link>http://localhost:1313/leetcode/120/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/120/</guid>
+      <description>https://leetcode.com/problems/triangle/&#xA;Given a triangle array, return the minimum path sum from top to bottom. For each step, you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.&#xA;Example 1: Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]] Output: 11 Explanation: The triangle looks like: 2 3 4 6 5 7 4 1 8 3 The minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above).</description>
+    </item>
+    <item>
+      <title>474. Ones and Zeroes</title>
+      <link>http://localhost:1313/leetcode/474/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/474/</guid>
+      <description>https://leetcode.com/problems/ones-and-zeroes/&#xA;You are given an array of binary strings strs and two integers m and n. Return the size of the largest subset of strs such that there are at most m 0&amp;rsquo;s and n 1&amp;rsquo;s in the subset. A set x is a subset of a set y if all elements of x are also elements of y.&#xA;Example 1: Input: strs = [&amp;ldquo;10&amp;rdquo;,&amp;ldquo;0001&amp;rdquo;,&amp;ldquo;111001&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;], m = 5, n = 3 Output: 4 Explanation: The largest subset with at most 5 0&amp;rsquo;s and 3 1&amp;rsquo;s is {&amp;ldquo;10&amp;rdquo;, &amp;ldquo;0001&amp;rdquo;, &amp;ldquo;1&amp;rdquo;, &amp;ldquo;0&amp;rdquo;}, so the answer is 4.</description>
+    </item>
+    <item>
+      <title>63. Unique Paths II</title>
+      <link>http://localhost:1313/leetcode/63/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/63/</guid>
+      <description>https://leetcode.com/problems/unique-paths-ii/&#xA;You are given an m x n integer array grid. There is a robot initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m-1][n-1]). The robot can only move either down or right at any point in time. An obstacle and space are marked as 1 or 0 respectively in grid. A path that the robot takes cannot include any square that is an obstacle.</description>
+    </item>
+    <item>
+      <title>799. Champagne Tower</title>
+      <link>http://localhost:1313/leetcode/799/</link>
+      <pubDate>Fri, 04 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/799/</guid>
+      <description>Champagne Tower - LeetCode&#xA;We stack glasses in a pyramid, where the first row has 1 glass, the second row has 2 glasses, and so on until the 100th row. Each glass holds one cup of champagne. Then, some champagne is poured into the first glass at the top. When the topmost glass is full, any excess liquid poured will fall equally to the glass immediately to the left and right of it.</description>
+    </item>
+    <item>
+      <title>338. Counting Bits</title>
+      <link>http://localhost:1313/leetcode/338/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/338/</guid>
+      <description>Counting Bits - LeetCode&#xA;Given an integer n, return __an array ans of length n + 1 such that for each i (0 &amp;lt;= i &amp;lt;= n), ans[i] is the number of 1&amp;rsquo;s in the binary representation of __i.&#xA;Example 1: Input: n = 2 Output: [0,1,1] Explanation: 0 &amp;ndash;&amp;gt; 0 1 &amp;ndash;&amp;gt; 1 2 &amp;ndash;&amp;gt; 10 Example 2: Input: n = 5 Output: [0,1,1,2,1,2] Explanation: 0 &amp;ndash;&amp;gt; 0 1 &amp;ndash;&amp;gt; 1 2 &amp;ndash;&amp;gt; 10 3 &amp;ndash;&amp;gt; 11 4 &amp;ndash;&amp;gt; 100 5 &amp;ndash;&amp;gt; 101</description>
+    </item>
+    <item>
+      <title>39. Combination sum</title>
+      <link>http://localhost:1313/leetcode/39/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/39/</guid>
+      <description>Combination Sum - LeetCode&#xA;Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order. The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different. It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.</description>
+    </item>
+    <item>
+      <title>1143. Longest Common Subsequence</title>
+      <link>http://localhost:1313/leetcode/1143/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1143/</guid>
+      <description>Longest Common Subsequence - LeetCode&#xA;Given two strings text1 and text2, return __the length of their longest common subsequence. __If there is no common subsequence, return 0. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.&#xA;For example, &amp;quot;ace&amp;quot; is a subsequence of &amp;quot;abcde&amp;quot;.A common subsequence of two strings is a subsequence that is common to both strings.</description>
+    </item>
+    <item>
+      <title>714. Best Time to Buy and Sell Stock with Transaction Fee</title>
+      <link>http://localhost:1313/leetcode/714/</link>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/714/</guid>
+      <description>Best Time to Buy and Sell Stock with Transaction Fee - LeetCode&#xA;You are given an array prices where prices[i] is the price of a given stock on the ith day, and an integer fee representing a transaction fee. Find the maximum profit you can achieve. You may complete as many transactions as you like, but you need to pay the transaction fee for each transaction. Note: You may not engage in multiple transactions simultaneously (i.</description>
+    </item>
+    <item>
+      <title>650. 2 Keys Keyboard </title>
+      <link>http://localhost:1313/leetcode/650/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/650/</guid>
+      <description>2 Keys Keyboard - LeetCode&#xA;There is only one character &amp;lsquo;A&amp;rsquo; on the screen of a notepad. You can perform two operations on this notepad for each step:&#xA;Copy All: You can copy all the characters present on the screen (a partial copy is not allowed). Paste: You can paste the characters which are copied last time.Given an integer n, return __the minimum number of operations to get the character__ &#39;A&#39; __exactly__ n __times on the screen__.</description>
+    </item>
+    <item>
+      <title>91. Decode Ways</title>
+      <link>http://localhost:1313/leetcode/91/</link>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/91/</guid>
+      <description>Decode Ways - LeetCode&#xA;A message containing letters from A-Z can be encoded into numbers using the following mapping: &amp;lsquo;A&amp;rsquo; -&amp;gt; &amp;ldquo;1&amp;rdquo; &amp;lsquo;B&amp;rsquo; -&amp;gt; &amp;ldquo;2&amp;rdquo; &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; &amp;ldquo;26&amp;rdquo; To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, &amp;ldquo;11106&amp;rdquo; can be mapped into:&#xA;&amp;quot;AAJF&amp;quot; with the grouping (1 1 10 6) &amp;quot;KJF&amp;quot; with the grouping (11 10 6)Note that the grouping (1 11 06) is invalid because &amp;quot;06&amp;quot; cannot be mapped into &#39;F&#39; since &amp;quot;6&amp;quot; is different from &amp;quot;06&amp;quot;.</description>
+    </item>
+    <item>
+      <title>416. Partition Equal Subset Sum</title>
+      <link>http://localhost:1313/leetcode/416/</link>
+      <pubDate>Mon, 07 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/416/</guid>
+      <description>Partition Equal Subset Sum - LeetCode&#xA;Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.&#xA;Example 1: Input: nums = [1,5,11,5] Output: true Explanation: The array can be partitioned as [1, 5, 5] and [11].&#xA;Example 2: Input: nums = [1,2,3,5] Output: false Explanation: The array cannot be partitioned into equal sum subsets.</description>
+    </item>
+    <item>
+      <title>322.  Coin Change</title>
+      <link>http://localhost:1313/leetcode/322/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/322/</guid>
+      <description>Coin Change - LeetCode&#xA;You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.</description>
+    </item>
+    <item>
+      <title>213. House robber II</title>
+      <link>http://localhost:1313/leetcode/213/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/213/</guid>
+      <description>House Robber II - LeetCode&#xA;You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.</description>
+    </item>
+    <item>
+      <title>1510. Stone Game IV</title>
+      <link>http://localhost:1313/leetcode/1510/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1510/</guid>
+      <description>Stone Game IV - LeetCode&#xA;Alice and Bob take turns playing a game, with Alice starting first. Initially, there are n stones in a pile. On each player&amp;rsquo;s turn, that player makes a move consisting of removing any non-zero square number of stones in the pile. Also, if a player cannot make a move, he/she loses the game. Given a positive integer n, return true if and only if Alice wins the game otherwise return false, assuming both players play optimally.</description>
+    </item>
+    <item>
+      <title>740. Delete and Earn </title>
+      <link>http://localhost:1313/leetcode/740/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/740/</guid>
+      <description>Delete and Earn - LeetCode&#xA;You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:&#xA;Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1.Return the maximum number of points you can earn by applying the above operation some number of times.</description>
+    </item>
+    <item>
+      <title>62. Unique Paths</title>
+      <link>http://localhost:1313/leetcode/62/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/62/</guid>
+      <description>Unique Paths - LeetCode&#xA;There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time. Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.</description>
+    </item>
+    <item>
+      <title>1463. Cherry Pickup II</title>
+      <link>http://localhost:1313/leetcode/1463/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1463/</guid>
+      <description>Cherry Pickup II - LeetCode&#xA;You are given a rows x cols matrix grid representing a field of cherries where grid[i][j] represents the number of cherries that you can collect from the (i, j) cell. You have two robots that can collect cherries for you:&#xA;Robot #1 is located at the top-left corner (0, 0), and Robot #2 is located at the top-right corner (0, cols - 1).Return the maximum number of cherries collection using both robots by following the rules below:</description>
+    </item>
+    <item>
+      <title>1770. Maximum Score from Performing Multiplication Operations</title>
+      <link>http://localhost:1313/leetcode/1770/</link>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1770/</guid>
+      <description>Maximum Score from Performing Multiplication Operations - LeetCode&#xA;You are given two integer arrays nums and multipliers of size n and m respectively, where n &amp;gt;= m. The arrays are 1-indexed. You begin with a score of 0. You want to perform exactly m operations. On the ith operation (1-indexed), you will:&#xA;Choose one integer x from either the start or the end of the array nums. Add multipliers[i] * x to your score.</description>
+    </item>
+    <item>
+      <title>1137. N-th Tribonacci Number </title>
+      <link>http://localhost:1313/leetcode/1137/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1137/</guid>
+      <description>N-th Tribonacci Number - LeetCode&#xA;The Tribonacci sequence Tn is defined as follows: T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &amp;gt;= 0. Given n, return the value of Tn.&#xA;Example 1: Input: n = 4 Output: 4 Explanation: T_3 = 0 + 1 + 1 = 2 T_4 = 1 + 1 + 2 = 4 Example 2: Input: n = 25 Output: 1389537</description>
+    </item>
+    <item>
+      <title>746. Min Cost Climbing Stairs </title>
+      <link>http://localhost:1313/leetcode/746/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/746/</guid>
+      <description>Min Cost Climbing Stairs - LeetCode&#xA;You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.&#xA;Example 1: Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1.</description>
+    </item>
+    <item>
+      <title>300. Longest Increasing Subsequence</title>
+      <link>http://localhost:1313/leetcode/300/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/300/</guid>
+      <description>Given an unsorted array of integers, find the length of longest increasing subsequence. A subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].&#xA;Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.&#xA;code dp class Solution: def lengthOfLIS(self, nums: List[int]) -&amp;gt; int: dp = [1] * len(nums) for i in range(1, len(nums)): for j in range(i): if nums[i] &amp;gt; nums[j]: dp[i] = max(dp[i], dp[j] + 1) return max(dp) code class Solution: def lengthOfLIS(self, nums: List[int]) -&amp;gt; int: sq = [nums[0]] for i in range(1, len(nums)): if nums[i] &amp;gt; sq[-1]: sq.</description>
+    </item>
+    <item>
+      <title>568. Maximum Vacation Days</title>
+      <link>http://localhost:1313/leetcode/568/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/568/</guid>
+      <description>Maximum Vacation Days - LeetCode&#xA;LeetCode wants to give one of its best employees the option to travel among n cities to collect algorithm problems. But all work and no play makes Jack a dull boy, you could take vacations in some particular cities and weeks. Your job is to schedule the traveling to maximize the number of vacation days you could take, but there are certain rules and restrictions you need to follow.</description>
+    </item>
+    <item>
+      <title>312. Burst Balloons</title>
+      <link>http://localhost:1313/leetcode/312/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/312/</guid>
+      <description>Burst Balloons - LeetCode&#xA;You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons. If you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.</description>
+    </item>
+    <item>
+      <title>221. Maximal Square</title>
+      <link>http://localhost:1313/leetcode/221/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/221/</guid>
+      <description>Maximal Square - LeetCode Given an m x n binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest square containing only 1&amp;rsquo;s and return its area.&#xA;Example 1: Input: matrix = [[&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;,&amp;ldquo;0&amp;rdquo;],[&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;1&amp;rdquo;],[&amp;ldquo;1&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;1&amp;rdquo;],[&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;,&amp;ldquo;0&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;]] Output: 4 Example 2:&#xA;Input: matrix = [[&amp;ldquo;0&amp;rdquo;,&amp;ldquo;1&amp;rdquo;],[&amp;ldquo;1&amp;rdquo;,&amp;ldquo;0&amp;rdquo;]] Output: 1 Example 3: Input: matrix = [[&amp;ldquo;0&amp;rdquo;]] Output: 0&#xA;Constraints:&#xA;m == matrix.length n == matrix[i].length 1 &amp;lt;= m, n &amp;lt;= 300 matrix[i][j] is &amp;lsquo;0&amp;rsquo; or &amp;lsquo;1&amp;rsquo;.&#xA;code public class Solution { public int maximalSquare(char[][] matrix) { int rows = matrix.</description>
+    </item>
+    <item>
+      <title>790. Domino and Tromino Tiling</title>
+      <link>http://localhost:1313/leetcode/790/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/790/</guid>
+      <description>You have two types of tiles: a 2 x 1 domino shape and a tromino shape. You may rotate these shapes.&#xA;Given an integer n, return the number of ways to tile an 2 x n board. Since the answer may be very large, return it modulo 109 + 7. In a tiling, every square must be covered by a tile. Two tilings are different if and only if there are two 4-directionally adjacent cells on the board such that exactly one of the tilings has both squares occupied by a tile.</description>
+    </item>
+    <item>
+      <title>140. word break II</title>
+      <link>http://localhost:1313/leetcode/140/</link>
+      <pubDate>Sat, 23 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/140/</guid>
+      <description>Given a string s and a dictionary of strings wordDict, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences in any order.&#xA;Note that the same word in the dictionary may be reused multiple times in the segmentation.&#xA;Example 1: Input: s = &amp;ldquo;catsanddog&amp;rdquo;, wordDict = [&amp;ldquo;cat&amp;rdquo;,&amp;ldquo;cats&amp;rdquo;,&amp;ldquo;and&amp;rdquo;,&amp;ldquo;sand&amp;rdquo;,&amp;ldquo;dog&amp;rdquo;] Output: [&amp;ldquo;cats and dog&amp;rdquo;,&amp;ldquo;cat sand dog&amp;rdquo;]&#xA;code dp tabluation class Solution: def wordBreak(self, s: str, wordDict: List[str]) -&amp;gt; List[str]: ansList = [[[None]]] * (len(s) + 1) # [[[None]], [[None]], [[None]].</description>
+    </item>
+    <item>
+      <title>64. Minimum path sum</title>
+      <link>http://localhost:1313/leetcode/64/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/64/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path. Note: You can only move either down or right at any point in time.&#xA;Example 1: Input: grid = [[1,3,1],[1,5,1],[4,2,1]] Output: 7 Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.&#xA;code better dp class Solution: def minPathSum(self, grid): m = len(grid) n = len(grid[0]) for i in range(1, n): grid[0][i] += grid[0][i-1] for i in range(1, m): grid[i][0] += grid[i-1][0] for i in range(1, m): for j in range(1, n): grid[i][j] += min(grid[i-1][j], grid[i][j-1]) return grid[-1][-1] code naive dp class Solution: def minPathSum(self, grid: List[List[int]]) -&amp;gt; int: m, n = len(grid), len(grid[0]) path = {(0,0):grid[0][0]} for x in range(m): for y in range(n): if x == 0 and y == 0: continue if x == 0: path[(x, y)] = path[(x, y-1)] + grid[x][y] elif y == 0: path[(x, y)] = path[(x-1, y)] + grid[x][y] else: path[(x, y)] = min(path[(x, y-1)], path[(x-1, y)]) + grid[x][y] return path[(m-1, n-1)] </description>
+    </item>
+    <item>
+      <title>303. Range sum query immutable</title>
+      <link>http://localhost:1313/leetcode/303/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/303/</guid>
+      <description>Given an integer array nums, handle multiple queries of the following type:&#xA;Calculate the sum of the elements of nums between indices left and right inclusive where left &amp;lt;= right.Implement the NumArray class:&#xA;NumArray(int[] nums) Initializes the object with the integer array nums. int sumRange(int left, int right) Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + &amp;hellip; + nums[right]).</description>
+    </item>
+    <item>
+      <title>leetcode questions: dynamic programming</title>
+      <link>http://localhost:1313/dev/lee-dp/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-dp/</guid>
+      <description>Intro Good video: Dynamic Programming - Learn to Solve Algorithmic Problems &amp;amp; Coding Challenges - YouTube&#xA;DP is a style of coding where you store the results of your algorithm in a data structure while it runs.&#xA;dynamic programming - What is the difference between bottom-up and top-down? - Stack Overflow&#xA;code function dp(dp_state, memo_dict) { // check if we have seen this dp_state if dp_state in memo_dict return memo_dict[dp_state] // base case (a case that we know the answer for already) such as dp_state is empty if dp_state is the base cases return things like 0 or null calculate dp(dp_state) from dp(other_state) save dp_state and the result into memo_dict } function answerToProblem(input) { return dp(start_state, empty_memo_dict) } The same subproblem may reoccur compared to divide-and-conquer, a key to solve is to break the problem into subproblems such that</description>
+    </item>
+    <item>
+      <title>279. Perfect squares</title>
+      <link>http://localhost:1313/leetcode/279/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/279/</guid>
+      <description>Given an integer n, return the least number of perfect square numbers that sum to n. A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.&#xA;Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4.</description>
+    </item>
+    <item>
+      <title>198. House robber</title>
+      <link>http://localhost:1313/leetcode/198/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/198/</guid>
+      <description>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</description>
+    </item>
+    <item>
+      <title>70. Climbing stairs</title>
+      <link>http://localhost:1313/leetcode/70/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/70/</guid>
+      <description>https://leetcode.com/problems/climbing-stairs/&#xA;You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Input: 2 Output: 2 Explanation: There are two ways to climb to the top.&#xA;1 step + 1 step 2 steps Example 2: Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
+    </item>
+    <item>
+      <title>53. Maximum subarray</title>
+      <link>http://localhost:1313/leetcode/53/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/53/</guid>
+      <description>https://leetcode.com/problems/maximum-subarray/&#xA;Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. Example: Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6 code class Solution { public int maxSubArray(int[] nums) { // Initialize our variables using the first element. int currentSubarray = nums[0]; int maxSubarray = nums[0]; // Start with the 2nd element since we already used the first one.</description>
+    </item>
+  </channel>
+</rss>

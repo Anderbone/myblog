@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backtracking on Jiyu</title>
+    <link>http://localhost:1313/tags/backtracking/</link>
+    <description>Recent content in Backtracking on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Jul 2022 15:57:49 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>473. Matchsticks to Square</title>
+      <link>http://localhost:1313/leetcode/473/</link>
+      <pubDate>Tue, 12 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/473/</guid>
+      <description>https://leetcode.com/problems/matchsticks-to-square/&#xA;You are given an integer array matchsticks where matchsticks[i] is the length of the ith matchstick. You want to use all the matchsticks to make one square. You should not break any stick, but you can link them up, and each matchstick must be used exactly one time. Return true if you can make this square and false otherwise.&#xA;Example 1: Input: matchsticks = [1,1,2,2,2] Output: true Explanation: You can form a square with length 2, one side of the square came two sticks with length 1.</description>
+    </item>
+    <item>
+      <title>1087. Brace Expansion</title>
+      <link>http://localhost:1313/leetcode/1087/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1087/</guid>
+      <description>Brace Expansion - LeetCode&#xA;You are given a string s representing a list of words. Each letter in the word has one or more options.&#xA;If there is one option, the letter is represented as is. If there is more than one option, then curly braces delimit the options. For example, &amp;quot;{a,b,c}&amp;quot; represents options [&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;].For example, if s = &amp;quot;a{b,c}&amp;quot;, the first character is always &#39;a&#39;, but the second character can be &#39;b&#39; or &#39;c&#39;.</description>
+    </item>
+    <item>
+      <title>247. Strobogrammatic Number II</title>
+      <link>http://localhost:1313/leetcode/247/</link>
+      <pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/247/</guid>
+      <description>https://leetcode.com/problems/strobogrammatic-number-ii/&#xA;Given an integer n, return all the strobogrammatic numbers that are of length n. You may return the answer in any order. A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).&#xA;Example 1: Input: n = 2 Output: [&amp;ldquo;11&amp;rdquo;,&amp;ldquo;69&amp;rdquo;,&amp;ldquo;88&amp;rdquo;,&amp;ldquo;96&amp;rdquo;] Example 2: Input: n = 1 Output: [&amp;ldquo;0&amp;rdquo;,&amp;ldquo;1&amp;rdquo;,&amp;ldquo;8&amp;rdquo;]&#xA;Constraints:&#xA;1 &amp;lt;= n &amp;lt;= 14&#xA;code class Solution: def findStrobogrammatic(self, n: int) -&amp;gt; List[str]: if n == 1: return [&amp;#39;0&amp;#39;,&amp;#39;1&amp;#39;,&amp;#39;8&amp;#39;] res = [] dic = {&amp;#39;6&amp;#39;:&amp;#39;9&amp;#39;,&amp;#39;9&amp;#39;:&amp;#39;6&amp;#39;,&amp;#39;0&amp;#39;:&amp;#39;0&amp;#39;,&amp;#39;1&amp;#39;:&amp;#39;1&amp;#39;,&amp;#39;8&amp;#39;:&amp;#39;8&amp;#39;} def backtracking(left, path): if left &amp;lt; 0: return if left == 0: res.</description>
+    </item>
+    <item>
+      <title>797. All Paths From Source to Target</title>
+      <link>http://localhost:1313/leetcode/797/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/797/</guid>
+      <description>All Paths From Source to Target - LeetCode&#xA;Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n - 1, find all possible paths from node 0 to node n - 1 and return them in any order. The graph is given as follows: graph[i] is a list of all nodes you can visit from node i (i.e., there is a directed edge from node i to node graph[i][j]).</description>
+    </item>
+    <item>
+      <title>51. N-Queens</title>
+      <link>http://localhost:1313/leetcode/51/</link>
+      <pubDate>Fri, 21 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/51/</guid>
+      <description>N-Queens - LeetCode&#xA;The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other. Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order. Each solution contains a distinct board configuration of the n-queens&amp;rsquo; placement, where &amp;lsquo;Q&amp;rsquo; and &amp;lsquo;.&amp;rsquo; both indicate a queen and an empty space, respectively.</description>
+    </item>
+    <item>
+      <title>78. subsets</title>
+      <link>http://localhost:1313/leetcode/78-subset/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/78-subset/</guid>
+      <description>Subsets - LeetCode&#xA;Given a set of distinct integers, nums, return all possible subsets (the power set). Note: The solution set must not contain duplicate subsets. Example: Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] code1 class Solution: def subsets(self, nums): res = [[]] for num in nums: last = copy.deepcopy(res) for sublist in res: sublist.append(num) res += last return res code2 shorter version of code1 class Solution: def subsets(self, nums): res = [[]] for num in nums: res += [item+[num] for item in res] return res code backtracking class Solution: def subsets(self, nums): res = [] def dfs(nums, path): res.</description>
+    </item>
+    <item>
+      <title> 17. Letter Combinations of a Phone Number </title>
+      <link>http://localhost:1313/leetcode/17-letter-combinations-of-a-phone/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/17-letter-combinations-of-a-phone/</guid>
+      <description>Letter Combinations of a Phone Number - LeetCode&#xA;Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order. A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters. Example 1: Input: digits = &amp;ldquo;23&amp;rdquo; Output: [&amp;ldquo;ad&amp;rdquo;,&amp;ldquo;ae&amp;rdquo;,&amp;ldquo;af&amp;rdquo;,&amp;ldquo;bd&amp;rdquo;,&amp;ldquo;be&amp;rdquo;,&amp;ldquo;bf&amp;rdquo;,&amp;ldquo;cd&amp;rdquo;,&amp;ldquo;ce&amp;rdquo;,&amp;ldquo;cf&amp;rdquo;]&#xA;Example 2: Input: digits = &amp;quot;&amp;quot; Output: []</description>
+    </item>
+    <item>
+      <title>22. Generate Parentheses</title>
+      <link>http://localhost:1313/leetcode/22/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/22/</guid>
+      <description>Generate Parentheses - LeetCode&#xA;Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. For example, given n = 3, a solution set is: [ &amp;ldquo;((()))&amp;rdquo;, &amp;ldquo;(()())&amp;rdquo;, &amp;ldquo;(())()&amp;rdquo;, &amp;ldquo;()(())&amp;rdquo;, &amp;ldquo;()()()&amp;rdquo; ] code class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: res = [] def dfs(start, end, path): if len(path) == 2 * n: res.append(&amp;#34;&amp;#34;.join(path)) return if start &amp;lt; n: dfs(start + 1, end, path + [&amp;#34;(&amp;#34;]) if end &amp;lt; start: dfs(start, end + 1, path + [&amp;#34;)&amp;#34;]) dfs(0, 0, []) return res </description>
+    </item>
+    <item>
+      <title>46 Permutations</title>
+      <link>http://localhost:1313/leetcode/46/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/46/</guid>
+      <description>Permutations - LeetCode&#xA;Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.&#xA;Input: [1,2,3] Output: [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ] c0 class Solution: def permute(self, nums: List[int]) -&amp;gt; List[List[int]]: return list(itertools.permutations(nums, len(nums))) code class Solution: def permute(self, nums: List[int]) -&amp;gt; List[List[int]]: res = [] def backTracking(nums, path, res): if not nums: res.append(path) for i in range(len(nums)): backTracking(nums[:i] + nums[i+1:], path + [nums[i]], res) backTracking(nums, [], res) return res dfs(nums = [1, 2, 3] , path = [] , result = [] ) |____ dfs(nums = [2, 3] , path = [1] , result = [] ) | |___dfs(nums = [3] , path = [1, 2] , result = [] ) | | |___dfs(nums = [] , path = [1, 2, 3] , result = [[1, 2, 3]] ) # added a new permutation to the result | |__dfs(nums = [2] , path = [1, 3] , result = [[1, 2, 3]] ) | |dfs(nums = [] , path = [1, 3, 2] , result = [[1, 2, 3], [1, 3, 2]] ) # added a new permutation to the result | dfs(nums = [1, 3] , path = [2] , result = [[1, 2, 3], [1, 3, 2]] ) | |___dfs(nums = [3] , path = [2, 1] , result = [[1, 2, 3], [1, 3, 2]] ) | | |___dfs(nums = [] , path = [2, 1, 3] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3]] ) # added a new permutation to the result | |__dfs(nums = [1] , path = [2, 3] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3]] ) | |dfs(nums = [] , path = [2, 3, 1] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1]] ) # added a new permutation to the result | dfs(nums = [1, 2] , path = [3] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1]] ) |___dfs(nums = [2] , path = [3, 1] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1]] ) | |___dfs(nums = [] , path = [3, 1, 2] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2]] ) # added a new permutation to the result |___dfs(nums = [1] , path = [3, 2] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2]] ) |___dfs(nums = [] , path = [3, 2, 1] , result = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]] ) # added a new permutation to the result</description>
+    </item>
+    <item>
+      <title>79. Word Search</title>
+      <link>http://localhost:1313/leetcode/79/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/79/</guid>
+      <description>Word Search - LeetCode&#xA;Given an m x n grid of characters board and a string word, return true if word exists in the grid. The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.&#xA;Example 1: Input: board = [[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;B&amp;rdquo;,&amp;ldquo;C&amp;rdquo;,&amp;ldquo;E&amp;rdquo;],[&amp;ldquo;S&amp;rdquo;,&amp;ldquo;F&amp;rdquo;,&amp;ldquo;C&amp;rdquo;,&amp;ldquo;S&amp;rdquo;],[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;D&amp;rdquo;,&amp;ldquo;E&amp;rdquo;,&amp;ldquo;E&amp;rdquo;]], word = &amp;ldquo;ABCCED&amp;rdquo; Output: true&#xA;Example 2: Input: board = [[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;B&amp;rdquo;,&amp;ldquo;C&amp;rdquo;,&amp;ldquo;E&amp;rdquo;],[&amp;ldquo;S&amp;rdquo;,&amp;ldquo;F&amp;rdquo;,&amp;ldquo;C&amp;rdquo;,&amp;ldquo;S&amp;rdquo;],[&amp;ldquo;A&amp;rdquo;,&amp;ldquo;D&amp;rdquo;,&amp;ldquo;E&amp;rdquo;,&amp;ldquo;E&amp;rdquo;]], word = &amp;ldquo;SEE&amp;rdquo; Output: true</description>
+    </item>
+    <item>
+      <title>131. Palindrome partitioning</title>
+      <link>http://localhost:1313/leetcode/131/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/131/</guid>
+      <description>Palindrome Partitioning - LeetCode&#xA;Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s. A palindrome string is a string that reads the same backward as forward.&#xA;Example 1: Input: s = &amp;ldquo;aab&amp;rdquo; Output: [[&amp;ldquo;a&amp;rdquo;,&amp;ldquo;a&amp;rdquo;,&amp;ldquo;b&amp;rdquo;],[&amp;ldquo;aa&amp;rdquo;,&amp;ldquo;b&amp;rdquo;]]&#xA;code pass string class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: res = [] def isPalindrome(inp): return inp == inp[::-1] def dfs(s, path): if not s: res.</description>
+    </item>
+    <item>
+      <title>332. Reconstruct Itinerary</title>
+      <link>http://localhost:1313/leetcode/332/</link>
+      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/332/</guid>
+      <description>Reconstruct Itinerary - LeetCode&#xA;You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it. All of the tickets belong to a man who departs from &amp;ldquo;JFK&amp;rdquo;, thus, the itinerary must begin with &amp;ldquo;JFK&amp;rdquo;. If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.</description>
+    </item>
+    <item>
+      <title>90. Subsets II</title>
+      <link>http://localhost:1313/leetcode/90/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/90/</guid>
+      <description>Subsets II - LeetCode&#xA;Given an integer array nums that may contain duplicates, return all possible subsets (the power set). The solution set must not contain duplicate subsets. Return the solution in any order.&#xA;Example 1: Input: nums = [1,2,2] Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]&#xA;code class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: res = [] def backtracking(nums, path, res): path = sorted(path) if path not in res: res.append(path) for i in range(len(nums)): backtracking(nums[i+1:], path + [nums[i]], res) backtracking(nums, [], res) return res code class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: res = [[]] nums.</description>
+    </item>
+    <item>
+      <title>784. Letter case permutation</title>
+      <link>http://localhost:1313/leetcode/784/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/784/</guid>
+      <description>Letter Case Permutation - LeetCode&#xA;Given a string s, we can transform every letter individually to be lowercase or uppercase to create another string. Return a list of all possible strings we could create. You can return the output in any order.&#xA;Example 1: Input: s = &amp;ldquo;a1b2&amp;rdquo; Output: [&amp;ldquo;a1b2&amp;rdquo;,&amp;ldquo;a1B2&amp;rdquo;,&amp;ldquo;A1b2&amp;rdquo;,&amp;ldquo;A1B2&amp;rdquo;]&#xA;code class Solution: def letterCasePermutation(self, s: str) -&amp;gt; List[str]: res = [] def recur(i, sofar): if i == len(s): res.append(sofar) return if s[i].</description>
+    </item>
+    <item>
+      <title>leetcode questions: Backtracking</title>
+      <link>http://localhost:1313/dev/lee-backtracking/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-backtracking/</guid>
+      <description>Template def backtrack(candidate): if find_solution(candidate): output(candidate) return # iterate all possible candidates. for next_candidate in list_of_candidates: if is_valid(next_candidate): # try this partial candidate solution place(next_candidate) # given the candidate, explore further. backtrack(next_candidate) # backtrack remove(next_candidate) 17. Letter Combinations of a Phone Number Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.&#xA;A mapping of digit to letters (just like on the telephone buttons) is given below.</description>
+    </item>
+    <item>
+      <title>47. Permutations II</title>
+      <link>http://localhost:1313/leetcode/47/</link>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/47/</guid>
+      <description>Permutations II - LeetCode&#xA;Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.&#xA;Example 1: Input: nums = [1,1,2] Output: [[1,1,2], [1,2,1], [2,1,1]] Example 2: Input: nums = [1,2,3] Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]&#xA;code class Solution: def permuteUnique(self, nums: List[int]) -&amp;gt; List[List[int]]: def dfs(nums, cur, res): if not nums: res.append(cur) return visited = set() for i,num in enumerate(nums): if num not in visited: visited.</description>
+    </item>
+    <item>
+      <title>77. combinations</title>
+      <link>http://localhost:1313/leetcode/77/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/77/</guid>
+      <description>Combinations - LeetCode&#xA;Given two integers n and k, return all possible combinations of k numbers out of the range [1, n]. You may return the answer in any order.&#xA;Example 1: Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]&#xA;code dfs class Solution: def combine(self, n: int, k: int) -&amp;gt; List[List[int]]: result = [] def gen_comb(start, cur_comb): if k == len(cur_comb): result.</description>
+    </item>
+    <item>
+      <title>37. sudoku solver</title>
+      <link>http://localhost:1313/leetcode/37/</link>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/37/</guid>
+      <description>Sudoku Solver - LeetCode&#xA;Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules:&#xA;Each of the digits 1-9 must occur exactly once in each row. Each of the digits 1-9 must occur exactly once in each column. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.The &#39;.</description>
+    </item>
+    <item>
+      <title>52. N-Queens II</title>
+      <link>http://localhost:1313/leetcode/52/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/52/</guid>
+      <description>N-Queens II - LeetCode&#xA;The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other. Given an integer n, return the number of distinct solutions to the n-queens puzzle.&#xA;Example 1:&#xA;Input: n = 4 Output: 2 Explanation: There are two distinct solutions to the 4-queens puzzle as shown.&#xA;code def totalNQueens(self, n): self.res = 0 self.dfs([-1]*n, 0) return self.</description>
+    </item>
+    <item>
+      <title>60. Permutation sequence</title>
+      <link>http://localhost:1313/leetcode/60-permutation/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/60-permutation/</guid>
+      <description>Permutation Sequence - LeetCode&#xA;The set [1,2,3,&amp;hellip;,n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, we get the following sequence for n = 3:&#xA;&amp;quot;123&amp;quot; &amp;quot;132&amp;quot; &amp;quot;213&amp;quot; &amp;quot;231&amp;quot; &amp;quot;312&amp;quot; &amp;quot;321&amp;quot;Given n and k, return the kth permutation sequence. Note:&#xA;Given n will be between 1 and 9 inclusive. Given k will be between 1 and n! inclusive.Example 1: Input: n = 3, k = 3 Output: &amp;ldquo;213&amp;rdquo;</description>
+    </item>
+  </channel>
+</rss>

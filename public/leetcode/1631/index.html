@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="Path With Minimum Effort - LeetCode
+You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="1631. Path With Minimum Effort"/>
+<meta name="twitter:description" content="Path With Minimum Effort - LeetCode
+You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort."/>
+
+    <meta property="og:title" content="1631. Path With Minimum Effort" />
+<meta property="og:description" content="Path With Minimum Effort - LeetCode
+You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/leetcode/1631/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2021-12-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-30T20:16:32+00:00" />
+
+
+
+
+    <title>
+  1631. Path With Minimum Effort · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/leetcode/1631/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/leetcode/1631/">
+              1631. Path With Minimum Effort
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-12-30T00:00:00Z'>
+                December 30, 2021
+              </time>
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/unionfind/">unionfind</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/graph/">graph</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/binarysearch/">binarysearch</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><a href="https://leetcode.com/problems/path-with-minimum-effort/">Path With Minimum Effort - LeetCode</a></p>
+<p>You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
+A route&rsquo;s effort is the maximum absolute difference in heights between two consecutive cells of the route.
+Return <strong>the minimum effort required to travel from the top-left cell to the bottom-right cell.</strong></p>
+<p>Example 1:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex1.png">
+Input: heights = [[1,2,2],[3,8,2],[5,3,5]] Output: 2 Explanation: The route of [1,3,5,3,5] has a maximum absolute difference of 2 in consecutive cells. This is better than the route of [1,2,2,2,5], where the maximum absolute difference is 3.
+Example 2:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex2.png">
+Input: heights = [[1,2,3],[3,8,4],[5,3,5]] Output: 1 Explanation: The route of [1,2,3,4,5] has a maximum absolute difference of 1 in consecutive cells, which is better than route [1,3,5,3,5].
+Example 3:
+<img src="https://assets.leetcode.com/uploads/2020/10/04/ex3.png">Input: heights = [[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]] Output: 0 Explanation: This route does not require any effort.</p>
+<p>Constraints:</p>
+<pre><code>rows == heights.length
+columns == heights[i].length
+1 &lt;= rows, columns &lt;= 100
+1 &lt;= heights[i][j] &lt;= 106
+</code></pre>
+<hr>
+<ul>
+<li>code TLE  DP usually only works with directional matrix, one way or two, for this problem 4 directions are valid.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        direction <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]
+</span></span><span style="display:flex;"><span>        m <span style="color:#f92672">=</span> len(heights)
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">=</span> len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        dis <span style="color:#f92672">=</span> [[inf <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>        dis[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        pre <span style="color:#f92672">=</span> copy<span style="color:#f92672">.</span>deepcopy(dis)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> round <span style="color:#f92672">in</span> range(m <span style="color:#f92672">*</span> n):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> direction:
+</span></span><span style="display:flex;"><span>                        nei_x, nei_y <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> dx, j <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nei_x <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nei_y <span style="color:#f92672">&lt;</span> n:
+</span></span><span style="display:flex;"><span>                            dis[i][j] <span style="color:#f92672">=</span> min(dis[i][j], max(abs(heights[i][j] <span style="color:#f92672">-</span> heights[nei_x][nei_y]), dis[nei_x][nei_y]))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> pre <span style="color:#f92672">==</span> dis: <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            pre <span style="color:#f92672">=</span> copy<span style="color:#f92672">.</span>deepcopy(dis)
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dis[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>        
+</span></span></code></pre></div><ul>
+<li>code TLE  Dijkstra, the missing point: before pushing neighbour nodes, check if the new diff[nx][ny] is smaller,</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        m, n <span style="color:#f92672">=</span> len(heights), len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        diff <span style="color:#f92672">=</span> [[inf <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>        diff[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>, (<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>)]] <span style="color:#75715e"># max diff, point</span>
+</span></span><span style="display:flex;"><span>        direction <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            cur_diff, cur <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(q)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cur_diff <span style="color:#f92672">&gt;=</span> diff[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]: <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            visited<span style="color:#f92672">.</span>add(cur)
+</span></span><span style="display:flex;"><span>            x, y <span style="color:#f92672">=</span> cur
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> direction:
+</span></span><span style="display:flex;"><span>                nx, ny <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx, y <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nx <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ny <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> (nx, ny) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                    diff[nx][ny] <span style="color:#f92672">=</span> min(diff[nx][ny], max(abs(heights[nx][ny] <span style="color:#f92672">-</span> heights[x][y]), cur_diff))
+</span></span><span style="display:flex;"><span>                    heapq<span style="color:#f92672">.</span>heappush(q, [diff[nx][ny], (nx, ny)])
+</span></span><span style="display:flex;"><span>                                  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> diff[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><ul>
+<li>code  #Dijkstra  as long as a new edge won&rsquo;t decrease the path, i.e. diff won&rsquo;t decrease, we can potentially use Dijkstra(no negative edges)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        m, n <span style="color:#f92672">=</span> len(heights), len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        diff <span style="color:#f92672">=</span> [[inf] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>        diff[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]] <span style="color:#75715e"># max diff, (x, y)</span>
+</span></span><span style="display:flex;"><span>        direction <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            cur_diff, x, y <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(q)
+</span></span><span style="display:flex;"><span>            visited[x][y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> direction:
+</span></span><span style="display:flex;"><span>                nx, ny <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx, y <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> nx <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> ny <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[nx][ny]:
+</span></span><span style="display:flex;"><span>                    newdiff <span style="color:#f92672">=</span> min(diff[nx][ny], max(abs(heights[nx][ny] <span style="color:#f92672">-</span> heights[x][y]), cur_diff))
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> newdiff <span style="color:#f92672">&lt;</span> diff[nx][ny]:
+</span></span><span style="display:flex;"><span>                        diff[nx][ny] <span style="color:#f92672">=</span> newdiff
+</span></span><span style="display:flex;"><span>                        heapq<span style="color:#f92672">.</span>heappush(q, [diff[nx][ny], nx, ny])
+</span></span><span style="display:flex;"><span>                                  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> diff[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><ul>
+<li>code #unionfind  sort all edges and start to merge, as long as source and end has the same root.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">def</span> __init__(self, size):
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>parent <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(size)]
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>rank <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>(size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(self, i):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>parent[i] <span style="color:#f92672">!=</span> i:
+</span></span><span style="display:flex;"><span>                    self<span style="color:#f92672">.</span>parent[i] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(self<span style="color:#f92672">.</span>parent[i])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>parent[i]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">union</span>(self, x, y):
+</span></span><span style="display:flex;"><span>                parent_x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(x)
+</span></span><span style="display:flex;"><span>                parent_y <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(y)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> parent_x <span style="color:#f92672">!=</span> parent_y:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>rank[parent_x] <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>rank[parent_y]:
+</span></span><span style="display:flex;"><span>                        self<span style="color:#f92672">.</span>parent[parent_y] <span style="color:#f92672">=</span> parent_x
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">elif</span> self<span style="color:#f92672">.</span>rank[parent_x] <span style="color:#f92672">&lt;</span> self<span style="color:#f92672">.</span>rank[parent_y]:
+</span></span><span style="display:flex;"><span>                        self<span style="color:#f92672">.</span>parent[parent_x] <span style="color:#f92672">=</span> parent_y
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                        self<span style="color:#f92672">.</span>parent[parent_y] <span style="color:#f92672">=</span> parent_x
+</span></span><span style="display:flex;"><span>                        self<span style="color:#f92672">.</span>rank[parent_x] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> len(heights)
+</span></span><span style="display:flex;"><span>        col <span style="color:#f92672">=</span> len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> row <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> col <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        edge_list <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> current_row <span style="color:#f92672">in</span> range(row):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> current_col <span style="color:#f92672">in</span> range(col):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> current_row <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    difference <span style="color:#f92672">=</span> abs(
+</span></span><span style="display:flex;"><span>                        heights[current_row][current_col] <span style="color:#f92672">-</span>
+</span></span><span style="display:flex;"><span>                        heights[current_row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][current_col])
+</span></span><span style="display:flex;"><span>                    edge_list<span style="color:#f92672">.</span>append(
+</span></span><span style="display:flex;"><span>                        (difference, current_row <span style="color:#f92672">*</span> col <span style="color:#f92672">+</span> current_col,
+</span></span><span style="display:flex;"><span>                         (current_row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> col <span style="color:#f92672">+</span> current_col))
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> current_col <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    difference <span style="color:#f92672">=</span> abs(
+</span></span><span style="display:flex;"><span>                        heights[current_row][current_col] <span style="color:#f92672">-</span>
+</span></span><span style="display:flex;"><span>                        heights[current_row][current_col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>                    edge_list<span style="color:#f92672">.</span>append(
+</span></span><span style="display:flex;"><span>                        (difference, current_row <span style="color:#f92672">*</span> col <span style="color:#f92672">+</span> current_col, current_row
+</span></span><span style="display:flex;"><span>                         <span style="color:#f92672">*</span> col <span style="color:#f92672">+</span> current_col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>        edge_list<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>        union_find <span style="color:#f92672">=</span> UnionFind(row<span style="color:#f92672">*</span>col)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> difference, x, y <span style="color:#f92672">in</span> edge_list:
+</span></span><span style="display:flex;"><span>            union_find<span style="color:#f92672">.</span>union(x, y)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> union_find<span style="color:#f92672">.</span>find(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">==</span> union_find<span style="color:#f92672">.</span>find(row<span style="color:#f92672">*</span>col<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> difference
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>code BFS + binary search</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumEffortPath</span>(self, heights: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        row <span style="color:#f92672">=</span> len(heights)
+</span></span><span style="display:flex;"><span>        col <span style="color:#f92672">=</span> len(heights[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">canReachDestinaton</span>(x, y, mid):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> row<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> y <span style="color:#f92672">==</span> col<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            visited[x][y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> dx, dy <span style="color:#f92672">in</span> [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]]:
+</span></span><span style="display:flex;"><span>                adjacent_x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> dx
+</span></span><span style="display:flex;"><span>                adjacent_y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> dy
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> adjacent_x <span style="color:#f92672">&lt;</span> row <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> adjacent_y <span style="color:#f92672">&lt;</span> col <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> visited[
+</span></span><span style="display:flex;"><span>                        adjacent_x][adjacent_y]:
+</span></span><span style="display:flex;"><span>                    current_difference <span style="color:#f92672">=</span> abs(
+</span></span><span style="display:flex;"><span>                        heights[adjacent_x][adjacent_y]<span style="color:#f92672">-</span>heights[x][y])
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> current_difference <span style="color:#f92672">&lt;=</span> mid:
+</span></span><span style="display:flex;"><span>                        visited[adjacent_x][adjacent_y] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> canReachDestinaton(adjacent_x, adjacent_y, mid):
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000000</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>            mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>            visited <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span>]<span style="color:#f92672">*</span>col <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(row)]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> canReachDestinaton(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, mid):
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> left
+</span></span></code></pre></div><p>The real reason why the binary search approach works with BFS or DFS is that by defining a diff limit, the search space dramatically decreased, because we don&rsquo;t need BFS/DFS to exhaust all the paths to the target anymore, we just need to find ONE path that satisfy the diff limit. Thus, if we find ourself at a Cell that satisfies a diff limit, we don&rsquo;t care about other paths that get to this Cell anymore, that&rsquo;s why we can use &ldquo;visited&rdquo; to eliminate paths exploration. Without a diff limit, we can no longer use this naive &ldquo;visited&rdquo; way of tracking and the search space becomes 3^(M*N) as we&rsquo;d have to exhaust all the paths to find the one with min diff. -billmaxwell on leetcode <a href="https://leetcode.com/problems/path-with-minimum-effort/solution/977158">https://leetcode.com/problems/path-with-minimum-effort/solution/977158</a></p>
+
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+      </footer>
+    </article>
+
+    <div class="next-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/1244/?ref=footer">« 1244. Design A Leaderboard</a>
+      
+    </div>
+    
+    <div class="previous-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/116-populating-next-right-pointers/?ref=footer">116. Populating Next Right Pointers in Each Node »</a>
+      
+    </div>
+
+    
+  </section>
+
+    
+<section>
+  <ul>
+     
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+    <sup>96</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+    <sup>20</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+    <sup>24</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+    <sup>27</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+    <sup>14</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+    <sup>25</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+    <sup>17</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+    <sup>30</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+    <sup>41</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+    <sup>16</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+    <sup>19</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+    <sup>15</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+    <sup>13</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+    <sup>7</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+    <sup>23</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+    <sup>36</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+    <sup>9</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+    <sup>3</sup>
+          </div>
+    
+  
+  </ul>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

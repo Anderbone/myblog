@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="Here we show the 3 ways mentioned in chapter 11 of the book Spring Start Here. H2 in memory database, mysql database and mysql database with self defined data source.
+H2 in memory connection pom.xml
+&lt;dependency&gt; &lt;groupId&gt;com.h2database&lt;/groupId&gt; &lt;artifactId&gt;h2&lt;/artifactId&gt; &lt;scope&gt;runtime&lt;/scope&gt; &lt;/dependency&gt; Controller PurchaseController.java
+package com.example.controllers; import com.example.model.Purchase; import com.example.repositories.PurchaseRepository; import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import java.util.List; @RestController @RequestMapping(&#34;/purchase&#34;) public class PurchaseController { private final PurchaseRepository purchaseRepository; public PurchaseController(PurchaseRepository purchaseRepository) { this.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Spring Start here 11 - DB connection"/>
+<meta name="twitter:description" content="Here we show the 3 ways mentioned in chapter 11 of the book Spring Start Here. H2 in memory database, mysql database and mysql database with self defined data source.
+H2 in memory connection pom.xml
+&lt;dependency&gt; &lt;groupId&gt;com.h2database&lt;/groupId&gt; &lt;artifactId&gt;h2&lt;/artifactId&gt; &lt;scope&gt;runtime&lt;/scope&gt; &lt;/dependency&gt; Controller PurchaseController.java
+package com.example.controllers; import com.example.model.Purchase; import com.example.repositories.PurchaseRepository; import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import java.util.List; @RestController @RequestMapping(&#34;/purchase&#34;) public class PurchaseController { private final PurchaseRepository purchaseRepository; public PurchaseController(PurchaseRepository purchaseRepository) { this."/>
+
+    <meta property="og:title" content="Spring Start here 11 - DB connection" />
+<meta property="og:description" content="Here we show the 3 ways mentioned in chapter 11 of the book Spring Start Here. H2 in memory database, mysql database and mysql database with self defined data source.
+H2 in memory connection pom.xml
+&lt;dependency&gt; &lt;groupId&gt;com.h2database&lt;/groupId&gt; &lt;artifactId&gt;h2&lt;/artifactId&gt; &lt;scope&gt;runtime&lt;/scope&gt; &lt;/dependency&gt; Controller PurchaseController.java
+package com.example.controllers; import com.example.model.Purchase; import com.example.repositories.PurchaseRepository; import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.PostMapping; import org.springframework.web.bind.annotation.RequestBody; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import java.util.List; @RestController @RequestMapping(&#34;/purchase&#34;) public class PurchaseController { private final PurchaseRepository purchaseRepository; public PurchaseController(PurchaseRepository purchaseRepository) { this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/spring-jdbc/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2024-01-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-12T17:20:28+00:00" />
+
+
+
+
+    <title>
+Spring Start here 11 - DB connection · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/spring-jdbc/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/spring-jdbc/">
+                    Spring Start here 11 - DB connection
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2024-01-12T00:00:00Z'>
+                      January 12, 2024
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/spring/">spring</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p>Here we show the 3 ways mentioned in chapter 11 of the book Spring Start Here. H2 in memory database, mysql database and mysql database with self defined data source.</p>
+<h2 id="h2-in-memory-connection">
+  H2 in memory connection
+  <a class="heading-link" href="#h2-in-memory-connection">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img src="https://i.imgur.com/C3CHDEA.png"></p>
+<p>pom.xml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>	<span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;groupId&gt;</span>com.h2database<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;artifactId&gt;</span>h2<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>Controller <code>PurchaseController.java</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.controllers;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.example.model.Purchase;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.example.repositories.PurchaseRepository;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.GetMapping;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.PostMapping;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestBody;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMapping;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RestController;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span>(<span style="color:#e6db74">&#34;/purchase&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PurchaseController</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> PurchaseRepository purchaseRepository;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">PurchaseController</span>(PurchaseRepository purchaseRepository) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">purchaseRepository</span> <span style="color:#f92672">=</span> purchaseRepository;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@PostMapping</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">storePurchase</span>(<span style="color:#a6e22e">@RequestBody</span> Purchase purchase) {
+</span></span><span style="display:flex;"><span>    purchaseRepository.<span style="color:#a6e22e">storePurchase</span>(purchase);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@GetMapping</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Purchase<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findPurchases</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> purchaseRepository.<span style="color:#a6e22e">findAllPurchases</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Model <code>Purchase.java</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.model;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.math.BigDecimal;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Objects;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Purchase</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> id;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String product;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> BigDecimal price;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getId</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> id;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span>(<span style="color:#66d9ef">int</span> id) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getProduct</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> product;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setProduct</span>(String product) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">product</span> <span style="color:#f92672">=</span> product;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> BigDecimal <span style="color:#a6e22e">getPrice</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> price;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPrice</span>(BigDecimal price) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> price;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span>(Object o) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> o) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (o <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> getClass() <span style="color:#f92672">!=</span> o.<span style="color:#a6e22e">getClass</span>()) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    Purchase purchase <span style="color:#f92672">=</span> (Purchase) o;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> id <span style="color:#f92672">==</span> purchase.<span style="color:#a6e22e">id</span> <span style="color:#f92672">&amp;&amp;</span> Objects.<span style="color:#a6e22e">equals</span>(product, purchase.<span style="color:#a6e22e">product</span>) <span style="color:#f92672">&amp;&amp;</span> Objects.<span style="color:#a6e22e">equals</span>(price, purchase.<span style="color:#a6e22e">price</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Objects.<span style="color:#a6e22e">hash</span>(id, product, price);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Repository <code>PurchaseRepository.java</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.repositories;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.example.model.Purchase;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.jdbc.core.JdbcTemplate;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.jdbc.core.RowMapper;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.stereotype.Repository;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Repository</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PurchaseRepository</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> JdbcTemplate jdbc;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">PurchaseRepository</span>(JdbcTemplate jdbc) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">jdbc</span> <span style="color:#f92672">=</span> jdbc;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">storePurchase</span>(Purchase purchase) {
+</span></span><span style="display:flex;"><span>    String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO purchase VALUES (NULL, ?, ?)&#34;</span>;
+</span></span><span style="display:flex;"><span>    jdbc.<span style="color:#a6e22e">update</span>(sql, purchase.<span style="color:#a6e22e">getProduct</span>(), purchase.<span style="color:#a6e22e">getPrice</span>());
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Purchase<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAllPurchases</span>() {
+</span></span><span style="display:flex;"><span>    String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM purchase&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    RowMapper<span style="color:#f92672">&lt;</span>Purchase<span style="color:#f92672">&gt;</span> purchaseRowMapper <span style="color:#f92672">=</span> (r, i) <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>      Purchase rowObject <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Purchase();
+</span></span><span style="display:flex;"><span>      rowObject.<span style="color:#a6e22e">setId</span>(r.<span style="color:#a6e22e">getInt</span>(<span style="color:#e6db74">&#34;id&#34;</span>));
+</span></span><span style="display:flex;"><span>      rowObject.<span style="color:#a6e22e">setProduct</span>(r.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;product&#34;</span>));
+</span></span><span style="display:flex;"><span>      rowObject.<span style="color:#a6e22e">setPrice</span>(r.<span style="color:#a6e22e">getBigDecimal</span>(<span style="color:#e6db74">&#34;price&#34;</span>));
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> rowObject;
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> jdbc.<span style="color:#a6e22e">query</span>(sql, purchaseRowMapper);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>schema.sql</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> purchase (
+</span></span><span style="display:flex;"><span>    id INT AUTO_INCREMENT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    product varchar(<span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    price double <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h2 id="mysql-connection">
+  MySQL connection
+  <a class="heading-link" href="#mysql-connection">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>        <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>application.properties</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>spring.datasource.url=jdbc:mysql://localhost/spring_quickly
+</span></span><span style="display:flex;"><span>spring.datasource.username=root
+</span></span><span style="display:flex;"><span>spring.datasource.password=
+</span></span><span style="display:flex;"><span>spring.datasource.initialization-mode=always
+</span></span></code></pre></div><h2 id="self-made-datasource">
+  self made datasource
+  <a class="heading-link" href="#self-made-datasource">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>One more ProjectConfig.java</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.config;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.zaxxer.hikari.HikariDataSource;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Value;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.context.annotation.Bean;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.context.annotation.Configuration;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.sql.DataSource;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProjectConfig</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Value</span>(<span style="color:#e6db74">&#34;${custom.datasource.url}&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String datasourceUrl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Value</span>(<span style="color:#e6db74">&#34;${custom.datasource.username}&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String datasourceUsername;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Value</span>(<span style="color:#e6db74">&#34;${custom.datasource.password}&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String datasourcePassword;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">dataSource</span>() {
+</span></span><span style="display:flex;"><span>    HikariDataSource dataSource <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HikariDataSource();
+</span></span><span style="display:flex;"><span>    dataSource.<span style="color:#a6e22e">setJdbcUrl</span>(datasourceUrl);
+</span></span><span style="display:flex;"><span>    dataSource.<span style="color:#a6e22e">setUsername</span>(datasourceUsername);
+</span></span><span style="display:flex;"><span>    dataSource.<span style="color:#a6e22e">setPassword</span>(datasourcePassword);
+</span></span><span style="display:flex;"><span>    dataSource.<span style="color:#a6e22e">setConnectionTimeout</span>(1000);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> dataSource;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>application.properties</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>custom.datasource.url=jdbc:mysql://localhost/spring_quickly
+</span></span><span style="display:flex;"><span>custom.datasource.username=root
+</span></span><span style="display:flex;"><span>custom.datasource.password=
+</span></span></code></pre></div>
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

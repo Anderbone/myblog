@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="For Warwick University module 909, data mining.
+1. intro machine learning framework define a set of functions define a fitting criteria pick the best function machine learning learn a function of: $f:x \to{y}$ y is discrete: classification y is continuous: regression roadmap supervised learning regression classification logistic regression, SVM, neural networks unsupervised learning clustering kmeans, AHC dimension reduction, PCA ensemble learning transfer learning 2. data defination collection of data objects and their attributes attribute is a property or characteristic of an object discrete/continuous nominal: values are distinct symbols ID, eye color, zip codes ordinal: impose order on values but no distance between values defined military rank, exam grade, rating interval: has a fixed size of interval between data points year, temperature ratio: same as interval,0 means does not exist weight, age data quality noise outliers missing values duplicate 3.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Data mining module outline"/>
+<meta name="twitter:description" content="For Warwick University module 909, data mining.
+1. intro machine learning framework define a set of functions define a fitting criteria pick the best function machine learning learn a function of: $f:x \to{y}$ y is discrete: classification y is continuous: regression roadmap supervised learning regression classification logistic regression, SVM, neural networks unsupervised learning clustering kmeans, AHC dimension reduction, PCA ensemble learning transfer learning 2. data defination collection of data objects and their attributes attribute is a property or characteristic of an object discrete/continuous nominal: values are distinct symbols ID, eye color, zip codes ordinal: impose order on values but no distance between values defined military rank, exam grade, rating interval: has a fixed size of interval between data points year, temperature ratio: same as interval,0 means does not exist weight, age data quality noise outliers missing values duplicate 3."/>
+
+    <meta property="og:title" content="Data mining module outline" />
+<meta property="og:description" content="For Warwick University module 909, data mining.
+1. intro machine learning framework define a set of functions define a fitting criteria pick the best function machine learning learn a function of: $f:x \to{y}$ y is discrete: classification y is continuous: regression roadmap supervised learning regression classification logistic regression, SVM, neural networks unsupervised learning clustering kmeans, AHC dimension reduction, PCA ensemble learning transfer learning 2. data defination collection of data objects and their attributes attribute is a property or characteristic of an object discrete/continuous nominal: values are distinct symbols ID, eye color, zip codes ordinal: impose order on values but no distance between values defined military rank, exam grade, rating interval: has a fixed size of interval between data points year, temperature ratio: same as interval,0 means does not exist weight, age data quality noise outliers missing values duplicate 3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/warwick-909/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2019-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-29T17:11:05+00:00" />
+
+
+
+
+    <title>
+Data mining module outline · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/warwick-909/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/warwick-909/">
+                    Data mining module outline
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2019-04-10T00:00:00Z'>
+                      April 10, 2019
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/warwick/">warwick</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p>For Warwick University module 909, data mining.</p>
+<h2 id="1-intro">
+  1. intro
+  <a class="heading-link" href="#1-intro">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img alt="20190525120154.png" src="https://i.loli.net/2019/05/25/5ce920a57065f24877.png"></p>
+<ul>
+<li>machine learning framework</li>
+</ul>
+<ol>
+<li>define a set of functions</li>
+<li>define a fitting criteria</li>
+<li>pick the best function</li>
+</ol>
+<ul>
+<li>machine learning
+<ul>
+<li>learn a function of: $f:x \to{y}$
+<ul>
+<li>y is discrete: classification</li>
+<li>y is continuous: regression</li>
+</ul>
+</li>
+<li>roadmap
+<ul>
+<li>supervised learning
+<ul>
+<li>regression</li>
+<li>classification
+<ul>
+<li>logistic regression, SVM, neural networks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>unsupervised learning
+<ul>
+<li>clustering
+<ul>
+<li>kmeans, AHC</li>
+</ul>
+</li>
+<li>dimension reduction, PCA</li>
+</ul>
+</li>
+<li>ensemble learning</li>
+<li>transfer learning</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-data">
+  2. data
+  <a class="heading-link" href="#2-data">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>defination
+<ul>
+<li>collection of data objects and their attributes</li>
+<li>attribute is a property or characteristic of an object
+<ul>
+<li>discrete/continuous</li>
+<li>nominal: values are distinct symbols
+<ul>
+<li>ID, eye color, zip codes</li>
+</ul>
+</li>
+<li>ordinal: impose order on values but no distance between values defined
+<ul>
+<li>military rank, exam grade, rating</li>
+</ul>
+</li>
+<li>interval: has a fixed size of interval between data points
+<ul>
+<li>year, temperature</li>
+</ul>
+</li>
+<li>ratio: same as interval,0 means does not exist
+<ul>
+<li>weight, age</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>data quality
+<ul>
+<li>noise</li>
+<li>outliers</li>
+<li>missing values</li>
+<li>duplicate</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-linear-regression">
+  3. linear regression
+  <a class="heading-link" href="#3-linear-regression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img alt="20190525124441.png" src="https://i.loli.net/2019/05/25/5ce92aaaeb9eb78729.png"></p>
+<ul>
+<li>
+<p>$R^2$ higer better</p>
+<ul>
+<li>means that most of variation in yi data can be attributed to their corresponding x values</li>
+<li>higher if the data points aligned along a line</li>
+<li>should not inlude x unrelated to y in the model, just make R better</li>
+<li>adjusted R, use a penalty on the number of perdictors</li>
+</ul>
+</li>
+<li>
+<p>underfitting and overfitting</p>
+<ul>
+<li>model complexity: the number of independent parameters to be fit, degree of freedom</li>
+<li>complex: more sensitive to data, more likely to overfit</li>
+<li>simple: under fit, rigid</li>
+<li>find the model balance bias-variance</li>
+<li>regularisation- ridge regression
+<ul>
+<li>x change slightly, y change al lot , not stable, not smooth</li>
+<li>to encourage the weights to be small, resulting in a smoother curve</li>
+<li>Solution: add a regularisation term to encourage the weights to be small, thus resulting in a smoother curve</li>
+<li>
+<ul>
+<li>lamda*sum(wi^2)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4logistic-regression">
+  4.logistic regression
+  <a class="heading-link" href="#4logistic-regression">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img alt="20190525125521.png" src="https://i.loli.net/2019/05/25/5ce92d2b08bc787443.png"></p>
+<ul>
+<li>
+<p>Lorgistic Regression</p>
+<ul>
+<li>Y is categorical, binary, instead of continuous</li>
+<li>p = w1x1+w2x2+&hellip;+wixi=wTx</li>
+<li>sigmoid function
+<ul>
+<li>f(z), f = $\frac{1}{1+e^{-z}}$</li>
+<li>use a non-linear function of the predictors to ensure p is within [0,1]</li>
+<li>output can be interpreted as posterior label probability or confidence returned by classifier
+<ul>
+<li>p(y=1|x)+p(y=0|x)=1</li>
+<li>p(y=1|x) = f(wTx)</li>
+<li>p(y=0|x)= f(-wTx)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>model parameter estimation</p>
+<ul>
+<li>step1, function set, including all different w and b. output between 0 and 1</li>
+<li>step2, goodness of a function, find w that minimises the cross-entropy between target class distribution(1 ,0 here, not a real number) and the predicted class distribution(probabilities)</li>
+<li>step3, find the best function</li>
+<li>why not squared error?
+<ul>
+<li>more severe plateaus with the squared error cost, too flat, the update is too small</li>
+<li>cross-entropy cost works much better for classification problems</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>comparison</p>
+<ul>
+<li>yn, 1 for class1, 0 for class2; yn, a real number</li>
+<li>same update formula</li>
+</ul>
+</li>
+<li>
+<p>multi class classification</p>
+<ul>
+<li>using the softmax instead of sigmoid</li>
+<li>the probablity sum = 1</li>
+<li>one hot output, 0 0 1</li>
+<li>still try to minimize the cross entropy</li>
+</ul>
+</li>
+<li>
+<p>limitation</p>
+<ul>
+<li>feature transformation. new feature sapce</li>
+<li>deep learning: all the parameters of the logistic regressions are jointly learned</li>
+</ul>
+</li>
+</ul>
+<h2 id="5decision-tree">
+  5.decision tree
+  <a class="heading-link" href="#5decision-tree">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<blockquote>
+<p>Focus on class 1 and 2. In A ,3 class 1, 3 class 2</p>
+</blockquote>
+<ul>
+<li>classification defination overall
+<ul>
+<li>inexpensive to contrust</li>
+<li>fast at classifying unkonwn records</li>
+<li>easy to interpret for small-sized trees</li>
+<li>accuracy is comparable to others for simple datasets
+<img src="https://i.loli.net/2019/05/18/5ce026c9c238425576.png"></li>
+</ul>
+</li>
+<li>pre-pruning: early stopping rule
+<ul>
+<li>before it fully grown</li>
+<li>stop if same class/similiar/threshold</li>
+<li>stop if information gain improve</li>
+<li>stop if distributon of instances are independent of the available features</li>
+</ul>
+</li>
+<li>post pruning
+<ul>
+<li>grow to its entirety</li>
+<li>trim nodes in a bottom-up fashion
+<ul>
+<li>if misclassification error decreases after trimming, replace by a node</li>
+<li>use majority to replace</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-knn-and-nb">
+  6. knn and nb
+  <a class="heading-link" href="#6-knn-and-nb">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img alt="20190525131341.png" src="https://i.loli.net/2019/05/25/5ce93176f01e741016.png">
+<img alt="20190525131631.png" src="https://i.loli.net/2019/05/25/5ce9322151ef612588.png">
+<img alt="20190520110713.png" src="https://i.loli.net/2019/05/20/5ce27c53ad1da31920.png"></p>
+<ul>
+<li>why nb still work?</li>
+</ul>
+<blockquote>
+<p>classification doesn’t require accurate probability estimates as long as maximum probability is assigned to correct class
+<img alt="20190525132905.png" src="https://i.loli.net/2019/05/25/5ce9351356cbb86639.png"></p>
+</blockquote>
+<h2 id="7-model-evaluation">
+  7. model evaluation
+  <a class="heading-link" href="#7-model-evaluation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="71-data-split">
+  7.1 data split
+  <a class="heading-link" href="#71-data-split">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>large availalbe: holdout method,  split training and test, build using training set and evaluate using test</li>
+<li>parameter tuning
+<ul>
+<li>test data must not be used for tuning any parameter</li>
+<li>proper procedure use valiedation data, to optimise/choose parameters</li>
+</ul>
+</li>
+<li>once evaluation complete, all data can be used to build
+<ul>
+<li>the larger tarining, the better the classifier</li>
+<li>the larger test, the more accurate the error estimate</li>
+</ul>
+</li>
+<li><strong>stratified</strong> sample: advanced version of balancing the data
+<ul>
+<li>for small datasets usually</li>
+<li><strong>make sure that each class is represented with approximately equal proportions in both subsets</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="712-k-fold">
+  7.1.2 k fold
+  <a class="heading-link" href="#712-k-fold">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>avoids overlapping test sets, often subsets are stratified before</li>
+<li>the error estimates on each subset are averaged</li>
+<li>
+<ol>
+<li>split into k subsets with equal size</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>each subset in turn is used for testing and the remainder for training</li>
+</ol>
+</li>
+</ul>
+<h3 id="72-model-evaluation-metrics">
+  7.2 model evaluation metrics
+  <a class="heading-link" href="#72-model-evaluation-metrics">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>binary classifiers
+generally have a postive and negative class, errors can only go the other class</p>
+<ul>
+<li>confusion matrix
+<ul>
+<li>precision=tp/tp+fp</li>
+<li>recall = tp/tp+fn (ture positive rate TPR)
+tp and fn: gold stanard label, acutal positive</li>
+<li>FPR false positive rate= fp/fp+tn</li>
+<li>F = 2 precision*recall/(presion+recall)</li>
+<li><img alt="20190525133935.png" src="https://i.loli.net/2019/05/25/5ce9378876b2a29435.png"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>multi-class
+may have differnet level of importance, error can go any others</p>
+<ul>
+<li>overall acuracy
+<ul>
+<li>0.97 accuracy , misleading</li>
+</ul>
+</li>
+<li>per-class precision/reacall
+<ul>
+<li>same as binary, also have per-class F1 score</li>
+</ul>
+</li>
+<li>overall performance
+<ul>
+<li>macro-averaging-each
+<ul>
+<li>computer each, then avg, all classes contribute the same to final score</li>
+</ul>
+</li>
+<li>micro-averaging-all
+<ul>
+<li>compute overal, large classes contribute morel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>multi-label
+instance can have multiple labels</p>
+<ul>
+<li>combinations of categories can have a new category
+<ul>
+<li>c1, c2, c3, c1c2, c2c3&hellip;</li>
+</ul>
+</li>
+<li>two approaches to evaluate
+<ul>
+<li>hamming loss
+<ul>
+<li>just count wrong labels in the prediction matrix</li>
+<li>4*5 20 numbers, 4 wrong, 4/20</li>
+</ul>
+</li>
+<li>0/1 loss
+<ul>
+<li>part incorrect is incorrect</li>
+<li>3/5</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>model comparison</p>
+<ul>
+<li>ROC Receiver operating characteristic</li>
+<li>TPR(recall) on y, against FPR on x</li>
+<li>change the thresholld , use classifier that produces posterior probability for each test instance P(+|A), count the number of TP FP TN FN at each threshold</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-bias-and-variance">
+  8. bias and variance
+  <a class="heading-link" href="#8-bias-and-variance">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img alt="20190525144855.png" src="https://i.loli.net/2019/05/25/5ce947c8ceba789652.png">
+<img alt="20190525145433.png" src="https://i.loli.net/2019/05/25/5ce9491b4da8e39484.png">
+<img alt="20190525150121.png" src="https://i.loli.net/2019/05/25/5ce94ab2b595031030.png">
+<img alt="20190525150139.png" src="https://i.loli.net/2019/05/25/5ce94ac57efae43418.png"></p>
+<h2 id="9-dimensionality-reduction">
+  9. dimensionality reduction
+  <a class="heading-link" href="#9-dimensionality-reduction">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>
+<p>principal component analysis PCA</p>
+<ul>
+<li>basic
+<ul>
+<li>some features may be correlated with each other, redundant</li>
+<li>find a new set of features, linear combination of original</li>
+<li>new features <strong>capture the maximum variance</strong> of data points</li>
+<li>achieve the minimum reconstruction error</li>
+</ul>
+</li>
+<li>PCA algorithm
+PCs are a series of linear least square fits to a sample, each orthogonal to all the previous PCs</li>
+<li>other
+<ul>
+<li>take enough many eigenvectors to cover 80-90 of variance</li>
+<li>another point: minimising the error</li>
+<li>weakness
+<ul>
+<li>assumption on linearity.
+non-linear methods such as kernel PCA</li>
+<li>principal components are orthogonal,
+independent component analysis ICA</li>
+<li>statistical importance of mean and variance,
+uses eignevector of the covariance matrix, does not count class label.
+no guarantee that the directions of max variance will contain good features</li>
+<li>large variances have important dynamics,
+when data has high signal-to-noise ratio</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>neighbour embedding</p>
+<ul>
+<li>manifold learning(nonlinear dimensionality reduction)</li>
+<li>locally linear embedding LLE
+<ul>
+<li>find nearest neighbours, compute weights that best describing the point as a linear combination of neighbours</li>
+<li>Use an eigenvector-based optimisation technique to find the low-dimensional embedding of points</li>
+</ul>
+</li>
+<li>T distirbuted stochastic neighbor embedding t-SNE
+<ul>
+<li>basic
+<ul>
+<li>converts affinities of data points to probabilities, represeted by t-distributions rather than Gaussian joint probabilities, in order to allow dissimilar objects to be modeled far aprt in the map</li>
+<li>sensitive to local structure which is highly preserved</li>
+<li>compute similarity between all pairs of x and z, find a set of z making the two distributions as close as possible, z&lt;x for dimension</li>
+</ul>
+</li>
+<li>disadvantage
+<ul>
+<li>computationally expensive, PCA is faster</li>
+<li>stochastic, different seeds can yield different embeddings</li>
+<li>global structure is not explicitly preserved.
+mitigated by initialising points with PCA</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-ensemble">
+  10. ensemble
+  <a class="heading-link" href="#10-ensemble">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="101-framework-of-ensemble-methods">
+  10.1 framework of ensemble methods
+  <a class="heading-link" href="#101-framework-of-ensemble-methods">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>train a set of classifiers from different training data(most adapted version, resampled for machine learning), combine the outcomes of different models (also two things in common with machine learning)
+average complex models to reduce variance</li>
+<li>pros
+<ul>
+<li>performace better than individual</li>
+<li>resilience to noise</li>
+</ul>
+</li>
+<li>cons
+<ul>
+<li>time consuming</li>
+<li>hard to explain models</li>
+</ul>
+</li>
+</ul>
+<h3 id="102-bagging">
+  10.2 bagging
+  <a class="heading-link" href="#102-bagging">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>bagging: bootstrap aggregating</li>
+<li>A simple but highly effective ensemble method that <strong>creates diverse models on different random samples of the original data set.</strong></li>
+<li>These samples are taken uniformly with replacement and are known as bootstrap samples.</li>
+<li>combination: creating tree from random sub-sample of the features</li>
+</ul>
+<h4 id="1021-random-foreset">
+  10.2.1 random foreset
+  <a class="heading-link" href="#1021-random-foreset">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>ensemble of decision trees, have high variance depending on the training data
+<ul>
+<li>decision tree
+<ul>
+<li>easy to achieve null error on training data if has own leaf</li>
+</ul>
+</li>
+<li>random forest
+bagging of decision tree
+<ul>
+<li><strong>Train multiple trees</strong> on randomly sampled training data</li>
+<li>randomly restrict the features used in each split – feature bagging</li>
+</ul>
+</li>
+<li>out of bag OOB
+validation for bagging, good error estimation of testing set
+<ul>
+<li>mean prediction error on each training sample xi, using only the trees that did&rsquo;t have xi in their bootstrap sample</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="103-boosting">
+  10.3 boosting
+  <a class="heading-link" href="#103-boosting">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>boosting-adaboost
+consider the performance of previous models on the same data
+<ul>
+<li>boosting D,T,A.
+<ul>
+<li>data set D. ensemble size T learning algorithm A</li>
+<li>train an ensemble of binary classifiers from reweighted training sets</li>
+<li>output: weighted ensemble of models</li>
+<li>multiple weak linear classifiers combined to give a strong, non-linear classifier</li>
+</ul>
+</li>
+<li>steps
+<ul>
+<li>
+<ol>
+<li>Train a weak model on some training data.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Compute the error of the model on each training example.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Give higher importance to examples on which the model made mistakes.
+weigh errors of the misclassified cases higher, correctly lower</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Re-train the model using “importance weighted” training examples.
+traning f2 on the new training set that fails f1, based on new weights u2. change the cost/objective function</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>Go back to step 2.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="104--bagging-vs-boosting">
+  10.4  bagging vs boosting
+  <a class="heading-link" href="#104--bagging-vs-boosting">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>both reduce variance and overfitting</li>
+<li>bagging can&rsquo;t reduce bias, boosting can
+<ul>
+<li>in boosting, training error steadily decreases</li>
+</ul>
+</li>
+<li>bagging performs better. if we don&rsquo;t have a high bias and only want to reduce variance(if we are overfitting)
+<ul>
+<li>bagging more computationally efficient, can train M models in parallel</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-intro-to-dl">
+  11. Intro to DL
+  <a class="heading-link" href="#11-intro-to-dl">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>basics
+<ul>
+<li>fully connect feedforward netwrok</li>
+<li>the unit of a neural network: activation function
+<ul>
+<li>combination function
+the unit combines its inputs into a single value</li>
+<li>transfer funciton
+transform to produce the output</li>
+</ul>
+</li>
+<li>softmax classifier
+<ul>
+<li>maxmise the probaility of the correct class, minimise the negative log probabilty of that class</li>
+</ul>
+</li>
+<li>corss-entropy loss, find the parameters to minimise total loss</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-backpropagation-and-gradient-descend">
+  12. backpropagation and gradient descend
+  <a class="heading-link" href="#12-backpropagation-and-gradient-descend">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="121-backpropagation">
+  12.1 backpropagation
+  <a class="heading-link" href="#121-backpropagation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li><strong>need to find the gradient of the error, w.r.t. the parameters of each layer,$\frac{dL(\theta)}{dw_k}$, to perform updates:</strong></li>
+<li>$w_k=w_k- \eta *$,  $\frac{dL(\theta)}{dw_k}$ , $\eta$ is learning rate, wk is update weight</li>
+<li>Forward pass: compute z and a for all layers</li>
+<li>Backward pass: compute dz/dw and dl/dz for all layers</li>
+</ul>
+<h3 id="122-gradient-descent">
+  12.2 gradient descent
+  <a class="heading-link" href="#122-gradient-descent">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>
+<p>gradient descent: computes the gradient of the cost function w.r.t. the parameter for the entire training dataset, then perform one update</p>
+<ul>
+<li>slow, loss is the summation over all training examples</li>
+<li>$\theta^{t+1}=\theta^{t}-\eta^t*\nabla L(\theta^t)$</li>
+</ul>
+</li>
+<li>
+<p>stochastic: performs a paramter update for each training example xn and label yn, make the training faster</p>
+<ul>
+<li>loss for only one example</li>
+<li>high variance, if 20 examples, 20 times faster</li>
+<li>$\theta^{t+1}=\theta^{t}-\eta^t*\nabla L^n(\theta^t)$</li>
+<li>L is different here, no sum</li>
+</ul>
+</li>
+<li>
+<p>minibatch gradient descent</p>
+<ul>
+<li>between above two, updates for every mini batch of m training examples</li>
+<li>reduce the variance of the parameter update, lead to more stable convergence</li>
+<li>make use of matrix optimisations</li>
+</ul>
+</li>
+<li>
+<p>adaptive learning rates</p>
+<ul>
+<li>reduce the learning rate by some factor every few epochs</li>
+<li>at first large, close to destination, reduce</li>
+</ul>
+</li>
+<li>
+<p>Adagrad
+differnet learning rate for different parameters</p>
+<ul>
+<li>core
+<ul>
+<li>divide the learning rate of each parameter by <strong>the root mean square of its previous derivatives</strong></li>
+<li>provides a feature-specific adaptive learning rate by incorporating knowledge of the geometry of past observations</li>
+</ul>
+</li>
+<li>smaller updates for parameters with frequently occurring features, larger for infrequent</li>
+<li>weakness
+stop learning
+<ul>
+<li>its accumulation of the squared gradients in the denominator</li>
+<li>Since every added term is positive, the accumulated sum keeps growing duringtraining.</li>
+<li>This in turn causes the learning rate to shrink and eventually become infinitesimally small, at which point the algorithm is no longer able to acquire additional knowledge.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>RMSProp</p>
+<ul>
+<li>divides the learning rate by an <strong>exponentially decaying average</strong> of squared gradients</li>
+<li>high weight for current factor</li>
+</ul>
+</li>
+</ul>
+<h2 id="13cnn">
+  13.CNN
+  <a class="heading-link" href="#13cnn">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>overview
+<ul>
+<li>neural networks that use <strong>convolution</strong> in place of general matrix multiplication in at least one layer</li>
+<li>why for image
+<ul>
+<li>1.some partterns are much smaller than the whole image
+<ul>
+<li>a neuron does not have to see all, connecting to small region with less parameters</li>
+</ul>
+</li>
+<li>2.the same patterns appear in different regions, could reuse</li>
+<li>3.subsampling the pixels will not change the object
+less parameters for the network to process the image</li>
+</ul>
+</li>
+<li>Convolution(12)-maxpolling(3)-covolution-maxpooling-flatten-fully connected feedforward network</li>
+</ul>
+</li>
+<li>convolution layer
+<ul>
+<li>those filter matrx are the network parameters to be learned</li>
+<li>each filter detects a small pattern</li>
+<li>output size
+<ul>
+<li>N is the row of orginal, K is the filter size, S is the stride size</li>
+<li>used N=6, K=3, S =1</li>
+<li>(N-K)/S + 1</li>
+</ul>
+</li>
+<li>zero padding
+<ul>
+<li>output have the same size of input.</li>
+<li>stride 1 ,filter k, padding with (k-1)/2</li>
+<li>k=5, padding with 2, means 2 left, 2right
+<ul>
+<li>output size: (32+2*2-5)/1+1=32</li>
+<li>number of parameters:
+<ul>
+<li>each filter:5*5+1=26 (+1bias)</li>
+<li>26*6 = 156</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>pooling layer
+<ul>
+<li>max pooling: pick largest value from each filter</li>
+<li>the number of the channels is the number of filters</li>
+<li>smaller than original image</li>
+</ul>
+</li>
+</ul>
+<h2 id="14rnn">
+  14.RNN
+  <a class="heading-link" href="#14rnn">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>
+<p>recurrent neural network
+good at dealing with sequence input and/or output</p>
+<ul>
+<li>process a sequence of vectors x by applying a <strong>recurrence formula</strong> at every time step</li>
+<li>ht = fw(ht-1, xt)
+<ul>
+<li>new state, some function with parameters w, old state, input vector at some time step</li>
+</ul>
+</li>
+<li>the same function and the same set of parameters are used at every time step.</li>
+<li>unfortunately
+<ul>
+<li>not always easy to learn</li>
+<li>The error surface is either very flat or very steep.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>simple RNN</p>
+<ul>
+<li>the state consists of a single hidden vector h</li>
+<li>re use the same weight matrix at every time-step</li>
+<li>Elman and Jordan
+<ul>
+<li>Elman:a three-layer network with the addition of a set of &ldquo;context units&rdquo;</li>
+<li>Jordan: the context units are fed from the <strong>output layer</strong> instead of the hidden layer.</li>
+</ul>
+</li>
+<li>bidrectional RNN
+last word, first input</li>
+</ul>
+</li>
+<li>
+<p>backpropagation through time</p>
+<ul>
+<li>Forward through entire sequence to compute loss, then backward through entire sequence to compute gradient</li>
+<li>Truncated backpropagation
+part , not whole
+<ul>
+<li>run forward and backward through chunks of the sequence instead of whole sequence</li>
+<li>Carry hidden states forward in time forever, but only backpropagate for some smaller number of steps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Vanilla RNNs gradient flow
+suffer from gradient vanishing/explosion problem</p>
+<ul>
+<li>backpropagation from ht to hk multiplies by WhhT many times</li>
+<li>exploding gradients: WhhT large
+<ul>
+<li>gradient clipping, scale gradient if its norm is too big</li>
+</ul>
+</li>
+<li>vanishing gradients: change RNN architecture:LSTM</li>
+</ul>
+</li>
+</ul>
+<h2 id="15-word-embedding">
+  15 word embedding
+  <a class="heading-link" href="#15-word-embedding">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>
+<p>feature generation: bag of words
+Text document is represented by the words it contains (and their occurrences)</p>
+<ul>
+<li>dis: inefficient for large vocabularies</li>
+<li>does not capture semantics. each word is an unrealted token,</li>
+<li>ignore the word order</li>
+</ul>
+</li>
+<li>
+<p>word weighting</p>
+<ul>
+<li>TFIDF(w) = tf * log(N/df(w))</li>
+<li>term frequency(occur in a document) and document(containing word) frequency</li>
+<li>N number of all documents</li>
+</ul>
+</li>
+<li>
+<p>document representation as vectors- Vector space model
+Represent a document by a term vector</p>
+<ul>
+<li>Term: basic concept, e.g., word or phrase</li>
+<li>Each term defines one dimension – N terms defines a N-dimensional space</li>
+<li>Term weights – can be the raw term frequency or TFIDF</li>
+</ul>
+</li>
+<li>
+<p>word embedding learning</p>
+<ul>
+<li>representing words
+<ul>
+<li>A word’s meaning is given by the words that frequently appear close-by</li>
+<li>representing words by their context(within a fixed size window)
+words appear nearby</li>
+<li>use the many contexts of w to build up a representation of w</li>
+</ul>
+</li>
+<li>word embedding
+can also reduce dimensionality, capture semantics, big-of words can&rsquo;t.
+<ul>
+<li>count-based methods
+word-word matrix, term-context matrix
+<ul>
+<li>Build a word co-occurrence matrix from textual data
+<ul>
+<li>two words are similar in meaning if their context vectors are similar</li>
+</ul>
+</li>
+<li>Weighting by TFIDF/PPMI or performing Singular Vector Decomposition (SVD) on the count
+<ul>
+<li>PMI(w1,w2) = log2 P(w1,w2) / Pw1*Pw2
+do words 1 and 2 co-occur more than if they were independent?</li>
+<li>tfidf and PPMI are sparse representations</li>
+<li>alternatively, representing words using dense vectors which are short and dense</li>
+</ul>
+</li>
+<li>matrix</li>
+<li>GloVe
+Encoding meaning in vector differences
+<ul>
+<li>insights: Ratios of co-occurrence probabilities can encode meaning components</li>
+<li>shows the connection between the Count work and the Predict work
+<ul>
+<li>an appropriate scaling and objective gives Count models the properties and performance of the Predict models</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>prediction-based methods
+<ul>
+<li>the probability for each word as the next word wi</li>
+<li>word2vec
+<ul>
+<li>basic
+<ul>
+<li>Instead of counting how often each word w occurs near &ldquo;apricot”</li>
+<li>• Train a classifier on a binary prediction task:  Is w likely to show up near &ldquo;apricot&rdquo;?</li>
+<li>• We don’t actually care about this task  But we&rsquo;ll take the learned classifier weights as the word embeddings</li>
+</ul>
+</li>
+<li>insights:
+<ul>
+<li>a word w near apricot acts as gold correct answer to the question &rsquo; is w likely to show up near apricot'</li>
+<li>using running text as implicitly supervised training data</li>
+</ul>
+</li>
+<li>word2vec: skip gram task
+&ldquo;skip-gram with negative sampling&rdquo; (SGNS)
+<ul>
+<li>1Treat the target word and a neighbouring context word as positive examples</li>
+<li>2.Randomly sample other words in the lexicon to get negative samples</li>
+<li>3.Use logistic regression to train a classifier to distinguish those two cases</li>
+<li>4.Use the weights as the embeddings</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fasttext</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="16-vae">
+  16. VAE
+  <a class="heading-link" href="#16-vae">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>Autoencoder
+Unsupervised approach for learning a lower-dimensional feature representation from unlabelled training data
+<ul>
+<li>dimensionality recution here, want features to capture meaningful factors of variation in data</li>
+<li>how to train: Train such that features can be used to reconstruct original data
+<ul>
+<li>“Autoencoding” – encoding itself</li>
+</ul>
+</li>
+<li>problem
+<ul>
+<li>The latent space where the encoded vectors lie may not be continuous, or allow easy interpolation</li>
+<li>But when building a generative model, we don’t want to replicate the same image seen before. We want to generate variations on an input image from a continuous latent space.</li>
+</ul>
+</li>
+<li>De-noising auto encoder, add noise</li>
+</ul>
+</li>
+<li>Variational Autoencoder (VAE)
+their latent spaces are, by design, continuous, allowing easy random sampling and interpolation.
+<ul>
+<li>basic
+<ul>
+<li>The encoder of VAE outputs two vectors of: a vector of means, μ, and another vector of standard deviations, σ
+<ul>
+<li>Instead of an encoding vector as in standard autoencoder</li>
+</ul>
+</li>
+<li>We then sample from N(u,σ^2)  to obtain the sampled encoding, which we pass onward to the decoder</li>
+<li>The decoder is exposed to <strong>a range of variations of the encoding</strong> of the same input during training
+<ul>
+<li>The decoder not just decode single, specific encodings in the latent space (leaving the decodable latent space discontinuous), but ones that slightly vary too</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Intuition: x is an image, z is latent factors used to generate x such as attributes, orientation, etc.</li>
+<li>intractable problem
+<ul>
+<li>learn model parameters to maximise the likelihood of training data</li>
+<li>data likelihood:
+<ul>
+<li>p(X) = $$\int p(z)p(x|z)$$</li>
+<li>intractable to compute p(X|Z) for every z</li>
+<li>Posterior density also intractable: P(Z|X)</li>
+</ul>
+</li>
+<li>inaddition to decoder network modeling P(X|Z), define <strong>additoinal encoder network q(Z|X)</strong> that approximates P(Z|X)</li>
+</ul>
+</li>
+<li>evidence lower bound ELBO
+max it</li>
+<li>reparameterisation trick
+<ul>
+<li>Problem: cannot do backpropagation for a random sampling process</li>
+<li>Solution: reparameterisation trick
+<ul>
+<li>• randomly sample ε from a unit Gaussian</li>
+<li>•shift ε by the latent distribution&rsquo;s mean μ and scale it by the variance σ</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="20190525171137.png" src="https://i.loli.net/2019/05/26/5ce9693c0f17168520.png"></p>
+<h2 id="17-gan">
+  17. GAN
+  <a class="heading-link" href="#17-gan">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img alt="20190525171805.png" src="https://i.loli.net/2019/05/26/5ce96abf60d7697074.png"></p>
+<ul>
+<li>motivation
+<ul>
+<li>VAEs define intractable density function with latent variable z, Cannot optimise directly, derive and optimise lower bound on likelihood instead</li>
+<li>give up on explicitly modeling density, and just want ability to sample?</li>
+<li>GANs: learn to generate from training distribution through 2-player game
+<ul>
+<li>Generator network: try to fool the discriminator by generating real-looking images</li>
+<li>Discriminator network: try to distinguish between real and fake images</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>basic idea of GAN
+<ul>
+<li>Generator P(x) is a Neural Network</li>
+<li>The discriminator tries to learn P(y|x),  where y is the label, 0 (generated) or 1(real), and x is the real or generated data.</li>
+<li>The discriminator essentially defines a new metric</li>
+<li>loss function- Minimax objective function
+<ul>
+<li>Generator (G) wants to minimise objective such that D(G(z)) is close to 1 (discriminator is fooled into thinking generated G(z) is real)</li>
+<li>• Discriminator (D) wants to maximise objective such that D(x) is close to 1 (real) and D(G(z)) is close to 0 (fake)</li>
+</ul>
+</li>
+<li>training
+<ul>
+<li>D repeat k times, G only once</li>
+<li>stationery point
+<ul>
+<li>the generated data exactly matches the distribution of the real data</li>
+<li>the discriminator is outputting a constant value for all inputs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>comparion between GAN and VAE</li>
+<li><img alt="d4319f96856e4f63b653281f05d48f70.png" src="https://i.loli.net/2019/04/17/5cb6498822221.png"></li>
+</ul>
+
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

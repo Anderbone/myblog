@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hashtable on Jiyu</title>
+    <link>http://localhost:1313/tags/hashtable/</link>
+    <description>Recent content in Hashtable on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Mar 2024 20:06:21 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hashtable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>290. Word Pattern</title>
+      <link>http://localhost:1313/leetcode/290/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/290/</guid>
+      <description>Word Pattern - LeetCode&#xA;Given a pattern and a string s, find if s follows the same pattern. Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.&#xA;Example 1: Input: pattern = &amp;ldquo;abba&amp;rdquo;, s = &amp;ldquo;dog cat cat dog&amp;rdquo; Output: true&#xA;Example 2: Input: pattern = &amp;ldquo;abba&amp;rdquo;, s = &amp;ldquo;dog cat cat fish&amp;rdquo; Output: false&#xA;Example 3: Input: pattern = &amp;ldquo;aaaa&amp;rdquo;, s = &amp;ldquo;dog cat cat dog&amp;rdquo; Output: false</description>
+    </item>
+    <item>
+      <title>1338. Reduce Array Size to The Half</title>
+      <link>http://localhost:1313/leetcode/1338/</link>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1338/</guid>
+      <description>https://leetcode.com/problems/reduce-array-size-to-the-half/&#xA;You are given an integer array arr. You can choose a set of integers and remove all the occurrences of these integers in the array. Return the minimum size of the set so that at least half of the integers of the array are removed.&#xA;Example 1: Input: arr = [3,3,3,3,5,5,5,2,2,7] Output: 2 Explanation: Choosing {3,7} will make the new array [5,5,5,2,2] which has size 5 (i.e equal to half of the size of the old array).</description>
+    </item>
+    <item>
+      <title>1695. Maximum Erasure Value</title>
+      <link>http://localhost:1313/leetcode/1695/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1695/</guid>
+      <description>https://leetcode.com/problems/maximum-erasure-value/&#xA;You are given an array of positive integers nums and want to erase a subarray containing unique elements. The score you get by erasing the subarray is equal to the sum of its elements. Return the maximum score you can get by erasing exactly one subarray. An array b is called to be a subarray of a if it forms a contiguous subsequence of a, that is, if it is equal to a[l],a[l+1],&amp;hellip;,a[r] for some (l,r).</description>
+    </item>
+    <item>
+      <title>1679. Max Number of K-Sum Pairs</title>
+      <link>http://localhost:1313/leetcode/1679/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1679/</guid>
+      <description>Max Number of K-Sum Pairs - LeetCode&#xA;You are given an integer array nums and an integer k. In one operation, you can pick two numbers from the array whose sum equals k and remove them from the array. Return the maximum number of operations you can perform on the array.&#xA;Example 1: Input: nums = [1,2,3,4], k = 5 Output: 2 Explanation: Starting with nums = [1,2,3,4]: - Remove numbers 1 and 4, then nums = [2,3] - Remove numbers 2 and 3, then nums = [] There are no more pairs that sum up to 5, hence a total of 2 operations.</description>
+    </item>
+    <item>
+      <title>706. Design hash map</title>
+      <link>http://localhost:1313/leetcode/706/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/706/</guid>
+      <description>Design HashMap - LeetCode&#xA;Design a HashMap without using any built-in hash table libraries. Implement the MyHashMap class:&#xA;MyHashMap() initializes the object with an empty map. void put(int key, int value) inserts a (key, value) pair into the HashMap. If the key already exists in the map, update the corresponding value. int get(int key) returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key.</description>
+    </item>
+    <item>
+      <title>895. Maximum Frequency Stack</title>
+      <link>http://localhost:1313/leetcode/895/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/895/</guid>
+      <description>Maximum Frequency Stack - LeetCode&#xA;Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack. Implement the FreqStack class:&#xA;FreqStack() constructs an empty frequency stack. void push(int val) pushes an integer val onto the top of the stack. int pop() removes and returns the most frequent element in the stack. If there is a tie for the most frequent element, the element closest to the stack&#39;s top is removed and returned.</description>
+    </item>
+    <item>
+      <title>560. Subarray Sum Equals K</title>
+      <link>http://localhost:1313/leetcode/560/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/560/</guid>
+      <description>Subarray Sum Equals K - LeetCode&#xA;Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.&#xA;Example 1: Input: nums = [1,1,1], k = 2 Output: 2 Example 2: Input: nums = [1,2,3], k = 3 Output: 2&#xA;Constraints:&#xA;1 &amp;lt;= nums.length &amp;lt;= 2 * 104 -1000 &amp;lt;= nums[i] &amp;lt;= 1000 -107 &amp;lt;= k &amp;lt;= 107 code TLE $$O(n^2)$$ class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: c = 0 memo = {} memo[-1] = 0 for i in range(len(nums)): memo[i] = memo[i-1] + nums[i] for i in range(-1, len(nums)): for j in range(i+1, len(nums)): if (memo[j] - memo[i]) == k: c += 1 return c code O(n) class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: res = 0 memo = defaultdict(int) memo[0] = 1 # sum 0.</description>
+    </item>
+    <item>
+      <title>389. Find the Difference</title>
+      <link>http://localhost:1313/leetcode/389/</link>
+      <pubDate>Mon, 07 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/389/</guid>
+      <description>Find the Difference - LeetCode&#xA;You are given two strings s and t. String t is generated by random shuffling string s and then add one more letter at a random position. Return the letter that was added to t.&#xA;Example 1: Input: s = &amp;ldquo;abcd&amp;rdquo;, t = &amp;ldquo;abcde&amp;rdquo; Output: &amp;ldquo;e&amp;rdquo; Explanation: &amp;rsquo;e&amp;rsquo; is the letter that was added. Example 2: Input: s = &amp;ldquo;&amp;rdquo;, t = &amp;ldquo;y&amp;rdquo; Output: &amp;ldquo;y&amp;rdquo;</description>
+    </item>
+    <item>
+      <title>525. Contiguous Array</title>
+      <link>http://localhost:1313/leetcode/525/</link>
+      <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/525/</guid>
+      <description>Contiguous Array - LeetCode&#xA;Given a binary array nums, return __the maximum length of a contiguous subarray with an equal number of 0 and __1.&#xA;Example 1: Input: nums = [0,1] Output: 2 Explanation: [0, 1] is the longest contiguous subarray with an equal number of 0 and 1. Example 2: Input: nums = [0,1,0] Output: 2 Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.</description>
+    </item>
+    <item>
+      <title>454. 4Sum II</title>
+      <link>http://localhost:1313/leetcode/454/</link>
+      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/454/</guid>
+      <description>4Sum II - LeetCode&#xA;Given four integer arrays nums1, nums2, nums3, and nums4 all of length n, return the number of tuples (i, j, k, l) such that:&#xA;0 &amp;lt;= i, j, k, l &amp;lt; n nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0&#xA;Example 1: Input: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2] Output: 2 Explanation: The two tuples are: 1. (0, 0, 0, 1) -&amp;gt; nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0 2.</description>
+    </item>
+    <item>
+      <title>438. Find All Anagrams in a String</title>
+      <link>http://localhost:1313/leetcode/438/</link>
+      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/438/</guid>
+      <description>Find All Anagrams in a String - LeetCode&#xA;Given two strings s and p, return __an array of all the start indices of p&amp;rsquo;s anagrams in __s. You may return the answer in any order. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.&#xA;Example 1: Input: s = &amp;ldquo;cbaebabacd&amp;rdquo;, p = &amp;ldquo;abc&amp;rdquo; Output: [0,6] Explanation: The substring with start index = 0 is &amp;ldquo;cba&amp;rdquo;, which is an anagram of &amp;ldquo;abc&amp;rdquo;.</description>
+    </item>
+    <item>
+      <title>249. Group Shifted Strings</title>
+      <link>http://localhost:1313/leetcode/249/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/249/</guid>
+      <description>Group Shifted Strings - LeetCode&#xA;We can shift a string by shifting each of its letters to its successive letter.&#xA;For example, &amp;ldquo;abc&amp;rdquo; can be shifted to be &amp;ldquo;bcd&amp;rdquo;.We can keep shifting the string to form a sequence.&#xA;For example, we can keep shifting &amp;ldquo;abc&amp;rdquo; to form the sequence: &amp;ldquo;abc&amp;rdquo; -&amp;gt; &amp;ldquo;bcd&amp;rdquo; -&amp;gt; &amp;hellip; -&amp;gt; &amp;ldquo;xyz&amp;rdquo;.Given an array of strings strings, group all strings[i] that belong to the same shifting sequence.</description>
+    </item>
+    <item>
+      <title>1337. The K Weakest Rows in a Matrix</title>
+      <link>http://localhost:1313/leetcode/1337/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1337/</guid>
+      <description>The K Weakest Rows in a Matrix - LeetCode&#xA;You are given an m x n binary matrix mat of 1&amp;rsquo;s (representing soldiers) and 0&amp;rsquo;s (representing civilians). The soldiers are positioned in front of the civilians. That is, all the 1&amp;rsquo;s will appear to the left of all the 0&amp;rsquo;s in each row. A row i is weaker than a row j if one of the following is true:&#xA;The number of soldiers in row i is less than the number of soldiers in row j.</description>
+    </item>
+    <item>
+      <title>997. Find the Town Judge</title>
+      <link>http://localhost:1313/leetcode/997/</link>
+      <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/997/</guid>
+      <description>Find the Town Judge - LeetCode&#xA;In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. If the town judge exists, then:&#xA;The town judge trusts nobody. Everybody (except for the town judge) trusts the town judge. There is exactly one person that satisfies properties 1 and 2.You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.</description>
+    </item>
+    <item>
+      <title>1244. Design A Leaderboard</title>
+      <link>http://localhost:1313/leetcode/1244/</link>
+      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1244/</guid>
+      <description>Design A Leaderboard - LeetCode&#xA;Design a Leaderboard class, which has 3 functions:&#xA;addScore(playerId, score): Update the leaderboard by adding score to the given player&amp;rsquo;s score. If there is no player with such id in the leaderboard, add him to the leaderboard with the given score. top(K): Return the score sum of the top K players. reset(playerId): Reset the score of the player with the given id to 0 (in other words erase it from the leaderboard).</description>
+    </item>
+    <item>
+      <title>771. jewels and stones</title>
+      <link>http://localhost:1313/leetcode/771/</link>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/771/</guid>
+      <description>You&amp;rsquo;re given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels. Letters are case sensitive, so &amp;ldquo;a&amp;rdquo; is considered a different type of stone from &amp;ldquo;A&amp;rdquo;.&#xA;Example 1: Input: jewels = &amp;ldquo;aA&amp;rdquo;, stones = &amp;ldquo;aAAbbbb&amp;rdquo; Output: 3</description>
+    </item>
+    <item>
+      <title>652. Find duplicate subtrees</title>
+      <link>http://localhost:1313/leetcode/652/</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/652/</guid>
+      <description>Given the root of a binary tree, return all duplicate subtrees. For each kind of duplicate subtrees, you only need to return the root node of any one of them. Two trees are duplicate if they have the same structure with the same node values.&#xA;Example 1:&#xA;Input: root = [1,2,3,4,null,2,4,null,null,4] Output: [[2,4],[4]]&#xA;code class Solution: # key the sub tree, value, value is count of this sub tree def findDuplicateSubtrees(self, root: TreeNode) -&amp;gt; List[TreeNode]: if root is None: return [] self.</description>
+    </item>
+    <item>
+      <title>219. Contains duplicate II</title>
+      <link>http://localhost:1313/leetcode/219/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/219/</guid>
+      <description>Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) &amp;lt;= k.&#xA;Example 1: Input: nums = [1,2,3,1], k = 3 Output: true&#xA;code class Solution: def containsNearbyDuplicate(self, nums, k): dic = {} for i, v in enumerate(nums): if v in dic and i - dic[v] &amp;lt;= k: return True else: dic[v] = i return False </description>
+    </item>
+    <item>
+      <title>Python list/dict functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-list-dict/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-list-dict/</guid>
+      <description>List len(array) : length of array list.indexof(obj) enumerate(array) : adds counter at the beginning. for count, item in enumberate([&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]) # 0x 1y 2z range(0,len(mylist)1,2) range(0,3), is 0,1,2 for i in reversed(range(len(A))) nums.append(val), nums.remove(val), nums.reverse() nums.extend(nums2) list.insert(index, obj) list.pop() default pop index is -1, remove the last one nums[:] copy the value within function: b[:]=a .copy is equals to b[:] temp = self.original[:] copy.deepcopy could copy nested list import copy , copy.</description>
+    </item>
+  </channel>
+</rss>

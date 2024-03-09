@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Warwick on Jiyu</title>
+    <link>http://localhost:1313/tags/warwick/</link>
+    <description>Recent content in Warwick on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Dec 2021 17:11:05 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/warwick/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data mining module outline</title>
+      <link>http://localhost:1313/dev/warwick-909/</link>
+      <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-909/</guid>
+      <description>For Warwick University module 909, data mining.&#xA;1. intro machine learning framework define a set of functions define a fitting criteria pick the best function machine learning learn a function of: $f:x \to{y}$ y is discrete: classification y is continuous: regression roadmap supervised learning regression classification logistic regression, SVM, neural networks unsupervised learning clustering kmeans, AHC dimension reduction, PCA ensemble learning transfer learning 2. data defination collection of data objects and their attributes attribute is a property or characteristic of an object discrete/continuous nominal: values are distinct symbols ID, eye color, zip codes ordinal: impose order on values but no distance between values defined military rank, exam grade, rating interval: has a fixed size of interval between data points year, temperature ratio: same as interval,0 means does not exist weight, age data quality noise outliers missing values duplicate 3.</description>
+    </item>
+    <item>
+      <title>Data analysis module outline</title>
+      <link>http://localhost:1313/dev/warwick-910/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-910/</guid>
+      <description>For Warwick University module 910, Data analysis.&#xA;2. math back ground why frequency/rank for heavy tailed? The frequency/rank plot because the CCDF is a monotonous function. Moreover, unlike the PDF function, the CCDF displays a significantly lower variability in the tail.&#xA;independence: event and random variables HH and TT not independent because the mere occurrence of one would tell us for sure that the other can’t happen. Conditional Probability Heavy-Tailed Distributions roughly non-negligible probabilities at large values far to the right.</description>
+    </item>
+    <item>
+      <title>High-performance computing module outline</title>
+      <link>http://localhost:1313/dev/warwick-402/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-402/</guid>
+      <description>For Warwick University module 402, high performance computation.&#xA;1.Fundamentals 1.1 the technologies needed to support HPC computer architecture CPU, memory VLSI, transistors multicore, to ease the density(temperature etc.) GPU networking bandwidth, latency communication protocols network topology compilers identify inefficient implementations make use of the characteristics of the computer arcitecture choose a suitable compiler for a certain architecture algorithms design parallel paradigm of parallel programming workload and resource manager task scheduling and resource allocation metrcs 1.</description>
+    </item>
+    <item>
+      <title>Natural language processing module outline</title>
+      <link>http://localhost:1313/dev/warwick-918/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-918/</guid>
+      <description>For Warwick University module 918, natural language processing.&#xA;Question 1: Regular expressions, linguistic preprocessing, minimum edit distance algorithm. 1 regular expression remember use \.&#xA;false positive type1: have output, shouldn&amp;rsquo;t. precision = tp/(tp+fp)&#xA;false negatives(type 2): haven&amp;rsquo;t output, but should minimise, increase recall recall = tp/(tp+fn)&#xA;F1= 2 precision* recall/(precision+recall)&#xA;2 text preprocessing vocabulary size: the number of different types of tokens in the text.&#xA;All need 3 steps tokenizing/segmentting words in running text normalizing word formats segmenting sentences in running text Issues of tokenisation What counts as a word is usually application specific.</description>
+    </item>
+    <item>
+      <title>Sensor network module outline</title>
+      <link>http://localhost:1313/dev/warwick-912/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/warwick-912/</guid>
+      <description>For Warwick University module 912, sensor network.&#xA;Link quality estimation 2 link monitor active A node monitors the links to its neighbours by sending probe packets. passive Passive link monitoring exploits existing traffic without incurring additional communication overhead. A node listens to transmitted packets (even if these packets are not addressed to it). Process called (over-hearing). can also listen to ack sent by neighbours. lack up-to-date. Data link layer 3 hidden, exposed CSMA/CA MACAW IEEE802.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="This chapter focues on Spring web framework without database.
+2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful).">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Spring In Action 02 - Developing web app"/>
+<meta name="twitter:description" content="This chapter focues on Spring web framework without database.
+2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful)."/>
+
+    <meta property="og:title" content="Spring In Action 02 - Developing web app" />
+<meta property="og:description" content="This chapter focues on Spring web framework without database.
+2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/spring02-web/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2020-02-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-13T10:59:17+01:00" />
+
+
+
+
+    <title>
+Spring In Action 02 - Developing web app · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/spring02-web/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/spring02-web/">
+                    Spring In Action 02 - Developing web app
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2020-02-19T00:00:00Z'>
+                      February 19, 2020
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/spring/">spring</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/java/">java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/spring-in-action/">spring-in-action</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p>This chapter focues on Spring web framework without database.</p>
+<h2 id="21-displaying-infomation">
+  2.1 Displaying infomation
+  <a class="heading-link" href="#21-displaying-infomation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img src="https://i.imgur.com/PeLvW5D.png"></p>
+<h3 id="211-establishing-the-domain">
+  2.1.1 Establishing the domain
+  <a class="heading-link" href="#211-establishing-the-domain">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> tacos; 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> lombok.Data;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> lombok.RequiredArgsConstructor; 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Data</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequiredArgsConstructor</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Ingredient</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String id; 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String name; 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Type type;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">enum</span> Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="212-creating-a-controller-class">
+  2.1.2 Creating a controller class
+  <a class="heading-link" href="#212-creating-a-controller-class">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful). In this chapter, we’re focusing on the kinds of controllers that use views to produce content for web browsers. When we get to chapter 6, we’ll look at writing controllers that handle requests in a REST API.</p>
+<ul>
+<li>Handle HTTP GET requests where the request path is /design</li>
+<li>Build a list of ingredients</li>
+<li>Hand the request and the ingredient data off to a view template to be rendered as HTML and sent to the requesting web browser
+<img src="https://i.imgur.com/kiGks3L.png"></li>
+</ul>
+<p>the @Data annotation at the class level is provided by Lombok and tells Lombok to generate all of those missing methods as well as a constructor that accepts all final properties as arguments. By using Lombok, you can keep the code for Ingredient slim and trim.</p>
+<p>@GetMapping is just one member of a family of request-mapping annotations. Table 2.1 lists all of the request-mapping annotations available in Spring MVC.</p>
+<p><img src="https://i.imgur.com/zE6wqiw.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>	Type<span style="color:#f92672">[]</span> types <span style="color:#f92672">=</span> Ingredient.<span style="color:#a6e22e">Type</span>.<span style="color:#a6e22e">values</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> (Type type : types) {
+</span></span><span style="display:flex;"><span>	  model.<span style="color:#a6e22e">addAttribute</span>(type.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toLowerCase</span>(),
+</span></span><span style="display:flex;"><span>	      filterByType(ingredients, type));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@GetMapping</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">showDesignForm</span>(Model model) {
+</span></span><span style="display:flex;"><span>    model.<span style="color:#a6e22e">addAttribute</span>(<span style="color:#e6db74">&#34;design&#34;</span>, <span style="color:#66d9ef">new</span> Taco());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;design&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>Data placed in model attributes is copied into the servlet response attributes, where view can find them.</p>
+<h3 id="213-designing-the-view">
+  2.1.3 Designing the view
+  <a class="heading-link" href="#213-designing-the-view">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Spring offers several great options for defining views, including JavaServer Pages (JSP), Thymeleaf, FreeMarker, Mustache, and Groovy-based templates. For now, we’ll use Thymeleaf.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${message}&#34;</span>&gt;placeholder message&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>When the template is rendered into HTML, the body of the <!-- raw HTML omitted --> element will be replaced with the value of the servlet request attribute whose key is &ldquo;message&rdquo;. The th:text attribute is a Thymeleaf-namespaced attribute that performs the replacement. The ${} operator tells it to use the value of a request attribute (&ldquo;message&rdquo;, in this case).</p>
+<p>Model has attribute &ldquo;wrap&rdquo; etc. already, we saved them before manually and here we show them. Then we save our checkbox result into &ldquo;ingredients&rdquo;, they are bound to ingredients properties of Taco class, so it can be created automatically later.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h3</span>&gt;Designate your wrap:&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">th:each</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ingredient : ${wrap}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ingredients&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">th:value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${ingredient.id}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${ingredient.name}&#34;</span>&gt;INGREDIENT&lt;/<span style="color:#f92672">span</span>&gt;&lt;<span style="color:#f92672">br</span>/&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Here you use th:each attribute on the <!-- raw HTML omitted --> tag to repeat rendering of the <!-- raw HTML omitted --> once for each item in the collection found in the <strong>wrap</strong> request attribute. On each iteration, the ingredient item is bound to a Thymeleaf variable named ingredient. Inside <!-- raw HTML omitted -->, there&rsquo;s a checkbox <!-- raw HTML omitted --> and a <!-- raw HTML omitted -->.</p>
+<h2 id="22-processing-form-submission">
+  2.2 Processing form submission
+  <a class="heading-link" href="#22-processing-form-submission">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Just like @GetMapping handles GET requests, you can use @PostMapping to handle POST requests. For handling taco design submissions, add the processDesign() method in the following listing to DesignTacoController.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@PostMapping</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">processDesign</span>(Taco design) { <span style="color:#75715e">// Save the taco design... </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// We&#39;ll do this in chapter 3 </span>
+</span></span><span style="display:flex;"><span>    log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Processing design: &#34;</span> <span style="color:#f92672">+</span> design);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;redirect:/orders/current&#34;</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When the form is submitted, the fields in the form are bound to properties of a Taco object (name and ingredients) that’s passed as a parameter into processDesign(). From there, the processDesign() method can do whatever it wants with the Taco object.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">th:field</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*{name}&#34;</span>/&gt;
+</span></span></code></pre></div><p>If you look back at the form in listing 2.3, you’ll see several checkbox elements, all with the name ingredients, and a text input element named name. Those fields in the form correspond directly to the ingredients and name properties of the Taco class. The Name field on the form only needs to capture a simple textual value. Thus
+the name property of Taco is of type String. The ingredients check boxes also have textual values, but because zero or many of them may be selected, the ingredients property that they’re bound to is a List<!-- raw HTML omitted --> that will capture each of the chosen ingredients.</p>
+<h2 id="23-validating-form-input">
+  2.3 Validating form input
+  <a class="heading-link" href="#23-validating-form-input">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<h3 id="231-declaring-validation-rules">
+  2.3.1 Declaring validation rules
+  <a class="heading-link" href="#231-declaring-validation-rules">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>Declare validation rules on the class that is to be validated: specifically, the Taco class.</li>
+<li>Specify that validation should be performed in the controller methods that require validation: specifically, the DesignTacoController’s processDesign() method and OrderController’s processOrder() method.</li>
+<li>Modify the form views to display validation errors</li>
+</ul>
+<h3 id="232-performing-validation-at-form-binding">
+  2.3.2 Performing validation at form binding
+  <a class="heading-link" href="#232-performing-validation-at-form-binding">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>The @Valid annotation tells Spring MVC to perform validation on the submitted Taco object after it’s bound to the submitted form data and before the processDesign() method is called.</p>
+<h3 id="233-displaying-validation-errors">
+  2.3.3 Displaying validation errors
+  <a class="heading-link" href="#233-displaying-validation-errors">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>Thymeleaf offers convenient access to the Errors object via the fields property and with its th:errors attribute</p>
+<h2 id="24-working-with-view-controllers">
+  2.4 Working with view controllers
+  <a class="heading-link" href="#24-working-with-view-controllers">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>They’re all annotated with @Controller to indicate that they’re controller classes that should be automatically discovered by Spring component scanning and instantiated as beans in the Spring application context.</li>
+<li>All but HomeController are annotated with @RequestMapping at the class level to define a baseline request pattern that the controller will handle.</li>
+<li>They all have one or more methods that are annotated with @GetMapping or @PostMapping to provide specifics on which methods should handle which kinds of requests.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebConfig</span> <span style="color:#66d9ef">implements</span> WebMvcConfigurer { 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addViewControllers</span>(ViewControllerRegistry registry) { 
+</span></span><span style="display:flex;"><span>        registry.<span style="color:#a6e22e">addViewController</span>(<span style="color:#e6db74">&#34;/&#34;</span>).<span style="color:#a6e22e">setViewName</span>(<span style="color:#e6db74">&#34;home&#34;</span>);
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="25-choosing-a-view-template-library">
+  2.5 Choosing a view template library
+  <a class="heading-link" href="#25-choosing-a-view-template-library">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><img src="https://i.imgur.com/plK2L3n.png"></p>
+<h3 id="251-caching-templates">
+  2.5.1 Caching templates
+  <a class="heading-link" href="#251-caching-templates">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>For example, to disable Thymeleaf caching, add the following line in application.properties:
+spring.thymeleaf.cache=false</p>
+<p><img src="https://i.imgur.com/2cRWVsq.png"></p>
+<h2 id="summary">
+  Summary
+  <a class="heading-link" href="#summary">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>Spring offers a powerful web framework called Spring MVC that can be used to develop the web frontend for a Spring application.</li>
+<li>Spring MVC is annotation-based, enabling the declaration of request-handling methods with annotations such as @RequestMapping, @GetMapping, and @PostMapping.</li>
+<li>Most request-handling methods conclude by returning the logical name of a view, such as a Thymeleaf template, to which the request (along with any model data) is forwarded.</li>
+<li>Spring MVC supports validation through the Java Bean Validation API and implementations of the Validation API such as Hibernate Validator.</li>
+<li>View controllers can be used to handle HTTP GET requests for which no model data or processing is required.</li>
+<li>In addition to Thymeleaf, Spring supports a variety of view options, including FreeMarker, Groovy Templates, and Mustache.</li>
+</ul>
+<h2 id="error-correction">
+  Error Correction
+  <a class="heading-link" href="#error-correction">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Listing 2.4, processDesign(Taco design), rather than (Design design).</p>
+<ul>
+<li>DesignTacoController.java</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// tag::head[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> tacos.web;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Arrays;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.stream.Collectors;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.validation.Valid;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.stereotype.Controller;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.ui.Model;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.validation.Errors;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.GetMapping;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.ModelAttribute;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.PostMapping;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMapping;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> lombok.extern.slf4j.Slf4j;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Ingredient;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Ingredient.Type;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tacos.Taco;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span>(<span style="color:#e6db74">&#34;/design&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DesignTacoController</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//end::head[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ModelAttribute</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addIngredientsToModel</span>(Model model) {
+</span></span><span style="display:flex;"><span>	List<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> ingredients <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;FLTO&#34;</span>, <span style="color:#e6db74">&#34;Flour Tortilla&#34;</span>, Type.<span style="color:#a6e22e">WRAP</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;COTO&#34;</span>, <span style="color:#e6db74">&#34;Corn Tortilla&#34;</span>, Type.<span style="color:#a6e22e">WRAP</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;GRBF&#34;</span>, <span style="color:#e6db74">&#34;Ground Beef&#34;</span>, Type.<span style="color:#a6e22e">PROTEIN</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;CARN&#34;</span>, <span style="color:#e6db74">&#34;Carnitas&#34;</span>, Type.<span style="color:#a6e22e">PROTEIN</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;TMTO&#34;</span>, <span style="color:#e6db74">&#34;Diced Tomatoes&#34;</span>, Type.<span style="color:#a6e22e">VEGGIES</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;LETC&#34;</span>, <span style="color:#e6db74">&#34;Lettuce&#34;</span>, Type.<span style="color:#a6e22e">VEGGIES</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;CHED&#34;</span>, <span style="color:#e6db74">&#34;Cheddar&#34;</span>, Type.<span style="color:#a6e22e">CHEESE</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;JACK&#34;</span>, <span style="color:#e6db74">&#34;Monterrey Jack&#34;</span>, Type.<span style="color:#a6e22e">CHEESE</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;SLSA&#34;</span>, <span style="color:#e6db74">&#34;Salsa&#34;</span>, Type.<span style="color:#a6e22e">SAUCE</span>),
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">new</span> Ingredient(<span style="color:#e6db74">&#34;SRCR&#34;</span>, <span style="color:#e6db74">&#34;Sour Cream&#34;</span>, Type.<span style="color:#a6e22e">SAUCE</span>)
+</span></span><span style="display:flex;"><span>	);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	Type<span style="color:#f92672">[]</span> types <span style="color:#f92672">=</span> Ingredient.<span style="color:#a6e22e">Type</span>.<span style="color:#a6e22e">values</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> (Type type : types) {
+</span></span><span style="display:flex;"><span>	  model.<span style="color:#a6e22e">addAttribute</span>(type.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toLowerCase</span>(),
+</span></span><span style="display:flex;"><span>	      filterByType(ingredients, type));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//tag::showDesignForm[]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@GetMapping</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">showDesignForm</span>(Model model) {
+</span></span><span style="display:flex;"><span>    model.<span style="color:#a6e22e">addAttribute</span>(<span style="color:#e6db74">&#34;design&#34;</span>, <span style="color:#66d9ef">new</span> Taco());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;design&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//end::showDesignForm[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//tag::processDesign[]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  @PostMapping
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  public String processDesign(Design design) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    // Save the taco design...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    // We&#39;ll do this in chapter 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    log.info(&#34;Processing design: &#34; + design);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    return &#34;redirect:/orders/current&#34;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//end::processDesign[]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//tag::processDesignValidated[]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@PostMapping</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">processDesign</span>(<span style="color:#a6e22e">@Valid</span> <span style="color:#a6e22e">@ModelAttribute</span>(<span style="color:#e6db74">&#34;design&#34;</span>) Taco design, Errors errors, Model model) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (errors.<span style="color:#a6e22e">hasErrors</span>()) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;design&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Save the taco design...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// We&#39;ll do this in chapter 3</span>
+</span></span><span style="display:flex;"><span>    log.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Processing design: &#34;</span> <span style="color:#f92672">+</span> design);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;redirect:/orders/current&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//end::processDesignValidated[]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//tag::filterByType[]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">filterByType</span>(
+</span></span><span style="display:flex;"><span>      List<span style="color:#f92672">&lt;</span>Ingredient<span style="color:#f92672">&gt;</span> ingredients, Type type) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ingredients
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">stream</span>()
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">filter</span>(x <span style="color:#f92672">-&gt;</span> x.<span style="color:#a6e22e">getType</span>().<span style="color:#a6e22e">equals</span>(type))
+</span></span><span style="display:flex;"><span>              .<span style="color:#a6e22e">collect</span>(Collectors.<span style="color:#a6e22e">toList</span>());
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//end::filterByType[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// tag::foot[]</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// end::foot[]</span>
+</span></span></code></pre></div>
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

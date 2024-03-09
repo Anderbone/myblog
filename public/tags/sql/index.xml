@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sql on Jiyu</title>
+    <link>http://localhost:1313/tags/sql/</link>
+    <description>Recent content in Sql on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Apr 2022 21:31:22 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1050. Actors and Directors Who Cooperated At Least Three Times</title>
+      <link>http://localhost:1313/leetcode/1050/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1050/</guid>
+      <description>Actors and Directors Who Cooperated At Least Three Times - LeetCode&#xA;Write a SQL query for a report that provides the pairs (actor_id, director_id) where the actor has cooperated with the director at least three times. Return the result table in any order. The query result format is in the following example.&#xA;code SELECT actor_id, director_id FROM ActorDirector GROUP BY actor_id, director_id HAVING COUNT(*)&amp;gt;=3 </description>
+    </item>
+    <item>
+      <title>586. Customer Placing the Largest Number of Orders</title>
+      <link>http://localhost:1313/leetcode/586/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/586/</guid>
+      <description>Customer Placing the Largest Number of Orders - LeetCode&#xA;Write an SQL query to find the customer_number for the customer who has placed the largest number of orders. The test cases are generated so that exactly one customer will have placed more orders than any other customer. The query result format is in the following example.&#xA;code select top 1 customer_number from Orders group by customer_number order by count(*) desc </description>
+    </item>
+    <item>
+      <title>1511. Customer Order Frequency</title>
+      <link>http://localhost:1313/leetcode/1511/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1511/</guid>
+      <description>Customer Order Frequency - LeetCode&#xA;Write an SQL query to report the customer_id and customer_name of customers who have spent at least $100 in each month of June and July 2020.&#xA;code mysql SELECT customer_id, name FROM Customers JOIN Orders USING(customer_id) JOIN Product USING(product_id) GROUP BY customer_id HAVING SUM(IF(LEFT(order_date, 7) = &amp;#39;2020-06&amp;#39;, quantity, 0) * price) &amp;gt;= 100 AND SUM(IF(LEFT(order_date, 7) = &amp;#39;2020-07&amp;#39;, quantity, 0) * price) &amp;gt;= 100 code mssql select o.</description>
+    </item>
+    <item>
+      <title>607. Sales Person</title>
+      <link>http://localhost:1313/leetcode/607/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/607/</guid>
+      <description>Sales Person - LeetCode1&#xA;code select name from SalesPerson where sales_id not in (select o.sales_id from Orders o join Company c on c.com_id = o.com_id where c.name = &amp;#39;RED&amp;#39; ) </description>
+    </item>
+    <item>
+      <title>1179. Reformat Department Table</title>
+      <link>http://localhost:1313/leetcode/1179/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1179/</guid>
+      <description>Reformat Department Table - LeetCode code #groupby SELECT id, MAX(CASE WHEN month = &amp;#39;Jan&amp;#39; THEN revenue ELSE null END) AS Jan_Revenue, MAX(CASE WHEN month = &amp;#39;Feb&amp;#39; THEN revenue ELSE null END) AS Feb_Revenue, MAX(CASE WHEN month = &amp;#39;Mar&amp;#39; THEN revenue ELSE null END) AS Mar_Revenue, MAX(CASE WHEN month = &amp;#39;Apr&amp;#39; THEN revenue ELSE null END) AS Apr_Revenue, MAX(CASE WHEN month = &amp;#39;May&amp;#39; THEN revenue ELSE null END) AS May_Revenue, MAX(CASE WHEN month = &amp;#39;Jun&amp;#39; THEN revenue ELSE null END) AS Jun_Revenue, MAX(CASE WHEN month = &amp;#39;Jul&amp;#39; THEN revenue ELSE null END) AS Jul_Revenue, MAX(CASE WHEN month = &amp;#39;Aug&amp;#39; THEN revenue ELSE null END) AS Aug_Revenue, MAX(CASE WHEN month = &amp;#39;Sep&amp;#39; THEN revenue ELSE null END) AS Sep_Revenue, MAX(CASE WHEN month = &amp;#39;Oct&amp;#39; THEN revenue ELSE null END) AS Oct_Revenue, MAX(CASE WHEN month = &amp;#39;Nov&amp;#39; THEN revenue ELSE null END) AS Nov_Revenue, MAX(CASE WHEN month = &amp;#39;Dec&amp;#39; THEN revenue ELSE null END) AS Dec_Revenue FROM Department GROUP BY id </description>
+    </item>
+    <item>
+      <title>175. Combine Two Tables</title>
+      <link>http://localhost:1313/leetcode/175/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/175/</guid>
+      <description>Combine Two Tables - LeetCode code select firstName, lastName, city, state from Person p left join Address a on p.personId = a.personId </description>
+    </item>
+    <item>
+      <title>176. Second Highest Salary</title>
+      <link>http://localhost:1313/leetcode/176/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/176/</guid>
+      <description>Second Highest Salary - LeetCode code mssql select isnull( (select distinct salary as SecondHighestSalary from( select *, dense_rank() over(order by Salary desc) as rnum from Employee) a where rnum=2), null) as SecondHighestSalary code mssql SELECT (SELECT t.Salary FROM (SELECT DISTINCT Salary, DENSE_RANK() OVER (ORDER BY Salary DESC) AS salary_rank FROM Employee ) t WHERE t.salary_rank = 2 ) AS SecondHighestSalary code mysql SELECT (SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1) AS SecondHighestSalary ; </description>
+    </item>
+    <item>
+      <title>181. Employees Earning More Than Their Managers</title>
+      <link>http://localhost:1313/leetcode/181/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/181/</guid>
+      <description>Employees Earning More Than Their Managers - LeetCode&#xA;| id | name | salary | managerId |&#xA;Write an SQL query to find the employees who earn more than their managers.&#xA;code SELECT a.Name AS &amp;#39;Employee&amp;#39; FROM Employee AS a, Employee AS b WHERE a.ManagerId = b.Id AND a.Salary &amp;gt; b.Salary ; code select e1.name as &amp;#34;Employee&amp;#34; from Employee e1 inner join Employee e2 on e1.managerId = e2.id where e1.salary &amp;gt; e2.</description>
+    </item>
+    <item>
+      <title>197. Rising Temperature</title>
+      <link>http://localhost:1313/leetcode/197/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/197/</guid>
+      <description>Rising Temperature - LeetCode code select w1.id as &amp;#39;Id&amp;#39; from Weather w1 join Weather w2 on DATEDIFF(dd, w2.recordDate, w1.recordDate) = 1 where w1.temperature &amp;gt; w2.temperature </description>
+    </item>
+    <item>
+      <title>596. Classes More Than 5 Students</title>
+      <link>http://localhost:1313/leetcode/596/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/596/</guid>
+      <description>Classes More Than 5 Students - LeetCode code select class from Courses group by class having count(student) &amp;gt;= 5 code select class from Courses group by class having count(distinct student) &amp;gt;= 5 </description>
+    </item>
+    <item>
+      <title>183. Customers Who Never Order</title>
+      <link>http://localhost:1313/leetcode/183/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/183/</guid>
+      <description>Customers Who Never Order - LeetCode&#xA;Write an SQL query to report all customers who never order anything. Return the result table in any order.&#xA;Input: Customers table:&#xA;+&amp;mdash;-+&amp;mdash;&amp;mdash;-+&#xA;| id | name |&#xA;+&amp;mdash;-+&amp;mdash;&amp;mdash;-+&#xA;| 1 | Joe |&#xA;| 2 | Henry |&#xA;| 3 | Sam |&#xA;| 4 | Max |&#xA;+&amp;mdash;-+&amp;mdash;&amp;mdash;-+&#xA;Orders table:&#xA;+&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;+&#xA;| id | customerId |&#xA;+&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;+&#xA;| 1 | 3 |</description>
+    </item>
+    <item>
+      <title>603. Consecutive Available Seats</title>
+      <link>http://localhost:1313/leetcode/603/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/603/</guid>
+      <description>Consecutive Available Seats - LeetCode&#xA;Table: Cinema +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;+ | Column Name | Type | +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;+ | seat_id | int | | free | bool | +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;+&#xA;seat_id is an auto-increment primary key column for this table. Each row of this table indicates whether the ith seat is free or not. 1 means free while 0 means occupied.&#xA;Write an SQL query to report all the consecutive available seats in the cinema.</description>
+    </item>
+  </channel>
+</rss>

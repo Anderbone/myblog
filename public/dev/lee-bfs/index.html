@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="BFS Template /** * Return the length of the shortest path between root and target node. */ int BFS(Node root, Node target) { Queue&lt;Node&gt; queue; // store all nodes which are waiting to be processed Set&lt;Node&gt; visited; // store all the nodes that we&#39;ve visited int step = 0; // number of steps neeeded from root to current node // initialize add root to queue; add root to visited; // BFS while (queue is not empty) { step = step &#43; 1; // iterate the nodes which are already in the queue int size = queue.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="leetcode questions: BFS"/>
+<meta name="twitter:description" content="BFS Template /** * Return the length of the shortest path between root and target node. */ int BFS(Node root, Node target) { Queue&lt;Node&gt; queue; // store all nodes which are waiting to be processed Set&lt;Node&gt; visited; // store all the nodes that we&#39;ve visited int step = 0; // number of steps neeeded from root to current node // initialize add root to queue; add root to visited; // BFS while (queue is not empty) { step = step &#43; 1; // iterate the nodes which are already in the queue int size = queue."/>
+
+    <meta property="og:title" content="leetcode questions: BFS" />
+<meta property="og:description" content="BFS Template /** * Return the length of the shortest path between root and target node. */ int BFS(Node root, Node target) { Queue&lt;Node&gt; queue; // store all nodes which are waiting to be processed Set&lt;Node&gt; visited; // store all the nodes that we&#39;ve visited int step = 0; // number of steps neeeded from root to current node // initialize add root to queue; add root to visited; // BFS while (queue is not empty) { step = step &#43; 1; // iterate the nodes which are already in the queue int size = queue." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/lee-bfs/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2021-10-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-09T21:12:03+01:00" />
+
+
+
+
+    <title>
+leetcode questions: BFS · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/lee-bfs/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/lee-bfs/">
+                    leetcode questions: BFS
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2021-10-11T00:00:00Z'>
+                      October 11, 2021
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/bfs/">bfs</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/leetcode-summary/">leetcode summary</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <h3 id="bfs-template">
+  BFS Template
+  <a class="heading-link" href="#bfs-template">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Return the length of the shortest path between root and target node.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BFS</span>(Node root, Node target) {
+</span></span><span style="display:flex;"><span>    Queue<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> queue;  <span style="color:#75715e">// store all nodes which are waiting to be processed</span>
+</span></span><span style="display:flex;"><span>    Set<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> visited;  <span style="color:#75715e">// store all the nodes that we&#39;ve visited</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> step <span style="color:#f92672">=</span> 0;       <span style="color:#75715e">// number of steps neeeded from root to current node</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// initialize</span>
+</span></span><span style="display:flex;"><span>    add root to queue;
+</span></span><span style="display:flex;"><span>    add root to visited;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// BFS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (queue is not empty) {
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> step <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// iterate the nodes which are already in the queue</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> queue.<span style="color:#a6e22e">size</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> size; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>            Node cur <span style="color:#f92672">=</span> the first node in queue;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> step <span style="color:#66d9ef">if</span> cur is target;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (Node next : the neighbors of cur) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (next is not in used) {
+</span></span><span style="display:flex;"><span>                    add next to queue;
+</span></span><span style="display:flex;"><span>                    add next to visited;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            remove the first node from queue;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;          <span style="color:#75715e">// there is no path from root to target</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="133-clone-graphhttpsyanjiyucomleetcode133">
+  <a href="https://yanjiyu.com/leetcode/133/">133. Clone graph</a>
+  <a class="heading-link" href="#133-clone-graphhttpsyanjiyucomleetcode133">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>Given a reference of a node in a <strong><a href="https://en.wikipedia.org/wiki/Connectivity_(graph_theory)#Connected_graph">connected</a></strong> undirected graph.
+Return a <a href="https://en.wikipedia.org/wiki/Object_copying#Deep_copy">deep copy</a> (clone) of the graph.
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
+class Node { public int val; public List<!-- raw HTML omitted --> neighbors; }</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cloneGraph</span>(self, node): <span style="color:#75715e"># BFS </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> node:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> node
+</span></span><span style="display:flex;"><span>        m <span style="color:#f92672">=</span> {node: Node(node<span style="color:#f92672">.</span>val)}
+</span></span><span style="display:flex;"><span>        deque <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([node])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> deque:
+</span></span><span style="display:flex;"><span>            n <span style="color:#f92672">=</span> deque<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> neigh <span style="color:#f92672">in</span> n<span style="color:#f92672">.</span>neighbors:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> neigh <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> m:
+</span></span><span style="display:flex;"><span>                    deque<span style="color:#f92672">.</span>append(neigh)
+</span></span><span style="display:flex;"><span>                    m[neigh] <span style="color:#f92672">=</span> Node(neigh<span style="color:#f92672">.</span>val)
+</span></span><span style="display:flex;"><span>                m[n]<span style="color:#f92672">.</span>neighbors<span style="color:#f92672">.</span>append(m[neigh])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> m[node]
+</span></span></code></pre></div><ul>
+<li>code bfs</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Definition for a Node.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">class Node {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    public int val;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    public List&lt;Node&gt; neighbors;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    public Node() {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    public Node(int _val,List&lt;Node&gt; _neighbors) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        val = _val;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        neighbors = _neighbors;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Node <span style="color:#a6e22e">cloneGraph</span>(Node node) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> node;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Hash map to save the visited node and it&#39;s respective clone</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// as key and value respectively. This helps to avoid cycles.</span>
+</span></span><span style="display:flex;"><span>        HashMap<span style="color:#f92672">&lt;</span>Node, Node<span style="color:#f92672">&gt;</span> visited <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Put the first node in the queue</span>
+</span></span><span style="display:flex;"><span>        LinkedList<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> ();
+</span></span><span style="display:flex;"><span>        queue.<span style="color:#a6e22e">add</span>(node);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Clone the node and put it in the visited dictionary.</span>
+</span></span><span style="display:flex;"><span>        visited.<span style="color:#a6e22e">put</span>(node, <span style="color:#66d9ef">new</span> Node(node.<span style="color:#a6e22e">val</span>, <span style="color:#66d9ef">new</span> ArrayList()));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Start BFS traversal</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>queue.<span style="color:#a6e22e">isEmpty</span>()) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Pop a node say &#34;n&#34; from the from the front of the queue.</span>
+</span></span><span style="display:flex;"><span>            Node n <span style="color:#f92672">=</span> queue.<span style="color:#a6e22e">remove</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Iterate through all the neighbors of the node &#34;n&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (Node neighbor: n.<span style="color:#a6e22e">neighbors</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>visited.<span style="color:#a6e22e">containsKey</span>(neighbor)) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// Clone the neighbor and put in the visited, if not present already</span>
+</span></span><span style="display:flex;"><span>                    visited.<span style="color:#a6e22e">put</span>(neighbor, <span style="color:#66d9ef">new</span> Node(neighbor.<span style="color:#a6e22e">val</span>, <span style="color:#66d9ef">new</span> ArrayList()));
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// Add the newly encountered node to the queue.</span>
+</span></span><span style="display:flex;"><span>                    queue.<span style="color:#a6e22e">add</span>(neighbor);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Add the clone of the neighbor to the neighbors of the clone node &#34;n&#34;.</span>
+</span></span><span style="display:flex;"><span>                visited.<span style="color:#a6e22e">get</span>(n).<span style="color:#a6e22e">neighbors</span>.<span style="color:#a6e22e">add</span>(visited.<span style="color:#a6e22e">get</span>(neighbor));
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return the clone of the node from visited.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> visited.<span style="color:#a6e22e">get</span>(node);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="752-open-the-lockhttpsyanjiyucomleetcode752">
+  <a href="https://yanjiyu.com/leetcode/752/">752. open the lock</a>
+  <a class="heading-link" href="#752-open-the-lockhttpsyanjiyucomleetcode752">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>You have a lock in front of you with 4 circular wheels. Each wheel has 10 slots: &lsquo;0&rsquo;, &lsquo;1&rsquo;, &lsquo;2&rsquo;, &lsquo;3&rsquo;, &lsquo;4&rsquo;, &lsquo;5&rsquo;, &lsquo;6&rsquo;, &lsquo;7&rsquo;, &lsquo;8&rsquo;, &lsquo;9&rsquo;. The wheels can rotate freely and wrap around: for example we can turn &lsquo;9&rsquo; to be &lsquo;0&rsquo;, or &lsquo;0&rsquo; to be &lsquo;9&rsquo;. Each move consists of turning one wheel one slot.
+The lock initially starts at &lsquo;0000&rsquo;, a string representing the state of the 4 wheels.
+You are given a list of deadends dead ends, meaning if the lock displays any of these codes, the wheels of the lock will stop turning and you will be unable to open it.
+Given a target representing the value of the wheels that will unlock the lock, return the minimum total number of turns required to open the lock, or -1 if it is impossible.<br>
+<strong>Example 1:</strong>
+Input: deadends = [&ldquo;0201&rdquo;,&ldquo;0101&rdquo;,&ldquo;0102&rdquo;,&ldquo;1212&rdquo;,&ldquo;2002&rdquo;], target = &ldquo;0202&rdquo; Output: 6 Explanation: A sequence of valid moves would be &ldquo;0000&rdquo; -&gt; &ldquo;1000&rdquo; -&gt; &ldquo;1100&rdquo; -&gt; &ldquo;1200&rdquo; -&gt; &ldquo;1201&rdquo; -&gt; &ldquo;1202&rdquo; -&gt; &ldquo;0202&rdquo;. Note that a sequence like &ldquo;0000&rdquo; -&gt; &ldquo;0001&rdquo; -&gt; &ldquo;0002&rdquo; -&gt; &ldquo;0102&rdquo; -&gt; &ldquo;0202&rdquo; would be invalid, because the wheels of the lock become stuck after the display becomes the dead end &ldquo;0102&rdquo;.<br>
+<strong>Example 2:</strong>
+Input: deadends = [&ldquo;8888&rdquo;], target = &ldquo;0009&rdquo; Output: 1 Explanation: We can turn the last wheel in reverse to move from &ldquo;0000&rdquo; -&gt; &ldquo;0009&rdquo;.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">openLock</span>(self, deadends: List[str], target: str) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;0000&#34;</span> <span style="color:#f92672">in</span> deadends:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        queue <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque()
+</span></span><span style="display:flex;"><span>        queue<span style="color:#f92672">.</span>append((<span style="color:#e6db74">&#39;0000&#39;</span>, <span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set(<span style="color:#e6db74">&#39;0000&#39;</span>)
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">.</span>update(deadends)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> queue:
+</span></span><span style="display:flex;"><span>            string, step <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> string <span style="color:#f92672">==</span> target:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> step
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">4</span>):
+</span></span><span style="display:flex;"><span>                num <span style="color:#f92672">=</span> int(string[i])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> dx <span style="color:#f92672">in</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                    num_new <span style="color:#f92672">=</span> (num <span style="color:#f92672">+</span> dx) <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>                    string_new <span style="color:#f92672">=</span> string[:i] <span style="color:#f92672">+</span> str(num_new) <span style="color:#f92672">+</span> string[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> string_new <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                        queue<span style="color:#f92672">.</span>append((string_new, step<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add(string_new)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">openLock</span>(self, deadends: List[str], target: str) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;0000&#34;</span> <span style="color:#f92672">in</span> deadends:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([<span style="color:#e6db74">&#34;0000&#34;</span>])
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set(<span style="color:#e6db74">&#34;0000&#34;</span>)
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">.</span>update(deadends)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findNeighbor</span>(node):
+</span></span><span style="display:flex;"><span>            neighbors <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(node):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> v <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0&#34;</span>:
+</span></span><span style="display:flex;"><span>                    l, r <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;9&#34;</span>, <span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">elif</span> v <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9&#34;</span>:
+</span></span><span style="display:flex;"><span>                    l, r <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;8&#34;</span>, <span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    l, r <span style="color:#f92672">=</span> str(int(v)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), str(int(v)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                neighbors<span style="color:#f92672">.</span>append(node[:i] <span style="color:#f92672">+</span> l <span style="color:#f92672">+</span> node[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>                neighbors<span style="color:#f92672">.</span>append(node[:i] <span style="color:#f92672">+</span> r <span style="color:#f92672">+</span> node[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> neighbors
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            step <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            cur_q_size <span style="color:#f92672">=</span> len(q)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> cur_q_size:
+</span></span><span style="display:flex;"><span>                cur_q_size <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> cur <span style="color:#f92672">==</span> target:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> step
+</span></span><span style="display:flex;"><span>                neighbors <span style="color:#f92672">=</span> findNeighbor(cur)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> neighbor <span style="color:#f92672">in</span> neighbors:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> neighbor <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                        q<span style="color:#f92672">.</span>append(neighbor)
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add(neighbor)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">openLock</span>(String<span style="color:#f92672">[]</span> deadends, String target) {
+</span></span><span style="display:flex;"><span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> dead <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (String d: deadends) dead.<span style="color:#a6e22e">add</span>(d);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList();
+</span></span><span style="display:flex;"><span>        queue.<span style="color:#a6e22e">offer</span>(<span style="color:#e6db74">&#34;0000&#34;</span>);
+</span></span><span style="display:flex;"><span>        queue.<span style="color:#a6e22e">offer</span>(<span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> seen <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet();
+</span></span><span style="display:flex;"><span>        seen.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;0000&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> depth <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>queue.<span style="color:#a6e22e">isEmpty</span>()) {
+</span></span><span style="display:flex;"><span>            String node <span style="color:#f92672">=</span> queue.<span style="color:#a6e22e">poll</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>                depth<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (queue.<span style="color:#a6e22e">peek</span>() <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>                    queue.<span style="color:#a6e22e">offer</span>(<span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (node.<span style="color:#a6e22e">equals</span>(target)) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> depth;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>dead.<span style="color:#a6e22e">contains</span>(node)) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> 4; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> d <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1; d <span style="color:#f92672">&lt;=</span> 1; d <span style="color:#f92672">+=</span> 2) {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> ((node.<span style="color:#a6e22e">charAt</span>(i) <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>) <span style="color:#f92672">+</span> d <span style="color:#f92672">+</span> 10) <span style="color:#f92672">%</span> 10;
+</span></span><span style="display:flex;"><span>                        String nei <span style="color:#f92672">=</span> node.<span style="color:#a6e22e">substring</span>(0, i) <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">+</span> y) <span style="color:#f92672">+</span> node.<span style="color:#a6e22e">substring</span>(i<span style="color:#f92672">+</span>1);
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>seen.<span style="color:#a6e22e">contains</span>(nei)) {
+</span></span><span style="display:flex;"><span>                            seen.<span style="color:#a6e22e">add</span>(nei);
+</span></span><span style="display:flex;"><span>                            queue.<span style="color:#a6e22e">offer</span>(nei);
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="279-perfect-squareshttpsyanjiyucomleetcode279">
+  <a href="https://yanjiyu.com/leetcode/279/">279. Perfect squares</a>
+  <a class="heading-link" href="#279-perfect-squareshttpsyanjiyucomleetcode279">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>Given an integer n, return <strong>the least number of perfect square numbers that sum to</strong> n.
+A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.<br>
+Example 1:
+Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4.<br>
+Example 2:
+Input: n = 13 Output: 2 Explanation: 13 = 4 + 9.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numSquares</span>(self, n):
+</span></span><span style="display:flex;"><span>        candidates <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        potential <span style="color:#f92672">=</span> [i<span style="color:#f92672">*</span>i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, int(n<span style="color:#f92672">**</span><span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> candidates:
+</span></span><span style="display:flex;"><span>            step <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            sz <span style="color:#f92672">=</span> len(candidates)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(sz):
+</span></span><span style="display:flex;"><span>                cur <span style="color:#f92672">=</span> candidates<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> potential:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> v <span style="color:#f92672">+</span> cur <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> v <span style="color:#f92672">+</span> cur <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                        candidates<span style="color:#f92672">.</span>append(v <span style="color:#f92672">+</span> cur)
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add(v <span style="color:#f92672">+</span> cur)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">elif</span> v <span style="color:#f92672">+</span> cur <span style="color:#f92672">==</span> n:
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> step
+</span></span></code></pre></div><ul>
+<li>code bfs</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">numSquares</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> square_nums <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">*</span> i <span style="color:#f92672">&lt;=</span> n; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>      square_nums.<span style="color:#a6e22e">add</span>(i <span style="color:#f92672">*</span> i);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>    queue.<span style="color:#a6e22e">add</span>(n);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> level <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (queue.<span style="color:#a6e22e">size</span>() <span style="color:#f92672">&gt;</span> 0) {
+</span></span><span style="display:flex;"><span>      level <span style="color:#f92672">+=</span> 1;
+</span></span><span style="display:flex;"><span>      Set<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> next_queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (Integer remainder : queue) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (Integer square : square_nums) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (remainder.<span style="color:#a6e22e">equals</span>(square)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> level;
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (remainder <span style="color:#f92672">&lt;</span> square) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>          } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            next_queue.<span style="color:#a6e22e">add</span>(remainder <span style="color:#f92672">-</span> square);
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      queue <span style="color:#f92672">=</span> next_queue;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> level;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="733-flood-fillhttpsyanjiyucomleetcode733">
+  <a href="https://yanjiyu.com/leetcode/733/">733. Flood fill</a>
+  <a class="heading-link" href="#733-flood-fillhttpsyanjiyucomleetcode733">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>CompaniesAn image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.<br>
+You are also given three integers sr, sc, and newColor. You should perform a <strong>flood fill</strong> on the image starting from the pixel image[sr][sc].<br>
+To perform a <strong>flood fill</strong>, consider the starting pixel, plus any pixels connected <strong>4-directionally</strong> to the starting pixel of the same color as the starting pixel, plus any pixels connected <strong>4-directionally</strong> to those pixels (also with the same color), and so on. Replace the color of all of the aforementioned pixels with newColor.
+Return <strong>the modified image after performing the flood fill</strong>.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">floodFill</span>(self, image, sr, sc, newColor):
+</span></span><span style="display:flex;"><span>        old, m, n <span style="color:#f92672">=</span> image[sr][sc], len(image), len(image[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> old <span style="color:#f92672">!=</span> newColor: 
+</span></span><span style="display:flex;"><span>            q <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([(sr, sc)])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>                i, j <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                image[i][j] <span style="color:#f92672">=</span> newColor
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> x, y <span style="color:#f92672">in</span> ((i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, j), (i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, j), (i, j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>), (i, j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)):
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> x <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> y <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> image[x][y] <span style="color:#f92672">==</span> old: 
+</span></span><span style="display:flex;"><span>                        q<span style="color:#f92672">.</span>append((x, y))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> image
+</span></span></code></pre></div><p><a href="https://yanjiyu.com/leetcode/322-coin-change/">322. Coin Change</a></p>
+<blockquote>
+<p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+You may assume that you have an infinite number of each kind of coin.<br>
+Example 1:
+Input: coins = [1, 2, 5], amount = 11
+Output: 3 Explanation: 11 = 5 + 5 + 1<br>
+Example 2:
+Input: coins = [2], amount = 3Output: -1</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">coinChange</span>(self, coins: List[int], amount: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> amount <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        potential <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque(coins)
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">.</span>update(coins)
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> potential:
+</span></span><span style="display:flex;"><span>            step <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(potential)):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> potential[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> amount:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">return</span> step
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> coins:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> c <span style="color:#f92672">+</span> potential[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                        potential<span style="color:#f92672">.</span>append(c <span style="color:#f92672">+</span> potential[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add(c <span style="color:#f92672">+</span> potential[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>                potential<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> all(p <span style="color:#f92672">&gt;</span> amount <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> potential):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">coinChange</span>(self, coins: List[int], amount: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> amount <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        queue <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]]
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>}
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> node, step <span style="color:#f92672">in</span> queue:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> coin <span style="color:#f92672">in</span> coins:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> node <span style="color:#f92672">+</span> coin <span style="color:#f92672">==</span> amount: <span style="color:#66d9ef">return</span> step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">elif</span> node <span style="color:#f92672">+</span> coin <span style="color:#f92672">&lt;</span> amount <span style="color:#f92672">and</span> node <span style="color:#f92672">+</span> coin <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                    queue<span style="color:#f92672">.</span>append([node <span style="color:#f92672">+</span> coin, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>                    visited<span style="color:#f92672">.</span>add(node <span style="color:#f92672">+</span> coin)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h3 id="542-01-matrixhttpsyanjiyucomleetcode542">
+  <a href="https://yanjiyu.com/leetcode/542/">542. 01-matrix</a>
+  <a class="heading-link" href="#542-01-matrixhttpsyanjiyucomleetcode542">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>Given an m x n binary matrix mat, return <strong>the distance of the nearest <strong>0</strong> for each cell</strong>.
+The distance between two adjacent cells is 1.<br>
+<strong>Example 1:</strong><br>
+<img src="https://assets.leetcode.com/uploads/2021/04/24/01-1-grid.jpg"><br>
+Input: mat = [[0,0,0],[0,1,0],[0,0,0]] Output: [[0,0,0],[0,1,0],[0,0,0]]</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">updateMatrix</span>(self, matrix):
+</span></span><span style="display:flex;"><span>        rows_len, cols_len <span style="color:#f92672">=</span> len(matrix), len(matrix[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        start_0 <span style="color:#f92672">=</span> [(x,y) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(rows_len) <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(cols_len) <span style="color:#66d9ef">if</span> matrix[x][y] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> deque(start_0)
+</span></span><span style="display:flex;"><span>        visited<span style="color:#f92672">.</span>update(start_0)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># result = [[-1 for _ in range(cols_len)] for y in range(rows_len)]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(q)):
+</span></span><span style="display:flex;"><span>                x, y <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> [[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]]:
+</span></span><span style="display:flex;"><span>                    m, n <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> d[<span style="color:#ae81ff">0</span>], y <span style="color:#f92672">+</span> d[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> m <span style="color:#f92672">&lt;</span> rows_len <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> n <span style="color:#f92672">&lt;</span> cols_len <span style="color:#f92672">and</span> (m,n) <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                        matrix[m][n] <span style="color:#f92672">=</span> matrix[x][y] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># update matrix directly</span>
+</span></span><span style="display:flex;"><span>                        q<span style="color:#f92672">.</span>append((m, n))
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add((m, n))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> matrix
+</span></span></code></pre></div><h3 id="127-word-ladderhttpsyanjiyucomleetcode127">
+  <a href="https://yanjiyu.com/leetcode/127/">127. Word ladder</a>
+  <a class="heading-link" href="#127-word-ladderhttpsyanjiyucomleetcode127">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>A <strong>transformation sequence</strong> from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; &hellip; -&gt; sk such that:<br>
+Every adjacent pair of words differs by a single letter.
+Every si for 1 &lt;= i &lt;= k is in wordList. Note that beginWord does not need to be in wordList.
+sk == endWordGiven two words, beginWord and endWord, and a dictionary wordList, return <strong>the <strong>number of words</strong> in the <strong>shortest transformation sequence</strong> from</strong> beginWord <strong>to</strong> endWord__, or <strong>0</strong> if no such sequence exists.__<br>
+<strong>Example 1:</strong><br>
+Input: beginWord = &ldquo;hit&rdquo;, endWord = &ldquo;cog&rdquo;, wordList = [&ldquo;hot&rdquo;,&ldquo;dot&rdquo;,&ldquo;dog&rdquo;,&ldquo;lot&rdquo;,&ldquo;log&rdquo;,&ldquo;cog&rdquo;] Output: 5 Explanation: One shortest transformation sequence is &ldquo;hit&rdquo; -&gt; &ldquo;hot&rdquo; -&gt; &ldquo;dot&rdquo; -&gt; &ldquo;dog&rdquo; -&gt; cog&quot;, which is 5 words long.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ladderLength</span>(self, beginWord, endWord, wordList):
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">construct_dict</span>(word_list):
+</span></span><span style="display:flex;"><span>            d <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> word_list:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(word)):
+</span></span><span style="display:flex;"><span>                    s <span style="color:#f92672">=</span> word[:i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_&#34;</span> <span style="color:#f92672">+</span> word[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
+</span></span><span style="display:flex;"><span>                    d[s] <span style="color:#f92672">=</span> d<span style="color:#f92672">.</span>get(s, []) <span style="color:#f92672">+</span> [word]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> d
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfs_words</span>(begin, end, dict_words):
+</span></span><span style="display:flex;"><span>            queue, visited <span style="color:#f92672">=</span> deque([(begin, <span style="color:#ae81ff">1</span>)]), set()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> queue:
+</span></span><span style="display:flex;"><span>                word, steps <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                    visited<span style="color:#f92672">.</span>add(word)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> word <span style="color:#f92672">==</span> end:
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> steps
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(word)):
+</span></span><span style="display:flex;"><span>                        s <span style="color:#f92672">=</span> word[:i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;_&#34;</span> <span style="color:#f92672">+</span> word[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
+</span></span><span style="display:flex;"><span>                        neigh_words <span style="color:#f92672">=</span> dict_words<span style="color:#f92672">.</span>get(s, [])
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">for</span> neigh <span style="color:#f92672">in</span> neigh_words:
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">if</span> neigh <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                                queue<span style="color:#f92672">.</span>append((neigh, steps <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        d <span style="color:#f92672">=</span> construct_dict(set(wordList))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> bfs_words(beginWord, endWord, d)
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">ladderLength</span>(String beginWord, String endWord, List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> wordList) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Since all words are of same length.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> L <span style="color:#f92672">=</span> beginWord.<span style="color:#a6e22e">length</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Dictionary to hold combination of words that can be formed,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// from any given word. By changing one letter at a time.</span>
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>String, List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> allComboDict <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        wordList.<span style="color:#a6e22e">forEach</span>( word <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> L; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Key is the generic word</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Value is a list of words which have the same intermediate generic word.</span>
+</span></span><span style="display:flex;"><span>                String newWord <span style="color:#f92672">=</span> word.<span style="color:#a6e22e">substring</span>(0, i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#f92672">+</span> word.<span style="color:#a6e22e">substring</span>(i <span style="color:#f92672">+</span> 1, L);
+</span></span><span style="display:flex;"><span>                List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> transformations <span style="color:#f92672">=</span> allComboDict.<span style="color:#a6e22e">getOrDefault</span>(newWord, <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>());
+</span></span><span style="display:flex;"><span>                transformations.<span style="color:#a6e22e">add</span>(word);
+</span></span><span style="display:flex;"><span>                allComboDict.<span style="color:#a6e22e">put</span>(newWord, transformations);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Queue for BFS</span>
+</span></span><span style="display:flex;"><span>        Queue<span style="color:#f92672">&lt;</span>Pair<span style="color:#f92672">&lt;</span>String, Integer<span style="color:#f92672">&gt;&gt;</span> Q <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        Q.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> Pair(beginWord, 1));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Visited to make sure we don&#39;t repeat processing same word.</span>
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>String, Boolean<span style="color:#f92672">&gt;</span> visited <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        visited.<span style="color:#a6e22e">put</span>(beginWord, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>Q.<span style="color:#a6e22e">isEmpty</span>()) {
+</span></span><span style="display:flex;"><span>            Pair<span style="color:#f92672">&lt;</span>String, Integer<span style="color:#f92672">&gt;</span> node <span style="color:#f92672">=</span> Q.<span style="color:#a6e22e">remove</span>();
+</span></span><span style="display:flex;"><span>            String word <span style="color:#f92672">=</span> node.<span style="color:#a6e22e">getKey</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> level <span style="color:#f92672">=</span> node.<span style="color:#a6e22e">getValue</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> L; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Intermediate words for current word</span>
+</span></span><span style="display:flex;"><span>                String newWord <span style="color:#f92672">=</span> word.<span style="color:#a6e22e">substring</span>(0, i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;*&#39;</span> <span style="color:#f92672">+</span> word.<span style="color:#a6e22e">substring</span>(i <span style="color:#f92672">+</span> 1, L);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// Next states are all the words which share the same intermediate state.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> (String adjacentWord : allComboDict.<span style="color:#a6e22e">getOrDefault</span>(newWord, <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>())) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// If at any point if we find what we are looking for</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// i.e. the end word - we can return with the answer.</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (adjacentWord.<span style="color:#a6e22e">equals</span>(endWord)) {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> level <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// Otherwise, add it to the BFS Queue. Also mark it visited</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>visited.<span style="color:#a6e22e">containsKey</span>(adjacentWord)) {
+</span></span><span style="display:flex;"><span>                        visited.<span style="color:#a6e22e">put</span>(adjacentWord, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>                        Q.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> Pair(adjacentWord, level <span style="color:#f92672">+</span> 1));
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> 0;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="1091-shortest-path-in-binary-matrix-httpsyanjiyucomleetcode1091">
+  <a href="https://yanjiyu.com/leetcode/1091/">1091. Shortest Path in Binary Matrix </a>
+  <a class="heading-link" href="#1091-shortest-path-in-binary-matrix-httpsyanjiyucomleetcode1091">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<blockquote>
+<p>Given an n x n binary matrix grid, return <strong>the length of the shortest clear path in the matrix</strong>. If there is no clear path, return -1.
+A clear path in a binary matrix is a path from the top-left cell (i.e., (0, 0)) to the bottom-right cell (i.e., (n - 1, n - 1)) such that:</p>
+</blockquote>
+<blockquote>
+<p>All the visited cells of the path are 0.
+All the adjacent cells of the path are 8-directionally connected (i.e., they are different and they share an edge or a corner).The length of a clear path is the number of visited cells of this path.</p>
+</blockquote>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/18/example1_1.png"></p>
+<p>Input: grid = [[0,1],[1,0]] Output: 2</p>
+<p>Example 2:</p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/18/example2_1.png"></p>
+<p>Input: grid = [[0,0,0],[1,1,0],[1,1,0]] Output: 4</p>
+<ul>
+<li>code #astar</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">shortestPathBinaryMatrix</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        max_row <span style="color:#f92672">=</span> len(grid) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        max_col <span style="color:#f92672">=</span> len(grid[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        directions <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Helper function to find the neighbors of a given cell.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_neighbours</span>(row, col):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> row_difference, col_difference <span style="color:#f92672">in</span> directions:
+</span></span><span style="display:flex;"><span>                new_row <span style="color:#f92672">=</span> row <span style="color:#f92672">+</span> row_difference
+</span></span><span style="display:flex;"><span>                new_col <span style="color:#f92672">=</span> col <span style="color:#f92672">+</span> col_difference
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span>(<span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_row <span style="color:#f92672">&lt;=</span> max_row <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_col <span style="color:#f92672">&lt;=</span> max_col):
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> grid[new_row][new_col] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">yield</span> (new_row, new_col)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Helper function for the A* heuristic.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">best_case_estimate</span>(row, col):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> max(max_row <span style="color:#f92672">-</span> row, max_col <span style="color:#f92672">-</span> col)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Check that the first and last cells are open. </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">or</span> grid[max_row][max_col]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Set up the A* search.</span>
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Entries on the priority queue are of the form</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># (total distance estimate, distance so far, (cell row, cell col))</span>
+</span></span><span style="display:flex;"><span>        priority_queue <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> best_case_estimate(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), <span style="color:#ae81ff">1</span>, (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>))]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> priority_queue:
+</span></span><span style="display:flex;"><span>            estimate, distance, cell <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(priority_queue)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cell <span style="color:#f92672">in</span> visited: <span style="color:#75715e"># Have we already found the best path to this cell?</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cell <span style="color:#f92672">==</span> (max_row, max_col):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> distance
+</span></span><span style="display:flex;"><span>            visited<span style="color:#f92672">.</span>add(cell)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> neighbour <span style="color:#f92672">in</span> get_neighbours(<span style="color:#f92672">*</span>cell):
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># The check here isn&#39;t necessary for correctness, but it</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># leads to a substantial performance gain.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> neighbour <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                estimate <span style="color:#f92672">=</span> best_case_estimate(<span style="color:#f92672">*</span>neighbour) <span style="color:#f92672">+</span> distance <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                entry <span style="color:#f92672">=</span> (estimate, distance <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, neighbour)
+</span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappush(priority_queue, entry)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># There was no path.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>code bfs</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">shortestPathBinaryMatrix</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> grid[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>: <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        n <span style="color:#f92672">=</span> len(grid)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_nei</span>(i,j):
+</span></span><span style="display:flex;"><span>            nei <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>            directions <span style="color:#f92672">=</span> [(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>),(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>),(<span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>),(<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>),(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> di, dj <span style="color:#f92672">in</span> directions:
+</span></span><span style="display:flex;"><span>                next_i, next_j <span style="color:#f92672">=</span> di <span style="color:#f92672">+</span> i, dj <span style="color:#f92672">+</span> j
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> next_i <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> next_j <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> grid[next_i][next_j] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    nei<span style="color:#f92672">.</span>append((next_i, next_j))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> nei
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>        step <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> deque([(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>)])
+</span></span><span style="display:flex;"><span>        visited <span style="color:#f92672">=</span> set([(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>)])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> q:
+</span></span><span style="display:flex;"><span>            step <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(q)):
+</span></span><span style="display:flex;"><span>                cur_i, cur_j <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> cur_i <span style="color:#f92672">==</span> cur_j <span style="color:#f92672">==</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> : <span style="color:#66d9ef">return</span> step
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> nei <span style="color:#f92672">in</span> get_nei(cur_i, cur_j):
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> nei <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+</span></span><span style="display:flex;"><span>                        q<span style="color:#f92672">.</span>append(nei)
+</span></span><span style="display:flex;"><span>                        visited<span style="color:#f92672">.</span>add(nei)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> directions <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span>{{<span style="color:#f92672">-</span>1, <span style="color:#f92672">-</span>1}, {<span style="color:#f92672">-</span>1, 0}, {<span style="color:#f92672">-</span>1, 1}, {0, <span style="color:#f92672">-</span>1}, {0, 1}, {1, <span style="color:#f92672">-</span>1}, {1, 0}, {1, 1}};
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">shortestPathBinaryMatrix</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> grid) {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Firstly, we need to check that the start and target cells are open.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (grid<span style="color:#f92672">[</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> 0 <span style="color:#f92672">||</span> grid<span style="color:#f92672">[</span>grid.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>grid<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> 0) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Set up the BFS.</span>
+</span></span><span style="display:flex;"><span>        Queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayDeque<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        grid<span style="color:#f92672">[</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>        queue.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{0, 0});
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Carry out the BFS</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>queue.<span style="color:#a6e22e">isEmpty</span>()) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> cell <span style="color:#f92672">=</span> queue.<span style="color:#a6e22e">remove</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> cell<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> cell<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> distance <span style="color:#f92672">=</span> grid<span style="color:#f92672">[</span>row<span style="color:#f92672">][</span>col<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (row <span style="color:#f92672">==</span> grid.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&amp;&amp;</span> col <span style="color:#f92672">==</span> grid<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> distance;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> neighbour : getNeighbours(row, col, grid)) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> neighbourRow <span style="color:#f92672">=</span> neighbour<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> neighbourCol <span style="color:#f92672">=</span> neighbour<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>                queue.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{neighbourRow, neighbourCol});
+</span></span><span style="display:flex;"><span>                grid<span style="color:#f92672">[</span>neighbourRow<span style="color:#f92672">][</span>neighbourCol<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> distance <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// The target was unreachable.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> <span style="color:#a6e22e">getNeighbours</span>(<span style="color:#66d9ef">int</span> row, <span style="color:#66d9ef">int</span> col, <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> grid) {
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> neighbours <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> directions.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> newRow <span style="color:#f92672">=</span> row <span style="color:#f92672">+</span> directions<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> newCol <span style="color:#f92672">=</span> col <span style="color:#f92672">+</span> directions<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (newRow <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">||</span> newCol <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">||</span> newRow <span style="color:#f92672">&gt;=</span> grid.<span style="color:#a6e22e">length</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">||</span> newCol <span style="color:#f92672">&gt;=</span> grid<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.<span style="color:#a6e22e">length</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">||</span> grid<span style="color:#f92672">[</span>newRow<span style="color:#f92672">][</span>newCol<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> 0) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>;    
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            neighbours.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{newRow, newCol});
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> neighbours; 
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

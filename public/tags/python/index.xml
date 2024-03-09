@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Jiyu</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Jul 2022 15:06:02 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to debug flask in docker with intellij on Linux</title>
+      <link>http://localhost:1313/dev/flask-docker-debug/</link>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/flask-docker-debug/</guid>
+      <description>Reference: https://blog.jetbrains.com/pycharm/2017/03/docker-compose-getting-flask-up-and-running/&#xA;Project to use in this page : https://github.com/wikimedia/analytics-quarry-web&#xA;Clone it https://gerrit.wikimedia.org/r/admin/repos/analytics/quarry/web&#xA;git clone &amp;#34;ssh://jiyu@gerrit.wikimedia.org:29418/analytics/quarry/web&amp;#34; &amp;amp;&amp;amp; scp -p -P 29418 jiyu@gerrit.wikimedia.org:hooks/commit-msg &amp;#34;web/.git/hooks/&amp;#34; Set up git-review&#xA;git review -s --verbose I use intellij but PyCharm should be more or less the same.&#xA;Make sure your docker is configured correctly: https://docs.docker.com/engine/install/linux-postinstall/&#xA;Add remote interpreter First let&amp;rsquo;s run by default to make sure it&amp;rsquo;s working. docker-compose build &amp;amp;&amp;amp; docker-compose up&#xA;Notice I changed the file name from quarry.</description>
+    </item>
+    <item>
+      <title>Python to exe with win10 notification</title>
+      <link>http://localhost:1313/dev/tool-pytoexe/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-pytoexe/</guid>
+      <description>With this auto-py-to-txe, it&amp;rsquo;s easy to convert your py to a self-contained exe.&#xA;I want to add a win10 notification, at first I tried win10toast.ToastNotifier(), it works fine in py but when I convert it to exe, it&amp;rsquo;s no longer working anymore.&#xA;Then I tried plyer.notification, which works fine. Notince if you want to build a single exe file without folder, and you have resouce like pictures, you need to write a resouce_path function.</description>
+    </item>
+    <item>
+      <title>Leetcode: Array questions with Python</title>
+      <link>http://localhost:1313/dev/lee-array/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-array/</guid>
+      <description>134.Gas Station There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</description>
+    </item>
+  </channel>
+</rss>

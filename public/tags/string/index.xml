@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>String on Jiyu</title>
+    <link>http://localhost:1313/tags/string/</link>
+    <description>Recent content in String on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Mar 2024 18:37:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>242. Vaild anagram</title>
+      <link>http://localhost:1313/leetcode/242/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/242/</guid>
+      <description>https://leetcode.com/problems/valid-anagram/&#xA;Given two strings s and t, return true if t is an anagram of s__, and__ false otherwise. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.&#xA;Example 1: Input: s = &amp;ldquo;anagram&amp;rdquo;, t = &amp;ldquo;nagaram&amp;rdquo; Output: true Example 2: Input: s = &amp;ldquo;rat&amp;rdquo;, t = &amp;ldquo;car&amp;rdquo; Output: false&#xA;Constraints:&#xA;1 &amp;lt;= s.</description>
+    </item>
+    <item>
+      <title>205. Isomorphic strings</title>
+      <link>http://localhost:1313/leetcode/205/</link>
+      <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/205/</guid>
+      <description>https://leetcode.com/problems/isomorphic-strings/&#xA;Given two strings s and t, determine if they are isomorphic. Two strings s and t are isomorphic if the characters in s can be replaced to get t. All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.&#xA;Example 1: Input: s = &amp;ldquo;egg&amp;rdquo;, t = &amp;ldquo;add&amp;rdquo; Output: true Example 2: Input: s = &amp;ldquo;foo&amp;rdquo;, t = &amp;ldquo;bar&amp;rdquo; Output: false Example 3: Input: s = &amp;ldquo;paper&amp;rdquo;, t = &amp;ldquo;title&amp;rdquo; Output: true</description>
+    </item>
+    <item>
+      <title>30. Substring with Concatenation of All Words</title>
+      <link>http://localhost:1313/leetcode/30/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/30/</guid>
+      <description>You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated.&#xA;For example, if words = [&amp;quot;ab&amp;quot;,&amp;quot;cd&amp;quot;,&amp;quot;ef&amp;quot;], then &amp;quot;abcdef&amp;quot;, &amp;quot;abefcd&amp;quot;, &amp;quot;cdabef&amp;quot;, &amp;quot;cdefab&amp;quot;, &amp;quot;efabcd&amp;quot;, and &amp;quot;efcdab&amp;quot; are all concatenated strings. &amp;quot;acdbef&amp;quot; is not a concatenated substring because it is not the concatenation of any permutation of words.</description>
+    </item>
+    <item>
+      <title>3. Longest Substring Without Repeating Characters</title>
+      <link>http://localhost:1313/leetcode/3/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/3/</guid>
+      <description>Longest Substring Without Repeating Characters - LeetCode&#xA;Given a string s, find the length of the longest substring without repeating characters.&#xA;Example 1: Input: s = &amp;ldquo;abcabcbb&amp;rdquo; Output: 3 Explanation: The answer is &amp;ldquo;abc&amp;rdquo;, with the length of 3.&#xA;Example 2: Input: s = &amp;ldquo;bbbbb&amp;rdquo; Output: 1 Explanation: The answer is &amp;ldquo;b&amp;rdquo;, with the length of 1.&#xA;Example 3: Input: s = &amp;ldquo;pwwkew&amp;rdquo; Output: 3 Explanation: The answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3.</description>
+    </item>
+    <item>
+      <title>125. Valid Palindrome</title>
+      <link>http://localhost:1313/leetcode/125/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/125/</guid>
+      <description>https://leetcode.com/problems/valid-palindrome/description/&#xA;A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers. Given a string s, return true__ if it is a palindrome, or false otherwise__.&#xA;Example 1: Input: s = &amp;ldquo;A man, a plan, a canal: Panama&amp;rdquo; Output: true Explanation: &amp;ldquo;amanaplanacanalpanama&amp;rdquo; is a palindrome. Example 2: Input: s = &amp;ldquo;race a car&amp;rdquo; Output: false Explanation: &amp;ldquo;raceacar&amp;rdquo; is not a palindrome.</description>
+    </item>
+    <item>
+      <title>28. Find the Index of the First Occurrence in a String</title>
+      <link>http://localhost:1313/leetcode/28/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/28/</guid>
+      <description>https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description&#xA;Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.&#xA;Example 1: Input: haystack = &amp;ldquo;sadbutsad&amp;rdquo;, needle = &amp;ldquo;sad&amp;rdquo; Output: 0 Explanation: &amp;ldquo;sad&amp;rdquo; occurs at index 0 and 6. The first occurrence is at index 0, so we return 0. Example 2: Input: haystack = &amp;ldquo;leetcode&amp;rdquo;, needle = &amp;ldquo;leeto&amp;rdquo; Output: -1 Explanation: &amp;ldquo;leeto&amp;rdquo; did not occur in &amp;ldquo;leetcode&amp;rdquo;, so we return -1.</description>
+    </item>
+    <item>
+      <title>68. Text Justification</title>
+      <link>http://localhost:1313/leetcode/68/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/68/</guid>
+      <description>https://leetcode.com/problems/text-justification/description/&#xA;Given an array of strings words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified. You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &amp;rsquo; &amp;rsquo; when necessary so that each line has exactly maxWidth characters. Extra spaces between words should be distributed as evenly as possible.</description>
+    </item>
+    <item>
+      <title>6. Zigzag</title>
+      <link>http://localhost:1313/leetcode/6/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/6/</guid>
+      <description>The string &amp;ldquo;PAYPALISHIRING&amp;rdquo; is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility) P A H N A P L S I I G Y I R And then read line by line: &amp;ldquo;PAHNAPLSIIGYIR&amp;rdquo; Write the code that will take a string and make this conversion given a number of rows: string convert(string s, int numRows);</description>
+    </item>
+    <item>
+      <title>14. Longest common prefix</title>
+      <link>http://localhost:1313/leetcode/14/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/14/</guid>
+      <description>https://leetcode.com/problems/longest-common-prefix/description/&#xA;Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string &amp;ldquo;&amp;rdquo;.&#xA;Example 1: Input: strs = [&amp;ldquo;flower&amp;rdquo;,&amp;ldquo;flow&amp;rdquo;,&amp;ldquo;flight&amp;rdquo;] Output: &amp;ldquo;fl&amp;rdquo; Example 2: Input: strs = [&amp;ldquo;dog&amp;rdquo;,&amp;ldquo;racecar&amp;rdquo;,&amp;ldquo;car&amp;rdquo;] Output: &amp;quot;&amp;quot; Explanation: There is no common prefix among the input strings.&#xA;Constraints:&#xA;1 &amp;lt;= strs.length &amp;lt;= 200 0 &amp;lt;= strs[i].length &amp;lt;= 200 strs[i] consists of only lowercase English letters code class Solution { public String longestCommonPrefix(String[] strs) { int prefixLen = strs[0].</description>
+    </item>
+    <item>
+      <title>58. Length of last word</title>
+      <link>http://localhost:1313/leetcode/58/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/58/</guid>
+      <description>https://leetcode.com/problems/length-of-last-word/description/&#xA;Given a string s consisting of words and spaces, return the length of the last word in the string. A word is a maximal substring&#xA;consisting of non-space characters only.&#xA;Example 1: Input: s = &amp;ldquo;Hello World&amp;rdquo; Output: 5 Explanation: The last word is &amp;ldquo;World&amp;rdquo; with length 5. Example 2: Input: s = &amp;quot; fly me to the moon &amp;quot; Output: 4 Explanation: The last word is &amp;ldquo;moon&amp;rdquo; with length 4.</description>
+    </item>
+    <item>
+      <title>151. Reverse words in a string</title>
+      <link>http://localhost:1313/leetcode/151/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/151/</guid>
+      <description>https://leetcode.com/problems/reverse-words-in-a-string&#xA;Given an input string s, reverse the order of the words. A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space. Return a string of the words in reverse order concatenated by a single space. Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words.</description>
+    </item>
+    <item>
+      <title>383. ransom note</title>
+      <link>http://localhost:1313/leetcode/383/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/383/</guid>
+      <description>https://leetcode.com/problems/ransom-note/&#xA;Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false. Each letter in the magazine string can only be used once in your ransom note. Note: You may assume that both strings contain only lowercase letters. canConstruct(&amp;ldquo;a&amp;rdquo;, &amp;ldquo;b&amp;rdquo;) -&amp;gt; false canConstruct(&amp;ldquo;aa&amp;rdquo;, &amp;ldquo;ab&amp;rdquo;) -&amp;gt; false canConstruct(&amp;ldquo;aa&amp;rdquo;, &amp;ldquo;aab&amp;rdquo;) -&amp;gt; true</description>
+    </item>
+    <item>
+      <title>804. Unique Morse Code Words</title>
+      <link>http://localhost:1313/leetcode/804/</link>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/804/</guid>
+      <description>https://leetcode.com/problems/unique-morse-code-words/&#xA;International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:&#xA;&#39;a&#39; maps to &amp;quot;.-&amp;quot;, &#39;b&#39; maps to &amp;quot;-...&amp;quot;, &#39;c&#39; maps to &amp;quot;-.-.&amp;quot;, and so on.For convenience, the full table for the 26 letters of the English alphabet is given below: [&amp;quot;.-&amp;quot;,&amp;quot;-&amp;hellip;&amp;quot;,&amp;quot;-.-.&amp;quot;,&amp;quot;-..&amp;quot;,&amp;quot;.&amp;quot;,&amp;quot;..-.&amp;quot;,&amp;quot;&amp;ndash;.&amp;quot;,&amp;quot;&amp;hellip;.&amp;quot;,&amp;quot;..&amp;quot;,&amp;quot;.&amp;mdash;&amp;quot;,&amp;quot;-.-&amp;quot;,&amp;quot;.-..&amp;quot;,&amp;quot;&amp;ndash;&amp;quot;,&amp;quot;-.&amp;quot;,&amp;quot;&amp;mdash;&amp;quot;,&amp;quot;.&amp;ndash;.&amp;quot;,&amp;quot;&amp;ndash;.-&amp;quot;,&amp;quot;.-.&amp;quot;,&amp;quot;&amp;hellip;&amp;quot;,&amp;quot;-&amp;quot;,&amp;quot;..-&amp;quot;,&amp;quot;&amp;hellip;-&amp;quot;,&amp;quot;.&amp;ndash;&amp;quot;,&amp;quot;-..-&amp;quot;,&amp;quot;-.&amp;ndash;&amp;quot;,&amp;quot;&amp;ndash;..&amp;quot;] Given an array of strings words where each word can be written as a concatenation of the Morse code of each letter.</description>
+    </item>
+    <item>
+      <title>387. first unique character in a string</title>
+      <link>http://localhost:1313/leetcode/387/</link>
+      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/387/</guid>
+      <description>https://leetcode.com/problems/first-unique-character-in-a-string/&#xA;Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.&#xA;Example 1: Input: s = &amp;ldquo;leetcode&amp;rdquo; Output: 0 Example 2: Input: s = &amp;ldquo;loveleetcode&amp;rdquo; Output: 2 Example 3: Input: s = &amp;ldquo;aabb&amp;rdquo; Output: -1&#xA;Constraints:&#xA;1 &amp;lt;= s.length &amp;lt;= 105 s consists of only lowercase English letters code class Solution { public int firstUniqChar(String s) { Map&amp;lt;Character, Integer&amp;gt; counter = new LinkedHashMap&amp;lt;&amp;gt;(); for (char c: s.</description>
+    </item>
+    <item>
+      <title>916. Word Subsets</title>
+      <link>http://localhost:1313/leetcode/916/</link>
+      <pubDate>Sat, 30 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/916/</guid>
+      <description>https://leetcode.com/problems/word-subsets/&#xA;You are given two string arrays words1 and words2. A string b is a subset of string a if every letter in b occurs in a including multiplicity.&#xA;For example, &amp;quot;wrr&amp;quot; is a subset of &amp;quot;warrior&amp;quot; but is not a subset of &amp;quot;world&amp;quot;.A string a from words1 is **universal** if for every string b in words2, b is a subset of a. Return an array of all the universal strings in words1.</description>
+    </item>
+    <item>
+      <title>890. Find and Replace Pattern</title>
+      <link>http://localhost:1313/leetcode/890/</link>
+      <pubDate>Fri, 29 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/890/</guid>
+      <description>https://leetcode.com/problems/find-and-replace-pattern/&#xA;Given a list of strings words and a string pattern, return a list of words[i] that match pattern. You may return the answer in any order. A word matches the pattern if there exists a permutation of letters p so that after replacing every letter x in the pattern with p(x), we get the desired word. Recall that a permutation of letters is a bijection from letters to letters: every letter maps to another letter, and no two letters map to the same letter.</description>
+    </item>
+    <item>
+      <title>792. Number of Matching Subsequences</title>
+      <link>http://localhost:1313/leetcode/792/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/792/</guid>
+      <description>https://leetcode.com/problems/number-of-matching-subsequences/&#xA;Given a string s and an array of strings words, return the number of words[i] that is a subsequence of s. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.&#xA;For example, &amp;quot;ace&amp;quot; is a subsequence of &amp;quot;abcde&amp;quot;. Example 1: Input: s = &amp;ldquo;abcde&amp;rdquo;, words = [&amp;ldquo;a&amp;rdquo;,&amp;ldquo;bb&amp;rdquo;,&amp;ldquo;acd&amp;rdquo;,&amp;ldquo;ace&amp;rdquo;] Output: 3 Explanation: There are three strings in words that are a subsequence of s: &amp;ldquo;a&amp;rdquo;, &amp;ldquo;acd&amp;rdquo;, &amp;ldquo;ace&amp;rdquo;.</description>
+    </item>
+    <item>
+      <title>1647. Minimum Deletions to Make Character Frequencies Unique</title>
+      <link>http://localhost:1313/leetcode/1647/</link>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1647/</guid>
+      <description>https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/&#xA;A string s is called good if there are no two different characters in s that have the same frequency. Given a string s, return__ the minimum number of characters you need to delete to make s good.__ The frequency of a character in a string is the number of times it appears in the string. For example, in the string &amp;ldquo;aab&amp;rdquo;, the frequency of &amp;lsquo;a&amp;rsquo; is 2, while the frequency of &amp;lsquo;b&amp;rsquo; is 1.</description>
+    </item>
+    <item>
+      <title>1332. Remove Palindromic Subsequences</title>
+      <link>http://localhost:1313/leetcode/1332/</link>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1332/</guid>
+      <description>https://leetcode.com/problems/remove-palindromic-subsequences/&#xA;You are given a string s consisting only of letters &amp;lsquo;a&amp;rsquo; and &amp;lsquo;b&amp;rsquo;. In a single step you can remove one palindromic subsequence from s. Return the minimum number of steps to make the given string empty. A string is a subsequence of a given string if it is generated by deleting some characters of a given string without changing its order. Note that a subsequence does not necessarily need to be contiguous.</description>
+    </item>
+    <item>
+      <title>32. Longest Valid Parentheses</title>
+      <link>http://localhost:1313/leetcode/32/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/32/</guid>
+      <description>https://leetcode.com/problems/longest-valid-parentheses/&#xA;Given a string containing just the characters &amp;lsquo;(&amp;rsquo; and &amp;lsquo;)&amp;rsquo;, find the length of the longest valid (well-formed) parentheses substring.&#xA;Example 1: Input: s = &amp;ldquo;(()&amp;rdquo; Output: 2 Explanation: The longest valid parentheses substring is &amp;ldquo;()&amp;rdquo;. Example 2: Input: s = &amp;ldquo;)()())&amp;rdquo; Output: 4 Explanation: The longest valid parentheses substring is &amp;ldquo;()()&amp;rdquo;. Example 3: Input: s = &amp;quot;&amp;quot; Output: 0&#xA;Constraints:&#xA;0 &amp;lt;= s.length &amp;lt;= 3 * 104 s[i] is &#39;(&#39;, or &#39;)&#39;.</description>
+    </item>
+    <item>
+      <title>647. Palindromic Substrings</title>
+      <link>http://localhost:1313/leetcode/647/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/647/</guid>
+      <description>https://leetcode.com/problems/palindromic-substrings/&#xA;Given a string s, return the number of palindromic substrings in it. A string is a palindrome when it reads the same backward as forward. A substring is a contiguous sequence of characters within the string.&#xA;Example 1: Input: s = &amp;ldquo;abc&amp;rdquo; Output: 3 Explanation: Three palindromic strings: &amp;ldquo;a&amp;rdquo;, &amp;ldquo;b&amp;rdquo;, &amp;ldquo;c&amp;rdquo;. Example 2: Input: s = &amp;ldquo;aaa&amp;rdquo; Output: 6 Explanation: Six palindromic strings: &amp;ldquo;a&amp;rdquo;, &amp;ldquo;a&amp;rdquo;, &amp;ldquo;a&amp;rdquo;, &amp;ldquo;aa&amp;rdquo;, &amp;ldquo;aa&amp;rdquo;, &amp;ldquo;aaa&amp;rdquo;.</description>
+    </item>
+    <item>
+      <title>344. reverse string</title>
+      <link>http://localhost:1313/leetcode/344-reverse-string/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/344-reverse-string/</guid>
+      <description>Reverse String - LeetCode&#xA;Write a function that reverses a string. The input string is given as an array of characters char[]. Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory. You may assume all the characters consist of printable ascii characters.&#xA;Example 1: Input: [&amp;ldquo;h&amp;rdquo;,&amp;ldquo;e&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;o&amp;rdquo;]Output: [&amp;ldquo;o&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;l&amp;rdquo;,&amp;ldquo;e&amp;rdquo;,&amp;ldquo;h&amp;rdquo;] code class Solution: def reverseString(self, s: List[str]) -&amp;gt; None: for i in range(len(s) // 2): s[i], s[~i] = s[~i], s[i] code class Solution: def reverseString(self, s: List[str]) -&amp;gt; None: l, r = 0, len(s)-1 while l &amp;lt; r: s[l], s[r] = s[r], s[l] l += 1 r -= 1 </description>
+    </item>
+    <item>
+      <title>763. Partition Labels</title>
+      <link>http://localhost:1313/leetcode/763/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/763/</guid>
+      <description>Partition Labels - LeetCode&#xA;You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part. Return a list of integers representing the size of these parts.&#xA;Example 1: Input: s = &amp;ldquo;ababcbacadefegdehijhklij&amp;rdquo; Output: [9,7,8] Explanation: The partition is &amp;ldquo;ababcbaca&amp;rdquo;, &amp;ldquo;defegde&amp;rdquo;, &amp;ldquo;hijhklij&amp;rdquo;. This is a partition so that each letter appears in at most one part.</description>
+    </item>
+    <item>
+      <title>165. Compare Version Numbers</title>
+      <link>http://localhost:1313/leetcode/165/</link>
+      <pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/165/</guid>
+      <description>Compare Version Numbers - LeetCode&#xA;Given two version numbers, version1 and version2, compare them. Version numbers consist of one or more revisions joined by a dot &amp;lsquo;.&amp;rsquo;. Each revision consists of digits and may contain leading zeros. Every revision contains at least one character. Revisions are 0-indexed from left to right, with the leftmost revision being revision 0, the next revision being revision 1, and so on. For example 2.5.33 and 0.</description>
+    </item>
+    <item>
+      <title>520. Detect Capital</title>
+      <link>http://localhost:1313/leetcode/520/</link>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/520/</guid>
+      <description>Detect Capital - LeetCode&#xA;We define the usage of capitals in a word to be right when one of the following cases holds:&#xA;All letters in this word are capitals, like &amp;ldquo;USA&amp;rdquo;. All letters in this word are not capitals, like &amp;ldquo;leetcode&amp;rdquo;. Only the first letter in this word is capital, like &amp;ldquo;Google&amp;rdquo;.Given a string word, return true if the usage of capitals in it is right.&#xA;Example 1: Input: word = &amp;ldquo;USA&amp;rdquo; Output: true</description>
+    </item>
+    <item>
+      <title>8. string to integer</title>
+      <link>http://localhost:1313/leetcode/8-string-to-integer/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/8-string-to-integer/</guid>
+      <description>String to Integer (atoi) - LeetCode&#xA;Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++&amp;rsquo;s atoi function). The algorithm for myAtoi(string s) is as follows:&#xA;Read in and ignore any leading whitespace. Check if the next character (if not already at the end of the string) is &amp;lsquo;-&amp;rsquo; or &amp;lsquo;+&amp;rsquo;. Read this character in if it is either. This determines if the final result is negative or positive respectively.</description>
+    </item>
+    <item>
+      <title>5. Longest Palindromic Substring</title>
+      <link>http://localhost:1313/leetcode/5-longest-palindromic-substring/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/5-longest-palindromic-substring/</guid>
+      <description>Longest Palindromic Substring - LeetCode&#xA;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. Example 1: Input: &amp;ldquo;babad&amp;rdquo; Output: &amp;ldquo;bab&amp;rdquo; Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&#xA;code class Solution: def longestPalindrome(self, s: str) -&amp;gt; str: n = len(s) cur = s[0] for i in range(n): # odd l = r = i while 0 &amp;lt;= l - 1 and r + 1 &amp;lt; n and s[l-1] == s[r+1]: l -= 1 r += 1 if r - l + 1 &amp;gt; len(cur): cur = s[l:r+1] # even l = i r = i + 1 if r &amp;lt; n and s[l] == s[r]: while 0 &amp;lt;= l - 1 and r + 1 &amp;lt; n and s[l-1] == s[r+1]: l -= 1 r += 1 if r - l + 1 &amp;gt; len(cur): cur = s[l:r+1] return cur code class Solution: def longestPalindrome(self, s): self.</description>
+    </item>
+    <item>
+      <title>1153. String Transforms Into Another String</title>
+      <link>http://localhost:1313/leetcode/1153/</link>
+      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1153/</guid>
+      <description>String Transforms Into Another String - LeetCode&#xA;Given two strings str1 and str2 of the same length, determine whether you can transform str1 into str2 by doing zero or more conversions. In one conversion you can convert all occurrences of one character in str1 to any other lowercase English character. Return true if and only if you can transform str1 into str2.&#xA;Example 1: Input: str1 = &amp;ldquo;aabcc&amp;rdquo;, str2 = &amp;ldquo;ccdee&amp;rdquo; Output: true Explanation: Convert &amp;lsquo;c&amp;rsquo; to &amp;rsquo;e&amp;rsquo; then &amp;lsquo;b&amp;rsquo; to &amp;rsquo;d&amp;rsquo; then &amp;lsquo;a&amp;rsquo; to &amp;lsquo;c&amp;rsquo;.</description>
+    </item>
+    <item>
+      <title>1446. Consecutive Characters</title>
+      <link>http://localhost:1313/leetcode/1446/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1446/</guid>
+      <description>Consecutive Characters - LeetCode The power of the string is the maximum length of a non-empty substring that contains only one unique character. Given a string s, return the power of s.&#xA;Example 1: Input: s = &amp;ldquo;leetcode&amp;rdquo; Output: 2 Explanation: The substring &amp;ldquo;ee&amp;rdquo; is of length 2 with the character &amp;rsquo;e&amp;rsquo; only.&#xA;code class Solution: def maxPower(self, s: str) -&amp;gt; int: start = 0 res = i = 1 while i &amp;lt; len(s): if s[i] == s[start]: res = max(res, i - start + 1) else: start = i i += 1 return res </description>
+    </item>
+    <item>
+      <title>345. Reverse vowels of a string</title>
+      <link>http://localhost:1313/leetcode/345-reverse-vowel/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/345-reverse-vowel/</guid>
+      <description>Given a string s, reverse only all the vowels in the string and return it. The vowels are &amp;lsquo;a&amp;rsquo;, &amp;rsquo;e&amp;rsquo;, &amp;lsquo;i&amp;rsquo;, &amp;lsquo;o&amp;rsquo;, and &amp;lsquo;u&amp;rsquo;, and they can appear in both cases.&#xA;Example 1: Input: &amp;ldquo;hello&amp;quot;Output: &amp;ldquo;holle&amp;rdquo;&#xA;code class Solution: def reverseVowels(self, s): vowels = re.findall(&amp;#39;(?i)[aeiou]&amp;#39;, s) return re.sub(&amp;#39;(?i)[aeiou]&amp;#39;, lambda m: vowels.pop(), s) code class Solution: def reverseVowels(self, s: str) -&amp;gt; str: s = list(s) l, r = 0, len(s)-1 while l &amp;lt; r: while s[l] not in &amp;#39;aeiouAEIOU&amp;#39; and l &amp;lt; len(s)-1: l += 1 while s[r] not in &amp;#39;aeiouAEIOU&amp;#39; and r &amp;gt; 0: r -= 1 if l &amp;lt; r: s[l], s[r] = s[r], s[l] l += 1 r -= 1 return &amp;#34;&amp;#34;.</description>
+    </item>
+    <item>
+      <title>334. Increasing triplet subsequence</title>
+      <link>http://localhost:1313/leetcode/334-increasing-triplet-subsequence/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/334-increasing-triplet-subsequence/</guid>
+      <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array. Formally the function should: Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.&#xA;code, use dict, logic is clearer class Solution: def increasingTriplet(self, nums: List[int]) -&amp;gt; bool: temp3 = {} for v in nums: if not temp3 or v &amp;lt; temp3[0]: temp3[0] = v elif len(temp3) == 1 and v &amp;gt; temp3[0] or len(temp3) == 2 and v &amp;gt; temp3[0] and v &amp;lt; temp3[1]: temp3[1] = v elif len(temp3) == 2 and v &amp;gt; temp3[1]: return True return False c list, a bit quicker class Solution: def increasingTriplet(self, nums: List[int]) -&amp;gt; bool: seq = [] for num in nums: if not seq or num &amp;gt; seq[-1]: seq.</description>
+    </item>
+    <item>
+      <title>38. count and say</title>
+      <link>http://localhost:1313/leetcode/38-count-and-say/</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/38-count-and-say/</guid>
+      <description>Input: n = 4 Output: &amp;ldquo;1211&amp;rdquo; Explanation: countAndSay(1) = &amp;ldquo;1&amp;rdquo; countAndSay(2) = say &amp;ldquo;1&amp;rdquo; = one 1 = &amp;ldquo;11&amp;rdquo; countAndSay(3) = say &amp;ldquo;11&amp;rdquo; = two 1&amp;rsquo;s = &amp;ldquo;21&amp;rdquo; countAndSay(4) = say &amp;ldquo;21&amp;rdquo; = one 2 + one 1 = &amp;ldquo;12&amp;rdquo; + &amp;ldquo;11&amp;rdquo; = &amp;ldquo;1211&amp;rdquo;&#xA;code class Solution: def countAndSay(self, n: int) -&amp;gt; str: def generator(strin): res = [] last_char = strin[0] count_last_char = 1 for i in range(1, len(strin)): if strin[i] !</description>
+    </item>
+    <item>
+      <title>Compute the spreadsheet column encoding</title>
+      <link>http://localhost:1313/leetcode/epi-6.3-compute-the-spreadsheet-column-encoding/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-6.3-compute-the-spreadsheet-column-encoding/</guid>
+      <description>converts a spreadsheet column id to the corresponding integer&#xA;return 4 for D, 27 for AA,(26 *1 + 1) 702 for ZZ(26 *26 + 26)&#xA;code, same logic as answer def ss_decode_col_id(col: str) -&amp;gt; int: to_num = lambda x: ord(x) - 64 f = lambda x, y: x * 26 + y res = functools.reduce(f, map(to_num, col)) return res c ans def ss_decode_col_id(col): return functools.reduce( lambda result, c: result * 26 + ord(c) - ord(&amp;#39;A&amp;#39;) + 1, col, 0) </description>
+    </item>
+    <item>
+      <title>replace and remove</title>
+      <link>http://localhost:1313/leetcode/epi-6.4-replace-and-remove/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-6.4-replace-and-remove/</guid>
+      <description>Apply to an array of characters, replace &amp;lsquo;a&amp;rsquo; by &amp;lsquo;dd&amp;rsquo;, delete each entry containing a &amp;lsquo;b&amp;rsquo;&#xA;E.g. (a,c,d,b,b,c,a) results in the array (d,d,c,d,c,d,d).&#xA;code, ans def replace_and_remove(size: int, s: List[str]) -&amp;gt; int: # Forward iteration: remove &amp;#39;b&amp;#39;s and count the number of &amp;#39;a&amp;#39;s. write_idx, a_count = 0, 0 for i in range(size): if s[i] != &amp;#39;b&amp;#39;: s[write_idx] = s[i] write_idx += 1 if s[i] == &amp;#39;a&amp;#39;: a_count += 1 # Backward iteration: replace &amp;#39;a&amp;#39;s with &amp;#39;dd&amp;#39;s starting from the end.</description>
+    </item>
+    <item>
+      <title>Compute rows in Pascal&#39;s triangle</title>
+      <link>http://localhost:1313/leetcode/epi-6.1-interconvert-strings-and-integers/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-6.1-interconvert-strings-and-integers/</guid>
+      <description>take a string representing an integer and return the corresponding integer, and vice versa, should handle negative integers.&#xA;Implement an integer to string conversion function, and a string to integer.&#xA;Cannot use library like &amp;lsquo;int&amp;rsquo;.&#xA;string.digits = &amp;lsquo;0~9&amp;rsquo;, then index, to change str to int better, res * (-1 if ... else 1) str to int code same, just shorter def string_to_int(s: str) -&amp;gt; int: return (-1 if s[0] == &amp;#39;-&amp;#39; else 1) * functools.</description>
+    </item>
+    <item>
+      <title>Python String functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-string/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-string/</guid>
+      <description> print(f&#39;best RF score: {grid.best_score_:.3f}&#39;) str.index(sub[,start[,end]]) str.strip() remove spaces at the beginning and the end strip(str-not-want) lower() print(str.upper()) print(str.lower()) print(str.capitalize()) # Only first letter big print(str.title()) # This Is A Title s.find(c), s.rfind(c) &amp;ldquo;hello&amp;rdquo;.find(&amp;ldquo;l&amp;rdquo;) -&amp;gt; 2 &amp;ldquo;hello&amp;rdquo;.rfind(&amp;ldquo;l&amp;rdquo;) -&amp;gt; 3 s.split(&#39;&#39;) a = &#39;&#39;.join(a.split()) remove blank replace(old, new[, max]) &#39;&#39;.join(str(e) for e in list) list to str s.isdigit(), s.isalpha s.isalnum() # is num or alpha if i.lstrip(&amp;rsquo;-&amp;rsquo;).isdigit(): check number&amp;lt;0 ord , chr ord(&#39;A&#39;) get 65 chr(65) get A a = (chr(ord(&#39;0&#39;) + x % 10)) x:123 get: str type &amp;lsquo;3&amp;rsquo; </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linkedlist on Jiyu</title>
+    <link>http://localhost:1313/tags/linkedlist/</link>
+    <description>Recent content in Linkedlist on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Sep 2023 22:28:44 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linkedlist/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>114. Flatten Binary Tree to Linked List</title>
+      <link>http://localhost:1313/leetcode/114/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/114/</guid>
+      <description>https://leetcode.com/problems/flatten-binary-tree-to-linked-list/&#xA;Given the root of a binary tree, flatten the tree into a &amp;ldquo;linked list&amp;rdquo;:&#xA;The &amp;quot;linked list&amp;quot; should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null. The &amp;quot;linked list&amp;quot; should be in the same order as a [pre-order traversal](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR) of the binary tree. Example 1: Input: root = [1,2,5,3,4,null,6] Output: [1,null,2,null,3,null,4,null,5,null,6] Example 2: Input: root = [] Output: [] Example 3: Input: root = [0] Output: [0]</description>
+    </item>
+    <item>
+      <title>86. Partition List</title>
+      <link>http://localhost:1313/leetcode/86/</link>
+      <pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/86/</guid>
+      <description>https://leetcode.com/problems/partition-list/&#xA;Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x. You should preserve the original relative order of the nodes in each of the two partitions.&#xA;Example 1: Input: head = [1,4,3,2,5,2], x = 3 Output: [1,2,2,4,3,5] Example 2: Input: head = [2,1], x = 2 Output: [1,2]&#xA;Constraints:&#xA;The number of nodes in the list is in the range [0, 200].</description>
+    </item>
+    <item>
+      <title>92. Reverse Linked List II</title>
+      <link>http://localhost:1313/leetcode/92/</link>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/92/</guid>
+      <description>https://leetcode.com/problems/reverse-linked-list-ii/&#xA;Given the head of a singly linked list and two integers left and right where left &amp;lt;= right, reverse the nodes of the list from position left to position right, and return the reversed list.&#xA;Example 1: Input: head = [1,2,3,4,5], left = 2, right = 4 Output: [1,4,3,2,5] Example 2: Input: head = [5], left = 1, right = 1 Output: [5]&#xA;Constraints:&#xA;The number of nodes in the list is n.</description>
+    </item>
+    <item>
+      <title>160. Intersection of Two Linked Lists</title>
+      <link>http://localhost:1313/leetcode/160-intersection-of-two-linked-lists/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/160-intersection-of-two-linked-lists/</guid>
+      <description>Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null. For example, the following two linked lists begin to intersect at node c1: The test cases are generated such that there are no cycles anywhere in the entire linked structure. Note that the linked lists must retain their original structure after the function returns.</description>
+    </item>
+    <item>
+      <title>1721. Swapping Nodes in a Linked List</title>
+      <link>http://localhost:1313/leetcode/1721/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1721/</guid>
+      <description>Swapping Nodes in a Linked List - LeetCode&#xA;You are given the head of a linked list, and an integer k. Return __the head of the linked list after swapping the values of the __kth __node from the beginning and the __kth node from the end (the list is 1-indexed).&#xA;Example 1: Input: head = [1,2,3,4,5], k = 2 Output: [1,4,3,2,5] Example 2: Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5 Output: [7,9,6,6,8,7,3,0,9,5]</description>
+    </item>
+    <item>
+      <title>138. Copy list with random pointer</title>
+      <link>http://localhost:1313/leetcode/138/</link>
+      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/138/</guid>
+      <description>Copy List with Random Pointer - LeetCode&#xA;A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null. Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state.</description>
+    </item>
+    <item>
+      <title>2. Add Two Numbers</title>
+      <link>http://localhost:1313/leetcode/2-add-two-numbers/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/2-add-two-numbers/</guid>
+      <description>https://leetcode.com/problems/add-two-numbers/&#xA;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself. Example: Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
+    </item>
+    <item>
+      <title>82. Remove Duplicates from Sorted List II</title>
+      <link>http://localhost:1313/leetcode/82/</link>
+      <pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/82/</guid>
+      <description>Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.&#xA;Example 1: Input: head = [1,2,3,3,4,4,5] Output: [1,2,5] Example 2: Input: head = [1,1,1,2,3] Output: [2,3]&#xA;Constraints:&#xA;The number of nodes in the list is in the range [0, 300]. -100 &amp;lt;= Node.val &amp;lt;= 100 The list is guaranteed to be **sorted** in ascending order.</description>
+    </item>
+    <item>
+      <title>61. Rotate list</title>
+      <link>http://localhost:1313/leetcode/61/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/61/</guid>
+      <description>Rotate List - LeetCode&#xA;Given the head of a linked list, rotate the list to the right by k places.&#xA;Example 1: Input: head = [1,2,3,4,5], k = 2 Output: [4,5,1,2,3] Example 2: Input: head = [0,1,2], k = 4 Output: [2,0,1]&#xA;Constraints:&#xA;The number of nodes in the list is in the range [0, 500]. -100 &amp;lt;= Node.val &amp;lt;= 100 0 &amp;lt;= k &amp;lt;= 2 * 109 code class Solution: def rotateRight(self, head: ListNode, k: int) -&amp;gt; ListNode: if not head: return None run_count = head count = 1 while run_count and run_count.</description>
+    </item>
+    <item>
+      <title>148. Sort List</title>
+      <link>http://localhost:1313/leetcode/148/</link>
+      <pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/148/</guid>
+      <description>Sort List - LeetCode&#xA;Given the head of a linked list, return the list after sorting it in ascending order.&#xA;Example 1: Input: head = [4,2,1,3] Output: [1,2,3,4] Example 2: Input: head = [-1,5,3,4,0] Output: [-1,0,3,4,5] Example 3: Input: head = [] Output: []&#xA;Constraints:&#xA;The number of nodes in the list is in the range [0, 5 * 104]. -105 &amp;lt;= Node.val &amp;lt;= 105 code #mergeSort # Definition for singly-linked list.</description>
+    </item>
+    <item>
+      <title>24. Swap nodes in pairs</title>
+      <link>http://localhost:1313/leetcode/24/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/24/</guid>
+      <description>Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list&amp;rsquo;s nodes (i.e., only nodes themselves may be changed.)&#xA;Example 1: Input: head = [1,2,3,4] Output: [2,1,4,3]&#xA;code class Solution: def swapPairs(self, head): res = pre = ListNode() pre.next = head while pre.next and pre.next.next: first = pre.next second = pre.next.next pre.next, second.next, first.next = second, first, second.</description>
+    </item>
+    <item>
+      <title>23. Merge k Sorted Lists</title>
+      <link>http://localhost:1313/leetcode/23/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/23/</guid>
+      <description>Merge k Sorted Lists - LeetCode&#xA;You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.&#xA;Example 1: Input: lists = [[1,4,5],[1,3,4],[2,6]] Output: [1,1,2,3,4,4,5,6] Explanation: The linked-lists are: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] merging them into one sorted list: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6 Example 2: Input: lists = [] Output: [] Example 3: Input: lists = [[]] Output: []</description>
+    </item>
+    <item>
+      <title>382. Linked List Random Node</title>
+      <link>http://localhost:1313/leetcode/382/</link>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/382/</guid>
+      <description>Linked List Random Node - LeetCode&#xA;Given a singly linked list, return a random node&amp;rsquo;s value from the linked list. Each node must have the same probability of being chosen. Implement the Solution class:&#xA;Solution(ListNode head) Initializes the object with the integer array nums. int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen.</description>
+    </item>
+    <item>
+      <title>876. Middle of the Linked List</title>
+      <link>http://localhost:1313/leetcode/876/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/876/</guid>
+      <description>Middle of the Linked List - LeetCode&#xA;Given the head of a singly linked list, return the middle node of the linked list. If there are two middle nodes, return the second middle node.&#xA;Example 1:&#xA;Input: head = [1,2,3,4,5] Output: [3,4,5] Explanation: The middle node of the list is node 3. Example 2:&#xA;Input: head = [1,2,3,4,5,6] Output: [4,5,6] Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.</description>
+    </item>
+    <item>
+      <title>143. Reorder List </title>
+      <link>http://localhost:1313/leetcode/143/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/143/</guid>
+      <description>Reorder List - LeetCode&#xA;You are given the head of a singly linked-list. The list can be represented as: L0 → L1 → … → Ln - 1 → Ln Reorder the list to be on the following form: L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → … You may not modify the values in the list&amp;rsquo;s nodes. Only nodes themselves may be changed.</description>
+    </item>
+    <item>
+      <title>147. Insertion Sort List</title>
+      <link>http://localhost:1313/leetcode/147/</link>
+      <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/147/</guid>
+      <description>Insertion Sort List - LeetCode Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list&amp;rsquo;s head. The steps of the insertion sort algorithm:&#xA;Insertion sort iterates, consuming one input element each repetition and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list and inserts it there.</description>
+    </item>
+    <item>
+      <title>708. Insert into a Sorted Circular Linked List</title>
+      <link>http://localhost:1313/leetcode/708/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/708/</guid>
+      <description>Given a Circular Linked List node, which is sorted in ascending order, write a function to insert a value insertVal into the list such that it remains a sorted circular list. The given node can be a reference to any single node in the list and may not necessarily be the smallest value in the circular list. If there are multiple suitable places for insertion, you may choose any place to insert the new value.</description>
+    </item>
+    <item>
+      <title>705. Design hash set</title>
+      <link>http://localhost:1313/leetcode/705/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/705/</guid>
+      <description>Design HashSet - LeetCode Design a HashSet without using any built-in hash table libraries. Implement MyHashSet class:&#xA;void add(key) Inserts the value key into the HashSet. bool contains(key) Returns whether the value key exists in the HashSet or not. void remove(key) Removes the value key in the HashSet. If key does not exist in the HashSet, do nothing. code class MyHashSet { LinkedList[] list; public MyHashSet() { list = new LinkedList[713]; // Arrays.</description>
+    </item>
+    <item>
+      <title>430. Flatten a Multilevel Doubly Linked List</title>
+      <link>http://localhost:1313/leetcode/430/</link>
+      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/430/</guid>
+      <description>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below. Flatten the list so that all the nodes appear in a single-level, doubly linked list.</description>
+    </item>
+    <item>
+      <title>203. Remove linked list elements</title>
+      <link>http://localhost:1313/leetcode/203/</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/203/</guid>
+      <description>Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.&#xA;Example 1:&#xA;Input: head = [1,2,6,3,4,5,6], val = 6 Output: [1,2,3,4,5]&#xA;code class Solution: def removeElements(self, head: ListNode, val: int) -&amp;gt; ListNode: if not head: return None while head and head.val == val: head = head.next if head and head.next: pre, cur = head, head.</description>
+    </item>
+    <item>
+      <title>707. Design Linked list</title>
+      <link>http://localhost:1313/leetcode/707/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/707/</guid>
+      <description>Design your implementation of the linked list. You can choose to use a singly or doubly linked list. A node in a singly linked list should have two attributes: val and next. val is the value of the current node, and next is a pointer/reference to the next node. If you want to use the doubly linked list, you will need one more attribute prev to indicate the previous node in the linked list.</description>
+    </item>
+    <item>
+      <title>142. Linked list cycle II</title>
+      <link>http://localhost:1313/leetcode/142-linked-list-cycleii/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/142-linked-list-cycleii/</guid>
+      <description>Input: head = [3,2,0,-4], pos = 1 Output: tail connects to node index 1 Explanation: There is a cycle in the linked list, where tail connects to the second node.&#xA;c f there&amp;rsquo;s a cycle, fast and slow will meet. Starts from meet, meet&amp;ndash;ans == head&amp;ndash;ans. class Solution(object): def detectCycle(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; meet = None fast = head slow = head # must check all 3 here while slow and fast and fast.</description>
+    </item>
+    <item>
+      <title>328. Odd even linked list</title>
+      <link>http://localhost:1313/leetcode/328-odd-even-linked-list/</link>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/328-odd-even-linked-list/</guid>
+      <description>Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes. You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity. Example 1: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULLOutput: 1-&amp;gt;3-&amp;gt;5-&amp;gt;2-&amp;gt;4-&amp;gt;NULL&#xA;code class Solution: def oddEvenList(self, head: ListNode) -&amp;gt; ListNode: if not head: return None flag = 0 cur = head1 = head l2 = head2 = ListNode(0) cur = cur.</description>
+    </item>
+    <item>
+      <title>141. Linked list cycle(T or F)</title>
+      <link>http://localhost:1313/leetcode/141-linked-list-cycle/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/141-linked-list-cycle/</guid>
+      <description>Input: head = [3,2,0,-4], pos = 1 Output: true Explanation: There is a cycle in the linked list, where tail connects to the second node.&#xA;code class Solution: def hasCycle(self, head: ListNode) -&amp;gt; bool: quick = slow = head while quick and quick.next: quick = quick.next.next slow = slow.next if quick == slow: return True return False c java /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public boolean hasCycle(ListNode head) { ListNode slow = head, quick = head; while (quick !</description>
+    </item>
+    <item>
+      <title>234. Palindrome linked list</title>
+      <link>http://localhost:1313/leetcode/234-palindrome-linked-list/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/234-palindrome-linked-list/</guid>
+      <description>Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true&#xA;code, best def isPalindrome(self, head): rev = None slow = fast = head while fast and fast.next: fast = fast.next.next rev, rev.next, slow = slow, rev, slow.next if fast: slow = slow.next while rev and rev.val == slow.val: slow = slow.next rev = rev.next return not rev code, same, first by my own, reverse the left side slow link class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: quick = slowhead = head slowpassed = None while quick and quick.</description>
+    </item>
+    <item>
+      <title>21. Merge two sorted lists</title>
+      <link>http://localhost:1313/leetcode/21.merge-two-sorted-lists/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/21.merge-two-sorted-lists/</guid>
+      <description>Merge two sorted linked lists and return it as a sorted list.&#xA;code better class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&amp;gt; ListNode: # Creates a placeholder for the result. dummy_head = tail = ListNode() while l1 and l2: if l1.val &amp;lt; l2.val: tail.next, l1 = l1, l1.next else: tail.next, l2 = l2, l2.next tail = tail.next # Appends the remaining nodes of L1 or L2 tail.next = l1 or l2 return dummy_head.</description>
+    </item>
+    <item>
+      <title>206. Rotate array</title>
+      <link>http://localhost:1313/leetcode/206-reverse-linked-list/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/206-reverse-linked-list/</guid>
+      <description>Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&#xA;code best def reverseList(self, head): prev = None curr = head while curr: next = curr.next curr.next = prev prev = curr curr = next return prev code own class Solution: def reverseList(self, head: ListNode) -&amp;gt; ListNode: if not head or not head.next: return head if not head.next.next: head.next.next = head res = head.next head.next = None return res first, second, third = head, head.next, head.next.next first.</description>
+    </item>
+    <item>
+      <title>19. Remove Nth node from end of list</title>
+      <link>http://localhost:1313/leetcode/19-remove-nth-node-from-end-of-list/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/19-remove-nth-node-from-end-of-list/</guid>
+      <description>Example: Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.&#xA;c1 dump head class Solution: def removeNthFromEnd(self, head: ListNode, n: int) -&amp;gt; ListNode: dumphead = ListNode(0, head) count = head leng = 0 while count: count = count.next leng += 1 target_before = leng - n # delete head if target_before == 0: head = head.next return head while target_before &amp;gt; 0: dumphead = dumphead.</description>
+    </item>
+    <item>
+      <title>237. Delete a node in a linked list</title>
+      <link>http://localhost:1313/leetcode/237-delete-node-in-linked-list/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/237-delete-node-in-linked-list/</guid>
+      <description>Input: head = [4,5,1,9], node = 5 Output: [4,1,9]&#xA;c # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def deleteNode(self, node): &amp;#34;&amp;#34;&amp;#34; :type node: ListNode :rtype: void Do not return anything, modify node in-place instead. &amp;#34;&amp;#34;&amp;#34; node.val = node.next.val node.next = node.next.next </description>
+    </item>
+    <item>
+      <title>Merge two sorted list</title>
+      <link>http://localhost:1313/leetcode/epi-7.1-merge-two-sorted-list/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-7.1-merge-two-sorted-list/</guid>
+      <description>c&#xA;def merge_two_sorted_lists(L1, L2): # Creates a placeholder for the result. dummy_head = tail = ListNode() while L1 and L2: if L1.data &amp;lt; L2.data: tail.next, L1 = L1, L1.next else: tail.next, L2 = L2, L2.next tail = tail.next # Appends the remaining nodes of L1 or L2 tail.next = L1 or L2 return dummy_head.next remember to use two pointer, one move, one for return</description>
+    </item>
+    <item>
+      <title>Test for cyclicity</title>
+      <link>http://localhost:1313/leetcode/epi-7.3-test-for-cyclicity/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-7.3-test-for-cyclicity/</guid>
+      <description>takes the head of a singly linked list and returns null if there&amp;rsquo;s no cycle.&#xA;return the node at the start of the cycle if present code&#xA;code, a bit cheating, need to make sure there&amp;rsquo;s no inf value before def has_cycle(head: ListNode) -&amp;gt; Optional[ListNode]: cur = head while cur: if cur.data == float(&amp;#39;inf&amp;#39;): return cur cur.data = float(&amp;#39;inf&amp;#39;) cur = cur.next return None c2 if there&amp;rsquo;s a cycle, fast and slow will meet.</description>
+    </item>
+    <item>
+      <title>Test for overlapping lists</title>
+      <link>http://localhost:1313/leetcode/epi-7.4-test-for-overlapping-lists-no-cycle/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/epi-7.4-test-for-overlapping-lists-no-cycle/</guid>
+      <description>takes two cycle-free single linked list, determines if there exists a node that is common to both lists&#xA;c1 def overlapping_no_cycle_lists(l0, l1): def length(L): length = 0 while L: length += 1 L = L.next return length l0_len, l1_len = length(l0), length(l1) if l0_len &amp;gt; l1_len: l0, l1 = l1, l0 # l1 is the longer list # Advances the longer list to get equal length lists. for _ in range(abs(l0_len - l1_len)): l1 = l1.</description>
+    </item>
+    <item>
+      <title>Leetcode: LinkedList in Python</title>
+      <link>http://localhost:1313/dev/lee-linkedlist/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-linkedlist/</guid>
+      <description>create a dummy node Merge two linked lists.&#xA;# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&amp;gt; ListNode: pre = ListNode(0) ans = pre while(l1 != None or l2 != None): if l1 == None or (l2 != None and l2.val &amp;lt;= l1.val): pre.next = l2 l2 = l2.next pre = pre.</description>
+    </item>
+  </channel>
+</rss>

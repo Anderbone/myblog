@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="Given the root of a binary tree, return the postorder traversal of its nodes&rsquo; values. c
+code class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: self.res = [] def post(root): if root: post(root.left) post(root.right) self.res.append(root.val) post(root) return self.res code modified pre-order class Solution: def postorderTraversal(self, root): traversal, stack = [], [root] while stack: node = stack.pop() if node: # pre-order, right first traversal.append(node.val) stack.append(node.left) stack.append(node.right) # reverse result return traversal[::-1] ">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="145. Binary tree postorder traversal"/>
+<meta name="twitter:description" content="Given the root of a binary tree, return the postorder traversal of its nodes&rsquo; values. c
+code class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: self.res = [] def post(root): if root: post(root.left) post(root.right) self.res.append(root.val) post(root) return self.res code modified pre-order class Solution: def postorderTraversal(self, root): traversal, stack = [], [root] while stack: node = stack.pop() if node: # pre-order, right first traversal.append(node.val) stack.append(node.left) stack.append(node.right) # reverse result return traversal[::-1] "/>
+
+    <meta property="og:title" content="145. Binary tree postorder traversal" />
+<meta property="og:description" content="Given the root of a binary tree, return the postorder traversal of its nodes&rsquo; values. c
+code class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: self.res = [] def post(root): if root: post(root.left) post(root.right) self.res.append(root.val) post(root) return self.res code modified pre-order class Solution: def postorderTraversal(self, root): traversal, stack = [], [root] while stack: node = stack.pop() if node: # pre-order, right first traversal.append(node.val) stack.append(node.left) stack.append(node.right) # reverse result return traversal[::-1] " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/leetcode/145/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2021-05-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-29T16:29:51+00:00" />
+
+
+
+
+    <title>
+  145. Binary tree postorder traversal · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/leetcode/145/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/leetcode/145/">
+              145. Binary tree postorder traversal
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-05-17T00:00:00Z'>
+                May 17, 2021
+              </time>
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/tree/">tree</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Given the root of a binary tree, return <strong>the postorder traversal of its nodes&rsquo; values</strong>.
+c</p>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">postorderTraversal</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>res <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">post</span>(root):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> root:
+</span></span><span style="display:flex;"><span>                post(root<span style="color:#f92672">.</span>left)
+</span></span><span style="display:flex;"><span>                post(root<span style="color:#f92672">.</span>right)
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>res<span style="color:#f92672">.</span>append(root<span style="color:#f92672">.</span>val)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        post(root)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>res
+</span></span></code></pre></div><ul>
+<li>code modified pre-order</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">postorderTraversal</span>(self, root):
+</span></span><span style="display:flex;"><span>        traversal, stack <span style="color:#f92672">=</span> [], [root]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> stack:
+</span></span><span style="display:flex;"><span>            node <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> node:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># pre-order, right first</span>
+</span></span><span style="display:flex;"><span>                traversal<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>val)
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>left)
+</span></span><span style="display:flex;"><span>                stack<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>right)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># reverse result</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> traversal[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+      </footer>
+    </article>
+
+    <div class="next-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/144/?ref=footer">« 144. Binary tree preorder traversal</a>
+      
+    </div>
+    
+    <div class="previous-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/posts/opinion-extrovert/?ref=footer">5-love-languages and Extrovert only exist in our... »</a>
+      
+    </div>
+
+    
+  </section>
+
+    
+<section>
+  <ul>
+     
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+    <sup>96</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+    <sup>20</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+    <sup>24</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+    <sup>27</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+    <sup>14</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+    <sup>25</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+    <sup>17</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+    <sup>30</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+    <sup>41</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+    <sup>16</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+    <sup>19</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+    <sup>15</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+    <sup>13</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+    <sup>7</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+    <sup>23</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+    <sup>36</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+    <sup>9</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+    <sup>3</sup>
+          </div>
+    
+  
+  </ul>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

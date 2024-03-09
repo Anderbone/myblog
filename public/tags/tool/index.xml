@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool on Jiyu</title>
+    <link>http://localhost:1313/tags/tool/</link>
+    <description>Recent content in Tool on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 12 Jan 2024 17:31:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Pocket(read it later) on Koreader</title>
+      <link>http://localhost:1313/dev/tool-koreader-pocket/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-koreader-pocket/</guid>
+      <description>Recently I found a brilliant tool that can help people to use Pocket on Koreader.&#xA;forum page link&#xA;github link&#xA;I run it on my Synology NAS.&#xA;Then add link https://pingu:443/odps as the ODPS catalog URL on your koreader, change the link accordingly to follow your web portals, enjoy!</description>
+    </item>
+    <item>
+      <title>How to set up a shortcut to open/track/minimise an app on Linux</title>
+      <link>http://localhost:1313/dev/tool-global-shortcut/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-global-shortcut/</guid>
+      <description>For e.g. with yakuake, by default the shortcut is F12, you can open it or track it anywhere, just the same window. If it&amp;rsquo;s focused, press F12 again gonna minimize it.&#xA;Now let&amp;rsquo;s learn how to set up such a shortcut for our own whatever apps on Linux.&#xA;You need to have xorg-xprop, xdotool, wmctrl, procps-ng installed.&#xA;You&amp;rsquo;d want to set the terminal variable to your app&amp;rsquo;s launch command, and set the wm_class variable based on what you see when you run xprop WM_CLASS and click on your app window.</description>
+    </item>
+    <item>
+      <title>Manjaro new installation personal config</title>
+      <link>http://localhost:1313/dev/tool-manjaro-install/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-manjaro-install/</guid>
+      <description>Configure trackball: https://yanjiyu.com/dev/tool-deftpro/&#xA;system&#xA;sudo pacman-mirrors -f &amp;amp;&amp;amp; sudo pacman -Syyu sudo pacman -Syu base-devel --needed sudo pacman -S yay go texlive-most konversation docker docker-compose gvim nodejs npm nvm sudo systemctl enable --now fstrim.timer personal&#xA;yay -S visual-studio-code-bin yay -S dynalist yay -S dropbox yay -S stretchly yay -S todoist-appimage yay -S jetbrains-toolbox yay -S autokey-git yay -S flameshot yay -S eudic yay -S freedownloadmanager yay -S git-review pip install --user tldr git</description>
+    </item>
+    <item>
+      <title>How to configure deft pro track ball on Linux</title>
+      <link>http://localhost:1313/dev/tool-deftpro/</link>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-deftpro/</guid>
+      <description>I use manjaro here.&#xA;Create a conf file, put it in /usr/share/X11/xorg.conf.d/99-trackball.conf&#xA;Notice the button mapping, instead of number 10, it&amp;rsquo;s 1, which means I use Fn1 button as Left button; then 2, means at 11 Fn2 button will be used as Middle button.&#xA;Section &amp;#34;InputClass&amp;#34; # DEFT PRO Buttons: # 1: Left button # 2: Middle button (wheel click) # 3: Right button # 4: Wheel scroll up # 5: Wheel scroll down # 6: Wheel tilt left # 7: Wheel tilt right # 8: Back button # 9: Forward button # 10: Fn1 (button on the left of the ball) # 11: Fn2 (button on right most) # 12: Fn3 (button on the above of the slide switch) Identifier &amp;#34;Elecom DEFT Pro Trackball&amp;#34; MatchProduct &amp;#34;DEFT Pro TrackBall&amp;#34; Driver &amp;#34;libinput&amp;#34; Option &amp;#34;ScrollMethod&amp;#34; &amp;#34;button&amp;#34; Option &amp;#34;ScrollButton&amp;#34; &amp;#34;9&amp;#34; Option&#x9;&amp;#34;MiddleEmulation&amp;#34; &amp;#34;on&amp;#34; Option &amp;#34;ButtonMapping&amp;#34; &amp;#34;1 2 3 4 5 6 7 8 9 1 2 12&amp;#34; EndSection I also found a way to use button lock, so forward button gonna trigger whether we use the ball as a scroll button.</description>
+    </item>
+    <item>
+      <title>Python to exe with win10 notification</title>
+      <link>http://localhost:1313/dev/tool-pytoexe/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-pytoexe/</guid>
+      <description>With this auto-py-to-txe, it&amp;rsquo;s easy to convert your py to a self-contained exe.&#xA;I want to add a win10 notification, at first I tried win10toast.ToastNotifier(), it works fine in py but when I convert it to exe, it&amp;rsquo;s no longer working anymore.&#xA;Then I tried plyer.notification, which works fine. Notince if you want to build a single exe file without folder, and you have resouce like pictures, you need to write a resouce_path function.</description>
+    </item>
+    <item>
+      <title>Auto close quotes for markdown in VsCode</title>
+      <link>http://localhost:1313/dev/tool-vscode-markdown-autoclosing/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-vscode-markdown-autoclosing/</guid>
+      <description>Sometimes I want to auto-close double quotes and ` in markdown mode.&#xA;In settings we have such settings but they are not working in plain text files like makrdown.&#xA;Find &amp;ldquo;language-configuration.json&amp;rdquo; under markdown-basic folder. My path: C:\Program Files\Microsoft VS Code\resources\app\extensions\markdown-basics\language-configuration.json&#xA;Add what you want auto close and save it.&#xA;&amp;#34;autoClosingPairs&amp;#34;: [ { &amp;#34;open&amp;#34;: &amp;#34;{&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;}&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;`&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;`&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;\&amp;#34;&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;\&amp;#34;&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;[&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;]&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;(&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;)&amp;#34; }, { &amp;#34;open&amp;#34;: &amp;#34;&amp;lt;&amp;#34;, &amp;#34;close&amp;#34;: &amp;#34;&amp;gt;&amp;#34;, &amp;#34;notIn&amp;#34;: [ &amp;#34;string&amp;#34; ] } ], BTW use Ctrl+M Ctrl+C you could generate a code block in markdown.</description>
+    </item>
+    <item>
+      <title>Using latex with VsCode</title>
+      <link>http://localhost:1313/dev/tool-latex-vscode/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-latex-vscode/</guid>
+      <description>Refer&#xA;On windows:&#xA;Install texLive.&#xA;Add the path to environment variable. Install &amp;ldquo;Latex workship&amp;rdquo; on vscode.&#xA;Open your tex file, View Latex PDF File, you are ready to go.&#xA;On manjaro:&#xA;sudo pacman -S textlive-most </description>
+    </item>
+    <item>
+      <title>Automated Mongodb github Backups</title>
+      <link>http://localhost:1313/dev/tool-autobackup/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-autobackup/</guid>
+      <description>refer: https://github.com/VeliovGroup/ostrio/blob/master/tutorials/linux/security/automated-backups.md&#xA;A script to automatically backup your mongodb database and related logs etc., then commit to your github daily. It also deletes your old backup that older than 7 days.&#xA;#!/bin/bash # Change Directory to repository cd /root/backup/ DATE=$(date +%Y%m%d) DATEOLD=`date -d &amp;#34;${DATE} -7 day&amp;#34; +%Y%m%d` mongodump \ -d datadb \ -u xx \ -p xx \ --gzip \ --archive=&amp;#34;/root/backup/mongodb.$DATE.gz&amp;#34; tar -zcf &amp;#34;/root/backup/syslog.$DATE.tar.gz&amp;#34; -C / var/log/syslog tar -zcf &amp;#34;/root/backup/auth.$DATE.tar.gz&amp;#34; -C / var/log/auth.</description>
+    </item>
+    <item>
+      <title>Install VMware Workstation on Manjaro</title>
+      <link>http://localhost:1313/dev/tool-installvm/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-installvm/</guid>
+      <description>vmmon error After installation, you can&amp;rsquo;t open VMware directly. It will show an error:&#xA;VMWare could not find module ‘vmmon’, Please Make Sure That The Kernel Module &amp;lsquo;vmmon&amp;rsquo; Is Loaded.&#xA;manjaro wiki&#xA;The AUR package vmware-workstation will install VMWare Workstation and the dkms modules needed to run it.&#xA;It can be installed with:&#xA;pamac build vmware-workstation After installing, either reboot, or load the required modules&#xA;sudo modprobe -a vmw_vmci vmmon There are three services that can be optionally be enabled:</description>
+    </item>
+    <item>
+      <title>Amazing ultimate note tool: Dynalist</title>
+      <link>http://localhost:1313/dev/tool-dynalist/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-dynalist/</guid>
+      <description>Dynalist is one of the most helpful tools for me nowadays, no matter code, work notes, daily notes such as training records, prayer list etc. All stuff can be handled within it.&#xA;I used to use OneNote when I was in University, everyone knows how powerful it is. The downside is obvious, it&amp;rsquo;s too heavy. I need a better tool to write everything down quickly and jump to everywhere with a keyboard.</description>
+    </item>
+    <item>
+      <title>Autohotkey/Autokey scripts for Dynalist</title>
+      <link>http://localhost:1313/dev/tool-autohotkey/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/tool-autohotkey/</guid>
+      <description>Autohotkey Picture Suppose the picture link is in your clipboard, to put a picture in Dynalist(or any markdown editor) In your clipboard you have a picture link like https://i.imgur.com/XH472FR.png&#xA;Click Alt+P, you got&#xA;![](https://i.imgur.com/XH472FR.png) !p:: Send, {!}[]() Sleep, 50 Send, {Left 1} Sleep, 50 Send ^v return Code In your clipboard, you have print(&amp;lsquo;Hello&amp;rsquo;). Click win+` in dynalist next to test, you got this nice result.&#xA;#`:: Send {Enter} Send {Tab} Send, code Send +{Enter} Send, ```````````` Sleep, 50 Send, {Left 3} Send ^v return Autokey It&amp;rsquo;s similar as above, just on Linux.</description>
+    </item>
+  </channel>
+</rss>

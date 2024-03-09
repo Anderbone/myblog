@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leetcode Summary on Jiyu</title>
+    <link>http://localhost:1313/tags/leetcode-summary/</link>
+    <description>Recent content in Leetcode Summary on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Dec 2023 16:31:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/leetcode-summary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>leetcode questions: Binary Search</title>
+      <link>http://localhost:1313/dev/lee-binary-search/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-binary-search/</guid>
+      <description>bisect.bisect_left(a, x) https://dynalist.io/d/RWIGNj7DLlzkBed-3ZqhuBg_#z=cbr2Mkrig9KhE6Lxfwhm31IS O(logn) greater than or equal to the targeted value. If all elements are less than x, return len(a) l&amp;lt;=r or l &amp;lt; r ans1 if you discard mid for the next iteration (i.e. l = mid+1 or r = mid-1) then use while (l &amp;lt;= r). if you keep mid for the next iteration (i.e. l = mid or r = mid) then use while (l &amp;lt; r) ans2 if you are returning from inside the loop, use left &amp;lt;= right if you are reducing the search space, use left &amp;lt; right and finally return a[left] template 1 can be determined by accessing a single index in the array.</description>
+    </item>
+    <item>
+      <title>Java frequently used data structures and methods for leetcode</title>
+      <link>http://localhost:1313/dev/lee-java-data-structure/</link>
+      <pubDate>Sat, 09 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-java-data-structure/</guid>
+      <description>Array declare int[] a = new int[100]; int[] b = {4,1,5}; array = new int[]{1,2,3}; two-dimensional code int a[][] = {{1,2}, {3,4}}; code int array[][] = new int[3][]; array[0] = new int[3]; array[1] = new int[2]; array[2] = new int[5]; arr.length, a field on any array, the capacity, not the number of elements no () in the end, a final variable length, length(), size() .length is a field, containing the capacity (NOT the number of elements the array contains at the moment) of arrays.</description>
+    </item>
+    <item>
+      <title>leetcode: Trie</title>
+      <link>http://localhost:1313/dev/lee-trie/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-trie/</guid>
+      <description>Basic A Trie is a special form of a Nary tree. Typically, a trie is used to store strings. Each Trie node represents a string (a prefix). Each node might have several children nodes while the paths to different children nodes represent different characters. And the strings the child nodes represent will be the origin string represented by the node itself plus the character on the path.&#xA;Here is an example of a trie: In the example, the value we mark in each node is the string the node represents.</description>
+    </item>
+    <item>
+      <title>leetcode questions: Bit</title>
+      <link>http://localhost:1313/dev/lee-bit/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-bit/</guid>
+      <description>common tricks x &amp;amp; (-x) to isolate/get the rightmost 1-bit This operation reverts all bits of x except the rightmost 1-bit.&#xA;Hence, x and -x have just one bit in common - the rightmost 1-bit. That means that x &amp;amp; (-x) would keep that rightmost 1-bit and set all the other bits to 0. x &amp;amp; (x - 1) is a way to set the rightmost 1-bit to zero. To subtract 1 means to change the rightmost 1-bit to 0 and to set all the lower bits to 1.</description>
+    </item>
+    <item>
+      <title>leetcode: mini spanning tree, single src shortest path, topological</title>
+      <link>http://localhost:1313/dev/lee-graph-advanced/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-graph-advanced/</guid>
+      <description>Minimum spanning tree A minimum spanning tree is a spanning tree with the minimum possible total edge weight in a “weighted undirected graph”. Min Cost to Connect All Points - LeetCode&#xA;You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.</description>
+    </item>
+    <item>
+      <title>leetcode questions: Backtracking</title>
+      <link>http://localhost:1313/dev/lee-backtracking/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-backtracking/</guid>
+      <description>Template def backtrack(candidate): if find_solution(candidate): output(candidate) return # iterate all possible candidates. for next_candidate in list_of_candidates: if is_valid(next_candidate): # try this partial candidate solution place(next_candidate) # given the candidate, explore further. backtrack(next_candidate) # backtrack remove(next_candidate) 17. Letter Combinations of a Phone Number Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.&#xA;A mapping of digit to letters (just like on the telephone buttons) is given below.</description>
+    </item>
+    <item>
+      <title>leetcode questions: BFS</title>
+      <link>http://localhost:1313/dev/lee-bfs/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-bfs/</guid>
+      <description>BFS Template /** * Return the length of the shortest path between root and target node. */ int BFS(Node root, Node target) { Queue&amp;lt;Node&amp;gt; queue; // store all nodes which are waiting to be processed Set&amp;lt;Node&amp;gt; visited; // store all the nodes that we&amp;#39;ve visited int step = 0; // number of steps neeeded from root to current node // initialize add root to queue; add root to visited; // BFS while (queue is not empty) { step = step + 1; // iterate the nodes which are already in the queue int size = queue.</description>
+    </item>
+    <item>
+      <title>leetcode questions: DFS</title>
+      <link>http://localhost:1313/dev/lee-dfs/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-dfs/</guid>
+      <description>DFS Templates Template 1:&#xA;/* * Return true if there is a path from cur to target. */ boolean DFS(Node cur, Node target, Set&amp;lt;Node&amp;gt; visited) { return true if cur is target; for (next : each neighbor of cur) { if (next is not in visited) { add next to visted; return true if DFS(next, target, visited) == true; } } return false; } Template 2 using an explicit stack to avoid stack overflow:</description>
+    </item>
+    <item>
+      <title>leetcode questions: dynamic programming</title>
+      <link>http://localhost:1313/dev/lee-dp/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-dp/</guid>
+      <description>Intro Good video: Dynamic Programming - Learn to Solve Algorithmic Problems &amp;amp; Coding Challenges - YouTube&#xA;DP is a style of coding where you store the results of your algorithm in a data structure while it runs.&#xA;dynamic programming - What is the difference between bottom-up and top-down? - Stack Overflow&#xA;code function dp(dp_state, memo_dict) { // check if we have seen this dp_state if dp_state in memo_dict return memo_dict[dp_state] // base case (a case that we know the answer for already) such as dp_state is empty if dp_state is the base cases return things like 0 or null calculate dp(dp_state) from dp(other_state) save dp_state and the result into memo_dict } function answerToProblem(input) { return dp(start_state, empty_memo_dict) } The same subproblem may reoccur compared to divide-and-conquer, a key to solve is to break the problem into subproblems such that</description>
+    </item>
+    <item>
+      <title>Leetcode: LinkedList in Python</title>
+      <link>http://localhost:1313/dev/lee-linkedlist/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-linkedlist/</guid>
+      <description>create a dummy node Merge two linked lists.&#xA;# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&amp;gt; ListNode: pre = ListNode(0) ans = pre while(l1 != None or l2 != None): if l1 == None or (l2 != None and l2.val &amp;lt;= l1.val): pre.next = l2 l2 = l2.next pre = pre.</description>
+    </item>
+    <item>
+      <title>Python list/dict functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-list-dict/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-list-dict/</guid>
+      <description>List len(array) : length of array list.indexof(obj) enumerate(array) : adds counter at the beginning. for count, item in enumberate([&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]) # 0x 1y 2z range(0,len(mylist)1,2) range(0,3), is 0,1,2 for i in reversed(range(len(A))) nums.append(val), nums.remove(val), nums.reverse() nums.extend(nums2) list.insert(index, obj) list.pop() default pop index is -1, remove the last one nums[:] copy the value within function: b[:]=a .copy is equals to b[:] temp = self.original[:] copy.deepcopy could copy nested list import copy , copy.</description>
+    </item>
+    <item>
+      <title>Python String functions for leetcode</title>
+      <link>http://localhost:1313/dev/lee-py-string/</link>
+      <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-py-string/</guid>
+      <description> print(f&#39;best RF score: {grid.best_score_:.3f}&#39;) str.index(sub[,start[,end]]) str.strip() remove spaces at the beginning and the end strip(str-not-want) lower() print(str.upper()) print(str.lower()) print(str.capitalize()) # Only first letter big print(str.title()) # This Is A Title s.find(c), s.rfind(c) &amp;ldquo;hello&amp;rdquo;.find(&amp;ldquo;l&amp;rdquo;) -&amp;gt; 2 &amp;ldquo;hello&amp;rdquo;.rfind(&amp;ldquo;l&amp;rdquo;) -&amp;gt; 3 s.split(&#39;&#39;) a = &#39;&#39;.join(a.split()) remove blank replace(old, new[, max]) &#39;&#39;.join(str(e) for e in list) list to str s.isdigit(), s.isalpha s.isalnum() # is num or alpha if i.lstrip(&amp;rsquo;-&amp;rsquo;).isdigit(): check number&amp;lt;0 ord , chr ord(&#39;A&#39;) get 65 chr(65) get A a = (chr(ord(&#39;0&#39;) + x % 10)) x:123 get: str type &amp;lsquo;3&amp;rsquo; </description>
+    </item>
+    <item>
+      <title>Leetcode: Array questions with Python</title>
+      <link>http://localhost:1313/dev/lee-array/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-array/</guid>
+      <description>134.Gas Station There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</description>
+    </item>
+  </channel>
+</rss>

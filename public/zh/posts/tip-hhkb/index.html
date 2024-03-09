@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="
+今年后半年入了这个hhkb hybrid type-s keyboard black no-print，300磅不便宜，以下是我的一些感受和tips。
+敲击感，键帽感受这些就不说了，我也没太多研究，反正我个人感觉非常好，声音和普通薄膜没太大区别，开放办公室使用也完全不影响同事，感兴趣的自己慢慢研究。仁者见仁的事情。 关于没有方向键： 如图是我的Fn层组合键的配置，可以看到上下左右就是HJKL，和Vim的使用一致，使用方向键完全不需要再像以前全键盘那样的大幅度手部挪动，可以说反而更适合日常办公，当然打游戏就免了。这里只针对日常代码和各种办公文档，反正我也不打游戏。 我个人是Dynalist的高强度使用者，以前一个最大的不便感受就是使用方向键不太方便，手挪来挪去的，这下使用Dyanlist的感受提高了不止一个挡位，再也不用怨念为什么不像workflowy有Vim插件了。 各种键位不适应的担忧，关于不适合Win系统的迷思。 这个键盘是可以用自带的Win软件来配置键位的，并且配置好的键位在其他电脑和系统可以直接使用，不必重新配置。 从图中的键位配置可以看到，我将home, end以及正反删除键，分别放在了JK两个键位的上下方，个人感觉是最容易敲击的位置了。这几个键位的使用频率和效率大大提高。所以说自己需要方向键和Home,End的程序员，我感觉就是因为需要，反而更适合使用这种配置组合键的小键盘。 其他值得一说的就是，我底部四个键分别是Alt, Fn, Win, Alt,我感觉这是最适合在Win系统使用的键位，与之前最大的不同就是Win键的位置，现在需要右手无名指来按，但毕竟日常也不会用到太多，用习惯了也没有感到不便。 加减号包括等号这些都放在了左手本来就在的位置，尤其是程序员经常要打等号，现在等号就是左手食指位置，异常的方便。 F10,F11,F12都挪到了不需要移动手的位置，也能直接记住位置不用低头看了。 原本F10的位置放上了‘.’键，主要是工作有时候打浮点数比较多，这样打数字加小数点的时候就不用移动右手到最下面了。 除了Fn层，你可以再设置一层键位，通过组合键切换过去，具体看说明书吧，我个人日常使用是没发现更多一层的必要。 可以看到我的DIP Switches调节到Mac的位置，原因是我发现这样配置在Win上完美使用，并且还多了控制音量的组合键可以使用。并且我在Linux系统和iPad上亲测，没有任何bug。也就是说我目前的键盘配置，与我的Win系统，linux(manjaro)系统，可能的mac系统(我没有)，iPad，都可以直接配对连结并且不需要任何配置改动，并且都是这一套配好的键位。 配对速度很快，切换设备也基本都在一两秒内，没有任何延迟或者不稳定断连的情况。 从各种键位配置你也该知道，必须买无刻啊！！！黑色是我觉得更浑然天成一点，logo的颜色也更看不见，比较低调。 练习盲打推荐尝试该网站，我买回来就用这个网站着重练习记忆了各种符号的位置，练个两天左右就差不多了，感受就是应该早点学习完全盲打的，其实也就是几个符号不容易记住而已。还有一点就是该使用右边Shift的时候就使用右边的(shift&#43;左手敲击键)。 电池我买了日产白色eneloop，所以也就不用觉得经常换电池花钱或者不环保了。 最后要说一点，就是键盘比以前薄膜键盘高，我之前买了个软的键盘手托，感觉不好用，准备买个木头或者其他硬质的，后来上网研究发现浮空手腕是最好的，也叫浮腕，就像弹钢琴一样，虽然刚开始不适应，但这确实是最健康最有效率的姿势。所以不用买也顺便省些钱哈，而且真的强烈安利这个姿势，后悔没有早点知道！ ">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="hhkb键盘很好"/>
+<meta name="twitter:description" content="
+今年后半年入了这个hhkb hybrid type-s keyboard black no-print，300磅不便宜，以下是我的一些感受和tips。
+敲击感，键帽感受这些就不说了，我也没太多研究，反正我个人感觉非常好，声音和普通薄膜没太大区别，开放办公室使用也完全不影响同事，感兴趣的自己慢慢研究。仁者见仁的事情。 关于没有方向键： 如图是我的Fn层组合键的配置，可以看到上下左右就是HJKL，和Vim的使用一致，使用方向键完全不需要再像以前全键盘那样的大幅度手部挪动，可以说反而更适合日常办公，当然打游戏就免了。这里只针对日常代码和各种办公文档，反正我也不打游戏。 我个人是Dynalist的高强度使用者，以前一个最大的不便感受就是使用方向键不太方便，手挪来挪去的，这下使用Dyanlist的感受提高了不止一个挡位，再也不用怨念为什么不像workflowy有Vim插件了。 各种键位不适应的担忧，关于不适合Win系统的迷思。 这个键盘是可以用自带的Win软件来配置键位的，并且配置好的键位在其他电脑和系统可以直接使用，不必重新配置。 从图中的键位配置可以看到，我将home, end以及正反删除键，分别放在了JK两个键位的上下方，个人感觉是最容易敲击的位置了。这几个键位的使用频率和效率大大提高。所以说自己需要方向键和Home,End的程序员，我感觉就是因为需要，反而更适合使用这种配置组合键的小键盘。 其他值得一说的就是，我底部四个键分别是Alt, Fn, Win, Alt,我感觉这是最适合在Win系统使用的键位，与之前最大的不同就是Win键的位置，现在需要右手无名指来按，但毕竟日常也不会用到太多，用习惯了也没有感到不便。 加减号包括等号这些都放在了左手本来就在的位置，尤其是程序员经常要打等号，现在等号就是左手食指位置，异常的方便。 F10,F11,F12都挪到了不需要移动手的位置，也能直接记住位置不用低头看了。 原本F10的位置放上了‘.’键，主要是工作有时候打浮点数比较多，这样打数字加小数点的时候就不用移动右手到最下面了。 除了Fn层，你可以再设置一层键位，通过组合键切换过去，具体看说明书吧，我个人日常使用是没发现更多一层的必要。 可以看到我的DIP Switches调节到Mac的位置，原因是我发现这样配置在Win上完美使用，并且还多了控制音量的组合键可以使用。并且我在Linux系统和iPad上亲测，没有任何bug。也就是说我目前的键盘配置，与我的Win系统，linux(manjaro)系统，可能的mac系统(我没有)，iPad，都可以直接配对连结并且不需要任何配置改动，并且都是这一套配好的键位。 配对速度很快，切换设备也基本都在一两秒内，没有任何延迟或者不稳定断连的情况。 从各种键位配置你也该知道，必须买无刻啊！！！黑色是我觉得更浑然天成一点，logo的颜色也更看不见，比较低调。 练习盲打推荐尝试该网站，我买回来就用这个网站着重练习记忆了各种符号的位置，练个两天左右就差不多了，感受就是应该早点学习完全盲打的，其实也就是几个符号不容易记住而已。还有一点就是该使用右边Shift的时候就使用右边的(shift&#43;左手敲击键)。 电池我买了日产白色eneloop，所以也就不用觉得经常换电池花钱或者不环保了。 最后要说一点，就是键盘比以前薄膜键盘高，我之前买了个软的键盘手托，感觉不好用，准备买个木头或者其他硬质的，后来上网研究发现浮空手腕是最好的，也叫浮腕，就像弹钢琴一样，虽然刚开始不适应，但这确实是最健康最有效率的姿势。所以不用买也顺便省些钱哈，而且真的强烈安利这个姿势，后悔没有早点知道！ "/>
+
+    <meta property="og:title" content="hhkb键盘很好" />
+<meta property="og:description" content="
+今年后半年入了这个hhkb hybrid type-s keyboard black no-print，300磅不便宜，以下是我的一些感受和tips。
+敲击感，键帽感受这些就不说了，我也没太多研究，反正我个人感觉非常好，声音和普通薄膜没太大区别，开放办公室使用也完全不影响同事，感兴趣的自己慢慢研究。仁者见仁的事情。 关于没有方向键： 如图是我的Fn层组合键的配置，可以看到上下左右就是HJKL，和Vim的使用一致，使用方向键完全不需要再像以前全键盘那样的大幅度手部挪动，可以说反而更适合日常办公，当然打游戏就免了。这里只针对日常代码和各种办公文档，反正我也不打游戏。 我个人是Dynalist的高强度使用者，以前一个最大的不便感受就是使用方向键不太方便，手挪来挪去的，这下使用Dyanlist的感受提高了不止一个挡位，再也不用怨念为什么不像workflowy有Vim插件了。 各种键位不适应的担忧，关于不适合Win系统的迷思。 这个键盘是可以用自带的Win软件来配置键位的，并且配置好的键位在其他电脑和系统可以直接使用，不必重新配置。 从图中的键位配置可以看到，我将home, end以及正反删除键，分别放在了JK两个键位的上下方，个人感觉是最容易敲击的位置了。这几个键位的使用频率和效率大大提高。所以说自己需要方向键和Home,End的程序员，我感觉就是因为需要，反而更适合使用这种配置组合键的小键盘。 其他值得一说的就是，我底部四个键分别是Alt, Fn, Win, Alt,我感觉这是最适合在Win系统使用的键位，与之前最大的不同就是Win键的位置，现在需要右手无名指来按，但毕竟日常也不会用到太多，用习惯了也没有感到不便。 加减号包括等号这些都放在了左手本来就在的位置，尤其是程序员经常要打等号，现在等号就是左手食指位置，异常的方便。 F10,F11,F12都挪到了不需要移动手的位置，也能直接记住位置不用低头看了。 原本F10的位置放上了‘.’键，主要是工作有时候打浮点数比较多，这样打数字加小数点的时候就不用移动右手到最下面了。 除了Fn层，你可以再设置一层键位，通过组合键切换过去，具体看说明书吧，我个人日常使用是没发现更多一层的必要。 可以看到我的DIP Switches调节到Mac的位置，原因是我发现这样配置在Win上完美使用，并且还多了控制音量的组合键可以使用。并且我在Linux系统和iPad上亲测，没有任何bug。也就是说我目前的键盘配置，与我的Win系统，linux(manjaro)系统，可能的mac系统(我没有)，iPad，都可以直接配对连结并且不需要任何配置改动，并且都是这一套配好的键位。 配对速度很快，切换设备也基本都在一两秒内，没有任何延迟或者不稳定断连的情况。 从各种键位配置你也该知道，必须买无刻啊！！！黑色是我觉得更浑然天成一点，logo的颜色也更看不见，比较低调。 练习盲打推荐尝试该网站，我买回来就用这个网站着重练习记忆了各种符号的位置，练个两天左右就差不多了，感受就是应该早点学习完全盲打的，其实也就是几个符号不容易记住而已。还有一点就是该使用右边Shift的时候就使用右边的(shift&#43;左手敲击键)。 电池我买了日产白色eneloop，所以也就不用觉得经常换电池花钱或者不环保了。 最后要说一点，就是键盘比以前薄膜键盘高，我之前买了个软的键盘手托，感觉不好用，准备买个木头或者其他硬质的，后来上网研究发现浮空手腕是最好的，也叫浮腕，就像弹钢琴一样，虽然刚开始不适应，但这确实是最健康最有效率的姿势。所以不用买也顺便省些钱哈，而且真的强烈安利这个姿势，后悔没有早点知道！ " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/zh/posts/tip-hhkb/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-27T19:25:34+01:00" />
+
+
+
+    <title>
+hhkb键盘很好 · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/zh/posts/tip-hhkb/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/zh">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/zh/posts/">随笔</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/zh/dev/">开发</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/">English</a>
+              </li>
+            
+          
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/zh/posts/tip-hhkb/">
+                    hhkb键盘很好
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2020-12-30T00:00:00Z'>
+                      December 30, 2020
+                    </time>
+                  </span>
+
+                  
+                  <span class="posted-on">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <time datetime='2020-12-30T00:00:00Z'>
+                      Last updated:
+                      七月 27, 2023
+                  </time>
+                  </span>
+                  
+
+
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/zh/tags/%E5%A5%BD%E7%89%A9/">好物</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p><img alt="my hhkb config" src="https://i.imgur.com/nU20xDf.png"></p>
+<p>今年后半年入了这个hhkb hybrid type-s keyboard black no-print，300磅不便宜，以下是我的一些感受和tips。</p>
+<ol>
+<li>敲击感，键帽感受这些就不说了，我也没太多研究，反正我个人感觉非常好，声音和普通薄膜没太大区别，开放办公室使用也完全不影响同事，感兴趣的自己慢慢研究。仁者见仁的事情。</li>
+<li>关于没有方向键：</li>
+</ol>
+<ul>
+<li>如图是我的Fn层组合键的配置，可以看到上下左右就是HJKL，和Vim的使用一致，使用方向键完全不需要再像以前全键盘那样的大幅度手部挪动，可以说反而更适合日常办公，当然打游戏就免了。这里只针对日常代码和各种办公文档，反正我也不打游戏。</li>
+<li>我个人是Dynalist的高强度使用者，以前一个最大的不便感受就是使用方向键不太方便，手挪来挪去的，这下使用Dyanlist的感受提高了不止一个挡位，再也不用怨念为什么不像workflowy有Vim插件了。</li>
+</ul>
+<ol start="3">
+<li>各种键位不适应的担忧，关于不适合Win系统的迷思。</li>
+</ol>
+<ul>
+<li>这个键盘是可以用自带的Win软件来配置键位的，并且配置好的键位在其他电脑和系统可以直接使用，不必重新配置。</li>
+<li>从图中的键位配置可以看到，我将home, end以及正反删除键，分别放在了JK两个键位的上下方，个人感觉是最容易敲击的位置了。这几个键位的使用频率和效率大大提高。所以说自己需要方向键和Home,End的程序员，我感觉就是因为需要，反而更适合使用这种配置组合键的小键盘。</li>
+<li>其他值得一说的就是，我底部四个键分别是Alt, Fn, Win, Alt,我感觉这是最适合在Win系统使用的键位，与之前最大的不同就是Win键的位置，现在需要右手无名指来按，但毕竟日常也不会用到太多，用习惯了也没有感到不便。</li>
+<li>加减号包括等号这些都放在了左手本来就在的位置，尤其是程序员经常要打等号，现在等号就是左手食指位置，异常的方便。</li>
+<li>F10,F11,F12都挪到了不需要移动手的位置，也能直接记住位置不用低头看了。</li>
+<li>原本F10的位置放上了‘.’键，主要是工作有时候打浮点数比较多，这样打数字加小数点的时候就不用移动右手到最下面了。</li>
+<li>除了Fn层，你可以再设置一层键位，通过组合键切换过去，具体看说明书吧，我个人日常使用是没发现更多一层的必要。</li>
+<li>可以看到我的DIP Switches调节到Mac的位置，原因是我发现这样配置在Win上完美使用，并且还多了控制音量的组合键可以使用。并且我在Linux系统和iPad上亲测，没有任何bug。也就是说我目前的键盘配置，与我的Win系统，linux(manjaro)系统，可能的mac系统(我没有)，iPad，都可以直接配对连结并且不需要任何配置改动，并且都是这一套配好的键位。</li>
+</ul>
+<ol start="4">
+<li>配对速度很快，切换设备也基本都在一两秒内，没有任何延迟或者不稳定断连的情况。</li>
+<li>从各种键位配置你也该知道，必须买无刻啊！！！黑色是我觉得更浑然天成一点，logo的颜色也更看不见，比较低调。</li>
+<li>练习盲打推荐尝试该<a href="https://www.typingclub.com/">网站</a>，我买回来就用这个网站着重练习记忆了各种符号的位置，练个两天左右就差不多了，感受就是应该早点学习完全盲打的，其实也就是几个符号不容易记住而已。还有一点就是该使用右边Shift的时候就使用右边的(shift+左手敲击键)。</li>
+<li>电池我买了日产白色eneloop，所以也就不用觉得经常换电池花钱或者不环保了。</li>
+<li>最后要说一点，就是键盘比以前薄膜键盘高，我之前买了个软的键盘手托，感觉不好用，准备买个木头或者其他硬质的，后来上网研究发现浮空手腕是最好的，也叫浮腕，就像弹钢琴一样，虽然刚开始不适应，但这确实是最健康最有效率的姿势。所以不用买也顺便省些钱哈，而且真的强烈安利<a href="https://yanjiyu.com/zh/posts/tip-sitting-position/">这个姿势</a>，后悔没有早点知道！</li>
+</ol>
+
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+
+          
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E5%81%A5%E5%BA%B7/ title="All pages with tag <i>健康</i>">健康</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E5%8E%86%E5%8F%B2/ title="All pages with tag <i>历史</i>">历史</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E5%9C%A3%E7%BB%8F%E5%AD%A6%E4%B9%A0/ title="All pages with tag <i>圣经学习</i>">圣经学习</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E5%9F%BA%E7%9D%A3%E4%BF%A1%E4%BB%B0/ title="All pages with tag <i>基督信仰</i>">基督信仰</a>
+          <sup>26</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E5%A5%BD%E7%89%A9/ title="All pages with tag <i>好物</i>">好物</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E5%BF%83%E7%90%86%E5%AD%A6/ title="All pages with tag <i>心理学</i>">心理学</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E6%92%AD%E5%AE%A2/ title="All pages with tag <i>播客</i>">播客</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E7%BB%B4%E7%89%B9%E6%A0%B9%E6%96%AF%E5%9D%A6/ title="All pages with tag <i>维特根斯坦</i>">维特根斯坦</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E8%AF%97%E6%AD%8C/ title="All pages with tag <i>诗歌</i>">诗歌</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E8%AF%BB%E4%B9%A6/ title="All pages with tag <i>读书</i>">读书</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E8%BD%AF%E4%BB%B6/ title="All pages with tag <i>软件</i>">软件</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/ title="All pages with tag <i>陀思妥耶夫斯基</i>">陀思妥耶夫斯基</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/zh/tags/%E9%9A%8F%E6%84%9F%E8%A7%81%E9%97%BB/ title="All pages with tag <i>随感见闻</i>">随感见闻</a>
+          <sup>1</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+      
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

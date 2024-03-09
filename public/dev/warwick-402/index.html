@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="For Warwick University module 402, high performance computation.
+1.Fundamentals 1.1 the technologies needed to support HPC computer architecture CPU, memory VLSI, transistors multicore, to ease the density(temperature etc.) GPU networking bandwidth, latency communication protocols network topology compilers identify inefficient implementations make use of the characteristics of the computer arcitecture choose a suitable compiler for a certain architecture algorithms design parallel paradigm of parallel programming workload and resource manager task scheduling and resource allocation metrcs 1.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="High-performance computing module outline"/>
+<meta name="twitter:description" content="For Warwick University module 402, high performance computation.
+1.Fundamentals 1.1 the technologies needed to support HPC computer architecture CPU, memory VLSI, transistors multicore, to ease the density(temperature etc.) GPU networking bandwidth, latency communication protocols network topology compilers identify inefficient implementations make use of the characteristics of the computer arcitecture choose a suitable compiler for a certain architecture algorithms design parallel paradigm of parallel programming workload and resource manager task scheduling and resource allocation metrcs 1."/>
+
+    <meta property="og:title" content="High-performance computing module outline" />
+<meta property="og:description" content="For Warwick University module 402, high performance computation.
+1.Fundamentals 1.1 the technologies needed to support HPC computer architecture CPU, memory VLSI, transistors multicore, to ease the density(temperature etc.) GPU networking bandwidth, latency communication protocols network topology compilers identify inefficient implementations make use of the characteristics of the computer arcitecture choose a suitable compiler for a certain architecture algorithms design parallel paradigm of parallel programming workload and resource manager task scheduling and resource allocation metrcs 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/dev/warwick-402/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2019-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-29T17:11:05+00:00" />
+
+
+
+
+    <title>
+High-performance computing module outline · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/dev/warwick-402/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+
+<body data-spy="scroll" data-target="#toc">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-2">
+
+        
+        <nav class="sticky-top" data-toggle="toc" id="toc"></nav>
+        
+      </div>
+
+      <div class="col-sm-8">
+
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a class="title-link" href="http://localhost:1313/dev/warwick-402/">
+                    High-performance computing module outline
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time datetime='2019-03-10T00:00:00Z'>
+                      March 10, 2019
+                    </time>
+                  </span>
+                </div>
+                
+                
+                <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/warwick/">warwick</a>
+    </span></div>
+
+              </div>
+            </header>
+
+            <div>
+              
+              <p>For Warwick University module 402, high performance computation.</p>
+<h3 id="1fundamentals">
+  1.Fundamentals
+  <a class="heading-link" href="#1fundamentals">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="11-the-technologies-needed-to-support-hpc">
+  1.1 the technologies needed to support HPC
+  <a class="heading-link" href="#11-the-technologies-needed-to-support-hpc">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>computer architecture
+<ul>
+<li>CPU, memory</li>
+<li>VLSI, transistors</li>
+<li>multicore, to ease the density(temperature etc.)</li>
+<li>GPU</li>
+</ul>
+</li>
+<li>networking
+<ul>
+<li>bandwidth, latency</li>
+<li>communication protocols</li>
+<li>network topology</li>
+</ul>
+</li>
+<li>compilers
+<ul>
+<li>identify inefficient implementations</li>
+<li>make use of the characteristics of the computer arcitecture</li>
+<li>choose a suitable compiler for a certain architecture</li>
+</ul>
+</li>
+<li>algorithms
+<ul>
+<li>design</li>
+<li>parallel</li>
+<li>paradigm of parallel programming</li>
+</ul>
+</li>
+<li>workload and resource manager
+<ul>
+<li>task scheduling and resource allocation</li>
+<li>metrcs</li>
+</ul>
+</li>
+</ul>
+<h4 id="12-evolution-of-hpc-difference">
+  1.2 Evolution of HPC, difference
+  <a class="heading-link" href="#12-evolution-of-hpc-difference">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>1960 scalar processor
+<ul>
+<li>process one data item at a game</li>
+</ul>
+</li>
+<li>1970 vector processor (GPU is one)
+<ul>
+<li>can process an array of data items in one go</li>
+<li>architecture: <strong>one master processor and many math coprocessors(ALU)</strong>, not independent</li>
+<li>each time, the master processor can fetch one vector of data items and an operation, feed them to ALUs</li>
+<li>overhead:more complicated address,data fetching procedure</li>
+</ul>
+</li>
+<li>1980 MPP massively parallel processing
+<ul>
+<li>up to thousands processors with its own <strong>independent</strong> memory</li>
+<li>processors can fench and run instrustions in parallel</li>
+<li>break down the instructions(workload) in parallel</li>
+<li>workload balance and processor communication(as little as possible)</li>
+<li>blue gene: a massive number of low performance processors</li>
+<li>not every processor has full function, e.g. IO</li>
+</ul>
+</li>
+<li>1990 cluster
+<ul>
+<li>connecting each stand-alone computers with high speed network</li>
+<li>using commodity computer, good portability</li>
+</ul>
+</li>
+<li>1990 grid
+<ul>
+<li>further evlotion of cluster</li>
+<li>integrate <strong>geographically</strong> distributed resources</li>
+</ul>
+</li>
+<li>2000 cloud
+<ul>
+<li>commercialization of grid and cluster computing</li>
+<li>resources and services provided by the third party</li>
+</ul>
+</li>
+</ul>
+<h4 id="13-shared-memory-and-distributed-memory">
+  1.3 Shared memory and distributed memory
+  <a class="heading-link" href="#13-shared-memory-and-distributed-memory">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>shared memory(SMP)
+<ul>
+<li>multiples CPUs, single memory</li>
+<li>all resources are equally available to each core</li>
+<li>do not scale well, requre critical section, cache is critical</li>
+</ul>
+</li>
+<li>shared memory(Non uniform memory access:NUMA)
+<ul>
+<li>multiple CPUs</li>
+<li>each CPU has fast access to its <strong>local area</strong> of the memory, slower to other remoter(switch first, then router)</li>
+<li>scale better, hierarchical memory access</li>
+<li>complicated memory access patter</li>
+<li>global address space</li>
+</ul>
+</li>
+<li>distributed memory (MPP, cluster)
+<ul>
+<li>each CPU has own <strong>independent</strong> memory</li>
+<li>interconnected through over-cable networks</li>
+<li>share data need an explicit communication, MPI e.g.</li>
+<li>larger latencies between processors</li>
+<li>better scalability</li>
+</ul>
+</li>
+</ul>
+<h4 id="14-instruction-dependency">
+  1.4 Instruction dependency
+  <a class="heading-link" href="#14-instruction-dependency">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>control dependency: if then</li>
+<li>data dependency
+<ul>
+<li>flow a=b+c, d=a+c</li>
+<li>output d=a+c, d=a+e</li>
+<li>anti a=b+c,b=2*e</li>
+<li>output and anti could be removed by rename</li>
+</ul>
+</li>
+</ul>
+<h4 id="15-parallel-distributed-computing">
+  1.5 Parallel, distributed computing
+  <a class="heading-link" href="#15-parallel-distributed-computing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>parallel
+<ul>
+<li>breaking the problem to be computed into parts that can run <strong>simultaneously</strong></li>
+<li>eg: MPI perform matrix</li>
+<li>solve tightly problems</li>
+</ul>
+</li>
+<li>parts of work are computed in differernt places
+<ul>
+<li>does not need simulaneous processing</li>
+<li>eg: workflow in a Grid</li>
+<li>loosely-coupled problems, not much communication</li>
+</ul>
+</li>
+</ul>
+<h3 id="2openmp">
+  2.OpenMP
+  <a class="heading-link" href="#2openmp">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>assist compilers to understand the serial program, automatically parallelize it</li>
+<li>used in shared memory parallelism</li>
+<li>an implementation of thread models</li>
+</ul>
+<h4 id="21-3-ypes-of-components">
+  2.1 3 ypes of components
+  <a class="heading-link" href="#21-3-ypes-of-components">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>global data(heap, shared among threads)</li>
+<li>code(executing)</li>
+<li>stack(local private data, not shared)</li>
+</ul>
+<h4 id="22-differences-between-creating-new-processes-and-new-threads">
+  2.2 differences between creating new processes and new threads
+  <a class="heading-link" href="#22-differences-between-creating-new-processes-and-new-threads">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>create process</li>
+</ul>
+<blockquote>
+<p>use the fork function, all three segments and the program counter are duplicated</p>
+</blockquote>
+<ul>
+<li>create thread</li>
+</ul>
+<blockquote>
+<ol>
+<li>only the stack segment and program counter are duplicated</li>
+<li>Light weight process”: multiple threads exist within the context of a single process, sharing the process’s code, global information, other resources</li>
+<li>Used to split a program into separate tasks, one per thread, that can execute concurrently</li>
+</ol>
+</blockquote>
+<h4 id="23-what-are-openmp-directives-used-to-specify">
+  2.3 what are OpenMP directives used to specify
+  <a class="heading-link" href="#23-what-are-openmp-directives-used-to-specify">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>sections of code that can run in parallel</li>
+<li>critical sections</li>
+<li>scope of variables (private of shared)</li>
+</ul>
+<h4 id="24-fork-join-model">
+  2.4 fork-join model
+  <a class="heading-link" href="#24-fork-join-model">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>multiple threads are created using the parallel directive.</p>
+<p><img src="https://i.loli.net/2019/05/19/5ce1406f6193d38529.png"></p>
+<h4 id="25-determine-the-number-of-threads-generated-in-openmp">
+  2.5 determine the number of threads generated in OpenMP
+  <a class="heading-link" href="#25-determine-the-number-of-threads-generated-in-openmp">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>omp_set_num_threads() library function</li>
+<li>OMP_NUM_THREADS environment variable</li>
+<li>default, the number of CPUs on a node</li>
+</ul>
+<h4 id="26-scheduling-iterations-of-loops-to-threads">
+  2.6 scheduling iterations of loops to threads
+  <a class="heading-link" href="#26-scheduling-iterations-of-loops-to-threads">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<blockquote>
+<ol>
+<li>Compiler directive specifies that loop can be done in parallel</li>
+<li>Use thread scheduling to specify partition and allocation of iterations to threads</li>
+<li>partiion the loop into blocks of iterations of size chunk</li>
+</ol>
+</blockquote>
+<ul>
+<li>partition and allocation of loop
+<ul>
+<li># pragma omp parallel for schedule(static,4)
+before execution, the difference between dynamic
+<ul>
+<li>partiion the loop into blocks of iterations of size chunk</li>
+<li>1-4 first, 4-8 second thread</li>
+<li>Before execution, deal out the blocks to each thread</li>
+</ul>
+</li>
+<li>dynamic
+<ul>
+<li>put blocks into a queue</li>
+<li>partiion the loop into blocks of iterations of size chunk</li>
+<li>during execution, each thread grabs a block off the queue until all are done,</li>
+<li>which thread runs which block of iterations depends on the execution pace</li>
+</ul>
+</li>
+<li>schedule(runtime)
+<ul>
+<li>find schedule from an environment vaiable OMP_SCHEDULE</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>synchronisation
+<ul>
+<li>critical construct
+one block per thread protected</li>
+<li>barrier
+one too fast, then wait</li>
+</ul>
+</li>
+</ul>
+<h4 id="27-data-scope-attributes-in-openmp">
+  2.7 data scope attributes in OpenMP
+  <a class="heading-link" href="#27-data-scope-attributes-in-openmp">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>data scope:define how variables should be viewed by threads
+<ul>
+<li>shared(var)
+<ul>
+<li>states var is a global variable to be shared among threads</li>
+</ul>
+</li>
+<li>private
+<ul>
+<li>creates a local copy for var for each thread</li>
+</ul>
+</li>
+<li>reduction(operation: var)
+<ul>
+<li>a local copy of var made for each thread, updated by threads, same as private</li>
+<li>at then end, local values are combined through the reduction operation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3programming-models">
+  3.Programming models
+  <a class="heading-link" href="#3programming-models">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="31-what-can-compiler-approach-help-in-parallel-comuting">
+  3.1 what can compiler approach help in Parallel comuting?
+  <a class="heading-link" href="#31-what-can-compiler-approach-help-in-parallel-comuting">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>automatically parallelize the sequential codes</li>
+<li>very conservative</li>
+<li>reimplementing the code in an more efficient way</li>
+<li>remove the dependency if possible</li>
+</ul>
+<h4 id="32-data-parallelism">
+  3.2 data parallelism
+  <a class="heading-link" href="#32-data-parallelism">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>3.2.1 data parallelism vs task parallelism
+<ul>
+<li>Task parallelism: multiple processors run different operations</li>
+<li>Data parallelism: multiple processors run the same operation on
+different elements of a data structure</li>
+</ul>
+</li>
+<li>3.2.2 why data parallelism is higher level than message passing
+<ul>
+<li>programmer does not need to specify data partition and thread communication sturctures</li>
+<li>this is done by the compiler, inferred from the program and underlying computer architecture</li>
+<li>not all algorithms can be speicfied in data parallel terms</li>
+<li>if the program has irregular communication patterns then this will be compiled less efficiently</li>
+</ul>
+</li>
+</ul>
+<h4 id="33-how-are-the-threads-in-openmp-generated-physically">
+  3.3 how are the threads in OpenMP generated physically?
+  <a class="heading-link" href="#33-how-are-the-threads-in-openmp-generated-physically">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>only the stack segment and the program counter are duplicated, global data and executing code are not duplicated</li>
+<li>Thread creation and running in OpenMP is implemented by calling the multi-threading APIs in POSIX operating systems</li>
+<li>For example, during the compilation, if OpenMP compiler realizes that the threads need to be generated, it inserts the instructions of invoking the relevant API provided by OS</li>
+</ul>
+<h5 id="331-multi-threading-and-multi-processing-api-in-os">
+  3.3.1 multi-threading and multi-processing API in OS
+  <a class="heading-link" href="#331-multi-threading-and-multi-processing-api-in-os">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>OS supported multi-threading(kernel space thread)</li>
+<li>system call for scheduling processes, user ask system to invoke</li>
+</ul>
+<h4 id="34-multiprocessing">
+  3.4 multiprocessing
+  <a class="heading-link" href="#34-multiprocessing">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li><strong>3.4.1 key functions of creating processes in C</strong></li>
+<li>fork() is used to create a child process</li>
+<li><strong>3.4.2 how to make different processes to run different tasks</strong></li>
+<li>The child process is exactly the same as the parent except the returned value of fork()</li>
+<li>Use parent and child to do different tasks, pid = 0 for child process</li>
+<li><strong>3.4.3 overhead of swithching processes</strong></li>
+<li>when to switch (time for scheduling)
+<ul>
+<li>time slice runs out</li>
+<li>system call, user ask system to invoke</li>
+<li>trap, fault -&gt; fault handler</li>
+</ul>
+</li>
+<li>overhead of switching is high, have to save and load much information
+<ul>
+<li>three segments, heap, code ,stack</li>
+<li>open file descriptors</li>
+<li>signal handler table</li>
+<li>program counter</li>
+</ul>
+</li>
+</ul>
+<h4 id="35-multithreading">
+  3.5 multithreading
+  <a class="heading-link" href="#35-multithreading">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li><strong>3.5.1 key functions of creating threads in C</strong>
+<ul>
+<li>pthread_create
+create new thread of execution that runs specified procedure with specified arguments</li>
+<li>pthread_join
+wait for the return from a specified thread</li>
+<li>mutex
+<ul>
+<li>pthread mutex lock()</li>
+<li>critical section</li>
+<li>pthread mutex unlock()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>3.5.2 user space thread and kernel space threads</strong>
+<ul>
+<li>scheduling user space thread</li>
+<li>user threads exist within a process, managed by process</li>
+<li>no time slice for each thread, unlike process switching</li>
+<li>when multiple threads are allocated to same cpu core, need to call thread switching explicityly so each has opportunity to run</li>
+<li>without switching, a thread may hog the CPU so as to starve other threads</li>
+<li>only stack need to be load/store information</li>
+</ul>
+</li>
+<li>kernel space thread(OS managed)
+<ul>
+<li>same as process:
+<ul>
+<li>time slicing</li>
+<li>system calls</li>
+<li>traps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>3.5.3 overhead of swithching threads</strong>
+<ul>
+<li>user space: user space threads usually switch fast</li>
+<li>kernel space: the switching overhead stands between processes and user space threads</li>
+</ul>
+</li>
+</ul>
+<h4 id="36-synchronization">
+  3.6 synchronization
+  <a class="heading-link" href="#36-synchronization">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>two types: mutual exclusion and cooperation</li>
+</ul>
+<h5 id="361-techinques-for-synchronization">
+  3.6.1 techinques for synchronization
+  <a class="heading-link" href="#361-techinques-for-synchronization">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>Mutex to address mutual exclusion</li>
+<li>wait and notify to address cooperation</li>
+</ul>
+<h5 id="362-how-synchronization-is-implemented-in-c">
+  3.6.2 how synchronization is implemented in C
+  <a class="heading-link" href="#362-how-synchronization-is-implemented-in-c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>critical section:section of code that access the global shared data and therefore should be accessed by one thread at a time</li>
+<li>Mutex, used to enforce mutual exclusion of threads in a critical section</li>
+<li>two states: lock and unlock
+<ul>
+<li>initially unlocked, entering then locks, blocks others</li>
+<li>pthread_mutex_lock(&amp;lock), critical section, unlock</li>
+</ul>
+</li>
+</ul>
+<h5 id="363-how-synchronization-is-implemented-in-java">
+  3.6.3 how synchronization is implemented in Java
+  <a class="heading-link" href="#363-how-synchronization-is-implemented-in-java">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>java monitor
+<ul>
+<li>automatically generated for a class or object
+by library</li>
+<li>the monitor can be associated with the methods/statements in the class
+called synchronized methods or steatements</li>
+<li>the synchronized codes are called the monitor region
+regreaded as the critical section, therefore should be run by one thread at a time</li>
+</ul>
+</li>
+</ul>
+<h5 id="364-synchronized-methods-and-statements">
+  3.6.4 synchronized methods and statements
+  <a class="heading-link" href="#364-synchronized-methods-and-statements">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>methods
+<ul>
+<li>addc1 and addc2 methods are with monitor of classA, can&rsquo;t run concureently, associated with the same monitor(class related)</li>
+</ul>
+</li>
+<li>statements
+<ul>
+<li>synchronized statements must <strong>specify the object</strong> that provides the lock,</li>
+<li>synchronized(lock1){},synchronized(lock2){}</li>
+<li>can run concurrently,</li>
+<li>can imporve concurrency with fine-grained synchronization</li>
+</ul>
+</li>
+</ul>
+<h5 id="365-the-ways-of-creating-new-threads-in-java">
+  3.6.5 the ways of creating new threads in Java
+  <a class="heading-link" href="#365-the-ways-of-creating-new-threads-in-java">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>
+<ol>
+<li>extend the <strong>Threads</strong> class or implement the <strong>Runnable</strong> interface</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>extend or implement the <strong>run</strong> method in the Threads class or in the Runnable interface,
+run specifies what thread should do</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>create a new instance of the class for each thread</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>invoke the <strong>start</strong> method in the instance,
+start initializes a new thread of control that executes the run method</li>
+</ol>
+</li>
+</ul>
+<h5 id="366-differnece-between-synchronization-in-java-and-c">
+  3.6.6 differnece between synchronization in Java and C
+  <a class="heading-link" href="#366-differnece-between-synchronization-in-java-and-c">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>java provides built in , part of the programming language, higher level, not explicitly</li>
+<li>C: mutex</li>
+</ul>
+<h3 id="4mpi">
+  4.MPI
+  <a class="heading-link" href="#4mpi">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<ul>
+<li>Message Passing is the most widely used parallel programming model</li>
+<li>Message passing works by creating a number of processes, uniquely named, that interact by sending and receiving messages to and from one another (hence the message passing)</li>
+<li>Message passing programs are based on standard sequential language programs (C/C++, Fortran), augmented with calls to library functions for sending and receiving messages</li>
+</ul>
+<h4 id="41-openmp-vs-mpi">
+  4.1 OpenMP vs MPI
+  <a class="heading-link" href="#41-openmp-vs-mpi">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>• MPI is used on distributed-memory systems
+• OpenMP is used on shared-memory systems
+• Both are explicit parallelism
+• OpenMP is higher-level control</p>
+<ul>
+<li>Compiler can automatically parallelise the codes when instructed
+• MPI is lower-level control</li>
+<li>Data partition, allocation and process communication are conducted by programmers</li>
+</ul>
+<h4 id="42-why-the-parameters-in-mpi_send-and-recv">
+  4.2 why the parameters in MPI_send and recv?
+  <a class="heading-link" href="#42-why-the-parameters-in-mpi_send-and-recv">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>(address, count, datatype)
+<ul>
+<li>data may not occupy contiguous memory locations</li>
+<li>storing format for data may not be the same in platform</li>
+<li>can construct their own datatype, handle non-contiguous data</li>
+</ul>
+</li>
+<li>message tag: message matching. differentiate the message from the same process(sender)</li>
+<li>communicator: consists of a group of processes and a communication context, bring efficiency.</li>
+</ul>
+<h4 id="43-collective-operations">
+  4.3 collective operations
+  <a class="heading-link" href="#43-collective-operations">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>MPI_Reduce:performs op over the data in the sendbuf and put result in recvbuf in root process  e.g.min max
+<ul>
+<li>root:all , as to be recv</li>
+<li>other: no recvbuf, as to be sent, no op</li>
+</ul>
+</li>
+<li>MPI_Allreduce:put back to recvbuf in all processes</li>
+<li>MPI_Barrier(comm):synchronize all processes, no processes return from function until all processes have called it</li>
+<li>MPI_Bcast:send same data from one to all
+<ul>
+<li>(buff,count,type)  treated by root as data to be sent, other as to be received</li>
+</ul>
+</li>
+<li>MPI_Gather:gather data from all to one
+<ul>
+<li>root: all parameters.</li>
+<li>other: no recvbuf, recvcount, recvtype</li>
+</ul>
+</li>
+<li>MPI_Scatter:scatter different data from one to all
+<ul>
+<li>root: no recv</li>
+<li>other: no send</li>
+</ul>
+</li>
+</ul>
+<h4 id="44-modularity-how-to-create-new-communications">
+  4.4 modularity: how to create new communications
+  <a class="heading-link" href="#44-modularity-how-to-create-new-communications">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ol>
+<li>extract process group from communicator</li>
+<li>MPI_Comm_split(comm, colour, key, newcomm)</li>
+</ol>
+<ul>
+<li>color: control of process assignment, processes with same colour are in same new communicator, myid%3</li>
+</ul>
+<h4 id="45-application-buffer-vs-system-buffer-in-mpi">
+  4.5 application buffer vs system buffer in MPI
+  <a class="heading-link" href="#45-application-buffer-vs-system-buffer-in-mpi">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>application buffer
+<ul>
+<li>data buffer in MPI send/recv functions</li>
+<li>may copy several times</li>
+</ul>
+</li>
+<li>sys buffer
+<ul>
+<li>hidden from the programmer and managed by the MPI library</li>
+<li>limited and can be easy to exhaust</li>
+</ul>
+</li>
+</ul>
+<h4 id="46-blocking-and-non-blocking-communication-communication-test">
+  4.6 Blocking and non-blocking communication, communication test
+  <a class="heading-link" href="#46-blocking-and-non-blocking-communication-communication-test">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>blocking communications
+<ul>
+<li>blocking send: MPI_Send
+<ul>
+<li>sender doesn&rsquo;t return until the application buffer can be re-used, which often means data have been copied from application buffer to system biffer. doesn&rsquo;t mean that data will be received</li>
+</ul>
+</li>
+<li>blocking recv: MPI_Recv
+<ul>
+<li>receiver doesn&rsquo;t return until the data have been ready to use by receiver, often means data have been copied from system buffer to application buffer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>non-blocking send/recv
+<ul>
+<li>the calling process returns immediately</li>
+<li>Just request the MPI library to perform the communication: no gaurantee when this will happen</li>
+<li>Unsafe to modify the application buffer until you can make sure the requested operation has been performed (MPI provides routines to test this)</li>
+<li>Can be used to <strong>overlap computation with communication</strong> and have possible performance gains</li>
+</ul>
+</li>
+<li>testing non-blocking communications
+<ul>
+<li>completion tests come in two types
+<ul>
+<li>Wait type
+<ul>
+<li>MPI_Wait(request, status)
+the communication specified by the request handle</li>
+<li>block until the communication has been completed</li>
+<li>non-blocking communication immediately followed by a WAIT-type test = blocking communication</li>
+</ul>
+</li>
+<li>Test type
+<ul>
+<li>MPI_Test(request, flag, status)</li>
+<li>return immediately with a True of False value</li>
+<li>the process can perform some other tasks if the communication has not been completed. could overlap.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>All and any
+<ul>
+<li>all
+<ul>
+<li>MPI_Waitall(count, array_of_requests, array of statuses)
+<ul>
+<li>wait for all communications to complete</li>
+</ul>
+</li>
+<li>MPI_Testall (count, array_of_requests, flag, array_of_statuses)
+<ul>
+<li>test if all communications have completed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>any
+<ul>
+<li>MPI_Waitany (count, array_of_requests, index, status)
+<ul>
+<li>Query a number of communications at a time to find out if any of them have completed</li>
+</ul>
+</li>
+<li>MPI_Testany (count, array_of_requests, index, flag, status)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="47-communication-mode">
+  4.7 communication mode
+  <a class="heading-link" href="#47-communication-mode">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>standard mode
+<ul>
+<li>basic
+<ul>
+<li>MPI_Send is the standard mode, the msgs are handled in the standard way, copied to system buffer</li>
+<li>have acceptable performance, may not give the best in certain situations</li>
+<li>blocking standard send and non-blocking standard send(same as efficiency)</li>
+</ul>
+</li>
+<li>2 questions
+<ul>
+<li>what happens next after the data has been copied to system buffer?
+<ul>
+<li>sender send &lsquo;ready to send&rsquo;, waits for a &lsquo;ready to recv&rsquo; msg from receiver, transfer after recv that msg</li>
+<li>receiver, when the receive routine is called, the MPI system sends a &lsquo;ready to receive&rsquo; msg to sender</li>
+</ul>
+</li>
+<li>what happens if msg to be sent is bigger than system buffer?
+<ul>
+<li>the send routine will block until
+<ul>
+<li>the receive routine starts receiving data and therefore empty the system buffer;</li>
+<li>the rest of the message has been copied to the system buffer.</li>
+</ul>
+</li>
+<li>p0 send A to p1, recv B to p1;   p1 send B to p0, recv A to p0. If size of A exceeds system buffer?
+<ul>
+<li>p1 send B can return, no dead lock. wait for empty the buffer and available</li>
+</ul>
+</li>
+<li>A and B both exceed the sys buffer?
+<ul>
+<li>none can empty sys buffer, can&rsquo;t go to recv both. dead lock</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>synchronous mode
+<ul>
+<li>blocking : MPI_Ssend
+<ul>
+<li>routine doesn&rsquo;t return until 1. data copied to sys buffer 2. MPI has received ready to receive(standard only 1. here?)</li>
+<li>may incur overhead if receive routine is posted later than send routine</li>
+</ul>
+</li>
+<li>non-blocking: MPI_Issend
+<ul>
+<li>return immediately</li>
+<li>communication is considered complete only after 1.the data has been copied to sys buffer and 2. MPI sys received &lsquo;ready to receive&rsquo; msg</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>buffered mode
+<ul>
+<li>sender uses explicitly defined buffer instead of sys  buffer</li>
+<li>communication is considered complete when 1. data copied to defined buffer(same as standard?)</li>
+<li>blocking buffered send : MPI_Bsend
+<ul>
+<li>must attach buffer space using MPI_Buffer_attach/detach</li>
+<li>the size should be no less than the value:
+MPI_Pack_size(20,type1,comm,&amp;s1)
+size = s1 + s2 + 2*MPI_BSEND_OVERHEAD</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ready mode
+<ul>
+<li>sender will send the data straightway without waiting for the &lsquo;ready to receive&rsquo; msg</li>
+<li>when coder make sure the receive routine will be called before the send routine</li>
+<li>blocking ready send: MPI_Rsend, sender return until the application buffer can be reused</li>
+<li>non-blocking ready send: MPI_Irsend</li>
+</ul>
+</li>
+</ul>
+<h4 id="48-datatype">
+  4.8 Datatype
+  <a class="heading-link" href="#48-datatype">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>4.8.1 functions to construct derived datatypes</li>
+<li><img alt="1" src="https://i.loli.net/2019/05/18/5cdee52cb265423068.png"></li>
+<li>4.8.2 why can derived datatype improve the performance?</li>
+<li>can handle non-contiguous data, with multiple datatype efficiently.
+otherwise:
+<ul>
+<li>call send for each block, send multiple times</li>
+<li>cp to contiguous buffer space, then cp to sys, copy twice</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-performance-and-gpu">
+  5. performance and GPU
+  <a class="heading-link" href="#5-performance-and-gpu">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="51-speedup-general-trend-of-speedup">
+  5.1 speedup, general trend of speedup
+  <a class="heading-link" href="#51-speedup-general-trend-of-speedup">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>
+<p>basic</p>
+<ul>
+<li>the imporvement or not brought about by parallelising an applicaiton code</li>
+<li>If n processors are used, S(n)=t1/tn</li>
+<li>maximum speedup for a parallel algorithm with n processors is n</li>
+<li>linear speedup is regarded as optimal</li>
+</ul>
+</li>
+<li>
+<p>trend</p>
+<ul>
+<li>speedup increases as the number of PE increases</li>
+<li>the gap with maximum speed also increases</li>
+<li>after reaches maximum, futher adding processor elements PEs is no benefit and may harm performance</li>
+</ul>
+</li>
+<li>
+<p>how to get a good S(n)</p>
+<ul>
+<li>algorithm design
+minimal sequential component and good percentage of inherent parallelism</li>
+<li>workload management
+balancing workload among processors</li>
+<li>get a high ratio of computation to communication when partition data
+effective work to overhead
+<ul>
+<li>reducing the impact of communication
+<ul>
+<li>minimize the amount of communication, with a good data locality</li>
+<li>overlap communications with computation where possible</li>
+<li>sending a few large messages</li>
+<li>hardware, fast communications</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="52-parallel-efficiency-isoefficiency">
+  5.2 parallel efficiency, isoefficiency
+  <a class="heading-link" href="#52-parallel-efficiency-isoefficiency">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>E(n) = S(n)/n, often S(n)&laquo; n
+speedup divdied by max
+<ul>
+<li>same as the factors affecting speedup. typically greater n, low efficiency</li>
+</ul>
+</li>
+<li>ISO-efficiency</li>
+<li>S(P)=T1/Tp, E = S(P)/P, e.g. when N=P, E remains constant as P changes</li>
+<li><strong>how the amount of computation performed N must scale with processor number P to keep parallel efficiency E constant</strong>
+<ul>
+<li>the funciton of problem size N over P is called an algorithm&rsquo;s iso-efficiency function
+<ul>
+<li>An algorithm with an iso-efficiency function of O(P) is highly scalable
+<ul>
+<li>Increase p by three times, only need to increase N by three times to maintain efficiency</li>
+</ul>
+</li>
+<li>An algorithm with a quadratic or exponential iso-efficiency function is less scalable
+<ul>
+<li>increase p by five times, need to increase N by 25 times and 32 times, respectively</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>work out
+<ul>
+<li>find out how to  make constant, N=O(P)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="53-four-approaches-to-modelling-application-performance">
+  5.3 four approaches to modelling application performance
+  <a class="heading-link" href="#53-four-approaches-to-modelling-application-performance">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Speedup : this algorithm achieved a speedup of S on p processors with problem size N
+<ul>
+<li>partitions the whole/expensive parts, introduce variable/fixed overhead</li>
+</ul>
+</li>
+<li>Amdahl&rsquo;s law
+show the limitation of parallelising codes
+<ul>
+<li>not amenable to parallelisation, serial fraction be f
+<ul>
+<li>Tn=$\frac{(1-f)T_1}{n} + fT_1$</li>
+<li>S = T1/Tn = $\frac{n}{(1-f)+nf}$ &lt;= 1/f</li>
+</ul>
+</li>
+<li>can only tell the upper bound, cannot tell if exist greater parallelism</li>
+</ul>
+</li>
+<li>Asymptotic analysis
+<ul>
+<li>the algorithm takes the time of O(nlog 2n) on n processors</li>
+<li>disadvantage:
+<ul>
+<li>ignore the low-order term( may counts when n is small)</li>
+<li>only tell the order, not acutal time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>modelling execution time
+<ul>
+<li>performance model for the program</li>
+<li>an example - atmosphere model
+<ul>
+<li>discretize the space, use centre point to represent the whole cell</li>
+<li>calculate the solution at these discrete points</li>
+</ul>
+</li>
+<li>communication pattern</li>
+</ul>
+</li>
+</ul>
+<h4 id="54-surface-to-volume-ratio-usage-of-the-ratio">
+  5.4 surface-to-volume ratio, usage of the ratio
+  <a class="heading-link" href="#54-surface-to-volume-ratio-usage-of-the-ratio">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>The lower surface-to-volume ratio, the better:
+• Surface = communication
+• Volume = computation
+• means lower proportion of communication time in the whole
+execution time</p>
+<ul>
+<li>1-D along y decomposition
+<ul>
+<li>modelling computation time
+<ul>
+<li>each task is responsible for a subgrid of size N*(N/P)*Z</li>
+<li>Tcomp = tc * N*(N/P)*Z,  for each subgrid, tc is the avg time of calculating a single grid point</li>
+</ul>
+</li>
+<li>modelling the time of sending one msg
+<ul>
+<li>Tmsg = ts + tw*L
+the time spent in sending one message</li>
+<li>ts is the message startup time(overhead), tw is the transfer time per byte, L is the size of the message</li>
+</ul>
+</li>
+<li>modelling communication time
+<ul>
+<li>Tcomm = 2(ts+tw*2NZ)
+Communication time for calculating a subgrid</li>
+<li>Tp = Tcomp + Tcomm</li>
+</ul>
+</li>
+<li>speedup S(P)=T1/Tp  ,  T1=tc<em>N</em>N*P</li>
+<li>parallel efficiency E= (T1/Tp)/P</li>
+<li>ISO-efficiency, look at E, when N=P, approximately constant as P changes</li>
+</ul>
+</li>
+<li>2-D
+<ul>
+<li>Tcomp = tc * N * (N/P) *Z  same as 1D</li>
+<li>Tcomm = 4 (ts + tw*2 (N/$$\sqrt{P}$$)*Z)</li>
+<li>IOS-efficiency, when N = $$\sqrt{P}$$</li>
+<li>2d bettter, drop slower with problem  scale (only need increases 3 times when process increase 9 times) to keep the same efficiency</li>
+</ul>
+</li>
+</ul>
+<h4 id="55-design-philsophy-of-cpu-and-gpu">
+  5.5 Design philsophy of CPU and GPU
+  <a class="heading-link" href="#55-design-philsophy-of-cpu-and-gpu">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>how CPU interacts with GPU cards?</li>
+</ul>
+<blockquote>
+<p>CPU could put some parts code which need to be computed by GPU according to instructions. Usually those pats are computation intensive.</p>
+</blockquote>
+<ul>
+<li>CPU <strong>latency-oriended</strong> design
+<ul>
+<li>optimize the performance of <strong>sequential</strong> code</li>
+<li>complicated control unit</li>
+<li>has large on-chip <strong>cache</strong> to reduce data access latencies</li>
+<li>powerful ALU arithmetic logic unit(each <strong>ALU area is big</strong>)</li>
+<li>at the cost of increased use of chip area and power</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>GPU <strong>thoughput-oriented</strong> desgin
+<ul>
+<li>need to perform a massive number of floating-point calculations per video frame</li>
+<li>Motivate GPU vendors to maximize the chip area dedicated to floating point calculations</li>
+<li>each calculation is simple: therefore simple control logic and simgle ALUs</li>
+<li>calculation is more important than cache, therefore small cache, allowing memory access to have long latency</li>
+<li>a <strong>large number of simple ALU</strong>s on a chip to increase the total throughput
+<ul>
+<li>run with a large number of parallel threads, some waiting, can find other threads to run</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="56-execution-of-a-cuda-program">
+  5.6 execution of a CUDA program
+  <a class="heading-link" href="#56-execution-of-a-cuda-program">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>_ _ global _ _ keyword</li>
+<li>copy and input data and results between cpu memory and gpu memory</li>
+<li>generate multiple threads according to execution configuration</li>
+<li>different threads run different data items</li>
+</ul>
+<h5 id="561-3-steps">
+  5.6.1 3 steps
+  <a class="heading-link" href="#561-3-steps">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>memory management in GPU: part 1 and 3
+<ul>
+<li>cudaMalloc(void** devPtr, size_t size)
+allocate the device memory in GPU
+<ul>
+<li>devPtr: a pointer to the address of the allocated memory</li>
+<li>size: size of allocated memory</li>
+</ul>
+</li>
+<li>cudaMemcpy(dst, src, count, kind)
+memory data transfer
+<ul>
+<li>1.destination location of the data to be copied</li>
+<li>2.source location of the data</li>
+<li>3.size of the data</li>
+<li>4.The types of memory copying: host to host, host to device, device to device, device to host</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>launch and run the kernel code: part2
+<ul>
+<li>1.Execution model of the kernel function
+<ul>
+<li>starts with CPU execution</li>
+<li>when a kernel function is called, it executed by a large number of threads on GPU
+<ul>
+<li>all the threads are collectively called a grid</li>
+</ul>
+</li>
+<li>when all threads of a kernel complete their execution, the corresponding grid terminates</li>
+<li>the execution continues on the CPU until another kernel is called</li>
+</ul>
+</li>
+<li>2.Thread structure
+<ul>
+<li>basic
+<ul>
+<li>when a host code launches a kernel, CUDA generates a grid of thread blocks</li>
+<li>each block contains the same number of threads(up to 1024)</li>
+<li>each thread in a grid runs the same kernel function</li>
+</ul>
+</li>
+<li>thread organization
+<ul>
+<li>two-level architecture: threads are organized into a grid of blocks
+<ul>
+<li>a grid has 3*2 blocks</li>
+<li>a block has 4*3 threads</li>
+</ul>
+</li>
+<li>the grid and blocks can be multi-dimensional, their values are pre-initialized by the CUDA runtime library when invoking the kernel function, can be accessed in the kernel function
+<ul>
+<li>gridDim(x,y,z) 320</li>
+<li>blockDim(x,y,z) 430</li>
+<li>blockIdx(x,y,z)
+<ul>
+<li>the coordinate ID of the block in the grid, obtain which block is in</li>
+<li>All the threads in a block share the same blockIdx value</li>
+</ul>
+</li>
+<li>threadIdx(x,y,z)
+<ul>
+<li>the local coordinate ID of a thread in a block, to obtain its local position in the block</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3.Execution configuration
+<ul>
+<li>specified when invoking a kernel function</li>
+<li>set two parameters between &laquo;&lt; and &raquo;&gt; before the function parameters, gird and  block dimension</li>
+<li>stored in  gridDim and blockDim</li>
+</ul>
+</li>
+<li>4.Workload distribution
+<ul>
+<li>differnet threads for differnet data, need to match threads(threadidx) to data items
+<ul>
+<li>Griddim(xyz)=(N,1,1), blockDim(xyz)=(256,1,1),
+N blocks, each with 256 threads</li>
+<li>blockidx(x,0,0),threadidx(x,0,0), compute Cd=Ad+Bd</li>
+<li>i = blockIdx.x * blockDim.x + threadidx.x</li>
+<li>C[i] = A[i] +B[i]</li>
+</ul>
+</li>
+<li>only first n threads perform the addition
+<ul>
+<li>not all vector lengths can be expressed as multiple of the block size</li>
+<li>allows the kernel to process vectors of any lengths</li>
+<li>use if (i&lt;n)</li>
+</ul>
+</li>
+<li>all threads in a grid run the same kernel function, use their coordinates to
+<ul>
+<li>distinguish themselves from each other</li>
+<li>identify the appropriate part of the data to process</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6cluster">
+  6.cluster
+  <a class="heading-link" href="#6cluster">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="61-3-reasons-why-cluster-regain-in-popularity">
+  6.1 3 reasons why cluster regain in popularity
+  <a class="heading-link" href="#61-3-reasons-why-cluster-regain-in-popularity">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>very high performance Microprocessors</li>
+<li>High speed networking, communication</li>
+<li>Standard tools for parallel/ distributed programming</li>
+</ul>
+<h4 id="62-what-is-the-single-system-image-middleware">
+  6.2 what is the single system image: middleware
+  <a class="heading-link" href="#62-what-is-the-single-system-image-middleware">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>presents a collection of resources as a single powerful resource.</li>
+<li>Simplified system management</li>
+<li>Use system resources transparently
+<ul>
+<li>Users need not be aware of the detailed resource information and underlying system architecture to use these machines effectively</li>
+</ul>
+</li>
+<li>Transparent load balancing and process migration across nodes.</li>
+<li>Improved reliability and availability</li>
+<li>Improved system-oriented performance
+<ul>
+<li>• Global view of middleware vs. local view of a user</li>
+</ul>
+</li>
+</ul>
+<h4 id="63-activities-performed-by-a-typical-workload-manager-in-clusters">
+  6.3 activities performed by a typical workload manager in clusters
+  <a class="heading-link" href="#63-activities-performed-by-a-typical-workload-manager-in-clusters">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>queueing
+<ul>
+<li>job submission two parts:
+<ul>
+<li>job description e.g. job name</li>
+<li>describe the resource requirements eg amount of memory</li>
+</ul>
+</li>
+<li>once submitted, jobs are held in the queue until the job is at the head of queue and the matching resources are available</li>
+</ul>
+</li>
+<li>scheduling
+<ul>
+<li>Determining at what time a job should be put into execution on which resources</li>
+<li>There are a variety of metrics to measure scheduling performance
+<ul>
+<li>System-oriented metrics (e.g. throughput, utilisation, average response time of all jobs)</li>
+<li>user-oriented metrics (e.g. response time of a job submitted by a user)</li>
+<li>They can contradicts each other and balance needs to be made</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>monitoring
+<ul>
+<li>Providing information to administrators, users and the Cluster manager on the status of jobs and resources</li>
+<li>The method of collecting the info may differ between different cluster manager, but the general purpose is the same</li>
+</ul>
+</li>
+<li>resource management
+<ul>
+<li>handlinng the details of
+<ul>
+<li>Starting the job execution on the resources</li>
+<li>Stopping a job
+<ul>
+<li>scancel 271276</li>
+</ul>
+</li>
+<li>Cleaning up the temporary files generated by the jobs
+<ul>
+<li>after the jobs are completed or aborted</li>
+</ul>
+</li>
+<li>Removing or adding resources</li>
+</ul>
+</li>
+<li>For the batch system, the jobs are put into execution in such a way that the users don’t have to be present during execution</li>
+<li>For interactive systems, the users have to be present to supply information during the execution.</li>
+</ul>
+</li>
+<li>accounting
+<ul>
+<li>for which users are using what resources for how long</li>
+<li>Collecting resource usage data (e.g. job owner resources requested by the job, resource consumption by the job)</li>
+<li>Accounting data can be used for:
+<ul>
+<li>Producing system usage and user usage reports</li>
+<li>Tuning the scheduling policy</li>
+<li>Anticipating future resource requirements by users</li>
+<li>Calculating future resource allocations</li>
+<li>Determining the area of improvement within the cluster</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="64-the-two-primary-parts-that-a-job-submission-script-includes">
+  6.4 the two primary parts that a job submission script includes
+  <a class="heading-link" href="#64-the-two-primary-parts-that-a-job-submission-script-includes">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>job description e.g. job name</li>
+<li>describe the resource requirements eg amount of memory</li>
+<li>once submitted, jobs are held in the queue until the job is at the head of queue and the matching resources are available</li>
+</ul>
+<h4 id="65-whats-backfilling-scheduling-policy-and-its-pros-and-cons-fill-the-resource-hole">
+  6.5 what&rsquo;s backfilling scheduling policy and its pros and cons?: fill the resource hole
+  <a class="heading-link" href="#65-whats-backfilling-scheduling-policy-and-its-pros-and-cons-fill-the-resource-hole">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>the FIFO brings idle time, can be big</li>
+<li>allows a job to start if it does not delay the execution of the first job in the queue.</li>
+<li>utilisation is imporved</li>
+<li>disadvantages
+<ul>
+<li>information about the job execution time is required.</li>
+<li>User estimation are usually inaccurate.</li>
+<li>It is a policy decision to decide what to do if a job overruns;</li>
+<li>The default decsions is to terminate the job if it overruns</li>
+<li>Otherwise some users may deliberately underestimate the job length to get an earlier job start time.</li>
+</ul>
+</li>
+</ul>
+<h4 id="66-top500-list-and-the-parametersfeatures">
+  6.6 Top500 list and the parameters(features)
+  <a class="heading-link" href="#66-top500-list-and-the-parametersfeatures">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>ranked in terms of Flops: FLoating point Operations Per Sec</li>
+<li>obtained by Linpack benchmark(scientific applications)</li>
+<li>a measure of the capability of a computer in processing real numbers, represent parallel computers</li>
+<li>why FLOP important?</li>
+</ul>
+<blockquote>
+<p>It represent parallel computers, do not consider storage or IO issues. A real number is stored with the floating point format, which using a fiexed length space to store a wide overall range of values. Many scientific applications solve linear equations. The High Performance LINPACK (HPL) benchmark produces a FLOPS result. It solves a dense system of linear equations</p>
+</blockquote>
+<ul>
+<li>features of scientific applications
+<ul>
+<li>Calculating real numbers</li>
+<li>Data to be processed are often stored using matrix data structure (Linpack benchmark)</li>
+<li>High data locality (spatial locality and temporal locality)</li>
+<li>Cache is critical in performance: fetch the neighbouring data also. so next time . from cache</li>
+</ul>
+</li>
+</ul>
+<h4 id="67-graph-500-different-features-between-scientific-applications-and-graphbased-applications">
+  6.7 Graph 500, different features between scientific applications and graphbased applications
+  <a class="heading-link" href="#67-graph-500-different-features-between-scientific-applications-and-graphbased-applications">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Use the metric to measure how fast a computer can traverse the edges of a graph, Gigasteps</li>
+<li>features of graph based applications
+<ul>
+<li>Have to store and access a large amount of data (intensive memory access)</li>
+<li>Need to establish the connections among data points</li>
+<li>The data are best stored using graph data structure</li>
+<li>Data locality is low</li>
+<li>Cache now has limited positive impact on performance</li>
+<li>A computer with a high FLOPS performance may not perform well with these graph-based applications</li>
+</ul>
+</li>
+</ul>
+<h4 id="68-gigasteps-another-performance-metric-to-measure-and-rank-the-supercomputers">
+  6.8 Gigasteps: another performance metric to measure and rank the supercomputers
+  <a class="heading-link" href="#68-gigasteps-another-performance-metric-to-measure-and-rank-the-supercomputers">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Means “billions of traversed edges per second”</li>
+<li>A node in the graph represents a data point</li>
+<li>An edge is a connection between two data points.</li>
+<li>Represent how fast a computer system accesses its global memory</li>
+<li>Use the breadth-first search as the benchmark</li>
+</ul>
+<h3 id="7-cluster-networking-and-io">
+  7. cluster networking and IO
+  <a class="heading-link" href="#7-cluster-networking-and-io">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<h4 id="71-metrics-used-to-measure-the-performance-of-switched-networks">
+  7.1 metrics used to measure the performance of switched networks
+  <a class="heading-link" href="#71-metrics-used-to-measure-the-performance-of-switched-networks">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Scalability : the function of switch over nodes.</li>
+<li>Degree: number of links to / from a node ,measure aggregate bandwidth</li>
+<li>Diameter: the shortest path between the furthest nodes.measure latency</li>
+<li>Bisection width: the minimum number of links that must be cut in order to divide the topology into two independent networks of the same size (+/- one node).
+<ul>
+<li>measure of bottleneck bandwidth - if higher, the network will perform better under heavy load.</li>
+</ul>
+</li>
+<li>Communication time = time spent at the sender (latency at the sender) + datasize/bandwidth + switching time (latency at the switch) + time spent at the receiver (latency at the receiver)</li>
+</ul>
+<h4 id="72-given-an-network-topology-calculate-the-quantities-of-the-metrics">
+  7.2 given an network topology, calculate the quantities of the metrics
+  <a class="heading-link" href="#72-given-an-network-topology-calculate-the-quantities-of-the-metrics">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p><img src="https://i.loli.net/2019/05/18/5cdee9e9e35f752422.png"></p>
+<h4 id="73-two-switching-techinques-and-their-performance-models">
+  7.3 two switching techinques and their performance models
+  <a class="heading-link" href="#73-two-switching-techinques-and-their-performance-models">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>store and forward
+<ul>
+<li>Each switch receives an entire packet before it forwards it onto the next switch - useful in a non- dedicated environment (I.e. a LAN).</li>
+<li>Since buffer size is limited, packets will be dropped under heavy load.</li>
+<li>impose a larger in-switch latency.</li>
+<li>Can detect errors in the packets</li>
+</ul>
+</li>
+<li>worm hole routing(cut though)
+<ul>
+<li>Packet is divided into small “flits” (flow control digits).</li>
+<li>Switch examines the first flit (header) which contains the destination address, sets up a circuit and forwards the flit immediately.</li>
+<li>Subsequent flits of the message are forwarded as they arrive (near wire speed, i.e. at a speed close to direct connection).</li>
+<li>Reduces latency and buffer overhead.</li>
+<li>Less error detection</li>
+</ul>
+</li>
+<li>performance model for store and forward
+<ul>
+<li>
+<ul>
+<li>Startup time Ts: the time required to handle a msg at the sending/receiving nodes:</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Per-hop time Th: the in-switch latency.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Per-word transfer time Tw: if the link bandwidth is r, then Tw =1/r</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Construct the performance model for the communication time of sending a message of <strong>size L</strong> through D links</li>
+</ul>
+</li>
+<li>e.g.:  Ts+(Th+Tw*L)*D  ,  D=4 here</li>
+</ul>
+</li>
+<li>performance model for cutting through
+different filts in parallel
+<ul>
+<li>Each message is broken into fixed units called flow control digits(flits).</li>
+<li>Flits contain no routing information.</li>
+<li>They follow the same path established by a header.</li>
+<li>Construct the performance model for the communication of sending a message of size L through D links under this switching technique</li>
+<li>e.g.: Ts+(Th+Tw*f)<em>D+ Tw</em>(L-f)
+secondpart: 1  so far ; third part: 2 3 4
+<ul>
+<li>4 filts,  f is size of filt1, L-f: other filts, no more Th here</li>
+<li>the rest of flits are sent in parallel through links under cut-through switching</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="74-granularity-of-parallelism">
+  7.4 Granularity of parallelism
+  <a class="heading-link" href="#74-granularity-of-parallelism">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<p>Defined as the size of the computations that are being performed in parallel</p>
+<h5 id="741-four-types-of-parallelism-in-order-of-granularity-size">
+  7.4.1 Four types of parallelism (in order of granularity size)
+  <a class="heading-link" href="#741-four-types-of-parallelism-in-order-of-granularity-size">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<ul>
+<li>Instruction-level parallelism (e.g. pipeline)
+<ul>
+<li>allow overlapping execution of multiple instructions</li>
+<li>factors that limit: can&rsquo;t divide instructions infinitely</li>
+<li>need more function units, cannot put more transistor to cpu chip</li>
+</ul>
+</li>
+<li>Thread-level parallelism (e.g. run a OpenMP or GPU program)</li>
+<li>Process-level parallelism (e.g. run an MPI job in a cluster)</li>
+<li>Job-level parallelism (e.g. run a batch of independent jobs in a cluster)</li>
+</ul>
+<h4 id="75-three-version-of-parallel-io-pros-and-cons">
+  7.5 three version of parallel IO, pros and cons
+  <a class="heading-link" href="#75-three-version-of-parallel-io-pros-and-cons">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>version1.0
+<ul>
+<li>Assume 4 processes compute the elements in a matrix in parallel ,  All processes send data to process 0, which then writes to file</li>
+<li>bad
+<ul>
+<li>
+<ol>
+<li>Single node bottleneck</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Single point of failure</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Poor performance</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Poor scalability</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>good
+<ul>
+<li>
+<ol>
+<li>The IO system only needs to deal with I/O from one process</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Do not need specialized I/O library</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>If you are converting from sequential code then this parallel version (of program) is easy to implement</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Results in a single file which is easy to manage</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>version2.0
+<ul>
+<li>Each process writes to a separate file, all prcesses can write in one phases</li>
+<li>good
+<ul>
+<li>now doing things in parallel</li>
+<li>high performance</li>
+</ul>
+</li>
+<li>bad
+<ul>
+<li>
+<ol>
+<li>We now have lots of small files to manage</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>How do we read the data back when # procs changes?</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Does not interoperate well with other applications</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>version3.0- now version
+<ul>
+<li>Multiple processes of parallel program access (read/write) data from a common file at the same time
+parallel I/O is now integral part of MPI-2</li>
+<li>all processes can write in one phase, to differernt parts of one common file</li>
+<li>good
+<ul>
+<li>Simultaneous I/O from any number of processes</li>
+<li>Excellent performance and scalability</li>
+<li>Results in a single file which is easy to manage and interoperates well with other applications</li>
+<li>Maps well onto collective operations</li>
+</ul>
+</li>
+<li>bad
+<ul>
+<li>Requires more complex I/O library support</li>
+<li>Traditionally, when one process is accessing a file, it blocks the file and another process cannot access it.</li>
+<li>Needs the support of simultaneous access by multiple processes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="76-io-performance-optimisation-techniques">
+  7.6 IO performance optimisation techniques
+  <a class="heading-link" href="#76-io-performance-optimisation-techniques">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>Data sieving
+<ul>
+<li>combine lots of small accesses into a single larger one</li>
+<li>reducing the number of operations, more complicated</li>
+<li>read all, modify some, write back</li>
+<li>requires locking in the file system,can result in false sharing</li>
+</ul>
+</li>
+<li>collective IO
+<ul>
+<li>problems with independent , noncontiguous access</li>
+<li>Collective I/O is coordinated access to storage by a group of processes</li>
+<li>must be called by all processes participating in I/O</li>
+<li>Allows I/O layers to know more as a whole about the data to be accessed</li>
+<li>First phase reads the entire block</li>
+<li>Second &lsquo;phase&rsquo; moves data to final destinations</li>
+</ul>
+</li>
+</ul>
+<h4 id="77-solution-for-disk-failure">
+  7.7 solution for disk failure
+  <a class="heading-link" href="#77-solution-for-disk-failure">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h4>
+<ul>
+<li>full redundancy: replication(mirroring)</li>
+<li>partial redundancy: parity information XOR
+<ul>
+<li>if any data is lost, we can recover the data from parity and the remaining data</li>
+<li>only one of the N+1 drives contains redundancy information</li>
+<li>parity information has to be computed every time the data is updated</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+
+            <footer>
+              
+
+
+              
+              
+              <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+            </footer>
+          </article>
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+    integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+    integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+        </section>
+
+      </div>
+
+      <section>
+        <ul>
+           
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+          <sup>96</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+          <sup>20</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+          <sup>24</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+          <sup>27</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+          <sup>14</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+          <sup>25</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+          <sup>17</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+          <sup>30</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+          <sup>41</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+          <sup>16</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+          <sup>19</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+          <sup>15</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+          <sup>13</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+          <sup>33</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+          <sup>7</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+          <sup>6</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+          <sup>8</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+          <sup>4</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+          <sup>23</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+          <sup>36</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+          <sup>11</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+          <sup>3</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+          <sup>1</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+          <sup>12</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+          <sup>10</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+          <sup>9</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+          <sup>2</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+          <sup>5</sup>
+                </div>
+          
+         
+          
+                <div class="tagbutton">
+          <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+          <sup>3</sup>
+                </div>
+          
+        
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+</body>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

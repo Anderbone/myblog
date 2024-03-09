@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Jiyu</title>
+    <link>http://localhost:1313/tags/java/</link>
+    <description>Recent content in Java on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Dec 2023 16:31:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Most common design patterns in Java</title>
+      <link>http://localhost:1313/dev/java-design-pattern/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-design-pattern/</guid>
+      <description>Stragety The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.&#xA;Strategy is a behavioral design pattern that turns a set of behaviors into objects and makes them interchangeable inside original context object.&#xA;Has-A can be better than Is-A.&#xA;Java 8 brought the support of lambda functions, which can serve as simpler alternatives to the Strategy pattern.</description>
+    </item>
+    <item>
+      <title>Spring In Action 07 - RESTful API</title>
+      <link>http://localhost:1313/dev/spring07-restful/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring07-restful/</guid>
+      <description>Based on Spring in action 6th version github repo.&#xA;RESTful controllers return a 404 status Here we can return Optional&amp;lt;Taco&amp;gt; directly, but it will return null if id doesn&amp;rsquo;t exist with status code 200. If we want to return a 404 status code appropriately, as shown here:&#xA;@GetMapping(&amp;#34;/{id}&amp;#34;) public ResponseEntity&amp;lt;Taco&amp;gt; tacoById(@PathVariable(&amp;#34;id&amp;#34;) Long id) { return tacoRepo.findById(id).map(taco -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(taco, HttpStatus.OK)) .orElseGet(() -&amp;gt; new ResponseEntity&amp;lt;&amp;gt;(null, HttpStatus.NOT_FOUND)); } IngredientController and rest client I added IngredientById here, it&amp;rsquo;s in the rest client test but not in the codebase.</description>
+    </item>
+    <item>
+      <title>Java frequently used data structures and methods for leetcode</title>
+      <link>http://localhost:1313/dev/lee-java-data-structure/</link>
+      <pubDate>Sat, 09 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-java-data-structure/</guid>
+      <description>Array declare int[] a = new int[100]; int[] b = {4,1,5}; array = new int[]{1,2,3}; two-dimensional code int a[][] = {{1,2}, {3,4}}; code int array[][] = new int[3][]; array[0] = new int[3]; array[1] = new int[2]; array[2] = new int[5]; arr.length, a field on any array, the capacity, not the number of elements no () in the end, a final variable length, length(), size() .length is a field, containing the capacity (NOT the number of elements the array contains at the moment) of arrays.</description>
+    </item>
+    <item>
+      <title>Modern Java in Action code configuration in intellij</title>
+      <link>http://localhost:1313/dev/java-modern-java-intellij/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-modern-java-intellij/</guid>
+      <description>There&amp;rsquo;s source code in this page.&#xA;Set up the language level to 9 and then compile works for me.&#xA;This is the pom works for me.&#xA;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;manning&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;modernjavainaction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0&amp;lt;/version&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.openjdk.jmh&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmh-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.21&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.openjdk.jmh&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmh-generator-annprocess&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.21&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.reactivex.rxjava2&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;rxjava&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.typesafe.akka&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;akka-actor_2.12&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.typesafe.akka&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;akka-stream_2.12&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.5.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.</description>
+    </item>
+    <item>
+      <title>JSP and Servlets</title>
+      <link>http://localhost:1313/dev/java-jsp/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/java-jsp/</guid>
+      <description>Based on udemy course&#xA;JSP Basic concept JSP: similar to html page, with some Java code. It&amp;rsquo;s processed on the server, results of Java code included in HTML returned to browser&#xA;jsp expression&amp;lt;%= new java.util.Date() %&amp;gt; Obj, &amp;lt;%= new String(&amp;ldquo;hello&amp;rdquo;).toUpperCase() %&amp;gt; number, &amp;lt;%= 25*4 %&amp;gt; boolean, &amp;lt;%= 5&amp;gt;6 %&amp;gt; jsp scriptlet &amp;lt;% some Java %&amp;gt; out.println() to print. Minimisze the use here. jsp declaration &amp;lt;%! variable or method declaration%&amp;gt; &amp;lt;% String lower(String data){ return data.</description>
+    </item>
+    <item>
+      <title>Spring In Action 02 - Developing web app</title>
+      <link>http://localhost:1313/dev/spring02-web/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring02-web/</guid>
+      <description>This chapter focues on Spring web framework without database.&#xA;2.1 Displaying infomation 2.1.1 Establishing the domain package tacos; import lombok.Data; import lombok.RequiredArgsConstructor; @Data @RequiredArgsConstructor public class Ingredient { private final String id; private final String name; private final Type type; public static enum Type { WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE } } 2.1.2 Creating a controller class Controllers are the major players in Spring’s MVC framework. Their primary job is to handle HTTP requests and either hand a request off to a view to render HTML (browser-displayed) or write data directly to the body of a response (RESTful).</description>
+    </item>
+    <item>
+      <title>Spring In Action 03 - Data</title>
+      <link>http://localhost:1313/dev/spring03-data/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring03-data/</guid>
+      <description>JDBC at first and JPA later.&#xA;3.1 Reading and writing data with JDBC Spring JDBC support is rooted in the JdbcTemplate class. JdbcTemplate provides a means by which developers can perform SQL operations against a relational database without all the ceremony and boilerplate typically required when working with JDBC.&#xA;3.2 Persisting data with Spring Data JPA Summary Spring’s JdbcTemplate greatly simplifies working with JDBC. PreparedStatementCreator and KeyHolder can be used together when you need to know the value of a database-generated ID.</description>
+    </item>
+    <item>
+      <title>Spring In Action 01 - Intro</title>
+      <link>http://localhost:1313/dev/spring01-intro/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/spring01-intro/</guid>
+      <description>Follow the book: Spring in Action fifth version. Code repo: github&#xA;1.1 What is Spring? At its core, Spring offers a container, often referred to as the Spring application context, that creates and manages application components. These components, or beans, are wired together inside the Spring application context to make a complete application, much like bricks, mortar, timber, nails, plumbing, and wiring are bound together to make a house.&#xA;The act of wiring beans together is based on a pattern known as dependency injection (DI).</description>
+    </item>
+  </channel>
+</rss>

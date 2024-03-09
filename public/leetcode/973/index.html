@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    
+    <meta name="description" content="K Closest Points to Origin - LeetCode
+Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0). The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 &#43; (y1 - y2)2). You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="973. K Closest Points to Origin "/>
+<meta name="twitter:description" content="K Closest Points to Origin - LeetCode
+Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0). The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 &#43; (y1 - y2)2). You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in)."/>
+
+    <meta property="og:title" content="973. K Closest Points to Origin " />
+<meta property="og:description" content="K Closest Points to Origin - LeetCode
+Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0). The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 &#43; (y1 - y2)2). You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/leetcode/973/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2021-12-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-02-23T21:41:36+00:00" />
+
+
+
+
+    <title>
+  973. K Closest Points to Origin  · Jiyu
+</title>
+
+    
+      <link rel="canonical" href="http://localhost:1313/leetcode/973/">
+    
+
+    <link rel="preload" href="http://localhost:1313/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+    
+      
+      
+      <link rel="stylesheet" href="http://localhost:1313/css/coder.css" media="screen">
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://localhost:1313/css/custom.css" />
+    
+
+    
+
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://localhost:1313/images/eagle.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.123.7">
+  </head>
+
+  
+  
+  <body class="preload-transitions colorscheme-light"
+        onload=""
+  >
+    
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://localhost:1313/">
+      Jiyu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/dev/">Dev</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="http://localhost:1313/leetcode/">Leetcode</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://localhost:1313/zh/">中文</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/leetcode/973/">
+              973. K Closest Points to Origin 
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-12-26T00:00:00Z'>
+                December 26, 2021
+              </time>
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/binarysearch/">binarysearch</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/sorting/">sorting</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="http://localhost:1313/tags/heap/">heap</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><a href="https://leetcode.com/problems/k-closest-points-to-origin/">K Closest Points to Origin - LeetCode</a></p>
+<p>Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).
+The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2).
+You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).</p>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/03/closestplane1.jpg"></p>
+<p>Input: points = [[1,3],[-2,2]], k = 1 Output: [[-2,2]] Explanation: The distance between (1, 3) and the origin is sqrt(10). The distance between (-2, 2) and the origin is sqrt(8). Since sqrt(8) &lt; sqrt(10), (-2, 2) is closer to the origin. We only want the closest k = 1 points from the origin, so the answer is just [[-2,2]].
+Example 2:
+Input: points = [[3,3],[5,-1],[-2,4]], k = 2 Output: [[3,3],[-2,4]] Explanation: The answer [[-2,4],[3,3]] would also be accepted.</p>
+<p>Constraints:</p>
+<p>1 &lt;= k &lt;= points.length &lt;= 104
+-104 &lt; xi, yi &lt; 104</p>
+<hr>
+<ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kClosest</span>(self, points: List[List[int]], k: int) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> heapq<span style="color:#f92672">.</span>nsmallest(k, points, key <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><ul>
+<li>code max #priorityQueue</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">distance</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> point){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> point<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> point<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> point<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">*</span> point<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> <span style="color:#a6e22e">kClosest</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> points, <span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>        PriorityQueue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> pq <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PriorityQueue<span style="color:#f92672">&lt;&gt;</span>((a, b) <span style="color:#f92672">-&gt;</span> b<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> a<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> k; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{i, distance(points<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>)});
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> k; i <span style="color:#f92672">&lt;</span> points.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (distance(points<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>) <span style="color:#f92672">&lt;</span> pq.<span style="color:#a6e22e">peek</span>()<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>){
+</span></span><span style="display:flex;"><span>                pq.<span style="color:#a6e22e">poll</span>();
+</span></span><span style="display:flex;"><span>                pq.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span>{i, distance(points<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>)});
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> ans <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>k<span style="color:#f92672">][</span>2<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> k; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            ans<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> points<span style="color:#f92672">[</span>pq.<span style="color:#a6e22e">poll</span>()<span style="color:#f92672">[</span>0<span style="color:#f92672">]]</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kClosest</span>(self, points: List[List[int]], k: int) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dis_negative</span>(x, y): <span style="color:#75715e"># negate to make a max heap, python default min heap</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>(x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> y <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        heap <span style="color:#f92672">=</span> [(dis_negative(<span style="color:#f92672">*</span>points[i]), i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k)]
+</span></span><span style="display:flex;"><span>        heapq<span style="color:#f92672">.</span>heapify(heap)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k, len(points)):
+</span></span><span style="display:flex;"><span>            dist <span style="color:#f92672">=</span> dis_negative(<span style="color:#f92672">*</span>points[i])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> dist <span style="color:#f92672">&gt;</span> heap[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]:
+</span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappushpop(heap, (dist, i))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> [points[i] <span style="color:#66d9ef">for</span> distance, i <span style="color:#f92672">in</span> heap]
+</span></span></code></pre></div><ul>
+<li>code #binarySearch the mid distance to split the input, store index</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kClosest</span>(self, points: List[List[int]], k: int) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dist</span>(x, y):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> sqrt(x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> y <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_split</span>(remain, mid):
+</span></span><span style="display:flex;"><span>            closer, far <span style="color:#f92672">=</span> [], []
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> remain:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># equal must belong to closer, as we only do the update in closer.</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># e.g. [[0,1],[1,0]], 2. The mid: 0.5, 0.75, 0.875, 0.9375...</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> distance[i] <span style="color:#f92672">&lt;=</span> mid: closer<span style="color:#f92672">.</span>append(i) 
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>: far<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> (closer, far)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        remain <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(points))]  <span style="color:#75715e"># index</span>
+</span></span><span style="display:flex;"><span>        distance <span style="color:#f92672">=</span> [dist(i, j) <span style="color:#66d9ef">for</span> i, j <span style="color:#f92672">in</span> points]
+</span></span><span style="display:flex;"><span>        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, max(distance)
+</span></span><span style="display:flex;"><span>        closest <span style="color:#f92672">=</span> [] <span style="color:#75715e"># res</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> k <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            mid_dis <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#75715e"># actual dist, not //2</span>
+</span></span><span style="display:flex;"><span>            closer, far <span style="color:#f92672">=</span> find_split(remain, mid_dis)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> len(closer) <span style="color:#f92672">&lt;=</span> k:
+</span></span><span style="display:flex;"><span>                k <span style="color:#f92672">-=</span> len(closer)
+</span></span><span style="display:flex;"><span>                closest<span style="color:#f92672">.</span>extend(points[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> closer)
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> mid_dis
+</span></span><span style="display:flex;"><span>                remain <span style="color:#f92672">=</span> far
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> mid_dis
+</span></span><span style="display:flex;"><span>                remain <span style="color:#f92672">=</span> closer
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> closest
+</span></span></code></pre></div><p>&ldquo;As the efficiency of this solution relies on averaging as close to a middle split of the points as possible on each iteration of the binary search, the use of Euclidean distances will be more efficient than the use of squared Euclidean distances. &quot;
+The binary search solution works with squared distance as well. But on each iteration, the actual Euclidean distance will guarantee us to do the &ldquo;Binary&rdquo; search, which uses the exact middle distance to split the remaining points.
+Suppose the actual Euclidean distance is 1,2,3,4,5,6,7, we will use (1+7)/2 = 4 to split it evenly.
+But with squared distance, it&rsquo;s 1,4,9,16.25,36,49, we will choose (1+49)/2 = 25 as the middle point to split it, it&rsquo;s uneven, though we still can get a correct result.</p>
+<ul>
+<li>code  #quickSelection</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kClosest</span>(self, points: List[List[int]], k: int) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dis</span>(x, y):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> y <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># provide a dis, pivot to split</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(start, end):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># split to points[:p], points[p:], first part &lt; dis_split</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># dis_split = dis(*points[start]) can also use the first as split distance</span>
+</span></span><span style="display:flex;"><span>            dis_split <span style="color:#f92672">=</span> dis(<span style="color:#f92672">*</span>points[start <span style="color:#f92672">+</span> (end <span style="color:#f92672">-</span> start) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>]) <span style="color:#75715e"># get a dist in between to split</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;</span> end: <span style="color:#75715e"># not &lt;=, make sure swap is meaningful</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> dis(<span style="color:#f92672">*</span>points[start]) <span style="color:#f92672">&lt;</span> dis_split:
+</span></span><span style="display:flex;"><span>                    start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    points[start], points[end] <span style="color:#f92672">=</span> points[end], points[start]
+</span></span><span style="display:flex;"><span>                    end <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># e.g. all nums &lt;= split, start = end break the while, still needs to move start</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> dis(<span style="color:#f92672">*</span>points[start]) <span style="color:#f92672">&lt;</span> dis_split: 
+</span></span><span style="display:flex;"><span>                start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> start <span style="color:#75715e"># the start of second list</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(points) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> len(points) <span style="color:#75715e"># if equal, return directly</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> p <span style="color:#f92672">!=</span> k:
+</span></span><span style="display:flex;"><span>            p <span style="color:#f92672">=</span> partition(start, end)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> p <span style="color:#f92672">&lt;</span> k:
+</span></span><span style="display:flex;"><span>                start <span style="color:#f92672">=</span> p
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                end <span style="color:#f92672">=</span> p <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> points[:k]  <span style="color:#75715e"># k starts from 1</span>
+</span></span></code></pre></div>
+      </div>
+
+      <footer>
+        
+
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+    repo= "Anderbone/hugo-blog-utterances"
+    issue-term="pathname"
+    
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+      </footer>
+    </article>
+
+    <div class="next-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/429/?ref=footer">« 429. N-ary Tree Level Order Traversal</a>
+      
+    </div>
+    
+    <div class="previous-post">
+      
+      <a class="link-reverse" href="http://localhost:1313/leetcode/994/?ref=footer">994. Rotting Oranges  »</a>
+      
+    </div>
+
+    
+  </section>
+
+    
+<section>
+  <ul>
+     
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/array/ title="All pages with tag <i>array</i>">array</a>
+    <sup>96</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/backtracking/ title="All pages with tag <i>backtracking</i>">backtracking</a>
+    <sup>20</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bfs/ title="All pages with tag <i>bfs</i>">bfs</a>
+    <sup>24</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bible/ title="All pages with tag <i>bible</i>">bible</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearch/ title="All pages with tag <i>binarysearch</i>">binarysearch</a>
+    <sup>27</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarysearchtree/ title="All pages with tag <i>binarysearchtree</i>">binarysearchtree</a>
+    <sup>14</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/binarytree/ title="All pages with tag <i>binarytree</i>">binarytree</a>
+    <sup>25</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/bit/ title="All pages with tag <i>bit</i>">bit</a>
+    <sup>17</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/china/ title="All pages with tag <i>china</i>">china</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/christian/ title="All pages with tag <i>christian</i>">christian</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/design/ title="All pages with tag <i>design</i>">design</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dfs/ title="All pages with tag <i>dfs</i>">dfs</a>
+    <sup>30</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/docker/ title="All pages with tag <i>docker</i>">docker</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/documentary/ title="All pages with tag <i>documentary</i>">documentary</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dostoevsky/ title="All pages with tag <i>dostoevsky</i>">dostoevsky</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dp/ title="All pages with tag <i>dp</i>">dp</a>
+    <sup>41</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/dynalist/ title="All pages with tag <i>dynalist</i>">dynalist</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/flask/ title="All pages with tag <i>flask</i>">flask</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/graph/ title="All pages with tag <i>graph</i>">graph</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/greedy/ title="All pages with tag <i>greedy</i>">greedy</a>
+    <sup>16</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hashtable/ title="All pages with tag <i>hashtable</i>">hashtable</a>
+    <sup>19</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/health/ title="All pages with tag <i>health</i>">health</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/heap/ title="All pages with tag <i>heap</i>">heap</a>
+    <sup>15</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/hugo/ title="All pages with tag <i>hugo</i>">hugo</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/intellij/ title="All pages with tag <i>intellij</i>">intellij</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/java/ title="All pages with tag <i>java</i>">java</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/leetcode-summary/ title="All pages with tag <i>leetcode summary</i>">leetcode summary</a>
+    <sup>13</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linkedlist/ title="All pages with tag <i>linkedlist</i>">linkedlist</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/linux/ title="All pages with tag <i>linux</i>">linux</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/math/ title="All pages with tag <i>math</i>">math</a>
+    <sup>33</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/poetry/ title="All pages with tag <i>poetry</i>">poetry</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/psychology/ title="All pages with tag <i>psychology</i>">psychology</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/python/ title="All pages with tag <i>python</i>">python</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/queue/ title="All pages with tag <i>queue</i>">queue</a>
+    <sup>7</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/recursion/ title="All pages with tag <i>recursion</i>">recursion</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/segmenttree/ title="All pages with tag <i>segmenttree</i>">segmenttree</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/slidingwindow/ title="All pages with tag <i>slidingwindow</i>">slidingwindow</a>
+    <sup>6</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sorting/ title="All pages with tag <i>sorting</i>">sorting</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring/ title="All pages with tag <i>spring</i>">spring</a>
+    <sup>8</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/spring-in-action/ title="All pages with tag <i>spring-in-action</i>">spring-in-action</a>
+    <sup>4</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/sql/ title="All pages with tag <i>sql</i>">sql</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/stack/ title="All pages with tag <i>stack</i>">stack</a>
+    <sup>23</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/string/ title="All pages with tag <i>string</i>">string</a>
+    <sup>36</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tool/ title="All pages with tag <i>tool</i>">tool</a>
+    <sup>11</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/topological/ title="All pages with tag <i>topological</i>">topological</a>
+    <sup>3</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/travel/ title="All pages with tag <i>travel</i>">travel</a>
+    <sup>1</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/tree/ title="All pages with tag <i>tree</i>">tree</a>
+    <sup>12</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/trie/ title="All pages with tag <i>trie</i>">trie</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/twopointers/ title="All pages with tag <i>twopointers</i>">twopointers</a>
+    <sup>10</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/unionfind/ title="All pages with tag <i>unionfind</i>">unionfind</a>
+    <sup>9</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/vscode/ title="All pages with tag <i>vscode</i>">vscode</a>
+    <sup>2</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/warwick/ title="All pages with tag <i>warwick</i>">warwick</a>
+    <sup>5</sup>
+          </div>
+    
+   
+    
+          <div class="tagbutton">
+    <a href=http://localhost:1313/tags/wittgenstein/ title="All pages with tag <i>wittgenstein</i>">wittgenstein</a>
+    <sup>3</sup>
+          </div>
+    
+  
+  </ul>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="http://localhost:1313/js/coder.js"></script>
+    
+
+    
+      <script src="http://localhost:1313/js/copy-code-button.js"></script>
+    
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165971391-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

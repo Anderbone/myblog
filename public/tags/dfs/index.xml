@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dfs on Jiyu</title>
+    <link>http://localhost:1313/tags/dfs/</link>
+    <description>Recent content in Dfs on Jiyu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Sep 2022 17:13:23 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>967. Numbers With Same Consecutive Differences</title>
+      <link>http://localhost:1313/leetcode/967/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/967/</guid>
+      <description>https://leetcode.com/problems/numbers-with-same-consecutive-differences/&#xA;Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k. Note that every number in the answer must not have leading zeros. For example, 01 has one leading zero and is invalid. You may return the answer in any order.&#xA;Example 1: Input: n = 3, k = 7 Output: [181,292,707,818,929] Explanation: Note that 070 is not a valid number, because it has leading zeroes.</description>
+    </item>
+    <item>
+      <title>576. Out of Boundary Paths</title>
+      <link>http://localhost:1313/leetcode/576/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/576/</guid>
+      <description>https://leetcode.com/problems/out-of-boundary-paths/&#xA;There is an m x n grid with a ball. The ball is initially at the position [startRow, startColumn]. You are allowed to move the ball to one of the four adjacent cells in the grid (possibly out of the grid crossing the grid boundary). You can apply at most maxMove moves to the ball. Given the five integers m, n, maxMove, startRow, startColumn, return the number of paths to move the ball out of the grid boundary.</description>
+    </item>
+    <item>
+      <title>695. Max Area of Island</title>
+      <link>http://localhost:1313/leetcode/695/</link>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/695/</guid>
+      <description>https://leetcode.com/problems/max-area-of-island/&#xA;You are given an m x n binary matrix grid. An island is a group of 1&amp;rsquo;s (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water. The area of an island is the number of cells with a value 1 in the island. Return __the maximum area of an island in __grid. If there is no island, return 0.</description>
+    </item>
+    <item>
+      <title>200. number of islands</title>
+      <link>http://localhost:1313/leetcode/200/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/200/</guid>
+      <description>https://leetcode.com/problems/number-of-islands/&#xA;Given a 2d grid map of &amp;lsquo;1&amp;rsquo;s (land) and &amp;lsquo;0&amp;rsquo;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water. Example 1: 11110&#xA;11010&#xA;11000&#xA;00000&#xA;Output: 1 code class Solution { void dfs(char[][] grid, int r, int c) { int nr = grid.</description>
+    </item>
+    <item>
+      <title>1048. Longest String Chain</title>
+      <link>http://localhost:1313/leetcode/1048/</link>
+      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1048/</guid>
+      <description>https://leetcode.com/problems/longest-string-chain/&#xA;You are given an array of words where each word consists of lowercase English letters. wordA is a predecessor of wordB if and only if we can insert exactly one letter anywhere in wordA without changing the order of the other characters to make it equal to wordB.&#xA;For example, &amp;quot;abc&amp;quot; is a **predecessor** of &amp;quot;abac&amp;quot;, while &amp;quot;cba&amp;quot; is not a **predecessor** of &amp;quot;bcad&amp;quot;.A **word chain**__ __is a sequence of words [word1, word2, .</description>
+    </item>
+    <item>
+      <title>1192. Critical Connections in a Network</title>
+      <link>http://localhost:1313/leetcode/1192/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1192/</guid>
+      <description>https://leetcode.com/problems/critical-connections-in-a-network/&#xA;There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a network where connections[i] = [ai, bi] represents a connection between servers ai and bi. Any server can reach other servers directly or indirectly through the network. A critical connection is a connection that, if removed, will make some servers unable to reach some other server. Return all critical connections in the network in any order.</description>
+    </item>
+    <item>
+      <title>329. Longest Increasing Path in a Matrix</title>
+      <link>http://localhost:1313/leetcode/329/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/329/</guid>
+      <description>https://leetcode.com/problems/longest-increasing-path-in-a-matrix/&#xA;Given an m x n integers matrix, return __the length of the longest increasing path in __matrix. From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).&#xA;Example 1: Input: matrix = [[9,9,4],[6,6,8],[2,1,1]] Output: 4 Explanation: The longest increasing path is [1, 2, 6, 9]. Example 2: Input: matrix = [[3,4,5],[3,2,6],[2,2,1]] Output: 4 Explanation: The longest increasing path is [3, 4, 5, 6].</description>
+    </item>
+    <item>
+      <title>1102. Path With Maximum Minimum Value</title>
+      <link>http://localhost:1313/leetcode/1102/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1102/</guid>
+      <description>Path With Maximum Minimum Value - LeetCode&#xA;Given an m x n integer matrix grid, return __the maximum score of a path starting at (0, 0) and ending at __(m - 1, n - 1) moving in the 4 cardinal directions. The score of a path is the minimum value in that path.&#xA;For example, the score of the path 8 → 4 → 5 → 9 is 4. Example 1: Input: grid = [[5,4,5],[1,2,6],[7,4,6]] Output: 4 Explanation: The path with the maximum score is highlighted in yellow.</description>
+    </item>
+    <item>
+      <title>1490. Clone N-ary Tree</title>
+      <link>http://localhost:1313/leetcode/1490/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1490/</guid>
+      <description>Clone N-ary Tree - LeetCode&#xA;Given a root of an N-ary tree, return a deep copy (clone) of the tree. Each node in the n-ary tree contains a val (int) and a list (List[Node]) of its children. class Node { public int val; public List children; } Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).&#xA;Example 1: Input: root = [1,null,3,2,4,null,5,6] Output: [1,null,3,2,4,null,5,6] Example 2: Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14] Output: [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]</description>
+    </item>
+    <item>
+      <title>39. Combination sum</title>
+      <link>http://localhost:1313/leetcode/39/</link>
+      <pubDate>Thu, 17 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/39/</guid>
+      <description>Combination Sum - LeetCode&#xA;Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order. The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different. It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.</description>
+    </item>
+    <item>
+      <title>130. Surrounded Regions</title>
+      <link>http://localhost:1313/leetcode/130/</link>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/130/</guid>
+      <description>Surrounded Regions - LeetCode&#xA;Given an m x n matrix board containing &amp;lsquo;X&amp;rsquo; and &amp;lsquo;O&amp;rsquo;, capture all regions that are 4-directionally surrounded by &amp;lsquo;X&amp;rsquo;. A region is captured by flipping all &amp;lsquo;O&amp;rsquo;s into &amp;lsquo;X&amp;rsquo;s in that surrounded region.&#xA;Example 1: Input: board = [[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;],[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;O&amp;rdquo;,&amp;ldquo;O&amp;rdquo;,&amp;ldquo;X&amp;rdquo;],[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;O&amp;rdquo;,&amp;ldquo;X&amp;rdquo;],[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;O&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;]] Output: [[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;],[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;],[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;],[&amp;ldquo;X&amp;rdquo;,&amp;ldquo;O&amp;rdquo;,&amp;ldquo;X&amp;rdquo;,&amp;ldquo;X&amp;rdquo;]] Explanation: Surrounded regions should not be on the border, which means that any &amp;lsquo;O&amp;rsquo; on the border of the board are not flipped to &amp;lsquo;X&amp;rsquo;.</description>
+    </item>
+    <item>
+      <title>934. Shortest Bridge</title>
+      <link>http://localhost:1313/leetcode/934/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/934/</guid>
+      <description>Shortest Bridge - LeetCode&#xA;You are given an n x n binary matrix grid where 1 represents land and 0 represents water. An island is a 4-directionally connected group of 1&amp;rsquo;s not connected to any other 1&amp;rsquo;s. There are exactly two islands in grid. You may change 0&amp;rsquo;s to 1&amp;rsquo;s to connect the two islands to form one island. Return the smallest number of 0&amp;rsquo;s you must flip to connect the two islands.</description>
+    </item>
+    <item>
+      <title>417. Pacific Atlantic Water Flow</title>
+      <link>http://localhost:1313/leetcode/417/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/417/</guid>
+      <description>Pacific Atlantic Water Flow - LeetCode&#xA;There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean. The Pacific Ocean touches the island&amp;rsquo;s left and top edges, and the Atlantic Ocean touches the island&amp;rsquo;s right and bottom edges. The island is partitioned into a grid of square cells. You are given an m x n integer matrix heights where heights[r][c] represents the height above sea level of the cell at coordinate (r, c).</description>
+    </item>
+    <item>
+      <title>1022. Sum of Root To Leaf Binary Numbers </title>
+      <link>http://localhost:1313/leetcode/1022/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1022/</guid>
+      <description>Sum of Root To Leaf Binary Numbers - LeetCode&#xA;You are given the root of a binary tree where each node has a value 0 or 1. Each root-to-leaf path represents a binary number starting with the most significant bit.&#xA;For example, if the path is 0 -&amp;gt; 1 -&amp;gt; 1 -&amp;gt; 0 -&amp;gt; 1, then this could represent 01101 in binary, which is 13.For all leaves in the tree, consider the numbers represented by the path from the root to that leaf.</description>
+    </item>
+    <item>
+      <title>547. Number of Provinces</title>
+      <link>http://localhost:1313/leetcode/547/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/547/</guid>
+      <description>Number of Provinces - LeetCode&#xA;There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c. A province is a group of directly or indirectly connected cities and no other cities outside of the group. You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and the jth city are directly connected, and isConnected[i][j] = 0 otherwise.</description>
+    </item>
+    <item>
+      <title>568. Maximum Vacation Days</title>
+      <link>http://localhost:1313/leetcode/568/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/568/</guid>
+      <description>Maximum Vacation Days - LeetCode&#xA;LeetCode wants to give one of its best employees the option to travel among n cities to collect algorithm problems. But all work and no play makes Jack a dull boy, you could take vacations in some particular cities and weeks. Your job is to schedule the traveling to maximize the number of vacation days you could take, but there are certain rules and restrictions you need to follow.</description>
+    </item>
+    <item>
+      <title>332. Reconstruct Itinerary</title>
+      <link>http://localhost:1313/leetcode/332/</link>
+      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/332/</guid>
+      <description>Reconstruct Itinerary - LeetCode&#xA;You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it. All of the tickets belong to a man who departs from &amp;ldquo;JFK&amp;rdquo;, thus, the itinerary must begin with &amp;ldquo;JFK&amp;rdquo;. If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.</description>
+    </item>
+    <item>
+      <title>1059. All Paths from Source Lead to Destination</title>
+      <link>http://localhost:1313/leetcode/1059/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1059/</guid>
+      <description>All Paths from Source Lead to Destination - LeetCode&#xA;Given the edges of a directed graph where edges[i] = [ai, bi] indicates there is an edge between nodes ai and bi, and two nodes source and destination of this graph, determine whether or not all paths starting from source eventually, end at destination, that is:&#xA;At least one path exists from the source node to the destination node If a path exists from the source node to a node with no outgoing edges, then that node is equal to destination.</description>
+    </item>
+    <item>
+      <title>261. Graph Valid Tree</title>
+      <link>http://localhost:1313/leetcode/261/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/261/</guid>
+      <description>Graph Valid Tree - LeetCode You have a graph of n nodes labeled from 0 to n - 1. You are given an integer n and a list of edges where edges[i] = [ai, bi] indicates that there is an undirected edge between nodes ai and bi in the graph. Return true if the edges of the given graph make up a valid tree, and false otherwise.&#xA;Example 1:&#xA;Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]] Output: true Example 2:</description>
+    </item>
+    <item>
+      <title>1306. Jump Game III</title>
+      <link>http://localhost:1313/leetcode/1306/</link>
+      <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1306/</guid>
+      <description>Given an array of non-negative integers arr, you are initially positioned at start index of the array. When you are at index i, you can jump to i + arr[i] or i - arr[i], check if you can reach to any index with value 0. Notice that you can not jump outside of the array at any time.&#xA;Example 1: Input: arr = [4,2,3,0,3,1,2], start = 5 Output: true Explanation: All possible ways to reach at index 3 with value 0 are: index 5 -&amp;gt; index 4 -&amp;gt; index 1 -&amp;gt; index 3 index 5 -&amp;gt; index 6 -&amp;gt; index 4 -&amp;gt; index 1 -&amp;gt; index 3</description>
+    </item>
+    <item>
+      <title>721. Accounts Merge</title>
+      <link>http://localhost:1313/leetcode/721/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/721/</guid>
+      <description>Given a list of accounts where each element accounts[i] is a list of strings, where the first element accounts[i][0] is a name, and the rest of the elements are emails representing emails of the account. Now, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some common email to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name.</description>
+    </item>
+    <item>
+      <title>216. Combination Sum III</title>
+      <link>http://localhost:1313/leetcode/216/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/216/</guid>
+      <description>Find all valid combinations of k numbers that sum up to n such that the following conditions are true:&#xA;Only numbers 1 through 9 are used. Each number is used **at most once**.Return __a list of all possible valid combinations__. The list must not contain the same combination twice, and the combinations may be returned in any order. Example 1: Input: k = 3, n = 7 Output: [[1,2,4]] Explanation: 1 + 2 + 4 = 7 There are no other valid combinations.</description>
+    </item>
+    <item>
+      <title>40. Combination Sum II</title>
+      <link>http://localhost:1313/leetcode/40/</link>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/40/</guid>
+      <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target. Each number in candidates may only be used once in the combination.&#xA;Note: The solution set must not contain duplicate combinations.&#xA;Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8 Output: [ [1,1,6], [1,2,5], [1,7], [2,6] ]&#xA;code class Solution: def combinationSum2(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: candidates.</description>
+    </item>
+    <item>
+      <title>1971. find if path exists in graph</title>
+      <link>http://localhost:1313/leetcode/1971/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/1971/</guid>
+      <description>Find if Path Exists in Graph - LeetCode There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive). The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.</description>
+    </item>
+    <item>
+      <title>leetcode questions: Backtracking</title>
+      <link>http://localhost:1313/dev/lee-backtracking/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-backtracking/</guid>
+      <description>Template def backtrack(candidate): if find_solution(candidate): output(candidate) return # iterate all possible candidates. for next_candidate in list_of_candidates: if is_valid(next_candidate): # try this partial candidate solution place(next_candidate) # given the candidate, explore further. backtrack(next_candidate) # backtrack remove(next_candidate) 17. Letter Combinations of a Phone Number Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.&#xA;A mapping of digit to letters (just like on the telephone buttons) is given below.</description>
+    </item>
+    <item>
+      <title>leetcode questions: DFS</title>
+      <link>http://localhost:1313/dev/lee-dfs/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dev/lee-dfs/</guid>
+      <description>DFS Templates Template 1:&#xA;/* * Return true if there is a path from cur to target. */ boolean DFS(Node cur, Node target, Set&amp;lt;Node&amp;gt; visited) { return true if cur is target; for (next : each neighbor of cur) { if (next is not in visited) { add next to visted; return true if DFS(next, target, visited) == true; } } return false; } Template 2 using an explicit stack to avoid stack overflow:</description>
+    </item>
+    <item>
+      <title>841. Keys and rooms</title>
+      <link>http://localhost:1313/leetcode/841/</link>
+      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/841/</guid>
+      <description>There are N rooms and you start in room 0. Each room has a distinct number in 0, 1, 2, &amp;hellip;, N-1, and each room may have some keys to access the next room. Formally, each room i has a list of keys rooms[i], and each key rooms[i][j] is an integer in [0, 1, &amp;hellip;, N-1] where N = rooms.length. A key rooms[i][j] = v opens the room with number v.</description>
+    </item>
+    <item>
+      <title>733. Flood fill</title>
+      <link>http://localhost:1313/leetcode/733/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/733/</guid>
+      <description>CompaniesAn image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image. You are also given three integers sr, sc, and newColor. You should perform a flood fill on the image starting from the pixel image[sr][sc]. To perform a flood fill, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color), and so on.</description>
+    </item>
+    <item>
+      <title>494. Target sum</title>
+      <link>http://localhost:1313/leetcode/494/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/494/</guid>
+      <description>You are given an integer array nums and an integer target. You want to build an expression out of nums by adding one of the symbols &amp;lsquo;+&amp;rsquo; and &amp;lsquo;-&amp;rsquo; before each integer in nums and then concatenate all the integers.&#xA;For example, if nums = [2, 1], you can add a &#39;+&#39; before 2 and a &#39;-&#39; before 1 and concatenate them to build the expression &amp;quot;+2-1&amp;quot;.Return the number of different **expressions** that you can build, which evaluates to target.</description>
+    </item>
+    <item>
+      <title>133. Clone graph</title>
+      <link>http://localhost:1313/leetcode/133/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/leetcode/133/</guid>
+      <description>Clone Graph - LeetCode&#xA;Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph. Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors. class Node { public int val; public List neighbors; }&#xA;Test case format: For simplicity, each node&amp;rsquo;s value is the same as the node&amp;rsquo;s index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on.</description>
+    </item>
+  </channel>
+</rss>
