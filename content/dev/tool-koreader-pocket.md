@@ -19,4 +19,4 @@ I run it on my Synology NAS.
 
 ![](https://i.imgur.com/0OkO1m2.png)
 
-Then add link https://pingu:443/odps as the ODPS catalog URL on your koreader, change the link accordingly to follow your web portals, enjoy!
+Then add link https://pingu:443/opds as the ODPS catalog URL on your koreader, change the link accordingly to follow your web portals, enjoy!
