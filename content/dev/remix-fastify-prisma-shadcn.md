@@ -2,7 +2,7 @@
 date = "2024-10-23"
 title = "remix-fastify-prisma-shadcn setup"
 tags = ["remix"]
-toc = false
+toc = true
 draft = false
 +++
 
@@ -76,7 +76,7 @@ export default function Index() {
 https://ui.shadcn.com/docs/installation/remix outdated for the moment 2024.10.24
 
 `tsconfig.json`
-add paths alias under compilerOptions
+add paths alias `"@/*": ["./app/*"]` under compilerOptions
 ```json
 {
   "include": [
@@ -142,6 +142,7 @@ export default function Home() {
 
 ```
 npm install prisma @types/node --save-dev
+npm install @prisma/client
 npx prisma init
 ```
 
@@ -207,7 +208,6 @@ prisma db pull
 ```
 
 ```
-npm install @prisma/client
 npx prisma generate
 ```
 
@@ -254,6 +254,9 @@ main()
 
 run 
 `npx tsx ./app/db/dbtest.ts` 
+
+alternatively use a seed.ts and put it in package.json
+scripts add "seed": "tsx prisma/seed.ts".
 
 expected result
 
